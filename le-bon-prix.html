@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Le bon prix — Benchmark prix concurrent en temps réel · nricher</title>
+<meta name="description" content="Notre solution de pricing management automatise vos politiques tarifaires selon les évolutions du marché, pour maximiser compétitivité et marge." />
+
+<link rel="stylesheet" href="css/main.css" />
+<script src="js/zoom-persist.js"></script>
+<style>
+/* Glow hero — mint + bleu mélangés autour du titre (gauche) */
+.page-hero::before {
+  background:
+    radial-gradient(ellipse 50% 68% at 20% 38%, rgba(46,255,168,0.52), transparent 62%),
+    radial-gradient(ellipse 46% 64% at 46% 34%, rgba(61,90,255,0.46), transparent 60%);
+}
+/* ---- Orbit prix ---- */
+.price-orbit {
+  position: relative;
+  width: 500px; height: 500px;
+  max-width: 100%;
+  margin: auto;
+  flex-shrink: 0;
+}
+.price-orbit::before {
+  content: '';
+  position: absolute; inset: 28%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(61,90,255,0.14) 0%, transparent 70%);
+  animation: orbit-pulse 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.orbit-ring {
+  position: absolute; inset: 52px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(61,90,255,0.2);
+  pointer-events: none;
+}
+.orbit-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, #7b93ff 55%, rgba(46,255,168,0.85) 100%);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 56px rgba(61,90,255,0.45), 0 8px 32px rgba(61,90,255,0.3);
+  z-index: 2;
+}
+.orbit-center__symbol {
+  font-size: 2.4rem; font-weight: 800; color: #fff;
+  font-family: var(--font-display); line-height: 1; letter-spacing: -0.04em;
+}
+.orbit__item {
+  position: absolute; top: 50%; left: 50%;
+  width: 280px; height: 175px;
+  margin: -87px 0 0 -140px;
+  border-radius: 10px; overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.75);
+  box-shadow:
+    0 20px 56px rgba(61,90,255,0.30),
+    0 6px 20px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+  animation: orbit-spin 32s linear infinite;
+  z-index: 1;
+}
+.orbit__item::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  z-index: 2;
+}
+.orbit__item img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: top left;
+  display: block;
+}
+.orbit__item--1 { animation-delay:    0s; }
+.orbit__item--2 { animation-delay:  -4.57s; }
+.orbit__item--3 { animation-delay:  -9.14s; }
+.orbit__item--4 { animation-delay: -13.71s; }
+.orbit__item--5 { animation-delay: -18.29s; }
+.orbit__item--6 { animation-delay: -22.86s; }
+.orbit__item--7 { animation-delay: -27.43s; }
+@keyframes orbit-spin {
+  from { transform: rotate(0deg)   translateX(210px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(210px) rotate(-360deg); }
+}
+@keyframes orbit-pulse {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit__item, .price-orbit::before { animation: none; }
+}
+@media (max-width: 560px) {
+  .price-orbit { width: 380px; height: 380px; }
+  .orbit-ring { inset: 44px; }
+  .orbit-center { width: 76px; height: 76px; }
+  .orbit-center__symbol { font-size: 2rem; }
+  .orbit__item { width: 200px; height: 125px; margin: -62px 0 0 -100px; border-radius: 8px; }
+  @keyframes orbit-spin {
+    from { transform: rotate(0deg)   translateX(148px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(148px) rotate(-360deg); }
+  }
+}
+
+/* ---- Frise défis du pricing ---- */
+.pricing-frise {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 64px;
+  padding-top: 0;
+  gap: 8px;
+}
+.pricing-frise__track {
+  position: absolute;
+  top: 26px; left: 40px; right: 40px;
+  height: 2px;
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  opacity: 0.3;
+  pointer-events: none;
+}
+.frise-item {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 14px; flex: 1; position: relative; z-index: 1;
+}
+.frise-node {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--card); border: 2px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 0.78rem;
+  letter-spacing: 0.02em; color: var(--blue);
+  transition: background .3s, border-color .3s, box-shadow .3s, transform .3s;
+  cursor: default;
+}
+.frise-item:hover .frise-node {
+  background: linear-gradient(135deg, var(--blue), #7b93ff);
+  border-color: transparent;
+  color: #fff;
+  transform: scale(1.12);
+  box-shadow: 0 6px 20px rgba(61,90,255,0.3);
+}
+.frise-label {
+  font-size: 0.82rem; font-weight: 600; color: var(--text);
+  text-align: center; line-height: 1.35; max-width: 110px;
+  transition: color .3s;
+}
+.frise-item:hover .frise-label { color: var(--blue); }
+@media (max-width: 760px) {
+  .pricing-frise { flex-wrap: wrap; justify-content: center; gap: 24px 16px; }
+  .pricing-frise__track { display: none; }
+  .frise-item { flex: 0 0 calc(33% - 16px); }
+}
+@media (max-width: 480px) {
+  .frise-item { flex: 0 0 calc(50% - 16px); }
+}
+
+/* ---- Interface showcase ---- */
+.interface-showcase.feats-showcase { align-items: start; }
+.interface-showcase .feats-panel { height: 500px; }
+.interface-showcase .feat-slide__img { top: 28px; height: calc(72% - 28px); border-radius: 0; }
+@media (max-width: 1024px) { .interface-showcase .feats-panel { height: 400px; } }
+@media (max-width: 560px)  { .interface-showcase .feats-panel { height: 320px; } }
+
+/* Chrome bar au dessus de chaque screenshot */
+.feat-slide__chrome {
+  position: absolute; top: 0; left: 0; right: 0; height: 28px;
+  background: #EAECF0; border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  z-index: 3;
+}
+.feat-slide__chrome::before {
+  content: '';
+  position: absolute; top: 50%; transform: translateY(-50%); left: 12px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #FF5F57;
+  box-shadow: 14px 0 0 #FEBC2E, 28px 0 0 #28C840;
+}
+
+/* ---- Tech Flow Pipeline ---- */
+/* ---- Tech Flow Pipeline ---- */
+@keyframes glow-drift-a {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(14px, -10px); }
+}
+.tech-flow {
+  display: grid;
+  grid-template-columns: 1fr 72px 1.2fr 72px 1fr;
+  align-items: center;
+  margin-top: 56px;
+  gap: 0;
+  position: relative;
+}
+.tech-flow::before {
+  content: '';
+  position: absolute; top: -30%; right: -6%; width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(46,255,168,0.13) 0%, transparent 65%);
+  pointer-events: none; z-index: 0;
+  animation: glow-drift-a 7s ease-in-out infinite;
+}
+.tech-flow::after {
+  content: '';
+  position: absolute; bottom: -20%; left: -4%; width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(61,90,255,0.1) 0%, transparent 65%);
+  pointer-events: none; z-index: 0;
+  animation: glow-drift-a 9s ease-in-out infinite reverse;
+}
+.tf-phase {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 28px 24px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  z-index: 1;
+}
+.tf-phase::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  transform: scaleX(0); transform-origin: left; transition: transform .4s ease;
+}
+.tf-phase:hover::before { transform: scaleX(1); }
+.tf-phase:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(61,90,255,0.1); }
+.tf-phase--core {
+  border: 2px solid var(--blue);
+  box-shadow: 0 8px 32px rgba(61,90,255,0.12);
+  animation: core-pulse 3.5s ease-in-out infinite;
+}
+.tf-phase--core::before { display: none; }
+@keyframes core-pulse {
+  0%, 100% { border-color: rgba(61,90,255,0.55); box-shadow: 0 8px 28px rgba(61,90,255,0.1); }
+  50%       { border-color: var(--blue);          box-shadow: 0 12px 40px rgba(61,90,255,0.22); }
+}
+.tf-phase__head {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--muted);
+}
+.tf-num {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--blue); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; font-weight: 800; flex-shrink: 0;
+}
+
+/* Sources */
+.tf-sources { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+.tf-source {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 11px; border-radius: 8px;
+  background: rgba(61,90,255,0.04); border: 1px solid rgba(61,90,255,0.1);
+  font-size: 0.8rem; font-weight: 600; color: var(--text);
+  transition: background .2s, border-color .2s;
+  animation-play-state: paused;
+}
+.tf-source:hover { background: rgba(61,90,255,0.08); border-color: rgba(61,90,255,0.22); }
+.tech-flow.is-running .tf-source {
+  animation: src-in 0.35s var(--d, 0s) ease-out both;
+  animation-play-state: running;
+}
+@keyframes src-in {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.tf-source::before {
+  content: '';
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--mint); box-shadow: 0 0 8px rgba(46,255,168,0.95);
+  flex-shrink: 0; animation: dot-pulse 2s ease-in-out infinite;
+}
+.tf-source--more {
+  border-style: dashed; background: transparent;
+  color: var(--muted); font-size: 0.75rem; font-style: italic;
+}
+.tf-source--more::before { display: none; }
+@keyframes dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.35; transform: scale(0.65); }
+}
+
+/* Match rows */
+.tf-match-rows { display: flex; flex-direction: column; gap: 7px; }
+.tf-mrow {
+  display: flex; align-items: center; gap: 6px;
+  animation-play-state: paused;
+}
+.tech-flow.is-running .tf-mrow {
+  animation: mrow-in 0.3s calc(var(--r, 0) * 0.1s + 0.2s) ease-out both;
+  animation-play-state: running;
+}
+@keyframes mrow-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.tf-tag {
+  flex: 1; text-align: center;
+  padding: 3px 8px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;
+}
+.tf-tag--l { background: rgba(61,90,255,0.08); color: var(--blue); border: 1px solid rgba(61,90,255,0.2); }
+.tf-tag--r { background: rgba(46,255,168,0.12); color: #008a5e; border: 1px solid rgba(46,255,168,0.3); }
+.tf-eq {
+  font-size: 1rem; font-weight: 900; flex-shrink: 0; color: var(--muted);
+  animation: eq-cycle 2s ease-in-out infinite;
+}
+@keyframes eq-cycle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50%       { opacity: 1; transform: scale(1.2); color: var(--blue); }
+}
+.tf-score {
+  display: inline-flex; align-items: baseline; gap: 3px;
+  background: linear-gradient(135deg, var(--blue), var(--mint));
+  border-radius: 20px; padding: 5px 14px;
+  color: #fff; font-weight: 800; margin-top: 4px; align-self: flex-start;
+}
+.tf-score__num { font-size: 1.1rem; font-family: var(--font-display); }
+.tf-score__unit { font-size: 0.74rem; }
+
+/* Decision */
+.tf-decision { display: flex; flex-direction: column; gap: 7px; }
+.tf-prow {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 11px; border-radius: 8px;
+  background: rgba(61,90,255,0.04); border: 1px solid rgba(61,90,255,0.1);
+  font-size: 0.8rem;
+}
+.tf-prow span { color: var(--muted); }
+.tf-prow__val { font-weight: 700; font-family: var(--font-display); color: var(--text); }
+.tf-prow--market .tf-prow__val {
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.tf-alert {
+  padding: 6px 11px; border-radius: 8px;
+  background: rgba(255,140,0,0.07); border: 1px solid rgba(255,140,0,0.22);
+  color: #b86800; font-size: 0.77rem; font-weight: 600;
+  animation: alert-pulse 2.5s ease-in-out infinite;
+}
+@keyframes alert-pulse {
+  0%, 100% { border-color: rgba(255,140,0,0.2); }
+  50%       { border-color: rgba(255,140,0,0.5); background: rgba(255,140,0,0.12); }
+}
+.tf-reco {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 11px; border-radius: 8px;
+  background: rgba(61,90,255,0.06); border: 1px solid rgba(61,90,255,0.18);
+  font-size: 0.8rem; color: var(--muted);
+}
+.tf-reco strong {
+  font-size: 1.05rem; font-weight: 800; font-family: var(--font-display);
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* Connector arrows */
+.tf-arrow {
+  position: relative; align-self: center; display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+.tf-arrow svg { width: 72px; height: 20px; display: block; overflow: visible; }
+.tf-particle {
+  position: absolute; top: 50%; left: 0;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--blue); box-shadow: 0 0 10px rgba(61,90,255,0.7);
+  transform: translateY(-50%);
+  animation: particle-flow 1.8s linear infinite;
+  pointer-events: none;
+}
+.tf-particle--2 { animation-delay: -0.6s; background: var(--mint); box-shadow: 0 0 10px rgba(46,255,168,0.8); }
+.tf-particle--3 { animation-delay: -1.2s; }
+@keyframes particle-flow {
+  0%   { left: 0;                opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { left: calc(100% - 8px); opacity: 0; }
+}
+
+/* Stats */
+.tech-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px;
+}
+.tech-stat {
+  text-align: center; padding: 24px 16px;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--r-lg); position: relative; overflow: hidden;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.tech-stat::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
+}
+.tech-stat:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,90,255,0.1); border-color: rgba(61,90,255,0.25); }
+.tech-stat:hover::before { transform: scaleX(1); }
+.tech-stat strong {
+  display: block; font-size: 1.45rem; font-weight: 800;
+  font-family: var(--font-display);
+  background: linear-gradient(to right, var(--blue), var(--mint));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+.tech-stat span { font-size: 0.76rem; color: var(--muted); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tech-flow { grid-template-columns: 1fr; gap: 16px; }
+  .tf-arrow { width: 2px; height: 36px; background: linear-gradient(to bottom, var(--blue), var(--mint)); margin: -4px auto; display: block; }
+  .tf-arrow svg { display: none; }
+  .tf-particle { left: -3px; top: 0; transform: none; animation: particle-flow-v 1.8s linear infinite; }
+  @keyframes particle-flow-v {
+    0%   { top: 0;                opacity: 0; }
+    8%   { opacity: 1; }
+    92%  { opacity: 1; }
+    100% { top: calc(100% - 8px); opacity: 0; }
+  }
+  .tech-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .tech-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
+</style>
+</head>
+<body data-screen-label="Le bon prix">
+
+<!-- UI chrome -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+<div class="progress-bar" aria-hidden="true"></div>
+<div class="menu-backdrop"></div>
+<nav class="nav nav--on-dark">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo" aria-label="nricher accueil"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Accueil</a></li>
+      <li class="nav__item">
+        <a href="#" class="nav__link active">La plateforme ▾</a>
+        <div class="nav__dropdown">
+          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
+          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
+          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t">Bien présenté</span><span class="nav__dd-d">Fiches produits enrichies, publiées partout</span></span></a>
+        </div>
+      </li>
+      <li><a href="l-outil.html" class="nav__link">L'outil</a></li>
+      <li><a href="cas-clients.html" class="nav__link">Cas clients</a></li>
+      <li><a href="lequipe.html" class="nav__link">L'équipe</a></li>
+      <li><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login">Connexion</a>
+      <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<aside class="mobile-menu">
+  <a href="le-bon-catalogue.html">Le bon produit</a>
+  <a href="le-bon-prix.html">Le bon prix</a>
+  <a href="bien-presente.html">Bien présenté</a>
+  <a href="l-outil.html">L'outil</a>
+  <a href="cas-clients.html">Cas clients</a>
+  <a href="lequipe.html">L'équipe</a>
+  <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+</aside>
+
+<!-- PAGE HERO -->
+<header class="page-hero glow-wrap" data-parallax>
+  <div class="hero__glow hero__glow--mint" data-glow></div>
+  <div class="hero__glow hero__glow--blue" data-glow></div>
+  <div class="container page-hero__inner">
+    <div>
+      <div class="breadcrumb reveal"><a href="index.html">La plateforme</a><span class="sep">→</span><span class="cur">Le bon prix</span></div>
+      <h1 class="page-hero__title" data-split-hero>
+        <span class="split-line"><span class="split-inner">L'information prix <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">en temps réel</em></span></span>
+        <span class="split-line"><span class="split-inner">pour rester toujours attractif.</span></span>
+      </h1>
+      <p class="page-hero__sub reveal" data-delay="2">Notre solution de pricing management automatise vos politiques tarifaires selon les évolutions du marché, pour maximiser compétitivité et marge. Vous pilotez vos prix avec finesse, en cohérence avec vos objectifs business, sans mobiliser inutilement vos ressources internes.</p>
+      <div class="page-hero__cta reveal" data-delay="3">
+        <a href="contact.html" class="btn btn-primary btn-lg">Voir le benchmark en action →</a>
+      </div>
+    </div>
+    <div class="page-hero__visual reveal" data-delay="2" style="display:flex;align-items:center;justify-content:center;">
+      <div class="price-orbit">
+        <div class="orbit-ring"></div>
+        <div class="orbit-center"><span class="orbit-center__symbol">€</span></div>
+        <div class="orbit__item orbit__item--1">
+          <img src="img/le bon prix/PI Evolution.png" alt="PI Evolution" loading="eager" />
+        </div>
+        <div class="orbit__item orbit__item--2">
+          <img src="img/le bon prix/Price evolution.png" alt="Price Evolution" loading="eager" />
+        </div>
+        <div class="orbit__item orbit__item--3">
+          <img src="img/le bon prix/Price Min.png" alt="Price Min" loading="eager" />
+        </div>
+        <div class="orbit__item orbit__item--4">
+          <img src="img/le bon prix/market-analysis.png" alt="Market analysis" loading="eager" />
+        </div>
+        <div class="orbit__item orbit__item--5">
+          <img src="img/le bon prix/Seller management.png" alt="Seller management" loading="eager" />
+        </div>
+        <div class="orbit__item orbit__item--6">
+          <img src="img/le bon prix/Décision.png" alt="Décision" loading="lazy" />
+        </div>
+        <div class="orbit__item orbit__item--7">
+          <img src="img/le bon prix/Price All.png" alt="Price All" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LE PROBLÈME : LES DÉFIS DU PRICING -->
+<section class="section" id="probleme">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="eyebrow">Le problème</span>
+      <h2 class="section-title">Au cœur de la stratégie :<br>les défis du <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">Pricing</em></h2>
+      <p class="section-sub">Le suivi prix manuel a atteint ses limites. Voici les six enjeux qui freinent les équipes, et que nricher résout.</p>
+    </div>
+    <div class="pricing-frise reveal" data-delay="1">
+      <div class="pricing-frise__track"></div>
+      <div class="frise-item">
+        <div class="frise-node">01</div>
+        <div class="frise-label">Maximiser la rentabilité</div>
+      </div>
+      <div class="frise-item">
+        <div class="frise-node">02</div>
+        <div class="frise-label">Aligner la stratégie</div>
+      </div>
+      <div class="frise-item">
+        <div class="frise-node">03</div>
+        <div class="frise-label">Surveiller la concurrence</div>
+      </div>
+      <div class="frise-item">
+        <div class="frise-node">04</div>
+        <div class="frise-label">Réagir en temps réel</div>
+      </div>
+      <div class="frise-item">
+        <div class="frise-node">05</div>
+        <div class="frise-label">Maîtriser les données</div>
+      </div>
+      <div class="frise-item">
+        <div class="frise-node">06</div>
+        <div class="frise-label">Gérer la complexité</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LA TECHNOLOGIE -->
+<section class="section section--off" id="technologie">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="eyebrow">La technologie</span>
+      <h2 class="section-title">Le matching <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">sans EAN.</em><br>C'est notre signature.</h2>
+      <p class="section-sub">Quand les codes produits manquent, nricher matche sur les caractéristiques réelles (couleur, taille, matière, modèle, marque) et déclenche la bonne décision tarifaire.</p>
+    </div>
+
+    <div class="tech-flow reveal" data-delay="1">
+
+      <!-- Phase 1 : Collecte -->
+      <div class="tf-phase">
+        <div class="tf-phase__head"><span class="tf-num">01</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Collecte</span></div>
+        <ul class="tf-sources">
+          <li class="tf-source" style="--d:.05s">Amazon</li>
+          <li class="tf-source" style="--d:.15s">Zalando</li>
+          <li class="tf-source" style="--d:.25s">Asos</li>
+          <li class="tf-source" style="--d:.35s">Cdiscount</li>
+          <li class="tf-source tf-source--more" style="--d:.45s">+226 autres</li>
+        </ul>
+        <div style="font-size:1.4rem;font-weight:800;font-family:var(--font-display);background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">230 <span style="font-size:0.75rem;font-weight:600;-webkit-text-fill-color:var(--muted);">sites surveillés</span></div>
+      </div>
+
+      <!-- Connecteur 1 -->
+      <div class="tf-arrow">
+        <svg viewBox="0 0 72 20" fill="none">
+          <line x1="0" y1="10" x2="64" y2="10" stroke="url(#g1)" stroke-width="2"/>
+          <polygon points="62,4 72,10 62,16" fill="url(#g1f)"/>
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3D5AFF" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#2EFFA8" stop-opacity=".9"/>
+            </linearGradient>
+            <linearGradient id="g1f" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3D5AFF"/>
+              <stop offset="100%" stop-color="#2EFFA8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="tf-particle tf-particle--1"></div>
+        <div class="tf-particle tf-particle--2"></div>
+        <div class="tf-particle tf-particle--3"></div>
+      </div>
+
+      <!-- Phase 2 : Matching IA (vedette) -->
+      <div class="tf-phase tf-phase--core">
+        <div class="tf-phase__head"><span class="tf-num">02</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Matching IA</span></div>
+        <div class="tf-match-rows">
+          <div class="tf-mrow" style="--r:0">
+            <span class="tf-tag tf-tag--l">Doudoune homme</span>
+            <span class="tf-eq">≡</span>
+            <span class="tf-tag tf-tag--r">Veste matelassée</span>
+          </div>
+          <div class="tf-mrow" style="--r:1">
+            <span class="tf-tag tf-tag--l">L / 42-44</span>
+            <span class="tf-eq">≡</span>
+            <span class="tf-tag tf-tag--r">XL International</span>
+          </div>
+          <div class="tf-mrow" style="--r:2">
+            <span class="tf-tag tf-tag--l">Imperméable 15k</span>
+            <span class="tf-eq">≡</span>
+            <span class="tf-tag tf-tag--r">IP-15000mm CE</span>
+          </div>
+          <div class="tf-mrow" style="--r:3">
+            <span class="tf-tag tf-tag--l">Noir carbone</span>
+            <span class="tf-eq">≡</span>
+            <span class="tf-tag tf-tag--r">Anthracite Dark</span>
+          </div>
+        </div>
+        <div class="tf-score">
+          <span class="tf-score__num" data-tf-count="99.9">0</span><span class="tf-score__unit">% match</span>
+        </div>
+      </div>
+
+      <!-- Connecteur 2 -->
+      <div class="tf-arrow">
+        <svg viewBox="0 0 72 20" fill="none">
+          <line x1="0" y1="10" x2="64" y2="10" stroke="url(#g2)" stroke-width="2"/>
+          <polygon points="62,4 72,10 62,16" fill="url(#g2f)"/>
+          <defs>
+            <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3D5AFF" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#2EFFA8" stop-opacity=".9"/>
+            </linearGradient>
+            <linearGradient id="g2f" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#3D5AFF"/>
+              <stop offset="100%" stop-color="#2EFFA8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="tf-particle tf-particle--1"></div>
+        <div class="tf-particle tf-particle--2"></div>
+        <div class="tf-particle tf-particle--3"></div>
+      </div>
+
+      <!-- Phase 3 : Décision prix -->
+      <div class="tf-phase tf-phase--decision">
+        <div class="tf-phase__head"><span class="tf-num">03</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Décision prix</span></div>
+        <div class="tf-decision">
+          <div class="tf-prow">
+            <span>Votre prix</span>
+            <strong class="tf-prow__val">89,99 €</strong>
+          </div>
+          <div class="tf-prow tf-prow--market">
+            <span>Marché min.</span>
+            <strong class="tf-prow__val">79,99 €</strong>
+          </div>
+          <div class="tf-alert">⚠ Hors-prix détecté · −11%</div>
+          <div class="tf-reco">
+            <span>Recommandation</span>
+            <strong>84,99 €</strong>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats -->
+    <div class="tech-stats reveal" data-delay="2">
+      <div class="tech-stat"><strong>99,9%</strong><span>fiabilité du matching</span></div>
+      <div class="tech-stat"><strong>24h</strong><span>fraîcheur des prix</span></div>
+      <div class="tech-stat"><strong>Sans EAN</strong><span>matching par attributs</span></div>
+      <div class="tech-stat"><strong>J+1</strong><span>setup pour vos catégories</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NOS INTERFACES -->
+<section class="section" id="interfaces">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="eyebrow">Nos interfaces</span>
+      <h2 class="section-title" data-split-scroll>
+        <span class="split-line"><span class="split-inner">Tout le potentiel de la <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">data produit</em></span></span>
+        <span class="split-line"><span class="split-inner">à portée de clics.</span></span>
+      </h2>
+    </div>
+    <div class="feats-showcase interface-showcase reveal" data-delay="1">
+      <div class="feats-nav">
+        <button class="feat-tab" data-feat="0">
+          <span class="feat-tab__num">01</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">PI Evolution</span><span class="feat-tab__sub">Évolution de votre indice prix.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="1">
+          <span class="feat-tab__num">02</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Price Evolution</span><span class="feat-tab__sub">Dynamique des prix dans le temps.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="2">
+          <span class="feat-tab__num">03</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Price Min</span><span class="feat-tab__sub">Prix plancher concurrents.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="3">
+          <span class="feat-tab__num">04</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Market analysis</span><span class="feat-tab__sub">Analyse comparative du marché.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="4">
+          <span class="feat-tab__num">05</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Seller management</span><span class="feat-tab__sub">Gérez vos vendeurs marketplace.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="5">
+          <span class="feat-tab__num">06</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Price All</span><span class="feat-tab__sub">Vue globale des prix concurrents.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+        <button class="feat-tab" data-feat="6">
+          <span class="feat-tab__num">07</span>
+          <span class="feat-tab__body"><span class="feat-tab__title">Décision</span><span class="feat-tab__sub">Pilotez vos reprices en un clic.</span></span>
+          <span class="feat-tab__progress"></span>
+        </button>
+      </div>
+      <div class="feats-panel">
+
+        <div class="feat-slide is-active">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/PI Evolution.png" alt="PI Evolution" />
+          <span class="feat-slide__ghost">01</span>
+          <h3 class="feat-slide__title">PI Evolution.</h3>
+          <p class="feat-slide__text">Suivez l'évolution de votre indice prix dans le temps. Visualisez comment votre positionnement évolue face au marché semaine après semaine.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/Price evolution.png" alt="Price Evolution" />
+          <span class="feat-slide__ghost">02</span>
+          <h3 class="feat-slide__title">Price Evolution.</h3>
+          <p class="feat-slide__text">Analysez la dynamique des prix du marché sur la durée. Anticipez les tendances et adaptez votre stratégie avant que les concurrents ne bougent.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/Price Min.png" alt="Price Min" />
+          <span class="feat-slide__ghost">03</span>
+          <h3 class="feat-slide__title">Price Min.</h3>
+          <p class="feat-slide__text">Suivez le prix plancher de chaque concurrent en temps réel. Détectez immédiatement qui casse les prix sur vos produits stratégiques avant que ça impacte votre CA.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/market-analysis.png" alt="Market analysis" />
+          <span class="feat-slide__ghost">04</span>
+          <h3 class="feat-slide__title">Market analysis.</h3>
+          <p class="feat-slide__text">Analysez votre part du marché prix et visualisez comment vos tarifs se comparent à l'ensemble des concurrents référencés sur chaque produit.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/Seller management.png" alt="Seller management" />
+          <span class="feat-slide__ghost">05</span>
+          <h3 class="feat-slide__title">Seller management.</h3>
+          <p class="feat-slide__text">Gérez vos vendeurs marketplace et leurs politiques de prix. Identifiez les sellers qui déstabilisent votre réseau et prenez les décisions avant que les dégâts soient faits.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/Price All.png" alt="Price All" />
+          <span class="feat-slide__ghost">06</span>
+          <h3 class="feat-slide__title">Price All.</h3>
+          <p class="feat-slide__text">Visualisez l'intégralité des prix concurrents sur votre catalogue en une seule vue. Repérez d'un coup d'œil les écarts de positionnement les plus critiques.</p>
+        </div>
+
+        <div class="feat-slide">
+          <div class="feat-slide__bg"></div>
+          <div class="feat-slide__chrome"></div>
+          <img class="feat-slide__img" src="img/le bon prix/Décision.png" alt="Décision" />
+          <span class="feat-slide__ghost">07</span>
+          <h3 class="feat-slide__title">Décision.</h3>
+          <p class="feat-slide__text">Prenez des décisions tarifaires éclairées à partir des données marché. nricher identifie les actions à fort impact, vous validez en un clic.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark glow-wrap cta-final" id="demo">
+  <div class="container center">
+    <h2 class="section-title reveal" style="max-width:720px;margin-inline:auto;">Voyez le <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">benchmark</em> tourner sur votre catalogue.</h2>
+    <p class="section-sub reveal" data-delay="1" style="margin-inline:auto;margin-bottom:36px;">30 minutes pour découvrir où vous êtes hors-prix et combien ça vous coûte.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg reveal" data-delay="2">Demander une démo →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
+        <p class="footer__tag">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
+      </div>
+      <div class="footer__col">
+        <h4>La plateforme</h4>
+        <a href="le-bon-catalogue.html">Le bon produit</a>
+        <a href="le-bon-prix.html">Le bon prix</a>
+        <a href="bien-presente.html">Bien présenté</a>
+      </div>
+      <div class="footer__col">
+        <h4>Ressources</h4>
+        <a href="cas-clients.html">Cas clients</a>
+        <a href="lequipe.html">L'équipe</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="contact.html">Demander une démo</a>
+        <a href="mailto:contact@nricher.io">contact@nricher.io</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
+      <a href="https://www.linkedin.com/company/nricher/?viewAsMember=true" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+(function(){
+  var pipe = document.querySelector('.tech-flow');
+  var scoreEl = document.querySelector('[data-tf-count]');
+  if (!pipe) return;
+  var started = false;
+  function onVisible() {
+    if (started) return; started = true;
+    pipe.classList.add('is-running');
+    if (scoreEl) {
+      var target = parseFloat(scoreEl.getAttribute('data-tf-count'));
+      var elapsed = 0, dur = 1400, step = 16;
+      var t = setInterval(function(){
+        elapsed += step;
+        var v = Math.min(target, (elapsed / dur) * target);
+        scoreEl.textContent = v >= target ? target : v.toFixed(1);
+        if (elapsed >= dur) { scoreEl.textContent = target; clearInterval(t); }
+      }, step);
+    }
+  }
+  var obs = new IntersectionObserver(function(entries){
+    if (entries[0].isIntersecting) { onVisible(); obs.disconnect(); }
+  }, { threshold: 0.25 });
+  obs.observe(pipe);
+})();
+</script>
+</body>
+</html>

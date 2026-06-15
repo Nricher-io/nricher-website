@@ -1,0 +1,15 @@
+# Windows system files
+desktop.ini
+Thumbs.db
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs
+*.log

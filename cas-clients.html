@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cas clients — Ils ont choisi nricher · nricher</title>
+<meta name="description" content="Découvrez comment des retailers et e-commerçants utilisent nricher pour piloter catalogue, prix et publication. Résultats mesurés : +20% de CA, +45% ROAS." />
+
+<link rel="stylesheet" href="css/main.css" />
+<script src="js/zoom-persist.js"></script>
+<style>
+/* Hero logos fit inside the centered 840px container */
+.clients-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; max-width: 780px; margin-inline: auto; }
+.clients-grid .clients__logo { flex: unset; width: 100%; height: 72px; }
+</style>
+</head>
+<body data-screen-label="Cas clients">
+
+<!-- UI chrome -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
+<div class="progress-bar" aria-hidden="true"></div>
+<div class="menu-backdrop"></div>
+<nav class="nav nav--on-dark">
+  <div class="container nav__inner">
+    <a href="index.html" class="logo" aria-label="nricher accueil"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link">Accueil</a></li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">La plateforme ▾</a>
+        <div class="nav__dropdown">
+          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
+          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
+          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t">Bien présenté</span><span class="nav__dd-d">Fiches produits enrichies, publiées partout</span></span></a>
+        </div>
+      </li>
+      <li><a href="l-outil.html" class="nav__link">L'outil</a></li>
+      <li><a href="cas-clients.html" class="nav__link active">Cas clients</a></li>
+      <li><a href="lequipe.html" class="nav__link">L'équipe</a></li>
+      <li><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <div class="nav__right">
+      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login">Connexion</a>
+      <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<aside class="mobile-menu">
+  <a href="le-bon-catalogue.html">Le bon produit</a>
+  <a href="le-bon-prix.html">Le bon prix</a>
+  <a href="bien-presente.html">Bien présenté</a>
+  <a href="l-outil.html">L'outil</a>
+  <a href="cas-clients.html">Cas clients</a>
+  <a href="lequipe.html">L'équipe</a>
+  <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+</aside>
+
+<!-- PAGE HERO (CENTERED) -->
+<header class="page-hero page-hero--center glow-wrap" data-parallax>
+  <div class="hero__glow hero__glow--mint" data-glow></div>
+  <div class="hero__glow hero__glow--blue" data-glow></div>
+  <div class="container page-hero__inner">
+    <div style="text-align:center;width:100%;">
+      <span class="eyebrow reveal">Cas clients</span>
+      <h1 class="page-hero__title" data-split-hero style="margin-top:20px;">
+        <span class="split-line"><span class="split-inner">Ils ont choisi <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">nricher.</em></span></span>
+        <span class="split-line"><span class="split-inner">Voici ce que ça a changé.</span></span>
+      </h1>
+      <p class="page-hero__sub reveal" data-delay="2">Des retailers et e-commerçants qui ont remplacé l'intuition par la donnée marché et l'ont mesuré sur leur CA.</p>
+      <div class="clients-grid reveal" id="clients-grid" data-delay="3" style="margin-top:80px;">
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+        <div class="clients__logo"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CASES -->
+<section class="section">
+  <div class="container">
+    <div class="casecards">
+
+      <article class="casecard reveal" data-delay="1">
+        <div class="casecard__img">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="Leader français de l'ameublement" loading="lazy" />
+          <span class="casecard__tag">Maison &amp; Déco</span>
+        </div>
+        <div class="casecard__body">
+          <h3 class="casecard__name">Leader français de l'ameublement</h3>
+          <p class="casecard__desc">Des équipes category management qui avancent à l'aveugle face aux tendances de vente : identifier les produits manquants, à pousser ou à arrêter.</p>
+          <div class="casecard__pills">
+            <div class="casecard__pill">
+              <span class="casecard__pill-num">+7%</span>
+              <span class="casecard__pill-label">de potentiel de ventes identifié en 2022</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-modal="modal-1">Découvrir le cas client →</button>
+        </div>
+      </article>
+
+      <article class="casecard reveal" data-delay="2">
+        <div class="casecard__img">
+          <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80" alt="Leader français des vêtements chauds" loading="lazy" />
+          <span class="casecard__tag">Mode &amp; Textile</span>
+        </div>
+        <div class="casecard__body">
+          <h3 class="casecard__name">Leader français des vêtements chauds</h3>
+          <p class="casecard__desc">Mettre 25 000 articles au format Amazon sans erreur de taxonomie, une tâche manuellement impossible en temps raisonnable, avec 20 % de taux d'erreur constaté.</p>
+          <div class="casecard__pills">
+            <div class="casecard__pill">
+              <span class="casecard__pill-num">99%</span>
+              <span class="casecard__pill-label">des articles bien catégorisés</span>
+            </div>
+            <div class="casecard__pill">
+              <span class="casecard__pill-num">3 sem.</span>
+              <span class="casecard__pill-label">gagnées sur la mise en ligne Amazon</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-modal="modal-2">Découvrir le cas client →</button>
+        </div>
+      </article>
+
+      <article class="casecard reveal" data-delay="3">
+        <div class="casecard__img">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Leader mondial des vêtements de sport" loading="lazy" />
+          <span class="casecard__tag">Sport &amp; Outdoor</span>
+        </div>
+        <div class="casecard__body">
+          <h3 class="casecard__name">Leader mondial des vêtements de sport</h3>
+          <p class="casecard__desc">Benchmarker l'intégralité du catalogue face à 12 retailers européens (sans EAN/GTIN) pour optimiser chaque euro de budget Google Shopping.</p>
+          <div class="casecard__pills">
+            <div class="casecard__pill">
+              <span class="casecard__pill-num">+20%</span>
+              <span class="casecard__pill-label">de ventes DtoC vs. 2021</span>
+            </div>
+            <div class="casecard__pill">
+              <span class="casecard__pill-num">+40%</span>
+              <span class="casecard__pill-label">de temps gagné par les équipes</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" data-modal="modal-3">Découvrir le cas client →</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark glow-wrap cta-final" id="demo">
+  <div class="container center">
+    <h2 class="section-title reveal" style="max-width:760px;margin-inline:auto;">Votre secteur n'est pas listé ?</h2>
+    <p class="section-sub reveal" data-delay="1" style="margin-inline:auto;margin-bottom:36px;">nricher couvre déjà plus de 250 catégories. Voyons ensemble ce que ça donne sur la vôtre.</p>
+    <a href="contact.html" class="btn btn-primary btn-lg reveal" data-delay="2">Demander une démo →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="logo"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
+        <p class="footer__tag">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
+      </div>
+      <div class="footer__col">
+        <h4>La plateforme</h4>
+        <a href="le-bon-catalogue.html">Le bon produit</a>
+        <a href="le-bon-prix.html">Le bon prix</a>
+        <a href="bien-presente.html">Bien présenté</a>
+      </div>
+      <div class="footer__col">
+        <h4>Ressources</h4>
+        <a href="cas-clients.html">Cas clients</a>
+        <a href="lequipe.html">L'équipe</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="contact.html">Demander une démo</a>
+        <a href="mailto:contact@nricher.io">contact@nricher.io</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
+      <a href="https://www.linkedin.com/company/nricher/?viewAsMember=true" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODALS ============ -->
+
+<!-- Modal 1 — Ameublement -->
+<div class="modal" id="modal-1" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+  <div class="modal__overlay"></div>
+  <div class="modal__box">
+    <button class="modal__close" aria-label="Fermer">✕</button>
+    <div class="modal__layout">
+      <div class="modal__aside">
+        <img class="modal__aside-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80" alt="" />
+        <div class="modal__aside-over">
+          <span class="modal__aside-tag">Maison &amp; Déco</span>
+          <div class="modal__aside-stats">
+            <div class="modal__aside-stat">
+              <span class="modal__aside-num">+7%</span>
+              <span class="modal__aside-label">de potentiel de<br>ventes identifié</span>
+            </div>
+          </div>
+          <p class="modal__aside-name">Leader français<br>de l'ameublement</p>
+        </div>
+      </div>
+      <div class="modal__content">
+        <h2 class="modal__title" id="modal-1-title">Leader français de l'ameublement</h2>
+        <p class="modal__subtitle">Comment l'identification de leviers dans le catalogue a permis d'accroître le potentiel de vente de&nbsp;7&nbsp;%&nbsp;?</p>
+        <div class="modal__blocks">
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">01</span>Contexte</div>
+            <p>Le marché de l'univers de la maison fonctionne par tendances. Les équipes en charge du category management constatent être passées à côté de certaines tendances de vente. Ils avancent souvent à l'aveugle dans la gestion de leur catalogue.</p>
+          </div>
+          <div class="modal__block modal__block--alert">
+            <div class="modal__block-label"><span class="modal__step modal__step--alert">02</span>Point de blocage</div>
+            <p>Les outils de benchmark existants ne savent pas identifier les tendances pour guider les équipes dans la gestion du catalogue.</p>
+          </div>
+          <div class="modal__block modal__block--solution">
+            <div class="modal__block-label"><span class="modal__step modal__step--solution">03</span>Solution nricher : Offer Manager</div>
+            <ul>
+              <li>Quels produits répondent à une tendance et doivent être mis en avant, et à quel prix pour être compétitif</li>
+              <li>Quels produits manquent au catalogue alors qu'il y a une tendance très positive de vente</li>
+              <li>Quels produits pèsent sur le catalogue et devraient être supprimés pour améliorer la marge</li>
+            </ul>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">04</span>Périmètre</div>
+            <p>Marché : France · Set up en 1 jour pour les catégories déjà incluses (~250) et 1 semaine pour des catégories nouvelles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 — Vêtements chauds -->
+<div class="modal" id="modal-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+  <div class="modal__overlay"></div>
+  <div class="modal__box">
+    <button class="modal__close" aria-label="Fermer">✕</button>
+    <div class="modal__layout">
+      <div class="modal__aside">
+        <img class="modal__aside-img" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80" alt="" />
+        <div class="modal__aside-over">
+          <span class="modal__aside-tag">Mode &amp; Textile</span>
+          <div class="modal__aside-stats">
+            <div class="modal__aside-stat">
+              <span class="modal__aside-num">+99%</span>
+              <span class="modal__aside-label">articles<br>bien catégorisés</span>
+            </div>
+            <div class="modal__aside-sep"></div>
+            <div class="modal__aside-stat">
+              <span class="modal__aside-num">3 sem.</span>
+              <span class="modal__aside-label">gagnées sur<br>la mise en ligne</span>
+            </div>
+          </div>
+          <p class="modal__aside-name">Leader français<br>des vêtements chauds</p>
+        </div>
+      </div>
+      <div class="modal__content">
+        <h2 class="modal__title" id="modal-2-title">Leader français des vêtements chauds</h2>
+        <div class="modal__blocks">
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">01</span>Contexte</div>
+            <p>Les équipes e-commerce veulent être marchands chez Amazon avec 25&nbsp;000 articles. Chaque article doit trouver la bonne catégorie dans la taxonomie Amazon (très différente de la taxonomie source) et avoir ses caractéristiques correctement remplies, un travail qui demande normalement plusieurs semaines.</p>
+          </div>
+          <div class="modal__block modal__block--alert">
+            <div class="modal__block-label"><span class="modal__step modal__step--alert">02</span>Point de blocage</div>
+            <p>Les outils actuels (intégrateurs de flux) ne permettent pas de travailler à l'article. Cette tâche manuelle génère un taux d'erreur de 20&nbsp;%.</p>
+          </div>
+          <div class="modal__block modal__block--solution">
+            <div class="modal__block-label"><span class="modal__step modal__step--solution">03</span>Solution nricher : Catégorisation &amp; Article Attributes</div>
+            <p>Nos deux solutions travaillent en binôme : décliner le catalogue au format Amazon et remplir automatiquement toutes les catégories et caractéristiques des produits.</p>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">04</span>Périmètre</div>
+            <p>Marché : France · Catégorisation complète des 25&nbsp;000 articles en moins d'une semaine.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 — Vêtements sportifs -->
+<div class="modal" id="modal-3" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+  <div class="modal__overlay"></div>
+  <div class="modal__box">
+    <button class="modal__close" aria-label="Fermer">✕</button>
+    <div class="modal__layout">
+      <div class="modal__aside">
+        <img class="modal__aside-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="" />
+        <div class="modal__aside-over">
+          <span class="modal__aside-tag">Sport &amp; Outdoor</span>
+          <div class="modal__aside-stats">
+            <div class="modal__aside-stat">
+              <span class="modal__aside-num">+20%</span>
+              <span class="modal__aside-label">de ventes DtoC<br>vs. 2021</span>
+            </div>
+            <div class="modal__aside-sep"></div>
+            <div class="modal__aside-stat">
+              <span class="modal__aside-num">+40%</span>
+              <span class="modal__aside-label">de temps gagné<br>par les équipes</span>
+            </div>
+          </div>
+          <p class="modal__aside-name">Leader mondial<br>des vêtements de sport</p>
+        </div>
+      </div>
+      <div class="modal__content">
+        <h2 class="modal__title" id="modal-3-title">Leader mondial des vêtements de sport</h2>
+        <p class="modal__subtitle">Comment un benchmark prix automatisé a boosté les ventes de +20&nbsp;%.</p>
+        <div class="modal__blocks">
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">01</span>Contexte</div>
+            <p>La directrice e-commerce veut benchmarker les prix de leur site versus les retailers pour optimiser le budget Google Shopping. Actuellement, les category managers font des copier-coller d'URL, méthode chronophage limitée à quelques dizaines de références sur la totalité du catalogue.</p>
+          </div>
+          <div class="modal__block modal__block--alert">
+            <div class="modal__block-label"><span class="modal__step modal__step--alert">02</span>Point de blocage</div>
+            <p>Comment comparer ses prix avec ceux des concurrents quand les produits n'ont pas de code EAN/GTIN&nbsp;?</p>
+          </div>
+          <div class="modal__block modal__block--solution">
+            <div class="modal__block-label"><span class="modal__step modal__step--solution">03</span>Solution nricher : Pricing Benchmark</div>
+            <p>Comparaison en temps réel des prix du client et des retailers sur France, UK et Allemagne, sans besoin de codes EAN/GTIN.</p>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-label"><span class="modal__step">04</span>Périmètre</div>
+            <p>Marchés : France, UK, Allemagne · Retailers : Amazon, Asos, Hardloop, Tradeinn, JD Sports, Zalando, About You, OutdoorGB, Wiggle, Campz, Modivo, Bergfreunde.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
