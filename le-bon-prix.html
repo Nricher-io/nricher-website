@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
@@ -9,12 +9,8 @@
 <link rel="stylesheet" href="css/main.css" />
 <script src="js/zoom-persist.js"></script>
 <style>
-/* Glow hero — mint + bleu mélangés autour du titre (gauche) */
-.page-hero::before {
-  background:
-    radial-gradient(ellipse 50% 68% at 20% 38%, rgba(46,255,168,0.52), transparent 62%),
-    radial-gradient(ellipse 46% 64% at 46% 34%, rgba(61,90,255,0.46), transparent 60%);
-}
+/* Glow hero désactivé */
+.page-hero::before { background: none; }
 /* ---- Orbit prix ---- */
 .price-orbit {
   position: relative;
@@ -27,14 +23,14 @@
   content: '';
   position: absolute; inset: 28%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(61,90,255,0.14) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46,88,202,0.14) 0%, transparent 70%);
   animation: orbit-pulse 3.5s ease-in-out infinite;
   pointer-events: none;
 }
 .orbit-ring {
   position: absolute; inset: 52px;
   border-radius: 50%;
-  border: 1.5px dashed rgba(61,90,255,0.2);
+  border: 1.5px dashed rgba(46,88,202,0.2);
   pointer-events: none;
 }
 .orbit-center {
@@ -42,9 +38,9 @@
   transform: translate(-50%, -50%);
   width: 88px; height: 88px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue) 0%, #7b93ff 55%, rgba(46,255,168,0.85) 100%);
+  background: linear-gradient(135deg, var(--blue) 0%, #7b93ff 55%, rgba(96,239,190,0.85) 100%);
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 56px rgba(61,90,255,0.45), 0 8px 32px rgba(61,90,255,0.3);
+  box-shadow: 0 0 56px rgba(46,88,202,0.45), 0 8px 32px rgba(46,88,202,0.3);
   z-index: 2;
 }
 .orbit-center__symbol {
@@ -58,7 +54,7 @@
   border-radius: 10px; overflow: hidden;
   border: 2px solid rgba(255,255,255,0.75);
   box-shadow:
-    0 20px 56px rgba(61,90,255,0.30),
+    0 20px 56px rgba(46,88,202,0.30),
     0 6px 20px rgba(0,0,0,0.18),
     inset 0 1px 0 rgba(255,255,255,0.4);
   animation: orbit-spin 32s linear infinite;
@@ -141,7 +137,7 @@
   border-color: transparent;
   color: #fff;
   transform: scale(1.12);
-  box-shadow: 0 6px 20px rgba(61,90,255,0.3);
+  box-shadow: 0 6px 20px rgba(46,88,202,0.3);
 }
 .frise-label {
   font-size: 0.82rem; font-weight: 600; color: var(--text);
@@ -197,14 +193,14 @@
 .tech-flow::before {
   content: '';
   position: absolute; top: -30%; right: -6%; width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(46,255,168,0.13) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(96,239,190,0.13) 0%, transparent 65%);
   pointer-events: none; z-index: 0;
   animation: glow-drift-a 7s ease-in-out infinite;
 }
 .tech-flow::after {
   content: '';
   position: absolute; bottom: -20%; left: -4%; width: 260px; height: 260px;
-  background: radial-gradient(circle, rgba(61,90,255,0.1) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(46,88,202,0.1) 0%, transparent 65%);
   pointer-events: none; z-index: 0;
   animation: glow-drift-a 9s ease-in-out infinite reverse;
 }
@@ -224,16 +220,16 @@
   transform: scaleX(0); transform-origin: left; transition: transform .4s ease;
 }
 .tf-phase:hover::before { transform: scaleX(1); }
-.tf-phase:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(61,90,255,0.1); }
+.tf-phase:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(46,88,202,0.1); }
 .tf-phase--core {
   border: 2px solid var(--blue);
-  box-shadow: 0 8px 32px rgba(61,90,255,0.12);
+  box-shadow: 0 8px 32px rgba(46,88,202,0.12);
   animation: core-pulse 3.5s ease-in-out infinite;
 }
 .tf-phase--core::before { display: none; }
 @keyframes core-pulse {
-  0%, 100% { border-color: rgba(61,90,255,0.55); box-shadow: 0 8px 28px rgba(61,90,255,0.1); }
-  50%       { border-color: var(--blue);          box-shadow: 0 12px 40px rgba(61,90,255,0.22); }
+  0%, 100% { border-color: rgba(46,88,202,0.55); box-shadow: 0 8px 28px rgba(46,88,202,0.1); }
+  50%       { border-color: var(--blue);          box-shadow: 0 12px 40px rgba(46,88,202,0.22); }
 }
 .tf-phase__head {
   display: flex; align-items: center; gap: 9px;
@@ -252,12 +248,12 @@
 .tf-source {
   display: flex; align-items: center; gap: 8px;
   padding: 6px 11px; border-radius: 8px;
-  background: rgba(61,90,255,0.04); border: 1px solid rgba(61,90,255,0.1);
+  background: rgba(46,88,202,0.04); border: 1px solid rgba(46,88,202,0.1);
   font-size: 0.8rem; font-weight: 600; color: var(--text);
   transition: background .2s, border-color .2s;
   animation-play-state: paused;
 }
-.tf-source:hover { background: rgba(61,90,255,0.08); border-color: rgba(61,90,255,0.22); }
+.tf-source:hover { background: rgba(46,88,202,0.08); border-color: rgba(46,88,202,0.22); }
 .tech-flow.is-running .tf-source {
   animation: src-in 0.35s var(--d, 0s) ease-out both;
   animation-play-state: running;
@@ -269,7 +265,7 @@
 .tf-source::before {
   content: '';
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--mint); box-shadow: 0 0 8px rgba(46,255,168,0.95);
+  background: var(--mint); box-shadow: 0 0 8px rgba(96,239,190,0.95);
   flex-shrink: 0; animation: dot-pulse 2s ease-in-out infinite;
 }
 .tf-source--more {
@@ -300,8 +296,8 @@
   flex: 1; text-align: center;
   padding: 3px 8px; border-radius: 20px; font-size: 0.74rem; font-weight: 600;
 }
-.tf-tag--l { background: rgba(61,90,255,0.08); color: var(--blue); border: 1px solid rgba(61,90,255,0.2); }
-.tf-tag--r { background: rgba(46,255,168,0.12); color: #008a5e; border: 1px solid rgba(46,255,168,0.3); }
+.tf-tag--l { background: rgba(46,88,202,0.08); color: var(--blue); border: 1px solid rgba(46,88,202,0.2); }
+.tf-tag--r { background: rgba(96,239,190,0.12); color: #008a5e; border: 1px solid rgba(96,239,190,0.3); }
 .tf-eq {
   font-size: 1rem; font-weight: 900; flex-shrink: 0; color: var(--muted);
   animation: eq-cycle 2s ease-in-out infinite;
@@ -324,7 +320,7 @@
 .tf-prow {
   display: flex; justify-content: space-between; align-items: center;
   padding: 7px 11px; border-radius: 8px;
-  background: rgba(61,90,255,0.04); border: 1px solid rgba(61,90,255,0.1);
+  background: rgba(46,88,202,0.04); border: 1px solid rgba(46,88,202,0.1);
   font-size: 0.8rem;
 }
 .tf-prow span { color: var(--muted); }
@@ -346,7 +342,7 @@
 .tf-reco {
   display: flex; justify-content: space-between; align-items: center;
   padding: 10px 11px; border-radius: 8px;
-  background: rgba(61,90,255,0.06); border: 1px solid rgba(61,90,255,0.18);
+  background: rgba(46,88,202,0.06); border: 1px solid rgba(46,88,202,0.18);
   font-size: 0.8rem; color: var(--muted);
 }
 .tf-reco strong {
@@ -364,12 +360,12 @@
 .tf-particle {
   position: absolute; top: 50%; left: 0;
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--blue); box-shadow: 0 0 10px rgba(61,90,255,0.7);
+  background: var(--blue); box-shadow: 0 0 10px rgba(46,88,202,0.7);
   transform: translateY(-50%);
   animation: particle-flow 1.8s linear infinite;
   pointer-events: none;
 }
-.tf-particle--2 { animation-delay: -0.6s; background: var(--mint); box-shadow: 0 0 10px rgba(46,255,168,0.8); }
+.tf-particle--2 { animation-delay: -0.6s; background: var(--mint); box-shadow: 0 0 10px rgba(96,239,190,0.8); }
 .tf-particle--3 { animation-delay: -1.2s; }
 @keyframes particle-flow {
   0%   { left: 0;                opacity: 0; }
@@ -394,7 +390,7 @@
   background: linear-gradient(to right, var(--blue), var(--mint));
   transform: scaleX(0); transform-origin: left; transition: transform .35s ease;
 }
-.tech-stat:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(61,90,255,0.1); border-color: rgba(61,90,255,0.25); }
+.tech-stat:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(46,88,202,0.1); border-color: rgba(46,88,202,0.25); }
 .tech-stat:hover::before { transform: scaleX(1); }
 .tech-stat strong {
   display: block; font-size: 1.45rem; font-weight: 800;
@@ -583,12 +579,12 @@
           <polygon points="62,4 72,10 62,16" fill="url(#g1f)"/>
           <defs>
             <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#3D5AFF" stop-opacity=".4"/>
-              <stop offset="100%" stop-color="#2EFFA8" stop-opacity=".9"/>
+              <stop offset="0%" stop-color="#2e58ca" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#60efbe" stop-opacity=".9"/>
             </linearGradient>
             <linearGradient id="g1f" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#3D5AFF"/>
-              <stop offset="100%" stop-color="#2EFFA8"/>
+              <stop offset="0%" stop-color="#2e58ca"/>
+              <stop offset="100%" stop-color="#60efbe"/>
             </linearGradient>
           </defs>
         </svg>
@@ -634,12 +630,12 @@
           <polygon points="62,4 72,10 62,16" fill="url(#g2f)"/>
           <defs>
             <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#3D5AFF" stop-opacity=".4"/>
-              <stop offset="100%" stop-color="#2EFFA8" stop-opacity=".9"/>
+              <stop offset="0%" stop-color="#2e58ca" stop-opacity=".4"/>
+              <stop offset="100%" stop-color="#60efbe" stop-opacity=".9"/>
             </linearGradient>
             <linearGradient id="g2f" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#3D5AFF"/>
-              <stop offset="100%" stop-color="#2EFFA8"/>
+              <stop offset="0%" stop-color="#2e58ca"/>
+              <stop offset="100%" stop-color="#60efbe"/>
             </linearGradient>
           </defs>
         </svg>

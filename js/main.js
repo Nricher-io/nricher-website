@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    nricher — main.js v2
    Lenis · GSAP + ScrollTrigger · Cursor · Split text · Reveals
    ============================================================ */
@@ -282,8 +282,11 @@
     ];
 
     var strip  = document.getElementById('clients-strip') || document.getElementById('clients-grid');
+    var strip2 = document.getElementById('clients-strip-2');
     if (strip) {
-      var slots = Array.prototype.slice.call(strip.querySelectorAll('.clients__logo'));
+      var slots1 = Array.prototype.slice.call(strip.querySelectorAll('.clients__logo'));
+      var slots2 = strip2 ? Array.prototype.slice.call(strip2.querySelectorAll('.clients__logo')) : [];
+      var slots = slots1.concat(slots2);
       var totalSlots = slots.length;
 
       var shuffled = ALL_CLIENTS.slice().sort(function () { return Math.random() - 0.5; });
@@ -523,15 +526,15 @@
       if (!ring) return;
       var nodes  = Array.prototype.slice.call(ring.querySelectorAll('.cycle-node'));
       var labels = Array.prototype.slice.call(ring.querySelectorAll('.cycle-lbl'));
-      var panels = Array.prototype.slice.call(document.querySelectorAll('#cycle-info .cycle-panel'));
+      var outers = Array.prototype.slice.call(ring.querySelectorAll('.cycle-node-outer'));
 
       function activate(idx) {
         nodes.forEach(function (n)  { n.classList.remove('is-active'); });
         labels.forEach(function (l) { l.classList.remove('is-active'); });
-        panels.forEach(function (p) { p.classList.remove('is-active'); });
+        outers.forEach(function (o) { o.classList.remove('is-tooltip-open'); });
         if (nodes[idx])  nodes[idx].classList.add('is-active');
         if (labels[idx]) labels[idx].classList.add('is-active');
-        if (panels[idx]) panels[idx].classList.add('is-active');
+        if (outers[idx]) outers[idx].classList.add('is-tooltip-open');
       }
 
       var current = 0;
@@ -557,6 +560,18 @@
         lbl.addEventListener('click', function () {
           current = parseInt(lbl.getAttribute('data-idx'), 10);
           activate(current);
+          startAuto();
+        });
+      });
+
+      /* Hover : affiche uniquement le tooltip du nœud survolé */
+      outers.forEach(function (outer, i) {
+        outer.addEventListener('mouseenter', function () {
+          clearInterval(timer);
+          activate(i);
+          current = i;
+        });
+        outer.addEventListener('mouseleave', function () {
           startAuto();
         });
       });
@@ -612,7 +627,7 @@
             if (ico) ico.textContent = '✅';
             wrap.style.borderColor  = 'var(--mint)';
             wrap.style.borderStyle  = 'solid';
-            wrap.style.background   = 'rgba(46,255,168,0.06)';
+            wrap.style.background   = 'rgba(96,239,190,0.06)';
           } else {
             txt.innerHTML = '<strong>Cliquer pour joindre</strong> ou glisser-déposer votre CV';
             if (ico) ico.textContent = '📎';
@@ -662,6 +677,23 @@
             alert('Connexion impossible. Vérifiez votre réseau et réessayez.');
           });
         });
+      });
+    })();
+
+    /* ----------------------------------------------------------------
+       grad-text — premier mot en bleu, reste en vert mint
+    ---------------------------------------------------------------- */
+    (function () {
+      var els = Array.prototype.slice.call(document.querySelectorAll('.grad-text'));
+      els.forEach(function (el) {
+        var text = el.textContent;
+        var spaceIdx = text.indexOf(' ');
+        if (spaceIdx === -1) return; /* mot unique → reste mint via CSS */
+        var first = text.slice(0, spaceIdx);
+        var rest  = text.slice(spaceIdx);
+        el.innerHTML =
+          '<span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">' + first + '</span>' +
+          '<span style="-webkit-text-fill-color:#60efbe;color:#60efbe;">' + rest + '</span>';
       });
     })();
 
