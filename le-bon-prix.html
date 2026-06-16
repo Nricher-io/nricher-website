@@ -159,10 +159,35 @@
 .interface-showcase .feats-panel { height: 500px; }
 .interface-showcase .feat-slide__img { top: 12px; height: 72%; border-radius: 18px; }
 @media (max-width: 1024px) { .interface-showcase .feats-panel { height: 400px; } }
-@media (max-width: 560px)  { .interface-showcase .feats-panel { height: 320px; } }
 
 /* Chrome bar au dessus de chaque screenshot */
 .feat-slide__chrome { display: none; }
+
+/* ---- Mobile fixes ---- */
+@media (max-width: 860px) {
+  /* Cacher l'orbit qui déborde et coupe le titre */
+  .page-hero__visual { display: none; }
+  /* Slides : image au-dessus du texte */
+  .interface-showcase .feats-panel { height: auto; min-height: 420px; }
+  .interface-showcase .feat-slide {
+    position: relative; flex-direction: column;
+    justify-content: flex-start; padding: 16px;
+    opacity: 0; transform: translateY(18px);
+    pointer-events: none;
+  }
+  .interface-showcase .feat-slide.is-active {
+    opacity: 1; transform: translateY(0); pointer-events: auto;
+  }
+  .interface-showcase .feat-slide__img {
+    position: relative; top: auto; right: auto;
+    width: 100%; height: auto; max-height: 200px;
+    object-fit: cover; object-position: top left;
+    border-radius: 12px; margin-bottom: 16px;
+    -webkit-mask-image: none; mask-image: none;
+  }
+  .interface-showcase .feat-slide__bg { display: none; }
+  .interface-showcase .feat-slide::before { display: none; }
+}
 
 /* ---- Tech Flow Pipeline ---- */
 /* ---- Tech Flow Pipeline ---- */
