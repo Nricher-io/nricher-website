@@ -56,6 +56,15 @@
     document.querySelectorAll('.mobile-menu a').forEach(function (a) { a.addEventListener('click', closeMenu); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
+    /* Highlight current page in mobile menu */
+    (function () {
+      var page = window.location.pathname.split('/').pop() || 'index.html';
+      if (page === '') page = 'index.html';
+      document.querySelectorAll('.mobile-menu a:not(.btn)').forEach(function (a) {
+        if (a.getAttribute('href') === page) a.classList.add('is-current');
+      });
+    })();
+
     /* ----------------------------------------------------------------
        5. Custom cursor (fine-pointer only)
     ---------------------------------------------------------------- */
@@ -352,7 +361,22 @@
       var fRaf     = null;
       var F_DUR    = 6000;
 
-      function fBar(idx) { return fTabs[idx].querySelector('.feat-tab__progress'); }
+      /* Dot indicators (mobile) */
+      var fDots = [];
+      var fDotsWrap = document.createElement('div');
+      fDotsWrap.className = 'feats-dots';
+      fSlides.forEach(function (_, i) {
+        var d = document.createElement('button');
+        d.className = 'feats-dot';
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', function () { fActivate(i); if (!fPaused) fRun(); });
+        fDotsWrap.appendChild(d);
+        fDots.push(d);
+      });
+      var fPanel = showcase.querySelector('.feats-panel');
+      if (fPanel) fPanel.after(fDotsWrap); else showcase.appendChild(fDotsWrap);
+
+      function fBar(idx) { return fTabs[idx] && fTabs[idx].querySelector('.feat-tab__progress'); }
 
       function fSetBar(idx, pct) {
         var b = fBar(idx);
@@ -360,12 +384,14 @@
       }
 
       function fActivate(idx) {
-        fTabs[fCurrent].classList.remove('is-active');
+        if (fTabs[fCurrent]) fTabs[fCurrent].classList.remove('is-active');
         fSlides[fCurrent].classList.remove('is-active');
+        if (fDots[fCurrent]) fDots[fCurrent].classList.remove('is-active');
         fSetBar(fCurrent, 0);
         fCurrent = idx;
-        fTabs[fCurrent].classList.add('is-active');
+        if (fTabs[fCurrent]) fTabs[fCurrent].classList.add('is-active');
         fSlides[fCurrent].classList.add('is-active');
+        if (fDots[fCurrent]) fDots[fCurrent].classList.add('is-active');
         fElapsed = 0;
         fLastTs  = null;
       }
