@@ -349,7 +349,7 @@
   .interface-showcase .feat-slide {
     flex-direction: column;
     justify-content: flex-start;
-    padding: 0 12px 12px;
+    padding: 0;
     gap: 8px;
     overflow: hidden;
   }
@@ -358,9 +358,12 @@
     width: 100%; height: 160px;
     flex-shrink: 0;
     object-fit: cover; object-position: center 10%;
-    border-radius: 12px 12px 0 0;
+    border-radius: 0;
     -webkit-mask-image: none; mask-image: none;
   }
+  .interface-showcase .feat-slide__ghost { padding: 0 12px; }
+  .interface-showcase .feat-slide__title { padding: 0 12px; }
+  .interface-showcase .feat-slide__text  { padding: 0 12px 12px; }
   .interface-showcase .feat-slide__bg { display: none; }
   .interface-showcase .feat-slide::before { display: none; }
 }
