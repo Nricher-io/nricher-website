@@ -1399,9 +1399,11 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
   .section-title[style*="white-space:nowrap"],
   .section-title[style*="white-space: nowrap"] { white-space: normal !important; }
   /* Évite tout débordement horizontal */
-  body { overflow-x: hidden; }
+  html, body { overflow-x: hidden; }
   /* Image interface showcase : object-fit pour remplir le cadre */
-  .interface-showcase .feat-slide__img { object-fit: cover; }
+  .interface-showcase .feat-slide__img { object-fit: cover; object-position: center 10%; }
+  /* Espace entre le label "Pourquoi ils nous font confiance" et les logos */
+  .strip-label { margin-bottom: 32px; margin-top: 16px; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }

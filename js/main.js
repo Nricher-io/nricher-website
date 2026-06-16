@@ -431,6 +431,24 @@
         fRun();
       });
 
+      /* Swipe tactile sur mobile */
+      var fTouchX = null;
+      showcase.addEventListener('touchstart', function (e) {
+        fTouchX = e.touches[0].clientX;
+        fPaused = true; fLastTs = null;
+      }, { passive: true });
+      showcase.addEventListener('touchend', function (e) {
+        if (fTouchX === null) return;
+        var dx = e.changedTouches[0].clientX - fTouchX;
+        fTouchX = null;
+        if (Math.abs(dx) < 30) { fPaused = false; fRun(); return; }
+        var next = dx < 0
+          ? (fCurrent + 1) % fSlides.length
+          : (fCurrent - 1 + fSlides.length) % fSlides.length;
+        fActivate(next);
+        fPaused = false; fRun();
+      }, { passive: true });
+
       document.addEventListener('visibilitychange', function () {
         if (document.hidden) { fPaused = true; fLastTs = null; }
         else if (showcase) { fPaused = false; fRun(); }
