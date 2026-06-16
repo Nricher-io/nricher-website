@@ -343,6 +343,9 @@
 @media (max-width: 860px) {
   /* Forcer la visibilité du hero-screens (reveal opacity:0 par défaut) */
   .hero-screens { opacity: 1 !important; transform: none !important; transition: none !important; }
+  /* Supprimer le cadre blanc : min-height crée de l'espace, border-radius image double celui du conteneur */
+  .hero-screens__main { min-height: 0; }
+  .hero-screens__main img { border-radius: 0; }
   .page-hero { overflow: hidden; }
   .page-hero__sub { max-width: 100%; }
   .interface-showcase .feats-panel { height: 380px; }
@@ -359,7 +362,6 @@
     flex-shrink: 0;
     object-fit: cover; object-position: center 10%;
     border-radius: 0;
-    -webkit-mask-image: none; mask-image: none;
   }
   .interface-showcase .feat-slide__ghost { padding: 0 12px; }
   .interface-showcase .feat-slide__title { padding: 0 12px; }
