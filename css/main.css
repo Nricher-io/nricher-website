@@ -1384,6 +1384,7 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
   .logo__img { height: 34px; }
   .nav__links, .nav__right .btn { display: none; }
   .nav__burger { display: flex; }
+  .mobile-menu { padding-top: 20px; }
   /* Nav dropdown sur mobile */
   .nav__dropdown { display: none !important; }
   /* Feats nav masqué sur tablet — dots à la place */
