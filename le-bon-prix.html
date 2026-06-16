@@ -203,8 +203,11 @@
   }
   .interface-showcase .feat-slide__bg { display: none; }
   .interface-showcase .feat-slide::before { display: none; }
-  /* Supprime le halo bleu derrière l'orbit et le halo vert derrière le matching */
+  /* Supprime tous les halos bleus de l'orbit */
   .price-orbit::before { display: none; }
+  .orbit-center { box-shadow: none; }
+  .orbit__item { box-shadow: none; }
+  /* Supprime le halo vert derrière le matching */
   .tech-flow::before { display: none; }
   .tech-flow::after { display: none; }
 }
