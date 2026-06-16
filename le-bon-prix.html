@@ -165,8 +165,8 @@
 
 /* ---- Mobile fixes ---- */
 @media (max-width: 860px) {
-  /* Cacher l'orbit qui déborde et coupe le titre */
-  .page-hero__visual { display: none; }
+  /* Cacher l'orbit — !important nécessaire car le div a style="display:flex" inline */
+  .page-hero__visual { display: none !important; }
   .page-hero { overflow: hidden; }
   .page-hero__sub { max-width: 100%; }
   /* Slides : panel à hauteur fixe, slides restent absolus (pas d'empilement dans le flux) */
@@ -174,7 +174,7 @@
   .interface-showcase .feat-slide {
     flex-direction: column;
     justify-content: flex-start;
-    padding: 12px;
+    padding: 0 12px 12px;
     gap: 8px;
     overflow: hidden;
   }
@@ -183,8 +183,8 @@
     position: relative; top: auto; right: auto;
     width: 100%; height: 160px;
     flex-shrink: 0;
-    object-fit: cover; object-position: top left;
-    border-radius: 12px;
+    object-fit: cover; object-position: center 10%;
+    border-radius: 12px 12px 0 0;
     -webkit-mask-image: none; mask-image: none;
   }
   .interface-showcase .feat-slide__bg { display: none; }

@@ -1403,7 +1403,7 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
   /* Image interface showcase : object-fit pour remplir le cadre */
   .interface-showcase .feat-slide__img { object-fit: cover; object-position: center 10%; }
   /* Espace entre le label "Pourquoi ils nous font confiance" et les logos */
-  .strip-label { margin-bottom: 32px; margin-top: 16px; }
+  .strip-label { margin-bottom: 32px; margin-top: 16px; line-height: 1.25; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }

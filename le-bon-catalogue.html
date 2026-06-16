@@ -328,14 +328,16 @@
 @media (max-width: 1024px) { .interface-showcase .feats-panel { height: 400px; } }
 /* ---- Mobile fixes ---- */
 @media (max-width: 860px) {
-  .page-hero__visual { display: none; }
+  /* Cacher le visuel hero et le hero-screens sur mobile */
+  .page-hero__visual { display: none !important; }
+  .hero-screens { display: none; }
   .page-hero { overflow: hidden; }
   .page-hero__sub { max-width: 100%; }
   .interface-showcase .feats-panel { height: 380px; }
   .interface-showcase .feat-slide {
     flex-direction: column;
     justify-content: flex-start;
-    padding: 12px;
+    padding: 0 12px 12px;
     gap: 8px;
     overflow: hidden;
   }
@@ -343,8 +345,8 @@
     position: relative; top: auto; right: auto;
     width: 100%; height: 160px;
     flex-shrink: 0;
-    object-fit: cover; object-position: top left;
-    border-radius: 12px;
+    object-fit: cover; object-position: center 10%;
+    border-radius: 12px 12px 0 0;
     -webkit-mask-image: none; mask-image: none;
   }
   .interface-showcase .feat-slide__bg { display: none; }

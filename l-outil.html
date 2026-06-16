@@ -465,17 +465,25 @@
 @media (max-width: 960px) {
   .outil-pipeline {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 16px;
   }
   .outil-arrow {
     flex-direction: row;
-    padding: 16px 0;
-    width: 100%;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
+    margin: -4px auto;
+    width: auto;
+    height: auto;
   }
-  .outil-arrow__track {
-    width: 80px;
+  .outil-arrow::before {
+    content: '';
+    width: 2px; height: 40px;
+    background: linear-gradient(to bottom, var(--blue), var(--mint));
+    border-radius: 2px;
     flex-shrink: 0;
   }
+  .outil-arrow__track { display: none; }
   .outil-col { align-self: auto; }
 }
 </style>
