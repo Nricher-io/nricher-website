@@ -545,7 +545,7 @@
         timer = setInterval(function () {
           current = (current + 1) % nodes.length;
           activate(current);
-        }, 10000);
+        }, 5000);
       }
 
       nodes.forEach(function (node, i) {
@@ -572,6 +572,17 @@
           current = i;
         });
         outer.addEventListener('mouseleave', function () {
+          startAuto();
+        });
+      });
+
+      /* Stoppe la rotation quand la souris est sur un tooltip */
+      var tooltips = Array.prototype.slice.call(ring.querySelectorAll('.cycle-tooltip'));
+      tooltips.forEach(function (tip) {
+        tip.addEventListener('mouseenter', function () {
+          clearInterval(timer);
+        });
+        tip.addEventListener('mouseleave', function () {
           startAuto();
         });
       });

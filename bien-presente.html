@@ -406,7 +406,15 @@
   pointer-events: none;
   z-index: 0;
 }
-#interfaces .container { position: relative; z-index: 1; }
+#interfaces::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, #fff 0%, transparent 20%, transparent 80%, #fff 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+#interfaces .container { position: relative; z-index: 2; }
 </style>
 </head>
 <body data-screen-label="Bien présenté">
@@ -696,7 +704,7 @@
 </section>
 
 <!-- CTA -->
-<section class="section section--dark glow-wrap cta-final" id="demo">
+<section class="section section--dark glow-wrap cta-final cta-no-filet" id="demo">
   <div class="container center">
     <h2 class="section-title reveal" style="max-width:720px;margin-inline:auto;">Quand <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">publier</em> rime avec <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">sérénité.</em></h2>
     <p class="section-sub reveal" data-delay="1" style="margin-inline:auto;margin-bottom:36px;">Découvrez comment passer d'une fiche source à tous vos canaux, sans erreur de taxonomie.</p>
@@ -768,5 +776,6 @@
 </script>
 </body>
 </html>
+
 
 

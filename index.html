@@ -46,6 +46,143 @@ html, body { background: #FFFFFF !important; }
 </head>
 <body data-screen-label="Accueil">
 
+<!-- ============================================================
+     LOADER
+============================================================ -->
+<div id="nr-loader" aria-hidden="true">
+  <div class="nr-filet nr-filet--a"></div>
+  <div class="nr-filet nr-filet--b"></div>
+  <div class="nr-filet nr-filet--c"></div>
+  <div class="nr-loader-mask"></div>
+  <div id="nr-loader-center">
+    <svg id="nr-loader-logo" viewBox="0 0 220 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <image href="img/nricher logo/nricher_logo (1).svg" width="220" height="56"/>
+    </svg>
+    <div id="nr-loader-bar-wrap">
+      <div id="nr-loader-bar"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+#nr-loader {
+  position: fixed; inset: 0; z-index: 99999;
+  background: #ffffff;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.6s ease;
+}
+#nr-loader.nr-out { opacity: 0; pointer-events: none; }
+
+.nr-filet {
+  position: absolute;
+  width: 130vmax; height: 130vmax;
+  background: url('img/screenshots/filet.png') center/contain no-repeat;
+  mix-blend-mode: multiply;
+  will-change: transform;
+  filter: saturate(3) brightness(1.0) hue-rotate(-8deg) contrast(1.1);
+}
+.nr-filet--a {
+  top: -20%; left: -20%;
+  animation: nr-drift-a 9s ease-in-out infinite alternate;
+  opacity: 0.22;
+}
+.nr-filet--b {
+  bottom: -25%; right: -20%;
+  animation: nr-drift-b 11s ease-in-out infinite alternate;
+  opacity: 0.18;
+}
+.nr-filet--c {
+  top: 10%; right: -30%;
+  animation: nr-drift-c 14s ease-in-out infinite alternate;
+  opacity: 0.14;
+}
+@keyframes nr-drift-a {
+  0%   { transform: rotate(0deg)   scale(1)    translate(0, 0); }
+  100% { transform: rotate(18deg)  scale(1.12) translate(4%, 3%); }
+}
+@keyframes nr-drift-b {
+  0%   { transform: rotate(0deg)   scale(1)    translate(0, 0); }
+  100% { transform: rotate(-22deg) scale(1.08) translate(-3%, -4%); }
+}
+@keyframes nr-drift-c {
+  0%   { transform: rotate(10deg)  scale(0.9)  translate(0, 0); }
+  100% { transform: rotate(-8deg)  scale(1.05) translate(-5%, 6%); }
+}
+
+/* Masque blanc doux au centre pour préserver le logo */
+.nr-loader-mask {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 420px 280px at 50% 50%, #fff 45%, transparent 100%);
+  pointer-events: none; z-index: 1;
+}
+
+#nr-loader-center {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 32px;
+  animation: nr-in 0.6s ease 0.2s both;
+}
+@keyframes nr-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#nr-loader-logo { width: 180px; height: auto; }
+#nr-loader-bar-wrap {
+  width: 180px; height: 2px;
+  background: #e8edf8;
+  border-radius: 99px; overflow: hidden;
+}
+#nr-loader-bar {
+  height: 100%; width: 0%;
+  background: linear-gradient(to right, #60efbe, #2e58ca);
+  border-radius: 99px;
+  transition: width 0.08s linear;
+}
+</style>
+
+<script>
+(function () {
+  var loader = document.getElementById('nr-loader');
+  if (sessionStorage.getItem('nr-loaded')) {
+    loader.style.display = 'none';
+    return;
+  }
+  sessionStorage.setItem('nr-loaded', '1');
+
+  var bar = document.getElementById('nr-loader-bar');
+  var raf;
+
+  /* ---- Progress ---- */
+  var progress = 0;
+  var target   = 0;
+  var pInterval = setInterval(function () {
+    target += Math.random() * 18 + 5;
+    if (target > 100) { target = 100; clearInterval(pInterval); }
+  }, 160);
+
+  function tick() {
+    progress += (target - progress) * 0.09 + 0.4;
+    if (progress > 100) progress = 100;
+    bar.style.width = progress + '%';
+    if (progress < 99.5) {
+      requestAnimationFrame(tick);
+    } else {
+      bar.style.width = '100%';
+      setTimeout(hide, 280);
+    }
+  }
+  tick();
+
+  function hide() {
+    cancelAnimationFrame(raf);
+    loader.classList.add('nr-out');
+    setTimeout(function () { loader.style.display = 'none'; }, 650);
+  }
+
+  setTimeout(hide, 4500);
+})();
+</script>
+
 <!-- UI chrome -->
 <div class="grain" aria-hidden="true"></div>
 <div class="cur-dot" aria-hidden="true"></div>
@@ -60,7 +197,7 @@ html, body { background: #FFFFFF !important; }
     <ul class="nav__links">
       <li><a href="index.html" class="nav__link active">Accueil</a></li>
       <li class="nav__item">
-        <a href="#" class="nav__link">La plateforme ▾</a>
+        <a href="le-bon-catalogue.html" class="nav__link">La plateforme ▾</a>
         <div class="nav__dropdown">
           <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
           <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
@@ -346,7 +483,7 @@ html, body { background: #FFFFFF !important; }
       <span class="eyebrow">La plateforme</span>
       <h2 class="section-title" data-split-scroll style="max-width:100%;">
         <span class="split-line"><span class="split-inner">Toute la data produit pour</span></span>
-        <span class="split-line"><span class="split-inner">des clients <span style="-webkit-text-fill-color:var(--mint);color:var(--mint);font-weight:700;">100%</span> satisfaits.</span></span>
+        <span class="split-line"><span class="split-inner">des <span style="-webkit-text-fill-color:var(--blue);color:var(--blue);font-weight:700;">clients</span> <span style="-webkit-text-fill-color:var(--mint);color:var(--mint);font-weight:700;">100%</span> satisfaits.</span></span>
       </h2>
     </div>
     <div class="feats-showcase reveal" data-delay="1">
@@ -512,34 +649,34 @@ html, body { background: #FFFFFF !important; }
       <p class="section-sub">Quatre distinctions qui valident notre approche.</p>
     </div>
     <div class="trophees-wall reveal" data-delay="1">
-      <div class="trophy-card" style="--rot:-3deg">
+      <a class="trophy-card" style="--rot:-3deg" href="https://www.republik-retail.fr/solutions-techno/omnicanal/decouvrez-les-laureats-de-la-10e-nuit-du-commerce-connecte-2023.html" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/nuit du commerce connecté 2023.png" alt="Nuit du Commerce Connecté 2023" />
         </div>
         <p class="trophy-card__label">Nuit du Commerce Connecté 2023</p>
-      </div>
-      <div class="trophy-card" style="--rot:2.5deg">
+      </a>
+      <a class="trophy-card" style="--rot:2.5deg" href="https://www.republik-retail.fr/solutions-techno/omnicanal/decouvrez-les-laureats-de-la-11e-nuit-du-commerce-connecte-2024.html" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/nuit du commerce connecté 2024.png" alt="Nuit du Commerce Connecté 2024" />
         </div>
         <p class="trophy-card__label">Nuit du Commerce Connecté 2024</p>
-      </div>
-      <div class="trophy-card" style="--rot:-1.5deg">
+      </a>
+      <a class="trophy-card" style="--rot:-1.5deg" href="https://news.parisretailweek.com/daily/prw-awards-les-laureats-du-paris-retail-award-2023/" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/paris retail award.png" alt="Paris Retail Award" />
         </div>
         <p class="trophy-card__label">Paris Retail Award</p>
-      </div>
-      <div class="trophy-card" style="--rot:3.5deg">
+      </a>
+      <a class="trophy-card" style="--rot:3.5deg" href="https://kpmg.com/fr/fr/media/press-releases/2024/07/laureats-challenge-start-me-up.html" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/start up me.png" alt="Start-up Me" />
         </div>
         <p class="trophy-card__label">Start-up Me</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
