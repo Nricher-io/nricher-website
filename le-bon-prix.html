@@ -163,12 +163,26 @@
 /* Chrome bar au dessus de chaque screenshot */
 .feat-slide__chrome { display: none; }
 
+/* ---- Filet décoratif — section interfaces ---- */
+#interfaces { overflow: hidden; }
+#interfaces::before {
+  content: '';
+  position: absolute; inset: -20px;
+  background: url('img/screenshots/filet.png') center / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  pointer-events: none; z-index: 0;
+}
+#interfaces .container { position: relative; z-index: 1; }
 /* ---- Mobile fixes ---- */
 @media (max-width: 860px) {
-  /* Cacher l'orbit — !important nécessaire car le div a style="display:flex" inline */
-  .page-hero__visual { display: none !important; }
+  /* L'orbit reste visible (inline style="display:flex" overrides display:none CSS) */
+  /* On contient son débordement pour éviter l'overflow horizontal */
+  .page-hero__visual { display: none; overflow: hidden; max-width: 100%; }
   .page-hero { overflow: hidden; }
-  .page-hero__sub { max-width: 100%; }
+  .page-hero__sub { max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
   /* Slides : panel à hauteur fixe, slides restent absolus (pas d'empilement dans le flux) */
   .interface-showcase .feats-panel { height: 380px; }
   .interface-showcase .feat-slide {

@@ -452,7 +452,7 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 .strip-label {
   font-size: clamp(2.1rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -0.01em;
   text-transform: none; color: var(--text); margin-bottom: 40px; margin-top: 22px;
-  font-family: var(--font-display);
+  font-family: var(--font-display); line-height: 0.94;
 }
 .clients { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 0 40px; }
 .clients__logo {
@@ -1403,7 +1403,7 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
   /* Image interface showcase : object-fit pour remplir le cadre */
   .interface-showcase .feat-slide__img { object-fit: cover; object-position: center 10%; }
   /* Espace entre le label "Pourquoi ils nous font confiance" et les logos */
-  .strip-label { margin-bottom: 32px; margin-top: 16px; line-height: 1.25; }
+  .strip-label { margin-bottom: 32px; margin-top: 16px; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }

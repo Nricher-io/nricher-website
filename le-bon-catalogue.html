@@ -309,8 +309,8 @@
 
 /* ---- Hero screens ---- */
 .hero-screens__main { position: relative; }
-.hero-screens__main img { object-fit: cover; object-position: top left; aspect-ratio: 16/10; }
-.hero-screens__float img { object-fit: cover; object-position: top left; aspect-ratio: 16/10; }
+.hero-screens__main img { object-fit: cover; object-position: center 10%; aspect-ratio: 16/10; }
+.hero-screens__float img { object-fit: cover; object-position: center 10%; aspect-ratio: 16/10; }
 .hero-screens__chrome { display: none; }
 .hero-screens__main::after {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -326,11 +326,21 @@
 .interface-showcase .feat-slide__img { top: 12px; height: 72%; border-radius: 18px; }
 .feat-slide__chrome { display: none; }
 @media (max-width: 1024px) { .interface-showcase .feats-panel { height: 400px; } }
+/* ---- Filet décoratif — section interfaces ---- */
+#interfaces { overflow: hidden; }
+#interfaces::before {
+  content: '';
+  position: absolute; inset: -20px;
+  background: url('img/screenshots/filet.png') center / cover no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  pointer-events: none; z-index: 0;
+}
+#interfaces .container { position: relative; z-index: 1; }
 /* ---- Mobile fixes ---- */
 @media (max-width: 860px) {
-  /* Cacher le visuel hero et le hero-screens sur mobile */
-  .page-hero__visual { display: none !important; }
-  .hero-screens { display: none; }
   .page-hero { overflow: hidden; }
   .page-hero__sub { max-width: 100%; }
   .interface-showcase .feats-panel { height: 380px; }
