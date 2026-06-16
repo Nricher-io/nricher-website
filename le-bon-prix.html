@@ -178,9 +178,8 @@
 #interfaces .container { position: relative; z-index: 1; }
 /* ---- Mobile fixes ---- */
 @media (max-width: 860px) {
-  /* L'orbit reste visible (inline style="display:flex" overrides display:none CSS) */
-  /* On contient son débordement pour éviter l'overflow horizontal */
-  .page-hero__visual { display: none; overflow: hidden; max-width: 100%; }
+  /* L'orbit reste visible — inline style="display:flex" overrides display:none */
+  .page-hero__visual { display: none; }
   .page-hero { overflow: hidden; }
   .page-hero__sub { max-width: 100%; overflow-wrap: break-word; word-break: break-word; }
   /* Slides : panel à hauteur fixe, slides restent absolus (pas d'empilement dans le flux) */
