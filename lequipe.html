@@ -199,6 +199,16 @@
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+@media (max-width: 860px) {
+  .ai-hover-tip {
+    white-space: normal;
+    left: 0; right: 0;
+    transform: translateY(6px);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+  #ai-photo-wrap:hover .ai-hover-tip { transform: translateY(0); }
+}
 </style>
 </head>
 <body data-screen-label="L'équipe">
@@ -236,6 +246,7 @@
 </nav>
 
 <aside class="mobile-menu">
+  <a href="index.html">Accueil</a>
   <a href="le-bon-catalogue.html">Le bon produit</a>
   <a href="le-bon-prix.html">Le bon prix</a>
   <a href="bien-presente.html">Bien présenté</a>

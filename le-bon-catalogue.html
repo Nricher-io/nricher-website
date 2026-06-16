@@ -326,7 +326,30 @@
 .interface-showcase .feat-slide__img { top: 12px; height: 72%; border-radius: 18px; }
 .feat-slide__chrome { display: none; }
 @media (max-width: 1024px) { .interface-showcase .feats-panel { height: 400px; } }
-@media (max-width: 560px)  { .interface-showcase .feats-panel { height: 320px; } }
+/* ---- Mobile fixes ---- */
+@media (max-width: 860px) {
+  .page-hero__visual { display: none; }
+  .page-hero { overflow: hidden; }
+  .page-hero__sub { max-width: 100%; }
+  .interface-showcase .feats-panel { height: 380px; }
+  .interface-showcase .feat-slide {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .interface-showcase .feat-slide__img {
+    position: relative; top: auto; right: auto;
+    width: 100%; height: 160px;
+    flex-shrink: 0;
+    object-fit: cover; object-position: top left;
+    border-radius: 12px;
+    -webkit-mask-image: none; mask-image: none;
+  }
+  .interface-showcase .feat-slide__bg { display: none; }
+  .interface-showcase .feat-slide::before { display: none; }
+}
 </style>
 </head>
 <body data-screen-label="Le bon produit">
@@ -364,6 +387,7 @@
 </nav>
 
 <aside class="mobile-menu">
+  <a href="index.html">Accueil</a>
   <a href="le-bon-catalogue.html">Le bon produit</a>
   <a href="le-bon-prix.html">Le bon prix</a>
   <a href="bien-presente.html">Bien présenté</a>

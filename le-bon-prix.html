@@ -167,22 +167,24 @@
 @media (max-width: 860px) {
   /* Cacher l'orbit qui déborde et coupe le titre */
   .page-hero__visual { display: none; }
-  /* Slides : image au-dessus du texte */
-  .interface-showcase .feats-panel { height: auto; min-height: 420px; }
+  .page-hero { overflow: hidden; }
+  .page-hero__sub { max-width: 100%; }
+  /* Slides : panel à hauteur fixe, slides restent absolus (pas d'empilement dans le flux) */
+  .interface-showcase .feats-panel { height: 380px; }
   .interface-showcase .feat-slide {
-    position: relative; flex-direction: column;
-    justify-content: flex-start; padding: 16px;
-    opacity: 0; transform: translateY(18px);
-    pointer-events: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 12px;
+    gap: 8px;
+    overflow: hidden;
   }
-  .interface-showcase .feat-slide.is-active {
-    opacity: 1; transform: translateY(0); pointer-events: auto;
-  }
+  /* Image devient flex item (position: relative), apparaît en premier naturellement */
   .interface-showcase .feat-slide__img {
     position: relative; top: auto; right: auto;
-    width: 100%; height: auto; max-height: 200px;
+    width: 100%; height: 160px;
+    flex-shrink: 0;
     object-fit: cover; object-position: top left;
-    border-radius: 12px; margin-bottom: 16px;
+    border-radius: 12px;
     -webkit-mask-image: none; mask-image: none;
   }
   .interface-showcase .feat-slide__bg { display: none; }
@@ -417,15 +419,28 @@
 /* Responsive */
 @media (max-width: 900px) {
   .tech-flow { grid-template-columns: 1fr; gap: 16px; }
-  .tf-arrow { width: 2px; height: 36px; background: linear-gradient(to bottom, var(--blue), var(--mint)); margin: -4px auto; display: block; }
-  .tf-arrow svg { display: none; }
-  .tf-particle { left: -3px; top: 0; transform: none; animation: particle-flow-v 1.8s linear infinite; }
-  @keyframes particle-flow-v {
-    0%   { top: 0;                opacity: 0; }
-    8%   { opacity: 1; }
-    92%  { opacity: 1; }
-    100% { top: calc(100% - 8px); opacity: 0; }
+  /* Connecteur vertical centré avec label à droite */
+  .tf-arrow {
+    width: auto; height: auto;
+    background: none;
+    margin: -4px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 0 24px;
   }
+  .tf-arrow::before {
+    content: '';
+    width: 2px; height: 40px;
+    background: linear-gradient(to bottom, var(--blue), var(--mint));
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .tech-flow > div:nth-child(2)::after { content: 'Données brutes'; font-size: 0.72rem; font-weight: 600; color: var(--muted); font-style: italic; }
+  .tech-flow > div:nth-child(4)::after { content: 'Insights structurés'; font-size: 0.72rem; font-weight: 600; color: var(--muted); font-style: italic; }
+  .tf-arrow svg { display: none; }
+  .tf-arrow .tf-particle { display: none; }
   .tech-stats { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px) {
@@ -468,6 +483,7 @@
 </nav>
 
 <aside class="mobile-menu">
+  <a href="index.html">Accueil</a>
   <a href="le-bon-catalogue.html">Le bon produit</a>
   <a href="le-bon-prix.html">Le bon prix</a>
   <a href="bien-presente.html">Bien présenté</a>

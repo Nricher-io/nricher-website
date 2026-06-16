@@ -324,7 +324,9 @@ body.menu-open .mobile-menu a:nth-child(2){animation-delay:.13s}
 body.menu-open .mobile-menu a:nth-child(3){animation-delay:.18s}
 body.menu-open .mobile-menu a:nth-child(4){animation-delay:.23s}
 body.menu-open .mobile-menu a:nth-child(5){animation-delay:.28s}
-body.menu-open .mobile-menu .btn { opacity: 1; transform: none; margin-top: 22px; cursor: pointer; }
+body.menu-open .mobile-menu a:nth-child(6){animation-delay:.33s}
+body.menu-open .mobile-menu a:nth-child(7){animation-delay:.38s}
+body.menu-open .mobile-menu .btn { opacity: 1; transform: none; margin-top: 22px; cursor: pointer; font-size: 0.78rem !important; padding: 8px 14px !important; }
 @keyframes mm-in { to { opacity: 1; transform: none; } }
 .menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); z-index: 150; opacity: 0; visibility: hidden; transition: opacity .3s ease; }
 body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
@@ -783,8 +785,18 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 .cycle-tooltip__btn  { font-size: 0.78rem !important; padding: 7px 14px !important; }
 
 @media (max-width: 1000px) {
-  .cycle-ring { width: min(360px, 88vw); height: auto; aspect-ratio: 500/440; }
+  .cycle-ring { width: min(360px, 88vw); height: auto; aspect-ratio: 500/440; margin-bottom: 50px; }
   .cycle-lbl  { display: none; }
+  .cycle-lbl.is-active {
+    display: block;
+    position: absolute;
+    top: auto !important; bottom: -42px !important;
+    left: 50% !important; right: auto !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    white-space: nowrap;
+    z-index: 5;
+  }
   .cycle-tooltip { display: none; }
   .qs-platform-title { white-space: normal; font-size: clamp(1.6rem, 5vw, 3.2rem); }
   .qs-list { grid-template-columns: 1fr; }
@@ -1347,6 +1359,7 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 }
 @media (max-width: 860px) {
   .section { padding-block: 64px; }
+  .logo__img { height: 34px; }
   .nav__links, .nav__right .btn { display: none; }
   .nav__burger { display: flex; }
   /* Nav dropdown sur mobile */
