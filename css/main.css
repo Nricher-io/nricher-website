@@ -783,9 +783,11 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 .cycle-tooltip__btn  { font-size: 0.78rem !important; padding: 7px 14px !important; }
 
 @media (max-width: 1000px) {
-  .cycle-ring { width: 360px; height: auto; aspect-ratio: 500/440; }
+  .cycle-ring { width: min(360px, 88vw); height: auto; aspect-ratio: 500/440; }
   .cycle-lbl  { display: none; }
   .cycle-tooltip { display: none; }
+  .qs-platform-title { white-space: normal; font-size: clamp(1.6rem, 5vw, 3.2rem); }
+  .qs-list { grid-template-columns: 1fr; }
 }
 
 /* Login nav button */
