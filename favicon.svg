@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" width="100" height="100">
-  <defs>
-    <clipPath id="r">
-      <rect width="100" height="100" rx="22" ry="22"/>
-    </clipPath>
-  </defs>
-  <image href="favicon.png" x="0" y="0" width="100" height="100" clip-path="url(#r)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 2 88 88">
+  <rect x="-9" y="2" width="88" height="88" rx="20" fill="white"/>
+  <path d="M0 25.0234H18.1732V32.8146C20.6116 29.0537 24.9881 24.64 33.8038 24.64C43.8074 24.64 53.3837 30.1208 53.3837 43.7762V80.6085H34.8875V46.2006C34.8875 41.3104 31.157 38.8342 27.0514 38.8342C22.9457 38.8342 18.4024 41.1964 18.4024 45.7655V80.6085H0V25.0234Z" fill="#59EFBD"/>
+  <circle cx="60" cy="20" r="9.5" fill="#2B57CE"/>
 </svg>
