@@ -53,6 +53,7 @@
     function closeMenu() { document.body.classList.remove('menu-open'); }
     if (burger)   burger.addEventListener('click', function () { document.body.classList.toggle('menu-open'); });
     if (backdrop) backdrop.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-menu__close').forEach(function (btn) { btn.addEventListener('click', closeMenu); });
     document.querySelectorAll('.mobile-menu a').forEach(function (a) { a.addEventListener('click', closeMenu); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
