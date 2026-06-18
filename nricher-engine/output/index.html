@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recherche entreprise — Weekly KPIs × nricher</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<style>
+  @import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+  @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap');
+
+  :root{
+    --mint:        #60efbe;
+    --blue:        #2e58ca;
+    --card:        #FFFFFF;
+    --card-2:      #F5F7FA;
+    --text:        #1A1D23;
+    --text-2:      #4B5563;
+    --muted:       #7a8fba;
+    --border:      rgba(0,0,0,0.08);
+    --border-mint: rgba(96,239,190,0.35);
+    --grad-brand:  linear-gradient(to right, #60efbe 0%, #2e58ca 100%);
+    --r-sm: 8px; --r-md: 14px; --r-lg: 20px; --r-pill: 100px;
+    --shadow-card: 0 12px 48px rgba(0,0,0,0.10), 0 0 32px rgba(96,239,190,0.05);
+    --font-display: 'Clash Display', 'Syne', sans-serif;
+    --font-body:    'Satoshi', 'Inter', -apple-system, sans-serif;
+    --ease-out: cubic-bezier(.16,1,.3,1);
+    --container: 880px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{background:#fff;}
+  body{font-family:var(--font-body);color:var(--text);background:#fff;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:var(--container);margin-inline:auto;padding-inline:24px;width:100%;}
+
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .nav__inner{display:flex;align-items:center;height:72px;}
+  .logo-nricher{font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--text);display:flex;align-items:center;}
+  .logo-nricher .dot{color:var(--mint);}
+
+  .hero{padding-top:48px;padding-bottom:28px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:900;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);border:2px solid var(--mint);padding:7px 14px;border-radius:var(--r-pill);}
+  .hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(28px,4vw,42px);letter-spacing:-0.02em;line-height:1.05;margin:20px 0 10px;}
+  .hero p{color:var(--muted);font-size:1.02rem;max-width:520px;}
+
+  .search-wrap{margin-top:32px;position:relative;}
+  .search-input{
+    width:100%;font-family:var(--font-body);font-size:1.05rem;font-weight:500;
+    padding:16px 20px 16px 48px;border:2px solid var(--border);border-radius:var(--r-lg);
+    background:var(--card-2);color:var(--text);outline:none;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .search-input:focus{border-color:var(--mint);background:#fff;}
+  .search-ico{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:1.1rem;pointer-events:none;}
+  .search-count{color:var(--muted);font-size:0.85rem;margin-top:10px;}
+
+  .list{margin-top:8px;padding-bottom:80px;}
+  .row{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:16px 18px;border-radius:var(--r-md);border:1px solid var(--border);
+    margin-top:10px;transition:transform .2s var(--ease-out), box-shadow .2s ease, border-color .2s ease;
+  }
+  .row.available{cursor:pointer;}
+  .row.available:hover{transform:translateX(4px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
+  .row.unavailable{opacity:0.55;}
+  .row__name{font-family:var(--font-display);font-weight:700;font-size:1.05rem;}
+  .row__badge{font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);letter-spacing:0.04em;text-transform:uppercase;white-space:nowrap;}
+  .row__badge.available{background:rgba(96,239,190,0.16);color:#1fae7a;}
+  .row__badge.unavailable{background:var(--card-2);color:var(--muted);}
+  .empty{display:none;text-align:center;color:var(--muted);padding:48px 0;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <div class="logo-nricher">nricher<span class="dot">.</span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Weekly KPIs</span>
+    <h1>Rechercher une entreprise</h1>
+    <p>137 entreprises suivies. Tape un nom pour retrouver son rapport.</p>
+    <div class="search-wrap">
+      <span class="search-ico">⌕</span>
+      <input id="search" class="search-input" type="text" placeholder="Carrefour, Amazon, Boulanger…" autocomplete="off" autofocus>
+    </div>
+    <p class="search-count" id="count"></p>
+  </div>
+</header>
+
+<main class="container list" id="list">
+  
+  <div class="row unavailable" data-name="3suisses" >
+    <span class="row__name">3Suisses</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="alltricks" >
+    <span class="row__name">alltricks</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="alpiniste" >
+    <span class="row__name">alpiniste</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="amazon" >
+    <span class="row__name">Amazon</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="amazon es" >
+    <span class="row__name">amazon es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="amazon it" >
+    <span class="row__name">amazon it</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="ambientedirect" >
+    <span class="row__name">ambientedirect</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="andlight" >
+    <span class="row__name">Andlight</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="asteri" >
+    <span class="row__name">Asteri</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="atida" >
+    <span class="row__name">Atida</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="auchan" >
+    <span class="row__name">auchan</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="aurlane" >
+    <span class="row__name">aurlane</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="batinea" >
+    <span class="row__name">batinea</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="belong" >
+    <span class="row__name">Belong</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="berceaumagique" >
+    <span class="row__name">berceaumagique</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bestmobilier" >
+    <span class="row__name">Bestmobilier</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bewak" >
+    <span class="row__name">Bewak</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bifor" >
+    <span class="row__name">Bifor</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="boticinal" >
+    <span class="row__name">Boticinal</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="boulanger" >
+    <span class="row__name">Boulanger</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bq" >
+    <span class="row__name">bq</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bricomarche" >
+    <span class="row__name">Bricomarche</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="bulgari" >
+    <span class="row__name">bulgari</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="but" >
+    <span class="row__name">BUT</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="carrefour" >
+    <span class="row__name">Carrefour</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="carrefour es" >
+    <span class="row__name">carrefour es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="castorama" >
+    <span class="row__name">Castorama</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="cdiscount" >
+    <span class="row__name">CDiscount</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="centrale du casque" >
+    <span class="row__name">centrale du casque</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="chiaracolombini" >
+    <span class="row__name">chiaracolombini</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="clarins" >
+    <span class="row__name">Clarins</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="cocooncenter" >
+    <span class="row__name">Cocooncenter</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="conforama" >
+    <span class="row__name">Conforama</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="conforama es" >
+    <span class="row__name">conforama es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="connox" >
+    <span class="row__name">connox</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="cultura" >
+    <span class="row__name">cultura</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="dafymoto" >
+    <span class="row__name">Dafymoto</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="darty" >
+    <span class="row__name">Darty</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="debenhams" >
+    <span class="row__name">debenhams</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row available" data-name="demostore" data-href="demostore.html">
+    <span class="row__name">DemoStore</span>
+    <span class="row__badge available">Rapport disponible</span>
+  </div>
+  
+  <div class="row unavailable" data-name="design-bestseller" >
+    <span class="row__name">design-bestseller</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="drawer" >
+    <span class="row__name">drawer</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="easyparapharmacie" >
+    <span class="row__name">Easyparapharmacie</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="ekosport" >
+    <span class="row__name">ekosport</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="fermliving" >
+    <span class="row__name">fermliving</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="finnishdesignshop" >
+    <span class="row__name">finnishdesignshop</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="flos" >
+    <span class="row__name">flos</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="fnac" >
+    <span class="row__name">Fnac</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="galerieslafayette" >
+    <span class="row__name">Galerieslafayette</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="gautier" >
+    <span class="row__name">gautier</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="glisshop" >
+    <span class="row__name">glisshop</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="grouperg" >
+    <span class="row__name">grouperg</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="hardloop" >
+    <span class="row__name">hardloop</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="hermes" >
+    <span class="row__name">Hermes</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="hydrozone" >
+    <span class="row__name">Hydrozone</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="icasque" >
+    <span class="row__name">Icasque</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="inside_75" >
+    <span class="row__name">Inside_75</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="irun" >
+    <span class="row__name">irun</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="jardindeco" >
+    <span class="row__name">Jardindeco</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="jpg" >
+    <span class="row__name">JPG</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="la redoute" >
+    <span class="row__name">La Redoute</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="labecanerie" >
+    <span class="row__name">Labecanerie</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="lacompagniedulit" >
+    <span class="row__name">Lacompagniedulit</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="lamptwist" >
+    <span class="row__name">lamptwist</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="lancome" >
+    <span class="row__name">Lancome</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="lecedrerouge" >
+    <span class="row__name">lecedrerouge</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="leroy merlin" >
+    <span class="row__name">leroy merlin</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="leroy merlin es" >
+    <span class="row__name">leroy merlin es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="leroy merlin it" >
+    <span class="row__name">leroy merlin it</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="light11" >
+    <span class="row__name">light11</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="lightonline" >
+    <span class="row__name">Lightonline</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="loreal" >
+    <span class="row__name">LOreal</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="louis moto" >
+    <span class="row__name">Louis Moto</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="mabeoindustries" >
+    <span class="row__name">mabeoindustries</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="madeinbebe" >
+    <span class="row__name">madeinbebe</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="madeindesign" >
+    <span class="row__name">Madeindesign</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="madeindesign de" >
+    <span class="row__name">madeindesign de</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="madeindesignuk" >
+    <span class="row__name">madeindesignuk</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="maisons du monde" >
+    <span class="row__name">Maisons du Monde</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="maisons du monde es" >
+    <span class="row__name">maisons du monde es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="maisons du monde it" >
+    <span class="row__name">maisons du monde it</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="manelli" >
+    <span class="row__name">Manelli</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="manomano" >
+    <span class="row__name">Manomano</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="manomano es" >
+    <span class="row__name">manomano es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="manomano it" >
+    <span class="row__name">manomano it</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="manor" >
+    <span class="row__name">Manor</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="maxibazar" >
+    <span class="row__name">maxibazar</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="maxxess" >
+    <span class="row__name">Maxxess</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="mobin" >
+    <span class="row__name">Mobin</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="motoaxxe" >
+    <span class="row__name">Motoaxxe</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="motoblouz" >
+    <span class="row__name">Motoblouz</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="motocard" >
+    <span class="row__name">Motocard</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="myareadesign" >
+    <span class="row__name">myareadesign</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="nedgis" >
+    <span class="row__name">Nedgis</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="neuvieme_store" >
+    <span class="row__name">Neuvieme_store</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="nouveau marchand" >
+    <span class="row__name">Nouveau marchand</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="onelec" >
+    <span class="row__name">onelec</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="passions cadeaux" >
+    <span class="row__name">Passions Cadeaux</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="payot" >
+    <span class="row__name">Payot</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="petit bateau" >
+    <span class="row__name">Petit Bateau</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="pharmazon" >
+    <span class="row__name">Pharmazon</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="pixmania" >
+    <span class="row__name">Pixmania</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="printemps" >
+    <span class="row__name">Printemps</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="rakuten" >
+    <span class="row__name">Rakuten</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="red deco" >
+    <span class="row__name">red deco</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="rue du commerce" >
+    <span class="row__name">Rue du commerce</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sandro" >
+    <span class="row__name">Sandro</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sandro_bdv" >
+    <span class="row__name">Sandro_BDV</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sennosen" >
+    <span class="row__name">SenNoSen</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sephora" >
+    <span class="row__name">sephora</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="shopping_feed" >
+    <span class="row__name">shopping_feed</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="silvera" >
+    <span class="row__name">Silvera</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="simplybearings" >
+    <span class="row__name">Simplybearings</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sisley" >
+    <span class="row__name">Sisley</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="skapetze" >
+    <span class="row__name">skapetze</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="snowleader" >
+    <span class="row__name">Snowleader</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="snowleader ch" >
+    <span class="row__name">Snowleader CH</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="speedway" >
+    <span class="row__name">speedway</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="sportdecouverte" >
+    <span class="row__name">sportdecouverte</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="svr" >
+    <span class="row__name">SVR</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="teamaxe" >
+    <span class="row__name">Teamaxe</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="thecoolrepublic" >
+    <span class="row__name">Thecoolrepublic</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="trekkinn" >
+    <span class="row__name">trekkinn</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="ubaldi" >
+    <span class="row__name">Ubaldi</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="unamourdetapis" >
+    <span class="row__name">Unamourdetapis</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="underdog" >
+    <span class="row__name">Underdog</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="vente unique" >
+    <span class="row__name">Vente Unique</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="vente unique de" >
+    <span class="row__name">vente unique de</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="vente unique es" >
+    <span class="row__name">vente unique es</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="vente unique it" >
+    <span class="row__name">vente unique it</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="vertbaudet" >
+    <span class="row__name">vertbaudet</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="viapresse" >
+    <span class="row__name">viapresse</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="voltex" >
+    <span class="row__name">Voltex</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="weber" >
+    <span class="row__name">Weber</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="westwing" >
+    <span class="row__name">westwing</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="wtb" >
+    <span class="row__name">WTB</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <div class="row unavailable" data-name="zoomici" >
+    <span class="row__name">zoomici</span>
+    <span class="row__badge unavailable">Pas encore généré</span>
+  </div>
+  
+  <p class="empty" id="empty">Aucune entreprise ne correspond à cette recherche.</p>
+</main>
+
+<script>
+  var search = document.getElementById('search');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.row'));
+  var empty = document.getElementById('empty');
+  var count = document.getElementById('count');
+
+  rows.forEach(function (row) {
+    if (row.dataset.href) {
+      row.addEventListener('click', function () { window.location.href = row.dataset.href; });
+    }
+  });
+
+  function filter() {
+    var q = search.value.trim().toLowerCase();
+    var visible = 0;
+    rows.forEach(function (row) {
+      var match = row.dataset.name.indexOf(q) !== -1;
+      row.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    empty.style.display = visible === 0 ? 'block' : 'none';
+    count.textContent = q ? visible + ' résultat(s)' : '';
+  }
+
+  search.addEventListener('input', filter);
+</script>
+
+</body>
+</html>
