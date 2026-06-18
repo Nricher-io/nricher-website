@@ -50,20 +50,25 @@
   .container{max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter);width:100%;}
   .section{padding-block:64px;}
 
-  /* watermark banner shown only on non-client / sample datasets */
-  .source-banner{
-    background:#FFF8E6;border-bottom:1px solid #F3D98A;color:#7a5b00;
-    font-size:12.5px;text-align:center;padding:8px 16px;font-weight:600;
-  }
-
   .site-topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
   .site-topbar__inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
   .site-topbar__logo{display:flex;align-items:center;flex-shrink:0;}
   .site-topbar__logo img{height:24px;width:auto;display:block;}
   .site-topbar__links{display:flex;align-items:center;gap:22px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;}
-  .site-topbar__links a{color:var(--text-2);white-space:nowrap;transition:color .2s ease;}
-  .site-topbar__links a:hover{color:var(--blue);}
+  .site-topbar__links a{position:relative;color:var(--text-2);white-space:nowrap;transition:color .2s ease;padding:4px 0;}
+  .site-topbar__links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:0;background:var(--grad-brand);transition:width .28s var(--ease-out);}
+  .site-topbar__links a:hover{color:var(--text);}
+  .site-topbar__links a:hover::after{width:100%;}
   .site-topbar__cta{font-family:var(--font-body);font-weight:700;font-size:0.85rem;color:var(--blue);border:2px solid var(--mint);border-radius:var(--r-pill);padding:8px 18px;white-space:nowrap;transition:transform .2s ease, background .2s ease;}
+
+  /* curseur personnalise (identique au reste du site) */
+  .cur-dot, .cur-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate(-50%,-50%); transition: opacity .3s ease; }
+  .cur-dot { width: 7px; height: 7px; background: var(--blue); }
+  .cur-ring { width: 38px; height: 38px; border: 1.5px solid var(--mint); mix-blend-mode: multiply; transition: width .35s var(--ease-out), height .35s var(--ease-out), background .35s ease, opacity .3s ease; }
+  .cur-ring.is-hover { width: 68px; height: 68px; background: rgba(96,239,190,0.08); border-color: var(--mint); }
+  @media (pointer: coarse) { .cur-dot, .cur-ring { display: none; } }
+  body, a, button { cursor: none; }
+  @media (pointer: coarse) { body, a, button { cursor: auto; } }
   .site-topbar__cta:hover{background:rgba(96,239,190,0.08);transform:translateY(-1px);}
   @media (max-width: 860px){ .site-topbar__links{display:none;} }
 
@@ -197,9 +202,8 @@
 </head>
 <body>
 
-
-<div class="source-banner">⚠ DONNÉES 100% FICTIVES — fichier de démonstration du moteur, aucune entreprise réelle</div>
-
+<div class="cur-dot" aria-hidden="true"></div>
+<div class="cur-ring" aria-hidden="true"></div>
 
 <div class="site-topbar">
   <div class="container site-topbar__inner">
@@ -584,6 +588,41 @@
     <span>Rapport généré automatiquement · Semaine 25 · 2026</span>
   </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(pointer:fine)').matches;
+  if (!finePointer || reduce || !window.gsap) return;
+
+  var dot = document.querySelector('.cur-dot');
+  var ring = document.querySelector('.cur-ring');
+  if (!dot || !ring) return;
+
+  var dotX = gsap.quickTo(dot, 'x', { duration: 0.12, ease: 'power3.out' });
+  var dotY = gsap.quickTo(dot, 'y', { duration: 0.12, ease: 'power3.out' });
+  var ringX = gsap.quickTo(ring, 'x', { duration: 0.45, ease: 'power3.out' });
+  var ringY = gsap.quickTo(ring, 'y', { duration: 0.45, ease: 'power3.out' });
+
+  window.addEventListener('mousemove', function (e) {
+    dotX(e.clientX); dotY(e.clientY);
+    ringX(e.clientX); ringY(e.clientY);
+  });
+
+  document.querySelectorAll('a, button, [data-cursor-hover]').forEach(function (el) {
+    el.addEventListener('mouseenter', function () { ring.classList.add('is-hover'); });
+    el.addEventListener('mouseleave', function () { ring.classList.remove('is-hover'); });
+  });
+
+  document.addEventListener('mouseleave', function () {
+    gsap.to([dot, ring], { opacity: 0, duration: 0.2 });
+  });
+  document.addEventListener('mouseenter', function () {
+    gsap.to([dot, ring], { opacity: 1, duration: 0.2 });
+  });
+})();
+</script>
 
 </body>
 </html>
