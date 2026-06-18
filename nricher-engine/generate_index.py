@@ -19,8 +19,11 @@ Resultat : il suffit de deposer un nouveau data/<entreprise>.json pour que
 l'entreprise apparaisse automatiquement dans la recherche, sans toucher au
 code ni a companies.json a la main.
 
-Une entreprise est marquee "disponible" si un rapport existe deja dans
-output/<slug>.html (genere par generate_report.py).
+Deux notions de disponibilite, volontairement distinctes :
+  - output/index.html (outil local) : disponible = brouillon present dans
+    output/<slug>.html (genere par generate_report.py, pas encore publie).
+  - ../recherche.html (page du site) : disponible = rapport publie dans
+    ../rapports/<slug>.html (copie la par sync_reports.py apres validation).
 """
 
 import json
@@ -31,6 +34,7 @@ BASE_DIR = Path(__file__).parent
 SITE_DIR = BASE_DIR.parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 OUTPUT_DIR = BASE_DIR / "output"
+RAPPORTS_DIR = SITE_DIR / "rapports"
 DATA_DIR = BASE_DIR / "data"
 COMPANIES_FILE = DATA_DIR / "companies.json"
 
@@ -76,29 +80,32 @@ def main():
         for n in new_companies:
             print(f"  + {n}")
 
-    existing_slugs = {p.stem for p in OUTPUT_DIR.glob("*.html") if p.stem != "index"}
-
-    rows = []
-    for name in companies:
-        slug = slugify(name)
-        rows.append({"name": name, "slug": slug, "available": slug in existing_slugs})
-    rows.sort(key=lambda r: r["name"].lower())
+    draft_slugs = {p.stem for p in OUTPUT_DIR.glob("*.html") if p.stem != "index"}
+    published_slugs = {p.stem for p in RAPPORTS_DIR.glob("*.html")} if RAPPORTS_DIR.exists() else set()
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
 
-    # 1. Outil local autonome
+    # 1. Outil local autonome (reflete les brouillons dans output/)
+    draft_rows = [
+        {"name": n, "slug": slugify(n), "available": slugify(n) in draft_slugs}
+        for n in companies
+    ]
+    draft_rows.sort(key=lambda r: r["name"].lower())
     OUTPUT_DIR.mkdir(exist_ok=True)
-    engine_html = env.get_template("index_template.html").render(companies=rows)
+    engine_html = env.get_template("index_template.html").render(companies=draft_rows)
     (OUTPUT_DIR / "index.html").write_text(engine_html, encoding="utf-8")
 
-    # 2. Page integree au site (charte nricher.io, exclue des moteurs de recherche)
-    site_html = env.get_template("site_search_template.html").render(companies=rows)
+    # 2. Page integree au site (reflete les rapports publies dans ../rapports/)
+    site_rows = [
+        {"name": n, "slug": slugify(n), "available": slugify(n) in published_slugs}
+        for n in companies
+    ]
+    site_rows.sort(key=lambda r: r["name"].lower())
+    site_html = env.get_template("site_search_template.html").render(companies=site_rows)
     (SITE_DIR / "recherche.html").write_text(site_html, encoding="utf-8")
 
-    available_count = sum(1 for r in rows if r["available"])
-    print(f"\n{available_count}/{len(rows)} rapports disponibles")
-    print(f"Outil local : {OUTPUT_DIR / 'index.html'}")
-    print(f"Page du site : {SITE_DIR / 'recherche.html'}")
+    print(f"\nOutil local   : {len(draft_slugs)}/{len(companies)} brouillons  -> {OUTPUT_DIR / 'index.html'}")
+    print(f"Page du site  : {len(published_slugs)}/{len(companies)} publies    -> {SITE_DIR / 'recherche.html'}")
 
 
 if __name__ == "__main__":
