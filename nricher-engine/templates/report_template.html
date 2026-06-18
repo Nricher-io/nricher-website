@@ -72,8 +72,7 @@
   .brandbar{display:flex;align-items:center;gap:14px;}
   .brandbar .x{color:#C7CCD6;font-size:16px;}
   .logo-company{font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--brandcolor);letter-spacing:-0.01em;}
-  .logo-nricher{font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--text);display:flex;align-items:center;}
-  .logo-nricher .dot{color:var(--mint);}
+  .logo-nricher-img{height:19px;width:auto;display:block;}
   .nav__right{font-family:var(--font-body);font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:9px;}
   .livedot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(96,239,190,0.6);animation:pulse 2.2s infinite;}
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(96,239,190,.55);}70%{box-shadow:0 0 0 7px rgba(96,239,190,0);}100%{box-shadow:0 0 0 0 rgba(96,239,190,0);}}
@@ -204,16 +203,16 @@
 
 <div class="site-topbar">
   <div class="container site-topbar__inner">
-    <a href="/index.html" class="site-topbar__logo"><img src="/img/nricher logo/nricher_logo (1).svg" alt="nricher"></a>
+    <a href="../index.html" class="site-topbar__logo"><img src="../img/nricher logo/nricher_logo (1).svg" alt="nricher"></a>
     <nav class="site-topbar__links">
-      <a href="/index.html">Accueil</a>
-      <a href="/le-bon-catalogue.html">La plateforme</a>
-      <a href="/cas-clients.html">Cas clients</a>
-      <a href="/lequipe.html">L'équipe</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/recherche.html">Mon entreprise</a>
+      <a href="../index.html">Accueil</a>
+      <a href="../le-bon-catalogue.html">La plateforme</a>
+      <a href="../cas-clients.html">Cas clients</a>
+      <a href="../lequipe.html">L'équipe</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../recherche.html">Mon entreprise</a>
     </nav>
-    <a href="/contact.html" class="site-topbar__cta">Demander une démo →</a>
+    <a href="../contact.html" class="site-topbar__cta">Demander une démo →</a>
   </div>
 </div>
 
@@ -222,7 +221,7 @@
     <div class="brandbar">
       <span class="logo-company">{{ meta.company_name|upper }}</span>
       <span class="x">×</span>
-      <span class="logo-nricher">nr<span class="dot">i</span>cher</span>
+      <img src="../img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo-nricher-img">
     </div>
     <div class="nav__right">
       <span class="livedot"></span>
