@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "company_name": "DemoStore",
+    "company_color": "#7C3AED",
+    "report_date": "15/06/2026",
+    "report_time": "09:38",
+    "week_current": "25",
+    "week_previous": "24",
+    "source_label": "⚠ DONNÉES 100% FICTIVES — fichier de démonstration du moteur, aucune entreprise réelle"
+  },
+
+  "hero": {
+    "title_line1": "Le marché a bougé.",
+    "title_line2": "Votre prix, un peu moins.",
+    "lede": "312 480 articles analysés cette semaine sur 9 concurrents directs.",
+    "stats": [
+      {"value": "312,480", "label": "articles analysés (+1,4% vs S24)"},
+      {"value": "151,220", "label": "articles matchés concurrence"},
+      {"value": "101", "delta": "down", "label": "Price Index global (S24 : 104)"},
+      {"value": "9", "label": "enseignes suivies en temps réel"}
+    ]
+  },
+
+  "price_index_gauges": [
+    {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "plus cher sur l'ensemble des offres concurrentes (IP all)", "ref_prev": "S24 : 104"},
+    {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "plus cher en moyenne que la meilleure offre du marché (3P, price min)", "ref_prev": "S24 : 108"},
+    {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "plus chers entre vendeurs identiques vs concurrents (3P, same min)", "ref_prev": "S24 : 100"}
+  ],
+
+  "priority": {
+    "week_prev_label": "Semaine 24",
+    "week_curr_label": "Semaine 25",
+    "top_prio": {"prev": 106, "curr": 103, "delta_pts": -3},
+    "mid_prio": {"prev": 109, "curr": 104, "delta_pts": -5},
+    "note": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--good);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine."
+  },
+
+  "trend_chart": {
+    "weeks": ["07 Apr", "14 Apr", "21 Apr", "28 Apr", "05 May", "12 May", "19 May", "26 May", "02 Jun", "09 Jun", "15 Jun"],
+    "price_index_3p": [108, 107, 106, 106, 105, 104, 103, 103, 102, 101, 101]
+  },
+
+  "attractiveness_stacked": [
+    {"week": "07 AVR", "lower_pct": 19, "equal_pct": 46, "higher_pct": 35},
+    {"week": "05 MAI", "lower_pct": 24, "equal_pct": 47, "higher_pct": 29},
+    {"week": "02 JUN", "lower_pct": 29, "equal_pct": 49, "higher_pct": 22}
+  ],
+
+  "competitors": [
+    {"name": "Concurrent A", "matched_k": "14.2k", "lower_pct": 38, "equal_pct": 30, "higher_pct": 32, "pi": 101},
+    {"name": "Concurrent B", "matched_k": "22.8k", "lower_pct": 19, "equal_pct": 52, "higher_pct": 29, "pi": 104},
+    {"name": "Concurrent C", "matched_k": "31.5k", "lower_pct": 27, "equal_pct": 41, "higher_pct": 32, "pi": 99},
+    {"name": "Concurrent D", "matched_k": "9.7k",  "lower_pct": 33, "equal_pct": 35, "higher_pct": 32, "pi": 102}
+  ],
+
+  "sellers_table": [
+    {"name": "Vendeur Alpha", "analysed": "18 200", "matched": "9 410", "pi_min": 97,  "gt100": "1 200", "eq100": "7 800", "lt100": "410"},
+    {"name": "Vendeur Beta",  "analysed": "12 050", "matched": "6 330", "pi_min": 103, "gt100": "3 100", "eq100": "2 900", "lt100": "330"},
+    {"name": "DemoStore",     "analysed": "9 880",  "matched": "4 120", "pi_min": 105, "gt100": "1 900", "eq100": "1 800", "lt100": "420"},
+    {"name": "Vendeur Gamma", "analysed": "7 600",  "matched": "3 905", "pi_min": 100, "gt100": "20",    "eq100": "3 870", "lt100": "15"}
+  ],
+
+  "verdict": {
+    "tag": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE",
+    "headline": "Le repricing porte ses fruits — mais l'écart reste sur les références à fort trafic.",
+    "text": "L'indice global recule de 104 à 101 en une semaine. Le travail effectué sur les priorités hautes commence à payer ; il reste à confirmer sur deux semaines avant de l'élargir au reste du catalogue.",
+    "figures": [
+      {"value": "-3 pts", "label": "de gain sur les priorités hautes en 1 semaine"},
+      {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
+      {"value": "312k", "label": "articles suivis en continu, 9 enseignes"}
+    ]
+  }
+}
