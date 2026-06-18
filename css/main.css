@@ -258,11 +258,12 @@ p { text-wrap: pretty; }
 }
 .logo:hover .logo__dot { box-shadow: 0 0 10px rgba(46,88,202,0.9); }
 
-.nav__links { display: flex; align-items: center; gap: 22px; }
+.nav__links { display: flex; align-items: center; gap: 22px; flex-wrap: nowrap; }
 .nav__link {
   position: relative; font-family: var(--font-body); font-weight: 500;
   font-size: 0.95rem; padding: 4px 0; color: var(--text-2);
   transition: color .2s ease; touch-action: manipulation;
+  white-space: nowrap;
 }
 .nav__link:hover, .nav__link.active { color: var(--text); }
 .nav__link::after {
