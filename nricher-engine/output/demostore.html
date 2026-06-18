@@ -56,7 +56,18 @@
     font-size:12.5px;text-align:center;padding:8px 16px;font-weight:600;
   }
 
-  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .site-topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .site-topbar__inner{display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
+  .site-topbar__logo{display:flex;align-items:center;flex-shrink:0;}
+  .site-topbar__logo img{height:24px;width:auto;display:block;}
+  .site-topbar__links{display:flex;align-items:center;gap:22px;font-family:var(--font-body);font-weight:500;font-size:0.88rem;}
+  .site-topbar__links a{color:var(--text-2);white-space:nowrap;transition:color .2s ease;}
+  .site-topbar__links a:hover{color:var(--blue);}
+  .site-topbar__cta{font-family:var(--font-body);font-weight:700;font-size:0.85rem;color:var(--blue);border:2px solid var(--mint);border-radius:var(--r-pill);padding:8px 18px;white-space:nowrap;transition:transform .2s ease, background .2s ease;}
+  .site-topbar__cta:hover{background:rgba(96,239,190,0.08);transform:translateY(-1px);}
+  @media (max-width: 860px){ .site-topbar__links{display:none;} }
+
+  .nav{position:sticky;top:60px;z-index:50;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
   .nav__inner{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px;}
   .brandbar{display:flex;align-items:center;gap:14px;}
   .brandbar .x{color:#C7CCD6;font-size:16px;}
@@ -190,6 +201,21 @@
 
 <div class="source-banner">⚠ DONNÉES 100% FICTIVES — fichier de démonstration du moteur, aucune entreprise réelle</div>
 
+
+<div class="site-topbar">
+  <div class="container site-topbar__inner">
+    <a href="/index.html" class="site-topbar__logo"><img src="/img/nricher logo/nricher_logo (1).svg" alt="nricher"></a>
+    <nav class="site-topbar__links">
+      <a href="/index.html">Accueil</a>
+      <a href="/le-bon-catalogue.html">La plateforme</a>
+      <a href="/cas-clients.html">Cas clients</a>
+      <a href="/lequipe.html">L'équipe</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/recherche.html">Mon entreprise</a>
+    </nav>
+    <a href="/contact.html" class="site-topbar__cta">Demander une démo →</a>
+  </div>
+</div>
 
 <div class="nav">
   <div class="container nav__inner">
