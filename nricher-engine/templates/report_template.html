@@ -122,6 +122,11 @@
   .kpi-report .cbar-track > div{display:flex;align-items:center;justify-content:center;}
   .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
   .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
+  .kpi-report .cbar-pi--blue{color:var(--blue);white-space:nowrap;}
+  .kpi-report .cbar-pi--blue .sep{opacity:0.5;}
+  .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
+  .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
+  .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
 
   .kpi-report .donut-wrap{display:flex;align-items:center;gap:28px;margin-top:8px;flex-wrap:wrap;}
   .kpi-report .donut-svg{width:140px;height:140px;flex-shrink:0;}
@@ -637,7 +642,12 @@
         <div class="section-title">Seller analysis — répartition % par vendeur</div>
         <div class="section-sub">Part des articles moins chers, alignés, plus chers — vendeur par vendeur.</div>
       </div>
-      <span class="tag tag--lwh"><b style="color:var(--good);">Lower</b><span class="sep">·</span><b style="color:var(--blue);">Equal</b><span class="sep">·</span><b style="color:var(--bad);">Higher</b></span>
+    </div>
+
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
     <div class="cbar-list">
@@ -665,18 +675,24 @@
         <div class="section-title">Category analysis — répartition % par catégorie</div>
         <div class="section-sub">Part des articles moins chers, alignés, plus chers — catégorie par catégorie.</div>
       </div>
-      <span class="tag tag--lwh"><b style="color:var(--good);">Lower</b><span class="sep">·</span><b style="color:var(--blue);">Equal</b><span class="sep">·</span><b style="color:var(--bad);">Higher</b></span>
     </div>
 
-    <div class="cbar-list">
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
+    </div>
+
+    <div class="cbar-list cbar-list--category">
       {% for cat in category_stacked %}
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ cat.name }}</div><div class="cbar-meta">{{ cat.count }} articles</div></div>
+        <div><div class="cbar-name">{{ cat.name }}</div></div>
         <div class="cbar-track">
           <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);">{% if cat.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.lower_pct }}%</span>{% endif %}</div>
           <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);">{% if cat.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.equal_pct }}%</span>{% endif %}</div>
           <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);">{% if cat.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.higher_pct }}%</span>{% endif %}</div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">{{ cat.count }} <span class="sep">·</span> {{ cat.pi }}</div>
       </div>
       {% endfor %}
     </div>

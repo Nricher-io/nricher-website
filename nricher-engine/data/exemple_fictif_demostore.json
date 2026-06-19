@@ -98,14 +98,20 @@
   ],
 
   "category_stacked": [
-    {"name": "Mobilier",            "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"},
-    {"name": "Accessoires déco",    "lower_pct": 26, "equal_pct": 41, "higher_pct": 33, "count": "76k"},
-    {"name": "Rangement",           "lower_pct": 22, "equal_pct": 52, "higher_pct": 26, "count": "61k"},
-    {"name": "Literie",             "lower_pct": 19, "equal_pct": 58, "higher_pct": 23, "count": "44k"},
-    {"name": "Chauffage",           "lower_pct": 35, "equal_pct": 38, "higher_pct": 27, "count": "29k"},
-    {"name": "Cuisine",             "lower_pct": 24, "equal_pct": 49, "higher_pct": 27, "count": "22k"},
-    {"name": "Électroménager",      "lower_pct": 17, "equal_pct": 53, "higher_pct": 30, "count": "18k"},
-    {"name": "Tapis & sols",        "lower_pct": 28, "equal_pct": 44, "higher_pct": 28, "count": "9k"}
+    {"name": "Divers",          "lower_pct": 33, "equal_pct": 26, "higher_pct": 41, "count": "64.7k", "pi": 106},
+    {"name": "Lit",             "lower_pct": 31, "equal_pct": 45, "higher_pct": 24, "count": "5.6k",  "pi": 102},
+    {"name": "Cafetière",       "lower_pct": 41, "equal_pct": 5,  "higher_pct": 54, "count": "5.2k",  "pi": 102},
+    {"name": "Réfrigérateur",   "lower_pct": 14, "equal_pct": 17, "higher_pct": 69, "count": "4.8k",  "pi": 107},
+    {"name": "Meuble TV",       "lower_pct": 27, "equal_pct": 53, "higher_pct": 20, "count": "4.2k",  "pi": 100},
+    {"name": "Smartphone",      "lower_pct": 23, "equal_pct": 6,  "higher_pct": 71, "count": "4.1k",  "pi": 155},
+    {"name": "Lampe à poser",   "lower_pct": 36, "equal_pct": 40, "higher_pct": 24, "count": "4.0k",  "pi": 100},
+    {"name": "Bouilloire",      "lower_pct": 43, "equal_pct": 3,  "higher_pct": 54, "count": "3.4k",  "pi": 102},
+    {"name": "Coussin",         "lower_pct": 30, "equal_pct": 51, "higher_pct": 19, "count": "3.4k",  "pi": 101},
+    {"name": "Canapé",          "lower_pct": 21, "equal_pct": 44, "higher_pct": 35, "count": "3.3k",  "pi": 105},
+    {"name": "Micro-ondes",     "lower_pct": 21, "equal_pct": 6,  "higher_pct": 73, "count": "2.8k",  "pi": 106},
+    {"name": "Accessoires",     "lower_pct": 36, "equal_pct": 22, "higher_pct": 42, "count": "2.7k",  "pi": 105},
+    {"name": "Lave-linge",      "lower_pct": 14, "equal_pct": 14, "higher_pct": 72, "count": "2.4k",  "pi": 107},
+    {"name": "Suspension",      "lower_pct": 31, "equal_pct": 49, "higher_pct": 20, "count": "2.4k",  "pi": 102}
   ],
 
   "verdict": {

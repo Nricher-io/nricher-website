@@ -82,7 +82,7 @@
 
   "category_stacked": [
     {"_comment": "Reproduit '% Market Analysis > Category analysis' (barres empilées).",
-     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"}
+     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k", "pi": 106}
   ],
 
   "verdict": {

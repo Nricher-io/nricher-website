@@ -122,6 +122,11 @@
   .kpi-report .cbar-track > div{display:flex;align-items:center;justify-content:center;}
   .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
   .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
+  .kpi-report .cbar-pi--blue{color:var(--blue);white-space:nowrap;}
+  .kpi-report .cbar-pi--blue .sep{opacity:0.5;}
+  .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
+  .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
+  .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
 
   .kpi-report .donut-wrap{display:flex;align-items:center;gap:28px;margin-top:8px;flex-wrap:wrap;}
   .kpi-report .donut-svg{width:140px;height:140px;flex-shrink:0;}
@@ -1069,7 +1074,12 @@
         <div class="section-title">Seller analysis — répartition % par vendeur</div>
         <div class="section-sub">Part des articles moins chers, alignés, plus chers — vendeur par vendeur.</div>
       </div>
-      <span class="tag tag--lwh"><b style="color:var(--good);">Lower</b><span class="sep">·</span><b style="color:var(--blue);">Equal</b><span class="sep">·</span><b style="color:var(--bad);">Higher</b></span>
+    </div>
+
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
     <div class="cbar-list">
@@ -1167,81 +1177,154 @@
         <div class="section-title">Category analysis — répartition % par catégorie</div>
         <div class="section-sub">Part des articles moins chers, alignés, plus chers — catégorie par catégorie.</div>
       </div>
-      <span class="tag tag--lwh"><b style="color:var(--good);">Lower</b><span class="sep">·</span><b style="color:var(--blue);">Equal</b><span class="sep">·</span><b style="color:var(--bad);">Higher</b></span>
     </div>
 
-    <div class="cbar-list">
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
+    </div>
+
+    <div class="cbar-list cbar-list--category">
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Mobilier</div><div class="cbar-meta">113k articles</div></div>
+        <div><div class="cbar-name">Divers</div></div>
         <div class="cbar-track">
-          <div data-tip="Mobilier — moins cher : 30%" style="width:30%;background:var(--good);"><span class="cbar-seg__pct">30%</span></div>
-          <div data-tip="Mobilier — aligné : 47%" style="width:47%;background:var(--blue);"><span class="cbar-seg__pct">47%</span></div>
-          <div data-tip="Mobilier — plus cher : 23%" style="width:23%;background:var(--bad);"><span class="cbar-seg__pct">23%</span></div>
+          <div data-tip="Divers — moins cher : 33%" style="width:33%;background:var(--good);"><span class="cbar-seg__pct">33%</span></div>
+          <div data-tip="Divers — aligné : 26%" style="width:26%;background:var(--blue);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="Divers — plus cher : 41%" style="width:41%;background:var(--bad);"><span class="cbar-seg__pct">41%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">64.7k <span class="sep">·</span> 106</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Accessoires déco</div><div class="cbar-meta">76k articles</div></div>
+        <div><div class="cbar-name">Lit</div></div>
         <div class="cbar-track">
-          <div data-tip="Accessoires déco — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
-          <div data-tip="Accessoires déco — aligné : 41%" style="width:41%;background:var(--blue);"><span class="cbar-seg__pct">41%</span></div>
-          <div data-tip="Accessoires déco — plus cher : 33%" style="width:33%;background:var(--bad);"><span class="cbar-seg__pct">33%</span></div>
+          <div data-tip="Lit — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
+          <div data-tip="Lit — aligné : 45%" style="width:45%;background:var(--blue);"><span class="cbar-seg__pct">45%</span></div>
+          <div data-tip="Lit — plus cher : 24%" style="width:24%;background:var(--bad);"><span class="cbar-seg__pct">24%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">5.6k <span class="sep">·</span> 102</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Rangement</div><div class="cbar-meta">61k articles</div></div>
+        <div><div class="cbar-name">Cafetière</div></div>
         <div class="cbar-track">
-          <div data-tip="Rangement — moins cher : 22%" style="width:22%;background:var(--good);"><span class="cbar-seg__pct">22%</span></div>
-          <div data-tip="Rangement — aligné : 52%" style="width:52%;background:var(--blue);"><span class="cbar-seg__pct">52%</span></div>
-          <div data-tip="Rangement — plus cher : 26%" style="width:26%;background:var(--bad);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="Cafetière — moins cher : 41%" style="width:41%;background:var(--good);"><span class="cbar-seg__pct">41%</span></div>
+          <div data-tip="Cafetière — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="Cafetière — plus cher : 54%" style="width:54%;background:var(--bad);"><span class="cbar-seg__pct">54%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">5.2k <span class="sep">·</span> 102</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Literie</div><div class="cbar-meta">44k articles</div></div>
+        <div><div class="cbar-name">Réfrigérateur</div></div>
         <div class="cbar-track">
-          <div data-tip="Literie — moins cher : 19%" style="width:19%;background:var(--good);"><span class="cbar-seg__pct">19%</span></div>
-          <div data-tip="Literie — aligné : 58%" style="width:58%;background:var(--blue);"><span class="cbar-seg__pct">58%</span></div>
-          <div data-tip="Literie — plus cher : 23%" style="width:23%;background:var(--bad);"><span class="cbar-seg__pct">23%</span></div>
+          <div data-tip="Réfrigérateur — moins cher : 14%" style="width:14%;background:var(--good);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="Réfrigérateur — aligné : 17%" style="width:17%;background:var(--blue);"><span class="cbar-seg__pct">17%</span></div>
+          <div data-tip="Réfrigérateur — plus cher : 69%" style="width:69%;background:var(--bad);"><span class="cbar-seg__pct">69%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">4.8k <span class="sep">·</span> 107</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Chauffage</div><div class="cbar-meta">29k articles</div></div>
+        <div><div class="cbar-name">Meuble TV</div></div>
         <div class="cbar-track">
-          <div data-tip="Chauffage — moins cher : 35%" style="width:35%;background:var(--good);"><span class="cbar-seg__pct">35%</span></div>
-          <div data-tip="Chauffage — aligné : 38%" style="width:38%;background:var(--blue);"><span class="cbar-seg__pct">38%</span></div>
-          <div data-tip="Chauffage — plus cher : 27%" style="width:27%;background:var(--bad);"><span class="cbar-seg__pct">27%</span></div>
+          <div data-tip="Meuble TV — moins cher : 27%" style="width:27%;background:var(--good);"><span class="cbar-seg__pct">27%</span></div>
+          <div data-tip="Meuble TV — aligné : 53%" style="width:53%;background:var(--blue);"><span class="cbar-seg__pct">53%</span></div>
+          <div data-tip="Meuble TV — plus cher : 20%" style="width:20%;background:var(--bad);"><span class="cbar-seg__pct">20%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">4.2k <span class="sep">·</span> 100</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Cuisine</div><div class="cbar-meta">22k articles</div></div>
+        <div><div class="cbar-name">Smartphone</div></div>
         <div class="cbar-track">
-          <div data-tip="Cuisine — moins cher : 24%" style="width:24%;background:var(--good);"><span class="cbar-seg__pct">24%</span></div>
-          <div data-tip="Cuisine — aligné : 49%" style="width:49%;background:var(--blue);"><span class="cbar-seg__pct">49%</span></div>
-          <div data-tip="Cuisine — plus cher : 27%" style="width:27%;background:var(--bad);"><span class="cbar-seg__pct">27%</span></div>
+          <div data-tip="Smartphone — moins cher : 23%" style="width:23%;background:var(--good);"><span class="cbar-seg__pct">23%</span></div>
+          <div data-tip="Smartphone — aligné : 6%" style="width:6%;background:var(--blue);"></div>
+          <div data-tip="Smartphone — plus cher : 71%" style="width:71%;background:var(--bad);"><span class="cbar-seg__pct">71%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">4.1k <span class="sep">·</span> 155</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Électroménager</div><div class="cbar-meta">18k articles</div></div>
+        <div><div class="cbar-name">Lampe à poser</div></div>
         <div class="cbar-track">
-          <div data-tip="Électroménager — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="Électroménager — aligné : 53%" style="width:53%;background:var(--blue);"><span class="cbar-seg__pct">53%</span></div>
-          <div data-tip="Électroménager — plus cher : 30%" style="width:30%;background:var(--bad);"><span class="cbar-seg__pct">30%</span></div>
+          <div data-tip="Lampe à poser — moins cher : 36%" style="width:36%;background:var(--good);"><span class="cbar-seg__pct">36%</span></div>
+          <div data-tip="Lampe à poser — aligné : 40%" style="width:40%;background:var(--blue);"><span class="cbar-seg__pct">40%</span></div>
+          <div data-tip="Lampe à poser — plus cher : 24%" style="width:24%;background:var(--bad);"><span class="cbar-seg__pct">24%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">4.0k <span class="sep">·</span> 100</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Tapis & sols</div><div class="cbar-meta">9k articles</div></div>
+        <div><div class="cbar-name">Bouilloire</div></div>
         <div class="cbar-track">
-          <div data-tip="Tapis & sols — moins cher : 28%" style="width:28%;background:var(--good);"><span class="cbar-seg__pct">28%</span></div>
-          <div data-tip="Tapis & sols — aligné : 44%" style="width:44%;background:var(--blue);"><span class="cbar-seg__pct">44%</span></div>
-          <div data-tip="Tapis & sols — plus cher : 28%" style="width:28%;background:var(--bad);"><span class="cbar-seg__pct">28%</span></div>
+          <div data-tip="Bouilloire — moins cher : 43%" style="width:43%;background:var(--good);"><span class="cbar-seg__pct">43%</span></div>
+          <div data-tip="Bouilloire — aligné : 3%" style="width:3%;background:var(--blue);"></div>
+          <div data-tip="Bouilloire — plus cher : 54%" style="width:54%;background:var(--bad);"><span class="cbar-seg__pct">54%</span></div>
         </div>
+        <div class="cbar-pi cbar-pi--blue">3.4k <span class="sep">·</span> 102</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Coussin</div></div>
+        <div class="cbar-track">
+          <div data-tip="Coussin — moins cher : 30%" style="width:30%;background:var(--good);"><span class="cbar-seg__pct">30%</span></div>
+          <div data-tip="Coussin — aligné : 51%" style="width:51%;background:var(--blue);"><span class="cbar-seg__pct">51%</span></div>
+          <div data-tip="Coussin — plus cher : 19%" style="width:19%;background:var(--bad);"><span class="cbar-seg__pct">19%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">3.4k <span class="sep">·</span> 101</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Canapé</div></div>
+        <div class="cbar-track">
+          <div data-tip="Canapé — moins cher : 21%" style="width:21%;background:var(--good);"><span class="cbar-seg__pct">21%</span></div>
+          <div data-tip="Canapé — aligné : 44%" style="width:44%;background:var(--blue);"><span class="cbar-seg__pct">44%</span></div>
+          <div data-tip="Canapé — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">3.3k <span class="sep">·</span> 105</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Micro-ondes</div></div>
+        <div class="cbar-track">
+          <div data-tip="Micro-ondes — moins cher : 21%" style="width:21%;background:var(--good);"><span class="cbar-seg__pct">21%</span></div>
+          <div data-tip="Micro-ondes — aligné : 6%" style="width:6%;background:var(--blue);"></div>
+          <div data-tip="Micro-ondes — plus cher : 73%" style="width:73%;background:var(--bad);"><span class="cbar-seg__pct">73%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">2.8k <span class="sep">·</span> 106</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Accessoires</div></div>
+        <div class="cbar-track">
+          <div data-tip="Accessoires — moins cher : 36%" style="width:36%;background:var(--good);"><span class="cbar-seg__pct">36%</span></div>
+          <div data-tip="Accessoires — aligné : 22%" style="width:22%;background:var(--blue);"><span class="cbar-seg__pct">22%</span></div>
+          <div data-tip="Accessoires — plus cher : 42%" style="width:42%;background:var(--bad);"><span class="cbar-seg__pct">42%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">2.7k <span class="sep">·</span> 105</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Lave-linge</div></div>
+        <div class="cbar-track">
+          <div data-tip="Lave-linge — moins cher : 14%" style="width:14%;background:var(--good);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="Lave-linge — aligné : 14%" style="width:14%;background:var(--blue);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="Lave-linge — plus cher : 72%" style="width:72%;background:var(--bad);"><span class="cbar-seg__pct">72%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">2.4k <span class="sep">·</span> 107</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Suspension</div></div>
+        <div class="cbar-track">
+          <div data-tip="Suspension — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
+          <div data-tip="Suspension — aligné : 49%" style="width:49%;background:var(--blue);"><span class="cbar-seg__pct">49%</span></div>
+          <div data-tip="Suspension — plus cher : 20%" style="width:20%;background:var(--bad);"><span class="cbar-seg__pct">20%</span></div>
+        </div>
+        <div class="cbar-pi cbar-pi--blue">2.4k <span class="sep">·</span> 102</div>
       </div>
       
     </div>
