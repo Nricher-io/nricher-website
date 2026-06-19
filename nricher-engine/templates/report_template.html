@@ -60,11 +60,8 @@
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
   .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);}
   .kpi-report .kpi:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
-  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:center;}
-  .kpi-report .kpi__dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
-  .kpi-report .kpi__dot.bad{background:var(--bad);box-shadow:0 0 0 4px var(--bad-bg);}
-  .kpi-report .kpi__dot.warn{background:#c98c1a;box-shadow:0 0 0 4px var(--warn-bg);}
-  .kpi-report .kpi__dot.good{background:var(--good);box-shadow:0 0 0 4px var(--good-bg);}
+  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .kpi-report .kpi__gauge{width:84px;height:auto;flex-shrink:0;margin-top:-6px;}
   .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1;margin-top:18px;}
   .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);}
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
@@ -306,7 +303,20 @@
       <div class="kpi" data-tip="{{ g.delta_pct }} vs {{ g.ref_prev }}">
         <span class="kpi__ghost {{ g.severity }}">{{ g.value }}</span>
         <div class="kpi-top">
-          <span class="kpi__dot {{ g.severity }}"></span>
+          <svg class="kpi__gauge" viewBox="0 0 120 64">
+            <defs>
+              <linearGradient id="gaugeGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="32%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <path d="M18,58 A42,42 0 0 1 102,58" fill="none" stroke="url(#gaugeGrad-{{ loop.index0 }})" stroke-width="9" stroke-linecap="round"/>
+            <line x1="60" y1="58" x2="{{ g.needle_x }}" y2="{{ g.needle_y }}" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="60" cy="58" r="4" fill="var(--text)"/>
+          </svg>
           <div class="kpi__chip {{ g.severity }}">{{ g.delta_pct }}</div>
         </div>
         <div class="kpi__num {{ g.severity }}">{{ g.value }}</div>

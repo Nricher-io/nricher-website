@@ -40,6 +40,7 @@ USAGE
 import json
 import argparse
 import glob
+import math
 import sys
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -91,6 +92,24 @@ def compute_chart_geometry(weeks, values):
     return polyline_str, points, round(y_max), y_mid, round(y_min)
 
 
+GAUGE_CX, GAUGE_CY, GAUGE_R = 60, 58, 42
+GAUGE_VMIN, GAUGE_VMAX = 90, 120
+
+
+def compute_gauge_needle(value):
+    """
+    Calcule le point d'extremite de l'aiguille d'une jauge semi-circulaire
+    (90 a gauche/vert, 120 a droite/rouge), a partir de la valeur du Price Index.
+    """
+    v = max(GAUGE_VMIN, min(GAUGE_VMAX, value))
+    frac = (v - GAUGE_VMIN) / (GAUGE_VMAX - GAUGE_VMIN)
+    angle_deg = 180 - frac * 180
+    angle_rad = math.radians(angle_deg)
+    x = GAUGE_CX + GAUGE_R * math.cos(angle_rad)
+    y = GAUGE_CY - GAUGE_R * math.sin(angle_rad)
+    return round(x, 1), round(y, 1)
+
+
 def load_company_data(json_path):
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -123,6 +142,9 @@ def render_report(json_path, env):
 
     # le dernier point du tracé est mis en évidence (cercle plus gros + contour blanc)
     chart_circles = points
+
+    for gauge in data["price_index_gauges"]["gauges"]:
+        gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
 
     template = env.get_template(TEMPLATE_NAME)
     html = template.render(
