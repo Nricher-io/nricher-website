@@ -114,6 +114,52 @@ def compute_gauge_needle(value):
     return round(x, 1), round(y, 1)
 
 
+DONUT_R = 50
+
+
+def compute_donut_segments(parts):
+    """
+    parts: liste de (pct, couleur_css). Renvoie les segments (dasharray/dashoffset)
+    d'un donut SVG (cercle r=50, demarre a midi via rotate(-90) sur le <g> parent).
+    """
+    circumference = 2 * math.pi * DONUT_R
+    segments = []
+    cumulative = 0.0
+    for pct, color in parts:
+        length = circumference * (pct / 100.0)
+        segments.append({
+            "color": color,
+            "pct": pct,
+            "dasharray": f"{length:.2f} {circumference - length:.2f}",
+            "dashoffset": f"{-cumulative:.2f}",
+        })
+        cumulative += length
+    return segments
+
+
+def compute_competitors_overview(competitors):
+    """Moyenne simple Lower/Equal/Higher tous concurrents confondus + classement par PI."""
+    n = len(competitors) or 1
+    avg_lower = round(sum(c["lower_pct"] for c in competitors) / n)
+    avg_equal = round(sum(c["equal_pct"] for c in competitors) / n)
+    avg_higher = max(0, 100 - avg_lower - avg_equal)
+
+    donut_segments = compute_donut_segments([
+        (avg_lower, "var(--good)"),
+        (avg_equal, "var(--blue)"),
+        (avg_higher, "var(--bad)"),
+    ])
+
+    ranking = sorted(competitors, key=lambda c: c["pi"])
+    for c in ranking:
+        c["bar_pct"] = max(0, min(100, round((c["pi"] - 90) / 30 * 100)))
+
+    return {
+        "avg_lower": avg_lower, "avg_equal": avg_equal, "avg_higher": avg_higher,
+        "donut_segments": donut_segments,
+    }, ranking
+
+
 def load_company_data(json_path):
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -151,6 +197,8 @@ def render_report(json_path, env):
     for gauge in data["price_index_gauges"]["gauges"]:
         gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
 
+    competitors_overview, competitors_ranking = compute_competitors_overview(data["competitors"])
+
     template = env.get_template(TEMPLATE_NAME)
     html = template.render(
         meta=data["meta"],
@@ -161,6 +209,8 @@ def render_report(json_path, env):
         attractiveness_stacked=data["attractiveness_stacked"],
         competitors=data["competitors"],
         competitors_table=data["competitors_table"],
+        competitors_overview=competitors_overview,
+        competitors_ranking=competitors_ranking,
         sellers_table=data["sellers_table"],
         sellers_stacked=data["sellers_stacked"],
         category_stacked=data["category_stacked"],

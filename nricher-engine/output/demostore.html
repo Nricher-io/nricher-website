@@ -123,6 +123,21 @@
   .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
   .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
 
+  .kpi-report .donut-wrap{display:flex;align-items:center;gap:28px;margin-top:8px;flex-wrap:wrap;}
+  .kpi-report .donut-svg{width:140px;height:140px;flex-shrink:0;}
+  .kpi-report .donut-svg circle{transition:stroke-width .2s ease, opacity .2s ease; cursor:default;}
+  .kpi-report .donut-svg circle:hover{stroke-width:23;}
+  .kpi-report .donut-legend{display:flex;flex-direction:column;gap:10px;}
+  .kpi-report .donut-legend .legend-item{font-size:0.88rem;font-weight:600;color:var(--text-2);}
+
+  .kpi-report .rank-list{display:flex;flex-direction:column;gap:11px;margin-top:8px;}
+  .kpi-report .rank-row{display:grid;grid-template-columns:118px 1fr 38px;align-items:center;gap:12px;}
+  .kpi-report .rank-name{font-size:0.85rem;font-weight:600;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .kpi-report .rank-bar-track{height:14px;border-radius:var(--r-pill);background:var(--card-2);overflow:visible;}
+  .kpi-report .rank-bar{height:100%;border-radius:var(--r-pill);transition:filter .2s ease, transform .2s ease;position:relative;}
+  .kpi-report .rank-bar:hover{filter:brightness(1.12);transform:scaleY(1.2);}
+  .kpi-report .rank-pi{font-family:var(--font-display);font-weight:700;font-size:0.85rem;text-align:right;}
+
   .kpi-report .sellers-wrap{max-height:430px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--card);}
   .kpi-report table.sellers{width:100%;border-collapse:collapse;font-size:0.88rem;}
   .kpi-report table.sellers thead{position:sticky;top:0;background:var(--card);z-index:2;}
@@ -605,6 +620,124 @@
           <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Moins cher</div>
           <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Aligné</div>
           <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Plus cher</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Vue d'ensemble concurrentielle</div>
+        <div class="section-sub">Moyenne tous concurrents confondus, et classement par indice prix.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <h3>Répartition moyenne</h3>
+        <div class="chart-sub">Lower / Equal / Higher, moyenne sur 8 concurrents.</div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 120 120">
+            <g transform="rotate(-90 60 60)">
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--good)" stroke-width="20"
+                      stroke-dasharray="91.11 223.05" stroke-dashoffset="-0.00"
+                      data-tip="29%"></circle>
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20"
+                      stroke-dasharray="128.81 185.35" stroke-dashoffset="-91.11"
+                      data-tip="41%"></circle>
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20"
+                      stroke-dasharray="94.25 219.91" stroke-dashoffset="-219.91"
+                      data-tip="30%"></circle>
+              
+            </g>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">30%</text>
+            <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)">plus cher</text>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Moins cher · 29%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Aligné · 41%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Plus cher · 30%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>Classement par indice prix</h3>
+        <div class="chart-sub">Du plus compétitif au plus cher (90 = très compétitif, 120 = très cher).</div>
+        <div class="rank-list">
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent E</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent E : PI 97" style="width:23%;background:var(--good);"></div>
+            </div>
+            <span class="rank-pi">97</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent C</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent C : PI 99" style="width:30%;background:var(--good);"></div>
+            </div>
+            <span class="rank-pi">99</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent G</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent G : PI 100" style="width:33%;background:var(--good);"></div>
+            </div>
+            <span class="rank-pi">100</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent A</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent A : PI 101" style="width:37%;background:#c98c1a;"></div>
+            </div>
+            <span class="rank-pi">101</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent D</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent D : PI 102" style="width:40%;background:#c98c1a;"></div>
+            </div>
+            <span class="rank-pi">102</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent F</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent F : PI 103" style="width:43%;background:#c98c1a;"></div>
+            </div>
+            <span class="rank-pi">103</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent B</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent B : PI 104" style="width:47%;background:#c98c1a;"></div>
+            </div>
+            <span class="rank-pi">104</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Concurrent H</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Concurrent H : PI 105" style="width:50%;background:var(--bad);"></div>
+            </div>
+            <span class="rank-pi">105</span>
+          </div>
+          
         </div>
       </div>
     </div>
