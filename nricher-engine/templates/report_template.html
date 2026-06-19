@@ -54,9 +54,7 @@
   .kpi-report .tag{font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;letter-spacing:0.05em;text-transform:uppercase;}
   .kpi-report .tag--watch{background:rgba(46,88,202,0.12);color:var(--blue);}
   .kpi-report hr.div{border:none;border-top:1px solid var(--border);margin:0;}
-  .kpi-report .pi-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-  .kpi-report .pi-meta__row{font-size:0.82rem;color:var(--muted);display:flex;align-items:center;gap:8px;white-space:nowrap;}
-  .kpi-report .pi-meta__row .dot{opacity:0.5;}
+  .kpi-report .kpi-grid-tag{display:flex;justify-content:flex-end;margin-bottom:14px;}
 
   .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
@@ -159,7 +157,6 @@
     .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
     .kpi-report .verdict{padding:38px 26px;}
     .kpi-report .section-header{align-items:flex-start;}
-    .kpi-report .pi-meta{align-items:flex-start;}
   }
   @media (max-width:560px){
     .report-bar__inner{flex-direction:column;align-items:flex-start;height:auto;padding-block:14px;gap:8px;}
@@ -285,12 +282,9 @@
         <div class="section-title">Price Index — la photo de la semaine</div>
         <div class="section-sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
       </div>
-      <div class="pi-meta">
-        <span class="tag tag--watch">100 = aligné marché</span>
-        <div class="pi-meta__row"><span>Maj : {{ price_index_gauges.updated_label }}</span><span class="dot">·</span><span>{{ price_index_gauges.analysed }} Analysed</span><span class="dot">·</span><span>{{ price_index_gauges.matched }} Matched</span></div>
-      </div>
     </div>
 
+    <div class="kpi-grid-tag"><span class="tag tag--watch">100 = aligné marché</span></div>
     <div class="kpi-grid">
       {% for g in price_index_gauges.gauges %}
       <div class="kpi" data-tip="{{ g.delta_pct }} vs {{ g.ref_prev }}">
