@@ -114,24 +114,36 @@ def compute_gauge_needle(value):
     return round(x, 1), round(y, 1)
 
 
-DONUT_R = 50
+DONUT_CX, DONUT_CY, DONUT_R = 60, 60, 50
 
 
 def compute_donut_segments(parts):
     """
     parts: liste de (pct, couleur_css). Renvoie les segments (dasharray/dashoffset)
-    d'un donut SVG (cercle r=50, demarre a midi via rotate(-90) sur le <g> parent).
+    d'un donut SVG (cercle r=50, demarre a midi via rotate(-90) sur le <g> parent),
+    plus la position (label_x, label_y) du milieu de chaque arc pour y afficher le %.
     """
     circumference = 2 * math.pi * DONUT_R
     segments = []
     cumulative = 0.0
     for pct, color in parts:
         length = circumference * (pct / 100.0)
+
+        mid_fraction = (cumulative + length / 2) / circumference if circumference else 0
+        angle = mid_fraction * 2 * math.pi
+        x_unrot = DONUT_CX + DONUT_R * math.cos(angle)
+        y_unrot = DONUT_CY + DONUT_R * math.sin(angle)
+        # applique la meme rotation -90deg que le <g transform> du donut
+        label_x = DONUT_CX + (y_unrot - DONUT_CY)
+        label_y = DONUT_CY - (x_unrot - DONUT_CX)
+
         segments.append({
             "color": color,
             "pct": pct,
             "dasharray": f"{length:.2f} {circumference - length:.2f}",
             "dashoffset": f"{-cumulative:.2f}",
+            "label_x": round(label_x, 1),
+            "label_y": round(label_y, 1),
         })
         cumulative += length
     return segments

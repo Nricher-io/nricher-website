@@ -7,12 +7,12 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="128x128">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.png">
-<title>Bien présenté — Fiches produits enrichies, publiées partout · nricher</title>
-<meta name="description" content="nricher transforme la publication multi-canal d'une contrainte chronophage en un levier de performance. Une seule solution, des dizaines de marketplaces." />
+<title data-i18n="bp.meta.title">Bien présenté — Fiches produits enrichies, publiées partout · nricher</title>
+<meta name="description" data-i18n="bp.meta.desc" content="nricher transforme la publication multi-canal d'une contrainte chronophage en un levier de performance. Une seule solution, des dizaines de marketplaces." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="nricher" />
-<meta property="og:title" content="Bien présenté — Fiches produits enrichies, publiées partout · nricher" />
-<meta property="og:description" content="nricher transforme la publication multi-canal d'une contrainte chronophage en un levier de performance. Une seule solution, des dizaines de marketplaces." />
+<meta property="og:title" data-i18n="bp.meta.title" content="Bien présenté — Fiches produits enrichies, publiées partout · nricher" />
+<meta property="og:description" data-i18n="bp.meta.desc" content="nricher transforme la publication multi-canal d'une contrainte chronophage en un levier de performance. Une seule solution, des dizaines de marketplaces." />
 <meta property="og:url" content="https://www.nricher.io/bien-presente.html" />
 <meta property="og:image" content="https://www.nricher.io/favicon.png" />
 <meta name="msapplication-TileImage" content="favicon.png" />
@@ -398,8 +398,8 @@
     background: linear-gradient(to bottom, var(--blue), var(--mint));
     border-radius: 2px; flex-shrink: 0;
   }
-  .enrich-flow > div:nth-child(2)::after { content: 'Fiche brute'; font-size: 0.72rem; font-weight: 600; color: var(--muted); font-style: italic; }
-  .enrich-flow > div:nth-child(4)::after { content: 'Fiche enrichie'; font-size: 0.72rem; font-weight: 600; color: var(--muted); font-style: italic; }
+  .enrich-flow > div:nth-child(2)::after { content: ''; }
+  .enrich-flow > div:nth-child(4)::after { content: ''; }
   .ef-arrow svg { display: none; }
   .ef-arrow .ef-particle { display: none; }
   .enrich-stats { grid-template-columns: repeat(2, 1fr); }
@@ -440,6 +440,11 @@
 }
 #interfaces .container { position: relative; z-index: 2; }
 </style>
+  <script>
+    if (localStorage.getItem('nr-lang') === 'en') {
+      document.documentElement.setAttribute('lang', 'en');
+    }
+  </script>
 </head>
 <body data-screen-label="Bien présenté">
 
@@ -453,41 +458,49 @@
   <div class="container nav__inner">
     <a href="index.html" class="logo" aria-label="nricher accueil"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
     <ul class="nav__links">
-      <li><a href="index.html" class="nav__link">Accueil</a></li>
+      <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
       <li class="nav__item">
         <a href="#" class="nav__link active">La plateforme ▾</a>
         <div class="nav__dropdown">
-          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
-          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
-          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t">Bien présenté</span><span class="nav__dd-d">Fiches produits enrichies, publiées partout</span></span></a>
-          <a href="l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t">L'outil</span><span class="nav__dd-d">Comment fonctionne nricher</span></span></a>
+          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.platform.product.title">Le bon produit</span><span class="nav__dd-d" data-i18n="nav.platform.product.desc">Pilotez votre assortiment avec la donnée marché</span></span></a>
+          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.platform.price.title">Le bon prix</span><span class="nav__dd-d" data-i18n="nav.platform.price.desc">Benchmark prix concurrent en temps réel</span></span></a>
+          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.platform.presented.title">Bien présenté</span><span class="nav__dd-d" data-i18n="nav.platform.presented.desc">Fiches produits enrichies, publiées partout</span></span></a>
+          <a href="l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t" data-i18n="nav.platform.tool.title">L'outil</span><span class="nav__dd-d" data-i18n="nav.platform.tool.desc">Comment fonctionne nricher</span></span></a>
         </div>
       </li>
-      <li><a href="cas-clients.html" class="nav__link">Cas clients</a></li>
-      <li><a href="lequipe.html" class="nav__link">L'équipe</a></li>
-      <li><a href="contact.html" class="nav__link">Contact</a></li>
-      <li><a href="recherche.html" class="nav__link">Mon entreprise</a></li>
+      <li><a href="cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
+      <li><a href="lequipe.html" class="nav__link" data-i18n="nav.team">L\'équipe</a></li>
+      <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="recherche.html" class="nav__link" data-i18n="nav.mycompany">Mon entreprise</a></li>
     </ul>
     <div class="nav__right">
-      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow">Connexion</a>
-      <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
-      <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <div class="lang-switch">
+        <button class="lang-switch__flag" data-lang="fr" aria-label="Français">🇫🇷</button>
+        <button class="lang-switch__flag" data-lang="en" aria-label="English">🇬🇧</button>
+      </div>
+      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow" data-i18n="nav.login">Connexion</a>
+      <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu" data-i18n="nav.burger.aria-label"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
 <aside class="mobile-menu">
-  <button class="mobile-menu__close" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="index.html">Accueil</a>
-  <a href="le-bon-catalogue.html">Le bon produit</a>
-  <a href="le-bon-prix.html">Le bon prix</a>
-  <a href="bien-presente.html">Bien présenté</a>
-  <a href="l-outil.html">L'outil</a>
-  <a href="cas-clients.html">Cas clients</a>
-  <a href="lequipe.html">L'équipe</a>
-  <a href="contact.html">Contact</a>
-  <a href="recherche.html">Mon entreprise</a>
-  <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+  <button class="mobile-menu__close" aria-label="Fermer le menu" data-i18n="nav.close.aria-label">&#x2715;</button>
+  <a href="index.html" data-i18n="nav.home">Accueil</a>
+  <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+  <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+  <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
+  <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+  <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+  <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="recherche.html" data-i18n="nav.mycompany">Mon entreprise</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  <div class="lang-switch">
+    <button class="lang-switch__flag" data-lang="fr" aria-label="Français">🇫🇷</button>
+    <button class="lang-switch__flag" data-lang="en" aria-label="English">🇬🇧</button>
+  </div>
 </aside>
 
 <!-- PAGE HERO -->
@@ -577,7 +590,7 @@
 <section class="section" id="technologie">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">La technologie</span>
+      <span class="eyebrow" data-i18n="bp.tech.eyebrow">La technologie</span>
       <h2 class="section-title">La <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">révolution data</em> qui transforme l'e-commerce.</h2>
       <p class="section-sub">Notre technologie exclusive ajuste vos fiches produit aux standards exacts de chaque marketplace, en totale conformité avec leur taxonomie, attribut par attribut.</p>
     </div>
@@ -586,13 +599,13 @@
 
       <!-- Phase 01 : Fiche source -->
       <div class="ef-phase">
-        <div class="ef-phase__head"><span class="ef-num">01</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Fiche source</span></div>
+        <div class="ef-phase__head"><span class="ef-num">01</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="bp.tech.flow.p1">Fiche source</span></div>
         <div class="ef-attrs">
-          <div class="ef-attr"><span class="ef-attr__name">Titre</span><span class="ef-attr__val ef-attr__val--ok">✓ Complet</span></div>
-          <div class="ef-attr"><span class="ef-attr__name">Description</span><span class="ef-attr__val ef-attr__val--warn">⚠ Partielle</span></div>
-          <div class="ef-attr"><span class="ef-attr__name">Images</span><span class="ef-attr__val ef-attr__val--bad">1 / 8</span></div>
-          <div class="ef-attr"><span class="ef-attr__name">Vidéo</span><span class="ef-attr__val ef-attr__val--bad">✗ Absente</span></div>
-          <div class="ef-attr"><span class="ef-attr__name">Attributs</span><span class="ef-attr__val ef-attr__val--bad">4 / 28</span></div>
+          <div class="ef-attr"><span class="ef-attr__name" data-i18n="bp.tech.flow.p1.attr1">Titre</span><span class="ef-attr__val ef-attr__val--ok" data-i18n="bp.tech.flow.p1.attr1.val">✓ Complet</span></div>
+          <div class="ef-attr"><span class="ef-attr__name" data-i18n="bp.tech.flow.p1.attr2">Description</span><span class="ef-attr__val ef-attr__val--warn" data-i18n="bp.tech.flow.p1.attr2.val">⚠ Partielle</span></div>
+          <div class="ef-attr"><span class="ef-attr__name" data-i18n="bp.tech.flow.p1.attr3">Images</span><span class="ef-attr__val ef-attr__val--bad">1 / 8</span></div>
+          <div class="ef-attr"><span class="ef-attr__name" data-i18n="bp.tech.flow.p1.attr4">Vidéo</span><span class="ef-attr__val ef-attr__val--bad" data-i18n="bp.tech.flow.p1.attr4.val">✗ Absente</span></div>
+          <div class="ef-attr"><span class="ef-attr__name" data-i18n="bp.tech.flow.p1.attr5">Attributs</span><span class="ef-attr__val ef-attr__val--bad">4 / 28</span></div>
         </div>
         <div class="ef-score ef-score--low">
           <span class="ef-score__num">28</span><span class="ef-score__unit">/ 100</span>
@@ -601,6 +614,7 @@
 
       <!-- Connecteur 1 -->
       <div class="ef-arrow">
+        <span class="ef-arrow__label" data-i18n="bp.fiche-brute">Fiche brute</span>
         <svg viewBox="0 0 72 20" fill="none">
           <line x1="0" y1="10" x2="64" y2="10" stroke="url(#eg1)" stroke-width="2"/>
           <polygon points="62,4 72,10 62,16" fill="url(#eg1f)"/>
@@ -616,7 +630,7 @@
 
       <!-- Phase 02 : Enrichissement IA (vedette) -->
       <div class="ef-phase ef-phase--core">
-        <div class="ef-phase__head"><span class="ef-num">02</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Enrichissement IA</span></div>
+        <div class="ef-phase__head"><span class="ef-num">02</span><span style="background:linear-gradient(to right,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;" data-i18n="bp.tech.flow.p2">Enrichissement IA</span></div>
         <div class="ef-criteria">
           <div class="ef-crit"><span class="ef-crit__name">Title</span><span class="ef-crit__bar"><span style="width:95%"></span></span><span class="ef-crit__score ef-crit__score--ok">95</span></div>
           <div class="ef-crit"><span class="ef-crit__name">Desc</span><span class="ef-crit__bar"><span style="width:68%"></span></span><span class="ef-crit__score ef-crit__score--mid">68</span></div>
@@ -633,6 +647,7 @@
 
       <!-- Connecteur 2 -->
       <div class="ef-arrow">
+        <span class="ef-arrow__label" data-i18n="bp.fiche-brute">Fiche brute</span>
         <svg viewBox="0 0 72 20" fill="none">
           <line x1="0" y1="10" x2="64" y2="10" stroke="url(#eg2)" stroke-width="2"/>
           <polygon points="62,4 72,10 62,16" fill="url(#eg2f)"/>
@@ -677,7 +692,7 @@
 <section class="section section--off" id="interfaces">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">Nos interfaces</span>
+      <span class="eyebrow" data-i18n="bp.ui.eyebrow">Nos interfaces</span>
       <h2 class="section-title">Deux outils pensés pour <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">l'excellence opérationnelle.</em></h2>
     </div>
     <div class="bp-showcases">
@@ -734,28 +749,28 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="logo"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
-        <p class="footer__tag">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
+        <p class="footer__tag" data-i18n="footer.tagline">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
       </div>
       <div class="footer__col">
-        <h4>La plateforme</h4>
-        <a href="le-bon-catalogue.html">Le bon produit</a>
-        <a href="le-bon-prix.html">Le bon prix</a>
-        <a href="bien-presente.html">Bien présenté</a>
+        <h4 data-i18n="footer.platform">La plateforme</h4>
+        <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+        <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+        <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
       </div>
       <div class="footer__col">
-        <h4>Ressources</h4>
-        <a href="cas-clients.html">Cas clients</a>
-        <a href="lequipe.html">L'équipe</a>
-        <a href="contact.html">Contact</a>
+        <h4 data-i18n="footer.resources">Ressources</h4>
+        <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+        <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="footer__col">
-        <h4>Contact</h4>
-        <a href="contact.html">Demander une démo</a>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="contact.html" data-i18n="footer.demo">Demander une démo</a>
         <a href="mailto:contact@nricher.io">contact@nricher.io</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
+      <span data-i18n="footer.copyright">© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
       <a href="https://www.linkedin.com/company/nricher/?viewAsMember=true" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"/></svg></a>
     </div>
   </div>
@@ -765,6 +780,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/lang-switcher.js"></script>
 <script src="js/main.js"></script>
 <script>
 (function(){

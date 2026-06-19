@@ -7,12 +7,12 @@
 <link rel="icon" href="favicon.png" type="image/png" sizes="128x128">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="favicon.png">
-<title>nricher — L'IA qui fait sur-performer vos Category Managers</title>
-<meta name="description" content="nricher analyse en temps réel votre catalogue et celui de vos concurrents. Catalogue, prix, fiches produits." />
+<title data-i18n="idx.meta.title">nricher — L'IA qui fait sur-performer vos Category Managers</title>
+<meta name="description" data-i18n="idx.meta.desc" content="nricher analyse en temps réel votre catalogue et celui de vos concurrents. Catalogue, prix, fiches produits." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="nricher" />
-<meta property="og:title" content="nricher — L'IA qui fait sur-performer vos Category Managers" />
-<meta property="og:description" content="nricher analyse en temps réel votre catalogue et celui de vos concurrents. Catalogue, prix, fiches produits." />
+<meta property="og:title" data-i18n="idx.meta.title" content="nricher — L'IA qui fait sur-performer vos Category Managers" />
+<meta property="og:description" data-i18n="idx.meta.desc" content="nricher analyse en temps réel votre catalogue et celui de vos concurrents. Catalogue, prix, fiches produits." />
 <meta property="og:url" content="https://www.nricher.io/" />
 <meta property="og:image" content="https://www.nricher.io/favicon.png" />
 <meta name="msapplication-TileImage" content="favicon.png" />
@@ -73,6 +73,11 @@ html, body { background: #FFFFFF !important; }
 }
 #la-plateforme .container { position: relative; z-index: 1; }
 </style>
+  <script>
+    if (localStorage.getItem('nr-lang') === 'en') {
+      document.documentElement.setAttribute('lang', 'en');
+    }
+  </script>
 </head>
 <body data-screen-label="Accueil">
 
@@ -229,41 +234,49 @@ html, body { background: #FFFFFF !important; }
   <div class="container nav__inner">
     <a href="index.html" class="logo" aria-label="nricher"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
     <ul class="nav__links">
-      <li><a href="index.html" class="nav__link active">Accueil</a></li>
+      <li><a href="index.html" class="nav__link active" data-i18n="nav.home">Accueil</a></li>
       <li class="nav__item">
-        <a href="le-bon-catalogue.html" class="nav__link">La plateforme ▾</a>
+        <a href="le-bon-catalogue.html" class="nav__link" data-i18n="nav.platform">La plateforme ▾</a>
         <div class="nav__dropdown">
-          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
-          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
-          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t">Bien présenté</span><span class="nav__dd-d">Fiches produits enrichies, publiées partout</span></span></a>
-          <a href="l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t">L'outil</span><span class="nav__dd-d">Comment fonctionne nricher</span></span></a>
+          <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.platform.product.title">Le bon produit</span><span class="nav__dd-d" data-i18n="nav.platform.product.desc">Pilotez votre assortiment avec la donnée marché</span></span></a>
+          <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.platform.price.title">Le bon prix</span><span class="nav__dd-d" data-i18n="nav.platform.price.desc">Benchmark prix concurrent en temps réel</span></span></a>
+          <a href="bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.platform.presented.title">Bien présenté</span><span class="nav__dd-d" data-i18n="nav.platform.presented.desc">Fiches produits enrichies, publiées partout</span></span></a>
+          <a href="l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t" data-i18n="nav.platform.tool.title">L'outil</span><span class="nav__dd-d" data-i18n="nav.platform.tool.desc">Comment fonctionne nricher</span></span></a>
         </div>
       </li>
-      <li><a href="cas-clients.html" class="nav__link">Cas clients</a></li>
-      <li><a href="lequipe.html" class="nav__link">L'équipe</a></li>
-      <li><a href="contact.html" class="nav__link">Contact</a></li>
-      <li><a href="recherche.html" class="nav__link">Mon entreprise</a></li>
+      <li><a href="cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
+      <li><a href="lequipe.html" class="nav__link" data-i18n="nav.team">L\'équipe</a></li>
+      <li><a href="contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="recherche.html" class="nav__link" data-i18n="nav.mycompany">Mon entreprise</a></li>
     </ul>
     <div class="nav__right">
-      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow">Connexion</a>
-      <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
-      <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <div class="lang-switch">
+        <button class="lang-switch__flag" data-lang="fr" aria-label="Français">🇫🇷</button>
+        <button class="lang-switch__flag" data-lang="en" aria-label="English">🇬🇧</button>
+      </div>
+      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow" data-i18n="nav.login">Connexion</a>
+      <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu" data-i18n="nav.burger.aria-label"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
 <aside class="mobile-menu">
-  <button class="mobile-menu__close" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="index.html">Accueil</a>
-  <a href="le-bon-catalogue.html">Le bon produit</a>
-  <a href="le-bon-prix.html">Le bon prix</a>
-  <a href="bien-presente.html">Bien présenté</a>
-  <a href="l-outil.html">L'outil</a>
-  <a href="cas-clients.html">Cas clients</a>
-  <a href="lequipe.html">L'équipe</a>
-  <a href="contact.html">Contact</a>
-  <a href="recherche.html">Mon entreprise</a>
-  <a href="contact.html" class="btn btn-primary">Demander une démo →</a>
+  <button class="mobile-menu__close" aria-label="Fermer le menu" data-i18n="nav.close.aria-label">&#x2715;</button>
+  <a href="index.html" data-i18n="nav.home">Accueil</a>
+  <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+  <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+  <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
+  <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+  <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+  <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="recherche.html" data-i18n="nav.mycompany">Mon entreprise</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  <div class="lang-switch">
+    <button class="lang-switch__flag" data-lang="fr" aria-label="Français">🇫🇷</button>
+    <button class="lang-switch__flag" data-lang="en" aria-label="English">🇬🇧</button>
+  </div>
 </aside>
 
 <!-- ============ HERO ============ -->
@@ -273,19 +286,19 @@ html, body { background: #FFFFFF !important; }
 
     <!-- LEFT: copy -->
     <div class="hero__copy">
-      <h1 class="hero__title" data-split-hero>
+      <h1 class="hero__title" data-split-hero data-i18n="idx.hero.title">
         <span class="split-line"><span class="split-inner">Le catalogue</span></span>
         <span class="split-line"><span class="split-inner">parfait pour</span></span>
         <span class="split-line"><span class="split-inner"><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">votre croissance.</em></span></span>
       </h1>
 
-      <p class="hero__sub reveal" data-delay="1">Exploitez la puissance de la data produit pour <strong>toujours satisfaire vos clients</strong> en proposant le bon produit au bon prix bien présenté.</p>
+      <p class="hero__sub reveal" data-delay="1" data-i18n="idx.hero.sub">Exploitez la puissance de la data produit pour <strong>toujours satisfaire vos clients</strong> en proposant le bon produit au bon prix bien présenté.</p>
 
       <div class="hero__search-wrap reveal" data-delay="2">
         <form class="hero__search" id="hero-search-form">
           <span class="hero__search-ico">⌕</span>
-          <input type="text" class="hero__search-input" id="hero-search-input" placeholder="Rechercher mon entreprise..." autocomplete="off">
-          <button type="submit" class="hero__search-btn" aria-label="Rechercher">→</button>
+          <input type="text" class="hero__search-input" id="hero-search-input" placeholder="Rechercher mon entreprise..." autocomplete="off" data-i18n="idx.hero.search">
+          <button type="submit" class="hero__search-btn" aria-label="Rechercher" data-i18n="idx.hero.search-btn">→</button>
         </form>
       </div>
     </div>
@@ -345,7 +358,7 @@ html, body { background: #FFFFFF !important; }
 <!-- ============ CLIENTS STRIP ============ -->
 <section class="section section--alt section--tight">
   <div class="container center">
-    <p class="strip-label">Pourquoi ils nous font <span style="color:var(--mint);">confiance</span> ?</p>
+    <p class="strip-label" data-i18n="idx.trust.label">Pourquoi ils nous font <span style="color:var(--mint);">confiance</span> ?</p>
     <div class="clients" id="clients-strip">
       <div class="clients__logo"></div>
       <div class="clients__logo"></div>
@@ -371,7 +384,7 @@ html, body { background: #FFFFFF !important; }
 
     <!-- "nricher répond à trois questions fondamentales" -->
     <div class="section-header center reveal" style="max-width:100%;text-align:center;">
-      <h2 class="section-title" style="display:inline-block;"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" style="height:0.82em;width:auto;vertical-align:baseline;display:inline-block;position:relative;top:0.02em;margin-right:0.25em;">&nbsp;répond à trois questions fondamentales</h2>
+      <h2 class="section-title" style="display:inline-block;"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" style="height:0.82em;width:auto;vertical-align:baseline;display:inline-block;position:relative;top:0.02em;margin-right:0.25em;">&nbsp;<span data-i18n="idx.piliers.title">répond à trois questions fondamentales</span></h2>
     </div>
 
     <!-- Questions toutes visibles -->
@@ -381,34 +394,34 @@ html, body { background: #FFFFFF !important; }
         <div class="qs-item is-active reveal" data-num="01" data-delay="1">
           <div class="qs-item__top">
             <div style="display:flex;align-items:center;gap:8px;">
-              <span class="qs-item__num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">1</span></span>
+              <span class="qs-item__num" data-i18n="idx.piliers.q1.num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">1</span></span>
               <div class="qs-item__ico">📦</div>
             </div>
-            <a href="le-bon-catalogue.html" class="qs-item__link">Le bon produit →</a>
+            <a href="le-bon-catalogue.html" class="qs-item__link" data-i18n="idx.piliers.q1.link">Le bon produit →</a>
           </div>
-          <p class="qs-item__q">Quels sont les<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">produits top sellers</em><br>du marché&nbsp;?</p>
+          <p class="qs-item__q" data-i18n="idx.piliers.q1.q">Quels sont les<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">produits top sellers</em><br>du marché&nbsp;?</p>
         </div>
 
         <div class="qs-item is-active reveal" data-num="02" data-delay="2">
           <div class="qs-item__top">
             <div style="display:flex;align-items:center;gap:8px;">
-              <span class="qs-item__num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">2</span></span>
+              <span class="qs-item__num" data-i18n="idx.piliers.q2.num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">2</span></span>
               <div class="qs-item__ico">💰</div>
             </div>
-            <a href="le-bon-prix.html" class="qs-item__link">Le bon prix →</a>
+            <a href="le-bon-prix.html" class="qs-item__link" data-i18n="idx.piliers.q2.link">Le bon prix →</a>
           </div>
-          <p class="qs-item__q">Quelle est<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">l'attractivité</em><br>de chaque produit&nbsp;?</p>
+          <p class="qs-item__q" data-i18n="idx.piliers.q2.q">Quelle est<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">l'attractivité</em><br>de chaque produit&nbsp;?</p>
         </div>
 
         <div class="qs-item is-active reveal" data-num="03" data-delay="3">
           <div class="qs-item__top">
             <div style="display:flex;align-items:center;gap:8px;">
-              <span class="qs-item__num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">3</span></span>
+              <span class="qs-item__num" data-i18n="idx.piliers.q3.num"><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">0</span><span style="-webkit-text-fill-color:#2e58ca;color:#2e58ca;">3</span></span>
               <div class="qs-item__ico">✏️</div>
             </div>
-            <a href="bien-presente.html" class="qs-item__link">Bien présenté →</a>
+            <a href="bien-presente.html" class="qs-item__link" data-i18n="idx.piliers.q3.link">Bien présenté →</a>
           </div>
-          <p class="qs-item__q">Les produits sont-ils<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">bien présentés</em><br>sur votre site&nbsp;?</p>
+          <p class="qs-item__q" data-i18n="idx.piliers.q3.q">Les produits sont-ils<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">bien présentés</em><br>sur votre site&nbsp;?</p>
         </div>
 
       </div>
@@ -440,9 +453,9 @@ html, body { background: #FFFFFF !important; }
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </button>
           <div class="cycle-tooltip cycle-tooltip--right">
-            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">📦</span><h3 class="cycle-tooltip__title">Le bon produit</h3></div>
-            <p class="cycle-tooltip__text"><strong>Identifiez les trous dans votre gamme avant vos concurrents. Nos algorithmes croisent les tendances du marché avec votre offre.</strong></p>
-            <div class="cycle-tooltip__foot"><span class="pill-kpi">+20% de CA</span><a href="le-bon-catalogue.html" class="btn btn-primary cycle-tooltip__btn">Découvrir →</a></div>
+            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">📦</span><h3 class="cycle-tooltip__title" data-i18n="idx.cycle.p1.title">Le bon produit</h3></div>
+            <p class="cycle-tooltip__text" data-i18n="idx.cycle.p1.text"><strong>Identifiez les trous dans votre gamme avant vos concurrents. Nos algorithmes croisent les tendances du marché avec votre offre.</strong></p>
+            <div class="cycle-tooltip__foot"><span class="pill-kpi" data-i18n="idx.cycle.p1.pill">+20% de CA</span><a href="le-bon-catalogue.html" class="btn btn-primary cycle-tooltip__btn" data-i18n="idx.cycle.p1.btn">Découvrir →</a></div>
           </div>
         </div>
 
@@ -460,23 +473,23 @@ html, body { background: #FFFFFF !important; }
           </button>
         </div>
 
-        <span class="cycle-lbl cycle-lbl--top is-active" data-idx="0">Le bon<strong>Produit</strong></span>
+        <span class="cycle-lbl cycle-lbl--top is-active" data-idx="0" data-i18n="idx.cycle.lbl1">Le bon<strong>Produit</strong></span>
 
         <!-- Bien Présenté — tooltip ancré sur l'étiquette, à droite -->
-        <div class="cycle-lbl cycle-lbl--br" data-idx="1">Bien<strong>Présenté</strong>
+        <div class="cycle-lbl cycle-lbl--br" data-idx="1" data-i18n="idx.cycle.lbl2">Bien<strong>Présenté</strong>
           <div class="cycle-tooltip cycle-tooltip--right">
-            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">✏️</span><h3 class="cycle-tooltip__title">Bien présenté</h3></div>
-            <p class="cycle-tooltip__text">Publiez vos produits avec des fiches parfaitement enrichies sur toutes les marketplaces, sans friction.</p>
-            <div class="cycle-tooltip__foot"><span class="pill-kpi">Setup en 1 jour</span><a href="bien-presente.html" class="btn btn-primary cycle-tooltip__btn">Découvrir →</a></div>
+            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">✏️</span><h3 class="cycle-tooltip__title" data-i18n="idx.cycle.p2.title">Bien présenté</h3></div>
+            <p class="cycle-tooltip__text" data-i18n="idx.cycle.p2.text">Publiez vos produits avec des fiches parfaitement enrichies sur toutes les marketplaces, sans friction.</p>
+            <div class="cycle-tooltip__foot"><span class="pill-kpi" data-i18n="idx.cycle.p2.pill">Setup en 1 jour</span><a href="bien-presente.html" class="btn btn-primary cycle-tooltip__btn" data-i18n="idx.cycle.p2.btn">Découvrir →</a></div>
           </div>
         </div>
 
         <!-- Le bon Prix — tooltip ancré sur l'étiquette, à gauche -->
-        <div class="cycle-lbl cycle-lbl--bl" data-idx="2">Le bon<strong>Prix</strong>
+        <div class="cycle-lbl cycle-lbl--bl" data-idx="2" data-i18n="idx.cycle.lbl3">Le bon<strong>Prix</strong>
           <div class="cycle-tooltip cycle-tooltip--left">
-            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">💰</span><h3 class="cycle-tooltip__title">Le bon prix</h3></div>
-            <p class="cycle-tooltip__text">Benchmark de prix en quasi temps réel, matching automatique<br>article par article, sans code EAN.</p>
-            <div class="cycle-tooltip__foot"><span class="pill-kpi">+45% ROAS</span><a href="le-bon-prix.html" class="btn btn-primary cycle-tooltip__btn">Découvrir →</a></div>
+            <div class="cycle-tooltip__head"><span class="cycle-tooltip__ico">💰</span><h3 class="cycle-tooltip__title" data-i18n="idx.cycle.p3.title">Le bon prix</h3></div>
+            <p class="cycle-tooltip__text" data-i18n="idx.cycle.p3.text">Benchmark de prix en quasi temps réel, matching automatique<br>article par article, sans code EAN.</p>
+            <div class="cycle-tooltip__foot"><span class="pill-kpi" data-i18n="idx.cycle.p3.pill">+45% ROAS</span><a href="le-bon-prix.html" class="btn btn-primary cycle-tooltip__btn" data-i18n="idx.cycle.p3.btn">Découvrir →</a></div>
           </div>
         </div>
       </div>
@@ -526,8 +539,8 @@ html, body { background: #FFFFFF !important; }
 <section class="section section--alt" id="la-plateforme">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">La plateforme</span>
-      <h2 class="section-title" data-split-scroll style="max-width:100%;">
+      <span class="eyebrow" data-i18n="idx.platform.eyebrow">La plateforme</span>
+      <h2 class="section-title" data-split-scroll style="max-width:100%;" data-i18n="idx.platform.title">
         <span class="split-line"><span class="split-inner">Toute la data produit pour</span></span>
         <span class="split-line"><span class="split-inner">des <span style="-webkit-text-fill-color:var(--blue);color:var(--blue);font-weight:700;">clients</span> <span style="-webkit-text-fill-color:var(--mint);color:var(--mint);font-weight:700;">100%</span> satisfaits.</span></span>
       </h2>
@@ -536,32 +549,32 @@ html, body { background: #FFFFFF !important; }
       <div class="feats-nav">
         <button class="feat-tab" data-feat="0">
           <span class="feat-tab__num">01</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">Exhaustif</span><span class="feat-tab__sub">Chaque article, chaque concurrent.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab1.title">Exhaustif</span><span class="feat-tab__sub" data-i18n="idx.platform.tab1.sub">Chaque article, chaque concurrent.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
         <button class="feat-tab" data-feat="1">
           <span class="feat-tab__num">02</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">Matching automatique</span><span class="feat-tab__sub">Sans EAN, sans action manuelle.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab2.title">Matching automatique</span><span class="feat-tab__sub" data-i18n="idx.platform.tab2.sub">Sans EAN, sans action manuelle.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
         <button class="feat-tab" data-feat="2">
           <span class="feat-tab__num">03</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">Fiabilité 99,9%</span><span class="feat-tab__sub">Des décisions sur données vérifiées.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab3.title">Fiabilité 99,9%</span><span class="feat-tab__sub" data-i18n="idx.platform.tab3.sub">Des décisions sur données vérifiées.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
         <button class="feat-tab" data-feat="3">
           <span class="feat-tab__num">04</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">Proche temps réel</span><span class="feat-tab__sub">Mise à jour jusqu'à 8× par jour.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab4.title">Proche temps réel</span><span class="feat-tab__sub" data-i18n="idx.platform.tab4.sub">Mise à jour jusqu'à 8× par jour.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
         <button class="feat-tab" data-feat="4">
           <span class="feat-tab__num">05</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">User friendly</span><span class="feat-tab__sub">Prise en main instantanée.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab5.title">User friendly</span><span class="feat-tab__sub" data-i18n="idx.platform.tab5.sub">Prise en main instantanée.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
         <button class="feat-tab" data-feat="5">
           <span class="feat-tab__num">06</span>
-          <span class="feat-tab__body"><span class="feat-tab__title">Parée à l'action</span><span class="feat-tab__sub">API, SFTP, Excel — tout y est.</span></span>
+          <span class="feat-tab__body"><span class="feat-tab__title" data-i18n="idx.platform.tab6.title">Parée à l'action</span><span class="feat-tab__sub" data-i18n="idx.platform.tab6.sub">API, SFTP, Excel — tout y est.</span></span>
           <span class="feat-tab__progress"></span>
         </button>
       </div>
@@ -571,43 +584,43 @@ html, body { background: #FFFFFF !important; }
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/le bon prix/PI market analysis.png" alt="" />
           <span class="feat-slide__ico">🌐</span>
-          <h3 class="feat-slide__title">Exhaustif.</h3>
-          <p class="feat-slide__text">Notre technologie d'exploration web vous donne en quasi temps réel le positionnement de chaque article de vos concurrents, sur la totalité de votre catalogue.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab1.title">Exhaustif.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab1.text">Notre technologie d'exploration web vous donne en quasi temps réel le positionnement de chaque article de vos concurrents, sur la totalité de votre catalogue.</p>
         </div>
         <div class="feat-slide">
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/bien présenté/match annotations.png" alt="" />
           <span class="feat-slide__ico">🔗</span>
-          <h3 class="feat-slide__title">Matching automatique.</h3>
-          <p class="feat-slide__text">Nous matchons vos articles avec ceux de vos concurrents selon leurs caractéristiques réelles. Sans code EAN. Sans action manuelle de votre part.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab2.title">Matching automatique.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab2.text">Nous matchons vos articles avec ceux de vos concurrents selon leurs caractéristiques réelles. Sans code EAN. Sans action manuelle de votre part.</p>
         </div>
         <div class="feat-slide">
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/le bon produit/EAN detailed view.png" alt="" />
           <span class="feat-slide__ico">🛡️</span>
-          <h3 class="feat-slide__title">Fiabilité 99,9%.</h3>
-          <p class="feat-slide__text">Notre technologie de matching est fiable à 99,9%. Vous prenez vos décisions stratégiques sur des données en lesquelles vous pouvez pleinement avoir confiance.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab3.title">Fiabilité 99,9%.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab3.text">Notre technologie de matching est fiable à 99,9%. Vous prenez vos décisions stratégiques sur des données en lesquelles vous pouvez pleinement avoir confiance.</p>
         </div>
         <div class="feat-slide">
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/le bon prix/Price evolution.png" alt="" />
           <span class="feat-slide__ico">⚡</span>
-          <h3 class="feat-slide__title">Proche temps réel.</h3>
-          <p class="feat-slide__text">Vos données sont systématiquement à jour. Nous rafraîchissons nos interfaces quotidiennement, vous travaillez toujours avec l'état du marché le plus récent.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab4.title">Proche temps réel.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab4.text">Vos données sont systématiquement à jour. Nous rafraîchissons nos interfaces quotidiennement, vous travaillez toujours avec l'état du marché le plus récent.</p>
         </div>
         <div class="feat-slide">
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/bien présenté/management KPIs.png" alt="" />
           <span class="feat-slide__ico">👆</span>
-          <h3 class="feat-slide__title">User friendly.</h3>
-          <p class="feat-slide__text">Nos interfaces présentent les données marché selon les standards de navigation du web. La prise en main est instantanée, pas de formation requise.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab5.title">User friendly.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab5.text">Nos interfaces présentent les données marché selon les standards de navigation du web. La prise en main est instantanée, pas de formation requise.</p>
         </div>
         <div class="feat-slide">
           <div class="feat-slide__bg"></div>
           <img class="feat-slide__img" src="img/le bon prix/Décision.png" alt="" />
           <span class="feat-slide__ico">🚀</span>
-          <h3 class="feat-slide__title">Parée à l'action.</h3>
-          <p class="feat-slide__text">API, SFTP, Excel partagé… nous alimentons tous vos systèmes tiers avec nos données pour automatiser vos prises de décisions et gagner chaque vente.</p>
+          <h3 class="feat-slide__title" data-i18n="idx.platform.tab6.title">Parée à l'action.</h3>
+          <p class="feat-slide__text" data-i18n="idx.platform.tab6.text">API, SFTP, Excel partagé… nous alimentons tous vos systèmes tiers avec nos données pour automatiser vos prises de décisions et gagner chaque vente.</p>
         </div>
 
       </div>
@@ -619,8 +632,8 @@ html, body { background: #FFFFFF !important; }
 <section class="section section--alt glow-wrap" id="process" data-parallax>
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">Mise en route</span>
-      <h2 class="section-title" data-split-scroll>
+      <span class="eyebrow" data-i18n="idx.process.eyebrow">Mise en route</span>
+      <h2 class="section-title" data-split-scroll data-i18n="idx.process.title">
         <span class="split-line"><span class="split-inner">Opérationnel <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">immédiatement.</em></span></span>
       </h2>
     </div>
@@ -628,23 +641,23 @@ html, body { background: #FFFFFF !important; }
       <div class="steps__line" aria-hidden="true"></div>
       <div class="step reveal" data-delay="1">
         <div class="step__num">01</div>
-        <h3 class="step__title">Connexion catalogue</h3>
-        <p class="step__text">API, SFTP ou Excel. On ingère votre catalogue en 1 jour.</p>
+        <h3 class="step__title" data-i18n="idx.process.step1.title">Connexion catalogue</h3>
+        <p class="step__text" data-i18n="idx.process.step1.text">API, SFTP ou Excel. On ingère votre catalogue en 1 jour.</p>
       </div>
       <div class="step reveal" data-delay="2">
         <div class="step__num">02</div>
-        <h3 class="step__title">Mapping concurrent</h3>
-        <p class="step__text">Nos algos identifient et matchent vos articles avec ceux de vos concurrents, caractéristique par caractéristique.</p>
+        <h3 class="step__title" data-i18n="idx.process.step2.title">Mapping concurrent</h3>
+        <p class="step__text" data-i18n="idx.process.step2.text">Nos algos identifient et matchent vos articles avec ceux de vos concurrents, caractéristique par caractéristique.</p>
       </div>
       <div class="step reveal" data-delay="3">
         <div class="step__num">03</div>
-        <h3 class="step__title">Dashboard live</h3>
-        <p class="step__text">Prix, tendances, qualité fiche, tout se met à jour en continu. Vos équipes voient enfin le marché entier.</p>
+        <h3 class="step__title" data-i18n="idx.process.step3.title">Dashboard live</h3>
+        <p class="step__text" data-i18n="idx.process.step3.text">Prix, tendances, qualité fiche, tout se met à jour en continu. Vos équipes voient enfin le marché entier.</p>
       </div>
       <div class="step reveal" data-delay="4">
         <div class="step__num">04</div>
-        <h3 class="step__title">Décisions automatisées</h3>
-        <p class="step__text">Alertes, reprices et insights exportés directement dans vos outils. Zéro action manuelle.</p>
+        <h3 class="step__title" data-i18n="idx.process.step4.title">Décisions automatisées</h3>
+        <p class="step__text" data-i18n="idx.process.step4.text">Alertes, reprices et insights exportés directement dans vos outils. Zéro action manuelle.</p>
       </div>
     </div>
   </div>
@@ -654,32 +667,32 @@ html, body { background: #FFFFFF !important; }
 <section class="section section--card" id="resultats">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">Résultats mesurés</span>
-      <h2 class="section-title">Des <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">chiffres</em>, pas des promesses.</h2>
+      <span class="eyebrow" data-i18n="idx.results.eyebrow">Résultats mesurés</span>
+      <h2 class="section-title" data-i18n="idx.results.title">Des <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">chiffres</em>, pas des promesses.</h2>
     </div>
     <div class="kpi-grid">
       <div class="kpi reveal" data-delay="1">
         <div class="kpi__icon">📈</div>
         <div class="kpi__num"><span class="grad-text" data-count="18" data-prefix="+" data-suffix="%">+0%</span></div>
-        <p class="kpi__label">de chiffre d'affaires</p>
+        <p class="kpi__label" data-i18n="idx.results.kpi1.lbl">de chiffre d'affaires</p>
         <span class="kpi__ghost">18</span>
       </div>
       <div class="kpi reveal" data-delay="2">
         <div class="kpi__icon">🏃</div>
         <div class="kpi__num"><span class="grad-text" data-count="23" data-prefix="+" data-suffix="%">+0%</span></div>
-        <p class="kpi__label">de nouveaux runners en ligne</p>
+        <p class="kpi__label" data-i18n="idx.results.kpi2.lbl">de nouveaux runners en ligne</p>
         <span class="kpi__ghost">23</span>
       </div>
       <div class="kpi reveal" data-delay="3">
         <div class="kpi__icon">🎯</div>
         <div class="kpi__num"><span class="grad-text" data-count="99.9" data-decimals="1" data-suffix="%">0%</span></div>
-        <p class="kpi__label">de fiabilité de notre matching produit</p>
+        <p class="kpi__label" data-i18n="idx.results.kpi3.lbl">de fiabilité de notre matching produit</p>
         <span class="kpi__ghost">99</span>
       </div>
       <div class="kpi reveal" data-delay="4">
         <div class="kpi__icon">🔍</div>
         <div class="kpi__num"><span class="grad-text" data-count="22" data-prefix="+" data-suffix="M">0M</span></div>
-        <p class="kpi__label">d'articles analysés par jour</p>
+        <p class="kpi__label" data-i18n="idx.results.kpi4.lbl">d'articles analysés par jour</p>
         <span class="kpi__ghost">22M</span>
       </div>
     </div>
@@ -690,9 +703,9 @@ html, body { background: #FFFFFF !important; }
 <section class="section section--off trophees" id="trophees">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="eyebrow">Reconnus par l'industrie</span>
-      <h2 class="section-title">Nos trophées &amp; <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">récompenses.</em></h2>
-      <p class="section-sub">Quatre distinctions qui valident notre approche.</p>
+      <span class="eyebrow" data-i18n="idx.awards.eyebrow">Reconnus par l'industrie</span>
+      <h2 class="section-title" data-i18n="idx.awards.title">Nos trophées &amp; <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">récompenses.</em></h2>
+      <p class="section-sub" data-i18n="idx.awards.sub">Quatre distinctions qui valident notre approche.</p>
     </div>
     <div class="trophees-wall reveal" data-delay="1">
       <a class="trophy-card" style="--rot:-3deg" href="https://www.republik-retail.fr/solutions-techno/omnicanal/decouvrez-les-laureats-de-la-10e-nuit-du-commerce-connecte-2023.html" target="_blank" rel="noopener">
@@ -700,28 +713,28 @@ html, body { background: #FFFFFF !important; }
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/nuit du commerce connecté 2023.png" alt="Nuit du Commerce Connecté 2023" />
         </div>
-        <p class="trophy-card__label">Nuit du Commerce Connecté 2023</p>
+        <p class="trophy-card__label" data-i18n="idx.awards.ncc1">Nuit du Commerce Connecté 2023</p>
       </a>
       <a class="trophy-card" style="--rot:2.5deg" href="https://www.republik-retail.fr/solutions-techno/omnicanal/decouvrez-les-laureats-de-la-11e-nuit-du-commerce-connecte-2024.html" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/nuit du commerce connecté 2024.png" alt="Nuit du Commerce Connecté 2024" />
         </div>
-        <p class="trophy-card__label">Nuit du Commerce Connecté 2024</p>
+        <p class="trophy-card__label" data-i18n="idx.awards.ncc2">Nuit du Commerce Connecté 2024</p>
       </a>
       <a class="trophy-card" style="--rot:-1.5deg" href="https://news.parisretailweek.com/daily/prw-awards-les-laureats-du-paris-retail-award-2023/" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/paris retail award.png" alt="Paris Retail Award" />
         </div>
-        <p class="trophy-card__label">Paris Retail Award</p>
+        <p class="trophy-card__label" data-i18n="idx.awards.pra">Paris Retail Award</p>
       </a>
       <a class="trophy-card" style="--rot:3.5deg" href="https://kpmg.com/fr/fr/media/press-releases/2024/07/laureats-challenge-start-me-up.html" target="_blank" rel="noopener">
         <div class="trophy-card__shine"></div>
         <div class="trophy-card__img-wrap">
           <img src="img/récompenses/start up me.png" alt="Start-up Me" />
         </div>
-        <p class="trophy-card__label">Start-up Me</p>
+        <p class="trophy-card__label" data-i18n="idx.awards.sum">Start-up Me</p>
       </a>
     </div>
   </div>
@@ -730,7 +743,7 @@ html, body { background: #FFFFFF !important; }
 <!-- ============ CTA FINAL ============ -->
 <section class="section glow-wrap cta-final" id="demo" data-parallax>
   <div class="container center">
-    <h2 class="section-title reveal" data-split-scroll style="max-width:780px;margin-inline:auto;">
+    <h2 class="section-title reveal" data-split-scroll style="max-width:780px;margin-inline:auto;" data-i18n="idx.cta.title">
       <span class="split-line"><span class="split-inner">Prêt à voir ce que vos concurrents</span></span>
       <span class="split-line"><span class="split-inner">font <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">mieux</em> que vous ?</span></span>
     </h2>
@@ -744,28 +757,28 @@ html, body { background: #FFFFFF !important; }
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="logo"><img src="img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
-        <p class="footer__tag">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
+        <p class="footer__tag" data-i18n="footer.tagline">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
       </div>
       <div class="footer__col">
-        <h4>La plateforme</h4>
-        <a href="le-bon-catalogue.html">Le bon produit</a>
-        <a href="le-bon-prix.html">Le bon prix</a>
-        <a href="bien-presente.html">Bien présenté</a>
+        <h4 data-i18n="footer.platform">La plateforme</h4>
+        <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+        <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+        <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
       </div>
       <div class="footer__col">
-        <h4>Ressources</h4>
-        <a href="cas-clients.html">Cas clients</a>
-        <a href="lequipe.html">L'équipe</a>
-        <a href="contact.html">Contact</a>
+        <h4 data-i18n="footer.resources">Ressources</h4>
+        <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+        <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="footer__col">
-        <h4>Contact</h4>
-        <a href="contact.html">Demander une démo</a>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="contact.html" data-i18n="footer.demo">Demander une démo</a>
         <a href="mailto:contact@nricher.io">contact@nricher.io</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
+      <span data-i18n="footer.copyright">© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
       <a href="https://www.linkedin.com/company/nricher/?viewAsMember=true" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"/></svg></a>
     </div>
   </div>
@@ -775,6 +788,8 @@ html, body { background: #FFFFFF !important; }
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/lang-switcher.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

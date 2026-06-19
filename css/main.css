@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    nricher â€” main.css v2
    Dark-first Â· Clash Display + Satoshi Â· Motion-rich
    ============================================================ */
@@ -1844,3 +1844,74 @@ body.modal-open { overflow: hidden; }
   .modal__content { padding: 20px 18px 26px; }
   .modal__title { font-size: 1.1rem; }
 }
+
+/* ============================================================
+   Language Switcher & Translation Support
+   ============================================================ */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  padding: 6px 12px;
+  height: 38px;
+  transition: all 0.3s var(--ease-out);
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+}
+
+body:not(.pointer-coarse) .lang-switch {
+  cursor: none;
+}
+
+.lang-switch:hover {
+  border-color: rgba(46,88,202,0.3);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(46,88,202,0.06);
+  transform: translateY(-1px);
+}
+
+.lang-switch__flag {
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.35;
+  transition: all 0.3s var(--ease-out);
+  display: inline-block;
+  user-select: none;
+}
+
+.lang-switch__flag.is-active {
+  opacity: 1;
+  transform: scale(1.15);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.lang-switch__flag:hover:not(.is-active) {
+  opacity: 0.75;
+  transform: scale(1.05);
+}
+
+.mobile-menu .lang-switch {
+  margin-top: 24px;
+  align-self: center;
+}
+
+/* Pipeline Label Styles */
+.ef-arrow__label, .tf-arrow__label, .cf-arrow__label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ef-arrow__label, .tf-arrow__label, .cf-arrow__label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 4px;
+  }
+}
+

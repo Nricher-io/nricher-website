@@ -19,8 +19,7 @@
     "stats": [
       {"value": "418,794", "label": "articles analysés (+2,1% vs S24)"},
       {"value": "200,939", "label": "articles matchés concurrence"},
-      {"value": "103", "delta": "up", "label": "Price Index global (S24 : 103)"},
-      {"value": "13", "label": "enseignes suivies en temps réel"}
+      {"value": "103", "delta": "up", "label": "Price Index global (S24 : 103)"}
     ]
   },
 
@@ -92,7 +91,7 @@
     "figures": [
       {"value": "+7%", "label": "d'écart vs la meilleure offre du marché (3P)"},
       {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
-      {"value": "418k", "label": "articles suivis en continu, 13 enseignes"}
+      {"value": "418k", "label": "articles suivis en continu"}
     ]
   }
 }
