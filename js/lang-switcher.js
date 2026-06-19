@@ -25,12 +25,46 @@
     // 2. Apply saved/default language
     applyLanguage(lang);
 
-    // 3. Setup click listeners on lang switcher buttons (using event delegation)
+    // 3. Setup click listeners (toggle dropdown + pick an option), event delegation
     document.addEventListener('click', function (e) {
-      var flag = e.target.closest('.lang-switch__flag');
-      if (flag) {
-        var selectedLang = flag.getAttribute('data-lang');
-        applyLanguage(selectedLang);
+      var toggleBtn = e.target.closest('.lang-switch__btn');
+      if (toggleBtn) {
+        var wrap = toggleBtn.closest('.lang-switch');
+        var wasOpen = wrap.classList.contains('is-open');
+        document.querySelectorAll('.lang-switch.is-open').forEach(function (w) { w.classList.remove('is-open'); });
+        if (!wasOpen) {
+          wrap.classList.add('is-open');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+        return;
+      }
+
+      var option = e.target.closest('.lang-switch__option');
+      if (option) {
+        applyLanguage(option.getAttribute('data-lang'));
+        document.querySelectorAll('.lang-switch.is-open').forEach(function (w) {
+          w.classList.remove('is-open');
+          var btn = w.querySelector('.lang-switch__btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+        return;
+      }
+
+      // Click outside any lang-switch: close all open menus
+      if (!e.target.closest('.lang-switch')) {
+        document.querySelectorAll('.lang-switch.is-open').forEach(function (w) {
+          w.classList.remove('is-open');
+          var btn = w.querySelector('.lang-switch__btn');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.lang-switch.is-open').forEach(function (w) { w.classList.remove('is-open'); });
       }
     });
   }
@@ -91,14 +125,10 @@
       }
     });
 
-    // 4. Update the active class of switcher flags across the DOM
-    document.querySelectorAll('.lang-switch').forEach(function (btn) {
-      btn.querySelectorAll('.lang-switch__flag').forEach(function (flag) {
-        if (flag.getAttribute('data-lang') === l) {
-          flag.classList.add('is-active');
-        } else {
-          flag.classList.remove('is-active');
-        }
+    // 4. Update the active class of switcher options across the DOM
+    document.querySelectorAll('.lang-switch').forEach(function (wrap) {
+      wrap.querySelectorAll('.lang-switch__option').forEach(function (opt) {
+        opt.classList.toggle('is-active', opt.getAttribute('data-lang') === l);
       });
     });
 
