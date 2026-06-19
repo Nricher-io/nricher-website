@@ -76,11 +76,19 @@
       var companies = window.NRICHER_COMPANIES || [];
       var MAX_RESULTS = 6;
 
+      function positionDropdown() {
+        var rect = form.getBoundingClientRect();
+        dropdown.style.left = rect.left + 'px';
+        dropdown.style.top = (rect.bottom + 8) + 'px';
+        dropdown.style.width = rect.width + 'px';
+      }
+
       function closeDropdown() { dropdown.classList.remove('is-open'); dropdown.innerHTML = ''; }
 
       function renderDropdown(query) {
         var q = query.trim().toLowerCase();
         if (!q) { closeDropdown(); return; }
+        positionDropdown();
 
         var matches = companies.filter(function (c) { return c.name.toLowerCase().indexOf(q) !== -1; });
 
@@ -109,6 +117,8 @@
 
       input.addEventListener('input', function () { renderDropdown(input.value); });
       input.addEventListener('focus', function () { if (input.value.trim()) renderDropdown(input.value); });
+      window.addEventListener('scroll', function () { if (dropdown.classList.contains('is-open')) positionDropdown(); }, { passive: true });
+      window.addEventListener('resize', function () { if (dropdown.classList.contains('is-open')) positionDropdown(); });
 
       dropdown.addEventListener('click', function (e) {
         var item = e.target.closest('.hero__search-dropdown__item');
