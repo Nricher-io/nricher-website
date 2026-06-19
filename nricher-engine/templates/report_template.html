@@ -232,7 +232,6 @@
   .kpi-report .chart-tooltip.is-visible{opacity:1; transform:translate(-50%, calc(-100% - 18px));}
 
   .kpi-report .cbar-row--you{background:rgba(96,239,190,0.07); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
-  .kpi-report .cbar-row--you .cbar-name::after{content:" (vous)"; color:var(--mint); font-weight:500; font-size:0.82em;}
 </style>
 </head>
 <body data-screen-label="Weekly KPIs">
@@ -676,7 +675,7 @@
     <div class="cbar-list">
       {% for s in sellers_stacked %}
       <div class="cbar-row {{ 'cbar-row--you' if s.name == meta.company_name }}">
-        <div><div class="cbar-name">{{ s.name }}</div></div>
+        <div><div class="cbar-name">{{ s.name }}{% if s.name == meta.company_name %} <span style="color:var(--good);font-weight:700;">(vous)</span>{% endif %}</div></div>
         <div class="cbar-track">
           <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);">{% if s.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ s.lower_pct }}%</span>{% endif %}</div>
           <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);">{% if s.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ s.equal_pct }}%</span>{% endif %}</div>

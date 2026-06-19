@@ -232,7 +232,6 @@
   .kpi-report .chart-tooltip.is-visible{opacity:1; transform:translate(-50%, calc(-100% - 18px));}
 
   .kpi-report .cbar-row--you{background:rgba(96,239,190,0.07); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
-  .kpi-report .cbar-row--you .cbar-name::after{content:" (vous)"; color:var(--mint); font-weight:500; font-size:0.82em;}
 </style>
 </head>
 <body data-screen-label="Weekly KPIs">
@@ -1128,7 +1127,7 @@
       </div>
       
       <div class="cbar-row cbar-row--you">
-        <div><div class="cbar-name">DemoStore</div></div>
+        <div><div class="cbar-name">DemoStore <span style="color:var(--good);font-weight:700;">(vous)</span></div></div>
         <div class="cbar-track">
           <div data-tip="DemoStore — moins cher : 21%" style="width:21%;background:var(--good);"><span class="cbar-seg__pct">21%</span></div>
           <div data-tip="DemoStore — aligné : 44%" style="width:44%;background:var(--blue);"><span class="cbar-seg__pct">44%</span></div>
