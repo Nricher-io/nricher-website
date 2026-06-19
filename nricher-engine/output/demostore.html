@@ -28,6 +28,14 @@
   .livedot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(96,239,190,0.6);animation:rb-pulse 2.2s infinite;}
   @keyframes rb-pulse{0%{box-shadow:0 0 0 0 rgba(96,239,190,.55);}70%{box-shadow:0 0 0 7px rgba(96,239,190,0);}100%{box-shadow:0 0 0 0 rgba(96,239,190,0);}}
 
+  .toc-bar{position:sticky;top:144px;z-index:45;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .toc-bar__inner{display:flex;gap:4px;overflow-x:auto;height:46px;align-items:center;scrollbar-width:none;}
+  .toc-bar__inner::-webkit-scrollbar{display:none;}
+  .toc-bar__link{flex-shrink:0;font-family:var(--font-body);font-weight:600;font-size:0.82rem;color:var(--text-2);padding:8px 14px;border-radius:var(--r-pill);white-space:nowrap;transition:background .2s ease, color .2s ease;}
+  .toc-bar__link:hover{background:rgba(96,239,190,0.08);color:var(--text);}
+  .toc-bar__link.is-active{background:rgba(46,88,202,0.1);color:var(--blue);}
+  .kpi-report .section[id]{scroll-margin-top:198px;}
+
   /* Contenu du rapport — scope isole pour ne jamais entrer en conflit avec les classes du site (.hero, .section, .container, .btn, .tag, .eyebrow...) */
   .kpi-report{ --kr-container: 1180px; }
   .kpi-report .container{max-width:var(--kr-container);margin-inline:auto;padding-inline:24px;width:100%;}
@@ -53,9 +61,6 @@
   .kpi-report .section-sub{color:var(--muted);font-size:1rem;margin-top:10px;max-width:480px;line-height:1.6;}
   .kpi-report .tag{font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;letter-spacing:0.05em;text-transform:uppercase;}
   .kpi-report .tag--watch{background:rgba(46,88,202,0.12);color:var(--blue);}
-  .kpi-report .tag--lwh{background:var(--card-2);}
-  .kpi-report .tag--lwh b{font-weight:700;}
-  .kpi-report .tag--lwh .sep{opacity:0.4;color:var(--muted);margin-inline:1px;}
   .kpi-report hr.div{border:none;border-top:1px solid var(--border);margin:0;}
   .kpi-report .kpi-grid-tag{display:flex;justify-content:flex-end;margin-bottom:14px;}
 
@@ -293,6 +298,19 @@
   </div>
 </div>
 
+<nav class="toc-bar" aria-label="Sommaire du rapport">
+  <div class="container toc-bar__inner">
+    <a href="#price-index" class="toc-bar__link">Price Index</a>
+    <a href="#tendance" class="toc-bar__link">Tendance</a>
+    <a href="#priorite" class="toc-bar__link">Priorité</a>
+    <a href="#vue-ensemble" class="toc-bar__link">Vue d'ensemble</a>
+    <a href="#concurrents" class="toc-bar__link">Concurrents</a>
+    <a href="#vendeurs" class="toc-bar__link">Vendeurs</a>
+    <a href="#categories" class="toc-bar__link">Catégories</a>
+    <a href="#verdict" class="toc-bar__link">Conclusion</a>
+  </div>
+</nav>
+
 <div class="kpi-report">
 
 <header class="hero">
@@ -329,7 +347,7 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="price-index">
   <div class="container">
     <div class="section-header">
       <div>
@@ -425,98 +443,7 @@
 
 <hr class="div">
 
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-title">Price index by article — par priorité commerciale</div>
-        <div class="section-sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
-      </div>
-      <span class="tag tag--watch">My prio</span>
-    </div>
-
-    <div class="prio-table-wrap">
-      <table class="prio-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th><span class="prio-th-dot" style="background:var(--blue);"></span>Top sales</th>
-            <th><span class="prio-th-dot" style="background:var(--mint);"></span>Middle sales</th>
-            <th><span class="prio-th-dot" style="background:#c98c1a;"></span>Low sales</th>
-          </tr>
-        </thead>
-        <tbody>
-          
-          
-          <tr>
-            <td class="wk">S24</td>
-            
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S24 : 106">
-                106
-                
-              </span>
-            </td>
-            
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S24 : 109">
-                109
-                
-              </span>
-            </td>
-            
-            
-            <td>
-              <span class="prio-chip good" data-tip="Low sales S24 : 98">
-                98
-                
-              </span>
-            </td>
-            
-          </tr>
-          
-          
-          <tr>
-            <td class="wk">S25</td>
-            
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S25 : 103">
-                103
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S25 : 104">
-                104
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            
-            <td>
-              <span class="prio-chip good" data-tip="Low sales S25 : 96">
-                96
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-          </tr>
-          
-        </tbody>
-      </table>
-    </div>
-    <div class="note">Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style="color:var(--good);">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine.</div>
-  </div>
-</section>
-
-<hr class="div">
-
-<section class="section">
+<section class="section" id="tendance">
   <div class="container">
     <div class="section-header">
       <div>
@@ -633,7 +560,98 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="priorite">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Price index by article — par priorité commerciale</div>
+        <div class="section-sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
+      </div>
+      <span class="tag tag--watch">My prio</span>
+    </div>
+
+    <div class="prio-table-wrap">
+      <table class="prio-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th><span class="prio-th-dot" style="background:var(--blue);"></span>Top sales</th>
+            <th><span class="prio-th-dot" style="background:var(--mint);"></span>Middle sales</th>
+            <th><span class="prio-th-dot" style="background:#c98c1a;"></span>Low sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+          <tr>
+            <td class="wk">S24</td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S24 : 106">
+                106
+                
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S24 : 109">
+                109
+                
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip good" data-tip="Low sales S24 : 98">
+                98
+                
+              </span>
+            </td>
+            
+          </tr>
+          
+          
+          <tr>
+            <td class="wk">S25</td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S25 : 103">
+                103
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S25 : 104">
+                104
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip good" data-tip="Low sales S25 : 96">
+                96
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="note">Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style="color:var(--good);">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine.</div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section" id="vue-ensemble">
   <div class="container">
     <div class="section-header">
       <div>
@@ -751,14 +769,19 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="concurrents">
   <div class="container">
     <div class="section-header">
       <div>
         <div class="section-title">Face à 8 concurrents</div>
         <div class="section-sub">Pour chaque enseigne : part des articles moins chers, alignés, plus chers — et son propre indice prix.</div>
       </div>
-      <span class="tag tag--lwh"><b style="color:var(--good);">Lower</b><span class="sep">·</span><b style="color:var(--blue);">Equal</b><span class="sep">·</span><b style="color:var(--bad);">Higher</b></span>
+    </div>
+
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
     <div class="cbar-list">
@@ -962,7 +985,7 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="vendeurs">
   <div class="container">
     <div class="section-header">
       <div>
@@ -1170,7 +1193,7 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="categories">
   <div class="container">
     <div class="section-header">
       <div>
@@ -1331,7 +1354,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="verdict">
   <div class="container">
     <div class="verdict">
       <div class="verdict__filet" aria-hidden="true"></div>
@@ -1391,6 +1414,24 @@
 </footer>
 
 <script>
+(function () {
+  var tocLinks = document.querySelectorAll('.toc-bar__link');
+  var sections = Array.prototype.map.call(tocLinks, function (a) {
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  if (sections.length && window.IntersectionObserver) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = '#' + entry.target.id;
+        tocLinks.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === id);
+        });
+      });
+    }, { rootMargin: '-200px 0px -70% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+})();
 (function () {
   document.querySelectorAll('.linechart-wrap').forEach(function (wrap) {
     var tip = wrap.querySelector('.chart-tooltip');
