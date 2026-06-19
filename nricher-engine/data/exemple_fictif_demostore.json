@@ -26,11 +26,9 @@
     "analysed": "312 480",
     "matched": "151 220",
     "gauges": [
-      {"value": 100, "delta_pct": "0%",  "severity": "good", "label": "PI Price All",      "ref_prev": "S24 : 100"},
-      {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "PI Price Min",      "ref_prev": "S24 : 104"},
-      {"value": 0,   "delta_pct": "—",   "severity": "good", "label": "1P Price Min",      "ref_prev": "S24 : 0"},
-      {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "3P Price Min",      "ref_prev": "S24 : 108"},
-      {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "3P same min",       "ref_prev": "S24 : 100"}
+      {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "PI Price All", "ref_prev": "S24 : 104", "desc": "plus cher sur l'ensemble des offres concurrentes"},
+      {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "3P Price Min", "ref_prev": "S24 : 108", "desc": "plus cher en moyenne que la meilleure offre du marché"},
+      {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "3P same min",  "ref_prev": "S24 : 100", "desc": "plus chers entre vendeurs identiques vs concurrents"}
     ]
   },
 

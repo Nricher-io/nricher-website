@@ -58,33 +58,43 @@
   .kpi-report .pi-meta__row{font-size:0.82rem;color:var(--muted);display:flex;align-items:center;gap:8px;white-space:nowrap;}
   .kpi-report .pi-meta__row .dot{opacity:0.5;}
 
-  .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .kpi-report .kpi-grid--5{grid-template-columns:repeat(5,1fr);}
-  .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
-  .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-brand);}
-  .kpi-report .kpi:hover{transform:translateY(-5px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
-  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
-  .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,4vw,2.8rem);letter-spacing:-0.04em;line-height:1;}
+  .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
+  .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);}
+  .kpi-report .kpi:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
+  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:center;}
+  .kpi-report .kpi__dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .kpi-report .kpi__dot.bad{background:var(--bad);box-shadow:0 0 0 4px var(--bad-bg);}
+  .kpi-report .kpi__dot.warn{background:#c98c1a;box-shadow:0 0 0 4px var(--warn-bg);}
+  .kpi-report .kpi__dot.good{background:var(--good);box-shadow:0 0 0 4px var(--good-bg);}
+  .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1;margin-top:18px;}
   .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);}
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
   .kpi-report .kpi__chip.bad{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .kpi__chip.warn{background:var(--warn-bg);color:#c98c1a;}
   .kpi-report .kpi__chip.good{background:var(--good-bg);color:var(--good);}
-  .kpi-report .kpi__label{margin-top:16px;font-size:0.95rem;color:var(--text-2);line-height:1.5;}
-  .kpi-report .kpi__bar{height:6px;background:var(--card-2);border-radius:var(--r-pill);margin-top:18px;overflow:hidden;}
-  .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);}
+  .kpi-report .kpi__label{margin-top:10px;font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
+  .kpi-report .kpi__desc{margin-top:6px;font-size:0.85rem;color:var(--muted);line-height:1.5;min-height:2.6em;}
+  .kpi-report .kpi__bar{height:7px;background:var(--card-2);border-radius:var(--r-pill);margin-top:20px;overflow:hidden;}
+  .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);transition:width .6s var(--ease-out);}
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;color:var(--mint);opacity:0.08;}
 
-  .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);}
+  .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.02);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
   .kpi-report table.prio-table thead tr{background:var(--text);}
   .kpi-report table.prio-table th{color:#9CA3B0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;text-align:center;padding:16px 18px;}
   .kpi-report table.prio-table th:first-child{text-align:left;}
-  .kpi-report table.prio-table td{padding:22px 18px;text-align:center;border-bottom:1px solid var(--card-2);}
+  .kpi-report .prio-th-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:middle;}
+  .kpi-report table.prio-table td{padding:20px 18px;text-align:center;border-bottom:1px solid var(--card-2);}
+  .kpi-report table.prio-table tbody tr:hover{background:rgba(96,239,190,0.04);}
   .kpi-report table.prio-table tr:last-child td{border-bottom:none;}
   .kpi-report table.prio-table td.wk{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
-  .kpi-report .prio-val{font-family:var(--font-display);font-weight:700;font-size:1.6rem;cursor:default;}
+  .kpi-report .prio-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-weight:700;font-size:1.15rem;padding:8px 16px;border-radius:var(--r-pill);cursor:default;}
+  .kpi-report .prio-chip.bad{background:var(--bad-bg);color:var(--bad);}
+  .kpi-report .prio-chip.good{background:var(--good-bg);color:var(--good);}
+  .kpi-report .prio-chip.neu{background:var(--card-2);color:var(--text-2);}
+  .kpi-report .prio-chip__d{font-size:0.7rem;opacity:0.75;}
   .kpi-report .note{margin-top:20px;font-size:0.95rem;color:var(--text-2);max-width:680px;line-height:1.6;}
   .kpi-report .note strong{color:var(--text);}
 
@@ -98,14 +108,18 @@
   .kpi-report .legend-dot{width:9px;height:9px;border-radius:50%;}
   .kpi-report .stack-row{display:grid;grid-template-columns:58px 1fr;align-items:center;gap:14px;margin-bottom:10px;}
   .kpi-report .stack-row .wk{font-size:11px;color:var(--muted);font-weight:700;}
-  .kpi-report .stack-bar{height:32px;border-radius:8px;overflow:hidden;display:flex;width:100%;}
+  .kpi-report .stack-bar{height:32px;border-radius:8px;overflow:visible;display:flex;width:100%;background:var(--card-2);}
   .kpi-report .stack-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;}
+  .kpi-report .stack-seg:first-child{border-radius:8px 0 0 8px;}
+  .kpi-report .stack-seg:last-child{border-radius:0 8px 8px 0;}
 
   .kpi-report .cbar-list{display:flex;flex-direction:column;gap:13px;}
   .kpi-report .cbar-row{display:grid;grid-template-columns:150px 1fr 90px;align-items:center;gap:16px;}
   .kpi-report .cbar-name{font-size:0.92rem;font-weight:700;}
   .kpi-report .cbar-meta{font-size:11px;color:var(--muted);}
-  .kpi-report .cbar-track{height:20px;border-radius:7px;display:flex;overflow:hidden;background:var(--card-2);}
+  .kpi-report .cbar-track{height:20px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2);}
+  .kpi-report .cbar-track > div:first-child{border-radius:7px 0 0 7px;}
+  .kpi-report .cbar-track > div:last-child{border-radius:0 7px 7px 0;}
   .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
 
   .kpi-report .sellers-wrap{max-height:430px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--card);}
@@ -140,7 +154,6 @@
 
   @media (max-width:880px){
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
-    .kpi-report .kpi-grid--5{grid-template-columns:1fr 1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
     .kpi-report .grid-2{grid-template-columns:1fr;}
     .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
@@ -151,7 +164,6 @@
   @media (max-width:560px){
     .report-bar__inner{flex-direction:column;align-items:flex-start;height:auto;padding-block:14px;gap:8px;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
-    .kpi-report .kpi-grid--5{grid-template-columns:1fr;}
     .kpi-report table.prio-table th, .kpi-report table.prio-table td{padding:12px 8px;}
   }
 
@@ -172,10 +184,8 @@
   .kpi-report [data-tip]:hover::after, .kpi-report [data-tip]:hover::before{opacity:1; transform:translateX(-50%) translateY(0) scale(1);}
   .kpi-report [data-tip]:hover::before{transform:translateX(-50%) translateY(0);}
 
-  .kpi-report .stack-seg, .kpi-report .cbar-track > div{transition:filter .2s ease, transform .2s ease;}
-  .kpi-report .stack-seg:hover, .kpi-report .cbar-track > div:hover{filter:brightness(1.12); transform:scaleY(1.18);}
-  .kpi-report .cbar-track{overflow:visible;}
-  .kpi-report .cbar-track > div{position:relative;}
+  .kpi-report .stack-seg, .kpi-report .cbar-track > div{transition:filter .2s ease, transform .2s ease; position:relative;}
+  .kpi-report .stack-seg:hover, .kpi-report .cbar-track > div:hover{filter:brightness(1.12); transform:scaleY(1.15); z-index:5;}
 
   .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
   .kpi-report .chart-pt:hover{r:6.5;}
@@ -296,59 +306,43 @@
       </div>
     </div>
 
-    <div class="kpi-grid kpi-grid--5">
+    <div class="kpi-grid">
       
-      <div class="kpi" data-tip="PI Price All : 100 (0% vs S24 : 100)">
-        <span class="kpi__ghost">100</span>
-        <div class="kpi-top">
-          <div class="kpi__num good">100</div>
-          <div class="kpi__chip good">0%</div>
-        </div>
-        <div class="kpi__label">PI Price All</div>
-        <div class="kpi__bar"><div style="width:43.0%;background:var(--good);"></div></div>
-        <div class="kpi__ref"><span>90</span><span>S24 : 100</span><span>120</span></div>
-      </div>
-      
-      <div class="kpi" data-tip="PI Price Min : 101 (+1% vs S24 : 104)">
+      <div class="kpi" data-tip="+1% vs S24 : 104">
         <span class="kpi__ghost">101</span>
         <div class="kpi-top">
-          <div class="kpi__num warn">101</div>
+          <span class="kpi__dot warn"></span>
           <div class="kpi__chip warn">+1%</div>
         </div>
-        <div class="kpi__label">PI Price Min</div>
+        <div class="kpi__num warn">101</div>
+        <div class="kpi__label">PI Price All</div>
+        <div class="kpi__desc">plus cher sur l'ensemble des offres concurrentes</div>
         <div class="kpi__bar"><div style="width:46.0%;background:var(--warn);"></div></div>
         <div class="kpi__ref"><span>90</span><span>S24 : 104</span><span>120</span></div>
       </div>
       
-      <div class="kpi" data-tip="1P Price Min : 0 (— vs S24 : 0)">
-        <span class="kpi__ghost">0</span>
-        <div class="kpi-top">
-          <div class="kpi__num good">0</div>
-          <div class="kpi__chip good">—</div>
-        </div>
-        <div class="kpi__label">1P Price Min</div>
-        <div class="kpi__bar"><div style="width:-243.0%;background:var(--good);"></div></div>
-        <div class="kpi__ref"><span>90</span><span>S24 : 0</span><span>120</span></div>
-      </div>
-      
-      <div class="kpi" data-tip="3P Price Min : 105 (+5% vs S24 : 108)">
+      <div class="kpi" data-tip="+5% vs S24 : 108">
         <span class="kpi__ghost">105</span>
         <div class="kpi-top">
-          <div class="kpi__num bad">105</div>
+          <span class="kpi__dot bad"></span>
           <div class="kpi__chip bad">+5%</div>
         </div>
+        <div class="kpi__num bad">105</div>
         <div class="kpi__label">3P Price Min</div>
+        <div class="kpi__desc">plus cher en moyenne que la meilleure offre du marché</div>
         <div class="kpi__bar"><div style="width:57.0%;background:var(--bad);"></div></div>
         <div class="kpi__ref"><span>90</span><span>S24 : 108</span><span>120</span></div>
       </div>
       
-      <div class="kpi" data-tip="3P same min : 99 (-1% vs S24 : 100)">
+      <div class="kpi" data-tip="-1% vs S24 : 100">
         <span class="kpi__ghost">99</span>
         <div class="kpi-top">
-          <div class="kpi__num good">99</div>
+          <span class="kpi__dot good"></span>
           <div class="kpi__chip good">-1%</div>
         </div>
+        <div class="kpi__num good">99</div>
         <div class="kpi__label">3P same min</div>
+        <div class="kpi__desc">plus chers entre vendeurs identiques vs concurrents</div>
         <div class="kpi__bar"><div style="width:40.0%;background:var(--good);"></div></div>
         <div class="kpi__ref"><span>90</span><span>S24 : 100</span><span>120</span></div>
       </div>
@@ -372,22 +366,73 @@
     <div class="prio-table-wrap">
       <table class="prio-table">
         <thead>
-          <tr><th></th><th>Top sales</th><th>Middle sales</th><th>Low sales</th></tr>
+          <tr>
+            <th></th>
+            <th><span class="prio-th-dot" style="background:var(--blue);"></span>Top sales</th>
+            <th><span class="prio-th-dot" style="background:var(--mint);"></span>Middle sales</th>
+            <th><span class="prio-th-dot" style="background:#c98c1a;"></span>Low sales</th>
+          </tr>
         </thead>
         <tbody>
           
+          
           <tr>
             <td class="wk">S24</td>
-            <td><span class="prio-val" data-tip="Top sales S24 : 106" style="color:var(--bad);">106</span></td>
-            <td><span class="prio-val" data-tip="Middle sales S24 : 109" style="color:var(--bad);">109</span></td>
-            <td><span class="prio-val" data-tip="Low sales S24 : 98" style="color:var(--good);">98</span></td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S24 : 106">
+                106
+                
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S24 : 109">
+                109
+                
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip good" data-tip="Low sales S24 : 98">
+                98
+                
+              </span>
+            </td>
+            
           </tr>
+          
           
           <tr>
             <td class="wk">S25</td>
-            <td><span class="prio-val" data-tip="Top sales S25 : 103" style="color:var(--bad);">103</span></td>
-            <td><span class="prio-val" data-tip="Middle sales S25 : 104" style="color:var(--bad);">104</span></td>
-            <td><span class="prio-val" data-tip="Low sales S25 : 96" style="color:var(--good);">96</span></td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S25 : 103">
+                103
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S25 : 104">
+                104
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            
+            <td>
+              <span class="prio-chip good" data-tip="Low sales S25 : 96">
+                96
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
           </tr>
           
         </tbody>
