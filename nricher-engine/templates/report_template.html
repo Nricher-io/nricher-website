@@ -28,12 +28,14 @@
   .livedot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(96,239,190,0.6);animation:rb-pulse 2.2s infinite;}
   @keyframes rb-pulse{0%{box-shadow:0 0 0 0 rgba(96,239,190,.55);}70%{box-shadow:0 0 0 7px rgba(96,239,190,0);}100%{box-shadow:0 0 0 0 rgba(96,239,190,0);}}
 
-  .toc-bar{position:relative;z-index:45;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-  .toc-bar__inner{display:flex;gap:4px;overflow-x:auto;height:46px;align-items:center;scrollbar-width:none;}
-  .toc-bar__inner::-webkit-scrollbar{display:none;}
+  .toc-bar{position:sticky;top:80px;z-index:45;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .toc-bar__inner{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px;}
+  .toc-bar__links{display:flex;gap:4px;overflow-x:auto;align-items:center;scrollbar-width:none;min-width:0;}
+  .toc-bar__links::-webkit-scrollbar{display:none;}
   .toc-bar__link{flex-shrink:0;font-family:var(--font-body);font-weight:600;font-size:0.82rem;color:var(--text-2);padding:8px 14px;border-radius:var(--r-pill);white-space:nowrap;transition:background .2s ease, color .2s ease;}
   .toc-bar__link:hover{background:rgba(96,239,190,0.08);color:var(--text);}
   .toc-bar__link.is-active{background:rgba(46,88,202,0.1);color:var(--blue);}
+  .toc-bar__brand{flex-shrink:0;font-family:var(--font-display);font-weight:700;font-size:0.92rem;white-space:nowrap;letter-spacing:-0.01em;}
   .kpi-report .section[id]{scroll-margin-top:96px;}
 
   /* Contenu du rapport — scope isole pour ne jamais entrer en conflit avec les classes du site (.hero, .section, .container, .btn, .tag, .eyebrow...) */
@@ -126,9 +128,7 @@
   .kpi-report .cbar-track > div:last-child{border-radius:0 7px 7px 0;}
   .kpi-report .cbar-track > div{display:flex;align-items:center;justify-content:center;}
   .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
-  .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
-  .kpi-report .cbar-pi--blue{color:var(--blue);white-space:nowrap;}
-  .kpi-report .cbar-pi--blue .sep{opacity:0.5;}
+  .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;white-space:nowrap;}
   .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
   .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
   .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
@@ -299,14 +299,17 @@
 
 <nav class="toc-bar" aria-label="Sommaire du rapport">
   <div class="container toc-bar__inner">
-    <a href="#price-index" class="toc-bar__link">Price Index</a>
-    <a href="#tendance" class="toc-bar__link">Tendance</a>
-    <a href="#priorite" class="toc-bar__link">Priorité</a>
-    <a href="#vue-ensemble" class="toc-bar__link">Vue d'ensemble</a>
-    <a href="#concurrents" class="toc-bar__link">Concurrents</a>
-    <a href="#vendeurs" class="toc-bar__link">Vendeurs</a>
-    <a href="#categories" class="toc-bar__link">Catégories</a>
-    <a href="#verdict" class="toc-bar__link">Conclusion</a>
+    <div class="toc-bar__links">
+      <a href="#price-index" class="toc-bar__link">Price Index</a>
+      <a href="#tendance" class="toc-bar__link">Tendance</a>
+      <a href="#priorite" class="toc-bar__link">Priorité</a>
+      <a href="#vue-ensemble" class="toc-bar__link">Vue d'ensemble</a>
+      <a href="#concurrents" class="toc-bar__link">Concurrents</a>
+      <a href="#vendeurs" class="toc-bar__link">Vendeurs</a>
+      <a href="#categories" class="toc-bar__link">Catégories</a>
+      <a href="#verdict" class="toc-bar__link">Conclusion</a>
+    </div>
+    <div class="toc-bar__brand" style="color:{{ meta.company_color }};">{{ meta.company_name }}</div>
   </div>
 </nav>
 
@@ -714,7 +717,7 @@
           <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);">{% if cat.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.equal_pct }}%</span>{% endif %}</div>
           <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);">{% if cat.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.higher_pct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi cbar-pi--blue">{{ cat.count }} <span class="sep">·</span> {{ cat.pi }}</div>
+        <div class="cbar-pi"><span style="color:var(--muted);">{{ cat.count }}</span> <span class="sep" style="color:var(--muted);">·</span> <span style="color:{{ 'var(--good)' if cat.pi < 101 else ('var(--bad)' if cat.pi > 104 else '#c98c1a') }};">{{ cat.pi }}</span></div>
       </div>
       {% endfor %}
     </div>
