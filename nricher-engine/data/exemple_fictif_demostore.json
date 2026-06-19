@@ -21,17 +21,24 @@
     ]
   },
 
-  "price_index_gauges": [
-    {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "plus cher sur l'ensemble des offres concurrentes (IP all)", "ref_prev": "S24 : 104"},
-    {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "plus cher en moyenne que la meilleure offre du marché (3P, price min)", "ref_prev": "S24 : 108"},
-    {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "plus chers entre vendeurs identiques vs concurrents (3P, same min)", "ref_prev": "S24 : 100"}
-  ],
+  "price_index_gauges": {
+    "updated_label": "15/06 09:38",
+    "analysed": "312 480",
+    "matched": "151 220",
+    "gauges": [
+      {"value": 100, "delta_pct": "0%",  "severity": "good", "label": "PI Price All",      "ref_prev": "S24 : 100"},
+      {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "PI Price Min",      "ref_prev": "S24 : 104"},
+      {"value": 0,   "delta_pct": "—",   "severity": "good", "label": "1P Price Min",      "ref_prev": "S24 : 0"},
+      {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "3P Price Min",      "ref_prev": "S24 : 108"},
+      {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "3P same min",       "ref_prev": "S24 : 100"}
+    ]
+  },
 
-  "priority": {
-    "week_prev_label": "Semaine 24",
-    "week_curr_label": "Semaine 25",
-    "top_prio": {"prev": 106, "curr": 103, "delta_pts": -3},
-    "mid_prio": {"prev": 109, "curr": 104, "delta_pts": -5},
+  "priority_table": {
+    "rows": [
+      {"week": "S24", "top": 106, "middle": 109, "low": 98},
+      {"week": "S25", "top": 103, "middle": 104, "low": 96}
+    ],
     "note": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--good);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine."
   },
 
@@ -50,14 +57,55 @@
     {"name": "Concurrent A", "matched_k": "14.2k", "lower_pct": 38, "equal_pct": 30, "higher_pct": 32, "pi": 101},
     {"name": "Concurrent B", "matched_k": "22.8k", "lower_pct": 19, "equal_pct": 52, "higher_pct": 29, "pi": 104},
     {"name": "Concurrent C", "matched_k": "31.5k", "lower_pct": 27, "equal_pct": 41, "higher_pct": 32, "pi": 99},
-    {"name": "Concurrent D", "matched_k": "9.7k",  "lower_pct": 33, "equal_pct": 35, "higher_pct": 32, "pi": 102}
+    {"name": "Concurrent D", "matched_k": "9.7k",  "lower_pct": 33, "equal_pct": 35, "higher_pct": 32, "pi": 102},
+    {"name": "Concurrent E", "matched_k": "18.4k", "lower_pct": 22, "equal_pct": 58, "higher_pct": 20, "pi": 97},
+    {"name": "Concurrent F", "matched_k": "6.1k",  "lower_pct": 41, "equal_pct": 29, "higher_pct": 30, "pi": 103},
+    {"name": "Concurrent G", "matched_k": "27.9k", "lower_pct": 25, "equal_pct": 44, "higher_pct": 31, "pi": 100},
+    {"name": "Concurrent H", "matched_k": "11.3k", "lower_pct": 30, "equal_pct": 37, "higher_pct": 33, "pi": 105}
+  ],
+
+  "competitors_table": [
+    {"name": "Concurrent A", "articles_all": 205408, "pi_all": 99,  "articles_min": 102011, "pi_min": 96,  "gt100": 24636, "eq100": 51111, "lt100": 26576, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent B", "articles_all": 139776, "pi_all": 99,  "articles_min": 69427,  "pi_min": 103, "gt100": 25254, "eq100": 21848, "lt100": 22305, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent C", "articles_all": 126613, "pi_all": 96,  "articles_min": 69336,  "pi_min": 107, "gt100": 28042, "eq100": 25419, "lt100": 15905, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent D", "articles_all": 136035, "pi_all": 94,  "articles_min": 51702,  "pi_min": 99,  "gt100": 11504, "eq100": 18476, "lt100": 21768, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent E", "articles_all": 71673,  "pi_all": 89,  "articles_min": 40593,  "pi_min": 101, "gt100": 7936,  "eq100": 24476, "lt100": 9948,  "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent F", "articles_all": 88668,  "pi_all": 99,  "articles_min": 31948,  "pi_min": 101, "gt100": 9684,  "eq100": 9224,  "lt100": 13948, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent G", "articles_all": 66848,  "pi_all": 94,  "articles_min": 28483,  "pi_min": 102, "gt100": 13567, "eq100": 11367, "lt100": 11616, "pi_1p_min": 0, "art_1p_min": 0},
+    {"name": "Concurrent H", "articles_all": 68899,  "pi_all": 99,  "articles_min": 27509,  "pi_min": 102, "gt100": 7529,  "eq100": 5478,  "lt100": 9923,  "pi_1p_min": 0, "art_1p_min": 0}
   ],
 
   "sellers_table": [
     {"name": "Vendeur Alpha", "analysed": "18 200", "matched": "9 410", "pi_min": 97,  "gt100": "1 200", "eq100": "7 800", "lt100": "410"},
     {"name": "Vendeur Beta",  "analysed": "12 050", "matched": "6 330", "pi_min": 103, "gt100": "3 100", "eq100": "2 900", "lt100": "330"},
     {"name": "DemoStore",     "analysed": "9 880",  "matched": "4 120", "pi_min": 105, "gt100": "1 900", "eq100": "1 800", "lt100": "420"},
-    {"name": "Vendeur Gamma", "analysed": "7 600",  "matched": "3 905", "pi_min": 100, "gt100": "20",    "eq100": "3 870", "lt100": "15"}
+    {"name": "Vendeur Gamma", "analysed": "7 600",  "matched": "3 905", "pi_min": 100, "gt100": "20",    "eq100": "3 870", "lt100": "15"},
+    {"name": "Vendeur Delta", "analysed": "6 310",  "matched": "3 102", "pi_min": 98,  "gt100": "412",   "eq100": "2 308", "lt100": "382"},
+    {"name": "Vendeur Epsilon","analysed": "5 740", "matched": "2 814", "pi_min": 109, "gt100": "1 740", "eq100": "892",   "lt100": "182"},
+    {"name": "Vendeur Zeta",  "analysed": "4 990",  "matched": "2 220", "pi_min": 96,  "gt100": "140",   "eq100": "1 760", "lt100": "320"},
+    {"name": "Vendeur Eta",   "analysed": "3 815",  "matched": "1 690", "pi_min": 101, "gt100": "560",   "eq100": "980",   "lt100": "150"}
+  ],
+
+  "sellers_stacked": [
+    {"name": "Vendeur Alpha",   "lower_pct": 25, "equal_pct": 56, "higher_pct": 19, "pi": 94},
+    {"name": "Vendeur Beta",    "lower_pct": 18, "equal_pct": 49, "higher_pct": 33, "pi": 103},
+    {"name": "DemoStore",       "lower_pct": 21, "equal_pct": 44, "higher_pct": 35, "pi": 105},
+    {"name": "Vendeur Gamma",   "lower_pct": 1,  "equal_pct": 97, "higher_pct": 2,  "pi": 100},
+    {"name": "Vendeur Delta",   "lower_pct": 32, "equal_pct": 53, "higher_pct": 15, "pi": 98},
+    {"name": "Vendeur Epsilon", "lower_pct": 8,  "equal_pct": 30, "higher_pct": 62, "pi": 109},
+    {"name": "Vendeur Zeta",    "lower_pct": 38, "equal_pct": 47, "higher_pct": 15, "pi": 96},
+    {"name": "Vendeur Eta",     "lower_pct": 22, "equal_pct": 53, "higher_pct": 25, "pi": 101}
+  ],
+
+  "category_stacked": [
+    {"name": "Mobilier",            "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"},
+    {"name": "Accessoires déco",    "lower_pct": 26, "equal_pct": 41, "higher_pct": 33, "count": "76k"},
+    {"name": "Rangement",           "lower_pct": 22, "equal_pct": 52, "higher_pct": 26, "count": "61k"},
+    {"name": "Literie",             "lower_pct": 19, "equal_pct": 58, "higher_pct": 23, "count": "44k"},
+    {"name": "Chauffage",           "lower_pct": 35, "equal_pct": 38, "higher_pct": 27, "count": "29k"},
+    {"name": "Cuisine",             "lower_pct": 24, "equal_pct": 49, "higher_pct": 27, "count": "22k"},
+    {"name": "Électroménager",      "lower_pct": 17, "equal_pct": 53, "higher_pct": 30, "count": "18k"},
+    {"name": "Tapis & sols",        "lower_pct": 28, "equal_pct": 44, "higher_pct": 28, "count": "9k"}
   ],
 
   "verdict": {

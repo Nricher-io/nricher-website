@@ -44,6 +44,10 @@ import sys
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
+if sys.stdout.encoding != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 BASE_DIR = Path(__file__).parent
 TEMPLATE_DIR = BASE_DIR / "templates"
 OUTPUT_DIR = BASE_DIR / "output"
@@ -92,9 +96,10 @@ def load_company_data(json_path):
         data = json.load(f)
 
     required_top_keys = [
-        "meta", "hero", "price_index_gauges", "priority",
+        "meta", "hero", "price_index_gauges", "priority_table",
         "trend_chart", "attractiveness_stacked", "competitors",
-        "sellers_table", "verdict",
+        "competitors_table", "sellers_table", "sellers_stacked",
+        "category_stacked", "verdict",
     ]
     missing = [k for k in required_top_keys if k not in data]
     if missing:
@@ -124,11 +129,14 @@ def render_report(json_path, env):
         meta=data["meta"],
         hero=data["hero"],
         price_index_gauges=data["price_index_gauges"],
-        priority=data["priority"],
+        priority_table=data["priority_table"],
         trend_chart=data["trend_chart"],
         attractiveness_stacked=data["attractiveness_stacked"],
         competitors=data["competitors"],
+        competitors_table=data["competitors_table"],
         sellers_table=data["sellers_table"],
+        sellers_stacked=data["sellers_stacked"],
+        category_stacked=data["category_stacked"],
         verdict=data["verdict"],
         chart_points=polyline_str,
         chart_circles=chart_circles,

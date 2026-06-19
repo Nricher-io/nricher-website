@@ -54,8 +54,12 @@
   .kpi-report .tag{font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;letter-spacing:0.05em;text-transform:uppercase;}
   .kpi-report .tag--watch{background:rgba(46,88,202,0.12);color:var(--blue);}
   .kpi-report hr.div{border:none;border-top:1px solid var(--border);margin:0;}
+  .kpi-report .pi-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+  .kpi-report .pi-meta__row{font-size:0.82rem;color:var(--muted);display:flex;align-items:center;gap:8px;white-space:nowrap;}
+  .kpi-report .pi-meta__row .dot{opacity:0.5;}
 
   .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .kpi-report .kpi-grid--5{grid-template-columns:repeat(5,1fr);}
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
   .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-brand);}
   .kpi-report .kpi:hover{transform:translateY(-5px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
@@ -72,17 +76,15 @@
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;color:var(--mint);opacity:0.08;}
 
-  .kpi-report .prio-card{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);}
-  .kpi-report .prio-row{display:grid;grid-template-columns:170px 1fr 1fr;}
-  .kpi-report .prio-cell{padding:24px 28px;border-right:1px solid var(--border);}
-  .kpi-report .prio-cell:last-child{border-right:none;}
-  .kpi-report .prio-head{background:var(--text);}
-  .kpi-report .prio-head .lbl{color:#9CA3B0;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;}
-  .kpi-report .prio-head .val{color:#fff;font-family:var(--font-display);font-weight:600;font-size:1rem;margin-top:4px;}
-  .kpi-report .prio-cell .lbl{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
-  .kpi-report .prio-track{display:flex;align-items:center;gap:12px;margin-top:8px;}
-  .kpi-report .prio-num{font-family:var(--font-display);font-weight:700;font-size:1.8rem;}
-  .kpi-report .prio-arrow{font-size:0.85rem;font-weight:700;}
+  .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);}
+  .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
+  .kpi-report table.prio-table thead tr{background:var(--text);}
+  .kpi-report table.prio-table th{color:#9CA3B0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;text-align:center;padding:16px 18px;}
+  .kpi-report table.prio-table th:first-child{text-align:left;}
+  .kpi-report table.prio-table td{padding:22px 18px;text-align:center;border-bottom:1px solid var(--card-2);}
+  .kpi-report table.prio-table tr:last-child td{border-bottom:none;}
+  .kpi-report table.prio-table td.wk{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+  .kpi-report .prio-val{font-family:var(--font-display);font-weight:700;font-size:1.6rem;cursor:default;}
   .kpi-report .note{margin-top:20px;font-size:0.95rem;color:var(--text-2);max-width:680px;line-height:1.6;}
   .kpi-report .note strong{color:var(--text);}
 
@@ -138,17 +140,48 @@
 
   @media (max-width:880px){
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
+    .kpi-report .kpi-grid--5{grid-template-columns:1fr 1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
-    .kpi-report .prio-row{grid-template-columns:1fr;}
-    .kpi-report .prio-cell{border-right:none;border-bottom:1px solid var(--border);}
     .kpi-report .grid-2{grid-template-columns:1fr;}
     .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
     .kpi-report .verdict{padding:38px 26px;}
+    .kpi-report .section-header{align-items:flex-start;}
+    .kpi-report .pi-meta{align-items:flex-start;}
   }
   @media (max-width:560px){
     .report-bar__inner{flex-direction:column;align-items:flex-start;height:auto;padding-block:14px;gap:8px;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
+    .kpi-report .kpi-grid--5{grid-template-columns:1fr;}
+    .kpi-report table.prio-table th, .kpi-report table.prio-table td{padding:12px 8px;}
   }
+
+  /* Interactivite : tooltips au survol (graphiques + barres) */
+  .kpi-report [data-tip]{position:relative;cursor:default;}
+  .kpi-report [data-tip]::after{
+    content:attr(data-tip); position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%) translateY(4px) scale(0.96);
+    background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
+    padding:7px 12px; border-radius:8px; white-space:nowrap; z-index:30; pointer-events:none;
+    opacity:0; box-shadow:0 10px 28px rgba(0,0,0,0.22);
+    transition:opacity .18s ease, transform .18s ease;
+  }
+  .kpi-report [data-tip]::before{
+    content:""; position:absolute; bottom:calc(100% + 4px); left:50%; transform:translateX(-50%) translateY(4px);
+    border:5px solid transparent; border-top-color:var(--text); z-index:30; pointer-events:none; opacity:0;
+    transition:opacity .18s ease;
+  }
+  .kpi-report [data-tip]:hover::after, .kpi-report [data-tip]:hover::before{opacity:1; transform:translateX(-50%) translateY(0) scale(1);}
+  .kpi-report [data-tip]:hover::before{transform:translateX(-50%) translateY(0);}
+
+  .kpi-report .stack-seg, .kpi-report .cbar-track > div{transition:filter .2s ease, transform .2s ease;}
+  .kpi-report .stack-seg:hover, .kpi-report .cbar-track > div:hover{filter:brightness(1.12); transform:scaleY(1.18);}
+  .kpi-report .cbar-track{overflow:visible;}
+  .kpi-report .cbar-track > div{position:relative;}
+
+  .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
+  .kpi-report .chart-pt:hover{r:6.5;}
+
+  .kpi-report .cbar-row--you{background:rgba(96,239,190,0.07); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
+  .kpi-report .cbar-row--you .cbar-name::after{content:" (vous)"; color:var(--mint); font-weight:500; font-size:0.82em;}
 </style>
 </head>
 <body data-screen-label="Weekly KPIs">
@@ -240,14 +273,17 @@
     <div class="section-header">
       <div>
         <div class="section-title">Price Index — la photo de la semaine</div>
-        <div class="section-sub">Trois lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
+        <div class="section-sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
       </div>
-      <span class="tag tag--watch">100 = aligné marché</span>
+      <div class="pi-meta">
+        <span class="tag tag--watch">100 = aligné marché</span>
+        <div class="pi-meta__row"><span>Maj : {{ price_index_gauges.updated_label }}</span><span class="dot">·</span><span>{{ price_index_gauges.analysed }} Analysed</span><span class="dot">·</span><span>{{ price_index_gauges.matched }} Matched</span></div>
+      </div>
     </div>
 
-    <div class="kpi-grid">
-      {% for g in price_index_gauges %}
-      <div class="kpi">
+    <div class="kpi-grid kpi-grid--5">
+      {% for g in price_index_gauges.gauges %}
+      <div class="kpi" data-tip="{{ g.label }} : {{ g.value }} ({{ g.delta_pct }} vs {{ g.ref_prev }})">
         <span class="kpi__ghost">{{ g.value }}</span>
         <div class="kpi-top">
           <div class="kpi__num {{ g.severity }}">{{ g.value }}</div>
@@ -268,40 +304,30 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">L'écart se resserre — mais pas partout</div>
-        <div class="section-sub">Indice prix par tranche de priorité commerciale. Plus le chiffre baisse vers 100, plus vous regagnez la main.</div>
+        <div class="section-title">Price index by article — par priorité commerciale</div>
+        <div class="section-sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
       </div>
-      <span class="tag tag--watch">{{ priority.week_prev_label }} → {{ priority.week_curr_label }}</span>
+      <span class="tag tag--watch">My prio</span>
     </div>
 
-    <div class="prio-card">
-      <div class="prio-row">
-        <div class="prio-cell prio-head"><div class="lbl">Tranche</div></div>
-        <div class="prio-cell prio-head"><div class="val">Top priorité</div></div>
-        <div class="prio-cell prio-head"><div class="val">Priorité moyenne</div></div>
-      </div>
-      <div class="prio-row">
-        <div class="prio-cell">
-          <div class="lbl">{{ priority.week_prev_label }}</div>
-          <div class="prio-track"><span class="prio-num" style="color:var(--bad);">{{ priority.top_prio.prev }}</span></div>
-        </div>
-        <div class="prio-cell">
-          <div class="lbl">{{ priority.week_curr_label }} — top prio</div>
-          <div class="prio-track">
-            <span class="prio-num" style="color:var(--good);">{{ priority.top_prio.curr }}</span>
-            <span class="prio-arrow" style="color:var(--good);">▼ {{ priority.top_prio.delta_pts }} pts</span>
-          </div>
-        </div>
-        <div class="prio-cell">
-          <div class="lbl">{{ priority.week_curr_label }} — priorité moyenne</div>
-          <div class="prio-track">
-            <span class="prio-num" style="color:var(--good);">{{ priority.mid_prio.curr }}</span>
-            <span class="prio-arrow" style="color:var(--good);">▼ {{ priority.mid_prio.delta_pts }} pts</span>
-          </div>
-        </div>
-      </div>
+    <div class="prio-table-wrap">
+      <table class="prio-table">
+        <thead>
+          <tr><th></th><th>Top sales</th><th>Middle sales</th><th>Low sales</th></tr>
+        </thead>
+        <tbody>
+          {% for r in priority_table.rows %}
+          <tr>
+            <td class="wk">{{ r.week }}</td>
+            <td><span class="prio-val" data-tip="Top sales {{ r.week }} : {{ r.top }}" style="color:{{ 'var(--bad)' if r.top > 100 else ('var(--good)' if r.top < 100 else 'var(--text)') }};">{{ r.top }}</span></td>
+            <td><span class="prio-val" data-tip="Middle sales {{ r.week }} : {{ r.middle }}" style="color:{{ 'var(--bad)' if r.middle > 100 else ('var(--good)' if r.middle < 100 else 'var(--text)') }};">{{ r.middle }}</span></td>
+            <td><span class="prio-val" data-tip="Low sales {{ r.week }} : {{ r.low }}" style="color:{{ 'var(--bad)' if r.low > 100 else ('var(--good)' if r.low < 100 else 'var(--text)') }};">{{ r.low }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-    {% if priority.note %}<div class="note">{{ priority.note }}</div>{% endif %}
+    {% if priority_table.note %}<div class="note">{{ priority_table.note }}</div>{% endif %}
   </div>
 </section>
 
@@ -330,7 +356,7 @@
           <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
           <polyline points="{{ chart_points }}" fill="none" stroke="{{ meta.company_color }}" stroke-width="2.5"/>
           <g fill="{{ meta.company_color }}">
-            {% for pt in chart_circles %}<circle cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="3.5"/>{% endfor %}
+            {% for pt in chart_circles %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="3.5"><title>{{ trend_chart.weeks[loop.index0] }} : {{ trend_chart.price_index_3p[loop.index0] }}</title></circle>{% endfor %}
           </g>
           <text x="34" y="216" font-size="10" fill="#7a8fba">{{ trend_chart.weeks[0] }}</text>
           <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">{{ trend_chart.weeks[-1] }}</text>
@@ -346,9 +372,9 @@
           <div class="stack-row">
             <span class="wk">{{ row.week }}</span>
             <div class="stack-bar">
-              <div class="stack-seg" style="width:{{ row.lower_pct }}%;background:var(--good);">{{ row.lower_pct }}%</div>
-              <div class="stack-seg" style="width:{{ row.equal_pct }}%;background:var(--blue);">{{ row.equal_pct }}%</div>
-              <div class="stack-seg" style="width:{{ row.higher_pct }}%;background:var(--bad);">{{ row.higher_pct }}%</div>
+              <div class="stack-seg" data-tip="Moins cher {{ row.week }} : {{ row.lower_pct }}%" style="width:{{ row.lower_pct }}%;background:var(--good);">{{ row.lower_pct }}%</div>
+              <div class="stack-seg" data-tip="Aligné {{ row.week }} : {{ row.equal_pct }}%" style="width:{{ row.equal_pct }}%;background:var(--blue);">{{ row.equal_pct }}%</div>
+              <div class="stack-seg" data-tip="Plus cher {{ row.week }} : {{ row.higher_pct }}%" style="width:{{ row.higher_pct }}%;background:var(--bad);">{{ row.higher_pct }}%</div>
             </div>
           </div>
           {% endfor %}
@@ -380,13 +406,49 @@
       <div class="cbar-row">
         <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} matchés</div></div>
         <div class="cbar-track">
-          <div style="width:{{ c.lower_pct }}%;background:var(--good);"></div>
-          <div style="width:{{ c.equal_pct }}%;background:var(--blue);"></div>
-          <div style="width:{{ c.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);"></div>
+          <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);"></div>
+          <div data-tip="{{ c.name }} — plus cher : {{ c.higher_pct }}%" style="width:{{ c.higher_pct }}%;background:var(--bad);"></div>
         </div>
         <div class="cbar-pi" style="color:{{ 'var(--good)' if c.pi < 101 else ('var(--bad)' if c.pi > 104 else '#c98c1a') }};">PI {{ c.pi }}</div>
       </div>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Competitor analysis — détail par enseigne</div>
+        <div class="section-sub">Articles tous vendeurs vs articles vendeur le moins cher, par concurrent.</div>
+      </div>
+      <span class="tag tag--watch">PI Market Analysis</span>
+    </div>
+
+    <div class="sellers-wrap">
+      <table class="sellers">
+        <thead>
+          <tr><th>Concurrent</th><th style="text-align:right;">Articles all</th><th style="text-align:right;">PI all</th><th style="text-align:right;">Articles min</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
+        </thead>
+        <tbody>
+          {% for c in competitors_table %}
+          <tr>
+            <td>{{ c.name }}</td>
+            <td class="num">{{ "{:,}".format(c.articles_all).replace(",", " ") }}</td>
+            <td class="num"><span class="pi-chip {{ 'g' if c.pi_all < 100 else ('b' if c.pi_all == 100 else 'r') }}">{{ c.pi_all }}</span></td>
+            <td class="num">{{ "{:,}".format(c.articles_min).replace(",", " ") }}</td>
+            <td class="num"><span class="pi-chip {{ 'g' if c.pi_min < 100 else ('b' if c.pi_min == 100 else 'r') }}">{{ c.pi_min }}</span></td>
+            <td class="num">{{ "{:,}".format(c.gt100).replace(",", " ") }}</td>
+            <td class="num">{{ "{:,}".format(c.eq100).replace(",", " ") }}</td>
+            <td class="num">{{ "{:,}".format(c.lt100).replace(",", " ") }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
@@ -422,6 +484,61 @@
           {% endfor %}
         </tbody>
       </table>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Seller analysis — répartition % par vendeur</div>
+        <div class="section-sub">Part des articles moins chers, alignés, plus chers — vendeur par vendeur.</div>
+      </div>
+      <span class="tag tag--watch">Lower · Equal · Higher</span>
+    </div>
+
+    <div class="cbar-list">
+      {% for s in sellers_stacked %}
+      <div class="cbar-row {{ 'cbar-row--you' if s.name == meta.company_name }}">
+        <div><div class="cbar-name">{{ s.name }}</div></div>
+        <div class="cbar-track">
+          <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);"></div>
+          <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);"></div>
+          <div data-tip="{{ s.name }} — plus cher : {{ s.higher_pct }}%" style="width:{{ s.higher_pct }}%;background:var(--bad);"></div>
+        </div>
+        <div class="cbar-pi" style="color:{{ 'var(--good)' if s.pi < 101 else ('var(--bad)' if s.pi > 104 else '#c98c1a') }};">PI {{ s.pi }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title">Category analysis — répartition % par catégorie</div>
+        <div class="section-sub">Part des articles moins chers, alignés, plus chers — catégorie par catégorie.</div>
+      </div>
+      <span class="tag tag--watch">Lower · Equal · Higher</span>
+    </div>
+
+    <div class="cbar-list">
+      {% for cat in category_stacked %}
+      <div class="cbar-row">
+        <div><div class="cbar-name">{{ cat.name }}</div><div class="cbar-meta">{{ cat.count }} articles</div></div>
+        <div class="cbar-track">
+          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);"></div>
+          <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);"></div>
+          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);"></div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

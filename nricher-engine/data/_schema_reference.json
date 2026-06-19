@@ -24,17 +24,26 @@
     ]
   },
 
-  "price_index_gauges": [
-    {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "plus cher sur l'ensemble des offres concurrentes (IP all)", "ref_prev": "S24 : 103"},
-    {"value": 107, "delta_pct": "+7%", "severity": "bad",  "label": "plus cher en moyenne que la meilleure offre du marché (3P, price min)", "ref_prev": "S24 : 107"},
-    {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "plus chers entre vendeurs identiques vs concurrents (3P, same min)", "ref_prev": "S24 : 103"}
-  ],
+  "price_index_gauges": {
+    "_comment": "Reproduit le panneau 'Pricing analysis' de Pricing W/O T. items: 3 a 5 jauges selon ce qui est dispo.",
+    "updated_label": "18/06 17:00",
+    "analysed": "1 416 281",
+    "matched": "489 983",
+    "gauges": [
+      {"value": 100, "delta_pct": "0%",  "severity": "good", "label": "PI Price All", "ref_prev": "S24 : 100"},
+      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "PI Price Min", "ref_prev": "S24 : 103"},
+      {"value": 0,   "delta_pct": "—",   "severity": "good", "label": "1P Price Min", "ref_prev": "S24 : 0"},
+      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "3P Price Min", "ref_prev": "S24 : 103"},
+      {"value": 102, "delta_pct": "+2%", "severity": "warn", "label": "3P same min",  "ref_prev": "S24 : 102"}
+    ]
+  },
 
-  "priority": {
-    "week_prev_label": "Semaine 24",
-    "week_curr_label": "Semaine 25",
-    "top_prio":   {"prev": 110, "curr": 108, "delta_pts": -2},
-    "mid_prio":   {"prev": 113, "curr": 107, "delta_pts": -5},
+  "priority_table": {
+    "_comment": "Reproduit 'Price index by articles' (filtre My prio: Top/Middle/Low). Une ligne par semaine.",
+    "rows": [
+      {"week": "S24", "top": 116, "middle": 117, "low": 102},
+      {"week": "S25", "top": 118, "middle": 118, "low": 113}
+    ],
     "note": "Lecture libre, générée automatiquement à partir des deltas ci-dessus."
   },
 
@@ -51,12 +60,29 @@
   ],
 
   "competitors": [
-    {"name": "Auchan", "matched_k": "12.6k", "lower_pct": 47, "equal_pct": 23, "higher_pct": 30, "pi": 100},
+    {"_comment": "Reproduit '% Market Analysis > Competitor analysis' (barres empilées).",
+     "name": "Auchan", "matched_k": "12.6k", "lower_pct": 47, "equal_pct": 23, "higher_pct": 30, "pi": 100},
     {"name": "BUT", "matched_k": "64.5k", "lower_pct": 20, "equal_pct": 57, "higher_pct": 23, "pi": 103}
   ],
 
+  "competitors_table": [
+    {"_comment": "Reproduit le tableau de gauche 'PI Market Analysis'.",
+     "name": "Castorama", "articles_all": 205408, "pi_all": 99, "articles_min": 102011, "pi_min": 96, "gt100": 24636, "eq100": 51111, "lt100": 26576, "pi_1p_min": 0, "art_1p_min": 0}
+  ],
+
   "sellers_table": [
-    {"name": "Vidaxl", "analysed": "40 632", "matched": "16 401", "pi_min": 109, "gt100": "10 292", "eq100": "5 878", "lt100": "231"}
+    {"_comment": "Reproduit le tableau de droite 'PI Market Analysis'.",
+     "name": "Vidaxl", "analysed": "40 632", "matched": "16 401", "pi_min": 109, "gt100": "10 292", "eq100": "5 878", "lt100": "231"}
+  ],
+
+  "sellers_stacked": [
+    {"_comment": "Reproduit '% Market Analysis > Seller analysis' (barres empilées).",
+     "name": "Shopnova", "lower_pct": 25, "equal_pct": 56, "higher_pct": 19, "pi": 94}
+  ],
+
+  "category_stacked": [
+    {"_comment": "Reproduit '% Market Analysis > Category analysis' (barres empilées).",
+     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"}
   ],
 
   "verdict": {
