@@ -370,13 +370,17 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 .hero__sub { font-size: 1.22rem; color: var(--muted); max-width: 500px; line-height: 1.65; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .hero__cta .btn-lg { padding: 12px 24px; font-size: 0.95rem; }
-.hero__search { display: flex; align-items: center; gap: 10px; max-width: 420px; margin-top: 20px; padding: 6px 8px 6px 20px; border: 2px solid var(--mint); border-radius: var(--r-pill); background: var(--card); transition: box-shadow .25s ease, border-color .25s ease; }
+.hero__search { display: flex; align-items: center; gap: 10px; max-width: 420px; margin-top: 36px; padding: 6px 8px 6px 20px; border: 2px solid var(--mint); border-radius: var(--r-pill); background: var(--card); transition: box-shadow .25s ease, border-color .25s ease; }
 .hero__search:focus-within { box-shadow: 0 8px 28px rgba(96,239,190,0.22); border-color: var(--blue); }
 .hero__search-ico { color: var(--blue); font-size: 1.05rem; flex-shrink: 0; }
 .hero__search-input { flex: 1; border: none; outline: none; background: none; font-family: var(--font-body); font-size: 0.95rem; color: var(--text); min-width: 0; }
 .hero__search-input::placeholder { color: var(--muted); }
 .hero__search-btn { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; border: none; background: var(--grad-brand); color: #fff; font-size: 1.05rem; display: flex; align-items: center; justify-content: center; transition: transform .2s ease; cursor: none; }
 .hero__search-btn:hover { transform: scale(1.08); }
+.hero__search--lg { max-width: 480px; padding: 9px 10px 9px 26px; }
+.hero__search--lg .hero__search-ico { font-size: 1.2rem; }
+.hero__search--lg .hero__search-input { font-size: 1.08rem; }
+.hero__search--lg .hero__search-btn { width: 46px; height: 46px; font-size: 1.2rem; }
 .hero__trust { display: flex; align-items: center; gap: 16px; margin-top: 44px; }
 .hero__trust p { font-size: 0.93rem; color: var(--muted); }
 .hero__trust strong { color: var(--text); }
