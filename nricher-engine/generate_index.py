@@ -27,6 +27,7 @@ Deux notions de disponibilite, volontairement distinctes :
 """
 
 import json
+import re
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
@@ -37,6 +38,7 @@ OUTPUT_DIR = BASE_DIR / "output"
 RAPPORTS_DIR = SITE_DIR / "rapports"
 DATA_DIR = BASE_DIR / "data"
 COMPANIES_FILE = DATA_DIR / "companies.json"
+INDEX_HTML = SITE_DIR / "index.html"
 
 
 def slugify(name):
@@ -104,8 +106,29 @@ def main():
     site_html = env.get_template("site_search_template.html").render(companies=site_rows)
     (SITE_DIR / "recherche.html").write_text(site_html, encoding="utf-8")
 
+    # 3. Injection des donnees dans la barre de recherche de la page d'accueil
+    inject_companies_into_index(site_rows)
+
     print(f"\nOutil local   : {len(draft_slugs)}/{len(companies)} brouillons  -> {OUTPUT_DIR / 'index.html'}")
     print(f"Page du site  : {len(published_slugs)}/{len(companies)} publies    -> {SITE_DIR / 'recherche.html'}")
+
+
+def inject_companies_into_index(site_rows):
+    """Remplace le contenu de <script id="nricher-companies-data"> dans index.html
+    par la liste a jour des entreprises (nom, slug, disponibilite), pour la barre
+    de recherche autocomplete du hero."""
+    if not INDEX_HTML.exists():
+        return
+    html = INDEX_HTML.read_text(encoding="utf-8")
+    payload = json.dumps(
+        [{"name": r["name"], "slug": r["slug"], "available": r["available"]} for r in site_rows],
+        ensure_ascii=False,
+    )
+    new_tag = f'<script id="nricher-companies-data">window.NRICHER_COMPANIES = {payload};</script>'
+    pattern = r'<script id="nricher-companies-data">.*?</script>'
+    if re.search(pattern, html, flags=re.DOTALL):
+        html = re.sub(pattern, new_tag, html, flags=re.DOTALL)
+        INDEX_HTML.write_text(html, encoding="utf-8")
 
 
 if __name__ == "__main__":

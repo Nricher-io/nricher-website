@@ -66,16 +66,73 @@
       });
     })();
 
-    /* Barre de recherche hero -> redirige vers recherche.html avec le terme tape */
-    var heroSearchForm = document.getElementById('hero-search-form');
-    if (heroSearchForm) {
-      heroSearchForm.addEventListener('submit', function (e) {
+    /* Barre de recherche hero -> autocomplete live + acces direct au rapport */
+    (function () {
+      var form = document.getElementById('hero-search-form');
+      var input = document.getElementById('hero-search-input');
+      var dropdown = document.getElementById('hero-search-dropdown');
+      if (!form || !input || !dropdown) return;
+
+      var companies = window.NRICHER_COMPANIES || [];
+      var MAX_RESULTS = 6;
+
+      function closeDropdown() { dropdown.classList.remove('is-open'); dropdown.innerHTML = ''; }
+
+      function renderDropdown(query) {
+        var q = query.trim().toLowerCase();
+        if (!q) { closeDropdown(); return; }
+
+        var matches = companies.filter(function (c) { return c.name.toLowerCase().indexOf(q) !== -1; });
+
+        if (matches.length === 0) {
+          dropdown.innerHTML = '<div class="hero__search-dropdown__empty">Aucune entreprise trouvée</div>';
+          dropdown.classList.add('is-open');
+          return;
+        }
+
+        var html = matches.slice(0, MAX_RESULTS).map(function (c) {
+          var badge = c.available
+            ? '<span class="hero__search-dropdown__badge hero__search-dropdown__badge--ok">Voir le rapport</span>'
+            : '<span class="hero__search-dropdown__badge hero__search-dropdown__badge--no">Bientôt</span>';
+          var disabledClass = c.available ? '' : ' is-disabled';
+          return '<div class="hero__search-dropdown__item' + disabledClass + '" data-slug="' + c.slug + '" data-available="' + c.available + '">' +
+                 '<span>' + c.name + '</span>' + badge + '</div>';
+        }).join('');
+
+        if (matches.length > MAX_RESULTS) {
+          html += '<div class="hero__search-dropdown__more" data-seeall="1">Voir les ' + matches.length + ' résultats →</div>';
+        }
+
+        dropdown.innerHTML = html;
+        dropdown.classList.add('is-open');
+      }
+
+      input.addEventListener('input', function () { renderDropdown(input.value); });
+      input.addEventListener('focus', function () { if (input.value.trim()) renderDropdown(input.value); });
+
+      dropdown.addEventListener('click', function (e) {
+        var item = e.target.closest('.hero__search-dropdown__item');
+        if (item) {
+          if (item.dataset.available === 'true') {
+            window.location.href = 'rapports/' + item.dataset.slug + '.html';
+          }
+          return;
+        }
+        if (e.target.closest('[data-seeall]')) {
+          window.location.href = 'recherche.html?q=' + encodeURIComponent(input.value.trim());
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!form.contains(e.target) && !dropdown.contains(e.target)) closeDropdown();
+      });
+
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
-        var input = document.getElementById('hero-search-input');
-        var q = input ? input.value.trim() : '';
+        var q = input.value.trim();
         window.location.href = 'recherche.html' + (q ? '?q=' + encodeURIComponent(q) : '');
       });
-    }
+    })();
 
     /* ----------------------------------------------------------------
        5. Custom cursor (fine-pointer only)
