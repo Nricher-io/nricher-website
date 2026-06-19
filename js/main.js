@@ -66,6 +66,17 @@
       });
     })();
 
+    /* Barre de recherche hero -> redirige vers recherche.html avec le terme tape */
+    var heroSearchForm = document.getElementById('hero-search-form');
+    if (heroSearchForm) {
+      heroSearchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var input = document.getElementById('hero-search-input');
+        var q = input ? input.value.trim() : '';
+        window.location.href = 'recherche.html' + (q ? '?q=' + encodeURIComponent(q) : '');
+      });
+    }
+
     /* ----------------------------------------------------------------
        5. Custom cursor (fine-pointer only)
     ---------------------------------------------------------------- */

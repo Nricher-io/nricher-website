@@ -172,6 +172,16 @@
   }
 
   if (search) search.addEventListener('input', filterCompanies);
+
+  /* Pre-remplissage depuis ?q=... (venant de la barre de recherche en page d'accueil) */
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var q = params.get('q');
+    if (q && search) {
+      search.value = q;
+      filterCompanies();
+    }
+  })();
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

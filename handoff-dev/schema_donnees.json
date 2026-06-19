@@ -1,0 +1,96 @@
+{
+  "_comment": "Schéma de référence — un fichier de ce type par entreprise. Toutes les clés sont obligatoires sauf mention contraire.",
+
+  "meta": {
+    "company_name": "NOM_AFFICHE",
+    "company_color": "#E2231A",
+    "report_date": "15/06/2026",
+    "report_time": "09:38",
+    "week_current": "25",
+    "week_previous": "24",
+    "source_label": "Donnée publique scrapée — pas un client nricher",
+    "_comment_source_label": "Champ obligatoire : sert à afficher clairement la provenance de la donnée sur la page elle-même."
+  },
+
+  "hero": {
+    "title_line1": "Le marché a bougé.",
+    "title_line2": "Votre prix, un peu moins.",
+    "lede": "418 794 articles analysés cette semaine sur 13 concurrents directs.",
+    "stats": [
+      {"value": "418,794", "label": "articles analysés (+2,1% vs S24)"},
+      {"value": "200,939", "label": "articles matchés concurrence"},
+      {"value": "103", "delta": "up", "label": "Price Index global (S24 : 103)"},
+      {"value": "13", "label": "enseignes suivies en temps réel"}
+    ]
+  },
+
+  "price_index_gauges": {
+    "_comment": "Reproduit le panneau 'Pricing analysis' de Pricing W/O T. gauges: 3 jauges recommandees (peut en accueillir plus si besoin).",
+    "updated_label": "18/06 17:00",
+    "analysed": "1 416 281",
+    "matched": "489 983",
+    "gauges": [
+      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "PI Price All", "ref_prev": "S24 : 103", "desc": "plus cher sur l'ensemble des offres concurrentes"},
+      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": "plus cher en moyenne que la meilleure offre du marché"},
+      {"value": 102, "delta_pct": "+2%", "severity": "warn", "label": "3P same min",  "ref_prev": "S24 : 102", "desc": "plus chers entre vendeurs identiques vs concurrents"}
+    ]
+  },
+
+  "priority_table": {
+    "_comment": "Reproduit 'Price index by articles' (filtre My prio: Top/Middle/Low). Une ligne par semaine.",
+    "rows": [
+      {"week": "S24", "top": 116, "middle": 117, "low": 102},
+      {"week": "S25", "top": 118, "middle": 118, "low": 113}
+    ],
+    "note": "Lecture libre, générée automatiquement à partir des deltas ci-dessus."
+  },
+
+  "trend_chart": {
+    "weeks": ["07 Apr", "14 Apr", "21 Apr", "28 Apr", "05 May", "12 May", "19 May", "26 May", "02 Jun", "09 Jun", "15 Jun"],
+    "price_index_3p": [103, 102, 102, 104, 100, 101, 102, 100, 103, 102, 103],
+    "_comment": "Liste de points, le moteur recalcule automatiquement l'échelle et le tracé SVG."
+  },
+
+  "attractiveness_stacked": [
+    {"week": "07 AVR", "lower_pct": 23, "equal_pct": 50, "higher_pct": 27},
+    {"week": "05 MAI", "lower_pct": 22, "equal_pct": 48, "higher_pct": 30},
+    {"week": "02 JUN", "lower_pct": 18, "equal_pct": 55, "higher_pct": 27}
+  ],
+
+  "competitors": [
+    {"_comment": "Reproduit '% Market Analysis > Competitor analysis' (barres empilées).",
+     "name": "Auchan", "matched_k": "12.6k", "lower_pct": 47, "equal_pct": 23, "higher_pct": 30, "pi": 100},
+    {"name": "BUT", "matched_k": "64.5k", "lower_pct": 20, "equal_pct": 57, "higher_pct": 23, "pi": 103}
+  ],
+
+  "competitors_table": [
+    {"_comment": "Reproduit le tableau de gauche 'PI Market Analysis'.",
+     "name": "Castorama", "articles_all": 205408, "pi_all": 99, "articles_min": 102011, "pi_min": 96, "gt100": 24636, "eq100": 51111, "lt100": 26576, "pi_1p_min": 0, "art_1p_min": 0}
+  ],
+
+  "sellers_table": [
+    {"_comment": "Reproduit le tableau de droite 'PI Market Analysis'.",
+     "name": "Vidaxl", "analysed": "40 632", "matched": "16 401", "pi_min": 109, "gt100": "10 292", "eq100": "5 878", "lt100": "231"}
+  ],
+
+  "sellers_stacked": [
+    {"_comment": "Reproduit '% Market Analysis > Seller analysis' (barres empilées).",
+     "name": "Shopnova", "lower_pct": 25, "equal_pct": 56, "higher_pct": 19, "pi": 94}
+  ],
+
+  "category_stacked": [
+    {"_comment": "Reproduit '% Market Analysis > Category analysis' (barres empilées).",
+     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"}
+  ],
+
+  "verdict": {
+    "tag": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE",
+    "headline": "1 528 articles vendus plus cher que tout le marché. Chaque semaine.",
+    "text": "Sur les 2 709 produits où l'on matche un vendeur identique, 1 528 sont positionnés au-dessus du prix le plus bas constaté ailleurs.",
+    "figures": [
+      {"value": "+7%", "label": "d'écart vs la meilleure offre du marché (3P)"},
+      {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
+      {"value": "418k", "label": "articles suivis en continu, 13 enseignes"}
+    ]
+  }
+}
