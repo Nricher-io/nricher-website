@@ -76,7 +76,8 @@
   .kpi-report .kpi__bar{height:7px;background:var(--card-2);border-radius:var(--r-pill);margin-top:20px;overflow:hidden;}
   .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);transition:width .6s var(--ease-out);}
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
-  .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;color:var(--mint);opacity:0.08;}
+  .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;opacity:0.08;}
+  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.warn{color:#c98c1a;} .kpi-report .kpi__ghost.good{color:var(--good);}
 
   .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.02);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
@@ -134,7 +135,7 @@
 
   .kpi-report .verdict{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;}
   .kpi-report .verdict:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
-  .kpi-report .verdict__filet{position:absolute;inset:-20px;background:url('../img/screenshots/filet.png') center/cover no-repeat;mix-blend-mode:screen;opacity:0.55;-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);pointer-events:none;z-index:0;transition:opacity .35s ease, transform .6s var(--ease-out);}
+  .kpi-report .verdict__filet{position:absolute;inset:-20px;background:url('../img/screenshots/filet.png') center/cover no-repeat;mix-blend-mode:multiply;opacity:0.55;-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);pointer-events:none;z-index:0;transition:opacity .35s ease, transform .6s var(--ease-out);}
   .kpi-report .verdict:hover .verdict__filet{opacity:0.8;transform:scale(1.04);}
   .kpi-report .verdict__content{position:relative;z-index:1;}
   .kpi-report .verdict .eyebrow{border-color:var(--mint);color:var(--blue);}
@@ -189,8 +190,21 @@
   .kpi-report .stack-seg, .kpi-report .cbar-track > div{transition:filter .2s ease, transform .2s ease; position:relative;}
   .kpi-report .stack-seg:hover, .kpi-report .cbar-track > div:hover{filter:brightness(1.12); transform:scaleY(1.15); z-index:5;}
 
+  .kpi-report .linechart-wrap{position:relative;}
   .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
-  .kpi-report .chart-pt:hover{r:6.5;}
+  .kpi-report .chart-pt:hover{r:7.5;}
+  .kpi-report .chart-tooltip{
+    position:absolute; transform:translate(-50%, calc(-100% - 14px)); left:0; top:0;
+    background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
+    padding:7px 12px; border-radius:8px; white-space:nowrap; pointer-events:none;
+    opacity:0; transition:opacity .15s ease, transform .15s ease; z-index:30;
+    box-shadow:0 10px 28px rgba(0,0,0,0.22);
+  }
+  .kpi-report .chart-tooltip::after{
+    content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    border:5px solid transparent; border-top-color:var(--text);
+  }
+  .kpi-report .chart-tooltip.is-visible{opacity:1; transform:translate(-50%, calc(-100% - 18px));}
 
   .kpi-report .cbar-row--you{background:rgba(96,239,190,0.07); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
   .kpi-report .cbar-row--you .cbar-name::after{content:" (vous)"; color:var(--mint); font-weight:500; font-size:0.82em;}
@@ -308,7 +322,7 @@
     <div class="kpi-grid">
       
       <div class="kpi" data-tip="+1% vs S24 : 104">
-        <span class="kpi__ghost">101</span>
+        <span class="kpi__ghost warn">101</span>
         <div class="kpi-top">
           <span class="kpi__dot warn"></span>
           <div class="kpi__chip warn">+1%</div>
@@ -321,7 +335,7 @@
       </div>
       
       <div class="kpi" data-tip="+5% vs S24 : 108">
-        <span class="kpi__ghost">105</span>
+        <span class="kpi__ghost bad">105</span>
         <div class="kpi-top">
           <span class="kpi__dot bad"></span>
           <div class="kpi__chip bad">+5%</div>
@@ -334,7 +348,7 @@
       </div>
       
       <div class="kpi" data-tip="-1% vs S24 : 100">
-        <span class="kpi__ghost">99</span>
+        <span class="kpi__ghost good">99</span>
         <div class="kpi-top">
           <span class="kpi__dot good"></span>
           <div class="kpi__chip good">-1%</div>
@@ -457,20 +471,23 @@
       <div class="chart-card">
         <h3>Évolution Indice Prix (3P)</h3>
         <div class="chart-sub">Tracé généré automatiquement à partir des 11 dernières semaines.</div>
-        <svg class="linechart" viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet">
-          <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-          <line x1="40" y1="200" x2="620" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-          <text x="10" y="34" font-size="10" fill="#7a8fba">111</text>
-          <text x="10" y="110" font-size="10" fill="#7a8fba">104</text>
-          <text x="10" y="196" font-size="10" fill="#7a8fba">98</text>
-          <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
-          <polyline points="40.0,61.5 98.0,75.4 156.0,89.2 214.0,89.2 272.0,103.1 330.0,116.9 388.0,130.8 446.0,130.8 504.0,144.6 562.0,158.5 620.0,158.5" fill="none" stroke="#7C3AED" stroke-width="2.5"/>
-          <g fill="#7C3AED">
-            <circle class="chart-pt" cx="40.0" cy="61.5" r="3.5"><title>07 Apr : 108</title></circle><circle class="chart-pt" cx="98.0" cy="75.4" r="3.5"><title>14 Apr : 107</title></circle><circle class="chart-pt" cx="156.0" cy="89.2" r="3.5"><title>21 Apr : 106</title></circle><circle class="chart-pt" cx="214.0" cy="89.2" r="3.5"><title>28 Apr : 106</title></circle><circle class="chart-pt" cx="272.0" cy="103.1" r="3.5"><title>05 May : 105</title></circle><circle class="chart-pt" cx="330.0" cy="116.9" r="3.5"><title>12 May : 104</title></circle><circle class="chart-pt" cx="388.0" cy="130.8" r="3.5"><title>19 May : 103</title></circle><circle class="chart-pt" cx="446.0" cy="130.8" r="3.5"><title>26 May : 103</title></circle><circle class="chart-pt" cx="504.0" cy="144.6" r="3.5"><title>02 Jun : 102</title></circle><circle class="chart-pt" cx="562.0" cy="158.5" r="3.5"><title>09 Jun : 101</title></circle><circle class="chart-pt" cx="620.0" cy="158.5" r="3.5"><title>15 Jun : 101</title></circle>
-          </g>
-          <text x="34" y="216" font-size="10" fill="#7a8fba">07 Apr</text>
-          <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">15 Jun</text>
-        </svg>
+        <div class="linechart-wrap">
+          <svg class="linechart" viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet">
+            <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+            <line x1="40" y1="200" x2="620" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+            <text x="10" y="34" font-size="10" fill="#7a8fba">111</text>
+            <text x="10" y="110" font-size="10" fill="#7a8fba">104</text>
+            <text x="10" y="196" font-size="10" fill="#7a8fba">98</text>
+            <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
+            <polyline points="40.0,61.5 98.0,75.4 156.0,89.2 214.0,89.2 272.0,103.1 330.0,116.9 388.0,130.8 446.0,130.8 504.0,144.6 562.0,158.5 620.0,158.5" fill="none" stroke="#7C3AED" stroke-width="2.5"/>
+            <g fill="#7C3AED">
+              <circle class="chart-pt" cx="40.0" cy="61.5" r="5" data-week="07 Apr" data-value="108"></circle><circle class="chart-pt" cx="98.0" cy="75.4" r="5" data-week="14 Apr" data-value="107"></circle><circle class="chart-pt" cx="156.0" cy="89.2" r="5" data-week="21 Apr" data-value="106"></circle><circle class="chart-pt" cx="214.0" cy="89.2" r="5" data-week="28 Apr" data-value="106"></circle><circle class="chart-pt" cx="272.0" cy="103.1" r="5" data-week="05 May" data-value="105"></circle><circle class="chart-pt" cx="330.0" cy="116.9" r="5" data-week="12 May" data-value="104"></circle><circle class="chart-pt" cx="388.0" cy="130.8" r="5" data-week="19 May" data-value="103"></circle><circle class="chart-pt" cx="446.0" cy="130.8" r="5" data-week="26 May" data-value="103"></circle><circle class="chart-pt" cx="504.0" cy="144.6" r="5" data-week="02 Jun" data-value="102"></circle><circle class="chart-pt" cx="562.0" cy="158.5" r="5" data-week="09 Jun" data-value="101"></circle><circle class="chart-pt" cx="620.0" cy="158.5" r="5" data-week="15 Jun" data-value="101"></circle>
+            </g>
+            <text x="34" y="216" font-size="10" fill="#7a8fba">07 Apr</text>
+            <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">15 Jun</text>
+          </svg>
+          <div class="chart-tooltip"></div>
+        </div>
         <div class="legend"><div class="legend-item"><span class="legend-dot" style="background:#7C3AED;"></span>Indice 3P DemoStore</div></div>
       </div>
 
@@ -1055,6 +1072,27 @@
 
 </div>
 
+<script>
+(function () {
+  document.querySelectorAll('.linechart-wrap').forEach(function (wrap) {
+    var tip = wrap.querySelector('.chart-tooltip');
+    if (!tip) return;
+    wrap.querySelectorAll('.chart-pt').forEach(function (pt) {
+      pt.addEventListener('mouseenter', function () {
+        var ptRect = pt.getBoundingClientRect();
+        var wrapRect = wrap.getBoundingClientRect();
+        tip.textContent = pt.dataset.week + ' : ' + pt.dataset.value;
+        tip.style.left = (ptRect.left + ptRect.width / 2 - wrapRect.left) + 'px';
+        tip.style.top = (ptRect.top - wrapRect.top) + 'px';
+        tip.classList.add('is-visible');
+      });
+      pt.addEventListener('mouseleave', function () {
+        tip.classList.remove('is-visible');
+      });
+    });
+  });
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
