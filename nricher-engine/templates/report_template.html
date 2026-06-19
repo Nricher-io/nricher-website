@@ -132,14 +132,19 @@
   .kpi-report .pi-chip.g{background:var(--good-bg);color:var(--good);}
   .kpi-report .pi-chip.b{background:rgba(46,88,202,0.10);color:var(--blue);}
 
-  .kpi-report .verdict{background:var(--text);color:#fff;border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;}
-  .kpi-report .verdict::after{content:"";position:absolute;right:-140px;top:-140px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle, rgba(96,239,190,0.28), transparent 70%);}
-  .kpi-report .verdict .eyebrow{border-color:var(--mint);color:var(--mint);}
-  .kpi-report .verdict h2{font-size:clamp(1.7rem,3.2vw,2.3rem);max-width:620px;margin:22px 0 16px;line-height:1.15;font-family:var(--font-display);font-weight:700;}
-  .kpi-report .verdict p{color:#B7BECC;max-width:560px;font-size:1rem;line-height:1.65;margin-bottom:32px;}
+  .kpi-report .verdict{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;}
+  .kpi-report .verdict:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
+  .kpi-report .verdict__filet{position:absolute;inset:-20px;background:url('../img/screenshots/filet.png') center/cover no-repeat;mix-blend-mode:screen;opacity:0.55;-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 25%, black 80%, transparent 100%);pointer-events:none;z-index:0;transition:opacity .35s ease, transform .6s var(--ease-out);}
+  .kpi-report .verdict:hover .verdict__filet{opacity:0.8;transform:scale(1.04);}
+  .kpi-report .verdict__content{position:relative;z-index:1;}
+  .kpi-report .verdict .eyebrow{border-color:var(--mint);color:var(--blue);}
+  .kpi-report .verdict h2{font-size:clamp(1.7rem,3.2vw,2.3rem);max-width:620px;margin:22px 0 16px;line-height:1.15;font-family:var(--font-display);font-weight:700;color:var(--text);}
+  .kpi-report .verdict p{color:var(--text-2);max-width:560px;font-size:1rem;line-height:1.65;margin-bottom:32px;}
   .kpi-report .verdict-figs{display:flex;gap:48px;margin-bottom:36px;flex-wrap:wrap;}
-  .kpi-report .vfig .n{font-family:var(--font-display);font-weight:700;font-size:1.7rem;color:var(--mint);}
-  .kpi-report .vfig .l{font-size:0.8rem;color:#9CA3B0;margin-top:4px;}
+  .kpi-report .vfig{transition:transform .25s var(--ease-out);}
+  .kpi-report .vfig:hover{transform:translateY(-3px);}
+  .kpi-report .vfig .n{font-family:var(--font-display);font-weight:700;font-size:1.7rem;color:var(--blue);}
+  .kpi-report .vfig .l{font-size:0.8rem;color:var(--muted);margin-top:4px;}
   .kpi-report .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
   .kpi-report .cta-row .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:0.95rem;padding:14px 28px;border-radius:var(--r-pill);transition:transform .3s var(--ease-out), box-shadow .3s ease;}
   .kpi-report .cta-row .btn-primary{background:none;color:var(--mint);border:2px solid var(--mint);}
@@ -564,17 +569,19 @@
 <section class="section">
   <div class="container">
     <div class="verdict">
-      <span class="eyebrow">{{ verdict.tag }}</span>
-      <h2>{{ verdict.headline }}</h2>
-      <p>{{ verdict.text }}</p>
-      <div class="verdict-figs">
-        {% for f in verdict.figures %}
-        <div class="vfig"><div class="n">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
-        {% endfor %}
-      </div>
-      <div class="cta-row">
-        <a href="#" class="btn btn-primary">Voir le détail article par article →</a>
-        <a href="#" class="btn btn-ghost">Configurer une alerte repricing</a>
+      <div class="verdict__filet" aria-hidden="true"></div>
+      <div class="verdict__content">
+        <span class="eyebrow">{{ verdict.tag }}</span>
+        <h2>{{ verdict.headline }}</h2>
+        <p>{{ verdict.text }}</p>
+        <div class="verdict-figs">
+          {% for f in verdict.figures %}
+          <div class="vfig"><div class="n">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
+          {% endfor %}
+        </div>
+        <div class="cta-row">
+          <a href="../contact.html" class="btn btn-primary">Voir le détail article par article →</a>
+        </div>
       </div>
     </div>
   </div>
