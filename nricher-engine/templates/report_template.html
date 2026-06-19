@@ -641,7 +641,7 @@
         <tbody>
           {% for s in sellers_table %}
           <tr {% if s.name == meta.company_name %}style="background:rgba(96,239,190,0.07);"{% endif %}>
-            <td>{{ '<strong>'|safe if s.name == meta.company_name }}{{ s.name }}{{ '</strong>'|safe if s.name == meta.company_name }}</td>
+            <td>{{ '<strong>'|safe if s.name == meta.company_name }}{{ s.name }}{{ '</strong>'|safe if s.name == meta.company_name }}{% if s.name == meta.company_name %} <span style="color:var(--good);font-weight:700;">(vous)</span>{% endif %}</td>
             <td class="num">{{ s.analysed }}</td>
             <td class="num">{{ s.matched }}</td>
             <td class="num"><span class="pi-chip {{ 'g' if s.pi_min < 100 else ('b' if s.pi_min == 100 else 'r') }}">{{ s.pi_min }}</span></td>
