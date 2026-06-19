@@ -113,9 +113,11 @@
   .kpi-report .cbar-row{display:grid;grid-template-columns:150px 1fr 90px;align-items:center;gap:16px;}
   .kpi-report .cbar-name{font-size:0.92rem;font-weight:700;}
   .kpi-report .cbar-meta{font-size:11px;color:var(--muted);}
-  .kpi-report .cbar-track{height:20px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2);}
+  .kpi-report .cbar-track{height:22px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2);}
   .kpi-report .cbar-track > div:first-child{border-radius:7px 0 0 7px;}
   .kpi-report .cbar-track > div:last-child{border-radius:0 7px 7px 0;}
+  .kpi-report .cbar-track > div{display:flex;align-items:center;justify-content:center;}
+  .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
   .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
 
   .kpi-report .sellers-wrap{max-height:430px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--card);}
@@ -390,8 +392,13 @@
 
     <div class="grid-2">
       <div class="chart-card">
-        <h3>Évolution Indice Prix (3P)</h3>
+        <h3>Évolution Indice Prix (1P / 2P / 3P)</h3>
         <div class="chart-sub">Tracé généré automatiquement à partir des {{ trend_chart.weeks|length }} dernières semaines.</div>
+        {% set series_def = [
+          ('1p', '1P', '#2e58ca', trend_chart.price_index_1p),
+          ('2p', '2P', '#60efbe', trend_chart.price_index_2p),
+          ('3p', '3P ' + meta.company_name, meta.company_color, trend_chart.price_index_3p)
+        ] %}
         <div class="linechart-wrap">
           <svg class="linechart" viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet">
             <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
@@ -400,19 +407,29 @@
             <text x="10" y="110" font-size="10" fill="#7a8fba">{{ chart_y_mid }}</text>
             <text x="10" y="196" font-size="10" fill="#7a8fba">{{ chart_y_min }}</text>
             <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
-            <polyline points="{{ chart_points }}" fill="none" stroke="{{ meta.company_color }}" stroke-width="2.5"/>
-            <g fill="{{ meta.company_color }}">
-              {% for pt in chart_circles %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="6.5"></circle>{% endfor %}
+            {% for key, label, color, values in series_def %}
+            <polyline points="{{ series_geo[key].polyline }}" fill="none" stroke="{{ color }}" stroke-width="2.5"/>
+            {% endfor %}
+            {% for key, label, color, values in series_def %}
+            <g fill="{{ color }}">
+              {% for pt in series_geo[key].points %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="5.5"></circle>{% endfor %}
             </g>
+            {% endfor %}
+            {% for key, label, color, values in series_def %}
             <g>
-              {% for pt in chart_circles %}<circle class="chart-pt-hit" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="16" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ trend_chart.price_index_3p[loop.index0] }}"></circle>{% endfor %}
+              {% for pt in series_geo[key].points %}<circle class="chart-pt-hit" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="13" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ label }} : {{ values[loop.index0] }}"></circle>{% endfor %}
             </g>
+            {% endfor %}
             <text x="34" y="216" font-size="10" fill="#7a8fba">{{ trend_chart.weeks[0] }}</text>
             <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">{{ trend_chart.weeks[-1] }}</text>
           </svg>
           <div class="chart-tooltip"></div>
         </div>
-        <div class="legend"><div class="legend-item"><span class="legend-dot" style="background:{{ meta.company_color }};"></span>Indice 3P {{ meta.company_name }}</div></div>
+        <div class="legend">
+          {% for key, label, color, values in series_def %}
+          <div class="legend-item"><span class="legend-dot" style="background:{{ color }};"></span>{{ label }}</div>
+          {% endfor %}
+        </div>
       </div>
 
       <div class="chart-card">
@@ -457,9 +474,9 @@
       <div class="cbar-row">
         <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} matchés</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ c.name }} — plus cher : {{ c.higher_pct }}%" style="width:{{ c.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);">{% if c.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ c.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);">{% if c.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ c.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ c.name }} — plus cher : {{ c.higher_pct }}%" style="width:{{ c.higher_pct }}%;background:var(--bad);">{% if c.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ c.higher_pct }}%</span>{% endif %}</div>
         </div>
         <div class="cbar-pi" style="color:{{ 'var(--good)' if c.pi < 101 else ('var(--bad)' if c.pi > 104 else '#c98c1a') }};">PI {{ c.pi }}</div>
       </div>
@@ -556,9 +573,9 @@
       <div class="cbar-row {{ 'cbar-row--you' if s.name == meta.company_name }}">
         <div><div class="cbar-name">{{ s.name }}</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ s.name }} — plus cher : {{ s.higher_pct }}%" style="width:{{ s.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);">{% if s.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ s.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);">{% if s.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ s.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ s.name }} — plus cher : {{ s.higher_pct }}%" style="width:{{ s.higher_pct }}%;background:var(--bad);">{% if s.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ s.higher_pct }}%</span>{% endif %}</div>
         </div>
         <div class="cbar-pi" style="color:{{ 'var(--good)' if s.pi < 101 else ('var(--bad)' if s.pi > 104 else '#c98c1a') }};">PI {{ s.pi }}</div>
       </div>
@@ -584,9 +601,9 @@
       <div class="cbar-row">
         <div><div class="cbar-name">{{ cat.name }}</div><div class="cbar-meta">{{ cat.count }} articles</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);">{% if cat.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);">{% if cat.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);">{% if cat.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.higher_pct }}%</span>{% endif %}</div>
         </div>
       </div>
       {% endfor %}

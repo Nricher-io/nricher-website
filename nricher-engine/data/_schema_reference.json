@@ -47,8 +47,10 @@
 
   "trend_chart": {
     "weeks": ["07 Apr", "14 Apr", "21 Apr", "28 Apr", "05 May", "12 May", "19 May", "26 May", "02 Jun", "09 Jun", "15 Jun"],
+    "price_index_1p": [100, 100, 99, 100, 99, 100, 99, 99, 100, 99, 99],
+    "price_index_2p": [104, 103, 103, 102, 102, 101, 101, 100, 100, 99, 99],
     "price_index_3p": [103, 102, 102, 104, 100, 101, 102, 100, 103, 102, 103],
-    "_comment": "Liste de points, le moteur recalcule automatiquement l'échelle et le tracé SVG."
+    "_comment": "Trois series 1P/2P/3P, meme echelle Y partagee. Le moteur recalcule automatiquement l'echelle et le trace SVG."
   },
 
   "attractiveness_stacked": [

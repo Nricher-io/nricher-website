@@ -62,34 +62,38 @@ SVG_Y_TOP = 20
 SVG_Y_BOTTOM = 200
 
 
-def compute_chart_geometry(weeks, values):
+def compute_multi_series_geometry(weeks, series):
     """
-    Calcule les points SVG (polyline + cercles) et les libellés d'axe Y
-    à partir d'une simple liste de valeurs d'indice prix.
-    Évite de devoir pré-calculer des coordonnées pixel à la main dans le JSON.
+    Calcule les points SVG (polyline + cercles) pour plusieurs series partageant
+    la meme echelle Y (ex: indice prix 1P/2P/3P sur un seul graphique), plus les
+    libelles d'axe Y. `series` est un dict {nom: [valeurs...]}.
+    Renvoie (dict nom -> {polyline, points}, y_max, y_mid, y_min).
     """
-    if not values:
-        return "", [], 100, 100, 100
+    all_values = [v for values in series.values() for v in values]
+    if not all_values:
+        return {name: {"polyline": "", "points": []} for name in series}, 100, 100, 100
 
-    y_min = min(values) - CHART_Y_PADDING
-    y_max = max(values) + CHART_Y_PADDING
+    y_min = min(all_values) - CHART_Y_PADDING
+    y_max = max(all_values) + CHART_Y_PADDING
     if y_max == y_min:
         y_max += 1  # évite une division par zéro si toutes les valeurs sont identiques
 
-    n = len(values)
+    n = len(weeks)
     step_x = (SVG_X_RIGHT - SVG_X_LEFT) / (n - 1) if n > 1 else 0
 
-    points = []
-    for i, v in enumerate(values):
-        x = SVG_X_LEFT + i * step_x
-        # inversion d'axe : valeur haute -> y petit (en haut du SVG)
-        y = SVG_Y_BOTTOM - ((v - y_min) / (y_max - y_min)) * (SVG_Y_BOTTOM - SVG_Y_TOP)
-        points.append((round(x, 1), round(y, 1)))
+    result = {}
+    for name, values in series.items():
+        points = []
+        for i, v in enumerate(values):
+            x = SVG_X_LEFT + i * step_x
+            # inversion d'axe : valeur haute -> y petit (en haut du SVG)
+            y = SVG_Y_BOTTOM - ((v - y_min) / (y_max - y_min)) * (SVG_Y_BOTTOM - SVG_Y_TOP)
+            points.append((round(x, 1), round(y, 1)))
+        polyline_str = " ".join(f"{x},{y}" for x, y in points)
+        result[name] = {"polyline": polyline_str, "points": points}
 
-    polyline_str = " ".join(f"{x},{y}" for x, y in points)
     y_mid = round((y_max + y_min) / 2)
-
-    return polyline_str, points, round(y_max), y_mid, round(y_min)
+    return result, round(y_max), y_mid, round(y_min)
 
 
 GAUGE_CX, GAUGE_CY, GAUGE_R = 60, 58, 42
@@ -137,11 +141,12 @@ def render_report(json_path, env):
     data = load_company_data(json_path)
 
     weeks = data["trend_chart"]["weeks"]
-    values = data["trend_chart"]["price_index_3p"]
-    polyline_str, points, y_max, y_mid, y_min = compute_chart_geometry(weeks, values)
-
-    # le dernier point du tracé est mis en évidence (cercle plus gros + contour blanc)
-    chart_circles = points
+    series = {
+        "1p": data["trend_chart"]["price_index_1p"],
+        "2p": data["trend_chart"]["price_index_2p"],
+        "3p": data["trend_chart"]["price_index_3p"],
+    }
+    series_geo, y_max, y_mid, y_min = compute_multi_series_geometry(weeks, series)
 
     for gauge in data["price_index_gauges"]["gauges"]:
         gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
@@ -160,8 +165,7 @@ def render_report(json_path, env):
         sellers_stacked=data["sellers_stacked"],
         category_stacked=data["category_stacked"],
         verdict=data["verdict"],
-        chart_points=polyline_str,
-        chart_circles=chart_circles,
+        series_geo=series_geo,
         chart_y_max=y_max,
         chart_y_mid=y_mid,
         chart_y_min=y_min,
