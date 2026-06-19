@@ -186,7 +186,8 @@
 
   .kpi-report .linechart-wrap{position:relative;}
   .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
-  .kpi-report .chart-pt:hover{r:7.5;}
+  .kpi-report .chart-pt.is-active{r:9.5;}
+  .kpi-report .chart-pt-hit{fill:transparent; cursor:default;}
   .kpi-report .chart-tooltip{
     position:absolute; transform:translate(-50%, calc(-100% - 14px)); left:0; top:0;
     background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
@@ -401,7 +402,10 @@
             <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
             <polyline points="{{ chart_points }}" fill="none" stroke="{{ meta.company_color }}" stroke-width="2.5"/>
             <g fill="{{ meta.company_color }}">
-              {% for pt in chart_circles %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="5" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ trend_chart.price_index_3p[loop.index0] }}"></circle>{% endfor %}
+              {% for pt in chart_circles %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="6.5"></circle>{% endfor %}
+            </g>
+            <g>
+              {% for pt in chart_circles %}<circle class="chart-pt-hit" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="16" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ trend_chart.price_index_3p[loop.index0] }}"></circle>{% endfor %}
             </g>
             <text x="34" y="216" font-size="10" fill="#7a8fba">{{ trend_chart.weeks[0] }}</text>
             <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">{{ trend_chart.weeks[-1] }}</text>
@@ -650,17 +654,22 @@
   document.querySelectorAll('.linechart-wrap').forEach(function (wrap) {
     var tip = wrap.querySelector('.chart-tooltip');
     if (!tip) return;
-    wrap.querySelectorAll('.chart-pt').forEach(function (pt) {
-      pt.addEventListener('mouseenter', function () {
-        var ptRect = pt.getBoundingClientRect();
+    var dots = wrap.querySelectorAll('.chart-pt');
+    var hits = wrap.querySelectorAll('.chart-pt-hit');
+    hits.forEach(function (hit, i) {
+      var dot = dots[i];
+      hit.addEventListener('mouseenter', function () {
+        var hitRect = hit.getBoundingClientRect();
         var wrapRect = wrap.getBoundingClientRect();
-        tip.textContent = pt.dataset.week + ' : ' + pt.dataset.value;
-        tip.style.left = (ptRect.left + ptRect.width / 2 - wrapRect.left) + 'px';
-        tip.style.top = (ptRect.top - wrapRect.top) + 'px';
+        tip.textContent = hit.dataset.week + ' : ' + hit.dataset.value;
+        tip.style.left = (hitRect.left + hitRect.width / 2 - wrapRect.left) + 'px';
+        tip.style.top = (hitRect.top + hitRect.height / 2 - wrapRect.top) + 'px';
         tip.classList.add('is-visible');
+        if (dot) dot.classList.add('is-active');
       });
-      pt.addEventListener('mouseleave', function () {
+      hit.addEventListener('mouseleave', function () {
         tip.classList.remove('is-visible');
+        if (dot) dot.classList.remove('is-active');
       });
     });
   });

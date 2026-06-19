@@ -186,7 +186,8 @@
 
   .kpi-report .linechart-wrap{position:relative;}
   .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
-  .kpi-report .chart-pt:hover{r:7.5;}
+  .kpi-report .chart-pt.is-active{r:9.5;}
+  .kpi-report .chart-pt-hit{fill:transparent; cursor:default;}
   .kpi-report .chart-tooltip{
     position:absolute; transform:translate(-50%, calc(-100% - 14px)); left:0; top:0;
     background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
@@ -514,7 +515,10 @@
             <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
             <polyline points="40.0,61.5 98.0,75.4 156.0,89.2 214.0,89.2 272.0,103.1 330.0,116.9 388.0,130.8 446.0,130.8 504.0,144.6 562.0,158.5 620.0,158.5" fill="none" stroke="#7C3AED" stroke-width="2.5"/>
             <g fill="#7C3AED">
-              <circle class="chart-pt" cx="40.0" cy="61.5" r="5" data-week="07 Apr" data-value="108"></circle><circle class="chart-pt" cx="98.0" cy="75.4" r="5" data-week="14 Apr" data-value="107"></circle><circle class="chart-pt" cx="156.0" cy="89.2" r="5" data-week="21 Apr" data-value="106"></circle><circle class="chart-pt" cx="214.0" cy="89.2" r="5" data-week="28 Apr" data-value="106"></circle><circle class="chart-pt" cx="272.0" cy="103.1" r="5" data-week="05 May" data-value="105"></circle><circle class="chart-pt" cx="330.0" cy="116.9" r="5" data-week="12 May" data-value="104"></circle><circle class="chart-pt" cx="388.0" cy="130.8" r="5" data-week="19 May" data-value="103"></circle><circle class="chart-pt" cx="446.0" cy="130.8" r="5" data-week="26 May" data-value="103"></circle><circle class="chart-pt" cx="504.0" cy="144.6" r="5" data-week="02 Jun" data-value="102"></circle><circle class="chart-pt" cx="562.0" cy="158.5" r="5" data-week="09 Jun" data-value="101"></circle><circle class="chart-pt" cx="620.0" cy="158.5" r="5" data-week="15 Jun" data-value="101"></circle>
+              <circle class="chart-pt" cx="40.0" cy="61.5" r="6.5"></circle><circle class="chart-pt" cx="98.0" cy="75.4" r="6.5"></circle><circle class="chart-pt" cx="156.0" cy="89.2" r="6.5"></circle><circle class="chart-pt" cx="214.0" cy="89.2" r="6.5"></circle><circle class="chart-pt" cx="272.0" cy="103.1" r="6.5"></circle><circle class="chart-pt" cx="330.0" cy="116.9" r="6.5"></circle><circle class="chart-pt" cx="388.0" cy="130.8" r="6.5"></circle><circle class="chart-pt" cx="446.0" cy="130.8" r="6.5"></circle><circle class="chart-pt" cx="504.0" cy="144.6" r="6.5"></circle><circle class="chart-pt" cx="562.0" cy="158.5" r="6.5"></circle><circle class="chart-pt" cx="620.0" cy="158.5" r="6.5"></circle>
+            </g>
+            <g>
+              <circle class="chart-pt-hit" cx="40.0" cy="61.5" r="16" data-week="07 Apr" data-value="108"></circle><circle class="chart-pt-hit" cx="98.0" cy="75.4" r="16" data-week="14 Apr" data-value="107"></circle><circle class="chart-pt-hit" cx="156.0" cy="89.2" r="16" data-week="21 Apr" data-value="106"></circle><circle class="chart-pt-hit" cx="214.0" cy="89.2" r="16" data-week="28 Apr" data-value="106"></circle><circle class="chart-pt-hit" cx="272.0" cy="103.1" r="16" data-week="05 May" data-value="105"></circle><circle class="chart-pt-hit" cx="330.0" cy="116.9" r="16" data-week="12 May" data-value="104"></circle><circle class="chart-pt-hit" cx="388.0" cy="130.8" r="16" data-week="19 May" data-value="103"></circle><circle class="chart-pt-hit" cx="446.0" cy="130.8" r="16" data-week="26 May" data-value="103"></circle><circle class="chart-pt-hit" cx="504.0" cy="144.6" r="16" data-week="02 Jun" data-value="102"></circle><circle class="chart-pt-hit" cx="562.0" cy="158.5" r="16" data-week="09 Jun" data-value="101"></circle><circle class="chart-pt-hit" cx="620.0" cy="158.5" r="16" data-week="15 Jun" data-value="101"></circle>
             </g>
             <text x="34" y="216" font-size="10" fill="#7a8fba">07 Apr</text>
             <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">15 Jun</text>
@@ -1135,17 +1139,22 @@
   document.querySelectorAll('.linechart-wrap').forEach(function (wrap) {
     var tip = wrap.querySelector('.chart-tooltip');
     if (!tip) return;
-    wrap.querySelectorAll('.chart-pt').forEach(function (pt) {
-      pt.addEventListener('mouseenter', function () {
-        var ptRect = pt.getBoundingClientRect();
+    var dots = wrap.querySelectorAll('.chart-pt');
+    var hits = wrap.querySelectorAll('.chart-pt-hit');
+    hits.forEach(function (hit, i) {
+      var dot = dots[i];
+      hit.addEventListener('mouseenter', function () {
+        var hitRect = hit.getBoundingClientRect();
         var wrapRect = wrap.getBoundingClientRect();
-        tip.textContent = pt.dataset.week + ' : ' + pt.dataset.value;
-        tip.style.left = (ptRect.left + ptRect.width / 2 - wrapRect.left) + 'px';
-        tip.style.top = (ptRect.top - wrapRect.top) + 'px';
+        tip.textContent = hit.dataset.week + ' : ' + hit.dataset.value;
+        tip.style.left = (hitRect.left + hitRect.width / 2 - wrapRect.left) + 'px';
+        tip.style.top = (hitRect.top + hitRect.height / 2 - wrapRect.top) + 'px';
         tip.classList.add('is-visible');
+        if (dot) dot.classList.add('is-active');
       });
-      pt.addEventListener('mouseleave', function () {
+      hit.addEventListener('mouseleave', function () {
         tip.classList.remove('is-visible');
+        if (dot) dot.classList.remove('is-active');
       });
     });
   });
