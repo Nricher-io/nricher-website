@@ -532,6 +532,7 @@
       "rp.sellers_table.col_analysed": "Analyzed",
       "rp.sellers_table.col_matched": "Matched",
       "rp.you": "(you)",
+      "rp.matched": "matched",
       "rp.seller_analysis.title": "Seller analysis — % breakdown by seller",
       "rp.seller_analysis.sub": "Share of items cheaper, aligned, more expensive — seller by seller.",
       "rp.category.title": "Category analysis — % breakdown by category",

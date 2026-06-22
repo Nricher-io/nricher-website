@@ -4,6 +4,22 @@
   var lang = localStorage.getItem('nr-lang') || 'fr';
   var translations = window.NRICHER_TRANSLATIONS || {};
   var originalTexts = {};
+  var originalTips = [];
+
+  // Hover-tooltip (data-tip) text mixes static French words with dynamic values
+  // (names, weeks, percentages) baked in server-side — translate just the known words.
+  var TIP_WORDS = [
+    ['Moins cher', 'Cheaper'],
+    ['Aligné', 'Aligned'],
+    ['Plus cher', 'More expensive'],
+    ['moins cher', 'cheaper'],
+    ['aligné', 'aligned'],
+    ['plus cher', 'more expensive']
+  ];
+  function translateTip(text) {
+    TIP_WORDS.forEach(function (pair) { text = text.split(pair[0]).join(pair[1]); });
+    return text;
+  }
 
   function initTranslation() {
     // 1. Scan and store original French values for all data-i18n elements
@@ -20,6 +36,11 @@
           ariaLabel: el.getAttribute('aria-label') || null
         };
       }
+    });
+
+    // 1b. Scan and store original French values for all hover-tooltip (data-tip) elements
+    document.querySelectorAll('[data-tip]').forEach(function (el) {
+      originalTips.push({ el: el, fr: el.getAttribute('data-tip') });
     });
 
     // 2. Apply saved/default language
@@ -127,6 +148,11 @@
         var ariaTrans = transDict[key + '.aria-label'];
         if (ariaTrans !== undefined) el.setAttribute('aria-label', ariaTrans);
       }
+    });
+
+    // 3b. Translate hover-tooltip (data-tip) text
+    originalTips.forEach(function (t) {
+      t.el.setAttribute('data-tip', l === 'fr' ? t.fr : translateTip(t.fr));
     });
 
     // 4. Update the active class of switcher options across the DOM

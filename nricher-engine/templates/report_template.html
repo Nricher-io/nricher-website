@@ -584,7 +584,7 @@
     <div class="cbar-list">
       {% for c in competitors %}
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} matchés</div></div>
+        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);">{% if c.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ c.lower_pct }}%</span>{% endif %}</div>
           <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);">{% if c.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ c.equal_pct }}%</span>{% endif %}</div>
