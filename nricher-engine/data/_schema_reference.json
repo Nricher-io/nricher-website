@@ -25,13 +25,14 @@
 
   "price_index_gauges": {
     "_comment": "Reproduit le panneau 'Pricing analysis' de Pricing W/O T. gauges: 3 jauges recommandees (peut en accueillir plus si besoin).",
+    "_comment_gauges": "Par jauge, seuls value/label/ref_prev/desc sont a fournir. needle_x/needle_y (position de l'aiguille), bar_pct (remplissage de la barre), severity (couleur : vert <100, bleu =100, rouge >100) et delta_pct (variation vs ref_prev) sont calcules automatiquement par generate_report.py a partir de value et ref_prev — ne pas les saisir a la main, ils seraient ignores/recalcules.",
     "updated_label": "18/06 17:00",
     "analysed": "1 416 281",
     "matched": "489 983",
     "gauges": [
-      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "PI Price All", "ref_prev": "S24 : 103", "desc": "plus cher sur l'ensemble des offres concurrentes"},
-      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": "plus cher en moyenne que la meilleure offre du marché"},
-      {"value": 102, "delta_pct": "+2%", "severity": "warn", "label": "3P same min",  "ref_prev": "S24 : 102", "desc": "plus chers entre vendeurs identiques vs concurrents"}
+      {"value": 103, "label": "PI Price All", "ref_prev": "S24 : 103", "desc": "plus cher sur l'ensemble des offres concurrentes"},
+      {"value": 103, "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": "plus cher en moyenne que la meilleure offre du marché"},
+      {"value": 102, "label": "3P same min",  "ref_prev": "S24 : 102", "desc": "plus chers entre vendeurs identiques vs concurrents"}
     ]
   },
 

@@ -373,7 +373,7 @@
         <div class="kpi__num {{ g.severity }}">{{ g.value }}</div>
         <div class="kpi__label">{{ g.label }}</div>
         {% if g.desc %}<div class="kpi__desc">{{ g.desc }}</div>{% endif %}
-        <div class="kpi__bar"><div style="width:{{ ((g.value - 85) / 35 * 100) | round(0, 'common') }}%;background:var(--{{ g.severity }});"></div></div>
+        <div class="kpi__bar"><div style="width:{{ g.bar_pct }}%;background:var(--{{ g.severity }});"></div></div>
         <div class="kpi__ref"><span>90</span><span>{{ g.ref_prev }}</span><span>120</span></div>
       </div>
       {% endfor %}

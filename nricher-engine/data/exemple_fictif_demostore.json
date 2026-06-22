@@ -36,7 +36,7 @@
       {"week": "S24", "top": 106, "middle": 109, "low": 98},
       {"week": "S25", "top": 103, "middle": 104, "low": 96}
     ],
-    "note": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--good);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine."
+    "note": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--bad);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine."
   },
 
   "trend_chart": {

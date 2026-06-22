@@ -41,6 +41,7 @@ import json
 import argparse
 import glob
 import math
+import re
 import sys
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
@@ -114,6 +115,16 @@ def compute_gauge_needle(value):
     return round(x, 1), round(y, 1)
 
 
+def compute_gauge_bar_pct(value):
+    """
+    Remplissage (0-100%) de la barre sous chaque jauge, sur la meme echelle
+    90-120 que l'aiguille (compute_gauge_needle) — les deux doivent toujours
+    rester synchronises, d'ou la reutilisation des memes bornes GAUGE_VMIN/VMAX.
+    """
+    frac = (value - GAUGE_VMIN) / (GAUGE_VMAX - GAUGE_VMIN)
+    return round(max(0, min(100, frac * 100)))
+
+
 def compute_pi_severity(value):
     """
     Code couleur uniforme pour toute valeur de Price Index dans le rapport :
@@ -124,6 +135,23 @@ def compute_pi_severity(value):
     if value == 100:
         return "blue"
     return "bad"
+
+
+def compute_gauge_delta_pct(value, ref_prev):
+    """
+    Calcule automatiquement la variation (ex: "-3%") entre la valeur actuelle d'une
+    jauge et sa reference passee, en extrayant le nombre final de ref_prev (ex:
+    "S24 : 104" -> 104). Remplace un champ qui etait jusque-la saisi a la main et
+    pouvait se desynchroniser de la vraie valeur (ex: 104 -> 101 affiche "+1%").
+    """
+    match = re.search(r"(\d+(?:[.,]\d+)?)\s*$", str(ref_prev))
+    if not match:
+        return None
+    ref_value = float(match.group(1).replace(",", "."))
+    if ref_value == 0:
+        return None
+    pct = (value - ref_value) / ref_value * 100
+    return f"{pct:+.0f}%"
 
 
 DONUT_CX, DONUT_CY, DONUT_R = 60, 60, 50
@@ -176,7 +204,7 @@ def compute_competitors_overview(competitors):
 
     ranking = sorted(competitors, key=lambda c: c["pi"])
     for c in ranking:
-        c["bar_pct"] = max(0, min(100, round((c["pi"] - 90) / 30 * 100)))
+        c["bar_pct"] = compute_gauge_bar_pct(c["pi"])
 
     return {
         "avg_lower": avg_lower, "avg_equal": avg_equal, "avg_higher": avg_higher,
@@ -220,7 +248,11 @@ def render_report(json_path, env):
 
     for gauge in data["price_index_gauges"]["gauges"]:
         gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
+        gauge["bar_pct"] = compute_gauge_bar_pct(gauge["value"])
         gauge["severity"] = compute_pi_severity(gauge["value"])
+        computed_delta = compute_gauge_delta_pct(gauge["value"], gauge.get("ref_prev"))
+        if computed_delta is not None:
+            gauge["delta_pct"] = computed_delta
 
     competitors_overview, competitors_ranking = compute_competitors_overview(data["competitors"])
 
