@@ -161,11 +161,11 @@
   <div class="hero__glow hero__glow--blue" data-glow></div>
   <div class="container" style="position:relative;z-index:2;">
     <div style="text-align:center;max-width:700px;margin-inline:auto;">
-      <span class="eyebrow reveal">Prendre rendez-vous</span>
-      <h1 class="page-hero__title reveal" data-delay="1" style="margin-top:20px;">
+      <span class="eyebrow reveal" data-i18n="ct.hero.eyebrow">Prendre rendez-vous</span>
+      <h1 class="page-hero__title reveal" data-delay="1" style="margin-top:20px;" data-i18n="ct.hero.title">
         Vous méritez un expert,<br><em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">pas un chatbot.</em>
       </h1>
-      <p class="page-hero__sub reveal" data-delay="2" style="margin-inline:auto;margin-top:20px;">
+      <p class="page-hero__sub reveal" data-delay="2" style="margin-inline:auto;margin-top:20px;" data-i18n="ct.hero.sub">
         Vous souhaitez prendre rendez-vous avec un de nos experts ? On vous répond sous 24&nbsp;h.
       </p>
     </div>
@@ -180,24 +180,24 @@
       <!-- Gauche : copy -->
       <div class="contact-copy reveal">
         <span class="eyebrow" data-i18n="ct.left.eyebrow">Ce que vous gagnez</span>
-        <h2 class="contact-copy__title">Vous êtes mieux informés.<br>Vous ne ratez aucune <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">opportunité.</em></h2>
-        <p class="contact-copy__sub">En 30 minutes avec l'équipe nricher, vous repartez avec une vision claire de ce que la donnée marché peut changer dans votre quotidien.</p>
+        <h2 class="contact-copy__title" data-i18n="ct.left.title">Vous êtes mieux informés.<br>Vous ne ratez aucune <em class="grad-text" style="-webkit-text-fill-color:transparent;font-style:normal;">opportunité.</em></h2>
+        <p class="contact-copy__sub" data-i18n="ct.left.sub">En 30 minutes avec l'équipe nricher, vous repartez avec une vision claire de ce que la donnée marché peut changer dans votre quotidien.</p>
         <div class="contact-copy__features">
           <div class="contact-feat">
             <div class="contact-feat__dot"></div>
-            <span class="contact-feat__text">Une démo personnalisée sur votre catégorie et vos concurrents réels</span>
+            <span class="contact-feat__text" data-i18n="ct.left.li1">Une démo personnalisée sur votre catégorie et vos concurrents réels</span>
           </div>
           <div class="contact-feat">
             <div class="contact-feat__dot"></div>
-            <span class="contact-feat__text">Les opportunités manquées identifiées en live sur votre catalogue</span>
+            <span class="contact-feat__text" data-i18n="ct.left.li2">Les opportunités manquées identifiées en live sur votre catalogue</span>
           </div>
           <div class="contact-feat">
             <div class="contact-feat__dot"></div>
-            <span class="contact-feat__text">Un chiffrage rapide de l'impact potentiel sur votre CA</span>
+            <span class="contact-feat__text" data-i18n="ct.left.li3">Un chiffrage rapide de l'impact potentiel sur votre CA</span>
           </div>
           <div class="contact-feat">
             <div class="contact-feat__dot"></div>
-            <span class="contact-feat__text">Aucun engagement, aucune obligation, juste de la clarté</span>
+            <span class="contact-feat__text" data-i18n="ct.left.li4">Aucun engagement, aucune obligation, juste de la clarté</span>
           </div>
         </div>
       </div>
@@ -207,11 +207,11 @@
         <form class="contact-form-card" action="https://formspree.io/f/xqeoyvlb" method="POST" data-ajax data-redirect="merci.html">
           <div class="form-row">
             <div class="form-group">
-              <label for="prenom">Prénom</label>
+              <label for="prenom" data-i18n="ct.form.firstname">Prénom</label>
               <input type="text" id="prenom" name="Prénom" placeholder="Thomas" required />
             </div>
             <div class="form-group">
-              <label for="nom">Nom</label>
+              <label for="nom" data-i18n="ct.form.lastname">Nom</label>
               <input type="text" id="nom" name="Nom" placeholder="Dupont" required />
             </div>
           </div>
@@ -220,27 +220,27 @@
             <input type="email" id="email" name="Email" placeholder="thomas@monentreprise.com" required />
           </div>
           <div class="form-group">
-            <label for="entreprise">Entreprise</label>
+            <label for="entreprise" data-i18n="ct.form.company">Entreprise</label>
             <input type="text" id="entreprise" name="Entreprise" placeholder="Mon Entreprise SAS" required />
           </div>
           <div class="form-group">
-            <label for="sujet">Objet de la demande</label>
+            <label for="sujet" data-i18n="ct.form.subject">Objet de la demande</label>
             <select id="sujet" name="Sujet">
-              <option value="">Sélectionner…</option>
-              <option value="demo">Demander une démo</option>
-              <option value="prix">Question tarifaire</option>
-              <option value="partenariat">Partenariat</option>
-              <option value="autre">Autre</option>
+              <option value="" data-i18n="ct.form.subject.select">Sélectionner…</option>
+              <option value="demo" data-i18n="ct.form.subject.demo">Demander une démo</option>
+              <option value="prix" data-i18n="ct.form.subject.price">Question tarifaire</option>
+              <option value="partenariat" data-i18n="ct.form.subject.partner">Partenariat</option>
+              <option value="autre" data-i18n="ct.form.subject.other">Autre</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message <span style="font-weight:400;color:var(--muted)">(optionnel)</span></label>
-            <textarea id="message" name="Message" placeholder="Dites-nous en quelques mots ce que vous cherchez…"></textarea>
+            <label for="message" data-i18n="ct.form.message">Message <span style="font-weight:400;color:var(--muted)">(optionnel)</span></label>
+            <textarea id="message" name="Message" data-i18n="ct.form.message" placeholder="Dites-nous en quelques mots ce que vous cherchez…"></textarea>
           </div>
           <div class="form-submit">
-            <button type="submit" class="btn btn-primary btn-lg">Envoyer ma demande →</button>
+            <button type="submit" class="btn btn-primary btn-lg" data-i18n="ct.form.submit">Envoyer ma demande →</button>
           </div>
-          <p class="form-note">Réponse garantie sous 24&nbsp;h · Aucun engagement</p>
+          <p class="form-note" data-i18n="ct.form.note">Réponse garantie sous 24&nbsp;h · Aucun engagement</p>
         </form>
       </div>
 

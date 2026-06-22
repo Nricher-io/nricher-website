@@ -191,10 +191,10 @@
       
       // Case Studies Modals
       "cc.modal.close": "Close",
-      "cc.modal.ctx": "01 Context",
-      "cc.modal.block": "02 Blocking Point",
-      "cc.modal.sol": "03 nricher Solution: ",
-      "cc.modal.scope": "04 Scope",
+      "cc.modal.ctx": "Context",
+      "cc.modal.block": "Blocking Point",
+      "cc.modal.sol": "nricher Solution: ",
+      "cc.modal.scope": "Scope",
 
       // Modal 1 (Furniture)
       "cc.m1.title": "French Furniture Leader",

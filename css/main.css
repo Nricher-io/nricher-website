@@ -250,6 +250,8 @@ p { text-wrap: pretty; }
 .logo { display: inline-flex; align-items: center; }
 .logo__img { height: 42px; width: auto; display: block; }
 .logo__i { position: relative; display: inline-block; }
+/* Logo nricher utilise en icone inline dans un titre — plafond fixe, jamais affecte par le contexte (langue, em du parent, etc.) */
+.icon-inline-logo { height: 0.82em !important; max-height: 30px !important; width: auto !important; max-width: 90px !important; vertical-align: baseline; display: inline-block; position: relative; top: 0.02em; }
 .logo__dot {
   position: absolute; left: 50%; top: 0.25em;
   width: 0.22em; height: 0.22em; border-radius: 50%;
@@ -1853,13 +1855,13 @@ body.modal-open { overflow: hidden; }
 .lang-switch__btn {
   display: inline-flex; align-items: center; justify-content: center;
   width: 38px; height: 38px; border-radius: 50%; padding: 0;
-  border: 1.5px solid var(--border); background: var(--card-2);
-  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+  border: 1.5px solid var(--blue); background: var(--card-2);
+  transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
   overflow: hidden;
 }
 body:not(.pointer-coarse) .lang-switch__btn { cursor: none; }
-.lang-switch__btn:hover { border-color: var(--mint); background: #fff; transform: translateY(-1px); }
-.lang-switch.is-open .lang-switch__btn { border-color: var(--blue); }
+.lang-switch__btn:hover { background: rgba(46,88,202,0.1); box-shadow: 0 4px 16px rgba(46,88,202,0.18); transform: translateY(-1px); }
+.lang-switch.is-open .lang-switch__btn { background: rgba(46,88,202,0.12); }
 
 .lang-switch__btn .flag-icon { width: 21px; height: 15px; border-radius: 2px; }
 html[lang="fr"] .lang-switch__btn .flag-icon--en,
