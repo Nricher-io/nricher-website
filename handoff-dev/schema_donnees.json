@@ -1,5 +1,6 @@
 {
   "_comment": "Schéma de référence — un fichier de ce type par entreprise. Toutes les clés sont obligatoires sauf mention contraire.",
+  "_comment_bilingue": "Les textes rédigés (hero.title_line1/title_line2/lede, hero.stats[].label, price_index_gauges.gauges[].desc, priority_table.note, verdict.tag/headline/text, verdict.figures[].label) acceptent soit une simple chaîne (français uniquement, pas de bouton EN sur ce champ), soit un objet {\"fr\": \"...\", \"en\": \"...\"} pour que le sélecteur de langue du site traduise ce champ. Voir ci-dessous pour des exemples des deux formats.",
 
   "meta": {
     "company_name": "NOM_AFFICHE",
@@ -13,26 +14,26 @@
   },
 
   "hero": {
-    "title_line1": "Le marché a bougé.",
-    "title_line2": "Votre prix, un peu moins.",
-    "lede": "418 794 articles analysés cette semaine sur 13 concurrents directs.",
+    "title_line1": {"fr": "Le marché a bougé.", "en": "The market has moved."},
+    "title_line2": {"fr": "Votre prix, un peu moins.", "en": "Your price, a little less."},
+    "lede": {"fr": "418 794 articles analysés cette semaine sur 13 concurrents directs.", "en": "418,794 items analyzed this week across 13 direct competitors."},
     "stats": [
-      {"value": "418,794", "label": "articles analysés (+2,1% vs S24)"},
-      {"value": "200,939", "label": "articles matchés concurrence"},
-      {"value": "103", "delta": "up", "label": "Price Index global (S24 : 103)"},
-      {"value": "13", "label": "enseignes suivies en temps réel"}
+      {"value": "418,794", "label": {"fr": "articles analysés (+2,1% vs S24)", "en": "items analyzed (+2.1% vs S24)"}},
+      {"value": "200,939", "label": {"fr": "articles matchés concurrence", "en": "items matched with competitors"}},
+      {"value": "103", "delta": "up", "label": {"fr": "Price Index global (S24 : 103)", "en": "Global Price Index (S24: 103)"}}
     ]
   },
 
   "price_index_gauges": {
     "_comment": "Reproduit le panneau 'Pricing analysis' de Pricing W/O T. gauges: 3 jauges recommandees (peut en accueillir plus si besoin).",
+    "_comment_gauges": "Par jauge, seuls value/label/ref_prev/desc sont a fournir. needle_x/needle_y (position de l'aiguille), bar_pct (remplissage de la barre), severity (couleur : vert <100, bleu =100, rouge >100) et delta_pct (variation vs ref_prev) sont calcules automatiquement par generate_report.py a partir de value et ref_prev — ne pas les saisir a la main, ils seraient ignores/recalcules.",
     "updated_label": "18/06 17:00",
     "analysed": "1 416 281",
     "matched": "489 983",
     "gauges": [
-      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "PI Price All", "ref_prev": "S24 : 103", "desc": "plus cher sur l'ensemble des offres concurrentes"},
-      {"value": 103, "delta_pct": "+3%", "severity": "warn", "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": "plus cher en moyenne que la meilleure offre du marché"},
-      {"value": 102, "delta_pct": "+2%", "severity": "warn", "label": "3P same min",  "ref_prev": "S24 : 102", "desc": "plus chers entre vendeurs identiques vs concurrents"}
+      {"value": 103, "label": "PI Price All", "ref_prev": "S24 : 103", "desc": {"fr": "plus cher sur l'ensemble des offres concurrentes", "en": "more expensive across the full set of competitor offers"}},
+      {"value": 103, "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": {"fr": "plus cher en moyenne que la meilleure offre du marché", "en": "more expensive on average than the best market offer"}},
+      {"value": 102, "label": "3P same min",  "ref_prev": "S24 : 102", "desc": {"fr": "plus chers entre vendeurs identiques vs concurrents", "en": "more expensive between identical sellers vs competitors"}}
     ]
   },
 
@@ -42,13 +43,15 @@
       {"week": "S24", "top": 116, "middle": 117, "low": 102},
       {"week": "S25", "top": 118, "middle": 118, "low": 113}
     ],
-    "note": "Lecture libre, générée automatiquement à partir des deltas ci-dessus."
+    "note": {"fr": "Lecture libre, générée automatiquement à partir des deltas ci-dessus.", "en": "Free-form reading, generated automatically from the deltas above."}
   },
 
   "trend_chart": {
     "weeks": ["07 Apr", "14 Apr", "21 Apr", "28 Apr", "05 May", "12 May", "19 May", "26 May", "02 Jun", "09 Jun", "15 Jun"],
+    "price_index_1p": [100, 100, 99, 100, 99, 100, 99, 99, 100, 99, 99],
+    "price_index_2p": [104, 103, 103, 102, 102, 101, 101, 100, 100, 99, 99],
     "price_index_3p": [103, 102, 102, 104, 100, 101, 102, 100, 103, 102, 103],
-    "_comment": "Liste de points, le moteur recalcule automatiquement l'échelle et le tracé SVG."
+    "_comment": "Trois series 1P/2P/3P, meme echelle Y partagee. Le moteur recalcule automatiquement l'echelle et le trace SVG."
   },
 
   "attractiveness_stacked": [
@@ -80,17 +83,17 @@
 
   "category_stacked": [
     {"_comment": "Reproduit '% Market Analysis > Category analysis' (barres empilées).",
-     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k"}
+     "name": "Mobilier", "lower_pct": 30, "equal_pct": 47, "higher_pct": 23, "count": "113k", "pi": 106}
   ],
 
   "verdict": {
-    "tag": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE",
-    "headline": "1 528 articles vendus plus cher que tout le marché. Chaque semaine.",
-    "text": "Sur les 2 709 produits où l'on matche un vendeur identique, 1 528 sont positionnés au-dessus du prix le plus bas constaté ailleurs.",
+    "tag": {"fr": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE", "en": "WHAT NRICHER SEES THAT YOU DON'T YET"},
+    "headline": {"fr": "1 528 articles vendus plus cher que tout le marché. Chaque semaine.", "en": "1,528 items sold more expensively than the whole market. Every week."},
+    "text": {"fr": "Sur les 2 709 produits où l'on matche un vendeur identique, 1 528 sont positionnés au-dessus du prix le plus bas constaté ailleurs.", "en": "Out of 2,709 products matched to an identical seller, 1,528 are priced above the lowest price found elsewhere."},
     "figures": [
-      {"value": "+7%", "label": "d'écart vs la meilleure offre du marché (3P)"},
-      {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
-      {"value": "418k", "label": "articles suivis en continu, 13 enseignes"}
+      {"value": "+7%", "label": {"fr": "d'écart vs la meilleure offre du marché (3P)", "en": "gap vs the best market offer (3P)"}},
+      {"value": "-5 pts", "label": {"fr": "de gain sur les priorités moyennes en 1 semaine", "en": "gained on medium priorities in 1 week"}},
+      {"value": "418k", "label": {"fr": "articles suivis en continu", "en": "items tracked continuously"}}
     ]
   }
 }

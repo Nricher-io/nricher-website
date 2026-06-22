@@ -8,25 +8,23 @@
 <link rel="icon" href="../favicon.png" type="image/png" sizes="128x128">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <title>Weekly KPIs — {{ meta.company_name }} × nricher</title>
-<link rel="stylesheet" href="../css/main.css" />
+<link rel="stylesheet" href="../css/main.css?v=20260622" />
 <style>
   :root{
-    --brandcolor: {{ meta.company_color }};
     --bad:  #e2452f;  --bad-bg: rgba(226,69,47,0.10);
-    --warn: #ffc14d;  --warn-bg: rgba(255,176,32,0.16);
     --good: #1fae7a;  --good-bg: rgba(31,174,122,0.12);
   }
 
-  /* Bandeau "ENTREPRISE x nricher" — sous la vraie nav du site (fixed, 80px) */
-  .report-bar{position:sticky;top:80px;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);margin-top:80px;}
-  .report-bar__inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px;}
-  .brandbar{display:flex;align-items:center;gap:14px;}
-  .brandbar .x{color:#C7CCD6;font-size:16px;}
-  .logo-company{font-family:var(--font-display);font-weight:700;font-size:21px;color:var(--brandcolor);letter-spacing:-0.01em;}
-  .logo-nricher-img{height:19px;width:auto;display:block;}
-  .report-bar__right{font-family:var(--font-body);font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:9px;}
-  .livedot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(96,239,190,0.6);animation:rb-pulse 2.2s infinite;}
-  @keyframes rb-pulse{0%{box-shadow:0 0 0 0 rgba(96,239,190,.55);}70%{box-shadow:0 0 0 7px rgba(96,239,190,0);}100%{box-shadow:0 0 0 0 rgba(96,239,190,0);}}
+  /* Sommaire — sous la vraie nav du site (fixed, 80px) */
+  .toc-bar{position:sticky;top:80px;margin-top:80px;z-index:45;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .toc-bar__inner{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px;}
+  .toc-bar__links{display:flex;gap:4px;overflow-x:auto;align-items:center;scrollbar-width:none;min-width:0;}
+  .toc-bar__links::-webkit-scrollbar{display:none;}
+  .toc-bar__link{flex-shrink:0;font-family:var(--font-body);font-weight:600;font-size:0.82rem;color:var(--text-2);padding:8px 14px;border-radius:var(--r-pill);white-space:nowrap;transition:background .2s ease, color .2s ease;}
+  .toc-bar__link:hover{background:rgba(96,239,190,0.08);color:var(--text);}
+  .toc-bar__link.is-active{background:rgba(46,88,202,0.1);color:var(--blue);}
+  .toc-bar__brand{flex-shrink:0;font-family:var(--font-display);font-weight:700;font-size:0.92rem;white-space:nowrap;letter-spacing:-0.01em;}
+  .kpi-report .section[id]{scroll-margin-top:96px;}
 
   /* Contenu du rapport — scope isole pour ne jamais entrer en conflit avec les classes du site (.hero, .section, .container, .btn, .tag, .eyebrow...) */
   .kpi-report{ --kr-container: 1180px; }
@@ -60,24 +58,21 @@
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
   .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);}
   .kpi-report .kpi:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
-  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:center;}
-  .kpi-report .kpi__dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
-  .kpi-report .kpi__dot.bad{background:var(--bad);box-shadow:0 0 0 4px var(--bad-bg);}
-  .kpi-report .kpi__dot.warn{background:#c98c1a;box-shadow:0 0 0 4px var(--warn-bg);}
-  .kpi-report .kpi__dot.good{background:var(--good);box-shadow:0 0 0 4px var(--good-bg);}
+  .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
+  .kpi-report .kpi__gauge{width:84px;height:auto;flex-shrink:0;margin-top:-6px;}
   .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1;margin-top:18px;}
-  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);}
+  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.good{color:var(--good);} .kpi-report .kpi__num.blue{color:var(--blue);}
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
   .kpi-report .kpi__chip.bad{background:var(--bad-bg);color:var(--bad);}
-  .kpi-report .kpi__chip.warn{background:var(--warn-bg);color:#c98c1a;}
   .kpi-report .kpi__chip.good{background:var(--good-bg);color:var(--good);}
+  .kpi-report .kpi__chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .kpi__label{margin-top:10px;font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
   .kpi-report .kpi__desc{margin-top:6px;font-size:0.85rem;color:var(--muted);line-height:1.5;min-height:2.6em;}
   .kpi-report .kpi__bar{height:7px;background:var(--card-2);border-radius:var(--r-pill);margin-top:20px;overflow:hidden;}
   .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);transition:width .6s var(--ease-out);}
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;opacity:0.08;}
-  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.warn{color:#c98c1a;} .kpi-report .kpi__ghost.good{color:var(--good);}
+  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.good{color:var(--good);} .kpi-report .kpi__ghost.blue{color:var(--blue);}
 
   .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.02);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
@@ -93,6 +88,7 @@
   .kpi-report .prio-chip.bad{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .prio-chip.good{background:var(--good-bg);color:var(--good);}
   .kpi-report .prio-chip.neu{background:var(--card-2);color:var(--text-2);}
+  .kpi-report .prio-chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .prio-chip__d{font-size:0.7rem;opacity:0.75;}
   .kpi-report .note{margin-top:20px;font-size:0.95rem;color:var(--text-2);max-width:680px;line-height:1.6;}
   .kpi-report .note strong{color:var(--text);}
@@ -116,10 +112,30 @@
   .kpi-report .cbar-row{display:grid;grid-template-columns:150px 1fr 90px;align-items:center;gap:16px;}
   .kpi-report .cbar-name{font-size:0.92rem;font-weight:700;}
   .kpi-report .cbar-meta{font-size:11px;color:var(--muted);}
-  .kpi-report .cbar-track{height:20px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2);}
+  .kpi-report .cbar-track{height:22px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2);}
   .kpi-report .cbar-track > div:first-child{border-radius:7px 0 0 7px;}
   .kpi-report .cbar-track > div:last-child{border-radius:0 7px 7px 0;}
-  .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;}
+  .kpi-report .cbar-track > div{display:flex;align-items:center;justify-content:center;}
+  .kpi-report .cbar-seg__pct{font-size:10.5px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
+  .kpi-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.92rem;text-align:right;white-space:nowrap;}
+  .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
+  .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
+  .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
+
+  .kpi-report .donut-wrap{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap;height:100%;}
+  .kpi-report .donut-svg{width:140px;height:140px;flex-shrink:0;}
+  .kpi-report .donut-svg circle{transition:stroke-width .2s ease, opacity .2s ease; cursor:default;}
+  .kpi-report .donut-svg circle:hover{stroke-width:23;}
+  .kpi-report .donut-legend{display:flex;flex-direction:column;gap:10px;}
+  .kpi-report .donut-legend .legend-item{font-size:0.88rem;font-weight:600;color:var(--text-2);}
+
+  .kpi-report .rank-list{display:flex;flex-direction:column;gap:11px;margin-top:8px;}
+  .kpi-report .rank-row{display:grid;grid-template-columns:118px 1fr 38px;align-items:center;gap:12px;}
+  .kpi-report .rank-name{font-size:0.85rem;font-weight:600;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .kpi-report .rank-bar-track{height:14px;border-radius:var(--r-pill);background:var(--card-2);overflow:visible;}
+  .kpi-report .rank-bar{height:100%;border-radius:var(--r-pill);transition:filter .2s ease, transform .2s ease;position:relative;}
+  .kpi-report .rank-bar:hover{filter:brightness(1.12);transform:scaleY(1.2);}
+  .kpi-report .rank-pi{font-family:var(--font-display);font-weight:700;font-size:0.85rem;text-align:right;}
 
   .kpi-report .sellers-wrap{max-height:430px;overflow-y:auto;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--card);}
   .kpi-report table.sellers{width:100%;border-collapse:collapse;font-size:0.88rem;}
@@ -162,7 +178,6 @@
     .kpi-report .section-header{align-items:flex-start;}
   }
   @media (max-width:560px){
-    .report-bar__inner{flex-direction:column;align-items:flex-start;height:auto;padding-block:14px;gap:8px;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
     .kpi-report table.prio-table th, .kpi-report table.prio-table td{padding:12px 8px;}
   }
@@ -189,7 +204,8 @@
 
   .kpi-report .linechart-wrap{position:relative;}
   .kpi-report .chart-pt{transition:r .2s ease; cursor:default;}
-  .kpi-report .chart-pt:hover{r:7.5;}
+  .kpi-report .chart-pt.is-active{r:9.5;}
+  .kpi-report .chart-pt-hit{fill:transparent; cursor:default;}
   .kpi-report .chart-tooltip{
     position:absolute; transform:translate(-50%, calc(-100% - 14px)); left:0; top:0;
     background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
@@ -204,8 +220,14 @@
   .kpi-report .chart-tooltip.is-visible{opacity:1; transform:translate(-50%, calc(-100% - 18px));}
 
   .kpi-report .cbar-row--you{background:rgba(96,239,190,0.07); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
-  .kpi-report .cbar-row--you .cbar-name::after{content:" (vous)"; color:var(--mint); font-weight:500; font-size:0.82em;}
 </style>
+  <script>
+    if (localStorage.getItem('nr-lang') === 'en') {
+      document.documentElement.setAttribute('lang', 'en');
+      document.documentElement.style.visibility = 'hidden';
+      setTimeout(function () { document.documentElement.style.visibility = ''; }, 2000);
+    }
+  </script>
 </head>
 <body data-screen-label="Weekly KPIs">
 
@@ -219,100 +241,139 @@
   <div class="container nav__inner">
     <a href="../index.html" class="logo" aria-label="nricher accueil"><img src="../img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
     <ul class="nav__links">
-      <li><a href="../index.html" class="nav__link">Accueil</a></li>
+      <li><a href="../index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
       <li class="nav__item">
-        <a href="../le-bon-catalogue.html" class="nav__link">La plateforme ▾</a>
+        <a href="../le-bon-catalogue.html" class="nav__link" data-i18n="nav.platform">La plateforme ▾</a>
         <div class="nav__dropdown">
-          <a href="../le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t">Le bon produit</span><span class="nav__dd-d">Pilotez votre assortiment avec la donnée marché</span></span></a>
-          <a href="../le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t">Le bon prix</span><span class="nav__dd-d">Benchmark prix concurrent en temps réel</span></span></a>
-          <a href="../bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t">Bien présenté</span><span class="nav__dd-d">Fiches produits enrichies, publiées partout</span></span></a>
-          <a href="../l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t">L'outil</span><span class="nav__dd-d">Comment fonctionne nricher</span></span></a>
+          <a href="../le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.platform.product.title">Le bon produit</span><span class="nav__dd-d" data-i18n="nav.platform.product.desc">Pilotez votre assortiment avec la donnée marché</span></span></a>
+          <a href="../le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.platform.price.title">Le bon prix</span><span class="nav__dd-d" data-i18n="nav.platform.price.desc">Benchmark prix concurrent en temps réel</span></span></a>
+          <a href="../bien-presente.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.platform.presented.title">Bien présenté</span><span class="nav__dd-d" data-i18n="nav.platform.presented.desc">Fiches produits enrichies, publiées partout</span></span></a>
+          <a href="../l-outil.html" class="nav__dd-link"><span class="nav__dd-ico">⚙️</span><span><span class="nav__dd-t" data-i18n="nav.platform.tool.title">L'outil</span><span class="nav__dd-d" data-i18n="nav.platform.tool.desc">Comment fonctionne nricher</span></span></a>
         </div>
       </li>
-      <li><a href="../cas-clients.html" class="nav__link">Cas clients</a></li>
-      <li><a href="../lequipe.html" class="nav__link">L'équipe</a></li>
-      <li><a href="../contact.html" class="nav__link">Contact</a></li>
-      <li><a href="../recherche.html" class="nav__link active">Mon entreprise</a></li>
+      <li><a href="../cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
+      <li><a href="../lequipe.html" class="nav__link" data-i18n="nav.team">L'équipe</a></li>
+      <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="../recherche.html" class="nav__link active" data-i18n="nav.mycompany">Mon entreprise</a></li>
     </ul>
     <div class="nav__right">
-      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow">Connexion</a>
-      <a href="../contact.html" class="btn btn-primary">Demander une démo →</a>
-      <button class="nav__burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      <div class="lang-switch">
+        <button class="lang-switch__btn" aria-label="Changer de langue" aria-haspopup="true" aria-expanded="false">
+          <svg class="flag-icon flag-icon--fr" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg>
+          <svg class="flag-icon flag-icon--en" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="9.5" width="5" height="16" fill="#fff"/><rect y="5.5" width="24" height="5" fill="#fff"/><rect x="10.5" width="3" height="16" fill="#C8102E"/><rect y="6.5" width="24" height="3" fill="#C8102E"/></svg>
+        </button>
+        <div class="lang-switch__menu">
+          <button class="lang-switch__option" data-lang="fr"><svg class="flag-icon" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg> Français</button>
+          <button class="lang-switch__option" data-lang="en"><svg class="flag-icon" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="9.5" width="5" height="16" fill="#fff"/><rect y="5.5" width="24" height="5" fill="#fff"/><rect x="10.5" width="3" height="16" fill="#C8102E"/><rect y="6.5" width="24" height="3" fill="#C8102E"/></svg> English</button>
+        </div>
+      </div>
+      <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow" data-i18n="nav.login">Connexion</a>
+      <a href="../contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+      <button class="nav__burger" aria-label="Ouvrir le menu" data-i18n="nav.burger.aria-label"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
 <aside class="mobile-menu">
-  <button class="mobile-menu__close" aria-label="Fermer le menu">&#x2715;</button>
-  <a href="../index.html">Accueil</a>
-  <a href="../le-bon-catalogue.html">Le bon produit</a>
-  <a href="../le-bon-prix.html">Le bon prix</a>
-  <a href="../bien-presente.html">Bien présenté</a>
-  <a href="../l-outil.html">L'outil</a>
-  <a href="../cas-clients.html">Cas clients</a>
-  <a href="../lequipe.html">L'équipe</a>
-  <a href="../contact.html">Contact</a>
-  <a href="../recherche.html">Mon entreprise</a>
-  <a href="../contact.html" class="btn btn-primary">Demander une démo →</a>
+  <button class="mobile-menu__close" aria-label="Fermer le menu" data-i18n="nav.close.aria-label">&#x2715;</button>
+  <a href="../index.html" data-i18n="nav.home">Accueil</a>
+  <a href="../le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+  <a href="../le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+  <a href="../bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
+  <a href="../l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+  <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+  <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
+  <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="../recherche.html" data-i18n="nav.mycompany">Mon entreprise</a>
+  <a href="../contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  <div class="lang-switch">
+        <button class="lang-switch__btn" aria-label="Changer de langue" aria-haspopup="true" aria-expanded="false">
+          <svg class="flag-icon flag-icon--fr" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg>
+          <svg class="flag-icon flag-icon--en" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="9.5" width="5" height="16" fill="#fff"/><rect y="5.5" width="24" height="5" fill="#fff"/><rect x="10.5" width="3" height="16" fill="#C8102E"/><rect y="6.5" width="24" height="3" fill="#C8102E"/></svg>
+        </button>
+        <div class="lang-switch__menu">
+          <button class="lang-switch__option" data-lang="fr"><svg class="flag-icon" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg> Français</button>
+          <button class="lang-switch__option" data-lang="en"><svg class="flag-icon" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="9.5" width="5" height="16" fill="#fff"/><rect y="5.5" width="24" height="5" fill="#fff"/><rect x="10.5" width="3" height="16" fill="#C8102E"/><rect y="6.5" width="24" height="3" fill="#C8102E"/></svg> English</button>
+        </div>
+      </div>
 </aside>
 
-<div class="report-bar">
-  <div class="container report-bar__inner">
-    <div class="brandbar">
-      <span class="logo-company">{{ meta.company_name|upper }}</span>
-      <span class="x">×</span>
-      <img src="../img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo-nricher-img">
+<nav class="toc-bar" data-i18n="rp.toc" aria-label="Sommaire du rapport">
+  <div class="container toc-bar__inner">
+    <div class="toc-bar__links">
+      <a href="#price-index" class="toc-bar__link">Price Index</a>
+      <a href="#tendance" class="toc-bar__link" data-i18n="rp.toc.trend">Tendance</a>
+      <a href="#priorite" class="toc-bar__link" data-i18n="rp.toc.priority">Priorité</a>
+      <a href="#vue-ensemble" class="toc-bar__link" data-i18n="rp.toc.overview">Vue d'ensemble</a>
+      <a href="#concurrents" class="toc-bar__link" data-i18n="rp.toc.competitors">Concurrents</a>
+      <a href="#vendeurs" class="toc-bar__link" data-i18n="rp.toc.sellers">Vendeurs</a>
+      <a href="#categories" class="toc-bar__link" data-i18n="rp.toc.categories">Catégories</a>
+      <a href="#verdict" class="toc-bar__link" data-i18n="rp.toc.conclusion">Conclusion</a>
     </div>
-    <div class="report-bar__right">
-      <span class="livedot"></span>
-      Mis à jour le {{ meta.report_date }} — {{ meta.report_time }}
-    </div>
+    <div class="toc-bar__brand" style="color:{{ meta.company_color }};">{{ meta.company_name }}</div>
   </div>
-</div>
+</nav>
 
 <div class="kpi-report">
 
 <header class="hero">
   <div class="container">
-    <div class="eyebrow">WEEKLY KPIs <span class="sep">/</span> SEMAINE {{ meta.week_current }} <span class="sep">/</span> PRICE INDEX</div>
-    <h1>{{ hero.title_line1 }}<br><span class="grad">{{ hero.title_line2 }}</span></h1>
-    <p class="lede">{{ hero.lede }}</p>
+    <div class="eyebrow">WEEKLY KPIs <span class="sep">/</span> <span data-i18n="rp.hero.week">SEMAINE</span> {{ meta.week_current }} <span class="sep">/</span> PRICE INDEX</div>
+    <h1><span data-i18n="report.hero.title_line1">{{ hero.title_line1 }}</span><br><span class="grad" data-i18n="report.hero.title_line2">{{ hero.title_line2 }}</span></h1>
+    <p class="lede" data-i18n="report.hero.lede">{{ hero.lede }}</p>
 
     <div class="hero-stats">
       {% for s in hero.stats %}
       <div class="hstat">
         <div class="n">{{ s.value }}{% if s.delta %} <span class="delta {{ s.delta }}">{{ '▲' if s.delta=='up' else '▼' }}</span>{% endif %}</div>
-        <div class="l">{{ s.label }}</div>
+        <div class="l" data-i18n="report.hero.stat{{ loop.index0 }}.label">{{ s.label }}</div>
       </div>
       {% endfor %}
+      <div class="hstat">
+        <div class="n">{{ meta.report_time }}</div>
+        <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span> {{ meta.report_date }}</div>
+      </div>
     </div>
   </div>
 </header>
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="price-index">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Price Index — la photo de la semaine</div>
-        <div class="section-sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
+        <div class="section-title" data-i18n="rp.price_index.title">Price Index — la photo de la semaine</div>
+        <div class="section-sub" data-i18n="rp.price_index.sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
       </div>
     </div>
 
-    <div class="kpi-grid-tag"><span class="tag tag--watch">100 = aligné marché</span></div>
+    <div class="kpi-grid-tag"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
     <div class="kpi-grid">
       {% for g in price_index_gauges.gauges %}
       <div class="kpi" data-tip="{{ g.delta_pct }} vs {{ g.ref_prev }}">
         <span class="kpi__ghost {{ g.severity }}">{{ g.value }}</span>
         <div class="kpi-top">
-          <span class="kpi__dot {{ g.severity }}"></span>
+          <svg class="kpi__gauge" viewBox="0 0 120 64">
+            <defs>
+              <linearGradient id="gaugeGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="32%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <path d="M18,58 A42,42 0 0 1 102,58" fill="none" stroke="url(#gaugeGrad-{{ loop.index0 }})" stroke-width="9" stroke-linecap="round"/>
+            <line x1="60" y1="58" x2="{{ g.needle_x }}" y2="{{ g.needle_y }}" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="60" cy="58" r="4" fill="var(--text)"/>
+          </svg>
           <div class="kpi__chip {{ g.severity }}">{{ g.delta_pct }}</div>
         </div>
         <div class="kpi__num {{ g.severity }}">{{ g.value }}</div>
         <div class="kpi__label">{{ g.label }}</div>
-        {% if g.desc %}<div class="kpi__desc">{{ g.desc }}</div>{% endif %}
-        <div class="kpi__bar"><div style="width:{{ ((g.value - 85) / 35 * 100) | round(0, 'common') }}%;background:var(--{{ g.severity if g.severity != 'warn' else 'warn' }});"></div></div>
+        {% if g.desc %}<div class="kpi__desc" data-i18n="report.gauge{{ loop.index0 }}.desc">{{ g.desc }}</div>{% endif %}
+        <div class="kpi__bar"><div style="width:{{ g.bar_pct }}%;background:var(--{{ g.severity }});"></div></div>
         <div class="kpi__ref"><span>90</span><span>{{ g.ref_prev }}</span><span>120</span></div>
       </div>
       {% endfor %}
@@ -322,12 +383,91 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="tendance">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Price index by article — par priorité commerciale</div>
-        <div class="section-sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
+        <div class="section-title" data-i18n="rp.toc.trend">Tendance</div>
+        <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 3P et répartition de l'attractivité.</div>
+      </div>
+      <span class="tag tag--watch">{{ trend_chart.weeks[0] }} → {{ trend_chart.weeks[-1] }}</span>
+    </div>
+
+    <div class="grid-2">
+      <div class="chart-card">
+        <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 2P / 3P)</h3>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> {{ trend_chart.weeks|length }} <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        {% set series_def = [
+          ('1p', '1P', '#2e58ca', trend_chart.price_index_1p),
+          ('2p', '2P', '#60efbe', trend_chart.price_index_2p),
+          ('3p', '3P ' + meta.company_name, meta.company_color, trend_chart.price_index_3p)
+        ] %}
+        <div class="linechart-wrap">
+          <svg class="linechart" viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet">
+            <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+            <line x1="40" y1="200" x2="620" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
+            <text x="10" y="34" font-size="10" fill="#7a8fba">{{ chart_y_max }}</text>
+            <text x="10" y="110" font-size="10" fill="#7a8fba">{{ chart_y_mid }}</text>
+            <text x="10" y="196" font-size="10" fill="#7a8fba">{{ chart_y_min }}</text>
+            <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
+            {% for key, label, color, values in series_def %}
+            <polyline points="{{ series_geo[key].polyline }}" fill="none" stroke="{{ color }}" stroke-width="2.5"/>
+            {% endfor %}
+            {% for key, label, color, values in series_def %}
+            <g fill="{{ color }}">
+              {% for pt in series_geo[key].points %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="5.5"></circle>{% endfor %}
+            </g>
+            {% endfor %}
+            {% for key, label, color, values in series_def %}
+            <g>
+              {% for pt in series_geo[key].points %}<circle class="chart-pt-hit" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="13" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ label }} : {{ values[loop.index0] }}"></circle>{% endfor %}
+            </g>
+            {% endfor %}
+            <text x="34" y="216" font-size="10" fill="#7a8fba">{{ trend_chart.weeks[0] }}</text>
+            <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">{{ trend_chart.weeks[-1] }}</text>
+          </svg>
+          <div class="chart-tooltip"></div>
+        </div>
+        <div class="legend">
+          {% for key, label, color, values in series_def %}
+          <div class="legend-item"><span class="legend-dot" style="background:{{ color }};"></span>{{ label }}</div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3 data-i18n="rp.trend.chart2.title">Attractivité prix</h3>
+        <div class="chart-sub" data-i18n="rp.trend.chart2.sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
+        <div style="margin-top:6px;">
+          {% for row in attractiveness_stacked %}
+          <div class="stack-row">
+            <span class="wk">{{ row.week }}</span>
+            <div class="stack-bar">
+              <div class="stack-seg" data-tip="Moins cher {{ row.week }} : {{ row.lower_pct }}%" style="width:{{ row.lower_pct }}%;background:var(--good);">{{ row.lower_pct }}%</div>
+              <div class="stack-seg" data-tip="Aligné {{ row.week }} : {{ row.equal_pct }}%" style="width:{{ row.equal_pct }}%;background:var(--blue);">{{ row.equal_pct }}%</div>
+              <div class="stack-seg" data-tip="Plus cher {{ row.week }} : {{ row.higher_pct }}%" style="width:{{ row.higher_pct }}%;background:var(--bad);">{{ row.higher_pct }}%</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="legend" style="margin-top:18px;">
+          <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span></div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span></div>
+          <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div">
+
+<section class="section" id="priorite">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title" data-i18n="rp.priority.title">Price index by article — par priorité commerciale</div>
+        <div class="section-sub" data-i18n="rp.priority.sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
       </div>
       <span class="tag tag--watch">My prio</span>
     </div>
@@ -348,7 +488,7 @@
           <tr>
             <td class="wk">{{ r.week }}</td>
             {% for key in ['top', 'middle', 'low'] %}
-            {% set sev = 'bad' if r[key] > 100 else ('good' if r[key] < 100 else 'neu') %}
+            {% set sev = 'bad' if r[key] > 100 else ('good' if r[key] < 100 else 'blue') %}
             <td>
               <span class="prio-chip {{ sev }}" data-tip="{{ key|capitalize }} sales {{ r.week }} : {{ r[key] }}">
                 {{ r[key] }}
@@ -361,65 +501,63 @@
         </tbody>
       </table>
     </div>
-    {% if priority_table.note %}<div class="note">{{ priority_table.note }}</div>{% endif %}
+    {% if priority_table.note %}<div class="note" data-i18n="report.priority.note">{{ priority_table.note }}</div>{% endif %}
   </div>
 </section>
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="vue-ensemble">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Tendance</div>
-        <div class="section-sub">Indice prix 3P et répartition de l'attractivité.</div>
+        <div class="section-title" data-i18n="rp.overview.title">Vue d'ensemble concurrentielle</div>
+        <div class="section-sub" data-i18n="rp.overview.sub">Moyenne tous concurrents confondus, et classement par indice prix.</div>
       </div>
-      <span class="tag tag--watch">{{ trend_chart.weeks[0] }} → {{ trend_chart.weeks[-1] }}</span>
     </div>
 
     <div class="grid-2">
       <div class="chart-card">
-        <h3>Évolution Indice Prix (3P)</h3>
-        <div class="chart-sub">Tracé généré automatiquement à partir des {{ trend_chart.weeks|length }} dernières semaines.</div>
-        <div class="linechart-wrap">
-          <svg class="linechart" viewBox="0 0 640 240" preserveAspectRatio="xMidYMid meet">
-            <line x1="40" y1="20" x2="40" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-            <line x1="40" y1="200" x2="620" y2="200" stroke="rgba(0,0,0,0.08)" stroke-width="1"/>
-            <text x="10" y="34" font-size="10" fill="#7a8fba">{{ chart_y_max }}</text>
-            <text x="10" y="110" font-size="10" fill="#7a8fba">{{ chart_y_mid }}</text>
-            <text x="10" y="196" font-size="10" fill="#7a8fba">{{ chart_y_min }}</text>
-            <line x1="40" y1="110" x2="620" y2="110" stroke="#EEF0F4" stroke-width="1" stroke-dasharray="3 5"/>
-            <polyline points="{{ chart_points }}" fill="none" stroke="{{ meta.company_color }}" stroke-width="2.5"/>
-            <g fill="{{ meta.company_color }}">
-              {% for pt in chart_circles %}<circle class="chart-pt" cx="{{ pt[0] }}" cy="{{ pt[1] }}" r="5" data-week="{{ trend_chart.weeks[loop.index0] }}" data-value="{{ trend_chart.price_index_3p[loop.index0] }}"></circle>{% endfor %}
+        <h3 data-i18n="rp.overview.chart1.title">Répartition moyenne</h3>
+        <div class="chart-sub"><span data-i18n="rp.overview.chart1.sub_prefix">Lower / Equal / Higher, moyenne sur</span> {{ competitors|length }} <span data-i18n="rp.overview.chart1.sub_suffix">concurrents.</span></div>
+        <div class="donut-wrap">
+          <svg class="donut-svg" viewBox="0 0 120 120">
+            <g transform="rotate(-90 60 60)">
+              {% for seg in competitors_overview.donut_segments %}
+              <circle cx="60" cy="60" r="50" fill="none" stroke="{{ seg.color }}" stroke-width="20"
+                      stroke-dasharray="{{ seg.dasharray }}" stroke-dashoffset="{{ seg.dashoffset }}"
+                      data-tip="{{ seg.pct }}%"></circle>
+              {% endfor %}
             </g>
-            <text x="34" y="216" font-size="10" fill="#7a8fba">{{ trend_chart.weeks[0] }}</text>
-            <text x="595" y="216" font-size="10" fill="#7a8fba" text-anchor="end">{{ trend_chart.weeks[-1] }}</text>
+            {% for seg in competitors_overview.donut_segments %}
+            {% if seg.pct >= 6 %}
+            <text x="{{ seg.label_x }}" y="{{ seg.label_y }}" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">{{ seg.pct }}%</text>
+            {% endif %}
+            {% endfor %}
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">{{ competitors_overview.avg_higher }}%</text>
+            <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
-          <div class="chart-tooltip"></div>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · {{ competitors_overview.avg_lower }}%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · {{ competitors_overview.avg_equal }}%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · {{ competitors_overview.avg_higher }}%</div>
+          </div>
         </div>
-        <div class="legend"><div class="legend-item"><span class="legend-dot" style="background:{{ meta.company_color }};"></span>Indice 3P {{ meta.company_name }}</div></div>
       </div>
 
       <div class="chart-card">
-        <h3>Attractivité prix</h3>
-        <div class="chart-sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
-        <div style="margin-top:6px;">
-          {% for row in attractiveness_stacked %}
-          <div class="stack-row">
-            <span class="wk">{{ row.week }}</span>
-            <div class="stack-bar">
-              <div class="stack-seg" data-tip="Moins cher {{ row.week }} : {{ row.lower_pct }}%" style="width:{{ row.lower_pct }}%;background:var(--good);">{{ row.lower_pct }}%</div>
-              <div class="stack-seg" data-tip="Aligné {{ row.week }} : {{ row.equal_pct }}%" style="width:{{ row.equal_pct }}%;background:var(--blue);">{{ row.equal_pct }}%</div>
-              <div class="stack-seg" data-tip="Plus cher {{ row.week }} : {{ row.higher_pct }}%" style="width:{{ row.higher_pct }}%;background:var(--bad);">{{ row.higher_pct }}%</div>
+        <h3 data-i18n="rp.overview.chart2.title">Classement par indice prix</h3>
+        <div class="chart-sub" data-i18n="rp.overview.chart2.sub">Du plus compétitif au plus cher (90 = très compétitif, 120 = très cher).</div>
+        <div class="rank-list">
+          {% for c in competitors_ranking %}
+          <div class="rank-row">
+            <span class="rank-name">{{ c.name }}</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="{{ c.name }} : PI {{ c.pi }}" style="width:{{ c.bar_pct }}%;background:{{ 'var(--good)' if c.pi < 100 else ('var(--blue)' if c.pi == 100 else 'var(--bad)') }};"></div>
             </div>
+            <span class="rank-pi">{{ c.pi }}</span>
           </div>
           {% endfor %}
-        </div>
-        <div class="legend" style="margin-top:18px;">
-          <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Moins cher</div>
-          <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Aligné</div>
-          <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Plus cher</div>
         </div>
       </div>
     </div>
@@ -428,26 +566,31 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="concurrents">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Face à {{ competitors|length }} concurrents</div>
-        <div class="section-sub">Pour chaque enseigne : part des articles moins chers, alignés, plus chers — et son propre indice prix.</div>
+        <div class="section-title"><span data-i18n="rp.competitors.title_prefix">Face à</span> {{ competitors|length }} <span data-i18n="rp.competitors.title_suffix">concurrents</span></div>
+        <div class="section-sub" data-i18n="rp.competitors.sub">Pour chaque enseigne : part des articles moins chers, alignés, plus chers — et son propre indice prix.</div>
       </div>
-      <span class="tag tag--watch">Lower · Equal · Higher</span>
+    </div>
+
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
     <div class="cbar-list">
       {% for c in competitors %}
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} matchés</div></div>
+        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched_k }} <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ c.name }} — plus cher : {{ c.higher_pct }}%" style="width:{{ c.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ c.name }} — moins cher : {{ c.lower_pct }}%" style="width:{{ c.lower_pct }}%;background:var(--good);">{% if c.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ c.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ c.name }} — aligné : {{ c.equal_pct }}%" style="width:{{ c.equal_pct }}%;background:var(--blue);">{% if c.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ c.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ c.name }} — plus cher : {{ c.higher_pct }}%" style="width:{{ c.higher_pct }}%;background:var(--bad);">{% if c.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ c.higher_pct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi" style="color:{{ 'var(--good)' if c.pi < 101 else ('var(--bad)' if c.pi > 104 else '#c98c1a') }};">PI {{ c.pi }}</div>
+        <div class="cbar-pi" style="color:{{ 'var(--good)' if c.pi < 100 else ('var(--blue)' if c.pi == 100 else 'var(--bad)') }};">PI {{ c.pi }}</div>
       </div>
       {% endfor %}
     </div>
@@ -460,8 +603,8 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Competitor analysis — détail par enseigne</div>
-        <div class="section-sub">Articles tous vendeurs vs articles vendeur le moins cher, par concurrent.</div>
+        <div class="section-title" data-i18n="rp.competitors_table.title">Competitor analysis — détail par enseigne</div>
+        <div class="section-sub" data-i18n="rp.competitors_table.sub">Articles tous vendeurs vs articles vendeur le moins cher, par concurrent.</div>
       </div>
       <span class="tag tag--watch">PI Market Analysis</span>
     </div>
@@ -469,7 +612,7 @@
     <div class="sellers-wrap">
       <table class="sellers">
         <thead>
-          <tr><th>Concurrent</th><th style="text-align:right;">Articles all</th><th style="text-align:right;">PI all</th><th style="text-align:right;">Articles min</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
+          <tr><th data-i18n="rp.competitors_table.col_competitor">Concurrent</th><th style="text-align:right;" data-i18n="rp.competitors_table.col_all">Articles all</th><th style="text-align:right;">PI all</th><th style="text-align:right;" data-i18n="rp.competitors_table.col_min">Articles min</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
         </thead>
         <tbody>
           {% for c in competitors_table %}
@@ -492,12 +635,12 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="vendeurs">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Qui tire les prix vers le bas — vendeur par vendeur</div>
-        <div class="section-sub">PI min &lt; 100 = systématiquement moins cher que {{ meta.company_name }}.</div>
+        <div class="section-title" data-i18n="rp.sellers.title">Qui tire les prix vers le bas — vendeur par vendeur</div>
+        <div class="section-sub"><span data-i18n="rp.sellers.sub_prefix">PI min &lt; 100 = systématiquement moins cher que</span> {{ meta.company_name }}.</div>
       </div>
       <span class="tag tag--watch">S{{ meta.week_current }}</span>
     </div>
@@ -505,12 +648,12 @@
     <div class="sellers-wrap">
       <table class="sellers">
         <thead>
-          <tr><th>Vendeur</th><th style="text-align:right;">Analysés</th><th style="text-align:right;">Matchés</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
+          <tr><th data-i18n="rp.sellers_table.col_seller">Vendeur</th><th style="text-align:right;" data-i18n="rp.sellers_table.col_analysed">Analysés</th><th style="text-align:right;" data-i18n="rp.sellers_table.col_matched">Matchés</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
         </thead>
         <tbody>
           {% for s in sellers_table %}
-          <tr {% if s.name == meta.company_name %}style="background:rgba(226,35,26,0.05);"{% endif %}>
-            <td>{{ '<strong>'|safe if s.name == meta.company_name }}{{ s.name }}{{ '</strong>'|safe if s.name == meta.company_name }}</td>
+          <tr {% if s.name == meta.company_name %}style="background:rgba(96,239,190,0.07);"{% endif %}>
+            <td>{{ '<strong>'|safe if s.name == meta.company_name }}{{ s.name }}{{ '</strong>'|safe if s.name == meta.company_name }}{% if s.name == meta.company_name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</td>
             <td class="num">{{ s.analysed }}</td>
             <td class="num">{{ s.matched }}</td>
             <td class="num"><span class="pi-chip {{ 'g' if s.pi_min < 100 else ('b' if s.pi_min == 100 else 'r') }}">{{ s.pi_min }}</span></td>
@@ -531,22 +674,27 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Seller analysis — répartition % par vendeur</div>
-        <div class="section-sub">Part des articles moins chers, alignés, plus chers — vendeur par vendeur.</div>
+        <div class="section-title" data-i18n="rp.seller_analysis.title">Seller analysis — répartition % par vendeur</div>
+        <div class="section-sub" data-i18n="rp.seller_analysis.sub">Part des articles moins chers, alignés, plus chers — vendeur par vendeur.</div>
       </div>
-      <span class="tag tag--watch">Lower · Equal · Higher</span>
+    </div>
+
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
     <div class="cbar-list">
       {% for s in sellers_stacked %}
       <div class="cbar-row {{ 'cbar-row--you' if s.name == meta.company_name }}">
-        <div><div class="cbar-name">{{ s.name }}</div></div>
+        <div><div class="cbar-name">{{ s.name }}{% if s.name == meta.company_name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ s.name }} — plus cher : {{ s.higher_pct }}%" style="width:{{ s.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ s.name }} — moins cher : {{ s.lower_pct }}%" style="width:{{ s.lower_pct }}%;background:var(--good);">{% if s.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ s.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ s.name }} — aligné : {{ s.equal_pct }}%" style="width:{{ s.equal_pct }}%;background:var(--blue);">{% if s.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ s.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ s.name }} — plus cher : {{ s.higher_pct }}%" style="width:{{ s.higher_pct }}%;background:var(--bad);">{% if s.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ s.higher_pct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi" style="color:{{ 'var(--good)' if s.pi < 101 else ('var(--bad)' if s.pi > 104 else '#c98c1a') }};">PI {{ s.pi }}</div>
+        <div class="cbar-pi" style="color:{{ 'var(--good)' if s.pi < 100 else ('var(--blue)' if s.pi == 100 else 'var(--bad)') }};">PI {{ s.pi }}</div>
       </div>
       {% endfor %}
     </div>
@@ -555,46 +703,52 @@
 
 <hr class="div">
 
-<section class="section">
+<section class="section" id="categories">
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title">Category analysis — répartition % par catégorie</div>
-        <div class="section-sub">Part des articles moins chers, alignés, plus chers — catégorie par catégorie.</div>
+        <div class="section-title" data-i18n="rp.category.title">Category analysis — répartition % par catégorie</div>
+        <div class="section-sub" data-i18n="rp.category.sub">Part des articles moins chers, alignés, plus chers — catégorie par catégorie.</div>
       </div>
-      <span class="tag tag--watch">Lower · Equal · Higher</span>
     </div>
 
-    <div class="cbar-list">
+    <div class="cbar-legend-centered">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
+    </div>
+
+    <div class="cbar-list cbar-list--category">
       {% for cat in category_stacked %}
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ cat.name }}</div><div class="cbar-meta">{{ cat.count }} articles</div></div>
+        <div><div class="cbar-name">{{ cat.name }}</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);"></div>
-          <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);"></div>
-          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);"></div>
+          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lower_pct }}%" style="width:{{ cat.lower_pct }}%;background:var(--good);">{% if cat.lower_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.lower_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ cat.name }} — aligné : {{ cat.equal_pct }}%" style="width:{{ cat.equal_pct }}%;background:var(--blue);">{% if cat.equal_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.equal_pct }}%</span>{% endif %}</div>
+          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higher_pct }}%" style="width:{{ cat.higher_pct }}%;background:var(--bad);">{% if cat.higher_pct >= 8 %}<span class="cbar-seg__pct">{{ cat.higher_pct }}%</span>{% endif %}</div>
         </div>
+        <div class="cbar-pi"><span style="color:var(--muted);">{{ cat.count }}</span> <span class="sep" style="color:var(--muted);">·</span> <span style="color:{{ 'var(--good)' if cat.pi < 100 else ('var(--blue)' if cat.pi == 100 else 'var(--bad)') }};">{{ cat.pi }}</span></div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="verdict">
   <div class="container">
     <div class="verdict">
       <div class="verdict__filet" aria-hidden="true"></div>
       <div class="verdict__content">
-        <span class="eyebrow">{{ verdict.tag }}</span>
-        <h2>{{ verdict.headline }}</h2>
-        <p>{{ verdict.text }}</p>
+        <span class="eyebrow" data-i18n="report.verdict.tag">{{ verdict.tag }}</span>
+        <h2 data-i18n="report.verdict.headline">{{ verdict.headline }}</h2>
+        <p data-i18n="report.verdict.text">{{ verdict.text }}</p>
         <div class="verdict-figs">
           {% for f in verdict.figures %}
-          <div class="vfig"><div class="n">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
+          <div class="vfig"><div class="n">{{ f.value }}</div><div class="l" data-i18n="report.verdict.fig{{ loop.index0 }}.label">{{ f.label }}</div></div>
           {% endfor %}
         </div>
         <div class="cta-row">
-          <a href="../contact.html" class="btn btn-primary">Voir le détail article par article →</a>
+          <a href="../contact.html" class="btn btn-primary" data-i18n="rp.verdict.cta">Voir le détail article par article →</a>
         </div>
       </div>
     </div>
@@ -608,28 +762,28 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a href="../index.html" class="logo"><img src="../img/nricher logo/nricher_logo (1).svg" alt="nricher" class="logo__img" /></a>
-        <p class="footer__tag">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
+        <p class="footer__tag" data-i18n="footer.tagline">L'IA qui aide les retailers et e-commerçants à dominer leur marché. Catalogue, prix, fiches produits.</p>
       </div>
       <div class="footer__col">
-        <h4>La plateforme</h4>
-        <a href="../le-bon-catalogue.html">Le bon produit</a>
-        <a href="../le-bon-prix.html">Le bon prix</a>
-        <a href="../bien-presente.html">Bien présenté</a>
+        <h4 data-i18n="footer.platform">La plateforme</h4>
+        <a href="../le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+        <a href="../le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+        <a href="../bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
       </div>
       <div class="footer__col">
-        <h4>Ressources</h4>
-        <a href="../cas-clients.html">Cas clients</a>
-        <a href="../lequipe.html">L'équipe</a>
-        <a href="../contact.html">Contact</a>
+        <h4 data-i18n="footer.resources">Ressources</h4>
+        <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
+        <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
+        <a href="../contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="footer__col">
-        <h4>Contact</h4>
-        <a href="../contact.html">Demander une démo</a>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <a href="../contact.html" data-i18n="footer.demo">Demander une démo</a>
         <a href="mailto:contact@nricher.io">contact@nricher.io</a>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
+      <span data-i18n="footer.copyright">© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302</span>
       <a href="https://www.linkedin.com/company/nricher/?viewAsMember=true" class="footer__social" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 0 22.222 0h.003z"/></svg></a>
     </div>
   </div>
@@ -637,29 +791,55 @@
 
 <script>
 (function () {
+  var tocLinks = document.querySelectorAll('.toc-bar__link');
+  var sections = Array.prototype.map.call(tocLinks, function (a) {
+    return document.querySelector(a.getAttribute('href'));
+  }).filter(Boolean);
+  if (sections.length && window.IntersectionObserver) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = '#' + entry.target.id;
+        tocLinks.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === id);
+        });
+      });
+    }, { rootMargin: '-200px 0px -70% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  }
+})();
+(function () {
   document.querySelectorAll('.linechart-wrap').forEach(function (wrap) {
     var tip = wrap.querySelector('.chart-tooltip');
     if (!tip) return;
-    wrap.querySelectorAll('.chart-pt').forEach(function (pt) {
-      pt.addEventListener('mouseenter', function () {
-        var ptRect = pt.getBoundingClientRect();
+    var dots = wrap.querySelectorAll('.chart-pt');
+    var hits = wrap.querySelectorAll('.chart-pt-hit');
+    hits.forEach(function (hit, i) {
+      var dot = dots[i];
+      hit.addEventListener('mouseenter', function () {
+        var hitRect = hit.getBoundingClientRect();
         var wrapRect = wrap.getBoundingClientRect();
-        tip.textContent = pt.dataset.week + ' : ' + pt.dataset.value;
-        tip.style.left = (ptRect.left + ptRect.width / 2 - wrapRect.left) + 'px';
-        tip.style.top = (ptRect.top - wrapRect.top) + 'px';
+        tip.textContent = hit.dataset.week + ' : ' + hit.dataset.value;
+        tip.style.left = (hitRect.left + hitRect.width / 2 - wrapRect.left) + 'px';
+        tip.style.top = (hitRect.top + hitRect.height / 2 - wrapRect.top) + 'px';
         tip.classList.add('is-visible');
+        if (dot) dot.classList.add('is-active');
       });
-      pt.addEventListener('mouseleave', function () {
+      hit.addEventListener('mouseleave', function () {
         tip.classList.remove('is-visible');
+        if (dot) dot.classList.remove('is-active');
       });
     });
   });
 })();
 </script>
+<script>window.NRICHER_REPORT_I18N = {{ report_i18n | tojson }};</script>
+<script src="../js/i18n.js?v=20260622"></script>
+<script src="../js/lang-switcher.js?v=20260622"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=20260622"></script>
 </body>
 </html>
