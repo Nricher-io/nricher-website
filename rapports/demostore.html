@@ -62,18 +62,19 @@
   .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
   .kpi-report .kpi__gauge{width:84px;height:auto;flex-shrink:0;margin-top:-6px;}
   .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1;margin-top:18px;}
-  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);}
+  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);} .kpi-report .kpi__num.blue{color:var(--blue);}
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
   .kpi-report .kpi__chip.bad{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .kpi__chip.warn{background:var(--warn-bg);color:#c98c1a;}
   .kpi-report .kpi__chip.good{background:var(--good-bg);color:var(--good);}
+  .kpi-report .kpi__chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .kpi__label{margin-top:10px;font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
   .kpi-report .kpi__desc{margin-top:6px;font-size:0.85rem;color:var(--muted);line-height:1.5;min-height:2.6em;}
   .kpi-report .kpi__bar{height:7px;background:var(--card-2);border-radius:var(--r-pill);margin-top:20px;overflow:hidden;}
   .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);transition:width .6s var(--ease-out);}
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;opacity:0.08;}
-  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.warn{color:#c98c1a;} .kpi-report .kpi__ghost.good{color:var(--good);}
+  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.warn{color:#c98c1a;} .kpi-report .kpi__ghost.good{color:var(--good);} .kpi-report .kpi__ghost.blue{color:var(--blue);}
 
   .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.02);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
@@ -363,7 +364,7 @@
     <div class="kpi-grid">
       
       <div class="kpi" data-tip="+1% vs S24 : 104">
-        <span class="kpi__ghost warn">101</span>
+        <span class="kpi__ghost bad">101</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 120 64">
             <defs>
@@ -379,12 +380,12 @@
             <line x1="60" y1="58" x2="42.9" y2="19.6" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
             <circle cx="60" cy="58" r="4" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip warn">+1%</div>
+          <div class="kpi__chip bad">+1%</div>
         </div>
-        <div class="kpi__num warn">101</div>
+        <div class="kpi__num bad">101</div>
         <div class="kpi__label">PI Price All</div>
         <div class="kpi__desc">plus cher sur l'ensemble des offres concurrentes</div>
-        <div class="kpi__bar"><div style="width:46.0%;background:var(--warn);"></div></div>
+        <div class="kpi__bar"><div style="width:46.0%;background:var(--bad);"></div></div>
         <div class="kpi__ref"><span>90</span><span>S24 : 104</span><span>120</span></div>
       </div>
       

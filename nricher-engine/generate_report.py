@@ -114,6 +114,18 @@ def compute_gauge_needle(value):
     return round(x, 1), round(y, 1)
 
 
+def compute_pi_severity(value):
+    """
+    Code couleur uniforme pour toute valeur de Price Index dans le rapport :
+    vert sous 100, bleu pile a 100, rouge a partir de 101.
+    """
+    if value < 100:
+        return "good"
+    if value == 100:
+        return "blue"
+    return "bad"
+
+
 DONUT_CX, DONUT_CY, DONUT_R = 60, 60, 50
 
 
@@ -208,6 +220,7 @@ def render_report(json_path, env):
 
     for gauge in data["price_index_gauges"]["gauges"]:
         gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
+        gauge["severity"] = compute_pi_severity(gauge["value"])
 
     competitors_overview, competitors_ranking = compute_competitors_overview(data["competitors"])
 
