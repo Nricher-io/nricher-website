@@ -229,6 +229,8 @@
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
       document.documentElement.setAttribute('lang', 'en');
+      document.documentElement.style.visibility = 'hidden';
+      setTimeout(function () { document.documentElement.style.visibility = ''; }, 2000);
     }
   </script>
 </head>
@@ -675,12 +677,12 @@
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
+<script src="js/lang-switcher.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/lang-switcher.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

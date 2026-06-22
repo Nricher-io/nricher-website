@@ -25,6 +25,10 @@
     // 2. Apply saved/default language
     applyLanguage(lang);
 
+    // Reveal the page now that translation (if any) is applied — avoids a flash of
+    // untranslated French content on pages loaded with English already selected.
+    document.documentElement.style.visibility = '';
+
     // 3. Setup click listeners (toggle dropdown + pick an option), event delegation
     document.addEventListener('click', function (e) {
       var toggleBtn = e.target.closest('.lang-switch__btn');
