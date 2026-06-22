@@ -6,6 +6,16 @@
   var originalTexts = {};
   var originalTips = [];
 
+  // Weekly KPIs report pages inject their own per-company English text (hero,
+  // gauge descriptions, verdict...) — merge it into the common English dictionary
+  // so the same data-i18n mechanism picks it up like everything else on the site.
+  if (window.NRICHER_REPORT_I18N) {
+    translations.en = translations.en || {};
+    for (var reportKey in window.NRICHER_REPORT_I18N) {
+      translations.en[reportKey] = window.NRICHER_REPORT_I18N[reportKey];
+    }
+  }
+
   // Hover-tooltip (data-tip) text mixes static French words with dynamic values
   // (names, weeks, percentages) baked in server-side — translate just the known words.
   var TIP_WORDS = [

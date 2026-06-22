@@ -212,6 +212,23 @@ def compute_competitors_overview(competitors):
     }, ranking
 
 
+def extract_bilingual(value, report_i18n, key):
+    """
+    Les textes rediges specifiquement pour l'entreprise (titre, descriptions de jauges,
+    note de priorite, verdict...) peuvent etre fournis en deux langues :
+        {"fr": "Le marche a bouge.", "en": "The market has moved."}
+    On renvoie le francais (affiche par defaut sur la page), et on enregistre l'anglais
+    dans report_i18n sous `key` pour que le selecteur de langue du site le traduise au
+    survol, exactement comme le reste du site. Si le champ est encore une simple chaine
+    (ancien format, ou pas encore traduit), on la renvoie telle quelle sans traduction.
+    """
+    if isinstance(value, dict) and "fr" in value:
+        if value.get("en"):
+            report_i18n[key] = value["en"]
+        return value["fr"]
+    return value
+
+
 def load_company_data(json_path):
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -256,6 +273,31 @@ def render_report(json_path, env):
 
     competitors_overview, competitors_ranking = compute_competitors_overview(data["competitors"])
 
+    # Textes rediges par entreprise : extrait le francais pour l'affichage, collecte
+    # l'anglais (si fourni) pour le selecteur de langue du site (voir extract_bilingual).
+    report_i18n = {}
+    hero = data["hero"]
+    hero["title_line1"] = extract_bilingual(hero["title_line1"], report_i18n, "report.hero.title_line1")
+    hero["title_line2"] = extract_bilingual(hero["title_line2"], report_i18n, "report.hero.title_line2")
+    hero["lede"] = extract_bilingual(hero["lede"], report_i18n, "report.hero.lede")
+    for i, s in enumerate(hero["stats"]):
+        s["label"] = extract_bilingual(s["label"], report_i18n, f"report.hero.stat{i}.label")
+
+    for i, gauge in enumerate(data["price_index_gauges"]["gauges"]):
+        if gauge.get("desc"):
+            gauge["desc"] = extract_bilingual(gauge["desc"], report_i18n, f"report.gauge{i}.desc")
+
+    priority_table = data["priority_table"]
+    if priority_table.get("note"):
+        priority_table["note"] = extract_bilingual(priority_table["note"], report_i18n, "report.priority.note")
+
+    verdict = data["verdict"]
+    verdict["tag"] = extract_bilingual(verdict["tag"], report_i18n, "report.verdict.tag")
+    verdict["headline"] = extract_bilingual(verdict["headline"], report_i18n, "report.verdict.headline")
+    verdict["text"] = extract_bilingual(verdict["text"], report_i18n, "report.verdict.text")
+    for i, fig in enumerate(verdict["figures"]):
+        fig["label"] = extract_bilingual(fig["label"], report_i18n, f"report.verdict.fig{i}.label")
+
     template = env.get_template(TEMPLATE_NAME)
     html = template.render(
         meta=data["meta"],
@@ -276,6 +318,7 @@ def render_report(json_path, env):
         chart_y_max=y_max,
         chart_y_mid=y_mid,
         chart_y_min=y_min,
+        report_i18n=report_i18n,
     )
 
     company_slug = data["meta"]["company_name"].lower().replace(" ", "_")

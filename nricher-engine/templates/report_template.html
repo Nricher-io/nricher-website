@@ -319,14 +319,14 @@
 <header class="hero">
   <div class="container">
     <div class="eyebrow">WEEKLY KPIs <span class="sep">/</span> <span data-i18n="rp.hero.week">SEMAINE</span> {{ meta.week_current }} <span class="sep">/</span> PRICE INDEX</div>
-    <h1>{{ hero.title_line1 }}<br><span class="grad">{{ hero.title_line2 }}</span></h1>
-    <p class="lede">{{ hero.lede }}</p>
+    <h1><span data-i18n="report.hero.title_line1">{{ hero.title_line1 }}</span><br><span class="grad" data-i18n="report.hero.title_line2">{{ hero.title_line2 }}</span></h1>
+    <p class="lede" data-i18n="report.hero.lede">{{ hero.lede }}</p>
 
     <div class="hero-stats">
       {% for s in hero.stats %}
       <div class="hstat">
         <div class="n">{{ s.value }}{% if s.delta %} <span class="delta {{ s.delta }}">{{ '▲' if s.delta=='up' else '▼' }}</span>{% endif %}</div>
-        <div class="l">{{ s.label }}</div>
+        <div class="l" data-i18n="report.hero.stat{{ loop.index0 }}.label">{{ s.label }}</div>
       </div>
       {% endfor %}
       <div class="hstat">
@@ -372,7 +372,7 @@
         </div>
         <div class="kpi__num {{ g.severity }}">{{ g.value }}</div>
         <div class="kpi__label">{{ g.label }}</div>
-        {% if g.desc %}<div class="kpi__desc">{{ g.desc }}</div>{% endif %}
+        {% if g.desc %}<div class="kpi__desc" data-i18n="report.gauge{{ loop.index0 }}.desc">{{ g.desc }}</div>{% endif %}
         <div class="kpi__bar"><div style="width:{{ g.bar_pct }}%;background:var(--{{ g.severity }});"></div></div>
         <div class="kpi__ref"><span>90</span><span>{{ g.ref_prev }}</span><span>120</span></div>
       </div>
@@ -501,7 +501,7 @@
         </tbody>
       </table>
     </div>
-    {% if priority_table.note %}<div class="note">{{ priority_table.note }}</div>{% endif %}
+    {% if priority_table.note %}<div class="note" data-i18n="report.priority.note">{{ priority_table.note }}</div>{% endif %}
   </div>
 </section>
 
@@ -739,12 +739,12 @@
     <div class="verdict">
       <div class="verdict__filet" aria-hidden="true"></div>
       <div class="verdict__content">
-        <span class="eyebrow">{{ verdict.tag }}</span>
-        <h2>{{ verdict.headline }}</h2>
-        <p>{{ verdict.text }}</p>
+        <span class="eyebrow" data-i18n="report.verdict.tag">{{ verdict.tag }}</span>
+        <h2 data-i18n="report.verdict.headline">{{ verdict.headline }}</h2>
+        <p data-i18n="report.verdict.text">{{ verdict.text }}</p>
         <div class="verdict-figs">
           {% for f in verdict.figures %}
-          <div class="vfig"><div class="n">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
+          <div class="vfig"><div class="n">{{ f.value }}</div><div class="l" data-i18n="report.verdict.fig{{ loop.index0 }}.label">{{ f.label }}</div></div>
           {% endfor %}
         </div>
         <div class="cta-row">
@@ -833,6 +833,7 @@
   });
 })();
 </script>
+<script>window.NRICHER_REPORT_I18N = {{ report_i18n | tojson }};</script>
 <script src="../js/i18n.js"></script>
 <script src="../js/lang-switcher.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

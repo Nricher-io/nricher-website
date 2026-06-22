@@ -10,13 +10,13 @@
   },
 
   "hero": {
-    "title_line1": "Le marché a bougé.",
-    "title_line2": "Votre prix, un peu moins.",
-    "lede": "312 480 articles analysés cette semaine sur 9 concurrents directs.",
+    "title_line1": {"fr": "Le marché a bougé.", "en": "The market has moved."},
+    "title_line2": {"fr": "Votre prix, un peu moins.", "en": "Your price, a little less."},
+    "lede": {"fr": "312 480 articles analysés cette semaine sur 9 concurrents directs.", "en": "312,480 items analyzed this week across 9 direct competitors."},
     "stats": [
-      {"value": "312,480", "label": "articles analysés (+1,4% vs S24)"},
-      {"value": "151,220", "label": "articles matchés concurrence"},
-      {"value": "101", "delta": "down", "label": "Price Index global (S24 : 104)"}
+      {"value": "312,480", "label": {"fr": "articles analysés (+1,4% vs S24)", "en": "items analyzed (+1.4% vs S24)"}},
+      {"value": "151,220", "label": {"fr": "articles matchés concurrence", "en": "items matched with competitors"}},
+      {"value": "101", "delta": "down", "label": {"fr": "Price Index global (S24 : 104)", "en": "Global Price Index (S24: 104)"}}
     ]
   },
 
@@ -25,9 +25,9 @@
     "analysed": "312 480",
     "matched": "151 220",
     "gauges": [
-      {"value": 101, "delta_pct": "+1%", "severity": "warn", "label": "PI Price All", "ref_prev": "S24 : 104", "desc": "plus cher sur l'ensemble des offres concurrentes"},
-      {"value": 105, "delta_pct": "+5%", "severity": "bad",  "label": "3P Price Min", "ref_prev": "S24 : 108", "desc": "plus cher en moyenne que la meilleure offre du marché"},
-      {"value": 99,  "delta_pct": "-1%", "severity": "good", "label": "3P same min",  "ref_prev": "S24 : 100", "desc": "plus chers entre vendeurs identiques vs concurrents"}
+      {"value": 101, "label": "PI Price All", "ref_prev": "S24 : 104", "desc": {"fr": "plus cher sur l'ensemble des offres concurrentes", "en": "more expensive across the full set of competitor offers"}},
+      {"value": 105, "label": "3P Price Min", "ref_prev": "S24 : 108", "desc": {"fr": "plus cher en moyenne que la meilleure offre du marché", "en": "more expensive on average than the best market offer"}},
+      {"value": 99,  "label": "3P same min",  "ref_prev": "S24 : 100", "desc": {"fr": "plus chers entre vendeurs identiques vs concurrents", "en": "more expensive between identical sellers vs competitors"}}
     ]
   },
 
@@ -36,7 +36,10 @@
       {"week": "S24", "top": 106, "middle": 109, "low": 98},
       {"week": "S25", "top": 103, "middle": 104, "low": 96}
     ],
-    "note": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--bad);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine."
+    "note": {
+      "fr": "Sur les références <strong>top priorité</strong>, l'indice tombe à <strong style=\"color:var(--bad);\">103</strong> (contre 106 en S24). Tendance à confirmer la semaine prochaine.",
+      "en": "On <strong>top-priority</strong> references, the index falls to <strong style=\"color:var(--bad);\">103</strong> (vs 106 in S24). Trend to be confirmed next week."
+    }
   },
 
   "trend_chart": {
@@ -114,13 +117,13 @@
   ],
 
   "verdict": {
-    "tag": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE",
-    "headline": "Le repricing porte ses fruits — mais l'écart reste sur les références à fort trafic.",
-    "text": "L'indice global recule de 104 à 101 en une semaine. Le travail effectué sur les priorités hautes commence à payer ; il reste à confirmer sur deux semaines avant de l'élargir au reste du catalogue.",
+    "tag": {"fr": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE", "en": "WHAT NRICHER SEES THAT YOU DON'T YET"},
+    "headline": {"fr": "Le repricing porte ses fruits — mais l'écart reste sur les références à fort trafic.", "en": "Repricing is paying off — but the gap remains on high-traffic references."},
+    "text": {"fr": "L'indice global recule de 104 à 101 en une semaine. Le travail effectué sur les priorités hautes commence à payer ; il reste à confirmer sur deux semaines avant de l'élargir au reste du catalogue.", "en": "The overall index drops from 104 to 101 in one week. The work done on top priorities is starting to pay off; it still needs to be confirmed over two weeks before extending it to the rest of the catalog."},
     "figures": [
-      {"value": "-3 pts", "label": "de gain sur les priorités hautes en 1 semaine"},
-      {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
-      {"value": "312k", "label": "articles suivis en continu"}
+      {"value": "-3 pts", "label": {"fr": "de gain sur les priorités hautes en 1 semaine", "en": "gained on top priorities in 1 week"}},
+      {"value": "-5 pts", "label": {"fr": "de gain sur les priorités moyennes en 1 semaine", "en": "gained on medium priorities in 1 week"}},
+      {"value": "312k", "label": {"fr": "articles suivis en continu", "en": "items tracked continuously"}}
     ]
   }
 }

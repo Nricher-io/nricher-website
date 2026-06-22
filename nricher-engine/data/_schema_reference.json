@@ -1,5 +1,6 @@
 {
   "_comment": "Schéma de référence — un fichier de ce type par entreprise. Toutes les clés sont obligatoires sauf mention contraire.",
+  "_comment_bilingue": "Les textes rédigés (hero.title_line1/title_line2/lede, hero.stats[].label, price_index_gauges.gauges[].desc, priority_table.note, verdict.tag/headline/text, verdict.figures[].label) acceptent soit une simple chaîne (français uniquement, pas de bouton EN sur ce champ), soit un objet {\"fr\": \"...\", \"en\": \"...\"} pour que le sélecteur de langue du site traduise ce champ. Voir ci-dessous pour des exemples des deux formats.",
 
   "meta": {
     "company_name": "NOM_AFFICHE",
@@ -13,13 +14,13 @@
   },
 
   "hero": {
-    "title_line1": "Le marché a bougé.",
-    "title_line2": "Votre prix, un peu moins.",
-    "lede": "418 794 articles analysés cette semaine sur 13 concurrents directs.",
+    "title_line1": {"fr": "Le marché a bougé.", "en": "The market has moved."},
+    "title_line2": {"fr": "Votre prix, un peu moins.", "en": "Your price, a little less."},
+    "lede": {"fr": "418 794 articles analysés cette semaine sur 13 concurrents directs.", "en": "418,794 items analyzed this week across 13 direct competitors."},
     "stats": [
-      {"value": "418,794", "label": "articles analysés (+2,1% vs S24)"},
-      {"value": "200,939", "label": "articles matchés concurrence"},
-      {"value": "103", "delta": "up", "label": "Price Index global (S24 : 103)"}
+      {"value": "418,794", "label": {"fr": "articles analysés (+2,1% vs S24)", "en": "items analyzed (+2.1% vs S24)"}},
+      {"value": "200,939", "label": {"fr": "articles matchés concurrence", "en": "items matched with competitors"}},
+      {"value": "103", "delta": "up", "label": {"fr": "Price Index global (S24 : 103)", "en": "Global Price Index (S24: 103)"}}
     ]
   },
 
@@ -30,9 +31,9 @@
     "analysed": "1 416 281",
     "matched": "489 983",
     "gauges": [
-      {"value": 103, "label": "PI Price All", "ref_prev": "S24 : 103", "desc": "plus cher sur l'ensemble des offres concurrentes"},
-      {"value": 103, "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": "plus cher en moyenne que la meilleure offre du marché"},
-      {"value": 102, "label": "3P same min",  "ref_prev": "S24 : 102", "desc": "plus chers entre vendeurs identiques vs concurrents"}
+      {"value": 103, "label": "PI Price All", "ref_prev": "S24 : 103", "desc": {"fr": "plus cher sur l'ensemble des offres concurrentes", "en": "more expensive across the full set of competitor offers"}},
+      {"value": 103, "label": "3P Price Min", "ref_prev": "S24 : 103", "desc": {"fr": "plus cher en moyenne que la meilleure offre du marché", "en": "more expensive on average than the best market offer"}},
+      {"value": 102, "label": "3P same min",  "ref_prev": "S24 : 102", "desc": {"fr": "plus chers entre vendeurs identiques vs concurrents", "en": "more expensive between identical sellers vs competitors"}}
     ]
   },
 
@@ -42,7 +43,7 @@
       {"week": "S24", "top": 116, "middle": 117, "low": 102},
       {"week": "S25", "top": 118, "middle": 118, "low": 113}
     ],
-    "note": "Lecture libre, générée automatiquement à partir des deltas ci-dessus."
+    "note": {"fr": "Lecture libre, générée automatiquement à partir des deltas ci-dessus.", "en": "Free-form reading, generated automatically from the deltas above."}
   },
 
   "trend_chart": {
@@ -86,13 +87,13 @@
   ],
 
   "verdict": {
-    "tag": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE",
-    "headline": "1 528 articles vendus plus cher que tout le marché. Chaque semaine.",
-    "text": "Sur les 2 709 produits où l'on matche un vendeur identique, 1 528 sont positionnés au-dessus du prix le plus bas constaté ailleurs.",
+    "tag": {"fr": "CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE", "en": "WHAT NRICHER SEES THAT YOU DON'T YET"},
+    "headline": {"fr": "1 528 articles vendus plus cher que tout le marché. Chaque semaine.", "en": "1,528 items sold more expensively than the whole market. Every week."},
+    "text": {"fr": "Sur les 2 709 produits où l'on matche un vendeur identique, 1 528 sont positionnés au-dessus du prix le plus bas constaté ailleurs.", "en": "Out of 2,709 products matched to an identical seller, 1,528 are priced above the lowest price found elsewhere."},
     "figures": [
-      {"value": "+7%", "label": "d'écart vs la meilleure offre du marché (3P)"},
-      {"value": "-5 pts", "label": "de gain sur les priorités moyennes en 1 semaine"},
-      {"value": "418k", "label": "articles suivis en continu"}
+      {"value": "+7%", "label": {"fr": "d'écart vs la meilleure offre du marché (3P)", "en": "gap vs the best market offer (3P)"}},
+      {"value": "-5 pts", "label": {"fr": "de gain sur les priorités moyennes en 1 semaine", "en": "gained on medium priorities in 1 week"}},
+      {"value": "418k", "label": {"fr": "articles suivis en continu", "en": "items tracked continuously"}}
     ]
   }
 }
