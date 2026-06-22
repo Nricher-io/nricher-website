@@ -22,7 +22,9 @@
       "nav.demo": "Request a Demo →",
       "nav.join": "Join Us →",
       "nav.burger": "Open menu",
+      "nav.burger.aria-label.aria-label": "Open menu",
       "nav.close": "Close menu",
+      "nav.close.aria-label.aria-label": "Close menu",
 
       // --- COMMON FOOTER ---
       "footer.tagline": "The AI that helps retailers and e-merchants dominate their market. Catalog, price, product sheets.",
@@ -39,6 +41,7 @@
       "idx.hero.sub": "Harness the power of product data to <strong>always satisfy your customers</strong> by offering the right product at the right price, well presented.",
       "idx.hero.search.placeholder": "Search for my company...",
       "idx.hero.search.btn": "Search",
+      "idx.hero.search-btn.aria-label": "Search",
       "idx.trust.label": "Why they <span style=\"color:var(--mint);\">trust</span> us",
       "idx.piliers.title": "nricher answers three fundamental questions",
       "idx.piliers.q1.num": "<span style=\"-webkit-text-fill-color:#2e58ca;color:#2e58ca;\">0</span><span style=\"-webkit-text-fill-color:#2e58ca;color:#2e58ca;\">1</span>",
