@@ -247,8 +247,8 @@ p { text-wrap: pretty; }
 }
 
 /* logo */
-.logo { display: inline-flex; align-items: center; justify-self: start; }
-.logo__img { height: 42px; width: auto; display: block; }
+.logo { display: inline-flex; align-items: center; justify-self: start; min-width: max-content; }
+.logo__img { height: 42px; width: auto; max-width: none; display: block; }
 .logo__i { position: relative; display: inline-block; }
 /* Logo nricher utilise en icone inline dans un titre — plafond fixe, jamais affecte par le contexte (langue, em du parent, etc.) */
 .icon-inline-logo { height: 0.82em !important; max-height: 30px !important; width: auto !important; max-width: 90px !important; vertical-align: baseline; display: inline-block; position: relative; top: 0.02em; }
