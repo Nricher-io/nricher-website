@@ -13,11 +13,7 @@
   ---------------------------------------------------------------- */
   function init() {
 
-    /* ----------------------------------------------------------------
-       1. Lenis smooth scroll (désactivé — lag molette Windows)
-    ---------------------------------------------------------------- */
-    var lenis;
-    /* Lenis désactivé : scroll natif, animations GSAP inchangées */
+    /* Lenis smooth scroll désactivé (lag molette Windows) : scroll natif, animations GSAP inchangées */
 
     /* ----------------------------------------------------------------
        2. Scroll progress bar
@@ -286,23 +282,6 @@
       });
     }
     setTimeout(fillBars, 300);
-
-    /* ----------------------------------------------------------------
-       10. Marquee velocity-skew (Lenis onScroll)
-    ---------------------------------------------------------------- */
-    if (window.gsap && !reduce) {
-      var marquees = document.querySelectorAll('.marquee-inner');
-      if (marquees.length && lenis) {
-        var skew = 0;
-        var skewSetter = gsap.quickSetter('.marquee-inner', 'skewX', 'deg');
-        var clamp = gsap.utils.clamp(-7, 7);
-        lenis.on('scroll', function (e) {
-          var vel = e.velocity || 0;
-          skew = clamp(vel * 0.008);
-          skewSetter(skew);
-        });
-      }
-    }
 
     /* ----------------------------------------------------------------
        11. Scrolling image-columns parallax (hero, index only)
@@ -617,15 +596,12 @@
       var qList = document.getElementById('qs-list');
       if (!qList) return;
       var qItems = Array.prototype.slice.call(qList.querySelectorAll('.qs-item'));
-      var qDots  = Array.prototype.slice.call(document.querySelectorAll('#qs-prog .qs-dot'));
       var qCur = 0;
       var qTimer = null;
       function qActivate(idx) {
         qItems[qCur].classList.remove('is-active');
-        if (qDots[qCur]) qDots[qCur].classList.remove('is-active');
         qCur = idx;
         qItems[qCur].classList.add('is-active');
-        if (qDots[qCur]) qDots[qCur].classList.add('is-active');
       }
       function qStartAuto() {
         clearInterval(qTimer);
@@ -634,10 +610,6 @@
           qActivate((qCur + 1) % qItems.length);
         }, 3200);
       }
-      qDots.forEach(function (dot, i) {
-        dot.style.cursor = 'pointer';
-        dot.addEventListener('click', function () { qActivate(i); qStartAuto(); });
-      });
       qStartAuto();
     })();
 

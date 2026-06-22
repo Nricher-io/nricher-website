@@ -12,7 +12,6 @@
 <style>
   :root{
     --bad:  #e2452f;  --bad-bg: rgba(226,69,47,0.10);
-    --warn: #ffc14d;  --warn-bg: rgba(255,176,32,0.16);
     --good: #1fae7a;  --good-bg: rgba(31,174,122,0.12);
   }
 
@@ -62,10 +61,9 @@
   .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
   .kpi-report .kpi__gauge{width:84px;height:auto;flex-shrink:0;margin-top:-6px;}
   .kpi-report .kpi__num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,5vw,3.4rem);letter-spacing:-0.04em;line-height:1;margin-top:18px;}
-  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.warn{color:#c98c1a;} .kpi-report .kpi__num.good{color:var(--good);} .kpi-report .kpi__num.blue{color:var(--blue);}
+  .kpi-report .kpi__num.bad{color:var(--bad);} .kpi-report .kpi__num.good{color:var(--good);} .kpi-report .kpi__num.blue{color:var(--blue);}
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
   .kpi-report .kpi__chip.bad{background:var(--bad-bg);color:var(--bad);}
-  .kpi-report .kpi__chip.warn{background:var(--warn-bg);color:#c98c1a;}
   .kpi-report .kpi__chip.good{background:var(--good-bg);color:var(--good);}
   .kpi-report .kpi__chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .kpi__label{margin-top:10px;font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
@@ -74,7 +72,7 @@
   .kpi-report .kpi__bar > div{height:100%;border-radius:var(--r-pill);transition:width .6s var(--ease-out);}
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;opacity:0.08;}
-  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.warn{color:#c98c1a;} .kpi-report .kpi__ghost.good{color:var(--good);} .kpi-report .kpi__ghost.blue{color:var(--blue);}
+  .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.good{color:var(--good);} .kpi-report .kpi__ghost.blue{color:var(--blue);}
 
   .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);box-shadow:0 1px 0 rgba(0,0,0,0.02);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}

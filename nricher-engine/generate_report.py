@@ -33,7 +33,7 @@ provenance de la donnée affichée sur la page elle-même.
 
 USAGE
 -----
-    python3 generate_report.py --data data/exemple_fictif.json
+    python3 generate_report.py --data data/exemple_fictif_demostore.json
     python3 generate_report.py --data data/*.json   # génère toutes les pages
 """
 
