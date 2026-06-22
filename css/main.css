@@ -250,8 +250,8 @@ p { text-wrap: pretty; }
 .logo { display: inline-flex; align-items: center; justify-self: start; min-width: max-content; }
 .logo__img { height: 42px; width: auto; max-width: none; display: block; }
 .logo__i { position: relative; display: inline-block; }
-/* Logo nricher utilise en icone inline dans un titre — plafond fixe, jamais affecte par le contexte (langue, em du parent, etc.) */
-.icon-inline-logo { height: 0.82em !important; max-height: 30px !important; width: auto !important; max-width: 90px !important; vertical-align: baseline; display: inline-block; position: relative; top: 0.02em; }
+/* Logo nricher utilise en icone inline dans un titre — proportionnel au texte du titre qui l'entoure */
+.icon-inline-logo { height: 0.82em; width: auto; vertical-align: baseline; display: inline-block; position: relative; top: 0.02em; }
 .logo__dot {
   position: absolute; left: 50%; top: 0.25em;
   width: 0.22em; height: 0.22em; border-radius: 50%;
