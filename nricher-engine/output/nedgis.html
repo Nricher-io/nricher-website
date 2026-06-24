@@ -7,7 +7,7 @@
 <link rel="icon" href="../favicon.ico" sizes="32x32">
 <link rel="icon" href="../favicon.png" type="image/png" sizes="128x128">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<title>Weekly KPIs — {{ data.company.name }} × nricher</title>
+<title>Weekly KPIs — Nedgis × nricher</title>
 <link rel="stylesheet" href="../css/main.css?v=20260622" />
 <style>
   /* Thème sombre — propre au rapport Weekly KPIs, calque exactement les design
@@ -306,7 +306,7 @@
       <a href="#categories" class="toc-bar__link" data-i18n="rp.toc.categories">Catégories</a>
       <a href="#verdict" class="toc-bar__link" data-i18n="rp.toc.conclusion">Conclusion</a>
     </div>
-    <div class="toc-bar__brand">{{ data.company.name }}</div>
+    <div class="toc-bar__brand">Nedgis</div>
   </div>
 </nav>
 
@@ -314,35 +314,34 @@
 
 <header class="hero">
   <div class="container">
-    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> {{ data.week }} <span class="sep">·</span> PRICE INDEX</div>
+    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 26 <span class="sep">·</span> PRICE INDEX</div>
     <h1>
       <span data-i18n="rp.hero.title_prefix">Le marché a bougé.</span>
-      {% if data.heroTagline == 'good' %}<span class="tagline good" data-i18n="rp.hero.tagline.good">Vous reprenez l'avantage.</span>
-      {% elif data.heroTagline == 'bad' %}<span class="tagline bad" data-i18n="rp.hero.tagline.bad">L'écart se creuse avec la concurrence.</span>
-      {% else %}<span class="tagline neutral" data-i18n="rp.hero.tagline.neutral">Voici votre photo de la semaine.</span>{% endif %}
+      <span class="tagline good" data-i18n="rp.hero.tagline.good">Vous reprenez l'avantage.</span>
+      
     </h1>
     <p class="lede">
-      {{ data.hero.articlesAnalysed }} <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
-      {{ data.competitorCount }} <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
+      27110 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      17 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">{{ data.hero.articlesAnalysed }}{% if data.hero.articlesAnalysedDelta %} <span class="{{ 'up' if data.hero.articlesAnalysedDelta.down == false else 'down' }}">{{ '▲' if data.hero.articlesAnalysedDelta.down == false else '▼' }}</span>{% endif %}</div>
+        <div class="n">27110 <span class="up">▲</span></div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
-        {% if data.hero.articlesAnalysedDelta %}<div class="delta-sub">{{ data.hero.articlesAnalysedDelta.text }} <span data-i18n="rp.hero.vs">vs</span> {{ data.prevWeekLabel }}</div>{% endif %}
+        <div class="delta-sub">+3 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n">{{ data.hero.articlesMatched }}</div>
+        <div class="n">8036</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
-        <div class="n {{ data.hero.priceIndexGlobalSeverity }}">{{ data.hero.priceIndexGlobal }}{% if data.hero.priceIndexGlobalDelta %} <span class="{{ 'up' if data.hero.priceIndexGlobalDelta.down == false else 'down' }}">{{ '▲' if data.hero.priceIndexGlobalDelta.down == false else '▼' }}</span>{% endif %}</div>
+        <div class="n bad">108 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat2.label">Price Index global</div>
-        {% if data.hero.priceIndexGlobalDelta %}<div class="delta-sub">{{ data.hero.priceIndexGlobalDelta.text }} <span data-i18n="rp.hero.vs">vs</span> {{ data.prevWeekLabel }}</div>{% endif %}
+        <div class="delta-sub">-9 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n">{{ data.generatedAtLabel }}</div>
+        <div class="n">24 juin à 13h32</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -362,14 +361,14 @@
 
     <div class="kpi-grid-tag"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
     <div class="kpi-grid">
-      {% for g in data.visibleGauges %}
-      {% set needle_color = 'var(--good)' if g.severity=='good' else ('var(--blue)' if g.severity=='blue' else ('var(--bad)' if g.severity=='bad' else 'var(--muted)')) %}
-      <div class="kpi" {% if g.delta %}data-tip="{{ g.delta.text }} vs {{ data.prevWeekLabel }} : {{ g.previousValue }}"{% endif %}>
-        {% if g.value is not none %}<span class="kpi__ghost {{ g.severity }}">{{ g.value }}</span>{% endif %}
+      
+      
+      <div class="kpi" data-tip="-7 pts vs S25 : 109">
+        <span class="kpi__ghost bad">102</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
-              <linearGradient id="gaugeArcGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="gaugeArcGrad-0" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#10b981"/>
                 <stop offset="30%" stop-color="#84cc16"/>
                 <stop offset="55%" stop-color="#f59e0b"/>
@@ -377,23 +376,22 @@
                 <stop offset="100%" stop-color="#ef4444"/>
               </linearGradient>
             </defs>
-            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-{{ loop.index0 }})" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="{{ g.needleX }}" y2="{{ g.needleY }}" stroke="{{ needle_color }}" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="100" cy="100" r="6" fill="{{ needle_color }}"/>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-0)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="109.5" y2="39.9" stroke="var(--bad)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--bad)"/>
           </svg>
-          {% if g.delta %}<div class="kpi__chip {{ g.severity }}">{{ g.delta.text }}</div>{% endif %}
+          <div class="kpi__chip bad">-7 pts</div>
         </div>
-        <div class="kpi__num {{ g.severity or 'neutral' }}">{{ g.value if g.value is not none else '—' }}</div>
-        <div class="kpi__label">{{ g.label }}</div>
+        <div class="kpi__num bad">102</div>
+        <div class="kpi__label">Price Index All</div>
         <div class="kpi__desc">
-          {% if g.key == 'ALL' %}<span data-i18n="rp.gauge.all.desc">Toutes les offres confondues, tous vendeurs.</span>
-          {% elif g.key == '1P_MIN' %}<span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
-          {% elif g.key == '3P_MIN' %}<span data-i18n="rp.gauge.3p_min.desc">Meilleure offre marketplace, hors vous.</span>{% endif %}
+          <span data-i18n="rp.gauge.all.desc">Toutes les offres confondues, tous vendeurs.</span>
+          
         </div>
         <div class="kpi__bar">
           <svg viewBox="0 0 200 8" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="gaugeBarGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="gaugeBarGrad-0" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#10b981"/>
                 <stop offset="30%" stop-color="#84cc16"/>
                 <stop offset="55%" stop-color="#f59e0b"/>
@@ -401,18 +399,115 @@
                 <stop offset="100%" stop-color="#ef4444"/>
               </linearGradient>
             </defs>
-            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-{{ loop.index0 }})"/>
-            {% if g.refPct is not none %}<rect x="{{ (g.refPct/100*198)|round(1) }}" y="0" width="2" height="8" fill="#fff"/>{% endif %}
-            {% if g.barPct is not none %}<circle cx="{{ (g.barPct/100*200)|round(1) }}" cy="4" r="4.5" fill="#fff" stroke="#0a0a0a" stroke-width="1.5"/>{% endif %}
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-0)"/>
+            <rect x="142.6" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="110.0" cy="4" r="4.5" fill="#fff" stroke="#0a0a0a" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="kpi__ref">
-          <span>{{ gauge_vmin }}</span>
-          {% if g.previousValue is not none %}<span>{{ data.prevWeekLabel }} : {{ g.previousValue }}</span>{% else %}<span>—</span>{% endif %}
-          <span>{{ gauge_vmax }}</span>
+          <span>80</span>
+          <span>S25 : 109</span>
+          <span>120</span>
         </div>
       </div>
-      {% endfor %}
+      
+      
+      <div class="kpi" data-tip="-9 pts vs S25 : 117">
+        <span class="kpi__ghost bad">108</span>
+        <div class="kpi-top">
+          <svg class="kpi__gauge" viewBox="0 0 200 116">
+            <defs>
+              <linearGradient id="gaugeArcGrad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10b981"/>
+                <stop offset="30%" stop-color="#84cc16"/>
+                <stop offset="55%" stop-color="#f59e0b"/>
+                <stop offset="78%" stop-color="#f97316"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-1)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="135.7" y2="50.8" stroke="var(--bad)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--bad)"/>
+          </svg>
+          <div class="kpi__chip bad">-9 pts</div>
+        </div>
+        <div class="kpi__num bad">108</div>
+        <div class="kpi__label">Price Index 1P min</div>
+        <div class="kpi__desc">
+          <span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
+          
+        </div>
+        <div class="kpi__bar">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="gaugeBarGrad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10b981"/>
+                <stop offset="30%" stop-color="#84cc16"/>
+                <stop offset="55%" stop-color="#f59e0b"/>
+                <stop offset="78%" stop-color="#f97316"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-1)"/>
+            <rect x="182.2" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="140.0" cy="4" r="4.5" fill="#fff" stroke="#0a0a0a" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="kpi__ref">
+          <span>80</span>
+          <span>S25 : 117</span>
+          <span>120</span>
+        </div>
+      </div>
+      
+      
+      <div class="kpi" >
+        
+        <div class="kpi-top">
+          <svg class="kpi__gauge" viewBox="0 0 200 116">
+            <defs>
+              <linearGradient id="gaugeArcGrad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10b981"/>
+                <stop offset="30%" stop-color="#84cc16"/>
+                <stop offset="55%" stop-color="#f59e0b"/>
+                <stop offset="78%" stop-color="#f97316"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-2)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="100.0" y2="39.2" stroke="var(--muted)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--muted)"/>
+          </svg>
+          
+        </div>
+        <div class="kpi__num neutral">—</div>
+        <div class="kpi__label">3P Price Min</div>
+        <div class="kpi__desc">
+          <span data-i18n="rp.gauge.3p_min.desc">Meilleure offre marketplace, hors vous.</span>
+        </div>
+        <div class="kpi__bar">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="gaugeBarGrad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#10b981"/>
+                <stop offset="30%" stop-color="#84cc16"/>
+                <stop offset="55%" stop-color="#f59e0b"/>
+                <stop offset="78%" stop-color="#f97316"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-2)"/>
+            
+            
+          </svg>
+        </div>
+        <div class="kpi__ref">
+          <span>80</span>
+          <span>—</span>
+          <span>120</span>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -426,13 +521,13 @@
         <div class="section-title" data-i18n="rp.toc.trend">Tendance</div>
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
-      <span class="tag tag--watch">{{ data.trendChart.weeks[0] }} → {{ data.trendChart.weeks[-1] }}</span>
+      <span class="tag tag--watch">31 mars → 23 juin</span>
     </div>
 
     <div class="grid-2">
       <div class="chart-card">
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> {{ data.trendChart.weeks|length }} <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 13 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -469,24 +564,100 @@
           </tr>
         </thead>
         <tbody>
-          {% for r in data.priorityTable %}
-          {% set prev = data.priorityTable[loop.index0 - 1] if loop.index0 > 0 else none %}
+          
+          
           <tr>
-            <td class="wk">S{{ r.week }}{% if r.isCurrent %} ★{% endif %}</td>
-            {% for key in ['top', 'middle', 'low'] %}
+            <td class="wk">S24</td>
+            
             <td>
-              <span class="prio-chip {{ r[key + 'Severity'] }}" data-tip="{{ key|capitalize }} sales S{{ r.week }} : {{ r[key] }}">
-                {{ r[key] }}
-                {% if prev %}{% set d = r[key] - prev[key] %}<span class="prio-chip__d">{{ '▲' if d > 0 else ('▼' if d < 0 else '—') }}</span>{% endif %}
+              <span class="prio-chip bad" data-tip="Top sales S24 : 110">
+                110
+                
               </span>
             </td>
-            {% endfor %}
+            
             <td>
-              <span class="prio-chip {{ r.allAvgMin1PSeverity or 'neu' }}">1P {{ r.allAvgMin1P if r.allAvgMin1P is not none else '—' }}</span>
-              <div class="prio-all-sub">3P {{ r.allAvgMin3P if r.allAvgMin3P is not none else '—' }}</div>
+              <span class="prio-chip bad" data-tip="Middle sales S24 : 108">
+                108
+                
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Low sales S24 : 104">
+                104
+                
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad">1P 112</span>
+              <div class="prio-all-sub">3P —</div>
             </td>
           </tr>
-          {% endfor %}
+          
+          
+          <tr>
+            <td class="wk">S25</td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S25 : 107">
+                107
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S25 : 107">
+                107
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Low sales S25 : 105">
+                105
+                <span class="prio-chip__d">▲</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad">1P 110</span>
+              <div class="prio-all-sub">3P —</div>
+            </td>
+          </tr>
+          
+          
+          <tr>
+            <td class="wk">S26 ★</td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Top sales S26 : 105">
+                105
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Middle sales S26 : 106">
+                106
+                <span class="prio-chip__d">▼</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad" data-tip="Low sales S26 : 107">
+                107
+                <span class="prio-chip__d">▲</span>
+              </span>
+            </td>
+            
+            <td>
+              <span class="prio-chip bad">1P 108</span>
+              <div class="prio-all-sub">3P —</div>
+            </td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
@@ -507,28 +678,44 @@
     <div class="grid-2">
       <div class="chart-card">
         <h3 data-i18n="rp.overview.chart1.title">Répartition moyenne</h3>
-        <div class="chart-sub"><span data-i18n="rp.overview.chart1.sub_prefix">Lower / Equal / Higher, moyenne sur</span> {{ data.competitorCount }} <span data-i18n="rp.overview.chart1.sub_suffix">concurrents.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.overview.chart1.sub_prefix">Lower / Equal / Higher, moyenne sur</span> 17 <span data-i18n="rp.overview.chart1.sub_suffix">concurrents.</span></div>
         <div class="donut-wrap">
           <svg class="donut-svg" viewBox="0 0 120 120">
             <g transform="rotate(-90 60 60)">
-              {% for seg in competitors_overview.donutSegments %}
-              <circle cx="60" cy="60" r="50" fill="none" stroke="{{ seg.color }}" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="{{ seg.dasharray }}" stroke-dashoffset="{{ seg.dashoffset }}"
-                      data-tip="{{ seg.pct }}%"></circle>
-              {% endfor %}
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#10b981" stroke-width="20" stroke-linecap="round"
+                      stroke-dasharray="83.51 230.65" stroke-dashoffset="-0.00"
+                      data-tip="27%"></circle>
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#3b82f6" stroke-width="20" stroke-linecap="round"
+                      stroke-dasharray="67.81 246.35" stroke-dashoffset="-84.82"
+                      data-tip="22%"></circle>
+              
+              <circle cx="60" cy="60" r="50" fill="none" stroke="#ef4444" stroke-width="20" stroke-linecap="round"
+                      stroke-dasharray="158.91 155.25" stroke-dashoffset="-153.94"
+                      data-tip="51%"></circle>
+              
             </g>
-            {% for seg in competitors_overview.donutSegments %}
-            {% if seg.pct >= 6 %}
-            <text x="{{ seg.label_x }}" y="{{ seg.label_y }}" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">{{ seg.pct }}%</text>
-            {% endif %}
-            {% endfor %}
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="#ef4444">{{ competitors_overview.avgHigher }}%</text>
+            
+            
+            <text x="97.5" y="26.9" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">27%</text>
+            
+            
+            
+            <text x="94.2" y="96.4" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">22%</text>
+            
+            
+            
+            <text x="10.0" y="61.6" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">51%</text>
+            
+            
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="#ef4444">51%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="#b3b3b3" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · {{ competitors_overview.avgLower }}%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · {{ competitors_overview.avgEqual }}%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · {{ competitors_overview.avgHigher }}%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 27%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 22%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 51%</div>
           </div>
         </div>
       </div>
@@ -537,15 +724,31 @@
         <h3 data-i18n="rp.overview.chart2.title">Classement par indice prix</h3>
         <div class="chart-sub" data-i18n="rp.overview.chart2.sub">Du plus compétitif au plus cher (top 10, 80 = très compétitif, 120 = très cher).</div>
         <div class="rank-list">
-          {% for c in competitors_ranking %}
+          
           <div class="rank-row">
-            <span class="rank-name">{{ c.name }}</span>
+            <span class="rank-name">Connox</span>
             <div class="rank-bar-track">
-              <div class="rank-bar" data-tip="{{ c.name }} : PI {{ c.pi }}" style="width:{{ c.barPct }}%;background:var(--{{ c.severity }});"></div>
+              <div class="rank-bar" data-tip="Connox : PI 97" style="width:42%;background:var(--good);"></div>
             </div>
-            <span class="rank-pi">{{ c.pi }}</span>
+            <span class="rank-pi">97</span>
           </div>
-          {% endfor %}
+          
+          <div class="rank-row">
+            <span class="rank-name">Fermliving</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Fermliving : PI 106" style="width:65%;background:var(--bad);"></div>
+            </div>
+            <span class="rank-pi">106</span>
+          </div>
+          
+          <div class="rank-row">
+            <span class="rank-name">Andlight</span>
+            <div class="rank-bar-track">
+              <div class="rank-bar" data-tip="Andlight : PI 109" style="width:72%;background:var(--bad);"></div>
+            </div>
+            <span class="rank-pi">109</span>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -558,7 +761,7 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title"><span data-i18n="rp.competitors.title_prefix">Face à</span> {{ data.competitorCount }} <span data-i18n="rp.competitors.title_suffix">concurrents</span></div>
+        <div class="section-title"><span data-i18n="rp.competitors.title_prefix">Face à</span> 17 <span data-i18n="rp.competitors.title_suffix">concurrents</span></div>
         <div class="section-sub" data-i18n="rp.competitors.sub">Pour chaque enseigne : part des articles moins chers, alignés, plus chers — et son propre indice prix. Top 12 par volume matché.</div>
       </div>
     </div>
@@ -570,17 +773,37 @@
     </div>
 
     <div class="cbar-list">
-      {% for c in competitors_by_volume %}
+      
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched }} <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Connox</div><div class="cbar-meta">3811 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="{{ c.name }} — moins cher : {{ c.lowerPct }}%" style="width:{{ c.lowerPct }}%;background:var(--good);">{% if c.lowerPct >= 9 %}<span class="cbar-seg__pct">{{ c.lowerPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ c.name }} — aligné : {{ c.equalPct }}%" style="width:{{ c.equalPct }}%;background:var(--blue);">{% if c.equalPct >= 9 %}<span class="cbar-seg__pct">{{ c.equalPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ c.name }} — plus cher : {{ c.higherPct }}%" style="width:{{ c.higherPct }}%;background:var(--bad);">{% if c.higherPct >= 9 %}<span class="cbar-seg__pct">{{ c.higherPct }}%</span>{% endif %}</div>
+          <div data-tip="Connox — moins cher : 37%" style="width:37%;background:var(--good);"><span class="cbar-seg__pct">37%</span></div>
+          <div data-tip="Connox — aligné : 27%" style="width:27%;background:var(--blue);"><span class="cbar-seg__pct">27%</span></div>
+          <div data-tip="Connox — plus cher : 36%" style="width:36%;background:var(--bad);"><span class="cbar-seg__pct">36%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--{{ c.severity }});">PI {{ c.pi }}</div>
+        <div class="cbar-pi" style="color:var(--good);">PI 97</div>
       </div>
-      {% endfor %}
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Andlight</div><div class="cbar-meta">2727 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div class="cbar-track">
+          <div data-tip="Andlight — moins cher : 23%" style="width:23%;background:var(--good);"><span class="cbar-seg__pct">23%</span></div>
+          <div data-tip="Andlight — aligné : 19%" style="width:19%;background:var(--blue);"><span class="cbar-seg__pct">19%</span></div>
+          <div data-tip="Andlight — plus cher : 58%" style="width:58%;background:var(--bad);"><span class="cbar-seg__pct">58%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">PI 109</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Fermliving</div><div class="cbar-meta">2102 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div class="cbar-track">
+          <div data-tip="Fermliving — moins cher : 20%" style="width:20%;background:var(--good);"><span class="cbar-seg__pct">20%</span></div>
+          <div data-tip="Fermliving — aligné : 20%" style="width:20%;background:var(--blue);"><span class="cbar-seg__pct">20%</span></div>
+          <div data-tip="Fermliving — plus cher : 60%" style="width:60%;background:var(--bad);"><span class="cbar-seg__pct">60%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">PI 106</div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -603,18 +826,40 @@
           <tr><th data-i18n="rp.competitors_table.col_competitor">Concurrent</th><th style="text-align:right;" data-i18n="rp.competitors_table.col_all">Articles all</th><th style="text-align:right;">PI all</th><th style="text-align:right;" data-i18n="rp.competitors_table.col_min">Articles min</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
         </thead>
         <tbody>
-          {% for c in data.competitors.table %}
+          
           <tr>
-            <td>{{ c.name }}</td>
-            <td class="num">{{ "{:,}".format(c.articlesAll).replace(",", " ") }}</td>
-            <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[c.piAllSeverity] }}">{{ c.piAll }}</span></td>
-            <td class="num">{{ "{:,}".format(c.articlesMin).replace(",", " ") }}</td>
-            <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[c.piMinSeverity] }}">{{ c.piMin }}</span></td>
-            <td class="num">{{ "{:,}".format(c.gt100).replace(",", " ") }}</td>
-            <td class="num">{{ "{:,}".format(c.eq100).replace(",", " ") }}</td>
-            <td class="num">{{ "{:,}".format(c.lt100).replace(",", " ") }}</td>
+            <td>Andlight</td>
+            <td class="num">4 080</td>
+            <td class="num"><span class="pi-chip r">107</span></td>
+            <td class="num">2 727</td>
+            <td class="num"><span class="pi-chip r">109</span></td>
+            <td class="num">1 593</td>
+            <td class="num">508</td>
+            <td class="num">627</td>
           </tr>
-          {% endfor %}
+          
+          <tr>
+            <td>Fermliving</td>
+            <td class="num">3 210</td>
+            <td class="num"><span class="pi-chip r">104</span></td>
+            <td class="num">2 102</td>
+            <td class="num"><span class="pi-chip r">106</span></td>
+            <td class="num">1 190</td>
+            <td class="num">420</td>
+            <td class="num">492</td>
+          </tr>
+          
+          <tr>
+            <td>Connox</td>
+            <td class="num">5 520</td>
+            <td class="num"><span class="pi-chip g">99</span></td>
+            <td class="num">3 811</td>
+            <td class="num"><span class="pi-chip g">97</span></td>
+            <td class="num">1 402</td>
+            <td class="num">1 011</td>
+            <td class="num">1 398</td>
+          </tr>
+          
         </tbody>
       </table>
     </div>
@@ -628,9 +873,9 @@
     <div class="section-header">
       <div>
         <div class="section-title" data-i18n="rp.sellers.title">Qui tire les prix vers le bas — vendeur par vendeur</div>
-        <div class="section-sub"><span data-i18n="rp.sellers.sub_prefix">PI min &lt; 100 = systématiquement moins cher que</span> {{ data.company.name }}.</div>
+        <div class="section-sub"><span data-i18n="rp.sellers.sub_prefix">PI min &lt; 100 = systématiquement moins cher que</span> Nedgis.</div>
       </div>
-      <span class="tag tag--watch">S{{ data.week }}</span>
+      <span class="tag tag--watch">S26</span>
     </div>
 
     <div class="sellers-wrap">
@@ -639,17 +884,17 @@
           <tr><th data-i18n="rp.sellers_table.col_seller">Vendeur</th><th style="text-align:right;" data-i18n="rp.sellers_table.col_analysed">Analysés</th><th style="text-align:right;" data-i18n="rp.sellers_table.col_matched">Matchés</th><th style="text-align:right;">PI min</th><th style="text-align:right;">&gt; 100</th><th style="text-align:right;">= 100</th><th style="text-align:right;">&lt; 100</th></tr>
         </thead>
         <tbody>
-          {% for s in data.sellers.table %}
-          <tr {% if s.name == data.company.name %}style="background:rgba(89,239,189,0.08);"{% endif %}>
-            <td>{{ '<strong>'|safe if s.name == data.company.name }}{{ s.name }}{{ '</strong>'|safe if s.name == data.company.name }}{% if s.name == data.company.name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</td>
-            <td class="num">{{ s.analysed }}</td>
-            <td class="num">{{ s.matched }}</td>
-            <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[s.piMinSeverity] }}">{{ s.piMin }}</span></td>
-            <td class="num">{{ s.gt100 }}</td>
-            <td class="num">{{ s.eq100 }}</td>
-            <td class="num">{{ s.lt100 }}</td>
+          
+          <tr >
+            <td>nedgis</td>
+            <td class="num">27110</td>
+            <td class="num">8036</td>
+            <td class="num"><span class="pi-chip r">108</span></td>
+            <td class="num">4432</td>
+            <td class="num">1310</td>
+            <td class="num">2295</td>
           </tr>
-          {% endfor %}
+          
         </tbody>
       </table>
     </div>
@@ -674,17 +919,17 @@
     </div>
 
     <div class="cbar-list">
-      {% for s in data.sellers.stacked %}
-      <div class="cbar-row {{ 'cbar-row--you' if s.name == data.company.name }}">
-        <div><div class="cbar-name">{{ s.name }}{% if s.name == data.company.name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</div></div>
+      
+      <div class="cbar-row ">
+        <div><div class="cbar-name">nedgis</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ s.name }} — moins cher : {{ s.lowerPct }}%" style="width:{{ s.lowerPct }}%;background:var(--good);">{% if s.lowerPct >= 9 %}<span class="cbar-seg__pct">{{ s.lowerPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ s.name }} — aligné : {{ s.equalPct }}%" style="width:{{ s.equalPct }}%;background:var(--blue);">{% if s.equalPct >= 9 %}<span class="cbar-seg__pct">{{ s.equalPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ s.name }} — plus cher : {{ s.higherPct }}%" style="width:{{ s.higherPct }}%;background:var(--bad);">{% if s.higherPct >= 9 %}<span class="cbar-seg__pct">{{ s.higherPct }}%</span>{% endif %}</div>
+          <div data-tip="nedgis — moins cher : 29%" style="width:29%;background:var(--good);"><span class="cbar-seg__pct">29%</span></div>
+          <div data-tip="nedgis — aligné : 16%" style="width:16%;background:var(--blue);"><span class="cbar-seg__pct">16%</span></div>
+          <div data-tip="nedgis — plus cher : 55%" style="width:55%;background:var(--bad);"><span class="cbar-seg__pct">55%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--{{ s.severity }});">PI {{ s.pi }}</div>
+        <div class="cbar-pi" style="color:var(--bad);">PI 108</div>
       </div>
-      {% endfor %}
+      
     </div>
   </div>
 </section>
@@ -707,17 +952,27 @@
     </div>
 
     <div class="cbar-list cbar-list--category">
-      {% for cat in data.categoryStacked %}
+      
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ cat.name }}</div></div>
+        <div><div class="cbar-name">suspension</div></div>
         <div class="cbar-track">
-          <div data-tip="{{ cat.name }} — moins cher : {{ cat.lowerPct }}%" style="width:{{ cat.lowerPct }}%;background:var(--good);">{% if cat.lowerPct >= 9 %}<span class="cbar-seg__pct">{{ cat.lowerPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ cat.name }} — aligné : {{ cat.equalPct }}%" style="width:{{ cat.equalPct }}%;background:var(--blue);">{% if cat.equalPct >= 9 %}<span class="cbar-seg__pct">{{ cat.equalPct }}%</span>{% endif %}</div>
-          <div data-tip="{{ cat.name }} — plus cher : {{ cat.higherPct }}%" style="width:{{ cat.higherPct }}%;background:var(--bad);">{% if cat.higherPct >= 9 %}<span class="cbar-seg__pct">{{ cat.higherPct }}%</span>{% endif %}</div>
+          <div data-tip="suspension — moins cher : 24%" style="width:24%;background:var(--good);"><span class="cbar-seg__pct">24%</span></div>
+          <div data-tip="suspension — aligné : 17%" style="width:17%;background:var(--blue);"><span class="cbar-seg__pct">17%</span></div>
+          <div data-tip="suspension — plus cher : 59%" style="width:59%;background:var(--bad);"><span class="cbar-seg__pct">59%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">{{ cat.count }}</span> <span style="color:var(--muted);">·</span> <span style="color:var(--{{ cat.severity }});">{{ cat.pi }}</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">2791</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">111</span></div>
       </div>
-      {% endfor %}
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">lampe a poser</div></div>
+        <div class="cbar-track">
+          <div data-tip="lampe a poser — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
+          <div data-tip="lampe a poser — aligné : 22%" style="width:22%;background:var(--blue);"><span class="cbar-seg__pct">22%</span></div>
+          <div data-tip="lampe a poser — plus cher : 47%" style="width:47%;background:var(--bad);"><span class="cbar-seg__pct">47%</span></div>
+        </div>
+        <div class="cbar-pi"><span style="color:var(--muted);">1843</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">103</span></div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -726,11 +981,17 @@
   <div class="container">
     <div class="verdict">
       <span class="verdict__badge" data-i18n="rp.verdict.badge">CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE</span>
-      <h2>{{ data.verdict.headline }}</h2>
+      <h2>Le repricing porte ses fruits — l'indice recule de 2 pts vs la semaine précédente.</h2>
       <div class="verdict-figs">
-        {% for f in data.verdict.figures %}
-        <div class="vfig"><div class="n {{ 'good' if f.good != false else 'bad' }}">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
-        {% endfor %}
+        
+        <div class="vfig"><div class="n good">-2 pts</div><div class="l">indice global vs S25</div></div>
+        
+        <div class="vfig"><div class="n good">+2 pts</div><div class="l">d'articles moins chers vs S25</div></div>
+        
+        <div class="vfig"><div class="n good">0</div><div class="l">vendeurs plus compétitifs que vous</div></div>
+        
+        <div class="vfig"><div class="n good">8036</div><div class="l">articles suivis en continu</div></div>
+        
       </div>
       <div class="cta-row" style="margin-top:32px;">
         <a href="../contact.html" class="btn btn-primary" data-i18n="rp.verdict.cta">Voir le détail article par article →</a>
@@ -801,8 +1062,8 @@
   Chart.defaults.borderColor = 'rgba(255,255,255,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {{ data.trendChart | tojson }};
-  var attractiveness = {{ data.attractivenessStacked | tojson }};
+  var trendChart = {"priceIndex1P": [107, 107, 109, 111, 113, 112, 114, 116, 115, 113, 114, 117, 115], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin"]};
+  var attractiveness = [{"equalPct": 20.9, "higherPct": 44.4, "lowerPct": 34.8, "week": "31 mars"}, {"equalPct": 21.4, "higherPct": 45.5, "lowerPct": 33.1, "week": "07 avr."}, {"equalPct": 22.0, "higherPct": 47.8, "lowerPct": 30.2, "week": "14 avr."}, {"equalPct": 21.1, "higherPct": 50.3, "lowerPct": 28.6, "week": "21 avr."}, {"equalPct": 20.5, "higherPct": 51.6, "lowerPct": 27.9, "week": "28 avr."}, {"equalPct": 19.8, "higherPct": 53.8, "lowerPct": 26.4, "week": "05 mai"}, {"equalPct": 19.0, "higherPct": 56.3, "lowerPct": 24.7, "week": "12 mai"}, {"equalPct": 18.6, "higherPct": 58.3, "lowerPct": 23.1, "week": "19 mai"}, {"equalPct": 18.9, "higherPct": 57.1, "lowerPct": 24.0, "week": "26 mai"}, {"equalPct": 19.2, "higherPct": 55.3, "lowerPct": 25.5, "week": "02 juin"}, {"equalPct": 18.4, "higherPct": 57.8, "lowerPct": 23.8, "week": "09 juin"}, {"equalPct": 17.9, "higherPct": 60.1, "lowerPct": 22.0, "week": "16 juin"}, {"equalPct": 17.5, "higherPct": 61.6, "lowerPct": 20.9, "week": "23 juin"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 

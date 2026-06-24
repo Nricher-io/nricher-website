@@ -1,99 +1,87 @@
 # Moteur de génération — Weekly KPIs nricher
 
-Génère automatiquement des pages HTML "Weekly KPIs" dans la charte graphique
-réelle de nricher.io, à partir de fichiers de données JSON.
+Génère des pages HTML "Weekly KPIs" reproduisant fidèlement le rendu réel de
+la page app nricher (`/historical-pricing/weekly-kpis`), à partir de données
+déjà calculées récupérées sur l'API nricher.
+
+Voir `../handoff-dev/WEEKLY_KPIS_APP_SOURCE_OF_TRUTH.md` pour la référence
+visuelle complète et le contrat exact de l'API (c'est le document qui prime
+en cas de doute sur une couleur, une échelle ou un comportement).
 
 ## Installation
 
 ```bash
 pip install -r requirements.txt
+cp .env.example .env
+# puis renseigner NRICHER_API_TOKEN dans .env (token par entreprise, page
+# "APIs" de l'administration nricher) — .env n'est jamais commité.
 ```
 
 ## Utilisation
 
 ```bash
-# Une seule entreprise
-python3 generate_report.py --data data/exemple_fictif_demostore.json
+# Récupère les données en direct sur l'API et génère la page
+python3 generate_report.py --company-id 11
 
-# Toutes les entreprises d'un coup
-python3 generate_report.py --data "data/*.json"
+# Historique plus long pour le graphique de tendance (défaut: 13 semaines)
+python3 generate_report.py --company-id 11 --weeks 26
+
+# Tester le rendu sans token, avec le JSON d'exemple local
+python3 generate_report.py --data data/_sample_api_response.json
 ```
 
 Les pages générées arrivent dans `output/`, un fichier HTML autonome par
-entreprise (pas de dépendance externe à part les polices Fontshare chargées
-en ligne).
+entreprise (pas de dépendance externe à part les polices Fontshare et
+Chart.js, chargées en ligne).
 
 ## Structure du projet
 
 ```
 nricher-engine/
-├── data/                       ← un fichier JSON par entreprise
-│   ├── _schema_reference.json  ← documentation du format attendu (ignoré par le script)
-│   └── exemple_fictif_demostore.json
+├── .env.example                      ← copier en .env, jamais commité
+├── data/
+│   └── _sample_api_response.json     ← fixture locale (forme reelle de l'API), pour tester sans token
 ├── templates/
-│   └── report_template.html    ← template Jinja2, dérivé de la vraie DA nricher.io
-├── output/                     ← pages générées (créé automatiquement)
-├── generate_report.py
+│   └── report_template.html          ← template Jinja2, theme sombre identique a l'app
+├── output/                           ← pages generees (cree automatiquement)
+├── generate_report.py                ← fetch API + calcul geometrie SVG + rendu
 └── requirements.txt
 ```
 
-## Format des données
+## D'où viennent les données
 
-Voir `data/_schema_reference.json` pour le détail complet de chaque champ.
-Le point important : `meta.source_label` est **obligatoire**, et s'affiche
-en bandeau sur la page elle-même. Il doit dire honnêtement d'où vient la
-donnée (ex. `"Donnée publique scrapée — pas un client nricher"` ou,
-le jour où c'est légitime, le statut réel de la donnée pour un client sous
-contrat).
+`generate_report.py` appelle `GET /v1/weekly-kpis/:companyId` (voir
+`fetch_weekly_kpis()`), qui renvoie un JSON déjà entièrement calculé côté
+nricher : deltas, distributions en %, verdict généré. Ce moteur n'a **aucune
+logique métier à réimplémenter** — il ne calcule que la géométrie SVG pure
+(position d'aiguille de jauge, segments de donut) à partir des valeurs
+brutes, exactement comme l'app le fait elle-même côté client.
 
-Le graphique de tendance (`trend_chart`) ne demande que des valeurs brutes
-(`price_index_3p: [108, 107, 106, ...]`) — le script calcule lui-même
-l'échelle et les coordonnées SVG, pas besoin de positionner les points à la
-main.
+`data/_sample_api_response.json` reproduit la forme exacte de cette réponse
+pour permettre de tester localement sans token ni accès réseau — ce n'est
+pas un modèle à remplir à la main, juste une fixture de test.
 
-## Brancher une vraie source de données
+## Sécurité — token API
 
-Ce moteur est volontairement agnostique de la source. Il ne fait QUE :
-lire un JSON → remplir le template → écrire un HTML.
-
-Pour connecter une vraie source, il suffit d'écrire un petit script qui
-PRODUIT un JSON conforme au schéma, par exemple :
-
-```python
-# exemple : adapter.py — à écrire le jour où l'accès est confirmé
-import json
-
-def fetch_from_nricher_api(company_id, api_token):
-    """Appelle l'API officielle nricher et reconstruit le JSON attendu."""
-    # ... appel HTTP réel à l'API documentée ...
-    return {
-        "meta": {...},
-        "hero": {...},
-        # etc.
-    }
-
-data = fetch_from_nricher_api("conforama", api_token="...")
-with open("data/conforama.json", "w") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
-```
-
-Puis lancer `generate_report.py` normalement. Aucune modification du
-template ni du moteur n'est nécessaire.
-
-Trois sources possibles, à choisir selon ce qui est confirmé en interne :
-1. **API REST officielle** de nricher (si elle existe et qu'un token est
-   fourni) — la plus propre.
-2. **Export SFTP / Excel partagé** que nricher fournit déjà à ses clients
-   pour alimenter leurs outils tiers — lire le fichier avec `pandas` ou
-   `openpyxl` et le reformater en JSON.
-3. **Scraping web public** des catalogues des marques cibles (la même
-   méthode que nricher utilise lui-même) — pour les entreprises qui ne
-   sont pas clientes et n'ont donc aucune donnée dans l'outil interne.
+Le token (`NRICHER_API_TOKEN`) donne accès aux vraies données d'une
+entreprise cliente. Il vit uniquement dans `nricher-engine/.env` (gitignored,
+voir `.env.example` pour le format) et ne doit **jamais** être écrit en clair
+dans un fichier versionné, un commit, ou collé dans une conversation.
 
 ## ⚠️ Avant d'ajouter un vrai client
 
 Ne génère une page avec les vraies données d'un client nricher sous contrat
 que si son accord explicite (et celui de nricher) a été obtenu. Pour les
-250 entreprises qui sont simplement scrapées comme données de marché
-(benchmark concurrentiel), pas de souci : c'est de la donnée publique,
-exactement ce que nricher traite déjà pour son propre service.
+entreprises simplement scrapées comme données de marché (benchmark
+concurrentiel), pas de souci : c'est de la donnée publique, exactement ce
+que nricher traite déjà pour son propre service.
+
+## À savoir — `generate_index.py`
+
+`generate_index.py` (page de recherche d'entreprises) découvre encore les
+entreprises via `data/companies.json`. L'ancien mécanisme d'auto-découverte
+en scannant `data/<entreprise>.json` ne s'applique plus, puisque les données
+ne sont plus déposées en fichiers locaux mais récupérées à la demande sur
+l'API — `companies.json` doit donc être maintenu à la main (ou via un futur
+script qui liste les entreprises actives côté API) jusqu'à ce qu'un nouveau
+mécanisme d'auto-découverte soit écrit.

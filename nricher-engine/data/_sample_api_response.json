@@ -1,0 +1,81 @@
+{
+  "_comment": "Fixture locale pour tester generate_report.py sans token API reel. Reproduit fidelement la forme de la vraie reponse GET /v1/weekly-kpis/:companyId (voir handoff-dev/WEEKLY_KPIS_APP_SOURCE_OF_TRUTH.md section 1). Ne PAS utiliser comme modele de donnees a remplir a la main - en production, ce JSON vient toujours de fetch_weekly_kpis().",
+  "company": { "id": 11, "name": "Nedgis" },
+  "generatedAt": "2026-06-24T13:32:02.173Z",
+  "creationDate": "2026-06-24T05:06:09.932Z",
+  "week": 26,
+  "prevWeek": 25,
+  "prevWeekLabel": "S25",
+  "competitorCount": 17,
+  "hero": {
+    "articlesAnalysed": 27110,
+    "articlesAnalysedDelta": { "text": "+3 %", "down": false, "good": false },
+    "articlesMatched": 8036,
+    "priceIndexGlobal": 108,
+    "priceIndexGlobalDelta": { "text": "-9 pts", "down": true, "good": true }
+  },
+  "gauges": [
+    { "key": "ALL", "label": "Price Index All", "value": 102, "previousValue": 109, "delta": { "text": "-7 pts", "down": true, "good": true } },
+    { "key": "1P_MIN", "label": "Price Index 1P min", "value": 108, "previousValue": 117, "delta": { "text": "-9 pts", "down": true, "good": true } },
+    { "key": "3P_MIN", "label": "3P Price Min", "value": null, "previousValue": null, "delta": null },
+    { "key": "3P_SAME_MIN", "label": "3P same min", "value": null, "previousValue": null, "delta": null }
+  ],
+  "priorityTable": [
+    { "week": 24, "isCurrent": false, "top": 110, "middle": 108, "low": 104, "allAvgMin1P": 112, "allAvgMin3P": null },
+    { "week": 25, "isCurrent": false, "top": 107, "middle": 107, "low": 105, "allAvgMin1P": 110, "allAvgMin3P": null },
+    { "week": 26, "isCurrent": true, "top": 105, "middle": 106, "low": 107, "allAvgMin1P": 108, "allAvgMin3P": null }
+  ],
+  "trendChart": {
+    "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin"],
+    "priceIndex1P": [107, 107, 109, 111, 113, 112, 114, 116, 115, 113, 114, 117, 115],
+    "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null]
+  },
+  "attractivenessStacked": [
+    { "week": "31 mars", "lowerPct": 34.8, "equalPct": 20.9, "higherPct": 44.4 },
+    { "week": "07 avr.", "lowerPct": 33.1, "equalPct": 21.4, "higherPct": 45.5 },
+    { "week": "14 avr.", "lowerPct": 30.2, "equalPct": 22.0, "higherPct": 47.8 },
+    { "week": "21 avr.", "lowerPct": 28.6, "equalPct": 21.1, "higherPct": 50.3 },
+    { "week": "28 avr.", "lowerPct": 27.9, "equalPct": 20.5, "higherPct": 51.6 },
+    { "week": "05 mai", "lowerPct": 26.4, "equalPct": 19.8, "higherPct": 53.8 },
+    { "week": "12 mai", "lowerPct": 24.7, "equalPct": 19.0, "higherPct": 56.3 },
+    { "week": "19 mai", "lowerPct": 23.1, "equalPct": 18.6, "higherPct": 58.3 },
+    { "week": "26 mai", "lowerPct": 24.0, "equalPct": 18.9, "higherPct": 57.1 },
+    { "week": "02 juin", "lowerPct": 25.5, "equalPct": 19.2, "higherPct": 55.3 },
+    { "week": "09 juin", "lowerPct": 23.8, "equalPct": 18.4, "higherPct": 57.8 },
+    { "week": "16 juin", "lowerPct": 22.0, "equalPct": 17.9, "higherPct": 60.1 },
+    { "week": "23 juin", "lowerPct": 20.9, "equalPct": 17.5, "higherPct": 61.6 }
+  ],
+  "competitors": {
+    "table": [
+      { "name": "Andlight", "articlesAll": 4080, "piAll": 107, "articlesMin": 2727, "piMin": 109, "gt100": 1593, "eq100": 508, "lt100": 627, "pi1pMin": 109, "art1pMin": 2727 },
+      { "name": "Fermliving", "articlesAll": 3210, "piAll": 104, "articlesMin": 2102, "piMin": 106, "gt100": 1190, "eq100": 420, "lt100": 492, "pi1pMin": 106, "art1pMin": 2102 },
+      { "name": "Connox", "articlesAll": 5520, "piAll": 99, "articlesMin": 3811, "piMin": 97, "gt100": 1402, "eq100": 1011, "lt100": 1398, "pi1pMin": 97, "art1pMin": 3811 }
+    ],
+    "stacked": [
+      { "name": "Andlight", "matched": 2727, "lowerPct": 23, "equalPct": 19, "higherPct": 58, "pi": 109 },
+      { "name": "Fermliving", "matched": 2102, "lowerPct": 20, "equalPct": 20, "higherPct": 60, "pi": 106 },
+      { "name": "Connox", "matched": 3811, "lowerPct": 37, "equalPct": 27, "higherPct": 36, "pi": 97 }
+    ]
+  },
+  "sellers": {
+    "table": [
+      { "name": "nedgis", "analysed": 27110, "matched": 8036, "piMin": 108, "gt100": 4432, "eq100": 1310, "lt100": 2295 }
+    ],
+    "stacked": [
+      { "name": "nedgis", "matched": 8036, "lowerPct": 29, "equalPct": 16, "higherPct": 55, "pi": 108 }
+    ]
+  },
+  "categoryStacked": [
+    { "name": "suspension", "count": 2791, "lowerPct": 24, "equalPct": 17, "higherPct": 59, "pi": 111 },
+    { "name": "lampe a poser", "count": 1843, "lowerPct": 31, "equalPct": 22, "higherPct": 47, "pi": 103 }
+  ],
+  "verdict": {
+    "headline": "Le repricing porte ses fruits — l'indice recule de 2 pts vs la semaine précédente.",
+    "figures": [
+      { "value": "-2 pts", "label": "indice global vs S25", "good": true },
+      { "value": "+2 pts", "label": "d'articles moins chers vs S25", "good": true },
+      { "value": "0", "label": "vendeurs plus compétitifs que vous", "good": true },
+      { "value": "8036", "label": "articles suivis en continu", "good": null }
+    ]
+  }
+}
