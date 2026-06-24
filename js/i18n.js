@@ -43,7 +43,7 @@
       "idx.hero.search.placeholder": "Search for my company...",
       "idx.hero.search.btn": "Search",
       "idx.hero.search-btn.aria-label": "Search",
-      "idx.trust.label": "Why they <span style=\"color:var(--mint);\">trust</span> us",
+      "idx.trust.label": "Why they <span style=\"color:var(--mint);\">trust</span> us?",
       "idx.piliers.title": "answers three fundamental questions",
       "idx.piliers.q1.num": "<span style=\"-webkit-text-fill-color:#2e58ca;color:#2e58ca;\">0</span><span style=\"-webkit-text-fill-color:#2e58ca;color:#2e58ca;\">1</span>",
       "idx.piliers.q1.link": "Right product →",
