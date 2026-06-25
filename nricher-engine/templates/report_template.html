@@ -64,7 +64,7 @@
 
   .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
-  .kpi-report .kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);}
+  .kpi-report .kpi__topbar{position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-brand);z-index:1;}
   .kpi-report .kpi:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
   .kpi-report .kpi-top{display:flex;justify-content:space-between;align-items:flex-start;}
   .kpi-report .kpi__gauge{width:140px;height:auto;flex-shrink:0;margin-top:-6px;}
@@ -81,7 +81,7 @@
   .kpi-report .kpi__ref{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--muted);}
   .kpi-report .kpi__ghost{position:absolute;right:-6px;bottom:-22px;font-family:var(--font-display);font-weight:900;font-size:6rem;line-height:1;letter-spacing:-0.05em;opacity:0.10;z-index:0;pointer-events:none;}
   .kpi-report .kpi__ghost.bad{color:var(--bad);} .kpi-report .kpi__ghost.good{color:var(--good);} .kpi-report .kpi__ghost.blue{color:var(--blue);}
-  .kpi-report .kpi > *:not(.kpi__ghost){position:relative;z-index:1;}
+  .kpi-report .kpi > *:not(.kpi__ghost):not(.kpi__topbar){position:relative;z-index:1;}
 
   .kpi-report .prio-table-wrap{border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;background:var(--card);}
   .kpi-report table.prio-table{width:100%;border-collapse:collapse;}
@@ -385,6 +385,7 @@
     <div class="kpi-grid">
       {% for g in data.visibleGauges %}
       <div class="kpi" {% if g.delta %}data-tip="{{ g.delta.text }} vs {{ data.prevWeekLabel }} : {{ g.previousValue }}"{% endif %}>
+        <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
