@@ -473,6 +473,13 @@
       "th.btn.home": "Back to Home →",
       "th.btn.cases": "View our case studies",
 
+      // --- PAGE: TELECHARGEMENT RESERVE ---
+      "dl.meta.title": "Download Reserved — nricher",
+      "dl.title": "Download reserved<br><em class=\"grad-text\" style=\"-webkit-text-fill-color:transparent;font-style:normal;\">for nricher clients.</em>",
+      "dl.sub": "PDF / HTML / PNG export of this report is available directly in the app, for companies under contract.<br>Want access for yours?",
+      "dl.btn.contact": "Contact us →",
+      "dl.btn.back": "Back to the report",
+
       // --- PAGE: RECHERCHE ---
       "re.meta.title": "Search Company — Weekly KPIs · nricher",
       "re.eyebrow": "Weekly KPIs",
@@ -506,6 +513,7 @@
       "rp.hero.stat1.label": "Matched vs competition",
       "rp.hero.stat2.label": "Global Price Index",
       "rp.hero.vs": "vs",
+      "rp.hero.download": "Download",
       "rp.kpi.tag": "100 = market aligned",
       "rp.gauge.all.desc": "All offers combined, all sellers.",
       "rp.gauge.1p_min.desc": "Your best offer, compared to the market.",
