@@ -18,7 +18,7 @@
       "nav.cases": "Case Studies",
       "nav.team": "Team",
       "nav.contact": "Contact",
-      "nav.mycompany": "My Company",
+      "nav.mycompany": "PI Company",
       "nav.login": "Login",
       "nav.demo": "Request a Demo →",
       "nav.join": "Join Us →",
