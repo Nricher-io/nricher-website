@@ -82,6 +82,6 @@ que nricher traite déjà pour son propre service.
 entreprises via `data/companies.json`. L'ancien mécanisme d'auto-découverte
 en scannant `data/<entreprise>.json` ne s'applique plus, puisque les données
 ne sont plus déposées en fichiers locaux mais récupérées à la demande sur
-l'API — `companies.json` doit donc être maintenu à la main (ou via un futur
-script qui liste les entreprises actives côté API) jusqu'à ce qu'un nouveau
-mécanisme d'auto-découverte soit écrit.
+l'API — `companies.json` doit donc être maintenu à la main pour l'instant.
+Demande faite côté app pour lever ça : voir
+`../handoff-dev/SITE_REQUEST_companies_list_endpoint.md`.
