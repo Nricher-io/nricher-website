@@ -76,12 +76,16 @@ entreprises simplement scrapées comme données de marché (benchmark
 concurrentiel), pas de souci : c'est de la donnée publique, exactement ce
 que nricher traite déjà pour son propre service.
 
-## À savoir — `generate_index.py`
+## `generate_index.py` — découverte des entreprises
 
-`generate_index.py` (page de recherche d'entreprises) découvre encore les
-entreprises via `data/companies.json`. L'ancien mécanisme d'auto-découverte
-en scannant `data/<entreprise>.json` ne s'applique plus, puisque les données
-ne sont plus déposées en fichiers locaux mais récupérées à la demande sur
-l'API — `companies.json` doit donc être maintenu à la main pour l'instant.
-Demande faite côté app pour lever ça : voir
-`../handoff-dev/SITE_REQUEST_companies_list_endpoint.md`.
+`generate_index.py` (page de recherche d'entreprises) complète
+`data/companies.json` en appelant `GET /v1/companies` (JWT site, header
+`Authorization: Bearer ...`, voir `NRICHER_SITE_TOKEN` dans `.env.example`) :
+toute entreprise avec `weeklyKpisEnabled: true` absente de la liste y est
+ajoutée automatiquement (jamais de suppression). Sans token ou si l'appel
+échoue, `companies.json` reste inchangé — pas de plantage, juste un message
+console.
+
+Ça répondait au besoin décrit dans
+`../handoff-dev/SITE_REQUEST_companies_list_endpoint.md` (résolu, endpoint
+disponible côté app).
