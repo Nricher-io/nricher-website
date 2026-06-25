@@ -40,6 +40,7 @@ USAGE
 import argparse
 import math
 import os
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -195,9 +196,16 @@ def compute_hero_tagline(price_index_global_delta):
     valeurs et leur delta deja calcule. Le gabarit du H1 ("Le marche a
     bouge. {tagline}") est donc genere ici a partir du sens du delta,
     avec un libelle statique traduisible (data-i18n), pas une donnee
-    entreprise.
+    entreprise. "neutral" (bleu, comme le 100=aligne) couvre aussi bien
+    l'absence de delta que le cas stable (delta a 0), comme corrige cote
+    app (commit 42bb1e83 : couleur bleue, pas rouge, quand le prix tient bon).
     """
-    if not price_index_global_delta or price_index_global_delta.get("good") is None:
+    if not price_index_global_delta:
+        return "neutral"
+    text = (price_index_global_delta.get("text") or "").strip()
+    if re.match(r"^[+-]?0\b", text):
+        return "neutral"
+    if price_index_global_delta.get("good") is None:
         return "neutral"
     return "good" if price_index_global_delta["good"] else "bad"
 
