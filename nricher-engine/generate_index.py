@@ -12,12 +12,12 @@ Genere les pages de recherche d'entreprises :
 AUTO-DECOUVERTE
 ---------------
 La liste des entreprises (data/companies.json) est automatiquement
-completee : chaque fichier data/<entreprise>.json (hors fichiers commencant
-par "_") est lu, et si son meta.company_name n'est pas deja dans
-companies.json, il y est ajoute et le fichier est resauvegarde.
-Resultat : il suffit de deposer un nouveau data/<entreprise>.json pour que
-l'entreprise apparaisse automatiquement dans la recherche, sans toucher au
-code ni a companies.json a la main.
+completee depuis l'API nricher : GET /v1/companies (authentifie par un JWT
+NRICHER_SITE_TOKEN, voir .env.example) renvoie chaque entreprise avec un
+flag weeklyKpisEnabled. Toute entreprise weeklyKpisEnabled=true absente de
+companies.json y est ajoutee automatiquement (jamais retiree).
+Si NRICHER_SITE_TOKEN est absent ou que l'appel echoue, companies.json
+reste inchange (degrade gracieusement, ne bloque pas la generation).
 
 Deux notions de disponibilite, volontairement distinctes :
   - output/index.html (outil local) : disponible = brouillon present dans
@@ -27,8 +27,12 @@ Deux notions de disponibilite, volontairement distinctes :
 """
 
 import json
+import os
 import re
 from pathlib import Path
+
+import requests
+from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader
 
 BASE_DIR = Path(__file__).parent
@@ -39,6 +43,8 @@ RAPPORTS_DIR = SITE_DIR / "rapports"
 DATA_DIR = BASE_DIR / "data"
 COMPANIES_FILE = DATA_DIR / "companies.json"
 INDEX_HTML = SITE_DIR / "index.html"
+
+load_dotenv(BASE_DIR / ".env")
 
 
 def slugify(name):
@@ -51,19 +57,36 @@ def load_companies():
     return []
 
 
+def fetch_companies_from_api():
+    """Recupere depuis l'API nricher les entreprises avec Weekly KPIs actif.
+    Necessite NRICHER_SITE_TOKEN dans nricher-engine/.env (voir .env.example).
+    Retourne [] si le token est absent ou si l'appel echoue (degrade gracieux,
+    companies.json reste alors inchange)."""
+    base_url = os.environ.get("NRICHER_API_BASE_URL", "https://api.nricher.io")
+    token = os.environ.get("NRICHER_SITE_TOKEN")
+    if not token:
+        print("  ! NRICHER_SITE_TOKEN absent, companies.json non rafraichi depuis l'API.")
+        return []
+
+    try:
+        response = requests.get(
+            f"{base_url}/v1/companies",
+            headers={"Authorization": f"Bearer {token}"},
+            timeout=15,
+        )
+        response.raise_for_status()
+        return [c["name"] for c in response.json() if c.get("weeklyKpisEnabled")]
+    except requests.RequestException as exc:
+        print(f"  ! Appel a {base_url}/v1/companies echoue ({exc}), companies.json non rafraichi.")
+        return []
+
+
 def discover_new_companies(known_names):
-    """Scanne data/*.json (hors _*.json) et renvoie les company_name absents de known_names."""
+    """Renvoie les entreprises weeklyKpisEnabled de l'API absentes de known_names."""
     known_slugs = {slugify(n) for n in known_names}
     discovered = []
-    for jp in sorted(DATA_DIR.glob("*.json")):
-        if jp.name.startswith("_") or jp == COMPANIES_FILE:
-            continue
-        try:
-            data = json.loads(jp.read_text(encoding="utf-8"))
-            name = data.get("meta", {}).get("company_name")
-        except (json.JSONDecodeError, AttributeError):
-            continue
-        if name and slugify(name) not in known_slugs:
+    for name in fetch_companies_from_api():
+        if slugify(name) not in known_slugs:
             discovered.append(name)
             known_slugs.add(slugify(name))
     return discovered
