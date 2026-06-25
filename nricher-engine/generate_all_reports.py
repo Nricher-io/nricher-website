@@ -19,7 +19,6 @@ import argparse
 import sys
 
 import requests
-from jinja2 import Environment, FileSystemLoader
 
 import generate_report as gr
 
@@ -45,7 +44,7 @@ def main():
         sys.exit(1)
 
     gr.OUTPUT_DIR.mkdir(exist_ok=True)
-    env = Environment(loader=FileSystemLoader(str(gr.TEMPLATE_DIR)))
+    env = gr.build_environment()
 
     ok, failed = [], []
     for c in companies:

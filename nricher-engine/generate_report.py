@@ -62,7 +62,7 @@ load_dotenv(BASE_DIR / ".env")
 GAUGE_CX, GAUGE_CY, GAUGE_R = 100, 100, 80
 GAUGE_VMIN, GAUGE_VMAX = 80, 120
 
-PRIORITY_TABLE_WEEKS = 3
+PRIORITY_TABLE_WEEKS = 4  # 3 semaines d'historique + la semaine courante, comme l'app
 
 
 def compute_gauge_needle(value):
@@ -278,6 +278,13 @@ def render_report(data, env):
         row["allAvgMin1PSeverity"] = compute_pi_severity(row.get("allAvgMin1P"))
         row["allAvgMin3PSeverity"] = compute_pi_severity(row.get("allAvgMin3P"))
 
+    # Plafonds repris tels quels du code reel de l'app (WeeklyKpisLayout.tsx) :
+    # tables competitors/sellers et DistributionRow sellers -> 12, categories -> 14.
+    data["competitors"]["table"] = data["competitors"]["table"][:12]
+    data["sellers"]["table"] = data["sellers"]["table"][:12]
+    data["sellers"]["stacked"] = data["sellers"]["stacked"][:12]
+    data["categoryStacked"] = data["categoryStacked"][:14]
+
     for row in data["competitors"]["table"]:
         row["piAllSeverity"] = compute_pi_severity(row.get("piAll"))
         row["piMinSeverity"] = compute_pi_severity(row.get("piMin"))
@@ -313,6 +320,28 @@ def render_report(data, env):
     return out_path
 
 
+def format_space_int(value):
+    """
+    Reproduit spaceLargeNumber() de l'app (espace comme separateur de
+    milliers, ex: 155943 -> "155 943"), utilisable sur un int ou une
+    chaine numerique. Renvoie la valeur telle quelle si elle n'est pas
+    un nombre (ex: "-2 pts"), pour rester utilisable partout sans risque.
+    """
+    if value is None:
+        return "—"
+    try:
+        n = int(value)
+    except (TypeError, ValueError):
+        return value
+    return f"{n:,}".replace(",", " ")
+
+
+def build_environment():
+    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    env.filters["space_int"] = format_space_int
+    return env
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Génère une page Weekly KPIs nricher à partir de l'API ou d'un JSON local."
@@ -330,7 +359,7 @@ def main():
     )
     args = parser.parse_args()
 
-    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    env = build_environment()
 
     try:
         if args.company_id is not None:

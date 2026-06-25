@@ -311,18 +311,18 @@
       {% else %}<span class="tagline neutral" data-i18n="rp.hero.tagline.neutral">Voici votre photo de la semaine.</span>{% endif %}
     </h1>
     <p class="lede">
-      {{ data.hero.articlesAnalysed }} <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      {{ data.hero.articlesAnalysed|space_int }} <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
       {{ data.competitorCount }} <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">{{ data.hero.articlesAnalysed }}{% if data.hero.articlesAnalysedDelta %} <span class="{{ 'up' if data.hero.articlesAnalysedDelta.down == false else 'down' }}">{{ '▲' if data.hero.articlesAnalysedDelta.down == false else '▼' }}</span>{% endif %}</div>
+        <div class="n">{{ data.hero.articlesAnalysed|space_int }}{% if data.hero.articlesAnalysedDelta %} <span class="{{ 'up' if data.hero.articlesAnalysedDelta.down == false else 'down' }}">{{ '▲' if data.hero.articlesAnalysedDelta.down == false else '▼' }}</span>{% endif %}</div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
         {% if data.hero.articlesAnalysedDelta %}<div class="delta-sub">{{ data.hero.articlesAnalysedDelta.text }} <span data-i18n="rp.hero.vs">vs</span> {{ data.prevWeekLabel }}</div>{% endif %}
       </div>
       <div class="hstat">
-        <div class="n">{{ data.hero.articlesMatched }}</div>
+        <div class="n">{{ data.hero.articlesMatched|space_int }}</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
@@ -561,7 +561,7 @@
     <div class="cbar-list">
       {% for c in competitors_by_volume %}
       <div class="cbar-row">
-        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched }} <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">{{ c.name }}</div><div class="cbar-meta">{{ c.matched|space_int }} <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="{{ c.name }} — moins cher : {{ c.lowerPct }}%" style="width:{{ c.lowerPct }}%;background:var(--good);">{% if c.lowerPct >= 9 %}<span class="cbar-seg__pct">{{ c.lowerPct }}%</span>{% endif %}</div>
           <div data-tip="{{ c.name }} — aligné : {{ c.equalPct }}%" style="width:{{ c.equalPct }}%;background:var(--blue);">{% if c.equalPct >= 9 %}<span class="cbar-seg__pct">{{ c.equalPct }}%</span>{% endif %}</div>
@@ -595,13 +595,13 @@
           {% for c in data.competitors.table %}
           <tr>
             <td>{{ c.name }}</td>
-            <td class="num">{{ "{:,}".format(c.articlesAll).replace(",", " ") }}</td>
+            <td class="num">{{ c.articlesAll|space_int }}</td>
             <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[c.piAllSeverity] }}">{{ c.piAll }}</span></td>
-            <td class="num">{{ "{:,}".format(c.articlesMin).replace(",", " ") }}</td>
+            <td class="num">{{ c.articlesMin|space_int }}</td>
             <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[c.piMinSeverity] }}">{{ c.piMin }}</span></td>
-            <td class="num">{{ "{:,}".format(c.gt100).replace(",", " ") }}</td>
-            <td class="num">{{ "{:,}".format(c.eq100).replace(",", " ") }}</td>
-            <td class="num">{{ "{:,}".format(c.lt100).replace(",", " ") }}</td>
+            <td class="num">{{ c.gt100|space_int }}</td>
+            <td class="num">{{ c.eq100|space_int }}</td>
+            <td class="num">{{ c.lt100|space_int }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -631,12 +631,12 @@
           {% for s in data.sellers.table %}
           <tr {% if s.name == data.company.name %}style="background:rgba(96,239,190,0.08);"{% endif %}>
             <td>{{ '<strong>'|safe if s.name == data.company.name }}{{ s.name }}{{ '</strong>'|safe if s.name == data.company.name }}{% if s.name == data.company.name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</td>
-            <td class="num">{{ s.analysed }}</td>
-            <td class="num">{{ s.matched }}</td>
+            <td class="num">{{ s.analysed|space_int }}</td>
+            <td class="num">{{ s.matched|space_int }}</td>
             <td class="num"><span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}[s.piMinSeverity] }}">{{ s.piMin }}</span></td>
-            <td class="num">{{ s.gt100 }}</td>
-            <td class="num">{{ s.eq100 }}</td>
-            <td class="num">{{ s.lt100 }}</td>
+            <td class="num">{{ s.gt100|space_int }}</td>
+            <td class="num">{{ s.eq100|space_int }}</td>
+            <td class="num">{{ s.lt100|space_int }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -705,7 +705,7 @@
           <div data-tip="{{ cat.name }} — aligné : {{ cat.equalPct }}%" style="width:{{ cat.equalPct }}%;background:var(--blue);">{% if cat.equalPct >= 9 %}<span class="cbar-seg__pct">{{ cat.equalPct }}%</span>{% endif %}</div>
           <div data-tip="{{ cat.name }} — plus cher : {{ cat.higherPct }}%" style="width:{{ cat.higherPct }}%;background:var(--bad);">{% if cat.higherPct >= 9 %}<span class="cbar-seg__pct">{{ cat.higherPct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">{{ cat.count }}</span> <span style="color:var(--muted);">·</span> <span style="color:var(--{{ cat.severity }});">{{ cat.pi }}</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">{{ cat.count|space_int }}</span> <span style="color:var(--muted);">·</span> <span style="color:var(--{{ cat.severity }});">{{ cat.pi }}</span></div>
       </div>
       {% endfor %}
     </div>
@@ -721,7 +721,7 @@
         <h2>{{ data.verdict.headline }}</h2>
         <div class="verdict-figs">
           {% for f in data.verdict.figures %}
-          <div class="vfig"><div class="n {{ 'good' if f.good != false else 'bad' }}">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
+          <div class="vfig"><div class="n {{ 'good' if f.good != false else 'bad' }}">{{ f.value|space_int }}</div><div class="l">{{ f.label }}</div></div>
           {% endfor %}
         </div>
         <div class="cta-row">
