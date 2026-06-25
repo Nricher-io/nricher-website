@@ -384,7 +384,7 @@
 
     <div class="kpi-grid">
       {% for g in data.visibleGauges %}
-      <div class="kpi" {% if g.delta %}data-tip="{{ g.delta.text }} vs {{ data.prevWeekLabel }} : {{ g.previousValue }}"{% endif %}>
+      <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
