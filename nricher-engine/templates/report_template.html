@@ -347,7 +347,7 @@
         {% if data.hero.priceIndexGlobalDelta %}<div class="delta-sub">{{ data.hero.priceIndexGlobalDelta.text }} <span data-i18n="rp.hero.vs">vs</span> {{ data.prevWeekLabel }}</div>{% endif %}
       </div>
       <div class="hstat">
-        <div class="n">{{ data.generatedAtLabel }}</div>
+        <div class="n" data-generated-at="{{ data.generatedAt }}">{{ data.generatedAtLabel }}</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>

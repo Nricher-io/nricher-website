@@ -165,6 +165,19 @@
       t.el.setAttribute('data-tip', l === 'fr' ? t.fr : translateTip(t.fr));
     });
 
+    // 3c. Weekly KPIs report pages: reformat the "mis a jour le" timestamp from its
+    // raw ISO value client-side, instead of relying on the French string baked
+    // server-side (Python) which never changes language. No-op on other pages.
+    document.querySelectorAll('[data-generated-at]').forEach(function (el) {
+      var iso = el.getAttribute('data-generated-at');
+      if (!iso) return;
+      var date = new Date(iso);
+      if (isNaN(date.getTime())) return;
+      el.textContent = new Intl.DateTimeFormat(l === 'fr' ? 'fr-FR' : 'en-US', {
+        day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit'
+      }).format(date);
+    });
+
     // 4. Update the active class of switcher options across the DOM
     document.querySelectorAll('.lang-switch').forEach(function (wrap) {
       wrap.querySelectorAll('.lang-switch__option').forEach(function (opt) {
