@@ -96,7 +96,9 @@
   .kpi-report .prio-chip.neu{background:var(--card-2);color:var(--text-2);}
   .kpi-report .prio-chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .prio-chip__d{font-size:0.7rem;opacity:0.75;}
-  .kpi-report .prio-all-sub{font-size:10px;color:var(--muted);margin-top:6px;}
+  .kpi-report .prio-all{display:flex;align-items:center;justify-content:center;gap:12px;}
+  .kpi-report .prio-all__item{display:flex;align-items:center;gap:4px;}
+  .kpi-report .prio-all__lbl{font-size:10px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--muted);}
   .kpi-report .note{margin-top:20px;font-size:0.95rem;color:var(--text-2);max-width:680px;line-height:1.6;}
   .kpi-report .note strong{color:var(--text);}
 
@@ -152,6 +154,7 @@
   .kpi-report .pi-chip.r{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .pi-chip.g{background:var(--good-bg);color:var(--good);}
   .kpi-report .pi-chip.b{background:rgba(46,88,202,0.10);color:var(--blue);}
+  .kpi-report .pi-chip.n{background:var(--card-2);color:var(--muted);}
 
   .kpi-report .verdict{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;}
   .kpi-report .verdict:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
@@ -439,21 +442,21 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title" data-i18n="rp.priority.title">Price index by article — par priorité commerciale</div>
-        <div class="section-sub" data-i18n="rp.priority.sub">Indice prix filtré par votre segmentation (Top / Middle / Low). 100 = aligné marché.</div>
+        <div class="section-title" data-i18n="rp.priority.title">Price index par priorité commerciale</div>
+        <div class="section-sub" data-i18n="rp.priority.sub">Indice prix par segmentation Top / Middle / Low. 100 = aligné marché.</div>
       </div>
-      <span class="tag tag--watch">My prio</span>
+      <span class="tag tag--watch">MY PRIO</span>
     </div>
 
     <div class="prio-table-wrap">
       <table class="prio-table">
         <thead>
           <tr>
-            <th></th>
+            <th style="text-align:left;">Semaine</th>
             <th><span class="prio-th-dot" style="background:var(--blue);"></span>Top sales</th>
             <th><span class="prio-th-dot" style="background:var(--mint);"></span>Middle sales</th>
             <th><span class="prio-th-dot" style="background:#c98c1a;"></span>Low sales</th>
-            <th><span class="prio-th-dot" style="background:var(--text-2);"></span>All (1P + 3P)</th>
+            <th>All</th>
           </tr>
         </thead>
         <tbody>
@@ -470,8 +473,16 @@
             </td>
             {% endfor %}
             <td>
-              <span class="prio-chip {{ r.allAvgMin1PSeverity or 'neu' }}">1P {{ r.allAvgMin1P if r.allAvgMin1P is not none else '—' }}</span>
-              <div class="prio-all-sub">3P {{ r.allAvgMin3P if r.allAvgMin3P is not none else '—' }}</div>
+              <div class="prio-all">
+                <span class="prio-all__item" data-tip="1P S{{ r.week }} : {{ r.allAvgMin1P if r.allAvgMin1P is not none else '—' }}">
+                  <span class="prio-all__lbl">1P</span>
+                  <span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}.get(r.allAvgMin1PSeverity, 'n') }}">{{ r.allAvgMin1P if r.allAvgMin1P is not none else '—' }}</span>
+                </span>
+                <span class="prio-all__item" data-tip="3P S{{ r.week }} : {{ r.allAvgMin3P if r.allAvgMin3P is not none else '—' }}">
+                  <span class="prio-all__lbl">3P</span>
+                  <span class="pi-chip {{ {'good':'g','blue':'b','bad':'r'}.get(r.allAvgMin3PSeverity, 'n') }}">{{ r.allAvgMin3P if r.allAvgMin3P is not none else '—' }}</span>
+                </span>
+              </div>
             </td>
           </tr>
           {% endfor %}
