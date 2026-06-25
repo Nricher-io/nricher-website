@@ -7,43 +7,45 @@ Moteur de génération des pages "Weekly KPIs" au format nricher.
 
 CE QUE FAIT CE SCRIPT
 ----------------------
-Prend un fichier JSON par entreprise (voir data/_schema_reference.json pour
-le format exact), et génère une page HTML autonome dans output/, avec la
-charte graphique réelle de nricher.io (couleurs, typos, composants) extraite
-depuis leur propre CSS.
+Récupère les données déjà calculées d'une entreprise depuis l'API nricher
+(GET /v1/weekly-kpis/:companyId, voir fetch_weekly_kpis ci-dessous), et génère
+une page HTML autonome dans output/, en reproduisant fidèlement le rendu réel
+de l'app nricher (thème sombre, jauges, donut, graphiques, tables) — voir
+handoff-dev/WEEKLY_KPIS_APP_SOURCE_OF_TRUTH.md pour la référence visuelle
+complète et le contrat exact de l'API.
 
-CE QUE CE SCRIPT NE FAIT PAS (volontairement)
-----------------------------------------------
-Il ne va chercher aucune donnée lui-même. Il ne se connecte à aucune base,
-API ou compte nricher. Il prend en entrée un JSON déjà rempli, peu importe
-sa provenance. C'est un choix de conception : brancher une vraie source de
-données (API officielle nricher, export SFTP/Excel, scraping web public)
-se fait en écrivant une fonction qui PRODUIT ce JSON, sans toucher au reste
-du moteur.
+L'API renvoie des données déjà entièrement calculées (deltas, distributions
+en %, verdict généré) — ce script n'a aucune logique métier à réimplémenter.
+Il calcule uniquement la géométrie SVG pure (position d'aiguille de jauge,
+segments du donut) à partir des valeurs brutes, à chaque affichage.
 
-IMPORTANT — DONNÉES CLIENTS
------------------------------
-Ce moteur ne doit être alimenté qu'avec :
-  (a) des données de marché publiques (catalogues scrapés sur le web public,
-      comme nricher le fait déjà pour son propre benchmark), ou
-  (b) des données clients pour lesquelles l'autorisation explicite du client
-      et de nricher a été obtenue.
-Le champ meta.source_label est obligatoire et doit refléter honnêtement la
-provenance de la donnée affichée sur la page elle-même.
+SÉCURITÉ — TOKENS
+----------------------
+Un seul secret persiste : NRICHER_SITE_TOKEN (JWT au niveau site, voir .env.example),
+jamais écrit en clair dans un fichier versionné. Le token par entreprise
+(donne accès aux vraies données client) n'est, lui, JAMAIS stocké : il est
+re-créé à la volée à chaque génération via POST /v1/:companyId/create-api-token
+(voir create_company_token), utilisé immédiatement, puis jeté. Cette création
+écrase tout token existant pour cette entreprise — le stocker reviendrait à
+le rendre fragile (invalidé dès qu'un autre appel le recrée ailleurs), d'où
+le choix de toujours en minter un frais plutôt que d'en garder un en cache.
 
 USAGE
 -----
-    python3 generate_report.py --data data/exemple_fictif_demostore.json
-    python3 generate_report.py --data data/*.json   # génère toutes les pages
+    python3 generate_report.py --company-id 11
+    python3 generate_report.py --company-id 11 --weeks 26
+    python3 generate_report.py --data data/_sample_api_response.json   # test sans token
 """
 
-import json
 import argparse
-import glob
 import math
-import re
+import os
 import sys
+from datetime import datetime
 from pathlib import Path
+
+import requests
+from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader
 
 if sys.stdout.encoding != "utf-8":
@@ -55,71 +57,33 @@ TEMPLATE_DIR = BASE_DIR / "templates"
 OUTPUT_DIR = BASE_DIR / "output"
 TEMPLATE_NAME = "report_template.html"
 
-# Marge de l'échelle Y du graphique de tendance, en points d'indice prix
-CHART_Y_PADDING = 3
-SVG_X_LEFT = 40
-SVG_X_RIGHT = 620
-SVG_Y_TOP = 20
-SVG_Y_BOTTOM = 200
+load_dotenv(BASE_DIR / ".env")
 
+GAUGE_CX, GAUGE_CY, GAUGE_R = 100, 100, 80
+GAUGE_VMIN, GAUGE_VMAX = 80, 120
 
-def compute_multi_series_geometry(weeks, series):
-    """
-    Calcule les points SVG (polyline + cercles) pour plusieurs series partageant
-    la meme echelle Y (ex: indice prix 1P/2P/3P sur un seul graphique), plus les
-    libelles d'axe Y. `series` est un dict {nom: [valeurs...]}.
-    Renvoie (dict nom -> {polyline, points}, y_max, y_mid, y_min).
-    """
-    all_values = [v for values in series.values() for v in values]
-    if not all_values:
-        return {name: {"polyline": "", "points": []} for name in series}, 100, 100, 100
-
-    y_min = min(all_values) - CHART_Y_PADDING
-    y_max = max(all_values) + CHART_Y_PADDING
-    if y_max == y_min:
-        y_max += 1  # évite une division par zéro si toutes les valeurs sont identiques
-
-    n = len(weeks)
-    step_x = (SVG_X_RIGHT - SVG_X_LEFT) / (n - 1) if n > 1 else 0
-
-    result = {}
-    for name, values in series.items():
-        points = []
-        for i, v in enumerate(values):
-            x = SVG_X_LEFT + i * step_x
-            # inversion d'axe : valeur haute -> y petit (en haut du SVG)
-            y = SVG_Y_BOTTOM - ((v - y_min) / (y_max - y_min)) * (SVG_Y_BOTTOM - SVG_Y_TOP)
-            points.append((round(x, 1), round(y, 1)))
-        polyline_str = " ".join(f"{x},{y}" for x, y in points)
-        result[name] = {"polyline": polyline_str, "points": points}
-
-    y_mid = round((y_max + y_min) / 2)
-    return result, round(y_max), y_mid, round(y_min)
-
-
-GAUGE_CX, GAUGE_CY, GAUGE_R = 60, 58, 42
-GAUGE_VMIN, GAUGE_VMAX = 90, 120
+PRIORITY_TABLE_WEEKS = 3
 
 
 def compute_gauge_needle(value):
     """
     Calcule le point d'extremite de l'aiguille d'une jauge semi-circulaire
-    (90 a gauche/vert, 120 a droite/rouge), a partir de la valeur du Price Index.
+    (80 a gauche, 120 a droite), a partir de la valeur du Price Index.
     """
     v = max(GAUGE_VMIN, min(GAUGE_VMAX, value))
     frac = (v - GAUGE_VMIN) / (GAUGE_VMAX - GAUGE_VMIN)
     angle_deg = 180 - frac * 180
     angle_rad = math.radians(angle_deg)
-    x = GAUGE_CX + GAUGE_R * math.cos(angle_rad)
-    y = GAUGE_CY - GAUGE_R * math.sin(angle_rad)
+    x = GAUGE_CX + GAUGE_R * 0.76 * math.cos(angle_rad)
+    y = GAUGE_CY - GAUGE_R * 0.76 * math.sin(angle_rad)
     return round(x, 1), round(y, 1)
 
 
 def compute_gauge_bar_pct(value):
     """
-    Remplissage (0-100%) de la barre sous chaque jauge, sur la meme echelle
-    90-120 que l'aiguille (compute_gauge_needle) — les deux doivent toujours
-    rester synchronises, d'ou la reutilisation des memes bornes GAUGE_VMIN/VMAX.
+    Position (0-100%) sur la barre de progression sous chaque jauge, sur la
+    meme echelle 80-120 que l'aiguille (compute_gauge_needle) — les deux
+    doivent toujours rester synchronises, d'ou les memes bornes GAUGE_VMIN/VMAX.
     """
     frac = (value - GAUGE_VMIN) / (GAUGE_VMAX - GAUGE_VMIN)
     return round(max(0, min(100, frac * 100)))
@@ -128,8 +92,12 @@ def compute_gauge_bar_pct(value):
 def compute_pi_severity(value):
     """
     Code couleur uniforme pour toute valeur de Price Index dans le rapport :
-    vert sous 100, bleu pile a 100, rouge a partir de 101.
+    vert sous 100, bleu pile a 100, rouge a partir de 101. Noms de classe CSS
+    herites du gabarit existant (good/blue/bad) — seules les couleurs hex
+    derriere --good/--blue/--bad changent pour matcher l'app (voir plus bas).
     """
+    if value is None:
+        return None
     if value < 100:
         return "good"
     if value == 100:
@@ -137,39 +105,26 @@ def compute_pi_severity(value):
     return "bad"
 
 
-def compute_gauge_delta_pct(value, ref_prev):
-    """
-    Calcule automatiquement la variation (ex: "-3%") entre la valeur actuelle d'une
-    jauge et sa reference passee, en extrayant le nombre final de ref_prev (ex:
-    "S24 : 104" -> 104). Remplace un champ qui etait jusque-la saisi a la main et
-    pouvait se desynchroniser de la vraie valeur (ex: 104 -> 101 affiche "+1%").
-    """
-    match = re.search(r"(\d+(?:[.,]\d+)?)\s*$", str(ref_prev))
-    if not match:
-        return None
-    ref_value = float(match.group(1).replace(",", "."))
-    if ref_value == 0:
-        return None
-    pct = (value - ref_value) / ref_value * 100
-    return f"{pct:+.0f}%"
-
-
 DONUT_CX, DONUT_CY, DONUT_R = 60, 60, 50
+DONUT_GAP_DEG = 1.5
 
 
 def compute_donut_segments(parts):
     """
     parts: liste de (pct, couleur_css). Renvoie les segments (dasharray/dashoffset)
-    d'un donut SVG (cercle r=50, demarre a midi via rotate(-90) sur le <g> parent),
-    plus la position (label_x, label_y) du milieu de chaque arc pour y afficher le %.
+    d'un donut en anneau (cercle stroke r=50, demarre a midi via rotate(-90) sur
+    le <g> parent), avec un petit espace entre segments (DONUT_GAP_DEG), plus la
+    position (label_x, label_y) du milieu de chaque arc pour y afficher le %.
     """
     circumference = 2 * math.pi * DONUT_R
+    gap_length = circumference * (DONUT_GAP_DEG / 360)
     segments = []
     cumulative = 0.0
     for pct, color in parts:
-        length = circumference * (pct / 100.0)
+        full_length = circumference * (pct / 100.0)
+        drawn_length = max(0.0, full_length - gap_length)
 
-        mid_fraction = (cumulative + length / 2) / circumference if circumference else 0
+        mid_fraction = (cumulative + full_length / 2) / circumference if circumference else 0
         angle = mid_fraction * 2 * math.pi
         x_unrot = DONUT_CX + DONUT_R * math.cos(angle)
         y_unrot = DONUT_CY + DONUT_R * math.sin(angle)
@@ -180,186 +135,216 @@ def compute_donut_segments(parts):
         segments.append({
             "color": color,
             "pct": pct,
-            "dasharray": f"{length:.2f} {circumference - length:.2f}",
+            "dasharray": f"{drawn_length:.2f} {circumference - drawn_length:.2f}",
             "dashoffset": f"{-cumulative:.2f}",
             "label_x": round(label_x, 1),
             "label_y": round(label_y, 1),
         })
-        cumulative += length
+        cumulative += full_length
     return segments
 
 
-def compute_competitors_overview(competitors):
-    """Moyenne simple Lower/Equal/Higher tous concurrents confondus + classement par PI."""
-    n = len(competitors) or 1
-    avg_lower = round(sum(c["lower_pct"] for c in competitors) / n)
-    avg_equal = round(sum(c["equal_pct"] for c in competitors) / n)
+COLOR_CHEAPER = "var(--good)"
+COLOR_EQUAL = "var(--blue)"
+COLOR_PRICIER = "var(--bad)"
+
+
+def compute_competitors_overview(stacked):
+    """
+    Moyenne lower/equal/higher tous concurrents confondus (donut) + classement
+    par PI. Plafonds repris de l'app : classement = 10 premiers (croissant par
+    PI), liste "face aux concurrents" = 12 premiers (decroissant par volume).
+    """
+    n = len(stacked) or 1
+    avg_lower = round(sum(c["lowerPct"] for c in stacked) / n)
+    avg_equal = round(sum(c["equalPct"] for c in stacked) / n)
     avg_higher = max(0, 100 - avg_lower - avg_equal)
 
     donut_segments = compute_donut_segments([
-        (avg_lower, "var(--good)"),
-        (avg_equal, "var(--blue)"),
-        (avg_higher, "var(--bad)"),
+        (avg_lower, COLOR_CHEAPER),
+        (avg_equal, COLOR_EQUAL),
+        (avg_higher, COLOR_PRICIER),
     ])
 
-    ranking = sorted(competitors, key=lambda c: c["pi"])
+    ranking = sorted(stacked, key=lambda c: c["pi"])[:10]
     for c in ranking:
-        c["bar_pct"] = compute_gauge_bar_pct(c["pi"])
+        c["barPct"] = compute_gauge_bar_pct(c["pi"])
+
+    by_volume = sorted(stacked, key=lambda c: c["matched"], reverse=True)[:12]
 
     return {
-        "avg_lower": avg_lower, "avg_equal": avg_equal, "avg_higher": avg_higher,
-        "donut_segments": donut_segments,
-    }, ranking
+        "avgLower": avg_lower, "avgEqual": avg_equal, "avgHigher": avg_higher,
+        "donutSegments": donut_segments,
+    }, ranking, by_volume
 
 
-def extract_bilingual(value, report_i18n, key):
+FRENCH_MONTHS_ABBR = [
+    "jan.", "fév.", "mars", "avr.", "mai", "juin",
+    "juil.", "août", "sept.", "oct.", "nov.", "déc.",
+]
+
+
+def format_french_datetime(iso_string):
+    dt = datetime.fromisoformat(iso_string.replace("Z", "+00:00"))
+    return f"{dt.day:02d} {FRENCH_MONTHS_ABBR[dt.month - 1]} à {dt.hour:02d}h{dt.minute:02d}"
+
+
+def compute_hero_tagline(price_index_global_delta):
     """
-    Les textes rediges specifiquement pour l'entreprise (titre, descriptions de jauges,
-    note de priorite, verdict...) peuvent etre fournis en deux langues :
-        {"fr": "Le marche a bouge.", "en": "The market has moved."}
-    On renvoie le francais (affiche par defaut sur la page), et on enregistre l'anglais
-    dans report_i18n sous `key` pour que le selecteur de langue du site le traduise au
-    survol, exactement comme le reste du site. Si le champ est encore une simple chaine
-    (ancien format, ou pas encore traduit), on la renvoie telle quelle sans traduction.
+    L'API ne fournit pas de titre de hero (champ texte) — seulement les
+    valeurs et leur delta deja calcule. Le gabarit du H1 ("Le marche a
+    bouge. {tagline}") est donc genere ici a partir du sens du delta,
+    avec un libelle statique traduisible (data-i18n), pas une donnee
+    entreprise.
     """
-    if isinstance(value, dict) and "fr" in value:
-        if value.get("en"):
-            report_i18n[key] = value["en"]
-        return value["fr"]
-    return value
+    if not price_index_global_delta or price_index_global_delta.get("good") is None:
+        return "neutral"
+    return "good" if price_index_global_delta["good"] else "bad"
 
 
-def load_company_data(json_path):
-    with open(json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    required_top_keys = [
-        "meta", "hero", "price_index_gauges", "priority_table",
-        "trend_chart", "attractiveness_stacked", "competitors",
-        "competitors_table", "sellers_table", "sellers_stacked",
-        "category_stacked", "verdict",
-    ]
-    missing = [k for k in required_top_keys if k not in data]
-    if missing:
-        raise ValueError(f"{json_path.name} : clés manquantes dans le JSON : {missing}")
-
-    if "source_label" not in data.get("meta", {}) or not data["meta"]["source_label"]:
-        raise ValueError(
-            f"{json_path.name} : meta.source_label est obligatoire — "
-            f"précise la provenance de la donnée (ex: 'Donnée publique scrapée')."
+def get_site_jwt_and_base_url():
+    base_url = os.environ.get("NRICHER_API_BASE_URL", "https://api.nricher.io")
+    jwt_token = os.environ.get("NRICHER_SITE_TOKEN")
+    if not jwt_token:
+        raise RuntimeError(
+            "NRICHER_SITE_TOKEN manquant. Copier nricher-engine/.env.example vers "
+            "nricher-engine/.env et renseigner le JWT site."
         )
+    return base_url, jwt_token
 
-    return data
+
+def create_company_token(company_id, base_url, jwt_token):
+    """
+    Mint un token a la volee pour une entreprise (POST /v1/:companyId/create-api-token,
+    authentifie par le JWT site). Cree-OU-ecrase : n'appeler que pour un usage
+    immediat, jamais pour stocker le resultat (voir note securite en tete de fichier).
+    """
+    response = requests.post(
+        f"{base_url}/v1/{company_id}/create-api-token",
+        headers={"Authorization": f"Bearer {jwt_token}"},
+        timeout=15,
+    )
+    response.raise_for_status()
+    return response.json()["companyApiToken"]
 
 
-def render_report(json_path, env):
-    data = load_company_data(json_path)
+def fetch_weekly_kpis(company_id, weeks=13):
+    """
+    Recupere les donnees Weekly KPIs deja calculees depuis l'API nricher.
+    Mint un token par-entreprise frais a la volee (jamais stocke, voir
+    create_company_token), l'utilise immediatement pour cet appel, puis le
+    jette. Necessite NRICHER_SITE_TOKEN dans .env (voir .env.example).
+    """
+    base_url, jwt_token = get_site_jwt_and_base_url()
+    company_token = create_company_token(company_id, base_url, jwt_token)
 
-    weeks = data["trend_chart"]["weeks"]
-    series = {
-        "1p": data["trend_chart"]["price_index_1p"],
-        "2p": data["trend_chart"]["price_index_2p"],
-        "3p": data["trend_chart"]["price_index_3p"],
-    }
-    series_geo, y_max, y_mid, y_min = compute_multi_series_geometry(weeks, series)
+    response = requests.get(
+        f"{base_url}/v1/weekly-kpis/{company_id}",
+        params={"token": company_token, "weeks": weeks},
+        timeout=30,
+    )
+    response.raise_for_status()
+    return response.json()
 
-    for gauge in data["price_index_gauges"]["gauges"]:
-        gauge["needle_x"], gauge["needle_y"] = compute_gauge_needle(gauge["value"])
-        gauge["bar_pct"] = compute_gauge_bar_pct(gauge["value"])
-        gauge["severity"] = compute_pi_severity(gauge["value"])
-        computed_delta = compute_gauge_delta_pct(gauge["value"], gauge.get("ref_prev"))
-        if computed_delta is not None:
-            gauge["delta_pct"] = computed_delta
 
-    competitors_overview, competitors_ranking = compute_competitors_overview(data["competitors"])
+def render_report(data, env):
+    for gauge in data["gauges"]:
+        if gauge["value"] is None:
+            gauge["needleX"], gauge["needleY"] = compute_gauge_needle(
+                (GAUGE_VMIN + GAUGE_VMAX) / 2
+            )
+            gauge["barPct"] = None
+            gauge["refPct"] = None
+            gauge["severity"] = None
+        else:
+            gauge["needleX"], gauge["needleY"] = compute_gauge_needle(gauge["value"])
+            gauge["barPct"] = compute_gauge_bar_pct(gauge["value"])
+            gauge["refPct"] = (
+                compute_gauge_bar_pct(gauge["previousValue"])
+                if gauge.get("previousValue") is not None else None
+            )
+            gauge["severity"] = compute_pi_severity(gauge["value"])
 
-    # Textes rediges par entreprise : extrait le francais pour l'affichage, collecte
-    # l'anglais (si fourni) pour le selecteur de langue du site (voir extract_bilingual).
-    report_i18n = {}
-    hero = data["hero"]
-    hero["title_line1"] = extract_bilingual(hero["title_line1"], report_i18n, "report.hero.title_line1")
-    hero["title_line2"] = extract_bilingual(hero["title_line2"], report_i18n, "report.hero.title_line2")
-    hero["lede"] = extract_bilingual(hero["lede"], report_i18n, "report.hero.lede")
-    for i, s in enumerate(hero["stats"]):
-        s["label"] = extract_bilingual(s["label"], report_i18n, f"report.hero.stat{i}.label")
+    data["visibleGauges"] = [g for g in data["gauges"] if g["key"] != "3P_SAME_MIN"]
 
-    for i, gauge in enumerate(data["price_index_gauges"]["gauges"]):
-        if gauge.get("desc"):
-            gauge["desc"] = extract_bilingual(gauge["desc"], report_i18n, f"report.gauge{i}.desc")
+    data["hero"]["priceIndexGlobalSeverity"] = compute_pi_severity(data["hero"]["priceIndexGlobal"])
+    data["heroTagline"] = compute_hero_tagline(data["hero"].get("priceIndexGlobalDelta"))
+    data["generatedAtLabel"] = format_french_datetime(data["generatedAt"])
 
-    priority_table = data["priority_table"]
-    if priority_table.get("note"):
-        priority_table["note"] = extract_bilingual(priority_table["note"], report_i18n, "report.priority.note")
+    data["priorityTable"] = data["priorityTable"][-PRIORITY_TABLE_WEEKS:]
+    for row in data["priorityTable"]:
+        for key in ("top", "middle", "low"):
+            row[f"{key}Severity"] = compute_pi_severity(row.get(key))
+        row["allAvgMin1PSeverity"] = compute_pi_severity(row.get("allAvgMin1P"))
+        row["allAvgMin3PSeverity"] = compute_pi_severity(row.get("allAvgMin3P"))
 
-    verdict = data["verdict"]
-    verdict["tag"] = extract_bilingual(verdict["tag"], report_i18n, "report.verdict.tag")
-    verdict["headline"] = extract_bilingual(verdict["headline"], report_i18n, "report.verdict.headline")
-    verdict["text"] = extract_bilingual(verdict["text"], report_i18n, "report.verdict.text")
-    for i, fig in enumerate(verdict["figures"]):
-        fig["label"] = extract_bilingual(fig["label"], report_i18n, f"report.verdict.fig{i}.label")
+    for row in data["competitors"]["table"]:
+        row["piAllSeverity"] = compute_pi_severity(row.get("piAll"))
+        row["piMinSeverity"] = compute_pi_severity(row.get("piMin"))
+
+    for row in data["sellers"]["table"]:
+        row["piMinSeverity"] = compute_pi_severity(row.get("piMin"))
+
+    for row in data["competitors"]["stacked"]:
+        row["severity"] = compute_pi_severity(row.get("pi"))
+    for row in data["sellers"]["stacked"]:
+        row["severity"] = compute_pi_severity(row.get("pi"))
+    for row in data["categoryStacked"]:
+        row["severity"] = compute_pi_severity(row.get("pi"))
+
+    competitors_overview, competitors_ranking, competitors_by_volume = compute_competitors_overview(
+        data["competitors"]["stacked"]
+    )
 
     template = env.get_template(TEMPLATE_NAME)
     html = template.render(
-        meta=data["meta"],
-        hero=data["hero"],
-        price_index_gauges=data["price_index_gauges"],
-        priority_table=data["priority_table"],
-        trend_chart=data["trend_chart"],
-        attractiveness_stacked=data["attractiveness_stacked"],
-        competitors=data["competitors"],
-        competitors_table=data["competitors_table"],
+        data=data,
         competitors_overview=competitors_overview,
         competitors_ranking=competitors_ranking,
-        sellers_table=data["sellers_table"],
-        sellers_stacked=data["sellers_stacked"],
-        category_stacked=data["category_stacked"],
-        verdict=data["verdict"],
-        series_geo=series_geo,
-        chart_y_max=y_max,
-        chart_y_mid=y_mid,
-        chart_y_min=y_min,
-        report_i18n=report_i18n,
+        competitors_by_volume=competitors_by_volume,
+        gauge_vmin=GAUGE_VMIN,
+        gauge_vmax=GAUGE_VMAX,
     )
 
-    company_slug = data["meta"]["company_name"].lower().replace(" ", "_")
+    company_slug = data["company"]["name"].lower().replace(" ", "_")
+    OUTPUT_DIR.mkdir(exist_ok=True)
     out_path = OUTPUT_DIR / f"{company_slug}.html"
     out_path.write_text(html, encoding="utf-8")
     return out_path
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Génère les pages Weekly KPIs nricher à partir de fichiers JSON.")
+    parser = argparse.ArgumentParser(
+        description="Génère une page Weekly KPIs nricher à partir de l'API ou d'un JSON local."
+    )
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument(
+        "--company-id", type=int, help="Identifiant nricher de l'entreprise (fetch API live)."
+    )
+    source.add_argument(
+        "--data", help="Chemin vers un JSON local au format API (pour tester sans token)."
+    )
     parser.add_argument(
-        "--data", nargs="+", required=True,
-        help="Chemin(s) ou pattern(s) glob vers les fichiers JSON d'entreprise (ex: data/*.json)",
+        "--weeks", type=int, default=13,
+        help="Semaines d'historique a recuperer (API uniquement, defaut 13).",
     )
     args = parser.parse_args()
 
-    json_paths = []
-    for pattern in args.data:
-        matched = glob.glob(pattern)
-        if not matched:
-            print(f"⚠️  Aucun fichier ne correspond à : {pattern}", file=sys.stderr)
-        json_paths.extend(matched)
-
-    json_paths = [Path(p) for p in json_paths if not Path(p).name.startswith("_")]
-
-    if not json_paths:
-        print("Aucun fichier JSON valide à traiter. Abandon.", file=sys.stderr)
-        sys.exit(1)
-
-    OUTPUT_DIR.mkdir(exist_ok=True)
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
 
-    print(f"Génération de {len(json_paths)} page(s)...\n")
-    for jp in sorted(json_paths):
-        try:
-            out_path = render_report(jp, env)
-            print(f"  ✓ {jp.name:40s} → {out_path}")
-        except Exception as e:
-            print(f"  ✗ {jp.name:40s} → ERREUR : {e}", file=sys.stderr)
+    try:
+        if args.company_id is not None:
+            print(f"Récupération des données entreprise #{args.company_id}...")
+            data = fetch_weekly_kpis(args.company_id, weeks=args.weeks)
+        else:
+            import json
+            data = json.loads(Path(args.data).read_text(encoding="utf-8"))
 
-    print(f"\nTerminé. Pages disponibles dans {OUTPUT_DIR}/")
+        out_path = render_report(data, env)
+        print(f"✓ {data['company']['name']} → {out_path}")
+    except Exception as e:
+        print(f"✗ ERREUR : {e}", file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == "__main__":

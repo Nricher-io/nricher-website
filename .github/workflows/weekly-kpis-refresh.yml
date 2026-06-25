@@ -1,0 +1,44 @@
+name: Weekly KPIs - refresh des rapports
+
+on:
+  schedule:
+    # Tous les lundis a 06:00 UTC - a ajuster selon le vrai cycle de calcul
+    # hebdomadaire cote nricher une fois connu.
+    - cron: '0 6 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dependances
+        working-directory: nricher-engine
+        run: pip install -r requirements.txt
+
+      - name: Generer tous les rapports (weeklyKpisEnabled=true)
+        working-directory: nricher-engine
+        env:
+          NRICHER_SITE_TOKEN: ${{ secrets.NRICHER_SITE_TOKEN }}
+          NRICHER_API_BASE_URL: https://api.nricher.io
+        run: python3 generate_all_reports.py
+
+      - name: Publier les rapports + regenerer la recherche
+        working-directory: nricher-engine
+        run: python3 sync_reports.py
+
+      - name: Commit et push si changements
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add rapports/ nricher-engine/output/ nricher-engine/data/companies.json recherche.html index.html
+          git diff --staged --quiet || git commit -m "chore: refresh hebdomadaire des rapports Weekly KPIs [skip ci]"
+          git push

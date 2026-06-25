@@ -17,3 +17,4 @@ Thumbs.db
 # nricher-engine — environnement Python local, jamais commité
 nricher-engine/venv/
 nricher-engine/__pycache__/
+nricher-engine/.env

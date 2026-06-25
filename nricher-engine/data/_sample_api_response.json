@@ -1,0 +1,124 @@
+{
+  "_comment": "Fixture locale pour tester generate_report.py sans token API reel. Reproduit fidelement la forme de la vraie reponse GET /v1/weekly-kpis/:companyId (voir handoff-dev/WEEKLY_KPIS_APP_SOURCE_OF_TRUTH.md section 1) avec des valeurs inventees mais coherentes entre elles. Ne PAS utiliser comme modele de donnees a remplir a la main - en production, ce JSON vient toujours de fetch_weekly_kpis().",
+  "company": { "id": 11, "name": "Nedgis" },
+  "generatedAt": "2026-06-24T13:32:02.173Z",
+  "creationDate": "2026-06-24T05:06:09.932Z",
+  "week": 26,
+  "prevWeek": 25,
+  "prevWeekLabel": "S25",
+  "competitorCount": 17,
+  "hero": {
+    "articlesAnalysed": 27110,
+    "articlesAnalysedDelta": { "text": "+3 %", "down": false, "good": false },
+    "articlesMatched": 8036,
+    "priceIndexGlobal": 108,
+    "priceIndexGlobalDelta": { "text": "-9 pts", "down": true, "good": true }
+  },
+  "gauges": [
+    { "key": "ALL", "label": "Price Index All", "value": 102, "previousValue": 109, "delta": { "text": "-7 pts", "down": true, "good": true } },
+    { "key": "1P_MIN", "label": "Price Index 1P min", "value": 108, "previousValue": 117, "delta": { "text": "-9 pts", "down": true, "good": true } },
+    { "key": "3P_MIN", "label": "3P Price Min", "value": null, "previousValue": null, "delta": null },
+    { "key": "3P_SAME_MIN", "label": "3P same min", "value": null, "previousValue": null, "delta": null }
+  ],
+  "priorityTable": [
+    { "week": 19, "isCurrent": false, "top": 114, "middle": 112, "low": 109, "allAvgMin1P": 116, "allAvgMin3P": null },
+    { "week": 20, "isCurrent": false, "top": 112, "middle": 111, "low": 108, "allAvgMin1P": 114, "allAvgMin3P": null },
+    { "week": 21, "isCurrent": false, "top": 111, "middle": 110, "low": 107, "allAvgMin1P": 113, "allAvgMin3P": null },
+    { "week": 22, "isCurrent": false, "top": 109, "middle": 109, "low": 106, "allAvgMin1P": 112, "allAvgMin3P": null },
+    { "week": 23, "isCurrent": false, "top": 110, "middle": 108, "low": 104, "allAvgMin1P": 112, "allAvgMin3P": null },
+    { "week": 24, "isCurrent": false, "top": 110, "middle": 108, "low": 104, "allAvgMin1P": 112, "allAvgMin3P": null },
+    { "week": 25, "isCurrent": false, "top": 107, "middle": 107, "low": 105, "allAvgMin1P": 117, "allAvgMin3P": null },
+    { "week": 26, "isCurrent": true, "top": 105, "middle": 106, "low": 107, "allAvgMin1P": 108, "allAvgMin3P": null }
+  ],
+  "trendChart": {
+    "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin"],
+    "priceIndex1P": [116, 114, 113, 112, 112, 113, 114, 116, 117, 115, 114, 117, 108],
+    "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null]
+  },
+  "attractivenessStacked": [
+    { "week": "31 mars", "lowerPct": 34.8, "equalPct": 20.9, "higherPct": 44.4 },
+    { "week": "07 avr.", "lowerPct": 33.1, "equalPct": 21.4, "higherPct": 45.5 },
+    { "week": "14 avr.", "lowerPct": 30.2, "equalPct": 22.0, "higherPct": 47.8 },
+    { "week": "21 avr.", "lowerPct": 28.6, "equalPct": 21.1, "higherPct": 50.3 },
+    { "week": "28 avr.", "lowerPct": 27.9, "equalPct": 20.5, "higherPct": 51.6 },
+    { "week": "05 mai", "lowerPct": 26.4, "equalPct": 19.8, "higherPct": 53.8 },
+    { "week": "12 mai", "lowerPct": 24.7, "equalPct": 19.0, "higherPct": 56.3 },
+    { "week": "19 mai", "lowerPct": 23.1, "equalPct": 18.6, "higherPct": 58.3 },
+    { "week": "26 mai", "lowerPct": 24.0, "equalPct": 18.9, "higherPct": 57.1 },
+    { "week": "02 juin", "lowerPct": 25.5, "equalPct": 19.2, "higherPct": 55.3 },
+    { "week": "09 juin", "lowerPct": 23.8, "equalPct": 18.4, "higherPct": 57.8 },
+    { "week": "16 juin", "lowerPct": 22.0, "equalPct": 17.9, "higherPct": 60.1 },
+    { "week": "23 juin", "lowerPct": 38.4, "equalPct": 20.2, "higherPct": 41.4 }
+  ],
+  "competitors": {
+    "table": [
+      { "name": "Andlight", "articlesAll": 4080, "piAll": 107, "articlesMin": 2727, "piMin": 109, "gt100": 1593, "eq100": 508, "lt100": 627, "pi1pMin": 109, "art1pMin": 2727 },
+      { "name": "Fermliving", "articlesAll": 3210, "piAll": 104, "articlesMin": 2102, "piMin": 106, "gt100": 1190, "eq100": 420, "lt100": 492, "pi1pMin": 106, "art1pMin": 2102 },
+      { "name": "Connox", "articlesAll": 5520, "piAll": 99, "articlesMin": 3811, "piMin": 97, "gt100": 1402, "eq100": 1011, "lt100": 1398, "pi1pMin": 97, "art1pMin": 3811 },
+      { "name": "Lamptwist", "articlesAll": 2890, "piAll": 112, "articlesMin": 1980, "piMin": 115, "gt100": 1340, "eq100": 290, "lt100": 350, "pi1pMin": 115, "art1pMin": 1980 },
+      { "name": "Light11", "articlesAll": 3640, "piAll": 101, "articlesMin": 2510, "piMin": 100, "gt100": 980, "eq100": 870, "lt100": 660, "pi1pMin": 100, "art1pMin": 2510 },
+      { "name": "Lightonline", "articlesAll": 2210, "piAll": 105, "articlesMin": 1560, "piMin": 103, "gt100": 720, "eq100": 410, "lt100": 430, "pi1pMin": 103, "art1pMin": 1560 },
+      { "name": "Flos", "articlesAll": 1340, "piAll": 118, "articlesMin": 980, "piMin": 121, "gt100": 740, "eq100": 120, "lt100": 120, "pi1pMin": 121, "art1pMin": 980 },
+      { "name": "Finnish Design Shop", "articlesAll": 4120, "piAll": 109, "articlesMin": 2890, "piMin": 111, "gt100": 1620, "eq100": 540, "lt100": 730, "pi1pMin": 111, "art1pMin": 2890 },
+      { "name": "Ambientedirect", "articlesAll": 3780, "piAll": 96, "articlesMin": 2640, "piMin": 94, "gt100": 690, "eq100": 760, "lt100": 1190, "pi1pMin": 94, "art1pMin": 2640 },
+      { "name": "Design-bestseller", "articlesAll": 2950, "piAll": 103, "articlesMin": 2010, "piMin": 102, "gt100": 880, "eq100": 510, "lt100": 620, "pi1pMin": 102, "art1pMin": 2010 },
+      { "name": "Drawer", "articlesAll": 1870, "piAll": 110, "articlesMin": 1290, "piMin": 113, "gt100": 870, "eq100": 220, "lt100": 200, "pi1pMin": 113, "art1pMin": 1290 },
+      { "name": "Skapetze", "articlesAll": 1650, "piAll": 98, "articlesMin": 1140, "piMin": 96, "gt100": 320, "eq100": 380, "lt100": 440, "pi1pMin": 96, "art1pMin": 1140 },
+      { "name": "Madeindesign", "articlesAll": 5980, "piAll": 106, "articlesMin": 4120, "piMin": 108, "gt100": 1980, "eq100": 980, "lt100": 1160, "pi1pMin": 108, "art1pMin": 4120 },
+      { "name": "Silvera", "articlesAll": 2340, "piAll": 114, "articlesMin": 1610, "piMin": 117, "gt100": 1120, "eq100": 240, "lt100": 250, "pi1pMin": 117, "art1pMin": 1610 },
+      { "name": "Myareadesign", "articlesAll": 1480, "piAll": 100, "articlesMin": 1020, "piMin": 100, "gt100": 340, "eq100": 410, "lt100": 270, "pi1pMin": 100, "art1pMin": 1020 },
+      { "name": "Chiaracolombini", "articlesAll": 1120, "piAll": 121, "articlesMin": 790, "piMin": 124, "gt100": 610, "eq100": 90, "lt100": 90, "pi1pMin": 124, "art1pMin": 790 },
+      { "name": "Westwing", "articlesAll": 4460, "piAll": 102, "articlesMin": 3070, "piMin": 101, "gt100": 1150, "eq100": 780, "lt100": 1140, "pi1pMin": 101, "art1pMin": 3070 }
+    ],
+    "stacked": [
+      { "name": "Andlight", "matched": 2727, "lowerPct": 23, "equalPct": 19, "higherPct": 58, "pi": 109 },
+      { "name": "Fermliving", "matched": 2102, "lowerPct": 20, "equalPct": 20, "higherPct": 60, "pi": 106 },
+      { "name": "Connox", "matched": 3811, "lowerPct": 37, "equalPct": 27, "higherPct": 36, "pi": 97 },
+      { "name": "Lamptwist", "matched": 1980, "lowerPct": 15, "equalPct": 15, "higherPct": 70, "pi": 115 },
+      { "name": "Light11", "matched": 2510, "lowerPct": 27, "equalPct": 35, "higherPct": 38, "pi": 100 },
+      { "name": "Lightonline", "matched": 1560, "lowerPct": 26, "equalPct": 26, "higherPct": 48, "pi": 103 },
+      { "name": "Flos", "matched": 980, "lowerPct": 12, "equalPct": 12, "higherPct": 76, "pi": 121 },
+      { "name": "Finnish Design Shop", "matched": 2890, "lowerPct": 19, "equalPct": 19, "higherPct": 62, "pi": 111 },
+      { "name": "Ambientedirect", "matched": 2640, "lowerPct": 26, "equalPct": 29, "higherPct": 45, "pi": 94 },
+      { "name": "Design-bestseller", "matched": 2010, "lowerPct": 26, "equalPct": 25, "higherPct": 49, "pi": 102 },
+      { "name": "Drawer", "matched": 1290, "lowerPct": 16, "equalPct": 17, "higherPct": 67, "pi": 113 },
+      { "name": "Skapetze", "matched": 1140, "lowerPct": 28, "equalPct": 33, "higherPct": 39, "pi": 96 },
+      { "name": "Madeindesign", "matched": 4120, "lowerPct": 24, "equalPct": 24, "higherPct": 52, "pi": 108 },
+      { "name": "Silvera", "matched": 1610, "lowerPct": 15, "equalPct": 15, "higherPct": 70, "pi": 117 },
+      { "name": "Myareadesign", "matched": 1020, "lowerPct": 33, "equalPct": 40, "higherPct": 27, "pi": 100 },
+      { "name": "Chiaracolombini", "matched": 790, "lowerPct": 11, "equalPct": 11, "higherPct": 78, "pi": 124 },
+      { "name": "Westwing", "matched": 3070, "lowerPct": 28, "equalPct": 25, "higherPct": 47, "pi": 101 }
+    ]
+  },
+  "sellers": {
+    "table": [
+      { "name": "nedgis", "analysed": 27110, "matched": 8036, "piMin": 108, "gt100": 4432, "eq100": 1310, "lt100": 2295 },
+      { "name": "Cdiscount", "analysed": 19840, "matched": 5210, "piMin": 96, "gt100": 1680, "eq100": 1240, "lt100": 2290 },
+      { "name": "Amazon Marketplace", "analysed": 22100, "matched": 6890, "piMin": 92, "gt100": 1340, "eq100": 1610, "lt100": 3940 },
+      { "name": "Rakuten", "analysed": 8420, "matched": 2140, "piMin": 103, "gt100": 980, "eq100": 480, "lt100": 680 }
+    ],
+    "stacked": [
+      { "name": "nedgis", "matched": 8036, "lowerPct": 29, "equalPct": 16, "higherPct": 55, "pi": 108 },
+      { "name": "Cdiscount", "matched": 5210, "lowerPct": 44, "equalPct": 24, "higherPct": 32, "pi": 96 },
+      { "name": "Amazon Marketplace", "matched": 6890, "lowerPct": 57, "equalPct": 23, "higherPct": 20, "pi": 92 },
+      { "name": "Rakuten", "matched": 2140, "lowerPct": 21, "equalPct": 23, "higherPct": 56, "pi": 103 }
+    ]
+  },
+  "categoryStacked": [
+    { "name": "suspension", "count": 2791, "lowerPct": 24, "equalPct": 17, "higherPct": 59, "pi": 111 },
+    { "name": "lampe a poser", "count": 1843, "lowerPct": 31, "equalPct": 22, "higherPct": 47, "pi": 103 },
+    { "name": "lampadaire", "count": 1290, "lowerPct": 28, "equalPct": 20, "higherPct": 52, "pi": 106 },
+    { "name": "applique murale", "count": 980, "lowerPct": 33, "equalPct": 25, "higherPct": 42, "pi": 99 },
+    { "name": "luminaire exterieur", "count": 740, "lowerPct": 19, "equalPct": 15, "higherPct": 66, "pi": 116 },
+    { "name": "ampoule led", "count": 1392, "lowerPct": 41, "equalPct": 31, "higherPct": 28, "pi": 95 }
+  ],
+  "verdict": {
+    "headline": "Le repricing porte ses fruits — l'indice recule de 2 pts vs la semaine précédente.",
+    "figures": [
+      { "value": "-2 pts", "label": "indice global vs S25", "good": true },
+      { "value": "+2 pts", "label": "d'articles moins chers vs S25", "good": true },
+      { "value": "0", "label": "vendeurs plus compétitifs que vous", "good": true },
+      { "value": "8036", "label": "articles suivis en continu", "good": null }
+    ]
+  }
+}
