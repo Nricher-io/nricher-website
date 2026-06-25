@@ -58,7 +58,6 @@
   .kpi-report .tag--watch{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .section-header > .tag{margin-left:auto;flex-shrink:0;}
   .kpi-report hr.div{border:none;border-top:1px solid var(--border);margin:0;}
-  .kpi-report .kpi-grid-tag{display:flex;justify-content:flex-end;margin-bottom:14px;}
 
   .kpi-report .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .kpi-report .kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 28px 28px;position:relative;overflow:hidden;transition:transform .3s var(--ease-out), box-shadow .3s ease, border-color .3s ease;}
@@ -106,7 +105,7 @@
   .kpi-report .grid-2{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:stretch;}
   .kpi-report .chart-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 30px 22px;}
   .kpi-report .chart-card h3{font-family:var(--font-display);font-weight:600;font-size:1.1rem;color:var(--text);}
-  .kpi-report .chart-sub{color:var(--muted);font-size:0.88rem;margin-top:4px;margin-bottom:10px;}
+  .kpi-report .chart-sub{color:var(--muted);font-size:0.88rem;margin-top:4px;margin-bottom:2px;}
   .kpi-report .chart-canvas-wrap{position:relative;height:240px;}
   .kpi-report .legend{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap;}
   .kpi-report .legend-item{display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--muted);}
@@ -363,9 +362,9 @@
         <div class="section-title" data-i18n="rp.price_index.title">Price Index — la photo de la semaine</div>
         <div class="section-sub" data-i18n="rp.price_index.sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
       </div>
+      <span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span>
     </div>
 
-    <div class="kpi-grid-tag"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
     <div class="kpi-grid">
       {% for g in data.visibleGauges %}
       <div class="kpi" {% if g.delta %}data-tip="{{ g.delta.text }} vs {{ data.prevWeekLabel }} : {{ g.previousValue }}"{% endif %}>
@@ -858,7 +857,7 @@
       interaction: { mode: 'index', intersect: false },
       scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
       plugins: {
-        legend: { align: 'center', labels: { padding: 4, filter: function (item) { return item.text !== '__ref100'; } } },
+        legend: { align: 'center', labels: { padding: 0, filter: function (item) { return item.text !== '__ref100'; } } },
         tooltip: {
           backgroundColor: '#000', padding: 10, cornerRadius: 8,
           filter: function (item) { return item.dataset.label !== '__ref100'; },
@@ -885,7 +884,7 @@
         y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
       },
       plugins: {
-        legend: { align: 'center', labels: { padding: 4 } },
+        legend: { align: 'center', labels: { padding: 0 } },
         tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
       },
     },
