@@ -106,7 +106,7 @@
   .kpi-report .grid-2{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:stretch;}
   .kpi-report .chart-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 30px 22px;}
   .kpi-report .chart-card h3{font-family:var(--font-display);font-weight:600;font-size:1.1rem;color:var(--text);}
-  .kpi-report .chart-sub{color:var(--muted);font-size:0.88rem;margin-top:4px;margin-bottom:20px;}
+  .kpi-report .chart-sub{color:var(--muted);font-size:0.88rem;margin-top:4px;margin-bottom:10px;}
   .kpi-report .chart-canvas-wrap{position:relative;height:240px;}
   .kpi-report .legend{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap;}
   .kpi-report .legend-item{display:flex;align-items:center;gap:7px;font-size:0.82rem;color:var(--muted);}
@@ -1535,7 +1535,7 @@
       interaction: { mode: 'index', intersect: false },
       scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
       plugins: {
-        legend: { align: 'start', labels: { padding: 6, filter: function (item) { return item.text !== '__ref100'; } } },
+        legend: { align: 'center', labels: { padding: 4, filter: function (item) { return item.text !== '__ref100'; } } },
         tooltip: {
           backgroundColor: '#000', padding: 10, cornerRadius: 8,
           filter: function (item) { return item.dataset.label !== '__ref100'; },
@@ -1562,7 +1562,7 @@
         y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
       },
       plugins: {
-        legend: { align: 'start', labels: { padding: 6 } },
+        legend: { align: 'center', labels: { padding: 4 } },
         tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
       },
     },
