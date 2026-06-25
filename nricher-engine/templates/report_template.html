@@ -122,6 +122,9 @@
   .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
   .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
   .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
+  .kpi-report .cbar-header{display:grid;grid-template-columns:150px 1fr 90px;gap:16px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .kpi-report .cbar-header span{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+  .kpi-report .cbar-header span:last-child{text-align:right;}
 
   .kpi-report .donut-wrap{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap;height:100%;}
   .kpi-report .donut-svg{width:220px;height:220px;flex-shrink:0;}
@@ -172,7 +175,7 @@
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
     .kpi-report .grid-2{grid-template-columns:1fr;}
-    .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
+    .kpi-report .cbar-row, .kpi-report .cbar-header{grid-template-columns:96px 1fr 64px;}
     .kpi-report .verdict{padding:38px 26px;}
     .kpi-report .section-header{align-items:flex-start;}
   }
@@ -554,6 +557,7 @@
       <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
+    <div class="cbar-header"><span></span><span></span><span>PI</span></div>
     <div class="cbar-list">
       {% for c in competitors_by_volume %}
       <div class="cbar-row">
@@ -563,7 +567,7 @@
           <div data-tip="{{ c.name }} — aligné : {{ c.equalPct }}%" style="width:{{ c.equalPct }}%;background:var(--blue);">{% if c.equalPct >= 9 %}<span class="cbar-seg__pct">{{ c.equalPct }}%</span>{% endif %}</div>
           <div data-tip="{{ c.name }} — plus cher : {{ c.higherPct }}%" style="width:{{ c.higherPct }}%;background:var(--bad);">{% if c.higherPct >= 9 %}<span class="cbar-seg__pct">{{ c.higherPct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi" style="color:var(--{{ c.severity }});">PI {{ c.pi }}</div>
+        <div class="cbar-pi" style="color:var(--{{ c.severity }});">{{ c.pi }}</div>
       </div>
       {% endfor %}
     </div>
@@ -658,6 +662,7 @@
       <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
+    <div class="cbar-header"><span></span><span></span><span>PI</span></div>
     <div class="cbar-list">
       {% for s in data.sellers.stacked %}
       <div class="cbar-row {{ 'cbar-row--you' if s.name == data.company.name }}">
@@ -667,7 +672,7 @@
           <div data-tip="{{ s.name }} — aligné : {{ s.equalPct }}%" style="width:{{ s.equalPct }}%;background:var(--blue);">{% if s.equalPct >= 9 %}<span class="cbar-seg__pct">{{ s.equalPct }}%</span>{% endif %}</div>
           <div data-tip="{{ s.name }} — plus cher : {{ s.higherPct }}%" style="width:{{ s.higherPct }}%;background:var(--bad);">{% if s.higherPct >= 9 %}<span class="cbar-seg__pct">{{ s.higherPct }}%</span>{% endif %}</div>
         </div>
-        <div class="cbar-pi" style="color:var(--{{ s.severity }});">PI {{ s.pi }}</div>
+        <div class="cbar-pi" style="color:var(--{{ s.severity }});">{{ s.pi }}</div>
       </div>
       {% endfor %}
     </div>

@@ -122,6 +122,9 @@
   .kpi-report .cbar-list--category .cbar-row{grid-template-columns:150px 1fr 130px;}
   .kpi-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
   .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
+  .kpi-report .cbar-header{display:grid;grid-template-columns:150px 1fr 90px;gap:16px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .kpi-report .cbar-header span{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+  .kpi-report .cbar-header span:last-child{text-align:right;}
 
   .kpi-report .donut-wrap{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap;height:100%;}
   .kpi-report .donut-svg{width:220px;height:220px;flex-shrink:0;}
@@ -172,7 +175,7 @@
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
     .kpi-report .grid-2{grid-template-columns:1fr;}
-    .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
+    .kpi-report .cbar-row, .kpi-report .cbar-header{grid-template-columns:96px 1fr 64px;}
     .kpi-report .verdict{padding:38px 26px;}
     .kpi-report .section-header{align-items:flex-start;}
   }
@@ -811,6 +814,7 @@
       <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
+    <div class="cbar-header"><span></span><span></span><span>PI</span></div>
     <div class="cbar-list">
       
       <div class="cbar-row">
@@ -820,7 +824,7 @@
           <div data-tip="Madeindesign — aligné : 24%" style="width:24%;background:var(--blue);"><span class="cbar-seg__pct">24%</span></div>
           <div data-tip="Madeindesign — plus cher : 52%" style="width:52%;background:var(--bad);"><span class="cbar-seg__pct">52%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 108</div>
+        <div class="cbar-pi" style="color:var(--bad);">108</div>
       </div>
       
       <div class="cbar-row">
@@ -830,7 +834,7 @@
           <div data-tip="Connox — aligné : 27%" style="width:27%;background:var(--blue);"><span class="cbar-seg__pct">27%</span></div>
           <div data-tip="Connox — plus cher : 36%" style="width:36%;background:var(--bad);"><span class="cbar-seg__pct">36%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">PI 97</div>
+        <div class="cbar-pi" style="color:var(--good);">97</div>
       </div>
       
       <div class="cbar-row">
@@ -840,7 +844,7 @@
           <div data-tip="Westwing — aligné : 25%" style="width:25%;background:var(--blue);"><span class="cbar-seg__pct">25%</span></div>
           <div data-tip="Westwing — plus cher : 47%" style="width:47%;background:var(--bad);"><span class="cbar-seg__pct">47%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 101</div>
+        <div class="cbar-pi" style="color:var(--bad);">101</div>
       </div>
       
       <div class="cbar-row">
@@ -850,7 +854,7 @@
           <div data-tip="Finnish Design Shop — aligné : 19%" style="width:19%;background:var(--blue);"><span class="cbar-seg__pct">19%</span></div>
           <div data-tip="Finnish Design Shop — plus cher : 62%" style="width:62%;background:var(--bad);"><span class="cbar-seg__pct">62%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 111</div>
+        <div class="cbar-pi" style="color:var(--bad);">111</div>
       </div>
       
       <div class="cbar-row">
@@ -860,7 +864,7 @@
           <div data-tip="Andlight — aligné : 19%" style="width:19%;background:var(--blue);"><span class="cbar-seg__pct">19%</span></div>
           <div data-tip="Andlight — plus cher : 58%" style="width:58%;background:var(--bad);"><span class="cbar-seg__pct">58%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 109</div>
+        <div class="cbar-pi" style="color:var(--bad);">109</div>
       </div>
       
       <div class="cbar-row">
@@ -870,7 +874,7 @@
           <div data-tip="Ambientedirect — aligné : 29%" style="width:29%;background:var(--blue);"><span class="cbar-seg__pct">29%</span></div>
           <div data-tip="Ambientedirect — plus cher : 45%" style="width:45%;background:var(--bad);"><span class="cbar-seg__pct">45%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">PI 94</div>
+        <div class="cbar-pi" style="color:var(--good);">94</div>
       </div>
       
       <div class="cbar-row">
@@ -880,7 +884,7 @@
           <div data-tip="Light11 — aligné : 35%" style="width:35%;background:var(--blue);"><span class="cbar-seg__pct">35%</span></div>
           <div data-tip="Light11 — plus cher : 38%" style="width:38%;background:var(--bad);"><span class="cbar-seg__pct">38%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--blue);">PI 100</div>
+        <div class="cbar-pi" style="color:var(--blue);">100</div>
       </div>
       
       <div class="cbar-row">
@@ -890,7 +894,7 @@
           <div data-tip="Fermliving — aligné : 20%" style="width:20%;background:var(--blue);"><span class="cbar-seg__pct">20%</span></div>
           <div data-tip="Fermliving — plus cher : 60%" style="width:60%;background:var(--bad);"><span class="cbar-seg__pct">60%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 106</div>
+        <div class="cbar-pi" style="color:var(--bad);">106</div>
       </div>
       
       <div class="cbar-row">
@@ -900,7 +904,7 @@
           <div data-tip="Design-bestseller — aligné : 25%" style="width:25%;background:var(--blue);"><span class="cbar-seg__pct">25%</span></div>
           <div data-tip="Design-bestseller — plus cher : 49%" style="width:49%;background:var(--bad);"><span class="cbar-seg__pct">49%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 102</div>
+        <div class="cbar-pi" style="color:var(--bad);">102</div>
       </div>
       
       <div class="cbar-row">
@@ -910,7 +914,7 @@
           <div data-tip="Lamptwist — aligné : 15%" style="width:15%;background:var(--blue);"><span class="cbar-seg__pct">15%</span></div>
           <div data-tip="Lamptwist — plus cher : 70%" style="width:70%;background:var(--bad);"><span class="cbar-seg__pct">70%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 115</div>
+        <div class="cbar-pi" style="color:var(--bad);">115</div>
       </div>
       
       <div class="cbar-row">
@@ -920,7 +924,7 @@
           <div data-tip="Silvera — aligné : 15%" style="width:15%;background:var(--blue);"><span class="cbar-seg__pct">15%</span></div>
           <div data-tip="Silvera — plus cher : 70%" style="width:70%;background:var(--bad);"><span class="cbar-seg__pct">70%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 117</div>
+        <div class="cbar-pi" style="color:var(--bad);">117</div>
       </div>
       
       <div class="cbar-row">
@@ -930,7 +934,7 @@
           <div data-tip="Lightonline — aligné : 26%" style="width:26%;background:var(--blue);"><span class="cbar-seg__pct">26%</span></div>
           <div data-tip="Lightonline — plus cher : 48%" style="width:48%;background:var(--bad);"><span class="cbar-seg__pct">48%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 103</div>
+        <div class="cbar-pi" style="color:var(--bad);">103</div>
       </div>
       
     </div>
@@ -1231,6 +1235,7 @@
       <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
     </div>
 
+    <div class="cbar-header"><span></span><span></span><span>PI</span></div>
     <div class="cbar-list">
       
       <div class="cbar-row ">
@@ -1240,7 +1245,7 @@
           <div data-tip="nedgis — aligné : 16%" style="width:16%;background:var(--blue);"><span class="cbar-seg__pct">16%</span></div>
           <div data-tip="nedgis — plus cher : 55%" style="width:55%;background:var(--bad);"><span class="cbar-seg__pct">55%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 108</div>
+        <div class="cbar-pi" style="color:var(--bad);">108</div>
       </div>
       
       <div class="cbar-row ">
@@ -1250,7 +1255,7 @@
           <div data-tip="Cdiscount — aligné : 24%" style="width:24%;background:var(--blue);"><span class="cbar-seg__pct">24%</span></div>
           <div data-tip="Cdiscount — plus cher : 32%" style="width:32%;background:var(--bad);"><span class="cbar-seg__pct">32%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">PI 96</div>
+        <div class="cbar-pi" style="color:var(--good);">96</div>
       </div>
       
       <div class="cbar-row ">
@@ -1260,7 +1265,7 @@
           <div data-tip="Amazon Marketplace — aligné : 23%" style="width:23%;background:var(--blue);"><span class="cbar-seg__pct">23%</span></div>
           <div data-tip="Amazon Marketplace — plus cher : 20%" style="width:20%;background:var(--bad);"><span class="cbar-seg__pct">20%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">PI 92</div>
+        <div class="cbar-pi" style="color:var(--good);">92</div>
       </div>
       
       <div class="cbar-row ">
@@ -1270,7 +1275,7 @@
           <div data-tip="Rakuten — aligné : 23%" style="width:23%;background:var(--blue);"><span class="cbar-seg__pct">23%</span></div>
           <div data-tip="Rakuten — plus cher : 56%" style="width:56%;background:var(--bad);"><span class="cbar-seg__pct">56%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">PI 103</div>
+        <div class="cbar-pi" style="color:var(--bad);">103</div>
       </div>
       
     </div>
