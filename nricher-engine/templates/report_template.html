@@ -10,40 +10,23 @@
 <title>Weekly KPIs — {{ data.company.name }} × nricher</title>
 <link rel="stylesheet" href="../css/main.css?v=20260622" />
 <style>
-  /* Thème sombre — propre au rapport Weekly KPIs, calque exactement les design
-     tokens reels de l'app nricher (voir handoff-dev/WEEKLY_KPIS_APP_SOURCE_OF_TRUTH.md).
-     Scope sur .toc-bar + .kpi-report uniquement : n'affecte aucune autre page du site. */
-  .toc-bar, .kpi-report{
-    --bg:          #0a0a0a;   /* oklch(0.145 0 0) */
-    --card:        #1f1f1f;   /* oklch(0.205 0 0) */
-    --card-2:      #181818;
-    --text:        #fafafa;   /* oklch(0.985 0 0) */
-    --text-2:      #d4d4d4;
-    --muted:       #b3b3b3;   /* oklch(0.708 0 0) */
-    --border:      rgba(255,255,255,0.1);
-    --border-mint: rgba(89,239,189,0.35);
-    --mint:        #59efbd;   /* --custom-green de l'app */
-    --blue:        #3b82f6;   /* equal */
-    --good:        #10b981;   /* cheaper */
-    --good-bg:     rgba(16,185,129,0.15);
-    --bad:         #ef4444;   /* pricier */
-    --bad-bg:      rgba(239,68,68,0.15);
-    --grad-brand:  #3b82f6;   /* barre fine du haut des cartes — plate, pas en degrade */
-    --r-lg:        12px;      /* rounded-xl de l'app */
-    --r-xl:        16px;
-    --shadow-card: 0 20px 50px rgba(0,0,0,0.5), 0 0 24px rgba(89,239,189,0.06);
+  /* Thème clair — design d'origine du site (DemoStore), pas le thème sombre de l'app.
+     Les couleurs de sévérité Price Index restent celles du site (good/blue/bad,
+     déjà définies globalement dans main.css) ; seule la nuance exacte change ici. */
+  :root{
+    --bad:  #e2452f;  --bad-bg: rgba(226,69,47,0.10);
+    --good: #1fae7a;  --good-bg: rgba(31,174,122,0.12);
   }
-  .kpi-report{ background:var(--bg); color:var(--text); }
 
   /* Sommaire — sous la vraie nav du site (fixed, 80px) */
-  .toc-bar{position:sticky;top:80px;margin-top:80px;z-index:45;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
+  .toc-bar{position:sticky;top:80px;margin-top:80px;z-index:45;background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
   .toc-bar__inner{display:flex;align-items:center;justify-content:space-between;height:46px;gap:16px;}
   .toc-bar__links{display:flex;gap:4px;overflow-x:auto;align-items:center;scrollbar-width:none;min-width:0;}
   .toc-bar__links::-webkit-scrollbar{display:none;}
   .toc-bar__link{flex-shrink:0;font-family:var(--font-body);font-weight:600;font-size:0.82rem;color:var(--text-2);padding:8px 14px;border-radius:var(--r-pill);white-space:nowrap;transition:background .2s ease, color .2s ease;}
-  .toc-bar__link:hover{background:rgba(89,239,189,0.08);color:var(--text);}
-  .toc-bar__link.is-active{background:rgba(59,130,246,0.15);color:var(--blue);}
-  .toc-bar__brand{flex-shrink:0;font-family:var(--font-display);font-weight:700;font-size:0.92rem;white-space:nowrap;letter-spacing:-0.01em;color:var(--mint);}
+  .toc-bar__link:hover{background:rgba(96,239,190,0.08);color:var(--text);}
+  .toc-bar__link.is-active{background:rgba(46,88,202,0.1);color:var(--blue);}
+  .toc-bar__brand{flex-shrink:0;font-family:var(--font-display);font-weight:700;font-size:0.92rem;white-space:nowrap;letter-spacing:-0.01em;}
   .kpi-report .section[id]{scroll-margin-top:96px;}
 
   /* Contenu du rapport — scope isole pour ne jamais entrer en conflit avec les classes du site (.hero, .section, .container, .btn, .tag, .eyebrow...) */
@@ -72,7 +55,7 @@
   .kpi-report .section-title{font-size:clamp(1.7rem,3vw,2.2rem);color:var(--text);font-family:var(--font-display);font-weight:700;line-height:0.98;letter-spacing:-0.02em;}
   .kpi-report .section-sub{color:var(--muted);font-size:1rem;margin-top:10px;max-width:480px;line-height:1.6;}
   .kpi-report .tag{font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;letter-spacing:0.05em;text-transform:uppercase;}
-  .kpi-report .tag--watch{background:rgba(59,130,246,0.15);color:var(--blue);}
+  .kpi-report .tag--watch{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report hr.div{border:none;border-top:1px solid var(--border);margin:0;}
   .kpi-report .kpi-grid-tag{display:flex;justify-content:flex-end;margin-bottom:14px;}
 
@@ -87,7 +70,7 @@
   .kpi-report .kpi__chip{font-size:0.78rem;font-weight:700;padding:4px 10px;border-radius:var(--r-pill);}
   .kpi-report .kpi__chip.bad{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .kpi__chip.good{background:var(--good-bg);color:var(--good);}
-  .kpi-report .kpi__chip.blue{background:rgba(59,130,246,0.15);color:var(--blue);}
+  .kpi-report .kpi__chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .kpi__label{margin-top:10px;font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
   .kpi-report .kpi__desc{margin-top:6px;font-size:0.85rem;color:var(--muted);line-height:1.5;min-height:2.6em;}
   .kpi-report .kpi__bar{margin-top:20px;}
@@ -104,14 +87,14 @@
   .kpi-report table.prio-table th:first-child{text-align:left;}
   .kpi-report .prio-th-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:middle;}
   .kpi-report table.prio-table td{padding:20px 18px;text-align:center;border-bottom:1px solid var(--border);}
-  .kpi-report table.prio-table tbody tr:hover{background:rgba(89,239,189,0.05);}
+  .kpi-report table.prio-table tbody tr:hover{background:rgba(96,239,190,0.05);}
   .kpi-report table.prio-table tr:last-child td{border-bottom:none;}
   .kpi-report table.prio-table td.wk{text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
   .kpi-report .prio-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-display);font-weight:700;font-size:1.15rem;padding:8px 16px;border-radius:var(--r-pill);cursor:default;}
   .kpi-report .prio-chip.bad{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .prio-chip.good{background:var(--good-bg);color:var(--good);}
   .kpi-report .prio-chip.neu{background:var(--card-2);color:var(--text-2);}
-  .kpi-report .prio-chip.blue{background:rgba(59,130,246,0.15);color:var(--blue);}
+  .kpi-report .prio-chip.blue{background:rgba(46,88,202,0.10);color:var(--blue);}
   .kpi-report .prio-chip__d{font-size:0.7rem;opacity:0.75;}
   .kpi-report .prio-all-sub{font-size:10px;color:var(--muted);margin-top:6px;}
   .kpi-report .note{margin-top:20px;font-size:0.95rem;color:var(--text-2);max-width:680px;line-height:1.6;}
@@ -160,25 +143,30 @@
   .kpi-report table.sellers thead{position:sticky;top:0;background:var(--card);z-index:2;}
   .kpi-report table.sellers th{text-align:left;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);padding:16px 18px 12px;border-bottom:1px solid var(--border);}
   .kpi-report table.sellers td{padding:11px 18px;border-bottom:1px solid var(--border);}
-  .kpi-report table.sellers tr:hover td{background:rgba(89,239,189,0.05);}
+  .kpi-report table.sellers tr:hover td{background:rgba(96,239,190,0.05);}
   .kpi-report table.sellers td.num{text-align:right;font-family:var(--font-display);font-weight:500;}
   .kpi-report .pi-chip{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 8px;border-radius:var(--r-pill);font-size:0.78rem;font-weight:700;}
   .kpi-report .pi-chip.r{background:var(--bad-bg);color:var(--bad);}
   .kpi-report .pi-chip.g{background:var(--good-bg);color:var(--good);}
-  .kpi-report .pi-chip.b{background:rgba(59,130,246,0.15);color:var(--blue);}
+  .kpi-report .pi-chip.b{background:rgba(46,88,202,0.10);color:var(--blue);}
 
-  .kpi-report .verdict{background:var(--card);border:1px solid rgba(89,239,189,0.3);border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out), box-shadow .35s ease;}
-  .kpi-report .verdict:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);}
-  .kpi-report .verdict__badge{display:inline-flex;margin-top:-34px;margin-bottom:18px;font-size:11px;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--mint);background:var(--bg);border:2px solid var(--mint);padding:7px 14px;border-radius:var(--r-pill);}
-  .kpi-report .verdict h2{font-size:clamp(1.7rem,3.2vw,2.3rem);max-width:680px;margin:0 0 32px;line-height:1.2;font-family:var(--font-display);font-weight:700;color:var(--text);}
-  .kpi-report .verdict-figs{display:flex;gap:0;margin-bottom:0;flex-wrap:wrap;}
-  .kpi-report .vfig{padding:0 28px;border-right:1px solid var(--border);transition:transform .25s var(--ease-out);}
-  .kpi-report .vfig:last-child{border-right:none;}
-  .kpi-report .vfig:first-child{padding-left:0;}
+  .kpi-report .verdict{background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:56px 56px;position:relative;overflow:hidden;transition:transform .35s var(--ease-out), box-shadow .35s ease, border-color .35s ease;}
+  .kpi-report .verdict:hover{transform:translateY(-6px);box-shadow:var(--shadow-card);border-color:var(--border-mint);}
+  .kpi-report .verdict__filet{position:absolute;inset:-20px;background:url('../img/screenshots/filet.png') center/cover no-repeat;mix-blend-mode:multiply;filter:saturate(3) hue-rotate(-8deg) contrast(1.1);opacity:0.62;-webkit-mask-image:radial-gradient(ellipse 560px 440px at 85% 10%, black 0%, transparent 75%);mask-image:radial-gradient(ellipse 560px 440px at 85% 10%, black 0%, transparent 75%);pointer-events:none;z-index:0;transition:opacity .35s ease, transform .6s var(--ease-out);}
+  .kpi-report .verdict:hover .verdict__filet{opacity:0.78;transform:scale(1.04);}
+  .kpi-report .verdict__content{position:relative;z-index:1;}
+  .kpi-report .verdict .eyebrow{border-color:var(--mint);color:var(--blue);}
+  .kpi-report .verdict h2{font-size:clamp(1.7rem,3.2vw,2.3rem);max-width:620px;margin:22px 0 32px;line-height:1.15;font-family:var(--font-display);font-weight:700;color:var(--text);}
+  .kpi-report .verdict-figs{display:flex;gap:48px;margin-bottom:36px;flex-wrap:wrap;}
+  .kpi-report .vfig{transition:transform .25s var(--ease-out);}
   .kpi-report .vfig:hover{transform:translateY(-3px);}
-  .kpi-report .vfig .n{font-family:var(--font-display);font-weight:700;font-size:1.7rem;}
+  .kpi-report .vfig .n{font-family:var(--font-display);font-weight:700;font-size:1.7rem;color:var(--blue);}
   .kpi-report .vfig .n.good{color:var(--good);} .kpi-report .vfig .n.bad{color:var(--bad);}
-  .kpi-report .vfig .l{font-size:0.8rem;color:var(--muted);margin-top:4px;max-width:140px;}
+  .kpi-report .vfig .l{font-size:0.8rem;color:var(--muted);margin-top:4px;}
+  .kpi-report .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .kpi-report .cta-row .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:0.95rem;padding:14px 28px;border-radius:var(--r-pill);transition:transform .3s var(--ease-out), box-shadow .3s ease;}
+  .kpi-report .cta-row .btn-primary{background:none;color:var(--mint);border:2px solid var(--mint);}
+  .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
   @media (max-width:880px){
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
@@ -186,8 +174,6 @@
     .kpi-report .grid-2{grid-template-columns:1fr;}
     .kpi-report .cbar-row{grid-template-columns:96px 1fr 64px;}
     .kpi-report .verdict{padding:38px 26px;}
-    .kpi-report .verdict-figs{flex-direction:column;gap:18px;}
-    .kpi-report .vfig{border-right:none;padding:0;}
     .kpi-report .section-header{align-items:flex-start;}
   }
   @media (max-width:560px){
@@ -199,14 +185,14 @@
   .kpi-report [data-tip]{position:relative;cursor:default;}
   .kpi-report [data-tip]::after{
     content:attr(data-tip); position:absolute; bottom:calc(100% + 10px); left:50%; transform:translateX(-50%) translateY(4px) scale(0.96);
-    background:#000; color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
+    background:var(--text); color:#fff; font-family:var(--font-body); font-size:12px; font-weight:600;
     padding:7px 12px; border-radius:8px; white-space:nowrap; z-index:30; pointer-events:none;
-    opacity:0; box-shadow:0 10px 28px rgba(0,0,0,0.5);
+    opacity:0; box-shadow:0 10px 28px rgba(0,0,0,0.22);
     transition:opacity .18s ease, transform .18s ease;
   }
   .kpi-report [data-tip]::before{
     content:""; position:absolute; bottom:calc(100% + 4px); left:50%; transform:translateX(-50%) translateY(4px);
-    border:5px solid transparent; border-top-color:#000; z-index:30; pointer-events:none; opacity:0;
+    border:5px solid transparent; border-top-color:var(--text); z-index:30; pointer-events:none; opacity:0;
     transition:opacity .18s ease;
   }
   .kpi-report [data-tip]:hover::after, .kpi-report [data-tip]:hover::before{opacity:1; transform:translateX(-50%) translateY(0) scale(1);}
@@ -215,7 +201,7 @@
   .kpi-report .cbar-track > div{transition:filter .2s ease, transform .2s ease; position:relative;}
   .kpi-report .cbar-track > div:hover{filter:brightness(1.12); transform:scaleY(1.15); z-index:5;}
 
-  .kpi-report .cbar-row--you{background:rgba(89,239,189,0.08); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
+  .kpi-report .cbar-row--you{background:rgba(96,239,190,0.08); border-radius:var(--r-md); margin-inline:-12px; padding-inline:12px;}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -363,23 +349,22 @@
     <div class="kpi-grid-tag"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
     <div class="kpi-grid">
       {% for g in data.visibleGauges %}
-      {% set needle_color = 'var(--good)' if g.severity=='good' else ('var(--blue)' if g.severity=='blue' else ('var(--bad)' if g.severity=='bad' else 'var(--muted)')) %}
       <div class="kpi" {% if g.delta %}data-tip="{{ g.delta.text }} vs {{ data.prevWeekLabel }} : {{ g.previousValue }}"{% endif %}>
         {% if g.value is not none %}<span class="kpi__ghost {{ g.severity }}">{{ g.value }}</span>{% endif %}
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
               <linearGradient id="gaugeArcGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#10b981"/>
-                <stop offset="30%" stop-color="#84cc16"/>
-                <stop offset="55%" stop-color="#f59e0b"/>
-                <stop offset="78%" stop-color="#f97316"/>
-                <stop offset="100%" stop-color="#ef4444"/>
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
               </linearGradient>
             </defs>
             <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-{{ loop.index0 }})" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="{{ g.needleX }}" y2="{{ g.needleY }}" stroke="{{ needle_color }}" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="100" cy="100" r="6" fill="{{ needle_color }}"/>
+            <line x1="100" y1="100" x2="{{ g.needleX }}" y2="{{ g.needleY }}" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
           {% if g.delta %}<div class="kpi__chip {{ g.severity }}">{{ g.delta.text }}</div>{% endif %}
         </div>
@@ -394,16 +379,16 @@
           <svg viewBox="0 0 200 8" preserveAspectRatio="none">
             <defs>
               <linearGradient id="gaugeBarGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#10b981"/>
-                <stop offset="30%" stop-color="#84cc16"/>
-                <stop offset="55%" stop-color="#f59e0b"/>
-                <stop offset="78%" stop-color="#f97316"/>
-                <stop offset="100%" stop-color="#ef4444"/>
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-{{ loop.index0 }})"/>
             {% if g.refPct is not none %}<rect x="{{ (g.refPct/100*198)|round(1) }}" y="0" width="2" height="8" fill="#fff"/>{% endif %}
-            {% if g.barPct is not none %}<circle cx="{{ (g.barPct/100*200)|round(1) }}" cy="4" r="4.5" fill="#fff" stroke="#0a0a0a" stroke-width="1.5"/>{% endif %}
+            {% if g.barPct is not none %}<circle cx="{{ (g.barPct/100*200)|round(1) }}" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>{% endif %}
           </svg>
         </div>
         <div class="kpi__ref">
@@ -522,8 +507,8 @@
             <text x="{{ seg.label_x }}" y="{{ seg.label_y }}" text-anchor="middle" dominant-baseline="middle" font-family="var(--font-body)" font-weight="700" font-size="11" fill="#fff">{{ seg.pct }}%</text>
             {% endif %}
             {% endfor %}
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="#ef4444">{{ competitors_overview.avgHigher }}%</text>
-            <text x="60" y="74" text-anchor="middle" font-size="10" fill="#b3b3b3" data-i18n="rp.overview.donut.center">plus cher</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">{{ competitors_overview.avgHigher }}%</text>
+            <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
             <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · {{ competitors_overview.avgLower }}%</div>
@@ -640,7 +625,7 @@
         </thead>
         <tbody>
           {% for s in data.sellers.table %}
-          <tr {% if s.name == data.company.name %}style="background:rgba(89,239,189,0.08);"{% endif %}>
+          <tr {% if s.name == data.company.name %}style="background:rgba(96,239,190,0.08);"{% endif %}>
             <td>{{ '<strong>'|safe if s.name == data.company.name }}{{ s.name }}{{ '</strong>'|safe if s.name == data.company.name }}{% if s.name == data.company.name %} <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span>{% endif %}</td>
             <td class="num">{{ s.analysed }}</td>
             <td class="num">{{ s.matched }}</td>
@@ -725,15 +710,18 @@
 <section class="section" id="verdict">
   <div class="container">
     <div class="verdict">
-      <span class="verdict__badge" data-i18n="rp.verdict.badge">CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE</span>
-      <h2>{{ data.verdict.headline }}</h2>
-      <div class="verdict-figs">
-        {% for f in data.verdict.figures %}
-        <div class="vfig"><div class="n {{ 'good' if f.good != false else 'bad' }}">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
-        {% endfor %}
-      </div>
-      <div class="cta-row" style="margin-top:32px;">
-        <a href="../contact.html" class="btn btn-primary" data-i18n="rp.verdict.cta">Voir le détail article par article →</a>
+      <div class="verdict__filet" aria-hidden="true"></div>
+      <div class="verdict__content">
+        <span class="eyebrow" data-i18n="rp.verdict.badge">CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE</span>
+        <h2>{{ data.verdict.headline }}</h2>
+        <div class="verdict-figs">
+          {% for f in data.verdict.figures %}
+          <div class="vfig"><div class="n {{ 'good' if f.good != false else 'bad' }}">{{ f.value }}</div><div class="l">{{ f.label }}</div></div>
+          {% endfor %}
+        </div>
+        <div class="cta-row">
+          <a href="../contact.html" class="btn btn-primary" data-i18n="rp.verdict.cta">Voir le détail article par article →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -797,8 +785,8 @@
 <script>
 (function () {
   if (!window.Chart) return;
-  Chart.defaults.color = '#b3b3b3';
-  Chart.defaults.borderColor = 'rgba(255,255,255,0.08)';
+  Chart.defaults.color = '#7a8fba';
+  Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
   var trendChart = {{ data.trendChart | tojson }};
@@ -823,7 +811,7 @@
   }
   datasets.push({
     label: '__ref100', data: trendChart.weeks.map(function () { return 100; }),
-    borderColor: 'rgba(255,255,255,0.25)', borderDash: [4, 4], pointRadius: 0, fill: false,
+    borderColor: 'rgba(0,0,0,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false,
   });
 
   new Chart(document.getElementById('trendChartCanvas'), {
@@ -832,7 +820,7 @@
     options: {
       maintainAspectRatio: false,
       interaction: { mode: 'index', intersect: false },
-      scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(255,255,255,0.06)' } } },
+      scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
       plugins: {
         legend: { labels: { filter: function (item) { return item.text !== '__ref100'; } } },
         tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
@@ -845,9 +833,9 @@
     data: {
       labels: attractiveness.map(function (r) { return r.week; }),
       datasets: [
-        { label: 'Moins cher', data: attractiveness.map(function (r) { return r.lowerPct; }), borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.85)', fill: 'origin', tension: 0.3, pointRadius: 0 },
-        { label: 'Aligné', data: attractiveness.map(function (r) { return r.equalPct; }), borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.85)', fill: '-1', tension: 0.3, pointRadius: 0 },
-        { label: 'Plus cher', data: attractiveness.map(function (r) { return r.higherPct; }), borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.85)', fill: '-1', tension: 0.3, pointRadius: 0 },
+        { label: 'Moins cher', data: attractiveness.map(function (r) { return r.lowerPct; }), borderColor: '#1fae7a', backgroundColor: 'rgba(31,174,122,0.85)', fill: 'origin', tension: 0.3, pointRadius: 0 },
+        { label: 'Aligné', data: attractiveness.map(function (r) { return r.equalPct; }), borderColor: '#2e58ca', backgroundColor: 'rgba(46,88,202,0.85)', fill: '-1', tension: 0.3, pointRadius: 0 },
+        { label: 'Plus cher', data: attractiveness.map(function (r) { return r.higherPct; }), borderColor: '#e2452f', backgroundColor: 'rgba(226,69,47,0.85)', fill: '-1', tension: 0.3, pointRadius: 0 },
       ],
     },
     options: {
@@ -855,7 +843,7 @@
       interaction: { mode: 'index', intersect: false },
       scales: {
         x: { stacked: true, grid: { display: false } },
-        y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(255,255,255,0.06)' } },
+        y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
       },
       plugins: { tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 } },
     },

@@ -138,9 +138,9 @@ def compute_donut_segments(parts):
     return segments
 
 
-COLOR_CHEAPER = "#10b981"
-COLOR_EQUAL = "#3b82f6"
-COLOR_PRICIER = "#ef4444"
+COLOR_CHEAPER = "var(--good)"
+COLOR_EQUAL = "var(--blue)"
+COLOR_PRICIER = "var(--bad)"
 
 
 def compute_competitors_overview(stacked):
