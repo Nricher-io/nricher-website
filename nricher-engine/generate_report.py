@@ -19,12 +19,16 @@ en %, verdict généré) — ce script n'a aucune logique métier à réimpléme
 Il calcule uniquement la géométrie SVG pure (position d'aiguille de jauge,
 segments du donut) à partir des valeurs brutes, à chaque affichage.
 
-SÉCURITÉ — TOKEN API
+SÉCURITÉ — TOKENS
 ----------------------
-Le token est un secret par entreprise (donne accès aux vraies données client).
-Il ne doit JAMAIS être écrit en clair dans un fichier versionné. Il se
-configure via un fichier .env (gitignored) — copier .env.example vers .env et
-renseigner NRICHER_API_TOKEN.
+Un seul secret persiste : NRICHER_SITE_TOKEN (JWT au niveau site, voir .env.example),
+jamais écrit en clair dans un fichier versionné. Le token par entreprise
+(donne accès aux vraies données client) n'est, lui, JAMAIS stocké : il est
+re-créé à la volée à chaque génération via POST /v1/:companyId/create-api-token
+(voir create_company_token), utilisé immédiatement, puis jeté. Cette création
+écrase tout token existant pour cette entreprise — le stocker reviendrait à
+le rendre fragile (invalidé dès qu'un autre appel le recrée ailleurs), d'où
+le choix de toujours en minter un frais plutôt que d'en garder un en cache.
 
 USAGE
 -----
@@ -198,24 +202,45 @@ def compute_hero_tagline(price_index_global_delta):
     return "good" if price_index_global_delta["good"] else "bad"
 
 
+def get_site_jwt_and_base_url():
+    base_url = os.environ.get("NRICHER_API_BASE_URL", "https://api.nricher.io")
+    jwt_token = os.environ.get("NRICHER_SITE_TOKEN")
+    if not jwt_token:
+        raise RuntimeError(
+            "NRICHER_SITE_TOKEN manquant. Copier nricher-engine/.env.example vers "
+            "nricher-engine/.env et renseigner le JWT site."
+        )
+    return base_url, jwt_token
+
+
+def create_company_token(company_id, base_url, jwt_token):
+    """
+    Mint un token a la volee pour une entreprise (POST /v1/:companyId/create-api-token,
+    authentifie par le JWT site). Cree-OU-ecrase : n'appeler que pour un usage
+    immediat, jamais pour stocker le resultat (voir note securite en tete de fichier).
+    """
+    response = requests.post(
+        f"{base_url}/v1/{company_id}/create-api-token",
+        headers={"Authorization": f"Bearer {jwt_token}"},
+        timeout=15,
+    )
+    response.raise_for_status()
+    return response.json()["companyApiToken"]
+
+
 def fetch_weekly_kpis(company_id, weeks=13):
     """
-    Récupère les données Weekly KPIs déjà calculées depuis l'API nricher.
-    Nécessite NRICHER_API_TOKEN (et optionnellement NRICHER_API_BASE_URL) dans
-    un fichier .env local — voir .env.example. Le token est propre à l'entreprise
-    (page "APIs" de l'administration nricher) et ne doit jamais être commité.
+    Recupere les donnees Weekly KPIs deja calculees depuis l'API nricher.
+    Mint un token par-entreprise frais a la volee (jamais stocke, voir
+    create_company_token), l'utilise immediatement pour cet appel, puis le
+    jette. Necessite NRICHER_SITE_TOKEN dans .env (voir .env.example).
     """
-    base_url = os.environ.get("NRICHER_API_BASE_URL", "https://api.nricher.io")
-    token = os.environ.get("NRICHER_API_TOKEN")
-    if not token:
-        raise RuntimeError(
-            "NRICHER_API_TOKEN manquant. Copier nricher-engine/.env.example vers "
-            "nricher-engine/.env et renseigner le token de l'entreprise."
-        )
+    base_url, jwt_token = get_site_jwt_and_base_url()
+    company_token = create_company_token(company_id, base_url, jwt_token)
 
     response = requests.get(
         f"{base_url}/v1/weekly-kpis/{company_id}",
-        params={"token": token, "weeks": weeks},
+        params={"token": company_token, "weeks": weeks},
         timeout=30,
     )
     response.raise_for_status()

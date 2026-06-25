@@ -13,8 +13,8 @@ en cas de doute sur une couleur, une échelle ou un comportement).
 ```bash
 pip install -r requirements.txt
 cp .env.example .env
-# puis renseigner NRICHER_API_TOKEN dans .env (token par entreprise, page
-# "APIs" de l'administration nricher) — .env n'est jamais commité.
+# puis renseigner NRICHER_SITE_TOKEN dans .env (JWT site, voir .env.example
+# pour comment le generer) — .env n'est jamais commité.
 ```
 
 ## Utilisation
@@ -50,23 +50,33 @@ nricher-engine/
 
 ## D'où viennent les données
 
-`generate_report.py` appelle `GET /v1/weekly-kpis/:companyId` (voir
-`fetch_weekly_kpis()`), qui renvoie un JSON déjà entièrement calculé côté
-nricher : deltas, distributions en %, verdict généré. Ce moteur n'a **aucune
-logique métier à réimplémenter** — il ne calcule que la géométrie SVG pure
-(position d'aiguille de jauge, segments de donut) à partir des valeurs
-brutes, exactement comme l'app le fait elle-même côté client.
+`generate_report.py` appelle d'abord `POST /v1/:companyId/create-api-token`
+(JWT site) pour minter un token propre à l'entreprise, puis
+`GET /v1/weekly-kpis/:companyId` (voir `fetch_weekly_kpis()`) avec ce token
+frais, qui renvoie un JSON déjà entièrement calculé côté nricher : deltas,
+distributions en %, verdict généré. Ce moteur n'a **aucune logique métier à
+réimplémenter** — il ne calcule que la géométrie SVG pure (position
+d'aiguille de jauge, segments de donut) à partir des valeurs brutes,
+exactement comme l'app le fait elle-même côté client.
 
 `data/_sample_api_response.json` reproduit la forme exacte de cette réponse
 pour permettre de tester localement sans token ni accès réseau — ce n'est
 pas un modèle à remplir à la main, juste une fixture de test.
 
-## Sécurité — token API
+## Sécurité — tokens
 
-Le token (`NRICHER_API_TOKEN`) donne accès aux vraies données d'une
-entreprise cliente. Il vit uniquement dans `nricher-engine/.env` (gitignored,
-voir `.env.example` pour le format) et ne doit **jamais** être écrit en clair
-dans un fichier versionné, un commit, ou collé dans une conversation.
+Un seul secret persiste : `NRICHER_SITE_TOKEN` (JWT au niveau site). Il vit
+uniquement dans `nricher-engine/.env` (gitignored, voir `.env.example`) et
+ne doit **jamais** être écrit en clair dans un fichier versionné, un commit,
+ou collé dans une conversation.
+
+Le token par entreprise (accès aux vraies données client) n'est, lui,
+**jamais stocké** : `create_company_token()` le mint à la volée juste avant
+chaque génération, l'utilise immédiatement, puis le jette. Cette création
+écrase tout token existant pour cette entreprise côté serveur — le garder en
+cache le rendrait fragile (invalidé dès qu'un autre appel le recrée
+ailleurs), d'où le choix de toujours en minter un frais plutôt que d'en
+stocker un.
 
 ## ⚠️ Avant d'ajouter un vrai client
 
