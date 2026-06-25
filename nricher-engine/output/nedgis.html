@@ -124,7 +124,7 @@
   .kpi-report .cbar-legend-centered .legend-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;font-weight:600;color:var(--text-2);}
 
   .kpi-report .donut-wrap{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap;height:100%;}
-  .kpi-report .donut-svg{width:140px;height:140px;flex-shrink:0;}
+  .kpi-report .donut-svg{width:220px;height:220px;flex-shrink:0;}
   .kpi-report .donut-svg circle{transition:stroke-width .2s ease, opacity .2s ease; cursor:default;}
   .kpi-report .donut-svg circle:hover{stroke-width:23;}
   .kpi-report .donut-legend{display:flex;flex-direction:column;gap:10px;}
@@ -550,181 +550,26 @@
           
           
           <tr>
-            <td class="wk">S19</td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S19 : 114">
-                114
-                
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S19 : 112">
-                112
-                
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Low sales S19 : 109">
-                109
-                
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad">1P 116</span>
-              <div class="prio-all-sub">3P —</div>
-            </td>
-          </tr>
-          
-          
-          <tr>
-            <td class="wk">S20</td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S20 : 112">
-                112
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S20 : 111">
-                111
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Low sales S20 : 108">
-                108
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad">1P 114</span>
-              <div class="prio-all-sub">3P —</div>
-            </td>
-          </tr>
-          
-          
-          <tr>
-            <td class="wk">S21</td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S21 : 111">
-                111
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S21 : 110">
-                110
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Low sales S21 : 107">
-                107
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad">1P 113</span>
-              <div class="prio-all-sub">3P —</div>
-            </td>
-          </tr>
-          
-          
-          <tr>
-            <td class="wk">S22</td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S22 : 109">
-                109
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S22 : 109">
-                109
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Low sales S22 : 106">
-                106
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad">1P 112</span>
-              <div class="prio-all-sub">3P —</div>
-            </td>
-          </tr>
-          
-          
-          <tr>
-            <td class="wk">S23</td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Top sales S23 : 110">
-                110
-                <span class="prio-chip__d">▲</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Middle sales S23 : 108">
-                108
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad" data-tip="Low sales S23 : 104">
-                104
-                <span class="prio-chip__d">▼</span>
-              </span>
-            </td>
-            
-            <td>
-              <span class="prio-chip bad">1P 112</span>
-              <div class="prio-all-sub">3P —</div>
-            </td>
-          </tr>
-          
-          
-          <tr>
             <td class="wk">S24</td>
             
             <td>
               <span class="prio-chip bad" data-tip="Top sales S24 : 110">
                 110
-                <span class="prio-chip__d">—</span>
+                
               </span>
             </td>
             
             <td>
               <span class="prio-chip bad" data-tip="Middle sales S24 : 108">
                 108
-                <span class="prio-chip__d">—</span>
+                
               </span>
             </td>
             
             <td>
               <span class="prio-chip bad" data-tip="Low sales S24 : 104">
                 104
-                <span class="prio-chip__d">—</span>
+                
               </span>
             </td>
             
@@ -1656,7 +1501,7 @@
       maintainAspectRatio: false,
       interaction: { mode: 'index', intersect: false },
       scales: {
-        x: { stacked: true, grid: { display: false } },
+        x: { stacked: true, grid: { display: true, color: 'rgba(255,255,255,0.65)', lineWidth: 1.5, drawTicks: false, z: 1 } },
         y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
       },
       plugins: { tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 } },

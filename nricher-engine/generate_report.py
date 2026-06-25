@@ -58,6 +58,8 @@ load_dotenv(BASE_DIR / ".env")
 GAUGE_CX, GAUGE_CY, GAUGE_R = 100, 100, 80
 GAUGE_VMIN, GAUGE_VMAX = 80, 120
 
+PRIORITY_TABLE_WEEKS = 3
+
 
 def compute_gauge_needle(value):
     """
@@ -244,6 +246,7 @@ def render_report(data, env):
     data["heroTagline"] = compute_hero_tagline(data["hero"].get("priceIndexGlobalDelta"))
     data["generatedAtLabel"] = format_french_datetime(data["generatedAt"])
 
+    data["priorityTable"] = data["priorityTable"][-PRIORITY_TABLE_WEEKS:]
     for row in data["priorityTable"]:
         for key in ("top", "middle", "low"):
             row[f"{key}Severity"] = compute_pi_severity(row.get(key))
