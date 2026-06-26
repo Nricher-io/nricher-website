@@ -14,7 +14,7 @@
     {
       id: 'maison-deco',
       name: 'Maison & Décoration',
-      brands: ['Andlight', 'chiaracolombini', 'connox', 'design-bestseller', 'drawer', 'fermliving', 'gautier', 'grouperg', 'Jardindeco', 'lamptwist', 'lecedrerouge', 'light11', 'Madeindesign', 'madeindesign de', 'madeindesignuk', 'Maisons du Monde', 'maisons du monde es', 'maisons du monde it', 'maxibazar', 'myareadesign', 'Nedgis', 'Silvera', 'Vente Unique', 'vente unique de', 'vente unique es', 'vente unique it'],
+      brands: ['Maisons du Monde', 'Madeindesign', 'Vente Unique', 'Nedgis', 'Silvera', 'Jardindeco', 'gautier', 'light11', 'connox', 'maxibazar'],
       packs: ['Luminaire & Éclairage', 'Tapis & Textile', 'Mobilier salon & salle à manger']
     },
     {
