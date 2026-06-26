@@ -276,7 +276,7 @@
   var swipeArea = document.getElementById('catSwipeArea');
   var categories = window.NRICHER_CATEGORIES || [];
 
-  var RANK_COLORS = ['#1fae7a', '#6fbb52', '#ffc14d', '#f4a13f', '#f0883a', '#e2452f'];
+  var RANK_COLORS = ['#1fae7a', '#47b668', '#6fbe56', '#9ac34a', '#cec24c', '#ffc04d', '#f7a443', '#f0893a', '#e96735', '#e2452f'];
 
   var currentCat = null;
   var currentPackIndex = 0;
@@ -308,7 +308,7 @@
       return { name: b, count: Math.round(topSellersCount * share) };
     });
     rows.sort(function (a, c) { return c.count - a.count; });
-    rows = rows.slice(0, 6);
+    rows = rows.slice(0, 10);
     rows.forEach(function (r) {
       r.potential = Math.max(8, Math.round((topSellersCount - r.count) / r.count * 100));
     });
