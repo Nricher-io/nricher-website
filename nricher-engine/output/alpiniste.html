@@ -199,6 +199,14 @@
   .kpi-report .cta-row .btn-primary{background:none;color:var(--mint);border:2px solid var(--mint);}
   .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
+  .kpi-report .gated-wrap{position:relative;}
+  .kpi-report .gated-zone{position:relative;pointer-events:none;user-select:none;}
+  .kpi-report .gated-zone::after{content:"";position:absolute;inset:0;-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);}
+  .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
+  .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
+  .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
+  .kpi-report .gated-lock p{color:var(--muted);font-size:0.95rem;line-height:1.6;max-width:360px;margin-inline:auto;margin-bottom:24px;}
+
   @media (max-width:880px){
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
@@ -338,31 +346,30 @@
     <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 26 <span class="sep">·</span> PRICE INDEX</div>
     <h1>
       <span data-i18n="rp.hero.title_prefix">Le marché a bougé.</span>
-      <span class="tagline good" data-i18n="rp.hero.tagline.good">Vous reprenez l'avantage.</span>
-      
+      <span class="tagline neutral" data-i18n="rp.hero.tagline.neutral">Votre prix tient bon.</span>
     </h1>
     <p class="lede">
-      485 381 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
-      8 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
+      487 969 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      9 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">485 381 <span class="down">▼</span></div>
+        <div class="n">487 969 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
         <div class="delta-sub">-1 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n">101 683</div>
+        <div class="n">100 696</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
-        <div class="n bad">109 <span class="down">▼</span></div>
+        <div class="n bad">110 <span class="up">▲</span></div>
         <div class="l" data-i18n="rp.hero.stat2.label">Price Index global</div>
-        <div class="delta-sub">-1 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">0 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-25T17:28:31.625Z">25 juin à 17h28</div>
+        <div class="n" data-generated-at="2026-06-26T08:51:21.317Z">26 juin à 08h51</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -394,7 +401,7 @@
             
           </div>
         </div>
-        <span class="kpi__ghost bad">108</span>
+        <span class="kpi__ghost bad">109</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
@@ -407,12 +414,12 @@
               </linearGradient>
             </defs>
             <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-0)" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="135.7" y2="50.8" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="139.5" y2="53.8" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip bad">+1 pts</div>
+          <div class="kpi__chip bad">+2 pts</div>
         </div>
-        <div class="kpi__num bad">108</div>
+        <div class="kpi__num bad">109</div>
         <div class="kpi__label">Price Index All</div>
         <div class="kpi__desc">
           <span data-i18n="rp.gauge.all.desc">Toutes les offres confondues, tous vendeurs.</span>
@@ -431,7 +438,7 @@
             </defs>
             <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-0)"/>
             <rect x="134.6" y="0" width="2" height="8" fill="#fff"/>
-            <circle cx="140.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+            <circle cx="144.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="kpi__ref">
@@ -452,7 +459,7 @@
             
           </div>
         </div>
-        <span class="kpi__ghost bad">109</span>
+        <span class="kpi__ghost bad">110</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
@@ -465,12 +472,12 @@
               </linearGradient>
             </defs>
             <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-1)" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="139.5" y2="53.8" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="143.0" y2="57.0" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip bad">-1 pts</div>
+          <div class="kpi__chip bad">0 pts</div>
         </div>
-        <div class="kpi__num bad">109</div>
+        <div class="kpi__num bad">110</div>
         <div class="kpi__label">Price Index 1P min</div>
         <div class="kpi__desc">
           <span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
@@ -489,7 +496,7 @@
             </defs>
             <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-1)"/>
             <rect x="148.5" y="0" width="2" height="8" fill="#fff"/>
-            <circle cx="144.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+            <circle cx="150.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="kpi__ref">
@@ -561,6 +568,8 @@
 </section>
 
 <hr class="div">
+
+
 
 <section class="section" id="tendance">
   <div class="container">
@@ -641,15 +650,15 @@
             <td class="wk">S26 ★</td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Top sales S26 : 114">
-                114
+              <span class="prio-chip bad" data-tip="Top sales S26 : 116">
+                116
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Middle sales S26 : 111">
-                111
+              <span class="prio-chip bad" data-tip="Middle sales S26 : 113">
+                113
                 
               </span>
             </td>
@@ -663,9 +672,9 @@
             
             <td>
               <div class="prio-all">
-                <span class="prio-all__item" data-tip="1P S26 : 109">
+                <span class="prio-all__item" data-tip="1P S26 : 110">
                   <span class="prio-all__lbl">1P</span>
-                  <span class="pi-chip r">109</span>
+                  <span class="pi-chip r">110</span>
                 </span>
                 <span class="prio-all__item" data-tip="3P S26 : —">
                   <span class="prio-all__lbl">3P</span>
@@ -702,44 +711,44 @@
           </div>
         </div>
         <h3 data-i18n="rp.overview.chart1.title">Répartition moyenne</h3>
-        <div class="chart-sub"><span data-i18n="rp.overview.chart1.sub_prefix">Lower / Equal / Higher, moyenne sur</span> 8 <span data-i18n="rp.overview.chart1.sub_suffix">concurrents.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.overview.chart1.sub_prefix">Lower / Equal / Higher, moyenne sur</span> 9 <span data-i18n="rp.overview.chart1.sub_suffix">concurrents.</span></div>
         <div class="donut-wrap">
           <svg class="donut-svg" viewBox="0 0 120 120">
             <g transform="rotate(-90 60 60)">
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--good)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="83.51 230.65" stroke-dashoffset="-0.00"
-                      data-tip="27%"></circle>
+                      stroke-dasharray="74.09 240.07" stroke-dashoffset="-0.00"
+                      data-tip="24%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="20.68 293.48" stroke-dashoffset="-84.82"
+                      stroke-dasharray="20.68 293.48" stroke-dashoffset="-75.40"
                       data-tip="7%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="206.04 108.12" stroke-dashoffset="-106.81"
-                      data-tip="66%"></circle>
+                      stroke-dasharray="215.46 98.70" stroke-dashoffset="-97.39"
+                      data-tip="69%"></circle>
               
             </g>
             
             
-            <text x="97.5" y="26.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">27%</text>
+            <text x="94.2" y="23.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">24%</text>
             
             
             
-            <text x="107.0" y="76.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">7%</text>
+            <text x="109.4" y="67.8" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">7%</text>
             
             
             
-            <text x="16.2" y="84.1" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">66%</text>
+            <text x="18.6" y="88.1" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">69%</text>
             
             
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">66%</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">69%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 27%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 24%</div>
             <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 7%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 66%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 69%</div>
           </div>
         </div>
       </div>
@@ -761,39 +770,39 @@
         </div>
         <div class="rank-list">
           
-          <div class="rank-row" data-tip="Snowinn : PI 97">
+          <div class="rank-row" data-tip="Snowinn : PI 100">
             <span class="rank-badge rank-badge--1">1</span>
             <span class="rank-name">Snowinn</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:42%;background:var(--good);"></div>
+              <div class="rank-track__marker" style="left:50%;background:var(--blue);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip g">97</span></span>
+            <span class="rank-pi"><span class="pi-chip b">100</span></span>
           </div>
           
-          <div class="rank-row" data-tip="AllTricks : PI 101">
+          <div class="rank-row" data-tip="AllTricks : PI 104">
             <span class="rank-badge rank-badge--2">2</span>
             <span class="rank-name">AllTricks</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:52%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:60%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">101</span></span>
+            <span class="rank-pi"><span class="pi-chip r">104</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Hardloop : PI 106">
+          <div class="rank-row" data-tip="Hardloop : PI 108">
             <span class="rank-badge rank-badge--3">3</span>
             <span class="rank-name">Hardloop</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:65%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:70%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">106</span></span>
+            <span class="rank-pi"><span class="pi-chip r">108</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Trekkinn : PI 109">
+          <div class="rank-row" data-tip="Irun : PI 109">
             <span class="rank-badge rank-badge--n">4</span>
-            <span class="rank-name">Trekkinn</span>
+            <span class="rank-name">Irun</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
               <div class="rank-track__marker" style="left:72%;background:var(--bad);"></div>
@@ -801,44 +810,54 @@
             <span class="rank-pi"><span class="pi-chip r">109</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Snowleader : PI 112">
+          <div class="rank-row" data-tip="Trekkinn : PI 110">
             <span class="rank-badge rank-badge--n">5</span>
-            <span class="rank-name">Snowleader</span>
+            <span class="rank-name">Trekkinn</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:80%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:75%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">112</span></span>
+            <span class="rank-pi"><span class="pi-chip r">110</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Runnerinn : PI 112">
+          <div class="rank-row" data-tip="Runnerinn : PI 110">
             <span class="rank-badge rank-badge--n">6</span>
             <span class="rank-name">Runnerinn</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:80%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:75%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">112</span></span>
+            <span class="rank-pi"><span class="pi-chip r">110</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Ekosport : PI 117">
+          <div class="rank-row" data-tip="Snowleader : PI 113">
             <span class="rank-badge rank-badge--n">7</span>
+            <span class="rank-name">Snowleader</span>
+            <div class="rank-track">
+              <div class="rank-track__ref"></div>
+              <div class="rank-track__marker" style="left:82%;background:var(--bad);"></div>
+            </div>
+            <span class="rank-pi"><span class="pi-chip r">113</span></span>
+          </div>
+          
+          <div class="rank-row" data-tip="Ekosport : PI 119">
+            <span class="rank-badge rank-badge--n">8</span>
             <span class="rank-name">Ekosport</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:92%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:98%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">117</span></span>
+            <span class="rank-pi"><span class="pi-chip r">119</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Glisshop : PI 118">
-            <span class="rank-badge rank-badge--n">8</span>
+          <div class="rank-row" data-tip="Glisshop : PI 120">
+            <span class="rank-badge rank-badge--n">9</span>
             <span class="rank-name">Glisshop</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:95%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:100%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">118</span></span>
+            <span class="rank-pi"><span class="pi-chip r">120</span></span>
           </div>
           
         </div>
@@ -853,7 +872,7 @@
   <div class="container">
     <div class="section-header">
       <div>
-        <div class="section-title"><span data-i18n="rp.competitors.title_prefix">Face à</span> 8 <span data-i18n="rp.competitors.title_suffix">concurrents</span></div>
+        <div class="section-title"><span data-i18n="rp.competitors.title_prefix">Face à</span> 9 <span data-i18n="rp.competitors.title_suffix">concurrents</span></div>
         <div class="section-sub" data-i18n="rp.competitors.sub">Pour chaque enseigne : part des articles moins chers, alignés, plus chers — et son propre indice prix. Top 12 par volume matché.</div>
       </div>
     </div>
@@ -877,83 +896,93 @@
     <div class="cbar-list">
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Trekkinn</div><div class="cbar-meta">45 806 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Trekkinn</div><div class="cbar-meta">42 458 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Trekkinn — moins cher : 29%" style="width:29%;background:var(--good);"><span class="cbar-seg__pct">29%</span></div>
           <div data-tip="Trekkinn — aligné : 3%" style="width:3%;background:var(--blue);"></div>
           <div data-tip="Trekkinn — plus cher : 68%" style="width:68%;background:var(--bad);"><span class="cbar-seg__pct">68%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">109</div>
+        <div class="cbar-pi" style="color:var(--bad);">110</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Snowleader</div><div class="cbar-meta">23 099 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Snowleader</div><div class="cbar-meta">17 019 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Snowleader — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="Snowleader — aligné : 7%" style="width:7%;background:var(--blue);"></div>
-          <div data-tip="Snowleader — plus cher : 76%" style="width:76%;background:var(--bad);"><span class="cbar-seg__pct">76%</span></div>
+          <div data-tip="Snowleader — moins cher : 16%" style="width:16%;background:var(--good);"><span class="cbar-seg__pct">16%</span></div>
+          <div data-tip="Snowleader — aligné : 6%" style="width:6%;background:var(--blue);"></div>
+          <div data-tip="Snowleader — plus cher : 78%" style="width:78%;background:var(--bad);"><span class="cbar-seg__pct">78%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">112</div>
+        <div class="cbar-pi" style="color:var(--bad);">113</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">AllTricks</div><div class="cbar-meta">14 987 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">AllTricks</div><div class="cbar-meta">12 877 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="AllTricks — moins cher : 45%" style="width:45%;background:var(--good);"><span class="cbar-seg__pct">45%</span></div>
-          <div data-tip="AllTricks — aligné : 9%" style="width:9%;background:var(--blue);"><span class="cbar-seg__pct">9%</span></div>
-          <div data-tip="AllTricks — plus cher : 46%" style="width:46%;background:var(--bad);"><span class="cbar-seg__pct">46%</span></div>
+          <div data-tip="AllTricks — moins cher : 40%" style="width:40%;background:var(--good);"><span class="cbar-seg__pct">40%</span></div>
+          <div data-tip="AllTricks — aligné : 8%" style="width:8%;background:var(--blue);"></div>
+          <div data-tip="AllTricks — plus cher : 52%" style="width:52%;background:var(--bad);"><span class="cbar-seg__pct">52%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">101</div>
+        <div class="cbar-pi" style="color:var(--bad);">104</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Runnerinn</div><div class="cbar-meta">10 341 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Ekosport</div><div class="cbar-meta">9 503 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Runnerinn — moins cher : 20%" style="width:20%;background:var(--good);"><span class="cbar-seg__pct">20%</span></div>
-          <div data-tip="Runnerinn — aligné : 10%" style="width:10%;background:var(--blue);"><span class="cbar-seg__pct">10%</span></div>
-          <div data-tip="Runnerinn — plus cher : 70%" style="width:70%;background:var(--bad);"><span class="cbar-seg__pct">70%</span></div>
+          <div data-tip="Ekosport — moins cher : 8%" style="width:8%;background:var(--good);"></div>
+          <div data-tip="Ekosport — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="Ekosport — plus cher : 87%" style="width:87%;background:var(--bad);"><span class="cbar-seg__pct">87%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">112</div>
+        <div class="cbar-pi" style="color:var(--bad);">119</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Ekosport</div><div class="cbar-meta">8 179 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Snowinn</div><div class="cbar-meta">5 636 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Ekosport — moins cher : 13%" style="width:13%;background:var(--good);"><span class="cbar-seg__pct">13%</span></div>
-          <div data-tip="Ekosport — aligné : 6%" style="width:6%;background:var(--blue);"></div>
-          <div data-tip="Ekosport — plus cher : 81%" style="width:81%;background:var(--bad);"><span class="cbar-seg__pct">81%</span></div>
+          <div data-tip="Snowinn — moins cher : 45%" style="width:45%;background:var(--good);"><span class="cbar-seg__pct">45%</span></div>
+          <div data-tip="Snowinn — aligné : 2%" style="width:2%;background:var(--blue);"></div>
+          <div data-tip="Snowinn — plus cher : 53%" style="width:53%;background:var(--bad);"><span class="cbar-seg__pct">53%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">117</div>
+        <div class="cbar-pi" style="color:var(--blue);">100</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Hardloop</div><div class="cbar-meta">5 931 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Hardloop</div><div class="cbar-meta">4 234 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Hardloop — moins cher : 29%" style="width:29%;background:var(--good);"><span class="cbar-seg__pct">29%</span></div>
-          <div data-tip="Hardloop — aligné : 15%" style="width:15%;background:var(--blue);"><span class="cbar-seg__pct">15%</span></div>
-          <div data-tip="Hardloop — plus cher : 56%" style="width:56%;background:var(--bad);"><span class="cbar-seg__pct">56%</span></div>
+          <div data-tip="Hardloop — moins cher : 23%" style="width:23%;background:var(--good);"><span class="cbar-seg__pct">23%</span></div>
+          <div data-tip="Hardloop — aligné : 13%" style="width:13%;background:var(--blue);"><span class="cbar-seg__pct">13%</span></div>
+          <div data-tip="Hardloop — plus cher : 64%" style="width:64%;background:var(--bad);"><span class="cbar-seg__pct">64%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">106</div>
+        <div class="cbar-pi" style="color:var(--bad);">108</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Snowinn</div><div class="cbar-meta">4 960 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Runnerinn</div><div class="cbar-meta">3 659 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Snowinn — moins cher : 51%" style="width:51%;background:var(--good);"><span class="cbar-seg__pct">51%</span></div>
-          <div data-tip="Snowinn — aligné : 1%" style="width:1%;background:var(--blue);"></div>
-          <div data-tip="Snowinn — plus cher : 48%" style="width:48%;background:var(--bad);"><span class="cbar-seg__pct">48%</span></div>
+          <div data-tip="Runnerinn — moins cher : 22%" style="width:22%;background:var(--good);"><span class="cbar-seg__pct">22%</span></div>
+          <div data-tip="Runnerinn — aligné : 16%" style="width:16%;background:var(--blue);"><span class="cbar-seg__pct">16%</span></div>
+          <div data-tip="Runnerinn — plus cher : 62%" style="width:62%;background:var(--bad);"><span class="cbar-seg__pct">62%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">97</div>
+        <div class="cbar-pi" style="color:var(--bad);">110</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Glisshop</div><div class="cbar-meta">3 999 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Glisshop</div><div class="cbar-meta">3 317 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Glisshop — moins cher : 11%" style="width:11%;background:var(--good);"><span class="cbar-seg__pct">11%</span></div>
-          <div data-tip="Glisshop — aligné : 5%" style="width:5%;background:var(--blue);"></div>
-          <div data-tip="Glisshop — plus cher : 84%" style="width:84%;background:var(--bad);"><span class="cbar-seg__pct">84%</span></div>
+          <div data-tip="Glisshop — aligné : 4%" style="width:4%;background:var(--blue);"></div>
+          <div data-tip="Glisshop — plus cher : 85%" style="width:85%;background:var(--bad);"><span class="cbar-seg__pct">85%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">118</div>
+        <div class="cbar-pi" style="color:var(--bad);">120</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Irun</div><div class="cbar-meta">2 765 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div class="cbar-track">
+          <div data-tip="Irun — moins cher : 24%" style="width:24%;background:var(--good);"><span class="cbar-seg__pct">24%</span></div>
+          <div data-tip="Irun — aligné : 8%" style="width:8%;background:var(--blue);"></div>
+          <div data-tip="Irun — plus cher : 68%" style="width:68%;background:var(--bad);"><span class="cbar-seg__pct">68%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">109</div>
       </div>
       
     </div>
@@ -991,90 +1020,101 @@
           
           <tr>
             <td>Trekkinn</td>
-            <td class="num">63 785</td>
+            <td class="num">62 743</td>
             <td class="num"><span class="pi-chip r">110</span></td>
-            <td class="num">45 806</td>
-            <td class="num"><span class="pi-chip r">109</span></td>
-            <td class="num">32 259</td>
-            <td class="num">1 363</td>
-            <td class="num">13 967</td>
+            <td class="num">42 458</td>
+            <td class="num"><span class="pi-chip r">110</span></td>
+            <td class="num">29 072</td>
+            <td class="num">1 170</td>
+            <td class="num">12 218</td>
           </tr>
           
           <tr>
             <td>Snowleader</td>
-            <td class="num">27 748</td>
+            <td class="num">28 577</td>
             <td class="num"><span class="pi-chip r">112</span></td>
-            <td class="num">23 099</td>
-            <td class="num"><span class="pi-chip r">112</span></td>
-            <td class="num">18 314</td>
-            <td class="num">1 706</td>
-            <td class="num">4 033</td>
+            <td class="num">17 019</td>
+            <td class="num"><span class="pi-chip r">113</span></td>
+            <td class="num">13 206</td>
+            <td class="num">1 014</td>
+            <td class="num">2 798</td>
           </tr>
           
           <tr>
             <td>AllTricks</td>
-            <td class="num">28 613</td>
-            <td class="num"><span class="pi-chip g">97</span></td>
-            <td class="num">14 987</td>
+            <td class="num">25 377</td>
             <td class="num"><span class="pi-chip r">101</span></td>
-            <td class="num">6 887</td>
-            <td class="num">1 323</td>
-            <td class="num">6 843</td>
-          </tr>
-          
-          <tr>
-            <td>Runnerinn</td>
-            <td class="num">13 713</td>
-            <td class="num"><span class="pi-chip r">111</span></td>
-            <td class="num">10 341</td>
-            <td class="num"><span class="pi-chip r">112</span></td>
-            <td class="num">7 272</td>
-            <td class="num">1 052</td>
-            <td class="num">2 026</td>
+            <td class="num">12 877</td>
+            <td class="num"><span class="pi-chip r">104</span></td>
+            <td class="num">6 778</td>
+            <td class="num">990</td>
+            <td class="num">5 109</td>
           </tr>
           
           <tr>
             <td>Ekosport</td>
-            <td class="num">17 184</td>
+            <td class="num">17 132</td>
             <td class="num"><span class="pi-chip r">115</span></td>
-            <td class="num">8 179</td>
-            <td class="num"><span class="pi-chip r">117</span></td>
-            <td class="num">6 994</td>
-            <td class="num">557</td>
-            <td class="num">1 120</td>
-          </tr>
-          
-          <tr>
-            <td>Hardloop</td>
-            <td class="num">16 744</td>
-            <td class="num"><span class="pi-chip r">105</span></td>
-            <td class="num">5 931</td>
-            <td class="num"><span class="pi-chip r">106</span></td>
-            <td class="num">4 131</td>
-            <td class="num">1 123</td>
-            <td class="num">2 107</td>
+            <td class="num">9 503</td>
+            <td class="num"><span class="pi-chip r">119</span></td>
+            <td class="num">8 286</td>
+            <td class="num">477</td>
+            <td class="num">742</td>
           </tr>
           
           <tr>
             <td>Snowinn</td>
-            <td class="num">7 014</td>
-            <td class="num"><span class="pi-chip g">99</span></td>
-            <td class="num">4 960</td>
-            <td class="num"><span class="pi-chip g">97</span></td>
-            <td class="num">2 394</td>
-            <td class="num">70</td>
-            <td class="num">2 512</td>
+            <td class="num">6 934</td>
+            <td class="num"><span class="pi-chip b">100</span></td>
+            <td class="num">5 636</td>
+            <td class="num"><span class="pi-chip b">100</span></td>
+            <td class="num">2 952</td>
+            <td class="num">130</td>
+            <td class="num">2 556</td>
+          </tr>
+          
+          <tr>
+            <td>Hardloop</td>
+            <td class="num">16 476</td>
+            <td class="num"><span class="pi-chip r">105</span></td>
+            <td class="num">4 234</td>
+            <td class="num"><span class="pi-chip r">108</span></td>
+            <td class="num">2 711</td>
+            <td class="num">535</td>
+            <td class="num">988</td>
+          </tr>
+          
+          <tr>
+            <td>Runnerinn</td>
+            <td class="num">13 419</td>
+            <td class="num"><span class="pi-chip r">111</span></td>
+            <td class="num">3 659</td>
+            <td class="num"><span class="pi-chip r">110</span></td>
+            <td class="num">2 286</td>
+            <td class="num">575</td>
+            <td class="num">800</td>
           </tr>
           
           <tr>
             <td>Glisshop</td>
-            <td class="num">6 090</td>
+            <td class="num">6 059</td>
             <td class="num"><span class="pi-chip r">117</span></td>
-            <td class="num">3 999</td>
-            <td class="num"><span class="pi-chip r">118</span></td>
-            <td class="num">3 386</td>
-            <td class="num">185</td>
-            <td class="num">454</td>
+            <td class="num">3 317</td>
+            <td class="num"><span class="pi-chip r">120</span></td>
+            <td class="num">2 813</td>
+            <td class="num">140</td>
+            <td class="num">365</td>
+          </tr>
+          
+          <tr>
+            <td>Irun</td>
+            <td class="num">12 488</td>
+            <td class="num"><span class="pi-chip r">105</span></td>
+            <td class="num">2 765</td>
+            <td class="num"><span class="pi-chip r">109</span></td>
+            <td class="num">1 897</td>
+            <td class="num">214</td>
+            <td class="num">654</td>
           </tr>
           
         </tbody>
@@ -1113,12 +1153,12 @@
           
           <tr style="background:rgba(96,239,190,0.08);">
             <td><strong>alpiniste</strong> <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span></td>
-            <td class="num">485 381</td>
-            <td class="num">101 683</td>
-            <td class="num"><span class="pi-chip r">109</span></td>
-            <td class="num">81 637</td>
-            <td class="num">7 379</td>
-            <td class="num">33 062</td>
+            <td class="num">487 969</td>
+            <td class="num">100 696</td>
+            <td class="num"><span class="pi-chip r">110</span></td>
+            <td class="num">70 001</td>
+            <td class="num">5 245</td>
+            <td class="num">26 230</td>
           </tr>
           
         </tbody>
@@ -1159,11 +1199,11 @@
       <div class="cbar-row cbar-row--you">
         <div><div class="cbar-name">alpiniste <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span></div></div>
         <div class="cbar-track">
-          <div data-tip="alpiniste — moins cher : 27%" style="width:27%;background:var(--good);"><span class="cbar-seg__pct">27%</span></div>
-          <div data-tip="alpiniste — aligné : 6%" style="width:6%;background:var(--blue);"></div>
-          <div data-tip="alpiniste — plus cher : 67%" style="width:67%;background:var(--bad);"><span class="cbar-seg__pct">67%</span></div>
+          <div data-tip="alpiniste — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="alpiniste — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="alpiniste — plus cher : 69%" style="width:69%;background:var(--bad);"><span class="cbar-seg__pct">69%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">109</div>
+        <div class="cbar-pi" style="color:var(--bad);">110</div>
       </div>
       
     </div>
@@ -1201,141 +1241,141 @@
       <div class="cbar-row">
         <div><div class="cbar-name">divers</div></div>
         <div class="cbar-track">
-          <div data-tip="divers — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
-          <div data-tip="divers — aligné : 6%" style="width:6%;background:var(--blue);"></div>
-          <div data-tip="divers — plus cher : 63%" style="width:63%;background:var(--bad);"><span class="cbar-seg__pct">63%</span></div>
+          <div data-tip="divers — moins cher : 30%" style="width:30%;background:var(--good);"><span class="cbar-seg__pct">30%</span></div>
+          <div data-tip="divers — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="divers — plus cher : 65%" style="width:65%;background:var(--bad);"><span class="cbar-seg__pct">65%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">74 567</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">108</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">73 491</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">109</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">chaussures de randonnee</div></div>
         <div class="cbar-track">
-          <div data-tip="chaussures de randonnee — moins cher : 7%" style="width:7%;background:var(--good);"></div>
-          <div data-tip="chaussures de randonnee — aligné : 2%" style="width:2%;background:var(--blue);"></div>
-          <div data-tip="chaussures de randonnee — plus cher : 91%" style="width:91%;background:var(--bad);"><span class="cbar-seg__pct">91%</span></div>
+          <div data-tip="chaussures de randonnee — moins cher : 5%" style="width:5%;background:var(--good);"></div>
+          <div data-tip="chaussures de randonnee — aligné : 3%" style="width:3%;background:var(--blue);"></div>
+          <div data-tip="chaussures de randonnee — plus cher : 92%" style="width:92%;background:var(--bad);"><span class="cbar-seg__pct">92%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">3 475</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">114</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">3 500</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">116</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">t-shirt</div></div>
         <div class="cbar-track">
-          <div data-tip="t-shirt — moins cher : 9%" style="width:9%;background:var(--good);"><span class="cbar-seg__pct">9%</span></div>
-          <div data-tip="t-shirt — aligné : 9%" style="width:9%;background:var(--blue);"><span class="cbar-seg__pct">9%</span></div>
-          <div data-tip="t-shirt — plus cher : 82%" style="width:82%;background:var(--bad);"><span class="cbar-seg__pct">82%</span></div>
+          <div data-tip="t-shirt — moins cher : 8%" style="width:8%;background:var(--good);"></div>
+          <div data-tip="t-shirt — aligné : 6%" style="width:6%;background:var(--blue);"></div>
+          <div data-tip="t-shirt — plus cher : 86%" style="width:86%;background:var(--bad);"><span class="cbar-seg__pct">86%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">3 210</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">115</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">3 215</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">118</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">chaussures de trail</div></div>
         <div class="cbar-track">
-          <div data-tip="chaussures de trail — moins cher : 4%" style="width:4%;background:var(--good);"></div>
-          <div data-tip="chaussures de trail — aligné : 10%" style="width:10%;background:var(--blue);"><span class="cbar-seg__pct">10%</span></div>
-          <div data-tip="chaussures de trail — plus cher : 86%" style="width:86%;background:var(--bad);"><span class="cbar-seg__pct">86%</span></div>
+          <div data-tip="chaussures de trail — moins cher : 3%" style="width:3%;background:var(--good);"></div>
+          <div data-tip="chaussures de trail — aligné : 8%" style="width:8%;background:var(--blue);"></div>
+          <div data-tip="chaussures de trail — plus cher : 89%" style="width:89%;background:var(--bad);"><span class="cbar-seg__pct">89%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">2 527</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">115</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">2 552</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">117</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">veste</div></div>
         <div class="cbar-track">
           <div data-tip="veste — moins cher : 30%" style="width:30%;background:var(--good);"><span class="cbar-seg__pct">30%</span></div>
-          <div data-tip="veste — aligné : 14%" style="width:14%;background:var(--blue);"><span class="cbar-seg__pct">14%</span></div>
-          <div data-tip="veste — plus cher : 56%" style="width:56%;background:var(--bad);"><span class="cbar-seg__pct">56%</span></div>
+          <div data-tip="veste — aligné : 10%" style="width:10%;background:var(--blue);"><span class="cbar-seg__pct">10%</span></div>
+          <div data-tip="veste — plus cher : 60%" style="width:60%;background:var(--bad);"><span class="cbar-seg__pct">60%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">1 773</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">107</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">1 753</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">108</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">sac a dos</div></div>
         <div class="cbar-track">
-          <div data-tip="sac a dos — moins cher : 9%" style="width:9%;background:var(--good);"><span class="cbar-seg__pct">9%</span></div>
-          <div data-tip="sac a dos — aligné : 5%" style="width:5%;background:var(--blue);"></div>
-          <div data-tip="sac a dos — plus cher : 86%" style="width:86%;background:var(--bad);"><span class="cbar-seg__pct">86%</span></div>
+          <div data-tip="sac a dos — moins cher : 7%" style="width:7%;background:var(--good);"></div>
+          <div data-tip="sac a dos — aligné : 4%" style="width:4%;background:var(--blue);"></div>
+          <div data-tip="sac a dos — plus cher : 89%" style="width:89%;background:var(--bad);"><span class="cbar-seg__pct">89%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">1 656</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">115</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">1 629</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">116</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">pantalon</div></div>
         <div class="cbar-track">
-          <div data-tip="pantalon — moins cher : 22%" style="width:22%;background:var(--good);"><span class="cbar-seg__pct">22%</span></div>
+          <div data-tip="pantalon — moins cher : 20%" style="width:20%;background:var(--good);"><span class="cbar-seg__pct">20%</span></div>
           <div data-tip="pantalon — aligné : 8%" style="width:8%;background:var(--blue);"></div>
-          <div data-tip="pantalon — plus cher : 70%" style="width:70%;background:var(--bad);"><span class="cbar-seg__pct">70%</span></div>
+          <div data-tip="pantalon — plus cher : 72%" style="width:72%;background:var(--bad);"><span class="cbar-seg__pct">72%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">1 459</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">112</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">1 464</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">113</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">short</div></div>
         <div class="cbar-track">
-          <div data-tip="short — moins cher : 5%" style="width:5%;background:var(--good);"></div>
+          <div data-tip="short — moins cher : 3%" style="width:3%;background:var(--good);"></div>
           <div data-tip="short — aligné : 3%" style="width:3%;background:var(--blue);"></div>
-          <div data-tip="short — plus cher : 92%" style="width:92%;background:var(--bad);"><span class="cbar-seg__pct">92%</span></div>
+          <div data-tip="short — plus cher : 94%" style="width:94%;background:var(--bad);"><span class="cbar-seg__pct">94%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">1 393</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">123</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">1 377</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">126</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">chaussons-escalade</div></div>
         <div class="cbar-track">
-          <div data-tip="chaussons-escalade — moins cher : 63%" style="width:63%;background:var(--good);"><span class="cbar-seg__pct">63%</span></div>
-          <div data-tip="chaussons-escalade — aligné : 2%" style="width:2%;background:var(--blue);"></div>
-          <div data-tip="chaussons-escalade — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
+          <div data-tip="chaussons-escalade — moins cher : 43%" style="width:43%;background:var(--good);"><span class="cbar-seg__pct">43%</span></div>
+          <div data-tip="chaussons-escalade — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="chaussons-escalade — plus cher : 52%" style="width:52%;background:var(--bad);"><span class="cbar-seg__pct">52%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">961</span> <span style="color:var(--muted);">·</span> <span style="color:var(--good);">97</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">971</span> <span style="color:var(--muted);">·</span> <span style="color:var(--blue);">100</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">polaire</div></div>
         <div class="cbar-track">
-          <div data-tip="polaire — moins cher : 12%" style="width:12%;background:var(--good);"><span class="cbar-seg__pct">12%</span></div>
-          <div data-tip="polaire — aligné : 11%" style="width:11%;background:var(--blue);"><span class="cbar-seg__pct">11%</span></div>
-          <div data-tip="polaire — plus cher : 77%" style="width:77%;background:var(--bad);"><span class="cbar-seg__pct">77%</span></div>
+          <div data-tip="polaire — moins cher : 9%" style="width:9%;background:var(--good);"><span class="cbar-seg__pct">9%</span></div>
+          <div data-tip="polaire — aligné : 10%" style="width:10%;background:var(--blue);"><span class="cbar-seg__pct">10%</span></div>
+          <div data-tip="polaire — plus cher : 81%" style="width:81%;background:var(--bad);"><span class="cbar-seg__pct">81%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">926</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">117</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">927</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">119</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">chaussettes</div></div>
         <div class="cbar-track">
           <div data-tip="chaussettes — moins cher : 6%" style="width:6%;background:var(--good);"></div>
-          <div data-tip="chaussettes — aligné : 6%" style="width:6%;background:var(--blue);"></div>
-          <div data-tip="chaussettes — plus cher : 88%" style="width:88%;background:var(--bad);"><span class="cbar-seg__pct">88%</span></div>
+          <div data-tip="chaussettes — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="chaussettes — plus cher : 89%" style="width:89%;background:var(--bad);"><span class="cbar-seg__pct">89%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">851</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">111</span></div>
-      </div>
-      
-      <div class="cbar-row">
-        <div><div class="cbar-name">chaussures / sneakers</div></div>
-        <div class="cbar-track">
-          <div data-tip="chaussures / sneakers — moins cher : 13%" style="width:13%;background:var(--good);"><span class="cbar-seg__pct">13%</span></div>
-          <div data-tip="chaussures / sneakers — aligné : 3%" style="width:3%;background:var(--blue);"></div>
-          <div data-tip="chaussures / sneakers — plus cher : 84%" style="width:84%;background:var(--bad);"><span class="cbar-seg__pct">84%</span></div>
-        </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">618</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">112</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">922</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">113</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">chaussures de running</div></div>
         <div class="cbar-track">
-          <div data-tip="chaussures de running — moins cher : 10%" style="width:10%;background:var(--good);"><span class="cbar-seg__pct">10%</span></div>
-          <div data-tip="chaussures de running — aligné : 1%" style="width:1%;background:var(--blue);"></div>
-          <div data-tip="chaussures de running — plus cher : 89%" style="width:89%;background:var(--bad);"><span class="cbar-seg__pct">89%</span></div>
+          <div data-tip="chaussures de running — moins cher : 7%" style="width:7%;background:var(--good);"></div>
+          <div data-tip="chaussures de running — aligné : 0%" style="width:0%;background:var(--blue);"></div>
+          <div data-tip="chaussures de running — plus cher : 93%" style="width:93%;background:var(--bad);"><span class="cbar-seg__pct">93%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">604</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">107</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">622</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">109</span></div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">lunettes de soleil</div></div>
+        <div><div class="cbar-name">chaussures / sneakers</div></div>
         <div class="cbar-track">
-          <div data-tip="lunettes de soleil — moins cher : 4%" style="width:4%;background:var(--good);"></div>
-          <div data-tip="lunettes de soleil — aligné : 2%" style="width:2%;background:var(--blue);"></div>
-          <div data-tip="lunettes de soleil — plus cher : 94%" style="width:94%;background:var(--bad);"><span class="cbar-seg__pct">94%</span></div>
+          <div data-tip="chaussures / sneakers — moins cher : 14%" style="width:14%;background:var(--good);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="chaussures / sneakers — aligné : 1%" style="width:1%;background:var(--blue);"></div>
+          <div data-tip="chaussures / sneakers — plus cher : 85%" style="width:85%;background:var(--bad);"><span class="cbar-seg__pct">85%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">497</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">126</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">619</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">113</span></div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">sandales</div></div>
+        <div class="cbar-track">
+          <div data-tip="sandales — moins cher : 3%" style="width:3%;background:var(--good);"></div>
+          <div data-tip="sandales — aligné : 1%" style="width:1%;background:var(--blue);"></div>
+          <div data-tip="sandales — plus cher : 96%" style="width:96%;background:var(--bad);"><span class="cbar-seg__pct">96%</span></div>
+        </div>
+        <div class="cbar-pi"><span style="color:var(--muted);">500</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">122</span></div>
       </div>
       
     </div>
@@ -1365,7 +1405,7 @@
           
           <div class="vfig"><div class="n good">0</div><div class="l">vendeurs plus compétitifs que vous</div></div>
           
-          <div class="vfig"><div class="n good">101 683</div><div class="l">articles suivis en continu</div></div>
+          <div class="vfig"><div class="n good">100 696</div><div class="l">articles suivis en continu</div></div>
           
         </div>
         <div class="cta-row">
@@ -1375,6 +1415,8 @@
     </div>
   </div>
 </section>
+
+
 
 </div>
 

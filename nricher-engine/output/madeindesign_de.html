@@ -199,6 +199,14 @@
   .kpi-report .cta-row .btn-primary{background:none;color:var(--mint);border:2px solid var(--mint);}
   .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
+  .kpi-report .gated-wrap{position:relative;}
+  .kpi-report .gated-zone{position:relative;pointer-events:none;user-select:none;}
+  .kpi-report .gated-zone::after{content:"";position:absolute;inset:0;-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);}
+  .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
+  .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
+  .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
+  .kpi-report .gated-lock p{color:var(--muted);font-size:0.95rem;line-height:1.6;max-width:360px;margin-inline:auto;margin-bottom:24px;}
+
   @media (max-width:880px){
     .kpi-report .kpi-grid{grid-template-columns:1fr;}
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
@@ -342,18 +350,18 @@
       
     </h1>
     <p class="lede">
-      15 520 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      15 510 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
       2 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">15 520 <span class="down">▼</span></div>
+        <div class="n">15 510 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
-        <div class="delta-sub">-2 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">-3 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n">4 970</div>
+        <div class="n">4 948</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
@@ -362,7 +370,7 @@
         <div class="delta-sub">-1 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-25T17:35:30.795Z">25 juin à 17h35</div>
+        <div class="n" data-generated-at="2026-06-26T08:58:25.302Z">26 juin à 08h58</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -562,6 +570,8 @@
 
 <hr class="div">
 
+
+
 <section class="section" id="tendance">
   <div class="container">
     <div class="section-header">
@@ -641,8 +651,8 @@
             <td class="wk">S26 ★</td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Top sales S26 : 103">
-                103
+              <span class="prio-chip bad" data-tip="Top sales S26 : 104">
+                104
                 
               </span>
             </td>
@@ -708,38 +718,38 @@
             <g transform="rotate(-90 60 60)">
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--good)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="45.81 268.34" stroke-dashoffset="-0.00"
-                      data-tip="15%"></circle>
+                      stroke-dasharray="42.67 271.49" stroke-dashoffset="-0.00"
+                      data-tip="14%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="136.92 177.24" stroke-dashoffset="-47.12"
+                      stroke-dasharray="136.92 177.24" stroke-dashoffset="-43.98"
                       data-tip="44%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="127.50 186.66" stroke-dashoffset="-185.35"
-                      data-tip="41%"></circle>
+                      stroke-dasharray="130.64 183.52" stroke-dashoffset="-182.21"
+                      data-tip="42%"></circle>
               
             </g>
             
             
-            <text x="82.7" y="15.4" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">15%</text>
+            <text x="81.3" y="14.8" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">14%</text>
             
             
             
-            <text x="96.4" y="94.2" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">44%</text>
+            <text x="98.5" y="91.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">44%</text>
             
             
             
-            <text x="12.0" y="46.1" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">41%</text>
+            <text x="11.6" y="47.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">42%</text>
             
             
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">41%</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">42%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 15%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 14%</div>
             <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 44%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 41%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 42%</div>
           </div>
         </div>
       </div>
@@ -771,14 +781,14 @@
             <span class="rank-pi"><span class="pi-chip r">104</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Designbestseller DE : PI 104">
+          <div class="rank-row" data-tip="Designbestseller DE : PI 105">
             <span class="rank-badge rank-badge--2">2</span>
             <span class="rank-name">Designbestseller DE</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:60%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:62%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">104</span></span>
+            <span class="rank-pi"><span class="pi-chip r">105</span></span>
           </div>
           
         </div>
@@ -817,7 +827,7 @@
     <div class="cbar-list">
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Connox DE</div><div class="cbar-meta">4 880 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Connox DE</div><div class="cbar-meta">4 859 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Connox DE — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
           <div data-tip="Connox DE — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
@@ -827,13 +837,13 @@
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Designbestseller DE</div><div class="cbar-meta">90 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Designbestseller DE</div><div class="cbar-meta">89 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Designbestseller DE — moins cher : 13%" style="width:13%;background:var(--good);"><span class="cbar-seg__pct">13%</span></div>
-          <div data-tip="Designbestseller DE — aligné : 47%" style="width:47%;background:var(--blue);"><span class="cbar-seg__pct">47%</span></div>
-          <div data-tip="Designbestseller DE — plus cher : 40%" style="width:40%;background:var(--bad);"><span class="cbar-seg__pct">40%</span></div>
+          <div data-tip="Designbestseller DE — moins cher : 12%" style="width:12%;background:var(--good);"><span class="cbar-seg__pct">12%</span></div>
+          <div data-tip="Designbestseller DE — aligné : 45%" style="width:45%;background:var(--blue);"><span class="cbar-seg__pct">45%</span></div>
+          <div data-tip="Designbestseller DE — plus cher : 43%" style="width:43%;background:var(--bad);"><span class="cbar-seg__pct">43%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">104</div>
+        <div class="cbar-pi" style="color:var(--bad);">105</div>
       </div>
       
     </div>
@@ -871,24 +881,24 @@
           
           <tr>
             <td>Connox DE</td>
-            <td class="num">4 910</td>
+            <td class="num">4 885</td>
             <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">4 880</td>
+            <td class="num">4 859</td>
             <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">1 985</td>
-            <td class="num">2 036</td>
-            <td class="num">859</td>
+            <td class="num">1 978</td>
+            <td class="num">2 034</td>
+            <td class="num">847</td>
           </tr>
           
           <tr>
             <td>Designbestseller DE</td>
-            <td class="num">175</td>
+            <td class="num">179</td>
             <td class="num"><span class="pi-chip r">102</span></td>
-            <td class="num">90</td>
-            <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">36</td>
-            <td class="num">42</td>
-            <td class="num">12</td>
+            <td class="num">89</td>
+            <td class="num"><span class="pi-chip r">105</span></td>
+            <td class="num">38</td>
+            <td class="num">40</td>
+            <td class="num">11</td>
           </tr>
           
         </tbody>
@@ -927,12 +937,12 @@
           
           <tr >
             <td>madeindesignde</td>
-            <td class="num">15 520</td>
-            <td class="num">4 970</td>
+            <td class="num">15 510</td>
+            <td class="num">4 948</td>
             <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">2 021</td>
-            <td class="num">2 078</td>
-            <td class="num">871</td>
+            <td class="num">2 016</td>
+            <td class="num">2 074</td>
+            <td class="num">858</td>
           </tr>
           
         </tbody>
@@ -1019,7 +1029,7 @@
           <div data-tip="divers — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
           <div data-tip="divers — plus cher : 41%" style="width:41%;background:var(--bad);"><span class="cbar-seg__pct">41%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">4 970</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">104</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">4 948</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">104</span></div>
       </div>
       
     </div>
@@ -1049,7 +1059,7 @@
           
           <div class="vfig"><div class="n good">0</div><div class="l">vendeurs plus compétitifs que vous</div></div>
           
-          <div class="vfig"><div class="n good">4 970</div><div class="l">articles suivis en continu</div></div>
+          <div class="vfig"><div class="n good">4 948</div><div class="l">articles suivis en continu</div></div>
           
         </div>
         <div class="cta-row">
@@ -1059,6 +1069,8 @@
     </div>
   </div>
 </section>
+
+
 
 </div>
 
