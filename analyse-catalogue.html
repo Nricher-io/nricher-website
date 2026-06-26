@@ -43,7 +43,7 @@
 .cat-report__badge .dot{width:6px;height:6px;border-radius:50%;background:#f0883a;flex-shrink:0;}
 .cat-report__count{font-family:var(--font-display);font-weight:700;font-size:1.35rem;color:var(--text);margin-bottom:28px;}
 .cat-report__count span{font-family:var(--font-body);font-weight:500;font-size:0.85rem;color:var(--muted);margin-left:8px;}
-.cat-report__grid{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:start;}
+.cat-report__grid{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:start;transition:opacity .13s ease;}
 .cat-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;}
 .cat-donut-svg{width:190px;height:190px;}
 .cat-donut-legend{display:flex;flex-direction:column;gap:9px;width:100%;}
@@ -58,9 +58,20 @@
 .cat-rank-bar{position:absolute;inset:0;height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-size:0.74rem;font-weight:700;white-space:nowrap;}
 .cat-rank-pct{font-size:0.82rem;font-weight:700;color:var(--blue);text-align:center;background:rgba(46,88,202,0.08);border-radius:var(--r-pill);padding:6px 0;}
 .cat-report__note{margin-top:30px;font-size:0.78rem;color:var(--muted);font-style:italic;}
+.cat-report__packbar{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:18px;}
+.cat-pack-arrow{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--card);display:flex;align-items:center;justify-content:center;font-size:1.25rem;line-height:1;color:var(--text-2);cursor:pointer;transition:border-color .2s ease,color .2s ease,background .2s ease,transform .15s ease;flex-shrink:0;}
+.cat-pack-arrow:hover{border-color:var(--mint);color:var(--blue);background:rgba(96,239,190,0.08);transform:translateY(-1px);}
+.cat-pack-arrow:disabled{opacity:0.25;cursor:default;pointer-events:none;transform:none;}
+.cat-report__packtitle{font-family:var(--font-display);font-weight:800;font-size:1.2rem;letter-spacing:0.01em;color:#1fae7a;text-transform:uppercase;text-align:center;min-width:260px;}
+.cat-pack-dots{display:flex;justify-content:center;gap:7px;margin:22px 0 4px;}
+.cat-pack-dot{width:7px;height:7px;border-radius:50%;border:none;background:var(--border);cursor:pointer;padding:0;transition:background .2s ease,transform .2s ease;}
+.cat-pack-dot.is-active{background:#1fae7a;transform:scale(1.35);}
+.cat-report__swipe-area{touch-action:pan-y;user-select:none;}
+.cat-report__swipe-area.is-dragging .cat-report__grid{transition:none;}
 @media (max-width:680px){
   .cat-report__grid{grid-template-columns:1fr;}
   .cat-rank-row{grid-template-columns:84px 1fr 46px;gap:8px;}
+  .cat-report__packtitle{font-size:1rem;min-width:160px;}
 }
 </style>
   <script>
@@ -183,8 +194,15 @@
     <p class="an-preview__sub" id="previewSub" data-i18n="an.catalogue.preview.sub">Comparatif du nombre de références catalogue entre les enseignes de cette catégorie.</p>
 
     <div class="cat-report">
+      <div class="cat-report__packbar">
+        <button class="cat-pack-arrow" id="packPrev" type="button" aria-label="Pack précédent">‹</button>
+        <div class="cat-report__packtitle" id="catPackTitle"></div>
+        <button class="cat-pack-arrow" id="packNext" type="button" aria-label="Pack suivant">›</button>
+      </div>
+      <div class="cat-pack-dots" id="catPackDots"></div>
       <span class="cat-report__badge"><span class="dot"></span><span data-i18n="an.catalogue.report.demo">Exemple — données fictives</span></span>
       <div class="cat-report__count" id="catReportCount"></div>
+      <div class="cat-report__swipe-area" id="catSwipeArea">
       <div class="cat-report__grid">
         <div class="cat-donut-wrap">
           <svg class="cat-donut-svg" id="catDonut" viewBox="0 0 120 120"></svg>
@@ -194,6 +212,8 @@
           <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne</div>
           <div class="cat-rank-list" id="catRankList"></div>
         </div>
+      </div>
+      </div>
       </div>
       <p class="cat-report__note" data-i18n="an.catalogue.report.note">Exemple illustratif construit avec des données fictives — la version connectée à vos données réelles arrive prochainement.</p>
     </div>
@@ -249,9 +269,17 @@
   var catDonut = document.getElementById('catDonut');
   var catDonutLegend = document.getElementById('catDonutLegend');
   var catRankList = document.getElementById('catRankList');
+  var catPackTitle = document.getElementById('catPackTitle');
+  var catPackDots = document.getElementById('catPackDots');
+  var packPrev = document.getElementById('packPrev');
+  var packNext = document.getElementById('packNext');
+  var swipeArea = document.getElementById('catSwipeArea');
   var categories = window.NRICHER_CATEGORIES || [];
 
   var RANK_COLORS = ['#1fae7a', '#6fbb52', '#ffc14d', '#f4a13f', '#f0883a', '#e2452f'];
+
+  var currentCat = null;
+  var currentPackIndex = 0;
 
   function seedFromString(str) {
     var h = 0;
@@ -267,8 +295,8 @@
     };
   }
 
-  function buildMockReport(cat) {
-    var rng = mulberry32(seedFromString(cat.id));
+  function buildMockReport(cat, packName) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + packName));
     var totalArticles = Math.round(4000 + rng() * 9000);
     var topPct = Math.round(16 + rng() * 14);
     var midPct = Math.round(28 + rng() * 14);
@@ -300,8 +328,37 @@
     return segs;
   }
 
+  function renderPackChrome(cat) {
+    var packs = cat.packs || [cat.name];
+    catPackTitle.textContent = packs[currentPackIndex];
+    packPrev.disabled = currentPackIndex === 0;
+    packNext.disabled = currentPackIndex === packs.length - 1;
+    catPackDots.innerHTML = packs.map(function (p, i) {
+      return '<button class="cat-pack-dot' + (i === currentPackIndex ? ' is-active' : '') + '" type="button" aria-label="' + p + '" data-i="' + i + '"></button>';
+    }).join('');
+    Array.prototype.forEach.call(catPackDots.querySelectorAll('.cat-pack-dot'), function (dot) {
+      dot.addEventListener('click', function () { goToPack(parseInt(dot.dataset.i, 10)); });
+    });
+  }
+
+  function goToPack(index) {
+    var packs = currentCat.packs || [currentCat.name];
+    if (index < 0 || index >= packs.length || index === currentPackIndex) return;
+    currentPackIndex = index;
+    var grid = swipeArea.querySelector('.cat-report__grid');
+    grid.style.opacity = '0';
+    setTimeout(function () {
+      renderCatReport(currentCat);
+      grid.style.opacity = '1';
+    }, 130);
+  }
+
   function renderCatReport(cat) {
-    var r = buildMockReport(cat);
+    currentCat = cat;
+    var packs = cat.packs || [cat.name];
+    var packName = packs[currentPackIndex];
+    renderPackChrome(cat);
+    var r = buildMockReport(cat, packName);
 
     catReportCount.innerHTML = r.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
 
@@ -332,6 +389,31 @@
     }).join('');
   }
 
+  packPrev.addEventListener('click', function () { goToPack(currentPackIndex - 1); });
+  packNext.addEventListener('click', function () { goToPack(currentPackIndex + 1); });
+
+  (function initSwipe() {
+    var startX = 0, startY = 0, dragging = false;
+    function onStart(x, y) { startX = x; startY = y; dragging = true; }
+    function onEnd(x, y) {
+      if (!dragging) return;
+      dragging = false;
+      var dx = x - startX, dy = y - startY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) goToPack(currentPackIndex + 1);
+        else goToPack(currentPackIndex - 1);
+      }
+    }
+    swipeArea.addEventListener('touchstart', function (e) {
+      var t = e.changedTouches[0]; onStart(t.clientX, t.clientY);
+    }, { passive: true });
+    swipeArea.addEventListener('touchend', function (e) {
+      var t = e.changedTouches[0]; onEnd(t.clientX, t.clientY);
+    }, { passive: true });
+    swipeArea.addEventListener('mousedown', function (e) { onStart(e.clientX, e.clientY); });
+    swipeArea.addEventListener('mouseup', function (e) { onEnd(e.clientX, e.clientY); });
+  })();
+
   function renderGrid() {
     grid.innerHTML = '';
     categories.forEach(function (cat) {
@@ -350,6 +432,7 @@
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
     previewTitle.textContent = cat.name;
+    currentPackIndex = 0;
     renderCatReport(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
