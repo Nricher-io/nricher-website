@@ -200,8 +200,7 @@
   .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
   .kpi-report .gated-wrap{position:relative;}
-  .kpi-report .gated-zone{position:relative;pointer-events:none;user-select:none;}
-  .kpi-report .gated-zone::after{content:"";position:absolute;inset:0;-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);}
+  .kpi-report .gated-zone{filter:blur(7px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);}
   .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
   .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
   .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
@@ -274,7 +273,14 @@
       </li>
       <li><a href="../cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
       <li><a href="../lequipe.html" class="nav__link" data-i18n="nav.team">L'équipe</a></li>
-      <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav__item">
+        <a href="../analyse-pricing.html" class="nav__link" data-i18n="nav.analysis">Analyse ▾</a>
+        <div class="nav__dropdown">
+          <a href="../analyse-pricing.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.analysis.pricing.title">Pricing</span><span class="nav__dd-d" data-i18n="nav.analysis.pricing.desc">Comparez les prix par catégorie de marché</span></span></a>
+          <a href="../analyse-quality.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.analysis.quality.title">Quality</span><span class="nav__dd-d" data-i18n="nav.analysis.quality.desc">Comparez la qualité des fiches produits</span></span></a>
+          <a href="../analyse-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.analysis.catalogue.title">Catalogue</span><span class="nav__dd-d" data-i18n="nav.analysis.catalogue.desc">Comparez l'étendue des catalogues</span></span></a>
+        </div>
+      </li>
       <li><a href="../recherche.html" class="nav__link active" data-i18n="nav.mycompany">PI Entreprise</a></li>
     </ul>
     <div class="nav__right">
@@ -304,7 +310,9 @@
   <a href="../l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
   <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
   <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
-  <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="../analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
+  <a href="../analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
+  <a href="../analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
   <a href="../recherche.html" data-i18n="nav.mycompany">PI Entreprise</a>
   <a href="../contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
   <div class="lang-switch">
@@ -369,7 +377,7 @@
         
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T08:55:42.931Z">26 juin à 08h55</div>
+        <div class="n" data-generated-at="2026-06-26T12:33:34.341Z">26 juin à 12h33</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -377,6 +385,8 @@
 </header>
 
 <hr class="div">
+
+
 
 <section class="section" id="price-index">
   <div class="container">
@@ -447,7 +457,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -505,7 +515,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -562,7 +572,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -579,7 +589,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch"> → </span></div>
+    <div class="tag-row"><span class="tag tag--watch">Ajd → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -591,7 +601,7 @@
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 0 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 1 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -991,6 +1001,7 @@
         <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
         <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
         <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="../analyse-pricing.html" data-i18n="footer.analysis">Analyse de marché</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.contact">Contact</h4>
@@ -1047,8 +1058,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [], "priceIndex3P": [], "weeks": []};
-  var attractiveness = [];
+  var trendChart = {"priceIndex1P": [null], "priceIndex3P": [null], "weeks": ["Ajd"]};
+  var attractiveness = [{"equalPct": 0, "higherPct": 100, "lowerPct": 0, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 

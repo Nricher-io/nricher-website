@@ -200,8 +200,7 @@
   .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
   .kpi-report .gated-wrap{position:relative;}
-  .kpi-report .gated-zone{position:relative;pointer-events:none;user-select:none;}
-  .kpi-report .gated-zone::after{content:"";position:absolute;inset:0;-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);}
+  .kpi-report .gated-zone{filter:blur(7px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);}
   .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
   .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
   .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
@@ -274,7 +273,14 @@
       </li>
       <li><a href="../cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
       <li><a href="../lequipe.html" class="nav__link" data-i18n="nav.team">L'équipe</a></li>
-      <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav__item">
+        <a href="../analyse-pricing.html" class="nav__link" data-i18n="nav.analysis">Analyse ▾</a>
+        <div class="nav__dropdown">
+          <a href="../analyse-pricing.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.analysis.pricing.title">Pricing</span><span class="nav__dd-d" data-i18n="nav.analysis.pricing.desc">Comparez les prix par catégorie de marché</span></span></a>
+          <a href="../analyse-quality.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.analysis.quality.title">Quality</span><span class="nav__dd-d" data-i18n="nav.analysis.quality.desc">Comparez la qualité des fiches produits</span></span></a>
+          <a href="../analyse-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.analysis.catalogue.title">Catalogue</span><span class="nav__dd-d" data-i18n="nav.analysis.catalogue.desc">Comparez l'étendue des catalogues</span></span></a>
+        </div>
+      </li>
       <li><a href="../recherche.html" class="nav__link active" data-i18n="nav.mycompany">PI Entreprise</a></li>
     </ul>
     <div class="nav__right">
@@ -304,7 +310,9 @@
   <a href="../l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
   <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
   <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
-  <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="../analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
+  <a href="../analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
+  <a href="../analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
   <a href="../recherche.html" data-i18n="nav.mycompany">PI Entreprise</a>
   <a href="../contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
   <div class="lang-switch">
@@ -370,7 +378,7 @@
         <div class="delta-sub">-3 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T09:01:57.821Z">26 juin à 09h01</div>
+        <div class="n" data-generated-at="2026-06-26T12:39:26.116Z">26 juin à 12h39</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -378,6 +386,8 @@
 </header>
 
 <hr class="div">
+
+
 
 <section class="section" id="price-index">
   <div class="container">
@@ -448,7 +458,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -506,7 +516,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -563,7 +573,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -580,7 +590,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">19 mai → 23 juin</span></div>
+    <div class="tag-row"><span class="tag tag--watch">19 mai → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -592,7 +602,7 @@
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 6 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 7 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -651,15 +661,15 @@
             <td class="wk">S26 ★</td>
             
             <td>
-              <span class="prio-chip good" data-tip="Top sales S26 : 96">
-                96
+              <span class="prio-chip good" data-tip="Top sales S26 : 95">
+                95
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip good" data-tip="Middle sales S26 : 96">
-                96
+              <span class="prio-chip good" data-tip="Middle sales S26 : 95">
+                95
                 
               </span>
             </td>
@@ -837,7 +847,7 @@
     <div class="cbar-list">
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Bergfreunde</div><div class="cbar-meta">14 445 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Bergfreunde</div><div class="cbar-meta">14 455 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Bergfreunde — moins cher : 84%" style="width:84%;background:var(--good);"><span class="cbar-seg__pct">84%</span></div>
           <div data-tip="Bergfreunde — aligné : 2%" style="width:2%;background:var(--blue);"></div>
@@ -850,17 +860,17 @@
         <div><div class="cbar-name">Ekosport CH</div><div class="cbar-meta">11 742 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Ekosport CH — moins cher : 29%" style="width:29%;background:var(--good);"><span class="cbar-seg__pct">29%</span></div>
-          <div data-tip="Ekosport CH — aligné : 10%" style="width:10%;background:var(--blue);"><span class="cbar-seg__pct">10%</span></div>
-          <div data-tip="Ekosport CH — plus cher : 61%" style="width:61%;background:var(--bad);"><span class="cbar-seg__pct">61%</span></div>
+          <div data-tip="Ekosport CH — aligné : 11%" style="width:11%;background:var(--blue);"><span class="cbar-seg__pct">11%</span></div>
+          <div data-tip="Ekosport CH — plus cher : 60%" style="width:60%;background:var(--bad);"><span class="cbar-seg__pct">60%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--bad);">108</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Bergzeit</div><div class="cbar-meta">7 169 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Bergzeit</div><div class="cbar-meta">7 182 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Bergzeit — moins cher : 64%" style="width:64%;background:var(--good);"><span class="cbar-seg__pct">64%</span></div>
-          <div data-tip="Bergzeit — aligné : 3%" style="width:3%;background:var(--blue);"></div>
+          <div data-tip="Bergzeit — moins cher : 65%" style="width:65%;background:var(--good);"><span class="cbar-seg__pct">65%</span></div>
+          <div data-tip="Bergzeit — aligné : 2%" style="width:2%;background:var(--blue);"></div>
           <div data-tip="Bergzeit — plus cher : 33%" style="width:33%;background:var(--bad);"><span class="cbar-seg__pct">33%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--good);">94</div>
@@ -903,11 +913,11 @@
             <td>Bergfreunde</td>
             <td class="num">24 811</td>
             <td class="num"><span class="pi-chip g">83</span></td>
-            <td class="num">14 445</td>
+            <td class="num">14 455</td>
             <td class="num"><span class="pi-chip g">87</span></td>
-            <td class="num">1 987</td>
-            <td class="num">273</td>
-            <td class="num">12 186</td>
+            <td class="num">1 982</td>
+            <td class="num">265</td>
+            <td class="num">12 209</td>
           </tr>
           
           <tr>
@@ -916,20 +926,20 @@
             <td class="num"><span class="pi-chip r">107</span></td>
             <td class="num">11 742</td>
             <td class="num"><span class="pi-chip r">108</span></td>
-            <td class="num">7 189</td>
-            <td class="num">1 244</td>
-            <td class="num">3 369</td>
+            <td class="num">7 179</td>
+            <td class="num">1 266</td>
+            <td class="num">3 473</td>
           </tr>
           
           <tr>
             <td>Bergzeit</td>
             <td class="num">12 209</td>
             <td class="num"><span class="pi-chip g">89</span></td>
-            <td class="num">7 169</td>
+            <td class="num">7 182</td>
             <td class="num"><span class="pi-chip g">94</span></td>
-            <td class="num">2 386</td>
-            <td class="num">177</td>
-            <td class="num">4 605</td>
+            <td class="num">2 363</td>
+            <td class="num">173</td>
+            <td class="num">4 645</td>
           </tr>
           
         </tbody>
@@ -971,9 +981,9 @@
             <td class="num">64 064</td>
             <td class="num">33 356</td>
             <td class="num"><span class="pi-chip g">96</span></td>
-            <td class="num">11 562</td>
-            <td class="num">1 694</td>
-            <td class="num">20 160</td>
+            <td class="num">11 524</td>
+            <td class="num">1 704</td>
+            <td class="num">20 327</td>
           </tr>
           
         </tbody>
@@ -1014,9 +1024,9 @@
       <div class="cbar-row ">
         <div><div class="cbar-name">snowleader_ch</div></div>
         <div class="cbar-track">
-          <div data-tip="snowleader_ch — moins cher : 60%" style="width:60%;background:var(--good);"><span class="cbar-seg__pct">60%</span></div>
+          <div data-tip="snowleader_ch — moins cher : 61%" style="width:61%;background:var(--good);"><span class="cbar-seg__pct">61%</span></div>
           <div data-tip="snowleader_ch — aligné : 5%" style="width:5%;background:var(--blue);"></div>
-          <div data-tip="snowleader_ch — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
+          <div data-tip="snowleader_ch — plus cher : 34%" style="width:34%;background:var(--bad);"><span class="cbar-seg__pct">34%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--good);">96</div>
       </div>
@@ -1056,9 +1066,9 @@
       <div class="cbar-row">
         <div><div class="cbar-name">divers</div></div>
         <div class="cbar-track">
-          <div data-tip="divers — moins cher : 60%" style="width:60%;background:var(--good);"><span class="cbar-seg__pct">60%</span></div>
+          <div data-tip="divers — moins cher : 61%" style="width:61%;background:var(--good);"><span class="cbar-seg__pct">61%</span></div>
           <div data-tip="divers — aligné : 5%" style="width:5%;background:var(--blue);"></div>
-          <div data-tip="divers — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
+          <div data-tip="divers — plus cher : 34%" style="width:34%;background:var(--bad);"><span class="cbar-seg__pct">34%</span></div>
         </div>
         <div class="cbar-pi"><span style="color:var(--muted);">33 360</span> <span style="color:var(--muted);">·</span> <span style="color:var(--good);">96</span></div>
       </div>
@@ -1123,6 +1133,7 @@
         <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
         <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
         <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="../analyse-pricing.html" data-i18n="footer.analysis">Analyse de marché</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.contact">Contact</h4>
@@ -1179,8 +1190,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [null, null, null, null, null, null], "priceIndex3P": [94, 94, 98, 98, 99, 89], "weeks": ["19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin"]};
-  var attractiveness = [{"equalPct": 6.4, "higherPct": 30.5, "lowerPct": 63.1, "week": "19 mai"}, {"equalPct": 6.4, "higherPct": 30.5, "lowerPct": 63.1, "week": "26 mai"}, {"equalPct": 7.1, "higherPct": 35.9, "lowerPct": 57, "week": "02 juin"}, {"equalPct": 6.4, "higherPct": 37, "lowerPct": 56.6, "week": "09 juin"}, {"equalPct": 5.4, "higherPct": 39.2, "lowerPct": 55.4, "week": "16 juin"}, {"equalPct": 3.5, "higherPct": 21.2, "lowerPct": 75.3, "week": "23 juin"}];
+  var trendChart = {"priceIndex1P": [null, null, null, null, null, null, null], "priceIndex3P": [94, 94, 98, 98, 99, 89, 96], "weeks": ["19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 6.4, "higherPct": 30.5, "lowerPct": 63.1, "week": "19 mai"}, {"equalPct": 6.4, "higherPct": 30.5, "lowerPct": 63.1, "week": "26 mai"}, {"equalPct": 7.1, "higherPct": 35.9, "lowerPct": 57, "week": "02 juin"}, {"equalPct": 6.4, "higherPct": 37, "lowerPct": 56.6, "week": "09 juin"}, {"equalPct": 5.4, "higherPct": 39.2, "lowerPct": 55.4, "week": "16 juin"}, {"equalPct": 3.5, "higherPct": 21.2, "lowerPct": 75.3, "week": "23 juin"}, {"equalPct": 5, "higherPct": 36, "lowerPct": 59, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 

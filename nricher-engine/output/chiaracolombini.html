@@ -200,8 +200,7 @@
   .kpi-report .cta-row .btn-primary:hover{transform:translateY(-2px);background:rgba(96,239,190,0.1);box-shadow:0 8px 32px rgba(96,239,190,0.2);}
 
   .kpi-report .gated-wrap{position:relative;}
-  .kpi-report .gated-zone{position:relative;pointer-events:none;user-select:none;}
-  .kpi-report .gated-zone::after{content:"";position:absolute;inset:0;-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);-webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, black 55%, black 100%);}
+  .kpi-report .gated-zone{filter:blur(7px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);}
   .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
   .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
   .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
@@ -274,7 +273,14 @@
       </li>
       <li><a href="../cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
       <li><a href="../lequipe.html" class="nav__link" data-i18n="nav.team">L'équipe</a></li>
-      <li><a href="../contact.html" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      <li class="nav__item">
+        <a href="../analyse-pricing.html" class="nav__link" data-i18n="nav.analysis">Analyse ▾</a>
+        <div class="nav__dropdown">
+          <a href="../analyse-pricing.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.analysis.pricing.title">Pricing</span><span class="nav__dd-d" data-i18n="nav.analysis.pricing.desc">Comparez les prix par catégorie de marché</span></span></a>
+          <a href="../analyse-quality.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.analysis.quality.title">Quality</span><span class="nav__dd-d" data-i18n="nav.analysis.quality.desc">Comparez la qualité des fiches produits</span></span></a>
+          <a href="../analyse-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.analysis.catalogue.title">Catalogue</span><span class="nav__dd-d" data-i18n="nav.analysis.catalogue.desc">Comparez l'étendue des catalogues</span></span></a>
+        </div>
+      </li>
       <li><a href="../recherche.html" class="nav__link active" data-i18n="nav.mycompany">PI Entreprise</a></li>
     </ul>
     <div class="nav__right">
@@ -304,7 +310,9 @@
   <a href="../l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
   <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
   <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
-  <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="../analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
+  <a href="../analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
+  <a href="../analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
   <a href="../recherche.html" data-i18n="nav.mycompany">PI Entreprise</a>
   <a href="../contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
   <div class="lang-switch">
@@ -365,12 +373,12 @@
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
-        <div class="n bad">125 <span class="up">▲</span></div>
+        <div class="n bad">126 <span class="up">▲</span></div>
         <div class="l" data-i18n="rp.hero.stat2.label">Price Index global</div>
-        <div class="delta-sub">+5 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">+6 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T08:54:14.335Z">26 juin à 08h54</div>
+        <div class="n" data-generated-at="2026-06-26T12:32:10.941Z">26 juin à 12h32</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -378,6 +386,8 @@
 </header>
 
 <hr class="div">
+
+
 
 <section class="section" id="price-index">
   <div class="container">
@@ -448,7 +458,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -460,7 +470,7 @@
             
           </div>
         </div>
-        <span class="kpi__ghost bad">125</span>
+        <span class="kpi__ghost bad">126</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
@@ -476,9 +486,9 @@
             <line x1="100" y1="100" x2="160.8" y2="100.0" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip bad">+5 pts</div>
+          <div class="kpi__chip bad">+6 pts</div>
         </div>
-        <div class="kpi__num bad">125</div>
+        <div class="kpi__num bad">126</div>
         <div class="kpi__label">Price Index 1P min</div>
         <div class="kpi__desc">
           <span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
@@ -506,7 +516,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -563,7 +573,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
@@ -580,7 +590,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">24 mars → 23 juin</span></div>
+    <div class="tag-row"><span class="tag tag--watch">24 mars → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -592,7 +602,7 @@
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 11 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 12 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -673,9 +683,9 @@
             
             <td>
               <div class="prio-all">
-                <span class="prio-all__item" data-tip="1P S26 : 125">
+                <span class="prio-all__item" data-tip="1P S26 : 126">
                   <span class="prio-all__lbl">1P</span>
-                  <span class="pi-chip r">125</span>
+                  <span class="pi-chip r">126</span>
                 </span>
                 <span class="prio-all__item" data-tip="3P S26 : —">
                   <span class="prio-all__lbl">3P</span>
@@ -722,12 +732,12 @@
                       data-tip="5%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="55.24 258.92" stroke-dashoffset="-15.71"
-                      data-tip="18%"></circle>
+                      stroke-dasharray="52.10 262.06" stroke-dashoffset="-15.71"
+                      data-tip="17%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="240.59 73.57" stroke-dashoffset="-72.26"
-                      data-tip="77%"></circle>
+                      stroke-dasharray="243.74 70.42" stroke-dashoffset="-69.12"
+                      data-tip="78%"></circle>
               
             </g>
             
@@ -736,20 +746,20 @@
             
             
             
-            <text x="98.5" y="28.1" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">18%</text>
+            <text x="97.5" y="26.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">17%</text>
             
             
             
-            <text x="26.9" y="97.5" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">77%</text>
+            <text x="28.1" y="98.5" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">78%</text>
             
             
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">77%</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">78%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
             <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 5%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 18%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 77%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 17%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 78%</div>
           </div>
         </div>
       </div>
@@ -771,14 +781,14 @@
         </div>
         <div class="rank-list">
           
-          <div class="rank-row" data-tip="Asteri : PI 110">
+          <div class="rank-row" data-tip="Asteri : PI 109">
             <span class="rank-badge rank-badge--1">1</span>
             <span class="rank-name">Asteri</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:75%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:72%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">110</span></span>
+            <span class="rank-pi"><span class="pi-chip r">109</span></span>
           </div>
           
           <div class="rank-row" data-tip="Nedgis : PI 112">
@@ -801,24 +811,24 @@
             <span class="rank-pi"><span class="pi-chip r">118</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Lamptwist : PI 147">
+          <div class="rank-row" data-tip="Lamptwist : PI 146">
             <span class="rank-badge rank-badge--n">4</span>
             <span class="rank-name">Lamptwist</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
               <div class="rank-track__marker" style="left:100%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">147</span></span>
+            <span class="rank-pi"><span class="pi-chip r">146</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Madeindesign : PI 153">
+          <div class="rank-row" data-tip="Madeindesign : PI 157">
             <span class="rank-badge rank-badge--n">5</span>
             <span class="rank-name">Madeindesign</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
               <div class="rank-track__marker" style="left:100%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">153</span></span>
+            <span class="rank-pi"><span class="pi-chip r">157</span></span>
           </div>
           
         </div>
@@ -859,8 +869,8 @@
       <div class="cbar-row">
         <div><div class="cbar-name">Nedgis</div><div class="cbar-meta">132 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Nedgis — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="Nedgis — aligné : 37%" style="width:37%;background:var(--blue);"><span class="cbar-seg__pct">37%</span></div>
+          <div data-tip="Nedgis — moins cher : 15%" style="width:15%;background:var(--good);"><span class="cbar-seg__pct">15%</span></div>
+          <div data-tip="Nedgis — aligné : 39%" style="width:39%;background:var(--blue);"><span class="cbar-seg__pct">39%</span></div>
           <div data-tip="Nedgis — plus cher : 46%" style="width:46%;background:var(--bad);"><span class="cbar-seg__pct">46%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--bad);">112</div>
@@ -870,20 +880,20 @@
         <div><div class="cbar-name">Madeindesign</div><div class="cbar-meta">42 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Madeindesign — moins cher : 2%" style="width:2%;background:var(--good);"></div>
-          <div data-tip="Madeindesign — aligné : 12%" style="width:12%;background:var(--blue);"><span class="cbar-seg__pct">12%</span></div>
-          <div data-tip="Madeindesign — plus cher : 86%" style="width:86%;background:var(--bad);"><span class="cbar-seg__pct">86%</span></div>
+          <div data-tip="Madeindesign — aligné : 9%" style="width:9%;background:var(--blue);"><span class="cbar-seg__pct">9%</span></div>
+          <div data-tip="Madeindesign — plus cher : 89%" style="width:89%;background:var(--bad);"><span class="cbar-seg__pct">89%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">153</div>
+        <div class="cbar-pi" style="color:var(--bad);">157</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Lamptwist</div><div class="cbar-meta">39 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Lamptwist</div><div class="cbar-meta">41 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
           <div data-tip="Lamptwist — moins cher : 0%" style="width:0%;background:var(--good);"></div>
-          <div data-tip="Lamptwist — aligné : 3%" style="width:3%;background:var(--blue);"></div>
-          <div data-tip="Lamptwist — plus cher : 97%" style="width:97%;background:var(--bad);"><span class="cbar-seg__pct">97%</span></div>
+          <div data-tip="Lamptwist — aligné : 2%" style="width:2%;background:var(--blue);"></div>
+          <div data-tip="Lamptwist — plus cher : 98%" style="width:98%;background:var(--bad);"><span class="cbar-seg__pct">98%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">147</div>
+        <div class="cbar-pi" style="color:var(--bad);">146</div>
       </div>
       
       <div class="cbar-row">
@@ -893,7 +903,7 @@
           <div data-tip="Asteri — aligné : 4%" style="width:4%;background:var(--blue);"></div>
           <div data-tip="Asteri — plus cher : 88%" style="width:88%;background:var(--bad);"><span class="cbar-seg__pct">88%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">110</div>
+        <div class="cbar-pi" style="color:var(--bad);">109</div>
       </div>
       
       <div class="cbar-row">
@@ -945,8 +955,8 @@
             <td class="num"><span class="pi-chip r">110</span></td>
             <td class="num">132</td>
             <td class="num"><span class="pi-chip r">112</span></td>
-            <td class="num">61</td>
-            <td class="num">49</td>
+            <td class="num">70</td>
+            <td class="num">58</td>
             <td class="num">22</td>
           </tr>
           
@@ -955,8 +965,8 @@
             <td class="num">69</td>
             <td class="num"><span class="pi-chip r">153</span></td>
             <td class="num">42</td>
-            <td class="num"><span class="pi-chip r">153</span></td>
-            <td class="num">36</td>
+            <td class="num"><span class="pi-chip r">157</span></td>
+            <td class="num">47</td>
             <td class="num">5</td>
             <td class="num">1</td>
           </tr>
@@ -965,9 +975,9 @@
             <td>Lamptwist</td>
             <td class="num">61</td>
             <td class="num"><span class="pi-chip r">136</span></td>
-            <td class="num">39</td>
-            <td class="num"><span class="pi-chip r">147</span></td>
-            <td class="num">38</td>
+            <td class="num">41</td>
+            <td class="num"><span class="pi-chip r">146</span></td>
+            <td class="num">40</td>
             <td class="num">1</td>
             <td class="num">0</td>
           </tr>
@@ -977,8 +987,8 @@
             <td class="num">32</td>
             <td class="num"><span class="pi-chip r">110</span></td>
             <td class="num">24</td>
-            <td class="num"><span class="pi-chip r">110</span></td>
-            <td class="num">21</td>
+            <td class="num"><span class="pi-chip r">109</span></td>
+            <td class="num">23</td>
             <td class="num">1</td>
             <td class="num">2</td>
           </tr>
@@ -1032,9 +1042,9 @@
             <td><strong>chiaracolombini</strong> <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span></td>
             <td class="num">7 222</td>
             <td class="num">240</td>
-            <td class="num"><span class="pi-chip r">125</span></td>
-            <td class="num">158</td>
-            <td class="num">57</td>
+            <td class="num"><span class="pi-chip r">126</span></td>
+            <td class="num">182</td>
+            <td class="num">66</td>
             <td class="num">25</td>
           </tr>
           
@@ -1076,11 +1086,11 @@
       <div class="cbar-row cbar-row--you">
         <div><div class="cbar-name">chiaracolombini <span style="color:var(--good);font-weight:700;" data-i18n="rp.you">(vous)</span></div></div>
         <div class="cbar-track">
-          <div data-tip="chiaracolombini — moins cher : 10%" style="width:10%;background:var(--good);"><span class="cbar-seg__pct">10%</span></div>
+          <div data-tip="chiaracolombini — moins cher : 9%" style="width:9%;background:var(--good);"><span class="cbar-seg__pct">9%</span></div>
           <div data-tip="chiaracolombini — aligné : 24%" style="width:24%;background:var(--blue);"><span class="cbar-seg__pct">24%</span></div>
-          <div data-tip="chiaracolombini — plus cher : 66%" style="width:66%;background:var(--bad);"><span class="cbar-seg__pct">66%</span></div>
+          <div data-tip="chiaracolombini — plus cher : 67%" style="width:67%;background:var(--bad);"><span class="cbar-seg__pct">67%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">125</div>
+        <div class="cbar-pi" style="color:var(--bad);">126</div>
       </div>
       
     </div>
@@ -1118,41 +1128,41 @@
       <div class="cbar-row">
         <div><div class="cbar-name">applique murale</div></div>
         <div class="cbar-track">
-          <div data-tip="applique murale — moins cher : 5%" style="width:5%;background:var(--good);"></div>
-          <div data-tip="applique murale — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
+          <div data-tip="applique murale — moins cher : 4%" style="width:4%;background:var(--good);"></div>
+          <div data-tip="applique murale — aligné : 43%" style="width:43%;background:var(--blue);"><span class="cbar-seg__pct">43%</span></div>
           <div data-tip="applique murale — plus cher : 53%" style="width:53%;background:var(--bad);"><span class="cbar-seg__pct">53%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">109</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">116</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">109</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">115</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">suspension</div></div>
         <div class="cbar-track">
-          <div data-tip="suspension — moins cher : 37%" style="width:37%;background:var(--good);"><span class="cbar-seg__pct">37%</span></div>
-          <div data-tip="suspension — aligné : 4%" style="width:4%;background:var(--blue);"></div>
-          <div data-tip="suspension — plus cher : 59%" style="width:59%;background:var(--bad);"><span class="cbar-seg__pct">59%</span></div>
+          <div data-tip="suspension — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
+          <div data-tip="suspension — aligné : 5%" style="width:5%;background:var(--blue);"></div>
+          <div data-tip="suspension — plus cher : 64%" style="width:64%;background:var(--bad);"><span class="cbar-seg__pct">64%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">49</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">135</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">49</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">143</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">lampe a poser</div></div>
         <div class="cbar-track">
           <div data-tip="lampe a poser — moins cher : 0%" style="width:0%;background:var(--good);"></div>
-          <div data-tip="lampe a poser — aligné : 15%" style="width:15%;background:var(--blue);"><span class="cbar-seg__pct">15%</span></div>
-          <div data-tip="lampe a poser — plus cher : 85%" style="width:85%;background:var(--bad);"><span class="cbar-seg__pct">85%</span></div>
+          <div data-tip="lampe a poser — aligné : 14%" style="width:14%;background:var(--blue);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="lampe a poser — plus cher : 86%" style="width:86%;background:var(--bad);"><span class="cbar-seg__pct">86%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">34</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">122</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">34</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">121</span></div>
       </div>
       
       <div class="cbar-row">
         <div><div class="cbar-name">plafonnier</div></div>
         <div class="cbar-track">
           <div data-tip="plafonnier — moins cher : 4%" style="width:4%;background:var(--good);"></div>
-          <div data-tip="plafonnier — aligné : 4%" style="width:4%;background:var(--blue);"></div>
-          <div data-tip="plafonnier — plus cher : 92%" style="width:92%;background:var(--bad);"><span class="cbar-seg__pct">92%</span></div>
+          <div data-tip="plafonnier — aligné : 3%" style="width:3%;background:var(--blue);"></div>
+          <div data-tip="plafonnier — plus cher : 93%" style="width:93%;background:var(--bad);"><span class="cbar-seg__pct">93%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">25</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">155</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">25</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">150</span></div>
       </div>
       
       <div class="cbar-row">
@@ -1225,6 +1235,7 @@
         <a href="../cas-clients.html" data-i18n="nav.cases">Cas clients</a>
         <a href="../lequipe.html" data-i18n="nav.team">L'équipe</a>
         <a href="../contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="../analyse-pricing.html" data-i18n="footer.analysis">Analyse de marché</a>
       </div>
       <div class="footer__col">
         <h4 data-i18n="footer.contact">Contact</h4>
@@ -1281,8 +1292,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [126, 125, 125, 123, 100, 109, 109, null, 120, 120, 122], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null], "weeks": ["24 mars", "31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "02 juin", "09 juin", "16 juin", "23 juin"]};
-  var attractiveness = [{"equalPct": 24.8, "higherPct": 70.7, "lowerPct": 4.5, "week": "24 mars"}, {"equalPct": 25.1, "higherPct": 69.7, "lowerPct": 5.2, "week": "31 mars"}, {"equalPct": 25.6, "higherPct": 67.8, "lowerPct": 6.6, "week": "07 avr."}, {"equalPct": 26.4, "higherPct": 62.8, "lowerPct": 10.7, "week": "14 avr."}, {"equalPct": 35.3, "higherPct": 64.7, "lowerPct": 0, "week": "21 avr."}, {"equalPct": 50, "higherPct": 40.9, "lowerPct": 9.1, "week": "28 avr."}, {"equalPct": 50, "higherPct": 40.9, "lowerPct": 9.1, "week": "05 mai"}, {"equalPct": 0, "higherPct": 0, "lowerPct": 0, "week": "02 juin"}, {"equalPct": 28.1, "higherPct": 61.2, "lowerPct": 10.7, "week": "09 juin"}, {"equalPct": 36.1, "higherPct": 54.9, "lowerPct": 9, "week": "16 juin"}, {"equalPct": 28.7, "higherPct": 61.6, "lowerPct": 9.7, "week": "23 juin"}];
+  var trendChart = {"priceIndex1P": [126, 125, 125, 123, 100, 109, 109, null, 120, 120, 122, 126], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["24 mars", "31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "02 juin", "09 juin", "16 juin", "23 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 24.8, "higherPct": 70.7, "lowerPct": 4.5, "week": "24 mars"}, {"equalPct": 25.1, "higherPct": 69.7, "lowerPct": 5.2, "week": "31 mars"}, {"equalPct": 25.6, "higherPct": 67.8, "lowerPct": 6.6, "week": "07 avr."}, {"equalPct": 26.4, "higherPct": 62.8, "lowerPct": 10.7, "week": "14 avr."}, {"equalPct": 35.3, "higherPct": 64.7, "lowerPct": 0, "week": "21 avr."}, {"equalPct": 50, "higherPct": 40.9, "lowerPct": 9.1, "week": "28 avr."}, {"equalPct": 50, "higherPct": 40.9, "lowerPct": 9.1, "week": "05 mai"}, {"equalPct": 0, "higherPct": 0, "lowerPct": 0, "week": "02 juin"}, {"equalPct": 28.1, "higherPct": 61.2, "lowerPct": 10.7, "week": "09 juin"}, {"equalPct": 36.1, "higherPct": 54.9, "lowerPct": 9, "week": "16 juin"}, {"equalPct": 28.7, "higherPct": 61.6, "lowerPct": 9.7, "week": "23 juin"}, {"equalPct": 17, "higherPct": 78, "lowerPct": 5, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 
