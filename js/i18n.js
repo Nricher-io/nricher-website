@@ -540,6 +540,10 @@
       "an.pricing.chart2.sub": "Share of items cheaper / aligned / pricier than competitors.",
       "an.pricing.chart3.title": "Pricing analysis",
       "an.pricing.viewdetail": "View detail",
+      "an.quality.th.score": "Quality score",
+      "an.quality.avggrade": "average grade",
+      "an.quality.globaltitle": "global grade - % of articles",
+      "an.quality.criteriatitle": "distribution of articles by criteria - % of articles",
 
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---

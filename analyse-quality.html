@@ -39,6 +39,52 @@
 .an-preview__soon-text{font-size:0.92rem;color:var(--text-2);line-height:1.55;}
 .an-preview__soon-text strong{color:var(--text);}
 .an-preview__cta{margin-top:24px;}
+:root{ --neu: #4b5563; --neu-bg: rgba(75,85,99,0.10); --bad: #e2452f; --bad-bg: rgba(226,69,47,0.10); }
+.ql-report{margin-top:8px;}
+.ql-report__badge{display:inline-flex;align-items:center;gap:7px;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);background:var(--card-2,#F5F7FA);border-radius:var(--r-pill);padding:5px 12px;margin-bottom:22px;}
+.ql-report__badge .dot{width:6px;height:6px;border-radius:50%;background:#f0883a;flex-shrink:0;}
+.ql-table-wrap{overflow-x:auto;}
+table.ql-table{width:100%;border-collapse:collapse;font-size:0.88rem;}
+table.ql-table th{text-align:center;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);padding:0 14px 10px;border-bottom:1px solid var(--border);}
+table.ql-table th:first-child{text-align:left;}
+table.ql-table td{padding:13px 14px;border-bottom:1px solid var(--border);text-align:center;font-family:var(--font-display);}
+table.ql-table td:first-child{text-align:left;font-family:var(--font-body);}
+table.ql-table tbody tr{cursor:pointer;transition:background .15s ease;}
+table.ql-table tbody tr:hover td{background:rgba(96,239,190,0.06);}
+table.ql-table tbody tr.is-active td{background:rgba(46,88,202,0.07);}
+table.ql-table td.ql-table-chevron{text-align:right;}
+.ql-table-name{font-weight:700;color:var(--text);}
+.ql-score-pill{display:inline-flex;align-items:center;justify-content:center;min-width:64px;padding:6px 14px;border-radius:var(--r-pill);font-weight:700;color:#fff;}
+.ql-score-pill.good{background:var(--blue);}
+.ql-score-pill.neu{background:var(--neu);}
+.ql-score-pill.bad{background:var(--bad);}
+.ql-row-cta{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-size:0.74rem;font-weight:700;color:var(--muted);padding:5px 10px;border-radius:var(--r-pill);border:1px solid var(--border);white-space:nowrap;transition:color .15s ease,border-color .15s ease,background .15s ease;}
+table.ql-table tbody tr:hover .ql-row-cta{color:var(--blue);border-color:var(--border-mint);background:rgba(96,239,190,0.08);}
+.ql-row-cta__ico{font-size:0.95rem;line-height:1;transition:transform .15s ease;}
+table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
+
+.ql-detail{display:none;margin-top:36px;padding-top:32px;border-top:1px solid var(--border);}
+.ql-detail.is-visible{display:block;}
+.ql-detail__head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:30px;}
+.ql-detail__name{font-family:var(--font-display);font-weight:700;font-size:1.25rem;}
+.ql-detail__meta{font-size:0.78rem;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);border:1px solid var(--border);color:var(--text-2);}
+.ql-avg-row{display:flex;align-items:center;gap:18px;margin-bottom:32px;}
+.ql-avg-label{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:#1fae7a;text-transform:lowercase;}
+.ql-avg-pill{font-family:var(--font-display);font-weight:700;font-size:1.3rem;padding:10px 22px;border-radius:var(--r-pill);color:#fff;}
+.ql-section-title{font-family:var(--font-body);font-weight:700;font-size:0.8rem;text-transform:lowercase;color:var(--text-2);margin-bottom:14px;}
+.ql-gradebar-row{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:16px;margin-bottom:14px;}
+.ql-gradebar-label{font-size:0.84rem;font-weight:700;color:var(--text);}
+.ql-gradebar-track{height:30px;border-radius:8px;display:flex;overflow:hidden;background:var(--card-2,#F0F2F5);}
+.ql-gradebar-track > div{display:flex;align-items:center;justify-content:center;transition:filter .2s ease;}
+.ql-gradebar-track > div:hover{filter:brightness(1.1);}
+.ql-gradebar-seg__pct{font-size:11px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
+.ql-global-wrap{margin-bottom:34px;}
+.ql-legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:24px;}
+.ql-legend .legend-item{display:flex;align-items:center;gap:7px;font-size:0.78rem;font-weight:600;color:var(--text-2);}
+.ql-legend .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+@media (max-width:600px){
+  .ql-gradebar-row{grid-template-columns:74px 1fr;gap:10px;}
+}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -158,11 +204,45 @@
     <span class="an-preview__tag" data-i18n="nav.analysis.quality.title">Quality</span>
     <div class="an-preview__title" id="previewTitle"></div>
     <p class="an-preview__sub" id="previewSub" data-i18n="an.quality.preview.sub">Comparatif du score de qualité des fiches produits entre les enseignes de cette catégorie.</p>
-    <div class="an-preview__brands" id="previewBrands"></div>
-    <div class="an-preview__soon">
-      <span class="an-preview__soon-ico">🚧</span>
-      <span class="an-preview__soon-text" data-i18n="an.quality.preview.soon">Le rapport graphique (score de complétude, classement, évolution) arrive bientôt — branché en direct sur les données de ces enseignes.</span>
+
+    <div class="ql-report">
+      <span class="ql-report__badge"><span class="dot"></span><span data-i18n="an.catalogue.report.demo">Exemple — données fictives</span></span>
+      <div class="ql-table-wrap">
+        <table class="ql-table">
+          <thead>
+            <tr>
+              <th data-i18n="an.pricing.th.name">Enseigne</th>
+              <th data-i18n="an.quality.th.score">Note qualité</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="qlTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="ql-detail" id="qlDetail">
+        <div class="ql-detail__head">
+          <span class="ql-detail__name" id="qlDetailName"></span>
+          <span class="ql-detail__meta" id="qlDetailAnalysed"></span>
+        </div>
+
+        <div class="ql-avg-row">
+          <span class="ql-avg-label" data-i18n="an.quality.avggrade">average grade</span>
+          <span class="ql-avg-pill" id="qlAvgPill"></span>
+        </div>
+
+        <div class="ql-global-wrap">
+          <div class="ql-section-title" data-i18n="an.quality.globaltitle">global grade - % of articles</div>
+          <div class="ql-gradebar-track" id="qlGlobalBar"></div>
+        </div>
+
+        <div class="ql-section-title" data-i18n="an.quality.criteriatitle">distribution of articles by criteria - % of articles</div>
+        <div id="qlCriteriaList"></div>
+
+        <div class="ql-legend" id="qlLegend"></div>
+      </div>
     </div>
+
     <div class="an-preview__cta">
       <a href="contact.html" class="btn btn-primary" data-i18n="an.preview.cta">Être prévenu en avant-première →</a>
     </div>
@@ -210,8 +290,122 @@
   var search = document.getElementById('catSearch');
   var preview = document.getElementById('preview');
   var previewTitle = document.getElementById('previewTitle');
-  var previewBrands = document.getElementById('previewBrands');
+  var qlTableBody = document.getElementById('qlTableBody');
+  var qlDetail = document.getElementById('qlDetail');
+  var qlDetailName = document.getElementById('qlDetailName');
+  var qlDetailAnalysed = document.getElementById('qlDetailAnalysed');
+  var qlAvgPill = document.getElementById('qlAvgPill');
+  var qlGlobalBar = document.getElementById('qlGlobalBar');
+  var qlCriteriaList = document.getElementById('qlCriteriaList');
+  var qlLegend = document.getElementById('qlLegend');
   var categories = window.NRICHER_CATEGORIES || [];
+
+  var GRADES = ['A+', 'A', 'B', 'C', 'D', 'E', 'F'];
+  var GRADE_COLORS = ['#3b82f6', '#2e58ca', '#1e3a6e', '#6b7280', '#f87171', '#dc2626', '#7f1d1d'];
+  var CRITERIA = ['Title', 'Image', 'Video', 'Description'];
+  var currentRows = [];
+
+  function seedFromString(str) {
+    var h = 0;
+    for (var i = 0; i < str.length; i++) { h = (h * 31 + str.charCodeAt(i)) | 0; }
+    return h;
+  }
+  function mulberry32(seed) {
+    return function () {
+      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function scoreSeverity(score) {
+    if (score >= 70) return 'good';
+    if (score >= 40) return 'neu';
+    return 'bad';
+  }
+
+  function buildOverviewRow(cat, brand) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + brand + '::quality-overview'));
+    var analysed = Math.round(40000 + rng() * 350000);
+    var score = Math.round(25 + rng() * 70);
+    return { name: brand, analysed: analysed, score: score };
+  }
+
+  function buildGradeDist(seedStr, biasGood) {
+    var rng = mulberry32(seedFromString(seedStr));
+    biasGood = Math.max(0, Math.min(1, biasGood));
+    var weights = [
+      0.04 + biasGood * 0.30 + rng() * 0.08,
+      0.07 + biasGood * 0.26 + rng() * 0.08,
+      0.10 + biasGood * 0.16 + rng() * 0.08,
+      0.14 + rng() * 0.10,
+      0.10 + (1 - biasGood) * 0.14 + rng() * 0.08,
+      0.08 + (1 - biasGood) * 0.18 + rng() * 0.08,
+      0.05 + (1 - biasGood) * 0.22 + rng() * 0.08,
+    ];
+    var total = weights.reduce(function (a, b) { return a + b; }, 0);
+    var pcts = weights.map(function (w) { return Math.round(w / total * 100); });
+    var diff = 100 - pcts.reduce(function (a, b) { return a + b; }, 0);
+    pcts[pcts.length - 1] = Math.max(0, pcts[pcts.length - 1] + diff);
+    return pcts;
+  }
+
+  function renderGradeBar(container, pcts) {
+    container.innerHTML = pcts.map(function (pct, i) {
+      if (pct <= 0) return '';
+      return '<div style="width:' + pct + '%;background:' + GRADE_COLORS[i] + ';" data-tip="' + GRADES[i] + ' grade : ' + pct + '%">' +
+        (pct >= 9 ? '<span class="ql-gradebar-seg__pct">' + pct + '%</span>' : '') + '</div>';
+    }).join('');
+  }
+
+  function renderTable(cat) {
+    currentRows = cat.brands.map(function (b) { return buildOverviewRow(cat, b); });
+    currentRows.sort(function (a, c) { return c.score - a.score; });
+    qlTableBody.innerHTML = currentRows.map(function (r, i) {
+      var sev = scoreSeverity(r.score);
+      return '<tr data-i="' + i + '">' +
+        '<td class="ql-table-name">' + r.name + '</td>' +
+        '<td><span class="ql-score-pill ' + sev + '">' + r.score + ' / 100</span></td>' +
+        '<td class="ql-table-chevron"><span class="ql-row-cta" data-i18n="an.pricing.viewdetail">Voir le détail<span class="ql-row-cta__ico">›</span></span></td>' +
+      '</tr>';
+    }).join('');
+    Array.prototype.forEach.call(qlTableBody.querySelectorAll('tr'), function (row) {
+      row.addEventListener('click', function () {
+        showDetail(cat, currentRows[parseInt(row.dataset.i, 10)]);
+        Array.prototype.forEach.call(qlTableBody.querySelectorAll('tr'), function (r) { r.classList.toggle('is-active', r === row); });
+      });
+    });
+    qlDetail.classList.remove('is-visible');
+  }
+
+  function showDetail(cat, company) {
+    qlDetailName.textContent = company.name;
+    qlDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' articles analysées';
+
+    var sev = scoreSeverity(company.score);
+    qlAvgPill.textContent = company.score + ' / 100';
+    qlAvgPill.className = 'ql-avg-pill ql-score-pill ' + sev;
+
+    var biasGlobal = (company.score - 25) / 70;
+    renderGradeBar(qlGlobalBar, buildGradeDist(cat.id + '::' + company.name + '::global', biasGlobal));
+
+    qlCriteriaList.innerHTML = CRITERIA.map(function () { return '<div class="ql-gradebar-row"><span class="ql-gradebar-label"></span><div class="ql-gradebar-track"></div></div>'; }).join('');
+    var rows = qlCriteriaList.querySelectorAll('.ql-gradebar-row');
+    CRITERIA.forEach(function (crit, i) {
+      var rng = mulberry32(seedFromString(cat.id + '::' + company.name + '::criteria-jitter-' + crit));
+      var bias = crit === 'Video' ? (0.03 + rng() * 0.10) : Math.max(0, Math.min(1, biasGlobal + (rng() * 0.3 - 0.15)));
+      rows[i].querySelector('.ql-gradebar-label').textContent = crit;
+      renderGradeBar(rows[i].querySelector('.ql-gradebar-track'), buildGradeDist(cat.id + '::' + company.name + '::criteria-' + crit, bias));
+    });
+
+    qlLegend.innerHTML = GRADES.map(function (g, i) {
+      return '<span class="legend-item"><span class="legend-dot" style="background:' + GRADE_COLORS[i] + ';"></span>' + g + ' grade</span>';
+    }).join('');
+
+    qlDetail.classList.add('is-visible');
+    qlDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   function renderGrid() {
     grid.innerHTML = '';
@@ -231,9 +425,7 @@
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
     previewTitle.textContent = cat.name;
-    previewBrands.innerHTML = cat.brands.map(function (b) {
-      return '<span class="an-brand-chip">' + b + '</span>';
-    }).join('');
+    renderTable(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
