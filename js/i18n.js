@@ -527,6 +527,10 @@
       "an.catalogue.sub": "Pick a market category to compare the catalogue breadth of the retailers in it, against each other.",
       "an.catalogue.preview.sub": "Catalogue reference count comparison between the retailers in this category.",
       "an.catalogue.preview.soon": "The chart report (range breadth, depth, evolution) is coming soon — connected live to these retailers' data.",
+      "an.catalogue.report.demo": "Example — mock data",
+      "an.catalogue.report.articles": "items for sale",
+      "an.catalogue.report.rankhead": "Additional revenue potential per retailer",
+      "an.catalogue.report.note": "Illustrative example built with mock data — the version connected to your real data is coming soon.",
 
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---

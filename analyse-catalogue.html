@@ -39,6 +39,29 @@
 .an-preview__soon-text{font-size:0.92rem;color:var(--text-2);line-height:1.55;}
 .an-preview__soon-text strong{color:var(--text);}
 .an-preview__cta{margin-top:24px;}
+.cat-report__badge{display:inline-flex;align-items:center;gap:7px;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);background:var(--card-2,#F5F7FA);border-radius:var(--r-pill);padding:5px 12px;margin-bottom:24px;}
+.cat-report__badge .dot{width:6px;height:6px;border-radius:50%;background:#f0883a;flex-shrink:0;}
+.cat-report__count{font-family:var(--font-display);font-weight:700;font-size:1.35rem;color:var(--text);margin-bottom:28px;}
+.cat-report__count span{font-family:var(--font-body);font-weight:500;font-size:0.85rem;color:var(--muted);margin-left:8px;}
+.cat-report__grid{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:start;}
+.cat-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;}
+.cat-donut-svg{width:190px;height:190px;}
+.cat-donut-legend{display:flex;flex-direction:column;gap:9px;width:100%;}
+.cat-donut-legend .legend-item{display:flex;align-items:center;gap:9px;font-size:0.82rem;font-weight:600;color:var(--text-2);}
+.cat-donut-legend .legend-item b{color:var(--text);font-weight:700;}
+.cat-donut-legend .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.cat-rank-head{font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--blue);margin-bottom:18px;}
+.cat-rank-list{display:flex;flex-direction:column;gap:13px;}
+.cat-rank-row{display:grid;grid-template-columns:110px 1fr 54px;align-items:center;gap:14px;}
+.cat-rank-brand{font-size:0.84rem;font-weight:700;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cat-rank-bar-track{position:relative;height:32px;border-radius:8px;background:var(--card-2,#F0F2F5);overflow:hidden;}
+.cat-rank-bar{position:absolute;inset:0;height:100%;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;color:#fff;font-size:0.74rem;font-weight:700;white-space:nowrap;}
+.cat-rank-pct{font-size:0.82rem;font-weight:700;color:var(--blue);text-align:center;background:rgba(46,88,202,0.08);border-radius:var(--r-pill);padding:6px 0;}
+.cat-report__note{margin-top:30px;font-size:0.78rem;color:var(--muted);font-style:italic;}
+@media (max-width:680px){
+  .cat-report__grid{grid-template-columns:1fr;}
+  .cat-rank-row{grid-template-columns:84px 1fr 46px;gap:8px;}
+}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -158,11 +181,23 @@
     <span class="an-preview__tag" data-i18n="nav.analysis.catalogue.title">Catalogue</span>
     <div class="an-preview__title" id="previewTitle"></div>
     <p class="an-preview__sub" id="previewSub" data-i18n="an.catalogue.preview.sub">Comparatif du nombre de références catalogue entre les enseignes de cette catégorie.</p>
-    <div class="an-preview__brands" id="previewBrands"></div>
-    <div class="an-preview__soon">
-      <span class="an-preview__soon-ico">🚧</span>
-      <span class="an-preview__soon-text" data-i18n="an.catalogue.preview.soon">Le rapport graphique (étendue de gamme, profondeur, évolution) arrive bientôt — branché en direct sur les données de ces enseignes.</span>
+
+    <div class="cat-report">
+      <span class="cat-report__badge"><span class="dot"></span><span data-i18n="an.catalogue.report.demo">Exemple — données fictives</span></span>
+      <div class="cat-report__count" id="catReportCount"></div>
+      <div class="cat-report__grid">
+        <div class="cat-donut-wrap">
+          <svg class="cat-donut-svg" id="catDonut" viewBox="0 0 120 120"></svg>
+          <div class="cat-donut-legend" id="catDonutLegend"></div>
+        </div>
+        <div>
+          <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne</div>
+          <div class="cat-rank-list" id="catRankList"></div>
+        </div>
+      </div>
+      <p class="cat-report__note" data-i18n="an.catalogue.report.note">Exemple illustratif construit avec des données fictives — la version connectée à vos données réelles arrive prochainement.</p>
     </div>
+
     <div class="an-preview__cta">
       <a href="contact.html" class="btn btn-primary" data-i18n="an.preview.cta">Être prévenu en avant-première →</a>
     </div>
@@ -210,8 +245,92 @@
   var search = document.getElementById('catSearch');
   var preview = document.getElementById('preview');
   var previewTitle = document.getElementById('previewTitle');
-  var previewBrands = document.getElementById('previewBrands');
+  var catReportCount = document.getElementById('catReportCount');
+  var catDonut = document.getElementById('catDonut');
+  var catDonutLegend = document.getElementById('catDonutLegend');
+  var catRankList = document.getElementById('catRankList');
   var categories = window.NRICHER_CATEGORIES || [];
+
+  var RANK_COLORS = ['#1fae7a', '#6fbb52', '#ffc14d', '#f4a13f', '#f0883a', '#e2452f'];
+
+  function seedFromString(str) {
+    var h = 0;
+    for (var i = 0; i < str.length; i++) { h = (h * 31 + str.charCodeAt(i)) | 0; }
+    return h;
+  }
+  function mulberry32(seed) {
+    return function () {
+      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function buildMockReport(cat) {
+    var rng = mulberry32(seedFromString(cat.id));
+    var totalArticles = Math.round(4000 + rng() * 9000);
+    var topPct = Math.round(16 + rng() * 14);
+    var midPct = Math.round(28 + rng() * 14);
+    var lowPct = 100 - topPct - midPct;
+    var topSellersCount = Math.round(totalArticles * topPct / 100);
+
+    var rows = cat.brands.map(function (b) {
+      var share = 0.22 + rng() * 0.7;
+      return { name: b, count: Math.round(topSellersCount * share) };
+    });
+    rows.sort(function (a, c) { return c.count - a.count; });
+    rows = rows.slice(0, 6);
+    rows.forEach(function (r) {
+      r.potential = Math.max(8, Math.round((topSellersCount - r.count) / r.count * 100));
+    });
+
+    return { totalArticles: totalArticles, topPct: topPct, midPct: midPct, lowPct: lowPct, topSellersCount: topSellersCount, rows: rows };
+  }
+
+  function donutSegments(pcts, colors) {
+    var circumference = 2 * Math.PI * 50;
+    var segs = [];
+    var cumulative = 0;
+    pcts.forEach(function (pct, i) {
+      var len = circumference * pct / 100;
+      segs.push({ color: colors[i], dasharray: len.toFixed(1) + ' ' + (circumference - len).toFixed(1), dashoffset: (-cumulative).toFixed(1) });
+      cumulative += len;
+    });
+    return segs;
+  }
+
+  function renderCatReport(cat) {
+    var r = buildMockReport(cat);
+
+    catReportCount.innerHTML = r.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
+
+    var segs = donutSegments([r.topPct, r.midPct, r.lowPct], ['#60efbe', '#2e58ca', '#cbd5e1']);
+    var svgParts = '<g transform="rotate(-90 60 60)">';
+    segs.forEach(function (seg) {
+      svgParts += '<circle cx="60" cy="60" r="50" fill="none" stroke="' + seg.color + '" stroke-width="20" ' +
+        'stroke-dasharray="' + seg.dasharray + '" stroke-dashoffset="' + seg.dashoffset + '"></circle>';
+    });
+    svgParts += '</g>';
+    svgParts += '<text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="20" fill="var(--text)">' + r.topSellersCount.toLocaleString('fr-FR') + '</text>';
+    svgParts += '<text x="60" y="73" text-anchor="middle" font-size="9.5" fill="var(--muted)">Top sellers</text>';
+    catDonut.innerHTML = svgParts;
+
+    catDonutLegend.innerHTML =
+      '<div class="legend-item"><span class="legend-dot" style="background:#60efbe;"></span>Top sellers · <b>' + r.topPct + '%</b></div>' +
+      '<div class="legend-item"><span class="legend-dot" style="background:#2e58ca;"></span>Middle sellers · <b>' + r.midPct + '%</b></div>' +
+      '<div class="legend-item"><span class="legend-dot" style="background:#cbd5e1;"></span>Low sellers · <b>' + r.lowPct + '%</b></div>';
+
+    catRankList.innerHTML = r.rows.map(function (row, i) {
+      var pct = Math.round(row.count / r.topSellersCount * 100);
+      var color = RANK_COLORS[i] || RANK_COLORS[RANK_COLORS.length - 1];
+      return '<div class="cat-rank-row">' +
+        '<span class="cat-rank-brand">' + row.name + '</span>' +
+        '<div class="cat-rank-bar-track"><div class="cat-rank-bar" style="width:' + Math.max(pct, 10) + '%;background:' + color + ';">' + row.count.toLocaleString('fr-FR') + ' / ' + r.topSellersCount.toLocaleString('fr-FR') + '</div></div>' +
+        '<span class="cat-rank-pct">+' + row.potential + '%</span>' +
+      '</div>';
+    }).join('');
+  }
 
   function renderGrid() {
     grid.innerHTML = '';
@@ -231,9 +350,7 @@
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
     previewTitle.textContent = cat.name;
-    previewBrands.innerHTML = cat.brands.map(function (b) {
-      return '<span class="an-brand-chip">' + b + '</span>';
-    }).join('');
+    renderCatReport(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
