@@ -25,7 +25,12 @@
     {
       id: 'beaute-parfumerie',
       name: 'Beauté & Parfumerie',
-      brands: ['aurlane', 'Boticinal', 'Clarins', 'Cocooncenter', 'Easyparapharmacie', 'Lancome', 'LOreal', 'Payot', 'Pharmazon', 'sephora', 'Sisley', 'SVR', 'Atida']
+      brands: ['aurlane', 'Boticinal', 'Clarins', 'Lancome', 'LOreal', 'Payot', 'sephora', 'Sisley', 'SVR']
+    },
+    {
+      id: 'sante-pharmacie',
+      name: 'Santé & Pharmacie',
+      brands: ['Atida', 'Cocooncenter', 'Easyparapharmacie', 'Pharmazon']
     },
     {
       id: 'mode-luxe',
@@ -35,7 +40,7 @@
     {
       id: 'electronique-hightech',
       name: 'Électronique & High-Tech',
-      brands: ['Boulanger', 'BUT', 'Darty', 'Fnac', 'Pixmania', 'Ubaldi', 'bq', 'CDiscount', 'Rue du commerce']
+      brands: ['Boulanger', 'BUT', 'Darty', 'Fnac', 'Pixmania', 'Ubaldi', 'bq']
     },
     {
       id: 'mobilite',
@@ -50,7 +55,12 @@
     {
       id: 'grande-distribution',
       name: 'Grande distribution & Généraliste',
-      brands: ['auchan', 'Carrefour', 'carrefour es', 'Conforama', 'conforama es', 'Amazon', 'amazon es', 'amazon it', 'Rakuten', 'shopping_feed']
+      brands: ['auchan', 'Carrefour', 'carrefour es', 'Conforama', 'conforama es']
+    },
+    {
+      id: 'marketplaces',
+      name: 'Marketplaces & E-commerce généraliste',
+      brands: ['Amazon', 'amazon es', 'amazon it', 'Rakuten', 'CDiscount', 'Rue du commerce', 'shopping_feed']
     },
     {
       id: 'culture-loisirs',
