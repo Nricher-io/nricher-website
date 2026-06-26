@@ -33,16 +33,6 @@
       brands: ['Boulanger', 'BUT', 'Darty', 'Fnac', 'bq']
     },
     {
-      id: 'mobilite',
-      name: 'Mobilité (Auto, Moto, Vélo)',
-      brands: ['Mobin']
-    },
-    {
-      id: 'bebe-puericulture',
-      name: 'Bébé & Puériculture',
-      brands: ['berceaumagique']
-    },
-    {
       id: 'grande-distribution',
       name: 'Hypermarchés & Grande distribution',
       brands: ['auchan', 'Carrefour', 'carrefour es', 'Conforama', 'conforama es']
