@@ -54,12 +54,12 @@
     },
     {
       id: 'grande-distribution',
-      name: 'Grande distribution & Généraliste',
+      name: 'Hypermarchés & Grande distribution',
       brands: ['auchan', 'Carrefour', 'carrefour es', 'Conforama', 'conforama es']
     },
     {
       id: 'marketplaces',
-      name: 'Marketplaces & E-commerce généraliste',
+      name: 'Marketplaces en ligne',
       brands: ['Amazon', 'amazon es', 'amazon it', 'Rakuten', 'CDiscount', 'Rue du commerce', 'shopping_feed']
     },
     {
