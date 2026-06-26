@@ -480,6 +480,10 @@
       "dl.btn.contact": "Contact us →",
       "dl.btn.back": "Back to the report",
 
+      "rp.gated.title": "Data hidden",
+      "rp.gated.desc": "is an nricher client under contract — the rest of this report (trends, competitors, sellers, categories, verdict) is not made public.",
+      "rp.gated.cta": "Contact us →",
+
       // --- PAGE: RECHERCHE ---
       "re.meta.title": "Search Company — Weekly KPIs · nricher",
       "re.eyebrow": "Weekly KPIs",
