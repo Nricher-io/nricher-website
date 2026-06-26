@@ -65,6 +65,12 @@ GAUGE_VMIN, GAUGE_VMAX = 80, 120
 
 PRIORITY_TABLE_WEEKS = 4  # 3 semaines d'historique + la semaine courante, comme l'app
 
+# Entreprises clientes sous contrat dont les donnees ne doivent pas etre
+# librement consultables tant qu'aucun mecanisme d'acces (login, lien a
+# token) n'est en place cote site - voir handoff-dev pour le contexte.
+# Comparaison insensible a la casse sur le nom de l'entreprise.
+GATED_COMPANIES = {"conforama"}
+
 
 def compute_gauge_needle(value):
     """
@@ -278,6 +284,7 @@ def render_report(data, env):
     data["hero"]["priceIndexGlobalSeverity"] = compute_pi_severity(data["hero"]["priceIndexGlobal"])
     data["heroTagline"] = compute_hero_tagline(data["hero"].get("priceIndexGlobalDelta"))
     data["generatedAtLabel"] = format_french_datetime(data["generatedAt"])
+    data["isGated"] = data["company"]["name"].strip().lower() in GATED_COMPANIES
 
     data["priorityTable"] = data["priorityTable"][-PRIORITY_TABLE_WEEKS:]
     for row in data["priorityTable"]:
