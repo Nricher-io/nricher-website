@@ -151,6 +151,30 @@ def compute_donut_segments(parts):
     return segments
 
 
+def append_live_point(data, competitors_overview):
+    """
+    Reproduit appendLivePoint() de l'app (commit 56c90581, nricher-workspace) :
+    les graphiques de tendance ne tracent que les semaines deja completees,
+    donc leur dernier point peut etre en retard sur les valeurs live affichees
+    dans les jauges/le donut juste au-dessus (constate sur Simplybearings :
+    jauge 1P min a 121, dernier point du graphique a 104). Ajoute un point
+    final "Ajd" construit a partir de ces memes valeurs live, sur les deux
+    graphiques, pour qu'ils restent coherents avec le reste de la page.
+    """
+    gauges_by_key = {g["key"]: g for g in data["gauges"]}
+
+    data["trendChart"]["weeks"].append("Ajd")
+    data["trendChart"]["priceIndex1P"].append(gauges_by_key.get("1P_MIN", {}).get("value"))
+    data["trendChart"]["priceIndex3P"].append(gauges_by_key.get("3P_MIN", {}).get("value"))
+
+    data["attractivenessStacked"].append({
+        "week": "Ajd",
+        "lowerPct": competitors_overview["avgLower"],
+        "equalPct": competitors_overview["avgEqual"],
+        "higherPct": competitors_overview["avgHigher"],
+    })
+
+
 COLOR_CHEAPER = "var(--good)"
 COLOR_EQUAL = "var(--blue)"
 COLOR_PRICIER = "var(--bad)"
@@ -317,6 +341,7 @@ def render_report(data, env):
     competitors_overview, competitors_ranking, competitors_by_volume = compute_competitors_overview(
         data["competitors"]["stacked"]
     )
+    append_live_point(data, competitors_overview)
 
     template = env.get_template(TEMPLATE_NAME)
     html = template.render(
