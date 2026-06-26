@@ -539,6 +539,7 @@
       "an.pricing.chart2.title": "Price attractivity evolution",
       "an.pricing.chart2.sub": "Share of items cheaper / aligned / pricier than competitors.",
       "an.pricing.chart3.title": "Pricing analysis",
+      "an.pricing.viewdetail": "View detail",
 
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---

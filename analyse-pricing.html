@@ -56,6 +56,11 @@ table.pr-table tbody tr.is-active td{background:rgba(46,88,202,0.07);}
 .pr-pi-pill{display:inline-flex;align-items:center;justify-content:center;min-width:42px;padding:6px 12px;border-radius:var(--r-pill);font-weight:700;color:#fff;}
 .pr-pi-pill.good{background:var(--good);}
 .pr-pi-pill.bad{background:var(--bad);}
+table.pr-table td.pr-table-chevron{text-align:right;}
+.pr-row-cta{display:inline-flex;align-items:center;gap:4px;font-family:var(--font-body);font-size:0.74rem;font-weight:700;color:var(--muted);padding:5px 10px;border-radius:var(--r-pill);border:1px solid var(--border);white-space:nowrap;transition:color .15s ease,border-color .15s ease,background .15s ease;}
+table.pr-table tbody tr:hover .pr-row-cta{color:var(--blue);border-color:var(--border-mint);background:rgba(96,239,190,0.08);}
+.pr-row-cta__ico{font-size:0.95rem;line-height:1;transition:transform .15s ease;}
+table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 .pr-detail{display:none;margin-top:36px;padding-top:32px;border-top:1px solid var(--border);}
 .pr-detail.is-visible{display:block;}
 .pr-detail__head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:28px;}
@@ -218,6 +223,7 @@ table.pr-table tbody tr.is-active td{background:rgba(46,88,202,0.07);}
               <th data-i18n="an.pricing.th.analysed">Articles analysés</th>
               <th data-i18n="an.pricing.th.matched">Articles matchés</th>
               <th>Price Index 1P</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="prTableBody"></tbody>
@@ -386,6 +392,7 @@ table.pr-table tbody tr.is-active td{background:rgba(46,88,202,0.07);}
         '<td>' + r.analysed.toLocaleString('fr-FR') + '</td>' +
         '<td>' + r.matched.toLocaleString('fr-FR') + '</td>' +
         '<td><span class="pr-pi-pill ' + sev + '">' + r.pi + '</span></td>' +
+        '<td class="pr-table-chevron"><span class="pr-row-cta" data-i18n="an.pricing.viewdetail">Voir le détail<span class="pr-row-cta__ico">›</span></span></td>' +
       '</tr>';
     }).join('');
     Array.prototype.forEach.call(prTableBody.querySelectorAll('tr'), function (row) {
