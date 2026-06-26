@@ -18,6 +18,13 @@
       "nav.cases": "Case Studies",
       "nav.team": "Team",
       "nav.contact": "Contact",
+      "nav.analysis": "Analysis ▾",
+      "nav.analysis.pricing.title": "Pricing",
+      "nav.analysis.pricing.desc": "Compare prices across a market category",
+      "nav.analysis.quality.title": "Quality",
+      "nav.analysis.quality.desc": "Compare product sheet quality",
+      "nav.analysis.catalogue.title": "Catalogue",
+      "nav.analysis.catalogue.desc": "Compare catalogue breadth",
       "nav.mycompany": "PI Company",
       "nav.login": "Login",
       "nav.demo": "Request a Demo →",
@@ -33,6 +40,7 @@
       "footer.resources": "Resources",
       "footer.contact": "Contact",
       "footer.demo": "Request a demo",
+      "footer.analysis": "Market analysis",
       "footer.copyright": "© 2026 nricher SAS · 10 rue Denis Poisson, Paris 17 · SIREN 912 082 302",
 
       // --- PAGE: INDEX (Accueil) ---
@@ -494,6 +502,31 @@
       "re.badge.unavail": "Not generated yet",
       "re.empty": "No company matches your search.",
       "re.count": "result(s)",
+
+      // --- PAGES: ANALYSE (Pricing / Quality / Catalogue) ---
+      "an.eyebrow": "Market analysis",
+      "an.search.placeholder": "Sport, Home, Beauty…",
+      "an.empty": "No category matches your search.",
+      "an.preview.sub": "Comparison between the retailers in this category, side by side.",
+      "an.preview.cta": "Get notified at launch →",
+
+      "an.pricing.meta.title": "Market Analysis — Pricing · nricher",
+      "an.pricing.title": "Compare prices by category",
+      "an.pricing.sub": "Pick a market category to compare the price index of the retailers in it, against each other.",
+      "an.pricing.preview.sub": "Price index comparison between the retailers in this category, week by week.",
+      "an.pricing.preview.soon": "The chart report (ranking, evolution, breakdown) is coming soon — connected live to these retailers' data.",
+
+      "an.quality.meta.title": "Market Analysis — Quality · nricher",
+      "an.quality.title": "Compare product sheet quality by category",
+      "an.quality.sub": "Pick a market category to compare the product sheet quality of the retailers in it, against each other.",
+      "an.quality.preview.sub": "Product sheet quality score comparison between the retailers in this category.",
+      "an.quality.preview.soon": "The chart report (completeness score, ranking, evolution) is coming soon — connected live to these retailers' data.",
+
+      "an.catalogue.meta.title": "Market Analysis — Catalogue · nricher",
+      "an.catalogue.title": "Compare catalogue breadth by category",
+      "an.catalogue.sub": "Pick a market category to compare the catalogue breadth of the retailers in it, against each other.",
+      "an.catalogue.preview.sub": "Catalogue reference count comparison between the retailers in this category.",
+      "an.catalogue.preview.soon": "The chart report (range breadth, depth, evolution) is coming soon — connected live to these retailers' data.",
 
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---
