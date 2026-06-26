@@ -201,7 +201,8 @@
 
   .kpi-report .gated-wrap{position:relative;}
   .kpi-report .gated-zone{filter:blur(7px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);}
-  .kpi-report .price-index-blur-wrap{filter:blur(7px);pointer-events:none;user-select:none;}
+  .kpi-report .price-index-blur-stack{position:relative;}
+  .kpi-report .price-index-blur-copy{position:absolute;top:0;left:0;right:0;filter:blur(9px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, transparent 0%, transparent 15%, black 75%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, transparent 15%, black 75%, black 100%);}
   .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
   .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
   .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
@@ -380,19 +381,7 @@
 
 <hr class="div">
 
-{% if data.isGated %}<div class="price-index-blur-wrap">{% endif %}
-<section class="section" id="price-index">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-title" data-i18n="rp.price_index.title">Price Index — la photo de la semaine</div>
-        <div class="section-sub" data-i18n="rp.price_index.sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
-      </div>
-    </div>
-    <div class="tag-row"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
-
-    <div class="kpi-grid">
-      {% for g in data.visibleGauges %}
+{% macro gauge_card(g, idx, id_prefix='') %}
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -414,7 +403,7 @@
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
-              <linearGradient id="gaugeArcGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="{{ id_prefix }}gaugeArcGrad-{{ idx }}" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#1fae7a"/>
                 <stop offset="30%" stop-color="#8bc34a"/>
                 <stop offset="55%" stop-color="#ffc14d"/>
@@ -422,7 +411,7 @@
                 <stop offset="100%" stop-color="#e2452f"/>
               </linearGradient>
             </defs>
-            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-{{ loop.index0 }})" stroke-width="12" stroke-linecap="round"/>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#{{ id_prefix }}gaugeArcGrad-{{ idx }})" stroke-width="12" stroke-linecap="round"/>
             <line x1="100" y1="100" x2="{{ g.needleX }}" y2="{{ g.needleY }}" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
@@ -438,7 +427,7 @@
         <div class="kpi__bar">
           <svg viewBox="0 0 200 8" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="gaugeBarGrad-{{ loop.index0 }}" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="{{ id_prefix }}gaugeBarGrad-{{ idx }}" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#1fae7a"/>
                 <stop offset="30%" stop-color="#8bc34a"/>
                 <stop offset="55%" stop-color="#ffc14d"/>
@@ -446,7 +435,7 @@
                 <stop offset="100%" stop-color="#e2452f"/>
               </linearGradient>
             </defs>
-            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-{{ loop.index0 }})"/>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#{{ id_prefix }}gaugeBarGrad-{{ idx }})"/>
             {% if g.refPct is not none %}<rect x="{{ (g.refPct/100*198)|round(1) }}" y="0" width="2" height="8" fill="#fff"/>{% endif %}
             {% if g.barPct is not none %}<circle cx="{{ (g.barPct/100*200)|round(1) }}" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>{% endif %}
           </svg>
@@ -457,11 +446,30 @@
           <span>{{ gauge_vmax }}</span>
         </div>
       </div>
-      {% endfor %}
+{% endmacro %}
+
+<section class="section" id="price-index">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-title" data-i18n="rp.price_index.title">Price Index — la photo de la semaine</div>
+        <div class="section-sub" data-i18n="rp.price_index.sub">Plusieurs lectures du même problème : votre compétitivité prix, vue globale, vue pire cas, vue vendeur identique.</div>
+      </div>
+    </div>
+    <div class="tag-row"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
+
+    <div class="price-index-blur-stack">
+      <div class="kpi-grid">
+        {% for g in data.visibleGauges %}{{ gauge_card(g, loop.index0) }}{% endfor %}
+      </div>
+      {% if data.isGated %}
+      <div class="kpi-grid price-index-blur-copy" aria-hidden="true">
+        {% for g in data.visibleGauges %}{{ gauge_card(g, loop.index0, 'dup-') }}{% endfor %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
-{% if data.isGated %}</div>{% endif %}
 
 <hr class="div">
 

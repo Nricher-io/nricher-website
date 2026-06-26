@@ -201,7 +201,8 @@
 
   .kpi-report .gated-wrap{position:relative;}
   .kpi-report .gated-zone{filter:blur(7px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);mask-image:linear-gradient(to bottom, black 0%, black 12%, transparent 70%);}
-  .kpi-report .price-index-blur-wrap{filter:blur(7px);pointer-events:none;user-select:none;}
+  .kpi-report .price-index-blur-stack{position:relative;}
+  .kpi-report .price-index-blur-copy{position:absolute;top:0;left:0;right:0;filter:blur(9px);pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(to bottom, transparent 0%, transparent 15%, black 75%, black 100%);mask-image:linear-gradient(to bottom, transparent 0%, transparent 15%, black 75%, black 100%);}
   .kpi-report .gated-lock{position:sticky;top:35%;z-index:10;max-width:460px;margin-inline:auto;text-align:center;background:var(--card);border:1px solid var(--border);border-radius:var(--r-xl);padding:44px 40px;box-shadow:var(--shadow-card);}
   .kpi-report .gated-lock__icon{width:56px;height:56px;border-radius:50%;background:rgba(46,88,202,0.08);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px;color:var(--blue);}
   .kpi-report .gated-lock h3{font-family:var(--font-display);font-weight:700;font-size:1.4rem;color:var(--text);margin-bottom:12px;}
@@ -370,7 +371,7 @@
         <div class="delta-sub">-1 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T09:16:06.701Z">26 juin à 09h16</div>
+        <div class="n" data-generated-at="2026-06-26T09:34:52.130Z">26 juin à 09h34</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -379,7 +380,8 @@
 
 <hr class="div">
 
-<div class="price-index-blur-wrap">
+
+
 <section class="section" id="price-index">
   <div class="container">
     <div class="section-header">
@@ -390,8 +392,9 @@
     </div>
     <div class="tag-row"><span class="tag tag--watch" data-i18n="rp.kpi.tag">100 = aligné marché</span></div>
 
-    <div class="kpi-grid">
-      
+    <div class="price-index-blur-stack">
+      <div class="kpi-grid">
+        
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -449,7 +452,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -507,7 +510,7 @@
           <span>120</span>
         </div>
       </div>
-      
+
       <div class="kpi">
         <div class="kpi__topbar"></div>
         <div class="info-btn-wrap">
@@ -564,11 +567,189 @@
           <span>120</span>
         </div>
       </div>
+
+      </div>
+      
+      <div class="kpi-grid price-index-blur-copy" aria-hidden="true">
+        
+      <div class="kpi">
+        <div class="kpi__topbar"></div>
+        <div class="info-btn-wrap">
+          <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
+          <div class="info-popover">
+            
+            <p>Indice prix moyen calculé sur l'ensemble des offres concurrentes. 100 = aligné au marché.</p>
+            <p>L'aiguille et la couleur indiquent votre position : vert = vous êtes moins cher, rouge = plus cher. Le repère S25 sous la jauge montre la semaine précédente, et la pastille le delta en points.</p>
+            
+          </div>
+        </div>
+        <span class="kpi__ghost bad">103</span>
+        <div class="kpi-top">
+          <svg class="kpi__gauge" viewBox="0 0 200 116">
+            <defs>
+              <linearGradient id="dup-gaugeArcGrad-0" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#dup-gaugeArcGrad-0)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="114.2" y2="40.9" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+          </svg>
+          <div class="kpi__chip bad">+1 pts</div>
+        </div>
+        <div class="kpi__num bad">103</div>
+        <div class="kpi__label">Price Index All</div>
+        <div class="kpi__desc">
+          <span data-i18n="rp.gauge.all.desc">Toutes les offres confondues, tous vendeurs.</span>
+          
+        </div>
+        <div class="kpi__bar">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="dup-gaugeBarGrad-0" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#dup-gaugeBarGrad-0)"/>
+            <rect x="108.9" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="114.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="kpi__ref">
+          <span>80</span>
+          <span>S25 : 102</span>
+          <span>120</span>
+        </div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi__topbar"></div>
+        <div class="info-btn-wrap">
+          <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
+          <div class="info-popover">
+            
+            <p>Indice prix face à la meilleure offre en propre (1P, vos propres vendeurs). 100 = aligné.</p>
+            <p>Même lecture que les autres jauges : sous 100 vous êtes compétitif (vert), au-dessus vous êtes plus cher (rouge).</p>
+            
+          </div>
+        </div>
+        <span class="kpi__ghost blue">100</span>
+        <div class="kpi-top">
+          <svg class="kpi__gauge" viewBox="0 0 200 116">
+            <defs>
+              <linearGradient id="dup-gaugeArcGrad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#dup-gaugeArcGrad-1)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="100.0" y2="39.2" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+          </svg>
+          <div class="kpi__chip blue">-16 pts</div>
+        </div>
+        <div class="kpi__num blue">100</div>
+        <div class="kpi__label">Price Index 1P min</div>
+        <div class="kpi__desc">
+          <span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
+          
+        </div>
+        <div class="kpi__bar">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="dup-gaugeBarGrad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#dup-gaugeBarGrad-1)"/>
+            <rect x="178.2" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="100.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="kpi__ref">
+          <span>80</span>
+          <span>S25 : 116</span>
+          <span>120</span>
+        </div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpi__topbar"></div>
+        <div class="info-btn-wrap">
+          <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
+          <div class="info-popover">
+            
+            <p>Indice prix face à la meilleure offre du marché (3P, marketplaces). C'est la vue « pire cas ».</p>
+            <p>Si vous êtes sous 100 ici, vous êtes le moins cher du marché sur ces articles. Au-dessus de 100, un concurrent fait mieux.</p>
+            
+          </div>
+        </div>
+        <span class="kpi__ghost bad">106</span>
+        <div class="kpi-top">
+          <svg class="kpi__gauge" viewBox="0 0 200 116">
+            <defs>
+              <linearGradient id="dup-gaugeArcGrad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#dup-gaugeArcGrad-2)" stroke-width="12" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="127.6" y2="45.8" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+          </svg>
+          <div class="kpi__chip bad">-1 pts</div>
+        </div>
+        <div class="kpi__num bad">106</div>
+        <div class="kpi__label">3P Price Min</div>
+        <div class="kpi__desc">
+          <span data-i18n="rp.gauge.3p_min.desc">Meilleure offre marketplace, hors vous.</span>
+        </div>
+        <div class="kpi__bar">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="dup-gaugeBarGrad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#1fae7a"/>
+                <stop offset="30%" stop-color="#8bc34a"/>
+                <stop offset="55%" stop-color="#ffc14d"/>
+                <stop offset="78%" stop-color="#f0883a"/>
+                <stop offset="100%" stop-color="#e2452f"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#dup-gaugeBarGrad-2)"/>
+            <rect x="134.6" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="130.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="kpi__ref">
+          <span>80</span>
+          <span>S25 : 107</span>
+          <span>120</span>
+        </div>
+      </div>
+
+      </div>
       
     </div>
   </div>
 </section>
-</div>
 
 <hr class="div">
 
