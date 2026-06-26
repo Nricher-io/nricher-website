@@ -39,6 +39,55 @@
 .an-preview__soon-text{font-size:0.92rem;color:var(--text-2);line-height:1.55;}
 .an-preview__soon-text strong{color:var(--text);}
 .an-preview__cta{margin-top:24px;}
+:root{ --good: #1fae7a; --good-bg: rgba(31,174,122,0.12); --bad: #e2452f; --bad-bg: rgba(226,69,47,0.10); }
+.pr-report{margin-top:8px;}
+.pr-report__badge{display:inline-flex;align-items:center;gap:7px;font-size:0.7rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);background:var(--card-2,#F5F7FA);border-radius:var(--r-pill);padding:5px 12px;margin-bottom:22px;}
+.pr-report__badge .dot{width:6px;height:6px;border-radius:50%;background:#f0883a;flex-shrink:0;}
+.pr-table-wrap{overflow-x:auto;}
+table.pr-table{width:100%;border-collapse:collapse;font-size:0.88rem;}
+table.pr-table th{text-align:center;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);padding:0 14px 10px;border-bottom:1px solid var(--border);}
+table.pr-table th:first-child{text-align:left;}
+table.pr-table td{padding:13px 14px;border-bottom:1px solid var(--border);text-align:center;font-family:var(--font-display);}
+table.pr-table td:first-child{text-align:left;font-family:var(--font-body);}
+table.pr-table tbody tr{cursor:pointer;transition:background .15s ease;}
+table.pr-table tbody tr:hover td{background:rgba(96,239,190,0.06);}
+table.pr-table tbody tr.is-active td{background:rgba(46,88,202,0.07);}
+.pr-table-name{font-weight:700;color:var(--text);}
+.pr-pi-pill{display:inline-flex;align-items:center;justify-content:center;min-width:42px;padding:6px 12px;border-radius:var(--r-pill);font-weight:700;color:#fff;}
+.pr-pi-pill.good{background:var(--good);}
+.pr-pi-pill.bad{background:var(--bad);}
+.pr-detail{display:none;margin-top:36px;padding-top:32px;border-top:1px solid var(--border);}
+.pr-detail.is-visible{display:block;}
+.pr-detail__head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:28px;}
+.pr-detail__name{font-family:var(--font-display);font-weight:700;font-size:1.25rem;}
+.pr-detail__pill{font-family:var(--font-display);font-weight:700;font-size:0.92rem;padding:7px 16px;border-radius:var(--r-pill);color:#fff;}
+.pr-detail__meta{font-size:0.78rem;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);border:1px solid var(--border);color:var(--text-2);}
+.pr-detail__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:stretch;margin-bottom:26px;}
+.pr-report .chart-card{background:var(--card-2,#F5F7FA);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px 26px 20px;}
+.pr-report .chart-card h3{font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
+.pr-report .chart-sub{color:var(--muted);font-size:0.82rem;margin-top:4px;margin-bottom:14px;}
+.pr-report .chart-canvas-wrap{position:relative;height:230px;}
+.pr-report .legend{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;}
+.pr-report .legend-item{display:flex;align-items:center;gap:7px;font-size:0.8rem;color:var(--muted);}
+.pr-report .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.pr-report .cbar-legend-centered{display:flex;justify-content:center;gap:24px;margin-bottom:18px;}
+.pr-report .cbar-legend-centered .legend-item{font-size:0.82rem;font-weight:600;color:var(--text-2);}
+.pr-report .cbar-header{display:grid;grid-template-columns:130px 1fr 56px;gap:14px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.pr-report .cbar-header span{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);}
+.pr-report .cbar-header span:last-child{text-align:right;}
+.pr-report .cbar-list{display:flex;flex-direction:column;gap:12px;}
+.pr-report .cbar-row{display:grid;grid-template-columns:130px 1fr 56px;align-items:center;gap:14px;}
+.pr-report .cbar-name{font-size:0.86rem;font-weight:700;color:var(--text);}
+.pr-report .cbar-track{height:22px;border-radius:7px;display:flex;overflow:visible;background:var(--card-2,#F0F2F5);}
+.pr-report .cbar-track > div:first-child{border-radius:7px 0 0 7px;}
+.pr-report .cbar-track > div:last-child{border-radius:0 7px 7px 0;}
+.pr-report .cbar-track > div{display:flex;align-items:center;justify-content:center;transition:filter .2s ease;}
+.pr-report .cbar-track > div:hover{filter:brightness(1.1);}
+.pr-report .cbar-seg__pct{font-size:10px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
+.pr-report .cbar-pi{font-family:var(--font-display);font-weight:700;font-size:0.88rem;text-align:right;white-space:nowrap;}
+@media (max-width:880px){
+  .pr-detail__grid{grid-template-columns:1fr;}
+}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -158,11 +207,55 @@
     <span class="an-preview__tag" data-i18n="nav.analysis.pricing.title">Pricing</span>
     <div class="an-preview__title" id="previewTitle"></div>
     <p class="an-preview__sub" id="previewSub" data-i18n="an.pricing.preview.sub">Comparatif de l'indice prix entre les enseignes de cette catégorie, semaine par semaine.</p>
-    <div class="an-preview__brands" id="previewBrands"></div>
-    <div class="an-preview__soon">
-      <span class="an-preview__soon-ico">🚧</span>
-      <span class="an-preview__soon-text" data-i18n="an.pricing.preview.soon">Le rapport graphique (classement, évolution, répartition) arrive bientôt — branché en direct sur les données de ces enseignes.</span>
+
+    <div class="pr-report">
+      <span class="pr-report__badge"><span class="dot"></span><span data-i18n="an.catalogue.report.demo">Exemple — données fictives</span></span>
+      <div class="pr-table-wrap">
+        <table class="pr-table">
+          <thead>
+            <tr>
+              <th data-i18n="an.pricing.th.name">Enseigne</th>
+              <th data-i18n="an.pricing.th.analysed">Articles analysés</th>
+              <th data-i18n="an.pricing.th.matched">Articles matchés</th>
+              <th>Price Index 1P</th>
+            </tr>
+          </thead>
+          <tbody id="prTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="pr-detail" id="prDetail">
+        <div class="pr-detail__head">
+          <span class="pr-detail__name" id="prDetailName"></span>
+          <span class="pr-detail__pill" id="prDetailPill"></span>
+          <span class="pr-detail__meta" id="prDetailAnalysed"></span>
+          <span class="pr-detail__meta" id="prDetailMatched"></span>
+        </div>
+
+        <div class="pr-detail__grid">
+          <div class="chart-card">
+            <h3 data-i18n="an.pricing.chart1.title">Price index evolution</h3>
+            <div class="chart-sub" id="prTrendSub"></div>
+            <div class="chart-canvas-wrap"><canvas id="prTrendCanvas"></canvas></div>
+          </div>
+          <div class="chart-card">
+            <h3 data-i18n="an.pricing.chart2.title">Price attractivity evolution</h3>
+            <div class="chart-sub" data-i18n="an.pricing.chart2.sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
+            <div class="chart-canvas-wrap"><canvas id="prAttractCanvas"></canvas></div>
+          </div>
+        </div>
+
+        <h3 data-i18n="an.pricing.chart3.title" style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:16px;">Pricing analysis</h3>
+        <div class="cbar-legend-centered">
+          <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
+          <span class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span>Higher</span>
+        </div>
+        <div class="cbar-header"><span></span><span></span><span>PI</span></div>
+        <div class="cbar-list" id="prCbarList"></div>
+      </div>
     </div>
+
     <div class="an-preview__cta">
       <a href="contact.html" class="btn btn-primary" data-i18n="an.preview.cta">Être prévenu en avant-première →</a>
     </div>
@@ -203,6 +296,7 @@
 </footer>
 
 <script src="js/analyse-categories.js?v=20260626"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script>
 (function () {
   var grid = document.getElementById('catGrid');
@@ -210,8 +304,186 @@
   var search = document.getElementById('catSearch');
   var preview = document.getElementById('preview');
   var previewTitle = document.getElementById('previewTitle');
-  var previewBrands = document.getElementById('previewBrands');
+  var prTableBody = document.getElementById('prTableBody');
+  var prDetail = document.getElementById('prDetail');
+  var prDetailName = document.getElementById('prDetailName');
+  var prDetailPill = document.getElementById('prDetailPill');
+  var prDetailAnalysed = document.getElementById('prDetailAnalysed');
+  var prDetailMatched = document.getElementById('prDetailMatched');
+  var prTrendSub = document.getElementById('prTrendSub');
+  var prCbarList = document.getElementById('prCbarList');
   var categories = window.NRICHER_CATEGORIES || [];
+
+  var WEEKS = ['24 Mar', '07 Avr', '21 Avr', '05 Mai', '19 Mai', '02 Juin'];
+  var trendChart = null, attractChart = null;
+  var currentRows = [];
+
+  function seedFromString(str) {
+    var h = 0;
+    for (var i = 0; i < str.length; i++) { h = (h * 31 + str.charCodeAt(i)) | 0; }
+    return h;
+  }
+  function mulberry32(seed) {
+    return function () {
+      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function buildOverviewRow(cat, brand) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + brand + '::overview'));
+    var analysed = Math.round(20000 + rng() * 470000);
+    var matchRate = 0.16 + rng() * 0.5;
+    var matched = Math.round(analysed * matchRate);
+    var pi = Math.round(85 + rng() * 30);
+    return { name: brand, analysed: analysed, matched: matched, pi: pi };
+  }
+
+  function buildPairwise(cat, company, competitor) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::' + competitor));
+    var pi = Math.round(85 + rng() * 30);
+    var t = (pi - 85) / 30;
+    var higherPct = Math.min(90, Math.round(8 + t * 60 + rng() * 10));
+    var equalPct = Math.min(95 - higherPct, Math.round(6 + rng() * 14));
+    var lowerPct = 100 - higherPct - equalPct;
+    return { name: competitor, pi: pi, lowerPct: lowerPct, equalPct: equalPct, higherPct: higherPct };
+  }
+
+  function buildTrend(cat, company, competitor, finalPI) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::' + competitor + '::trend'));
+    var arr = [];
+    var v = finalPI + (rng() * 10 - 5);
+    for (var i = 0; i < WEEKS.length; i++) {
+      v += (rng() * 8 - 4);
+      arr.push(v);
+    }
+    arr[WEEKS.length - 1] = finalPI;
+    return arr.map(function (x) { return Math.round(x); });
+  }
+
+  function buildAttractiveness(cat, company) {
+    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::attract'));
+    var cheaper = 45 + rng() * 15;
+    var aligned = 15 + rng() * 10;
+    return WEEKS.map(function (w) {
+      cheaper = Math.max(15, Math.min(75, cheaper + (rng() * 10 - 5)));
+      aligned = Math.max(5, Math.min(30, aligned + (rng() * 6 - 3)));
+      var pricier = 100 - cheaper - aligned;
+      if (pricier < 5) { pricier = 5; aligned = 100 - cheaper - pricier; }
+      return { week: w, cheaperPct: Math.round(cheaper), equalPct: Math.round(aligned), higherPct: 100 - Math.round(cheaper) - Math.round(aligned) };
+    });
+  }
+
+  function renderTable(cat) {
+    currentRows = cat.brands.map(function (b) { return buildOverviewRow(cat, b); });
+    currentRows.sort(function (a, c) { return a.pi - c.pi; });
+    prTableBody.innerHTML = currentRows.map(function (r, i) {
+      var sev = r.pi <= 100 ? 'good' : 'bad';
+      return '<tr data-i="' + i + '">' +
+        '<td class="pr-table-name">' + r.name + '</td>' +
+        '<td>' + r.analysed.toLocaleString('fr-FR') + '</td>' +
+        '<td>' + r.matched.toLocaleString('fr-FR') + '</td>' +
+        '<td><span class="pr-pi-pill ' + sev + '">' + r.pi + '</span></td>' +
+      '</tr>';
+    }).join('');
+    Array.prototype.forEach.call(prTableBody.querySelectorAll('tr'), function (row) {
+      row.addEventListener('click', function () {
+        showDetail(cat, currentRows[parseInt(row.dataset.i, 10)]);
+        Array.prototype.forEach.call(prTableBody.querySelectorAll('tr'), function (r) { r.classList.toggle('is-active', r === row); });
+      });
+    });
+    prDetail.classList.remove('is-visible');
+  }
+
+  function showDetail(cat, company) {
+    var competitors = currentRows.filter(function (r) { return r.name !== company.name; });
+
+    prDetailName.textContent = company.name;
+    var sev = company.pi <= 100 ? 'good' : 'bad';
+    prDetailPill.textContent = 'PI ' + company.pi;
+    prDetailPill.style.background = sev === 'good' ? 'var(--good)' : 'var(--bad)';
+    prDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' articles analysés';
+    prDetailMatched.textContent = company.matched.toLocaleString('fr-FR') + ' articles matchés';
+    prTrendSub.textContent = 'Tracé généré automatiquement — vs ' + competitors.length + ' concurrents.';
+
+    var pairwise = competitors.map(function (c) { return buildPairwise(cat, company.name, c.name); });
+    var palette = ['#f59e0b', '#14b8a6', '#8b5cf6', '#ec4899', '#3b82f6', '#84cc16', '#f97316', '#06b6d4', '#a855f7'];
+
+    var trendDatasets = pairwise.map(function (p, i) {
+      return {
+        label: p.name, data: buildTrend(cat, company.name, p.name, p.pi),
+        borderColor: palette[i % palette.length], backgroundColor: 'transparent',
+        tension: 0.35, pointRadius: 3,
+      };
+    });
+    trendDatasets.push({
+      label: '__ref100', data: WEEKS.map(function () { return 100; }),
+      borderColor: 'rgba(0,0,0,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false,
+    });
+
+    if (trendChart) trendChart.destroy();
+    if (window.Chart) {
+      trendChart = new Chart(document.getElementById('prTrendCanvas'), {
+        type: 'line',
+        data: { labels: WEEKS, datasets: trendDatasets },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
+          plugins: {
+            legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 }, filter: function (item) { return item.text !== '__ref100'; } } },
+            tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8, filter: function (item) { return item.dataset.label !== '__ref100'; } },
+          },
+        },
+      });
+    }
+
+    var attract = buildAttractiveness(cat, company.name);
+    if (attractChart) attractChart.destroy();
+    if (window.Chart) {
+      attractChart = new Chart(document.getElementById('prAttractCanvas'), {
+        type: 'line',
+        data: {
+          labels: attract.map(function (r) { return r.week; }),
+          datasets: [
+            { label: 'Cheaper', data: attract.map(function (r) { return r.cheaperPct; }), borderColor: '#1fae7a', backgroundColor: 'rgba(31,174,122,0.85)', fill: 'origin', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+            { label: 'Aligned', data: attract.map(function (r) { return r.equalPct; }), borderColor: '#2e58ca', backgroundColor: 'rgba(46,88,202,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+            { label: 'Pricier', data: attract.map(function (r) { return r.higherPct; }), borderColor: '#e2452f', backgroundColor: 'rgba(226,69,47,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+          ],
+        },
+        options: {
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: {
+            x: { stacked: true, grid: { display: true, color: 'rgba(255,255,255,0.65)', lineWidth: 1.5, drawTicks: false } },
+            y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
+          },
+          plugins: {
+            legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 } } },
+            tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
+          },
+        },
+      });
+    }
+
+    prCbarList.innerHTML = pairwise.map(function (p) {
+      var pisev = p.pi <= 100 ? 'good' : 'bad';
+      return '<div class="cbar-row">' +
+        '<div class="cbar-name">' + p.name + '</div>' +
+        '<div class="cbar-track">' +
+          '<div style="width:' + p.lowerPct + '%;background:var(--good);">' + (p.lowerPct >= 9 ? '<span class="cbar-seg__pct">' + p.lowerPct + '%</span>' : '') + '</div>' +
+          '<div style="width:' + p.equalPct + '%;background:var(--blue);">' + (p.equalPct >= 9 ? '<span class="cbar-seg__pct">' + p.equalPct + '%</span>' : '') + '</div>' +
+          '<div style="width:' + p.higherPct + '%;background:var(--bad);">' + (p.higherPct >= 9 ? '<span class="cbar-seg__pct">' + p.higherPct + '%</span>' : '') + '</div>' +
+        '</div>' +
+        '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + p.pi + '</div>' +
+      '</div>';
+    }).join('');
+
+    prDetail.classList.add('is-visible');
+    prDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   function renderGrid() {
     grid.innerHTML = '';
@@ -231,9 +503,7 @@
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
     previewTitle.textContent = cat.name;
-    previewBrands.innerHTML = cat.brands.map(function (b) {
-      return '<span class="an-brand-chip">' + b + '</span>';
-    }).join('');
+    renderTable(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }

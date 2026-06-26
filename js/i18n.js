@@ -532,6 +532,14 @@
       "an.catalogue.report.rankhead": "Additional revenue potential per retailer",
       "an.catalogue.report.note": "Illustrative example built with mock data — the version connected to your real data is coming soon.",
 
+      "an.pricing.th.name": "Retailer",
+      "an.pricing.th.analysed": "Items analyzed",
+      "an.pricing.th.matched": "Items matched",
+      "an.pricing.chart1.title": "Price index evolution",
+      "an.pricing.chart2.title": "Price attractivity evolution",
+      "an.pricing.chart2.sub": "Share of items cheaper / aligned / pricier than competitors.",
+      "an.pricing.chart3.title": "Pricing analysis",
+
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---
       "rp.toc.aria-label": "Report summary",
