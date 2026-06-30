@@ -30,14 +30,30 @@ def main():
     parser.add_argument("--weeks", type=int, default=13, help="Semaines d'historique (défaut 13).")
     args = parser.parse_args()
 
-    base_url, jwt_token = gr.get_site_jwt_and_base_url()
-    response = requests.get(
-        f"{base_url}/v1/companies",
-        headers={"Authorization": f"Bearer {jwt_token}"},
-        timeout=15,
-    )
-    response.raise_for_status()
-    companies = [c for c in response.json() if c.get("weeklyKpisEnabled")]
+    try:
+        base_url, jwt_token = gr.get_site_jwt_and_base_url()
+    except RuntimeError as e:
+        print(f"Configuration manquante : {e}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        response = requests.get(
+            f"{base_url}/v1/companies",
+            headers={"Authorization": f"Bearer {jwt_token}"},
+            timeout=15,
+        )
+        response.raise_for_status()
+        companies = [c for c in response.json() if c.get("weeklyKpisEnabled")]
+    except requests.RequestException as e:
+        print(
+            f"GET {base_url}/v1/companies a echoue ({e}). "
+            "Cet endpoint n'est pas encore disponible cote API nricher — voir "
+            "handoff-dev/SITE_REQUEST_companies_list_endpoint.md pour le suivi. "
+            "Rien a generer sans la liste des entreprises, la regeneration automatique "
+            "est suspendue jusqu'a ce que l'endpoint soit en place.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     if not companies:
         print("Aucune entreprise weeklyKpisEnabled=true reçue depuis l'API.", file=sys.stderr)
