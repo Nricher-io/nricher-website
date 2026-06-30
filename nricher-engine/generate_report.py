@@ -272,17 +272,32 @@ def fetch_weekly_kpis(company_id, weeks=13):
     Mint un token par-entreprise frais a la volee (jamais stocke, voir
     create_company_token), l'utilise immediatement pour cet appel, puis le
     jette. Necessite NRICHER_SITE_TOKEN dans .env (voir .env.example).
+
+    Le token transite en query param (?token=...) pour cet appel - toute
+    exception levee ici (raise_for_status notamment) DOIT avoir le token
+    retire de son message avant de remonter, sinon il finit en clair dans
+    les logs (publics, ce repo est public). Voir _scrub_token.
     """
     base_url, jwt_token = get_site_jwt_and_base_url()
     company_token = create_company_token(company_id, base_url, jwt_token)
 
-    response = requests.get(
-        f"{base_url}/v1/weekly-kpis/{company_id}",
-        params={"token": company_token, "weeks": weeks},
-        timeout=30,
-    )
-    response.raise_for_status()
-    return response.json()
+    try:
+        response = requests.get(
+            f"{base_url}/v1/weekly-kpis/{company_id}",
+            params={"token": company_token, "weeks": weeks},
+            timeout=30,
+        )
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        raise requests.RequestException(_scrub_token(str(e))) from None
+
+
+def _scrub_token(message):
+    """Retire toute valeur de query param token=... d'un message d'erreur
+    avant logging (le token est mint a la volee par entreprise, jamais
+    cense apparaitre en clair dans les logs CI, publics sur ce repo)."""
+    return re.sub(r"token=[^&\s]+", "token=***", message)
 
 
 def render_report(data, env):
