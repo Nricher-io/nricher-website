@@ -1,0 +1,82 @@
+{
+  "packName": "Table à manger",
+  "totalArticles": 8572,
+  "topPct": 51,
+  "midPct": 27,
+  "lowPct": 22,
+  "topSellersCount": 1206,
+  "ranking": [
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 367,
+      "potentialPct": 96
+    },
+    {
+      "slug": "as-discount",
+      "name": "As Discount",
+      "topSellerArticles": 225,
+      "potentialPct": 97
+    },
+    {
+      "slug": "id-market",
+      "name": "Id Market",
+      "topSellerArticles": 177,
+      "potentialPct": 98
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 166,
+      "potentialPct": 98
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 146,
+      "potentialPct": 98
+    },
+    {
+      "slug": "zoomici",
+      "name": "Zoomici",
+      "topSellerArticles": 125,
+      "potentialPct": 99
+    },
+    {
+      "slug": "paris-prix",
+      "name": "Paris Prix",
+      "topSellerArticles": 110,
+      "potentialPct": 99
+    },
+    {
+      "slug": "sydae",
+      "name": "Sydae",
+      "topSellerArticles": 89,
+      "potentialPct": 99
+    },
+    {
+      "slug": "2kings",
+      "name": "2kings",
+      "topSellerArticles": 88,
+      "potentialPct": 99
+    },
+    {
+      "slug": "super10count",
+      "name": "Super10count",
+      "topSellerArticles": 72,
+      "potentialPct": 99
+    },
+    {
+      "slug": "premium-xl",
+      "name": "Premium Xl",
+      "topSellerArticles": 64,
+      "potentialPct": 99
+    },
+    {
+      "slug": "cstore",
+      "name": "Cstore",
+      "topSellerArticles": 57,
+      "potentialPct": 99
+    }
+  ]
+}

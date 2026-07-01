@@ -1,0 +1,70 @@
+{
+  "packName": "Sac à dos",
+  "totalArticles": 1755,
+  "topPct": 53,
+  "midPct": 38,
+  "lowPct": 9,
+  "topSellersCount": 2074,
+  "ranking": [
+    {
+      "slug": "snowleader",
+      "name": "Snowleader",
+      "topSellerArticles": 1406,
+      "potentialPct": 20
+    },
+    {
+      "slug": "alltricks",
+      "name": "Alltricks",
+      "topSellerArticles": 668,
+      "potentialPct": 62
+    },
+    {
+      "slug": "trekkinn",
+      "name": "Trekkinn",
+      "topSellerArticles": 659,
+      "potentialPct": 62
+    },
+    {
+      "slug": "ekosport",
+      "name": "Ekosport",
+      "topSellerArticles": 507,
+      "potentialPct": 71
+    },
+    {
+      "slug": "glisshop",
+      "name": "Glisshop",
+      "topSellerArticles": 303,
+      "potentialPct": 83
+    },
+    {
+      "slug": "hardloop",
+      "name": "Hardloop",
+      "topSellerArticles": 188,
+      "potentialPct": 89
+    },
+    {
+      "slug": "irun",
+      "name": "Irun",
+      "topSellerArticles": 156,
+      "potentialPct": 91
+    },
+    {
+      "slug": "snowinn",
+      "name": "Snowinn",
+      "topSellerArticles": 16,
+      "potentialPct": 99
+    },
+    {
+      "slug": "runnerinn",
+      "name": "Runnerinn",
+      "topSellerArticles": 12,
+      "potentialPct": 99
+    },
+    {
+      "slug": "an-mai-mao-yi",
+      "name": "An Mai Mao Yi",
+      "topSellerArticles": 1,
+      "potentialPct": 100
+    }
+  ]
+}

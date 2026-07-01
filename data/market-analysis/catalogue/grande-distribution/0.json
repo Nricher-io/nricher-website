@@ -1,0 +1,82 @@
+{
+  "packName": "Canapé",
+  "totalArticles": 16610,
+  "topPct": 75,
+  "midPct": 16,
+  "lowPct": 9,
+  "topSellersCount": 9620,
+  "ranking": [
+    {
+      "slug": "les-tendances",
+      "name": "Les Tendances",
+      "topSellerArticles": 3478,
+      "potentialPct": 79
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 2348,
+      "potentialPct": 86
+    },
+    {
+      "slug": "best-mobilier",
+      "name": "Best Mobilier",
+      "topSellerArticles": 1667,
+      "potentialPct": 90
+    },
+    {
+      "slug": "beliani",
+      "name": "Beliani",
+      "topSellerArticles": 1301,
+      "potentialPct": 92
+    },
+    {
+      "slug": "silverstore",
+      "name": "Silverstore",
+      "topSellerArticles": 496,
+      "potentialPct": 97
+    },
+    {
+      "slug": "dmora",
+      "name": "Dmora",
+      "topSellerArticles": 330,
+      "potentialPct": 98
+    },
+    {
+      "slug": "mercatoxl",
+      "name": "Mercatoxl",
+      "topSellerArticles": 291,
+      "potentialPct": 98
+    },
+    {
+      "slug": "rama-shop",
+      "name": "Rama Shop",
+      "topSellerArticles": 277,
+      "potentialPct": 98
+    },
+    {
+      "slug": "cdiscount",
+      "name": "Cdiscount",
+      "topSellerArticles": 263,
+      "potentialPct": 98
+    },
+    {
+      "slug": "paris-prix",
+      "name": "Paris Prix",
+      "topSellerArticles": 252,
+      "potentialPct": 98
+    },
+    {
+      "slug": "komhtom",
+      "name": "Komhtom",
+      "topSellerArticles": 241,
+      "potentialPct": 99
+    },
+    {
+      "slug": "super10count",
+      "name": "Super10count",
+      "topSellerArticles": 240,
+      "potentialPct": 99
+    }
+  ]
+}

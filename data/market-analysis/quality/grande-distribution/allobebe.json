@@ -1,0 +1,53 @@
+{
+  "slug": "allobebe",
+  "name": "Allobebe",
+  "articlesAnalysed": 14048,
+  "qualityScore": 61,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 10,
+    "B": 11,
+    "C": 30,
+    "D": 22,
+    "E": 16,
+    "F": 11
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 10,
+      "A": 5,
+      "B": 9,
+      "C": 24,
+      "D": 20,
+      "E": 19,
+      "F": 14
+    },
+    "Image": {
+      "Aplus": 39,
+      "A": 11,
+      "B": 14,
+      "C": 14,
+      "D": 0,
+      "E": 10,
+      "F": 12
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 31,
+      "A": 9,
+      "B": 11,
+      "C": 20,
+      "D": 13,
+      "E": 9,
+      "F": 6
+    }
+  }
+}

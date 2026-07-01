@@ -1,0 +1,299 @@
+{
+  "slug": "darty",
+  "name": "Darty",
+  "priceIndex": 102,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        133,
+        141,
+        137,
+        137,
+        136,
+        135
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        123,
+        113,
+        117,
+        120,
+        113,
+        117
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        124,
+        122,
+        127,
+        124,
+        125,
+        133
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        146,
+        152,
+        154,
+        167,
+        169,
+        160
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        105,
+        104,
+        104,
+        103,
+        105,
+        105
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        101,
+        104,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        160,
+        162,
+        167,
+        150,
+        156,
+        159
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        158,
+        159,
+        158,
+        158,
+        156,
+        164
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        141,
+        143,
+        143,
+        132,
+        133,
+        134
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        103,
+        106,
+        105,
+        103,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        151,
+        147,
+        156,
+        154,
+        154,
+        152
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        138,
+        131,
+        136,
+        138,
+        135,
+        127
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        134,
+        139,
+        143,
+        138,
+        140,
+        138
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        109,
+        109,
+        110,
+        110,
+        111,
+        114
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        111,
+        112,
+        109,
+        117,
+        115,
+        117
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        115,
+        116,
+        114,
+        112,
+        115,
+        116
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        102,
+        104,
+        104,
+        104,
+        105,
+        104
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        97,
+        99,
+        100,
+        100,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        114,
+        112,
+        116,
+        113,
+        116,
+        115
+      ]
+    }
+  ],
+  "attractiveness": [
+    {
+      "week": "2026-05-26",
+      "cheaperPct": 42,
+      "equalPct": 35,
+      "higherPct": 23
+    },
+    {
+      "week": "2026-06-02",
+      "cheaperPct": 48,
+      "equalPct": 27,
+      "higherPct": 25
+    },
+    {
+      "week": "2026-06-09",
+      "cheaperPct": 47,
+      "equalPct": 30,
+      "higherPct": 23
+    },
+    {
+      "week": "2026-06-16",
+      "cheaperPct": 48,
+      "equalPct": 26,
+      "higherPct": 26
+    },
+    {
+      "week": "2026-06-23",
+      "cheaperPct": 47,
+      "equalPct": 31,
+      "higherPct": 22
+    },
+    {
+      "week": "2026-06-30",
+      "cheaperPct": 38,
+      "equalPct": 40,
+      "higherPct": 23
+    }
+  ],
+  "pairwise": [
+    {
+      "pack": "Canapé",
+      "priceIndex": 102,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 100
+    },
+    {
+      "pack": "Lit",
+      "priceIndex": 108,
+      "lowerPct": 42,
+      "equalPct": 5,
+      "higherPct": 53
+    },
+    {
+      "pack": "Matelas",
+      "priceIndex": 83,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Fauteuil",
+      "priceIndex": 94,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Table à manger",
+      "priceIndex": 101,
+      "lowerPct": 57,
+      "equalPct": 0,
+      "higherPct": 43
+    }
+  ]
+}

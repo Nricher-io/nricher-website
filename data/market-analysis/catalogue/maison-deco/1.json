@@ -1,0 +1,82 @@
+{
+  "packName": "Lampe à poser",
+  "totalArticles": 3001,
+  "topPct": 78,
+  "midPct": 20,
+  "lowPct": 2,
+  "topSellersCount": 3766,
+  "ranking": [
+    {
+      "slug": "nedgis",
+      "name": "Nedgis",
+      "topSellerArticles": 1065,
+      "potentialPct": 65
+    },
+    {
+      "slug": "connox",
+      "name": "Connox",
+      "topSellerArticles": 858,
+      "potentialPct": 71
+    },
+    {
+      "slug": "the-cool-republic",
+      "name": "The Cool Republic",
+      "topSellerArticles": 658,
+      "potentialPct": 78
+    },
+    {
+      "slug": "lamptwist",
+      "name": "Lamptwist",
+      "topSellerArticles": 646,
+      "potentialPct": 78
+    },
+    {
+      "slug": "lemaitredeslampes",
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 539,
+      "potentialPct": 82
+    },
+    {
+      "slug": "asteri",
+      "name": "Asteri",
+      "topSellerArticles": 269,
+      "potentialPct": 91
+    },
+    {
+      "slug": "le-cedre-rouge",
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 217,
+      "potentialPct": 93
+    },
+    {
+      "slug": "light11",
+      "name": "Light11",
+      "topSellerArticles": 162,
+      "potentialPct": 95
+    },
+    {
+      "slug": "myareadesign",
+      "name": "Myareadesign",
+      "topSellerArticles": 93,
+      "potentialPct": 97
+    },
+    {
+      "slug": "dbs-rdc",
+      "name": "Dbs Rdc",
+      "topSellerArticles": 81,
+      "potentialPct": 97
+    },
+    {
+      "slug": "dyberg-larsen",
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 76,
+      "potentialPct": 97
+    },
+    {
+      "slug": "hubsch",
+      "name": "Hubsch",
+      "topSellerArticles": 54,
+      "potentialPct": 98
+    }
+  ]
+}

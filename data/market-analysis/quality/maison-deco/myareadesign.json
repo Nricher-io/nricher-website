@@ -1,0 +1,53 @@
+{
+  "slug": "myareadesign",
+  "name": "Myareadesign",
+  "articlesAnalysed": 25801,
+  "qualityScore": 69,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 11,
+    "B": 23,
+    "C": 40,
+    "D": 16,
+    "E": 7,
+    "F": 2
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 71,
+      "A": 9,
+      "B": 9,
+      "C": 9,
+      "D": 2,
+      "E": 0,
+      "F": 0
+    },
+    "Image": {
+      "Aplus": 27,
+      "A": 10,
+      "B": 11,
+      "C": 16,
+      "D": 0,
+      "E": 13,
+      "F": 22
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 13,
+      "A": 5,
+      "B": 10,
+      "C": 15,
+      "D": 11,
+      "E": 16,
+      "F": 30
+    }
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "aurlane",
+    "name": "Aurlane",
+    "articlesAnalysed": 2132,
+    "qualityScore": 80
+  },
+  {
+    "slug": "cdiscount",
+    "name": "Cdiscount",
+    "articlesAnalysed": 1180654,
+    "qualityScore": 75
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "articlesAnalysed": 241804,
+    "qualityScore": 74
+  },
+  {
+    "slug": "carrefour",
+    "name": "Carrefour",
+    "articlesAnalysed": 536224,
+    "qualityScore": 65
+  },
+  {
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 394160,
+    "qualityScore": 64
+  },
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 48146,
+    "qualityScore": 62
+  },
+  {
+    "slug": "allobebe",
+    "name": "Allobebe",
+    "articlesAnalysed": 14048,
+    "qualityScore": 61
+  },
+  {
+    "slug": "vente-unique",
+    "name": "Vente Unique",
+    "articlesAnalysed": 677458,
+    "qualityScore": 58
+  },
+  {
+    "slug": "boulanger",
+    "name": "Boulanger",
+    "articlesAnalysed": 224661,
+    "qualityScore": 55
+  },
+  {
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 578457,
+    "qualityScore": 54
+  },
+  {
+    "slug": "darty",
+    "name": "Darty",
+    "articlesAnalysed": 788276,
+    "qualityScore": 52
+  },
+  {
+    "slug": "autourdebebe",
+    "name": "Autourdebebe",
+    "articlesAnalysed": 17187,
+    "qualityScore": 52
+  }
+]

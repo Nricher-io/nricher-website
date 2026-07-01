@@ -1,0 +1,82 @@
+{
+  "packName": "Fauteuil",
+  "totalArticles": 10024,
+  "topPct": 60,
+  "midPct": 24,
+  "lowPct": 16,
+  "topSellersCount": 1667,
+  "ranking": [
+    {
+      "slug": "beliani",
+      "name": "Beliani",
+      "topSellerArticles": 418,
+      "potentialPct": 96
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 325,
+      "potentialPct": 97
+    },
+    {
+      "slug": "mycocooning",
+      "name": "Mycocooning",
+      "topSellerArticles": 309,
+      "potentialPct": 97
+    },
+    {
+      "slug": "paris-prix",
+      "name": "Paris Prix",
+      "topSellerArticles": 221,
+      "potentialPct": 98
+    },
+    {
+      "slug": "recollection",
+      "name": "Recollection",
+      "topSellerArticles": 217,
+      "potentialPct": 98
+    },
+    {
+      "slug": "heute-wohnen",
+      "name": "Heute Wohnen",
+      "topSellerArticles": 177,
+      "potentialPct": 98
+    },
+    {
+      "slug": "decoration-brands",
+      "name": "Decoration Brands",
+      "topSellerArticles": 113,
+      "potentialPct": 99
+    },
+    {
+      "slug": "rama-shop",
+      "name": "Rama Shop",
+      "topSellerArticles": 101,
+      "potentialPct": 99
+    },
+    {
+      "slug": "altobuy",
+      "name": "Altobuy",
+      "topSellerArticles": 83,
+      "potentialPct": 99
+    },
+    {
+      "slug": "toilinux",
+      "name": "Toilinux",
+      "topSellerArticles": 70,
+      "potentialPct": 99
+    },
+    {
+      "slug": "the-concept-factory",
+      "name": "The Concept Factory",
+      "topSellerArticles": 66,
+      "potentialPct": 99
+    },
+    {
+      "slug": "maxibazar",
+      "name": "Maxibazar",
+      "topSellerArticles": 64,
+      "potentialPct": 99
+    }
+  ]
+}

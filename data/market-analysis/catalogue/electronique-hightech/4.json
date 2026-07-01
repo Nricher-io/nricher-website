@@ -1,0 +1,82 @@
+{
+  "packName": "Tablette",
+  "totalArticles": 1625,
+  "topPct": 50,
+  "midPct": 30,
+  "lowPct": 20,
+  "topSellersCount": 785,
+  "ranking": [
+    {
+      "slug": "multishop",
+      "name": "Multishop",
+      "topSellerArticles": 186,
+      "potentialPct": 89
+    },
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 184,
+      "potentialPct": 89
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 110,
+      "potentialPct": 93
+    },
+    {
+      "slug": "yonis-shop",
+      "name": "Yonis Shop",
+      "topSellerArticles": 109,
+      "potentialPct": 93
+    },
+    {
+      "slug": "cdiscount",
+      "name": "Cdiscount",
+      "topSellerArticles": 99,
+      "potentialPct": 94
+    },
+    {
+      "slug": "boulanger",
+      "name": "Boulanger",
+      "topSellerArticles": 97,
+      "potentialPct": 94
+    },
+    {
+      "slug": "rps-technologies",
+      "name": "Rps Technologies",
+      "topSellerArticles": 81,
+      "potentialPct": 95
+    },
+    {
+      "slug": "rue-du-commerce",
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 69,
+      "potentialPct": 96
+    },
+    {
+      "slug": "carrefour",
+      "name": "Carrefour",
+      "topSellerArticles": 60,
+      "potentialPct": 96
+    },
+    {
+      "slug": "infopavon",
+      "name": "Infopavon",
+      "topSellerArticles": 59,
+      "potentialPct": 96
+    },
+    {
+      "slug": "zoomici",
+      "name": "Zoomici",
+      "topSellerArticles": 48,
+      "potentialPct": 97
+    },
+    {
+      "slug": "2kings",
+      "name": "2kings",
+      "topSellerArticles": 40,
+      "potentialPct": 98
+    }
+  ]
+}

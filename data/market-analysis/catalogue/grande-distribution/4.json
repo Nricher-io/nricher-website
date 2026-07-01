@@ -1,0 +1,82 @@
+{
+  "packName": "Table à manger",
+  "totalArticles": 7844,
+  "topPct": 66,
+  "midPct": 21,
+  "lowPct": 13,
+  "topSellersCount": 4366,
+  "ranking": [
+    {
+      "slug": "les-tendances",
+      "name": "Les Tendances",
+      "topSellerArticles": 1831,
+      "potentialPct": 77
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 1115,
+      "potentialPct": 86
+    },
+    {
+      "slug": "casaarredostudio",
+      "name": "Casaarredostudio",
+      "topSellerArticles": 512,
+      "potentialPct": 93
+    },
+    {
+      "slug": "sololed",
+      "name": "Sololed",
+      "topSellerArticles": 379,
+      "potentialPct": 95
+    },
+    {
+      "slug": "beliani",
+      "name": "Beliani",
+      "topSellerArticles": 281,
+      "potentialPct": 96
+    },
+    {
+      "slug": "wearredo",
+      "name": "Wearredo",
+      "topSellerArticles": 248,
+      "potentialPct": 97
+    },
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 216,
+      "potentialPct": 97
+    },
+    {
+      "slug": "paris-prix",
+      "name": "Paris Prix",
+      "topSellerArticles": 213,
+      "potentialPct": 97
+    },
+    {
+      "slug": "id-market",
+      "name": "Id Market",
+      "topSellerArticles": 199,
+      "potentialPct": 97
+    },
+    {
+      "slug": "kivio",
+      "name": "Kivio",
+      "topSellerArticles": 198,
+      "potentialPct": 97
+    },
+    {
+      "slug": "shopnova",
+      "name": "Shopnova",
+      "topSellerArticles": 160,
+      "potentialPct": 98
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 111,
+      "potentialPct": 99
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "packName": "Applique murale",
+  "totalArticles": 1954,
+  "topPct": 78,
+  "midPct": 16,
+  "lowPct": 6,
+  "topSellersCount": 1521,
+  "ranking": [
+    {
+      "slug": "nedgis",
+      "name": "Nedgis",
+      "topSellerArticles": 814,
+      "potentialPct": 58
+    },
+    {
+      "slug": "lamptwist",
+      "name": "Lamptwist",
+      "topSellerArticles": 358,
+      "potentialPct": 82
+    },
+    {
+      "slug": "the-cool-republic",
+      "name": "The Cool Republic",
+      "topSellerArticles": 235,
+      "potentialPct": 88
+    },
+    {
+      "slug": "lemaitredeslampes",
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 114,
+      "potentialPct": 94
+    },
+    {
+      "slug": "light11",
+      "name": "Light11",
+      "topSellerArticles": 93,
+      "potentialPct": 95
+    },
+    {
+      "slug": "asteri",
+      "name": "Asteri",
+      "topSellerArticles": 65,
+      "potentialPct": 97
+    },
+    {
+      "slug": "evolutiv-solutions",
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 63,
+      "potentialPct": 97
+    },
+    {
+      "slug": "myareadesign",
+      "name": "Myareadesign",
+      "topSellerArticles": 42,
+      "potentialPct": 98
+    },
+    {
+      "slug": "connox",
+      "name": "Connox",
+      "topSellerArticles": 42,
+      "potentialPct": 98
+    },
+    {
+      "slug": "dyberg-larsen",
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 34,
+      "potentialPct": 98
+    },
+    {
+      "slug": "dbs-rdc",
+      "name": "Dbs Rdc",
+      "topSellerArticles": 26,
+      "potentialPct": 99
+    },
+    {
+      "slug": "hubsch",
+      "name": "Hubsch",
+      "topSellerArticles": 21,
+      "potentialPct": 99
+    }
+  ]
+}

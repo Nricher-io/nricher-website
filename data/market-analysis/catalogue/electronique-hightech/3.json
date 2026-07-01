@@ -1,0 +1,82 @@
+{
+  "packName": "Casque audio",
+  "totalArticles": 2642,
+  "topPct": 51,
+  "midPct": 30,
+  "lowPct": 19,
+  "topSellersCount": 1676,
+  "ranking": [
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 500,
+      "potentialPct": 81
+    },
+    {
+      "slug": "darty",
+      "name": "Darty",
+      "topSellerArticles": 294,
+      "potentialPct": 89
+    },
+    {
+      "slug": "boulanger",
+      "name": "Boulanger",
+      "topSellerArticles": 259,
+      "potentialPct": 90
+    },
+    {
+      "slug": "2kings",
+      "name": "2kings",
+      "topSellerArticles": 251,
+      "potentialPct": 90
+    },
+    {
+      "slug": "as-discount",
+      "name": "As Discount",
+      "topSellerArticles": 201,
+      "potentialPct": 92
+    },
+    {
+      "slug": "zoomici",
+      "name": "Zoomici",
+      "topSellerArticles": 171,
+      "potentialPct": 94
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 167,
+      "potentialPct": 94
+    },
+    {
+      "slug": "goya",
+      "name": "Goya",
+      "topSellerArticles": 143,
+      "potentialPct": 95
+    },
+    {
+      "slug": "monsieurplus",
+      "name": "Monsieurplus",
+      "topSellerArticles": 142,
+      "potentialPct": 95
+    },
+    {
+      "slug": "rue-du-commerce",
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 142,
+      "potentialPct": 95
+    },
+    {
+      "slug": "cdiscount",
+      "name": "Cdiscount",
+      "topSellerArticles": 128,
+      "potentialPct": 95
+    },
+    {
+      "slug": "warenwelt-24",
+      "name": "Warenwelt 24",
+      "topSellerArticles": 74,
+      "potentialPct": 97
+    }
+  ]
+}

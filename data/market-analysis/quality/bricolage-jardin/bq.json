@@ -1,0 +1,53 @@
+{
+  "slug": "bq",
+  "name": "Bq",
+  "articlesAnalysed": 1859235,
+  "qualityScore": 76,
+  "globalGrades": {
+    "Aplus": 2,
+    "A": 29,
+    "B": 27,
+    "C": 27,
+    "D": 9,
+    "E": 4,
+    "F": 2
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 63,
+      "A": 10,
+      "B": 9,
+      "C": 11,
+      "D": 5,
+      "E": 2,
+      "F": 0
+    },
+    "Image": {
+      "Aplus": 40,
+      "A": 11,
+      "B": 9,
+      "C": 11,
+      "D": 0,
+      "E": 14,
+      "F": 16
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 4,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 96
+    },
+    "Description": {
+      "Aplus": 45,
+      "A": 10,
+      "B": 10,
+      "C": 12,
+      "D": 7,
+      "E": 7,
+      "F": 10
+    }
+  }
+}

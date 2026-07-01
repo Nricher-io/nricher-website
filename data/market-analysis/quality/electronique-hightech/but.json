@@ -1,0 +1,53 @@
+{
+  "slug": "but",
+  "name": "But",
+  "articlesAnalysed": 343747,
+  "qualityScore": 70,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 22,
+    "B": 21,
+    "C": 24,
+    "D": 22,
+    "E": 9,
+    "F": 2
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 48,
+      "A": 11,
+      "B": 12,
+      "C": 16,
+      "D": 7,
+      "E": 4,
+      "F": 2
+    },
+    "Image": {
+      "Aplus": 70,
+      "A": 9,
+      "B": 8,
+      "C": 5,
+      "D": 0,
+      "E": 4,
+      "F": 5
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 44,
+      "A": 9,
+      "B": 9,
+      "C": 12,
+      "D": 6,
+      "E": 7,
+      "F": 13
+    }
+  }
+}

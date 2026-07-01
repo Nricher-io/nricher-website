@@ -1,0 +1,53 @@
+{
+  "slug": "andlight",
+  "name": "Andlight",
+  "articlesAnalysed": 32013,
+  "qualityScore": 59,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 2,
+    "B": 8,
+    "C": 36,
+    "D": 30,
+    "E": 17,
+    "F": 7
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 5,
+      "A": 4,
+      "B": 8,
+      "C": 22,
+      "D": 21,
+      "E": 22,
+      "F": 18
+    },
+    "Image": {
+      "Aplus": 34,
+      "A": 14,
+      "B": 19,
+      "C": 15,
+      "D": 0,
+      "E": 11,
+      "F": 8
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 13,
+      "A": 8,
+      "B": 9,
+      "C": 24,
+      "D": 18,
+      "E": 13,
+      "F": 14
+    }
+  }
+}

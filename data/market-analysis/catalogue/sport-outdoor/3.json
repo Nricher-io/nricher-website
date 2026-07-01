@@ -1,0 +1,70 @@
+{
+  "packName": "Veste",
+  "totalArticles": 1882,
+  "topPct": 54,
+  "midPct": 34,
+  "lowPct": 12,
+  "topSellersCount": 1722,
+  "ranking": [
+    {
+      "slug": "snowleader",
+      "name": "Snowleader",
+      "topSellerArticles": 1343,
+      "potentialPct": 29
+    },
+    {
+      "slug": "trekkinn",
+      "name": "Trekkinn",
+      "topSellerArticles": 379,
+      "potentialPct": 80
+    },
+    {
+      "slug": "ekosport",
+      "name": "Ekosport",
+      "topSellerArticles": 374,
+      "potentialPct": 80
+    },
+    {
+      "slug": "hardloop",
+      "name": "Hardloop",
+      "topSellerArticles": 370,
+      "potentialPct": 80
+    },
+    {
+      "slug": "alltricks",
+      "name": "Alltricks",
+      "topSellerArticles": 327,
+      "potentialPct": 83
+    },
+    {
+      "slug": "irun",
+      "name": "Irun",
+      "topSellerArticles": 159,
+      "potentialPct": 92
+    },
+    {
+      "slug": "snowinn",
+      "name": "Snowinn",
+      "topSellerArticles": 130,
+      "potentialPct": 93
+    },
+    {
+      "slug": "glisshop",
+      "name": "Glisshop",
+      "topSellerArticles": 95,
+      "potentialPct": 95
+    },
+    {
+      "slug": "runnerinn",
+      "name": "Runnerinn",
+      "topSellerArticles": 14,
+      "potentialPct": 99
+    },
+    {
+      "slug": "sports-partners",
+      "name": "Sports Partners",
+      "topSellerArticles": 2,
+      "potentialPct": 100
+    }
+  ]
+}

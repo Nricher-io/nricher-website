@@ -1,0 +1,387 @@
+[
+  {
+    "id": "maison-deco",
+    "name": "Maison & Décoration",
+    "companies": [
+      {
+        "slug": "vente-unique",
+        "name": "Vente Unique"
+      },
+      {
+        "slug": "debenhams",
+        "name": "Debenhams"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
+        "slug": "but",
+        "name": "But"
+      },
+      {
+        "slug": "maisons-du-monde",
+        "name": "Maisons Du Monde"
+      },
+      {
+        "slug": "connox",
+        "name": "Connox"
+      },
+      {
+        "slug": "andlight",
+        "name": "Andlight"
+      },
+      {
+        "slug": "light11",
+        "name": "Light11"
+      },
+      {
+        "slug": "thecoolrepublic",
+        "name": "Thecoolrepublic"
+      },
+      {
+        "slug": "jardindeco",
+        "name": "Jardindeco"
+      },
+      {
+        "slug": "maxibazar",
+        "name": "Maxibazar"
+      },
+      {
+        "slug": "lemaitredeslampes",
+        "name": "Lemaitredeslampes"
+      },
+      {
+        "slug": "asteri",
+        "name": "Asteri"
+      },
+      {
+        "slug": "design-bestseller",
+        "name": "Design-bestseller"
+      },
+      {
+        "slug": "myareadesign",
+        "name": "Myareadesign"
+      },
+      {
+        "slug": "nedgis",
+        "name": "Nedgis"
+      },
+      {
+        "slug": "drawer",
+        "name": "Drawer"
+      },
+      {
+        "slug": "lecedrerouge",
+        "name": "Lecedrerouge"
+      }
+    ],
+    "packs": [
+      "Suspension",
+      "Lampe à poser",
+      "Applique murale",
+      "Lampadaire",
+      "Plafonnier"
+    ]
+  },
+  {
+    "id": "bricolage-jardin",
+    "name": "Bricolage & Jardin",
+    "companies": [
+      {
+        "slug": "bq",
+        "name": "Bq"
+      },
+      {
+        "slug": "manomano",
+        "name": "Manomano"
+      },
+      {
+        "slug": "cdiscount",
+        "name": "Cdiscount"
+      },
+      {
+        "slug": "castorama",
+        "name": "Castorama"
+      },
+      {
+        "slug": "vente-unique",
+        "name": "Vente Unique"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
+        "slug": "la-redoute",
+        "name": "La Redoute"
+      },
+      {
+        "slug": "leroy-merlin",
+        "name": "Leroy Merlin"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
+      },
+      {
+        "slug": "auchan",
+        "name": "Auchan"
+      },
+      {
+        "slug": "maxibazar",
+        "name": "Maxibazar"
+      },
+      {
+        "slug": "drawer",
+        "name": "Drawer"
+      }
+    ],
+    "packs": [
+      "Salon de jardin",
+      "Canapé",
+      "Matelas",
+      "Lit",
+      "Commode"
+    ]
+  },
+  {
+    "id": "sport-outdoor",
+    "name": "Sport & Outdoor",
+    "companies": [
+      {
+        "slug": "alpiniste",
+        "name": "Alpiniste"
+      },
+      {
+        "slug": "trekkinn",
+        "name": "Trekkinn"
+      },
+      {
+        "slug": "alltricks",
+        "name": "Alltricks"
+      },
+      {
+        "slug": "runnerinn",
+        "name": "Runnerinn"
+      },
+      {
+        "slug": "snowleader",
+        "name": "Snowleader"
+      },
+      {
+        "slug": "snowleader-ch",
+        "name": "Snowleader Ch"
+      },
+      {
+        "slug": "irun",
+        "name": "Irun"
+      },
+      {
+        "slug": "glisshop",
+        "name": "Glisshop"
+      },
+      {
+        "slug": "hardloop",
+        "name": "Hardloop"
+      },
+      {
+        "slug": "ekosport",
+        "name": "Ekosport"
+      }
+    ],
+    "packs": [
+      "Chaussures de trail",
+      "Chaussures de randonnée",
+      "Sac à dos",
+      "Veste",
+      "T-shirt"
+    ]
+  },
+  {
+    "id": "beaute-parfumerie",
+    "name": "Beauté & Parfumerie",
+    "companies": [],
+    "packs": [
+      "Maquillage",
+      "Parfum",
+      "Soin du visage",
+      "Coffret"
+    ]
+  },
+  {
+    "id": "electronique-hightech",
+    "name": "Électronique & High-Tech",
+    "companies": [
+      {
+        "slug": "cdiscount",
+        "name": "Cdiscount"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "fnac",
+        "name": "Fnac"
+      },
+      {
+        "slug": "carrefour",
+        "name": "Carrefour"
+      },
+      {
+        "slug": "rue-du-commerce",
+        "name": "Rue Du Commerce"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
+        "slug": "but",
+        "name": "But"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "auchan",
+        "name": "Auchan"
+      },
+      {
+        "slug": "underdog",
+        "name": "Underdog"
+      }
+    ],
+    "packs": [
+      "Smartphone",
+      "Ordinateur portable",
+      "Télévision",
+      "Casque audio",
+      "Tablette"
+    ]
+  },
+  {
+    "id": "grande-distribution",
+    "name": "Grande Distribution",
+    "companies": [
+      {
+        "slug": "cdiscount",
+        "name": "Cdiscount"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "vente-unique",
+        "name": "Vente Unique"
+      },
+      {
+        "slug": "fnac",
+        "name": "Fnac"
+      },
+      {
+        "slug": "carrefour",
+        "name": "Carrefour"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "auchan",
+        "name": "Auchan"
+      },
+      {
+        "slug": "autourdebebe",
+        "name": "Autourdebebe"
+      },
+      {
+        "slug": "allobebe",
+        "name": "Allobebe"
+      },
+      {
+        "slug": "aurlane",
+        "name": "Aurlane"
+      }
+    ],
+    "packs": [
+      "Canapé",
+      "Lit",
+      "Matelas",
+      "Fauteuil",
+      "Table à manger"
+    ]
+  },
+  {
+    "id": "marketplaces",
+    "name": "Marketplaces en ligne",
+    "companies": [
+      {
+        "slug": "cdiscount",
+        "name": "Cdiscount"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "vente-unique",
+        "name": "Vente Unique"
+      },
+      {
+        "slug": "fnac",
+        "name": "Fnac"
+      },
+      {
+        "slug": "carrefour",
+        "name": "Carrefour"
+      },
+      {
+        "slug": "rue-du-commerce",
+        "name": "Rue Du Commerce"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
+        "slug": "la-redoute",
+        "name": "La Redoute"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "auchan",
+        "name": "Auchan"
+      }
+    ],
+    "packs": [
+      "Smartphone",
+      "Canapé",
+      "Matelas",
+      "Lit",
+      "Table à manger"
+    ]
+  }
+]

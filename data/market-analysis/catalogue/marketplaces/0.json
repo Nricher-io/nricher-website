@@ -1,0 +1,82 @@
+{
+  "packName": "Smartphone",
+  "totalArticles": 11292,
+  "topPct": 49,
+  "midPct": 28,
+  "lowPct": 23,
+  "topSellersCount": 3360,
+  "ranking": [
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 1284,
+      "potentialPct": 89
+    },
+    {
+      "slug": "junmingshop",
+      "name": "Junmingshop",
+      "topSellerArticles": 531,
+      "potentialPct": 95
+    },
+    {
+      "slug": "fnac",
+      "name": "Fnac",
+      "topSellerArticles": 442,
+      "potentialPct": 96
+    },
+    {
+      "slug": "jiddenks",
+      "name": "Jiddenks",
+      "topSellerArticles": 416,
+      "potentialPct": 96
+    },
+    {
+      "slug": "ecofone",
+      "name": "Ecofone",
+      "topSellerArticles": 348,
+      "potentialPct": 97
+    },
+    {
+      "slug": "alloccaz",
+      "name": "Alloccaz",
+      "topSellerArticles": 339,
+      "potentialPct": 97
+    },
+    {
+      "slug": "carrefour",
+      "name": "Carrefour",
+      "topSellerArticles": 266,
+      "potentialPct": 98
+    },
+    {
+      "slug": "bighub",
+      "name": "Bighub",
+      "topSellerArticles": 247,
+      "potentialPct": 98
+    },
+    {
+      "slug": "boulanger",
+      "name": "Boulanger",
+      "topSellerArticles": 242,
+      "potentialPct": 98
+    },
+    {
+      "slug": "darty",
+      "name": "Darty",
+      "topSellerArticles": 236,
+      "potentialPct": 98
+    },
+    {
+      "slug": "multishop",
+      "name": "Multishop",
+      "topSellerArticles": 203,
+      "potentialPct": 98
+    },
+    {
+      "slug": "procomponentes",
+      "name": "Procomponentes",
+      "topSellerArticles": 192,
+      "potentialPct": 98
+    }
+  ]
+}

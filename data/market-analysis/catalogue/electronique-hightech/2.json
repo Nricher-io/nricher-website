@@ -1,0 +1,82 @@
+{
+  "packName": "Télévision",
+  "totalArticles": 2039,
+  "topPct": 48,
+  "midPct": 30,
+  "lowPct": 22,
+  "topSellersCount": 1250,
+  "ranking": [
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 306,
+      "potentialPct": 85
+    },
+    {
+      "slug": "boulanger",
+      "name": "Boulanger",
+      "topSellerArticles": 261,
+      "potentialPct": 87
+    },
+    {
+      "slug": "icoza",
+      "name": "Icoza",
+      "topSellerArticles": 248,
+      "potentialPct": 88
+    },
+    {
+      "slug": "darty",
+      "name": "Darty",
+      "topSellerArticles": 194,
+      "potentialPct": 90
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 130,
+      "potentialPct": 94
+    },
+    {
+      "slug": "super10count",
+      "name": "Super10count",
+      "topSellerArticles": 111,
+      "potentialPct": 95
+    },
+    {
+      "slug": "monsieurplus",
+      "name": "Monsieurplus",
+      "topSellerArticles": 110,
+      "potentialPct": 95
+    },
+    {
+      "slug": "bighub",
+      "name": "Bighub",
+      "topSellerArticles": 104,
+      "potentialPct": 95
+    },
+    {
+      "slug": "you-get-innovation-&-technology",
+      "name": "You Get Innovation & Technology",
+      "topSellerArticles": 94,
+      "potentialPct": 95
+    },
+    {
+      "slug": "rue-du-commerce",
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 92,
+      "potentialPct": 95
+    },
+    {
+      "slug": "but",
+      "name": "But",
+      "topSellerArticles": 91,
+      "potentialPct": 96
+    },
+    {
+      "slug": "carrefour",
+      "name": "Carrefour",
+      "topSellerArticles": 78,
+      "potentialPct": 96
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "packName": "Matelas",
+  "totalArticles": 11326,
+  "topPct": 76,
+  "midPct": 15,
+  "lowPct": 9,
+  "topSellersCount": 5284,
+  "ranking": [
+    {
+      "slug": "the-white-stone",
+      "name": "The White Stone",
+      "topSellerArticles": 2173,
+      "potentialPct": 81
+    },
+    {
+      "slug": "indream",
+      "name": "Indream",
+      "topSellerArticles": 1001,
+      "potentialPct": 91
+    },
+    {
+      "slug": "sommeil-de-plomb",
+      "name": "Sommeil De Plomb",
+      "topSellerArticles": 956,
+      "potentialPct": 92
+    },
+    {
+      "slug": "actisom",
+      "name": "Actisom",
+      "topSellerArticles": 524,
+      "potentialPct": 95
+    },
+    {
+      "slug": "senso-pur",
+      "name": "Senso Pur",
+      "topSellerArticles": 326,
+      "potentialPct": 97
+    },
+    {
+      "slug": "sport4heros",
+      "name": "Sport4heros",
+      "topSellerArticles": 304,
+      "potentialPct": 97
+    },
+    {
+      "slug": "emma-matelas",
+      "name": "Emma Matelas",
+      "topSellerArticles": 154,
+      "potentialPct": 99
+    },
+    {
+      "slug": "indream-sleep",
+      "name": "Indream Sleep",
+      "topSellerArticles": 149,
+      "potentialPct": 99
+    },
+    {
+      "slug": "altobuy",
+      "name": "Altobuy",
+      "topSellerArticles": 119,
+      "potentialPct": 99
+    },
+    {
+      "slug": "idliterie",
+      "name": "Idliterie",
+      "topSellerArticles": 115,
+      "potentialPct": 99
+    },
+    {
+      "slug": "matris",
+      "name": "Matris",
+      "topSellerArticles": 114,
+      "potentialPct": 99
+    },
+    {
+      "slug": "vitalit",
+      "name": "Vitalit",
+      "topSellerArticles": 105,
+      "potentialPct": 99
+    }
+  ]
+}

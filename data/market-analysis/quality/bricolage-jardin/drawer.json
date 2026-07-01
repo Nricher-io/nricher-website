@@ -1,0 +1,53 @@
+{
+  "slug": "drawer",
+  "name": "Drawer",
+  "articlesAnalysed": 36,
+  "qualityScore": 79,
+  "globalGrades": {
+    "Aplus": 22,
+    "A": 39,
+    "B": 11,
+    "C": 6,
+    "D": 6,
+    "E": 17,
+    "F": 0
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 58,
+      "A": 17,
+      "B": 11,
+      "C": 14,
+      "D": 0,
+      "E": 0,
+      "F": 0
+    },
+    "Image": {
+      "Aplus": 56,
+      "A": 17,
+      "B": 3,
+      "C": 19,
+      "D": 0,
+      "E": 6,
+      "F": 0
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 31,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 69
+    },
+    "Description": {
+      "Aplus": 92,
+      "A": 0,
+      "B": 6,
+      "C": 3,
+      "D": 0,
+      "E": 0,
+      "F": 0
+    }
+  }
+}

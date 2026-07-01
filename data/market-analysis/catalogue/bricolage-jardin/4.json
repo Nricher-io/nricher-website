@@ -1,0 +1,82 @@
+{
+  "packName": "Commode",
+  "totalArticles": 19419,
+  "topPct": 69,
+  "midPct": 19,
+  "lowPct": 12,
+  "topSellersCount": 8279,
+  "ranking": [
+    {
+      "slug": "abiks-meubles",
+      "name": "Abiks Meubles",
+      "topSellerArticles": 5703,
+      "potentialPct": 71
+    },
+    {
+      "slug": "ok-living",
+      "name": "Ok Living",
+      "topSellerArticles": 1034,
+      "potentialPct": 95
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 437,
+      "potentialPct": 98
+    },
+    {
+      "slug": "pegane",
+      "name": "Pegane",
+      "topSellerArticles": 402,
+      "potentialPct": 98
+    },
+    {
+      "slug": "3xe-living",
+      "name": "3xe Living",
+      "topSellerArticles": 352,
+      "potentialPct": 98
+    },
+    {
+      "slug": "visiodirect",
+      "name": "Visiodirect",
+      "topSellerArticles": 351,
+      "potentialPct": 98
+    },
+    {
+      "slug": "dmora",
+      "name": "Dmora",
+      "topSellerArticles": 347,
+      "potentialPct": 98
+    },
+    {
+      "slug": "rust-oleum",
+      "name": "Rust Oleum",
+      "topSellerArticles": 345,
+      "potentialPct": 98
+    },
+    {
+      "slug": "htmeubles",
+      "name": "Htmeubles",
+      "topSellerArticles": 322,
+      "potentialPct": 98
+    },
+    {
+      "slug": "meublorama",
+      "name": "Meublorama",
+      "topSellerArticles": 303,
+      "potentialPct": 98
+    },
+    {
+      "slug": "shopnova",
+      "name": "Shopnova",
+      "topSellerArticles": 219,
+      "potentialPct": 99
+    },
+    {
+      "slug": "bb-loisir",
+      "name": "Bb Loisir",
+      "topSellerArticles": 212,
+      "potentialPct": 99
+    }
+  ]
+}

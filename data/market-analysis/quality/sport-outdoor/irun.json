@@ -1,0 +1,53 @@
+{
+  "slug": "irun",
+  "name": "Irun",
+  "articlesAnalysed": 66447,
+  "qualityScore": 54,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 0,
+    "B": 0,
+    "C": 27,
+    "D": 51,
+    "E": 12,
+    "F": 10
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 3,
+      "E": 12,
+      "F": 85
+    },
+    "Image": {
+      "Aplus": 73,
+      "A": 1,
+      "B": 11,
+      "C": 3,
+      "D": 0,
+      "E": 4,
+      "F": 9
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 31,
+      "A": 14,
+      "B": 16,
+      "C": 29,
+      "D": 8,
+      "E": 2,
+      "F": 0
+    }
+  }
+}

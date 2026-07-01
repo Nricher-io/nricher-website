@@ -1,0 +1,53 @@
+{
+  "slug": "asteri",
+  "name": "Asteri",
+  "articlesAnalysed": 4839,
+  "qualityScore": 50,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 0,
+    "B": 0,
+    "C": 23,
+    "D": 27,
+    "E": 32,
+    "F": 18
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 1,
+      "A": 1,
+      "B": 2,
+      "C": 12,
+      "D": 26,
+      "E": 24,
+      "F": 35
+    },
+    "Image": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 27,
+      "A": 5,
+      "B": 8,
+      "C": 30,
+      "D": 17,
+      "E": 9,
+      "F": 4
+    }
+  }
+}

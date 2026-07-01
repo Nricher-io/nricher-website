@@ -1,0 +1,82 @@
+{
+  "packName": "Ordinateur portable",
+  "totalArticles": 3618,
+  "topPct": 42,
+  "midPct": 35,
+  "lowPct": 23,
+  "topSellersCount": 1407,
+  "ranking": [
+    {
+      "slug": "kiatoo",
+      "name": "Kiatoo",
+      "topSellerArticles": 389,
+      "potentialPct": 89
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 226,
+      "potentialPct": 94
+    },
+    {
+      "slug": "topbiz",
+      "name": "Topbiz",
+      "topSellerArticles": 225,
+      "potentialPct": 94
+    },
+    {
+      "slug": "icoza",
+      "name": "Icoza",
+      "topSellerArticles": 194,
+      "potentialPct": 95
+    },
+    {
+      "slug": "darty",
+      "name": "Darty",
+      "topSellerArticles": 194,
+      "potentialPct": 95
+    },
+    {
+      "slug": "cdiscount",
+      "name": "Cdiscount",
+      "topSellerArticles": 179,
+      "potentialPct": 95
+    },
+    {
+      "slug": "rue-du-commerce",
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 155,
+      "potentialPct": 96
+    },
+    {
+      "slug": "monsieurplus",
+      "name": "Monsieurplus",
+      "topSellerArticles": 148,
+      "potentialPct": 96
+    },
+    {
+      "slug": "leasi",
+      "name": "Leasi",
+      "topSellerArticles": 138,
+      "potentialPct": 96
+    },
+    {
+      "slug": "okamac",
+      "name": "Okamac",
+      "topSellerArticles": 136,
+      "potentialPct": 96
+    },
+    {
+      "slug": "fnac-2nde-vie",
+      "name": "Fnac 2nde Vie",
+      "topSellerArticles": 126,
+      "potentialPct": 97
+    },
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 125,
+      "potentialPct": 97
+    }
+  ]
+}

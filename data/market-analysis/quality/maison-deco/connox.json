@@ -1,0 +1,53 @@
+{
+  "slug": "connox",
+  "name": "Connox",
+  "articlesAnalysed": 34168,
+  "qualityScore": 64,
+  "globalGrades": {
+    "Aplus": 0,
+    "A": 2,
+    "B": 14,
+    "C": 53,
+    "D": 15,
+    "E": 12,
+    "F": 3
+  },
+  "criteriaGrades": {
+    "Titre": {
+      "Aplus": 3,
+      "A": 2,
+      "B": 5,
+      "C": 17,
+      "D": 24,
+      "E": 27,
+      "F": 23
+    },
+    "Image": {
+      "Aplus": 62,
+      "A": 9,
+      "B": 9,
+      "C": 8,
+      "D": 0,
+      "E": 5,
+      "F": 6
+    },
+    "Vidéo": {
+      "Aplus": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 100
+    },
+    "Description": {
+      "Aplus": 61,
+      "A": 13,
+      "B": 11,
+      "C": 11,
+      "D": 2,
+      "E": 0,
+      "F": 0
+    }
+  }
+}

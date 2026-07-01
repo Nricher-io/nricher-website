@@ -1,0 +1,82 @@
+{
+  "packName": "Lampadaire",
+  "totalArticles": 995,
+  "topPct": 66,
+  "midPct": 28,
+  "lowPct": 6,
+  "topSellersCount": 967,
+  "ranking": [
+    {
+      "slug": "lemaitredeslampes",
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 306,
+      "potentialPct": 69
+    },
+    {
+      "slug": "nedgis",
+      "name": "Nedgis",
+      "topSellerArticles": 255,
+      "potentialPct": 74
+    },
+    {
+      "slug": "the-cool-republic",
+      "name": "The Cool Republic",
+      "topSellerArticles": 211,
+      "potentialPct": 79
+    },
+    {
+      "slug": "lamptwist",
+      "name": "Lamptwist",
+      "topSellerArticles": 195,
+      "potentialPct": 80
+    },
+    {
+      "slug": "connox",
+      "name": "Connox",
+      "topSellerArticles": 195,
+      "potentialPct": 80
+    },
+    {
+      "slug": "asteri",
+      "name": "Asteri",
+      "topSellerArticles": 69,
+      "potentialPct": 93
+    },
+    {
+      "slug": "light11",
+      "name": "Light11",
+      "topSellerArticles": 59,
+      "potentialPct": 94
+    },
+    {
+      "slug": "le-cedre-rouge",
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 51,
+      "potentialPct": 95
+    },
+    {
+      "slug": "dyberg-larsen",
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 34,
+      "potentialPct": 97
+    },
+    {
+      "slug": "dbs-rdc",
+      "name": "Dbs Rdc",
+      "topSellerArticles": 31,
+      "potentialPct": 97
+    },
+    {
+      "slug": "myareadesign",
+      "name": "Myareadesign",
+      "topSellerArticles": 22,
+      "potentialPct": 98
+    },
+    {
+      "slug": "evolutiv-solutions",
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 18,
+      "potentialPct": 98
+    }
+  ]
+}

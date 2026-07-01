@@ -1,0 +1,82 @@
+{
+  "packName": "Canapé",
+  "totalArticles": 18863,
+  "topPct": 66,
+  "midPct": 21,
+  "lowPct": 13,
+  "topSellersCount": 6907,
+  "ranking": [
+    {
+      "slug": "masseno",
+      "name": "Masseno",
+      "topSellerArticles": 2069,
+      "potentialPct": 89
+    },
+    {
+      "slug": "best-mobilier",
+      "name": "Best Mobilier",
+      "topSellerArticles": 1566,
+      "potentialPct": 92
+    },
+    {
+      "slug": "vente-unique",
+      "name": "Vente Unique",
+      "topSellerArticles": 1349,
+      "potentialPct": 93
+    },
+    {
+      "slug": "loungitude",
+      "name": "Loungitude",
+      "topSellerArticles": 958,
+      "potentialPct": 95
+    },
+    {
+      "slug": "usinestreet",
+      "name": "Usinestreet",
+      "topSellerArticles": 496,
+      "potentialPct": 97
+    },
+    {
+      "slug": "beliani",
+      "name": "Beliani",
+      "topSellerArticles": 469,
+      "potentialPct": 98
+    },
+    {
+      "slug": "selsey",
+      "name": "Selsey",
+      "topSellerArticles": 352,
+      "potentialPct": 98
+    },
+    {
+      "slug": "mobilier-prive",
+      "name": "Mobilier Prive",
+      "topSellerArticles": 328,
+      "potentialPct": 98
+    },
+    {
+      "slug": "tendencio",
+      "name": "Tendencio",
+      "topSellerArticles": 272,
+      "potentialPct": 99
+    },
+    {
+      "slug": "super10count",
+      "name": "Super10count",
+      "topSellerArticles": 245,
+      "potentialPct": 99
+    },
+    {
+      "slug": "cstore",
+      "name": "Cstore",
+      "topSellerArticles": 230,
+      "potentialPct": 99
+    },
+    {
+      "slug": "petits-meubles",
+      "name": "Petits Meubles",
+      "topSellerArticles": 215,
+      "potentialPct": 99
+    }
+  ]
+}

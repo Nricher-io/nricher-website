@@ -1,0 +1,82 @@
+{
+  "packName": "Lit",
+  "totalArticles": 12247,
+  "topPct": 43,
+  "midPct": 31,
+  "lowPct": 26,
+  "topSellersCount": 1231,
+  "ranking": [
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 289,
+      "potentialPct": 98
+    },
+    {
+      "slug": "kids-literie",
+      "name": "Kids Literie",
+      "topSellerArticles": 264,
+      "potentialPct": 98
+    },
+    {
+      "slug": "vie-moderne",
+      "name": "Vie Moderne",
+      "topSellerArticles": 223,
+      "potentialPct": 98
+    },
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 166,
+      "potentialPct": 99
+    },
+    {
+      "slug": "vente-unique",
+      "name": "Vente Unique",
+      "topSellerArticles": 148,
+      "potentialPct": 99
+    },
+    {
+      "slug": "literie-moins-cher",
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 141,
+      "potentialPct": 99
+    },
+    {
+      "slug": "maison-vibe",
+      "name": "Maison Vibe",
+      "topSellerArticles": 123,
+      "potentialPct": 99
+    },
+    {
+      "slug": "1001jouets",
+      "name": "1001jouets",
+      "topSellerArticles": 118,
+      "potentialPct": 99
+    },
+    {
+      "slug": "gpasplus",
+      "name": "Gpasplus",
+      "topSellerArticles": 102,
+      "potentialPct": 99
+    },
+    {
+      "slug": "meublorama",
+      "name": "Meublorama",
+      "topSellerArticles": 100,
+      "potentialPct": 99
+    },
+    {
+      "slug": "ecd",
+      "name": "Ecd",
+      "topSellerArticles": 95,
+      "potentialPct": 99
+    },
+    {
+      "slug": "homifab",
+      "name": "Homifab",
+      "topSellerArticles": 95,
+      "potentialPct": 99
+    }
+  ]
+}

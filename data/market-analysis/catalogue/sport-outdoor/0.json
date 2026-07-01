@@ -1,0 +1,64 @@
+{
+  "packName": "Chaussures de trail",
+  "totalArticles": 2595,
+  "topPct": 36,
+  "midPct": 41,
+  "lowPct": 23,
+  "topSellersCount": 3411,
+  "ranking": [
+    {
+      "slug": "snowleader",
+      "name": "Snowleader",
+      "topSellerArticles": 2021,
+      "potentialPct": 22
+    },
+    {
+      "slug": "ekosport",
+      "name": "Ekosport",
+      "topSellerArticles": 1390,
+      "potentialPct": 46
+    },
+    {
+      "slug": "irun",
+      "name": "Irun",
+      "topSellerArticles": 1373,
+      "potentialPct": 47
+    },
+    {
+      "slug": "trekkinn",
+      "name": "Trekkinn",
+      "topSellerArticles": 1308,
+      "potentialPct": 50
+    },
+    {
+      "slug": "alltricks",
+      "name": "Alltricks",
+      "topSellerArticles": 1185,
+      "potentialPct": 54
+    },
+    {
+      "slug": "runnerinn",
+      "name": "Runnerinn",
+      "topSellerArticles": 1004,
+      "potentialPct": 61
+    },
+    {
+      "slug": "hardloop",
+      "name": "Hardloop",
+      "topSellerArticles": 797,
+      "potentialPct": 69
+    },
+    {
+      "slug": "glisshop",
+      "name": "Glisshop",
+      "topSellerArticles": 369,
+      "potentialPct": 86
+    },
+    {
+      "slug": "an-mai-mao-yi",
+      "name": "An Mai Mao Yi",
+      "topSellerArticles": 2,
+      "potentialPct": 100
+    }
+  ]
+}

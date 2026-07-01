@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "cdiscount",
+    "name": "Cdiscount",
+    "articlesAnalysed": 1180654,
+    "qualityScore": 75
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "articlesAnalysed": 241804,
+    "qualityScore": 74
+  },
+  {
+    "slug": "but",
+    "name": "But",
+    "articlesAnalysed": 343747,
+    "qualityScore": 70
+  },
+  {
+    "slug": "carrefour",
+    "name": "Carrefour",
+    "articlesAnalysed": 536224,
+    "qualityScore": 65
+  },
+  {
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 394160,
+    "qualityScore": 64
+  },
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 48146,
+    "qualityScore": 62
+  },
+  {
+    "slug": "underdog",
+    "name": "Underdog",
+    "articlesAnalysed": 515,
+    "qualityScore": 60
+  },
+  {
+    "slug": "rue-du-commerce",
+    "name": "Rue Du Commerce",
+    "articlesAnalysed": 487179,
+    "qualityScore": 56
+  },
+  {
+    "slug": "boulanger",
+    "name": "Boulanger",
+    "articlesAnalysed": 224661,
+    "qualityScore": 55
+  },
+  {
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 578457,
+    "qualityScore": 54
+  },
+  {
+    "slug": "darty",
+    "name": "Darty",
+    "articlesAnalysed": 788276,
+    "qualityScore": 52
+  }
+]

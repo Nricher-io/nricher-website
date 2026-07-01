@@ -1,0 +1,70 @@
+{
+  "packName": "T-shirt",
+  "totalArticles": 3508,
+  "topPct": 59,
+  "midPct": 29,
+  "lowPct": 12,
+  "topSellersCount": 3391,
+  "ranking": [
+    {
+      "slug": "snowleader",
+      "name": "Snowleader",
+      "topSellerArticles": 2516,
+      "potentialPct": 28
+    },
+    {
+      "slug": "trekkinn",
+      "name": "Trekkinn",
+      "topSellerArticles": 875,
+      "potentialPct": 75
+    },
+    {
+      "slug": "ekosport",
+      "name": "Ekosport",
+      "topSellerArticles": 873,
+      "potentialPct": 75
+    },
+    {
+      "slug": "alltricks",
+      "name": "Alltricks",
+      "topSellerArticles": 442,
+      "potentialPct": 87
+    },
+    {
+      "slug": "irun",
+      "name": "Irun",
+      "topSellerArticles": 339,
+      "potentialPct": 90
+    },
+    {
+      "slug": "hardloop",
+      "name": "Hardloop",
+      "topSellerArticles": 321,
+      "potentialPct": 91
+    },
+    {
+      "slug": "glisshop",
+      "name": "Glisshop",
+      "topSellerArticles": 243,
+      "potentialPct": 93
+    },
+    {
+      "slug": "runnerinn",
+      "name": "Runnerinn",
+      "topSellerArticles": 113,
+      "potentialPct": 97
+    },
+    {
+      "slug": "snowinn",
+      "name": "Snowinn",
+      "topSellerArticles": 65,
+      "potentialPct": 98
+    },
+    {
+      "slug": "an-mai-mao-yi",
+      "name": "An Mai Mao Yi",
+      "topSellerArticles": 1,
+      "potentialPct": 100
+    }
+  ]
+}

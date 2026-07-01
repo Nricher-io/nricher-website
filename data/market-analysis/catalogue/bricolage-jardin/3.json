@@ -1,0 +1,82 @@
+{
+  "packName": "Lit",
+  "totalArticles": 27305,
+  "topPct": 53,
+  "midPct": 29,
+  "lowPct": 18,
+  "topSellersCount": 7911,
+  "ranking": [
+    {
+      "slug": "masseno",
+      "name": "Masseno",
+      "topSellerArticles": 1790,
+      "potentialPct": 93
+    },
+    {
+      "slug": "sommeil-de-plomb",
+      "name": "Sommeil De Plomb",
+      "topSellerArticles": 1755,
+      "potentialPct": 94
+    },
+    {
+      "slug": "beliani",
+      "name": "Beliani",
+      "topSellerArticles": 1418,
+      "potentialPct": 95
+    },
+    {
+      "slug": "okwish",
+      "name": "Okwish",
+      "topSellerArticles": 1178,
+      "potentialPct": 96
+    },
+    {
+      "slug": "vente-unique",
+      "name": "Vente Unique",
+      "topSellerArticles": 1003,
+      "potentialPct": 96
+    },
+    {
+      "slug": "redom",
+      "name": "Redom",
+      "topSellerArticles": 767,
+      "potentialPct": 97
+    },
+    {
+      "slug": "box-deco-couleurs",
+      "name": "Box Deco Couleurs",
+      "topSellerArticles": 666,
+      "potentialPct": 98
+    },
+    {
+      "slug": "rust-oleum",
+      "name": "Rust Oleum",
+      "topSellerArticles": 591,
+      "potentialPct": 98
+    },
+    {
+      "slug": "petits-meubles",
+      "name": "Petits Meubles",
+      "topSellerArticles": 529,
+      "potentialPct": 98
+    },
+    {
+      "slug": "dmora",
+      "name": "Dmora",
+      "topSellerArticles": 488,
+      "potentialPct": 98
+    },
+    {
+      "slug": "literie-moins-cher",
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 456,
+      "potentialPct": 98
+    },
+    {
+      "slug": "bb-loisir",
+      "name": "Bb Loisir",
+      "topSellerArticles": 451,
+      "potentialPct": 98
+    }
+  ]
+}

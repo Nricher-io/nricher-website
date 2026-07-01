@@ -1,0 +1,299 @@
+{
+  "slug": "but",
+  "name": "But",
+  "priceIndex": 102,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        121,
+        135,
+        124,
+        119,
+        120,
+        139
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        129,
+        126,
+        132,
+        133,
+        126,
+        126
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        126,
+        125,
+        122,
+        123,
+        123,
+        123
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        113,
+        110,
+        115,
+        112,
+        115,
+        112
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        132,
+        132,
+        134,
+        137,
+        142,
+        135
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        141,
+        140,
+        141,
+        140,
+        139,
+        143
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        127,
+        127,
+        128,
+        129,
+        128,
+        129
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        155,
+        156,
+        158,
+        150,
+        151,
+        145
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        116,
+        107,
+        104,
+        105,
+        107,
+        110
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        128,
+        127,
+        132,
+        129,
+        131,
+        131
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        111,
+        110,
+        113,
+        111,
+        112,
+        112
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        125,
+        116,
+        120,
+        136,
+        138,
+        129
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        114,
+        114,
+        114,
+        113,
+        115,
+        114
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        109,
+        109,
+        110,
+        109,
+        109,
+        108
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        108,
+        112,
+        115,
+        116,
+        115,
+        113
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        103,
+        109,
+        107,
+        109,
+        112,
+        109
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        103,
+        103,
+        103,
+        103,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        114,
+        113,
+        118,
+        115,
+        115,
+        116
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        111,
+        110,
+        112,
+        112,
+        109,
+        109
+      ]
+    }
+  ],
+  "attractiveness": [
+    {
+      "week": "2026-05-26",
+      "cheaperPct": 18,
+      "equalPct": 21,
+      "higherPct": 61
+    },
+    {
+      "week": "2026-06-02",
+      "cheaperPct": 14,
+      "equalPct": 15,
+      "higherPct": 71
+    },
+    {
+      "week": "2026-06-09",
+      "cheaperPct": 13,
+      "equalPct": 17,
+      "higherPct": 71
+    },
+    {
+      "week": "2026-06-16",
+      "cheaperPct": 8,
+      "equalPct": 46,
+      "higherPct": 46
+    },
+    {
+      "week": "2026-06-23",
+      "cheaperPct": 5,
+      "equalPct": 58,
+      "higherPct": 36
+    },
+    {
+      "week": "2026-06-30",
+      "cheaperPct": 18,
+      "equalPct": 46,
+      "higherPct": 36
+    }
+  ],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "priceIndex": 102,
+      "lowerPct": 39,
+      "equalPct": 17,
+      "higherPct": 44
+    },
+    {
+      "pack": "Ordinateur portable",
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Télévision",
+      "priceIndex": 108,
+      "lowerPct": 43,
+      "equalPct": 14,
+      "higherPct": 43
+    },
+    {
+      "pack": "Casque audio",
+      "priceIndex": 115,
+      "lowerPct": 28,
+      "equalPct": 28,
+      "higherPct": 44
+    },
+    {
+      "pack": "Tablette",
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    }
+  ]
+}

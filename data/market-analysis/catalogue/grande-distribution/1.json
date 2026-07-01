@@ -1,0 +1,82 @@
+{
+  "packName": "Lit",
+  "totalArticles": 21067,
+  "topPct": 67,
+  "midPct": 20,
+  "lowPct": 13,
+  "topSellersCount": 8504,
+  "ranking": [
+    {
+      "slug": "n-wood",
+      "name": "N Wood",
+      "topSellerArticles": 2867,
+      "potentialPct": 86
+    },
+    {
+      "slug": "clicnbuy",
+      "name": "Clicnbuy",
+      "topSellerArticles": 1930,
+      "potentialPct": 91
+    },
+    {
+      "slug": "les-tendances",
+      "name": "Les Tendances",
+      "topSellerArticles": 1311,
+      "potentialPct": 94
+    },
+    {
+      "slug": "1001jouets",
+      "name": "1001jouets",
+      "topSellerArticles": 1085,
+      "potentialPct": 95
+    },
+    {
+      "slug": "indream",
+      "name": "Indream",
+      "topSellerArticles": 771,
+      "potentialPct": 96
+    },
+    {
+      "slug": "vidaxl",
+      "name": "Vidaxl",
+      "topSellerArticles": 540,
+      "potentialPct": 97
+    },
+    {
+      "slug": "komhtom",
+      "name": "Komhtom",
+      "topSellerArticles": 523,
+      "potentialPct": 98
+    },
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 497,
+      "potentialPct": 98
+    },
+    {
+      "slug": "paris-prix",
+      "name": "Paris Prix",
+      "topSellerArticles": 292,
+      "potentialPct": 99
+    },
+    {
+      "slug": "kobi",
+      "name": "Kobi",
+      "topSellerArticles": 262,
+      "potentialPct": 99
+    },
+    {
+      "slug": "rama-shop",
+      "name": "Rama Shop",
+      "topSellerArticles": 239,
+      "potentialPct": 99
+    },
+    {
+      "slug": "zoomici",
+      "name": "Zoomici",
+      "topSellerArticles": 213,
+      "potentialPct": 99
+    }
+  ]
+}

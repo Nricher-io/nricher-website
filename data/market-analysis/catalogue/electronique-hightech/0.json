@@ -1,0 +1,82 @@
+{
+  "packName": "Smartphone",
+  "totalArticles": 6478,
+  "topPct": 51,
+  "midPct": 26,
+  "lowPct": 23,
+  "topSellersCount": 4177,
+  "ranking": [
+    {
+      "slug": "house-partners",
+      "name": "House Partners",
+      "topSellerArticles": 1238,
+      "potentialPct": 81
+    },
+    {
+      "slug": "alloccaz",
+      "name": "Alloccaz",
+      "topSellerArticles": 770,
+      "potentialPct": 88
+    },
+    {
+      "slug": "ecofone",
+      "name": "Ecofone",
+      "topSellerArticles": 756,
+      "potentialPct": 88
+    },
+    {
+      "slug": "junmingshop",
+      "name": "Junmingshop",
+      "topSellerArticles": 695,
+      "potentialPct": 89
+    },
+    {
+      "slug": "darty",
+      "name": "Darty",
+      "topSellerArticles": 374,
+      "potentialPct": 94
+    },
+    {
+      "slug": "carrefour",
+      "name": "Carrefour",
+      "topSellerArticles": 344,
+      "potentialPct": 95
+    },
+    {
+      "slug": "boulanger",
+      "name": "Boulanger",
+      "topSellerArticles": 342,
+      "potentialPct": 95
+    },
+    {
+      "slug": "cheng-tech",
+      "name": "Cheng Tech",
+      "topSellerArticles": 289,
+      "potentialPct": 96
+    },
+    {
+      "slug": "multishop",
+      "name": "Multishop",
+      "topSellerArticles": 256,
+      "potentialPct": 96
+    },
+    {
+      "slug": "rps-technologies",
+      "name": "Rps Technologies",
+      "topSellerArticles": 242,
+      "potentialPct": 96
+    },
+    {
+      "slug": "zoomici",
+      "name": "Zoomici",
+      "topSellerArticles": 234,
+      "potentialPct": 96
+    },
+    {
+      "slug": "auchan",
+      "name": "Auchan",
+      "topSellerArticles": 227,
+      "potentialPct": 96
+    }
+  ]
+}
