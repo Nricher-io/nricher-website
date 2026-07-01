@@ -436,15 +436,16 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         }
 
         prCbarList.innerHTML = (d.pairwise || []).map(function (p) {
-          var pisev = p.priceIndex <= 100 ? 'good' : 'bad';
+          var pi = p.priceIndex;
+          var pisev = pi === null ? 'muted' : (pi <= 100 ? 'good' : 'bad');
           return '<div class="cbar-row">' +
-            '<div class="cbar-name">' + p.name + '</div>' +
+            '<div class="cbar-name">' + p.pack + '</div>' +
             '<div class="cbar-track">' +
               '<div style="width:' + p.lowerPct + '%;background:var(--good);">' + (p.lowerPct >= 9 ? '<span class="cbar-seg__pct">' + p.lowerPct + '%</span>' : '') + '</div>' +
               '<div style="width:' + p.equalPct + '%;background:var(--blue);">' + (p.equalPct >= 9 ? '<span class="cbar-seg__pct">' + p.equalPct + '%</span>' : '') + '</div>' +
               '<div style="width:' + p.higherPct + '%;background:var(--bad);">' + (p.higherPct >= 9 ? '<span class="cbar-seg__pct">' + p.higherPct + '%</span>' : '') + '</div>' +
             '</div>' +
-            '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + p.priceIndex + '</div>' +
+            '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + (pi !== null ? pi : '—') + '</div>' +
           '</div>';
         }).join('');
       })
