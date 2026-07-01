@@ -253,7 +253,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
             <div class="chart-sub" id="prTrendSub"></div>
             <div class="chart-canvas-wrap"><canvas id="prTrendCanvas"></canvas></div>
           </div>
-          <div class="chart-card">
+          <div class="chart-card" id="prAttractCard">
             <h3 data-i18n="an.pricing.chart2.title">Price attractivity evolution <span class="info-tip" tabindex="0" data-tip="Part des articles moins chers (Lower), au même prix (Equal) ou plus chers (Higher) que la meilleure offre concurrente sur ce même article. Évolution semaine par semaine.">i</span></h3>
             <div class="chart-sub" data-i18n="an.pricing.chart2.sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
             <div class="chart-canvas-wrap"><canvas id="prAttractCanvas"></canvas></div>
@@ -396,6 +396,8 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
     prTrendSub.textContent = '';
     if (trendChart) { trendChart.destroy(); trendChart = null; }
     if (attractChart) { attractChart.destroy(); attractChart = null; }
+    var attractCardReset = document.getElementById('prAttractCard');
+    if (attractCardReset) attractCardReset.style.display = '';
     prCbarList.innerHTML = '<div style="text-align:center;padding:16px;color:var(--muted);">Chargement…</div>';
     prDetail.classList.add('is-visible');
     prDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -435,7 +437,9 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         }
 
         var attract = d.attractiveness || [];
-        if (window.Chart) {
+        var attractCard = document.getElementById('prAttractCard');
+        if (attractCard) attractCard.style.display = attract.length ? '' : 'none';
+        if (window.Chart && attract.length) {
           attractChart = new Chart(document.getElementById('prAttractCanvas'), {
             type: 'line',
             data: {
