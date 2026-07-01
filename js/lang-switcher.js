@@ -161,8 +161,10 @@
     });
 
     // 3b. Translate hover-tooltip (data-tip) text
+    // data-tip-en attribute takes priority over the generic word-by-word translateTip()
     originalTips.forEach(function (t) {
-      t.el.setAttribute('data-tip', l === 'fr' ? t.fr : translateTip(t.fr));
+      var enTip = t.el.getAttribute('data-tip-en');
+      t.el.setAttribute('data-tip', l === 'fr' ? t.fr : (enTip || translateTip(t.fr)));
     });
 
     // 3c. Weekly KPIs report pages: reformat the "mis a jour le" timestamp from its

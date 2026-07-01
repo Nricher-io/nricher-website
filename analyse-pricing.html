@@ -26,6 +26,16 @@
 .an-cat-card.is-selected{border-color:var(--mint);box-shadow:var(--shadow-card);}
 .an-cat-card__name{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--text);}
 .an-cat-card__count{color:var(--muted);font-size:0.85rem;margin-top:6px;}
+.an-co-list{margin-top:10px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--border);padding-top:10px;}
+.an-co-row{display:flex;align-items:center;gap:8px;}
+.an-co-name{font-size:0.78rem;font-weight:600;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;}
+.an-co-bars{display:flex;gap:3px;flex-shrink:0;}
+.an-cobar{display:block;width:4px;height:16px;border-radius:3px;transition:opacity .15s,transform .15s ease;text-decoration:none;}
+.an-cobar:hover{opacity:0.6;transform:scaleY(1.18);}
+.an-cobar--p{background:#2e58ca;}
+.an-cobar--q{background:#60efbe;}
+.an-cobar--c{background:#f0883a;}
+.an-co-more{font-size:0.72rem;color:var(--muted);margin-top:1px;}
 .an-cat-empty{display:none;text-align:center;color:var(--muted);padding:48px 0;}
 .an-preview{display:none;max-width:880px;margin:8px auto 80px;padding:44px 48px;border-radius:var(--r-xl);border:1px solid var(--border-mint);background:var(--card);box-shadow:var(--shadow-card);}
 .an-preview.is-visible{display:block;}
@@ -97,7 +107,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   .pr-detail__grid{grid-template-columns:1fr;}
 }
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
-.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
 .info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
 </style>
   <script>
@@ -484,15 +494,46 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       });
   }
 
+  function tl(key, fr) {
+    var lang = localStorage.getItem('nr-lang') || 'fr';
+    if (lang === 'fr') return fr;
+    var td = ((window.NRICHER_TRANSLATIONS || {}).en) || {};
+    return td[key] !== undefined ? td[key] : fr;
+  }
+
   function renderGrid() {
     grid.innerHTML = '';
     categories.forEach(function (cat) {
       var card = document.createElement('div');
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
-      card.innerHTML = '<div class="an-cat-card__name">' + cat.name + '</div>' +
-        '<div class="an-cat-card__count">' + (cat.companies || []).length + ' enseignes suivies</div>';
-      card.addEventListener('click', function () { selectCategory(cat); });
+      var companies = cat.companies || [];
+      var maxShow = 5;
+      var shown = companies.slice(0, maxShow);
+      var rest = companies.length - maxShow;
+      var chipsHtml = '';
+      if (companies.length > 0) {
+        chipsHtml = '<div class="an-co-list">' +
+          shown.map(function (co) {
+            return '<div class="an-co-row">' +
+              '<span class="an-co-name">' + co.name + '</span>' +
+              '<div class="an-co-bars">' +
+                '<a href="analyse-pricing.html?cat=' + cat.id + '" class="an-cobar an-cobar--p" title="Pricing"></a>' +
+                '<a href="analyse-quality.html?cat=' + cat.id + '" class="an-cobar an-cobar--q" title="Quality"></a>' +
+                '<a href="analyse-catalogue.html?cat=' + cat.id + '" class="an-cobar an-cobar--c" title="Catalogue"></a>' +
+              '</div></div>';
+          }).join('') +
+          (rest > 0 ? '<div class="an-co-more">+' + rest + ' ' + tl('an.cat.more', 'autres') + '</div>' : '') +
+          '</div>';
+      }
+      card.innerHTML =
+        '<div class="an-cat-card__name">' + tl('an.cat.' + cat.id, cat.name) + '</div>' +
+        '<div class="an-cat-card__count">' + companies.length + ' ' + tl('an.cat.followed', 'enseignes suivies') + '</div>' +
+        chipsHtml;
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.an-co-bars')) return;
+        selectCategory(cat);
+      });
       grid.appendChild(card);
     });
   }
@@ -501,7 +542,8 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
     Array.prototype.forEach.call(grid.querySelectorAll('.an-cat-card'), function (c) {
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
-    previewTitle.textContent = cat.name;
+    currentCatPr = cat;
+    previewTitle.textContent = tl('an.cat.' + cat.id, cat.name);
     loadPricingOverview(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -511,18 +553,37 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
     Array.prototype.forEach.call(grid.children, function (card, i) {
-      var match = categories[i].name.toLowerCase().indexOf(q) !== -1;
+      var cat = categories[i];
+      var match = !q ||
+        cat.name.toLowerCase().indexOf(q) !== -1 ||
+        (q.length >= 2 && (cat.companies || []).some(function (co) {
+          return co.name.toLowerCase().indexOf(q) !== -1;
+        }));
       card.style.display = match ? '' : 'none';
       if (match) visible++;
     });
     empty.style.display = visible === 0 ? 'block' : 'none';
   }
 
+  var currentCatPr = null;
+
   function init() {
     categories = window.NRICHER_CATEGORIES || [];
     renderGrid();
     if (search) search.addEventListener('input', filterGrid);
+    try {
+      var precat = new URLSearchParams(window.location.search).get('cat');
+      if (precat) {
+        var found = categories.filter(function (c) { return c.id === precat; })[0];
+        if (found) setTimeout(function () { selectCategory(found); }, 50);
+      }
+    } catch (e) {}
   }
+
+  new MutationObserver(function () {
+    renderGrid();
+    if (currentCatPr) previewTitle.textContent = tl('an.cat.' + currentCatPr.id, currentCatPr.name);
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
   if (window.NRICHER_CATEGORIES && window.NRICHER_CATEGORIES.length) {
     init();

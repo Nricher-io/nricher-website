@@ -74,7 +74,6 @@ def main():
         print(f"ERREUR /v1/market-categories : {e}", file=sys.stderr)
         sys.exit(1)
 
-    write_json(OUT_DIR / "categories.json", categories)
     print(f"{len(categories)} catégorie(s) trouvée(s)\n")
 
     ok, failed = 0, 0
@@ -87,15 +86,29 @@ def main():
 
         # ── Pricing overview ──────────────────────────────────────────────────
         pricing_slugs = []
+        pricing_companies_from_api = []
         try:
             pricing_overview = api_get(f"/v1/market-analysis/pricing/{cat_id}")
             write_json(OUT_DIR / "pricing" / f"{cat_id}.json", pricing_overview)
             pricing_slugs = [r["slug"] for r in pricing_overview if r.get("slug")]
+            pricing_companies_from_api = [
+                {"slug": r["slug"], "name": r["name"]}
+                for r in pricing_overview if r.get("slug") and r.get("name")
+            ]
             print(f"  ✓ pricing overview ({len(pricing_slugs)} enseignes)")
             ok += 1
         except requests.RequestException as e:
             print(f"  ✗ pricing overview : {e}", file=sys.stderr)
             failed += 1
+
+        # Si l'API market-categories n'a renvoyé aucune enseigne pour cette
+        # catégorie (bug API), on utilise les enseignes de l'overview pricing
+        # comme fallback — on ne le fait pas si companies est déjà rempli
+        # car l'overview inclut aussi des concurrents (pas uniquement les clients).
+        if not companies and pricing_companies_from_api:
+            cat["companies"] = pricing_companies_from_api
+            companies = pricing_companies_from_api
+            print(f"  ↳ companies enrichies depuis pricing overview ({len(companies)} enseignes)")
 
         # ── Pricing détail — slugs extraits de l'overview (source de vérité) ──
         for slug in pricing_slugs:
@@ -145,6 +158,9 @@ def main():
             except requests.RequestException as e:
                 print(f"  ✗ catalogue pack {i} ({pack_name}) : {e}", file=sys.stderr)
                 failed += 1
+
+    # Écrire categories.json après enrichissement (companies complétées depuis overviews)
+    write_json(OUT_DIR / "categories.json", categories)
 
     print(f"\n{ok} succès, {failed} échec(s) sur {len(categories)} catégorie(s)")
     if ok == 0:

@@ -201,7 +201,16 @@
   {
     "id": "beaute-parfumerie",
     "name": "Beauté & Parfumerie",
-    "companies": [],
+    "companies": [
+      {
+        "slug": "marionnaud",
+        "name": "Marionnaud"
+      },
+      {
+        "slug": "myorigines",
+        "name": "Myorigines"
+      }
+    ],
     "packs": [
       "Maquillage",
       "Parfum",

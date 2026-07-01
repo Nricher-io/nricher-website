@@ -26,6 +26,16 @@
 .an-cat-card.is-selected{border-color:var(--mint);box-shadow:var(--shadow-card);}
 .an-cat-card__name{font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--text);}
 .an-cat-card__count{color:var(--muted);font-size:0.85rem;margin-top:6px;}
+.an-co-list{margin-top:10px;display:flex;flex-direction:column;gap:6px;border-top:1px solid var(--border);padding-top:10px;}
+.an-co-row{display:flex;align-items:center;gap:8px;}
+.an-co-name{font-size:0.78rem;font-weight:600;color:var(--text-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0;}
+.an-co-bars{display:flex;gap:3px;flex-shrink:0;}
+.an-cobar{display:block;width:4px;height:16px;border-radius:3px;transition:opacity .15s,transform .15s ease;text-decoration:none;}
+.an-cobar:hover{opacity:0.6;transform:scaleY(1.18);}
+.an-cobar--p{background:#2e58ca;}
+.an-cobar--q{background:#60efbe;}
+.an-cobar--c{background:#f0883a;}
+.an-co-more{font-size:0.72rem;color:var(--muted);margin-top:1px;}
 .an-cat-empty{display:none;text-align:center;color:var(--muted);padding:48px 0;}
 .an-preview{display:none;max-width:880px;margin:8px auto 80px;padding:44px 48px;border-radius:var(--r-xl);border:1px solid var(--border-mint);background:var(--card);box-shadow:var(--shadow-card);}
 .an-preview.is-visible{display:block;}
@@ -43,10 +53,10 @@
 .cat-report__badge .dot{width:6px;height:6px;border-radius:50%;background:#f0883a;flex-shrink:0;}
 .cat-report__count{font-family:var(--font-display);font-weight:700;font-size:1.35rem;color:var(--text);margin-bottom:28px;}
 .cat-report__count span{font-family:var(--font-body);font-weight:500;font-size:0.85rem;color:var(--muted);margin-left:8px;}
-.cat-report__grid{display:grid;grid-template-columns:230px 1fr;gap:36px;align-items:start;transition:opacity .13s ease;}
-.cat-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;}
-.cat-donut-svg{width:190px;height:190px;}
-.cat-donut-legend{display:flex;flex-direction:column;gap:9px;width:100%;}
+.cat-report__grid{display:flex;flex-direction:column;gap:28px;transition:opacity .13s ease;}
+.cat-donut-wrap{display:flex;flex-direction:row;align-items:center;gap:28px;}
+.cat-donut-svg{width:160px;height:160px;flex-shrink:0;}
+.cat-donut-legend{display:flex;flex-direction:column;gap:9px;}
 .cat-donut-legend .legend-item{display:flex;align-items:center;gap:9px;font-size:0.82rem;font-weight:600;color:var(--text-2);}
 .cat-donut-legend .legend-item b{color:var(--text);font-weight:700;}
 .cat-donut-legend .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
@@ -70,13 +80,14 @@
 .cat-report__swipe-area{touch-action:pan-y;user-select:none;}
 .cat-report__swipe-area.is-dragging .cat-report__grid{transition:none;}
 @media (max-width:680px){
-  .cat-report__grid{grid-template-columns:1fr;}
+  .cat-donut-wrap{flex-direction:column;align-items:flex-start;}
   .cat-rank-row{grid-template-columns:84px 1fr 46px;gap:8px;}
   .cat-report__packtitle{font-size:1rem;min-width:160px;}
 }
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
-.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
 .info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
+.cat-donut-tip{display:none;position:fixed;background:#1a1a2e;color:#fff;font-size:12px;font-weight:600;padding:7px 12px;border-radius:8px;pointer-events:none;z-index:300;transform:translateX(-50%);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.22);}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -209,12 +220,12 @@
       <div class="cat-report__swipe-area" id="catSwipeArea">
       <div class="cat-report__grid">
         <div class="cat-donut-wrap">
-          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;">Répartition du catalogue <span class="info-tip" tabindex="0" data-tip="Répartition en 3 segments : Top sellers (articles bien référencés et performants sur le marché), Middle sellers, Low sellers (faible couverture ou performance). Calculé sur ce pack produit.">i</span></div>
+          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;"><span data-i18n="an.catalogue.donut.title">Répartition du catalogue</span> <span class="info-tip" tabindex="0" data-tip="Répartition en 3 segments : Top sellers (articles bien référencés et performants sur le marché), Middle sellers, Low sellers (faible couverture ou performance). Calculé sur ce pack produit." data-tip-en="Breakdown into 3 segments: Top sellers (well-referenced, high-performing articles in the market), Middle sellers, Low sellers (low coverage or performance). Calculated for this product pack.">i</span></div>
           <svg class="cat-donut-svg" id="catDonut" viewBox="0 0 120 120"></svg>
           <div class="cat-donut-legend" id="catDonutLegend"></div>
         </div>
         <div>
-          <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne <span class="info-tip" tabindex="0" data-tip="Classement par potentiel de chiffre d'affaires additionnel estimé. Calculé sur les articles top-sellers du marché que l'enseigne ne vend pas encore. La barre montre le nombre d'articles couverts vs le total top-sellers.">i</span></div>
+          <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne <span class="info-tip" tabindex="0" data-tip="Classement par potentiel de chiffre d'affaires additionnel estimé. Calculé sur les articles top-sellers du marché que l'enseigne ne vend pas encore. La barre montre le nombre d'articles couverts vs le total top-sellers." data-tip-en="Ranking by estimated additional revenue potential. Calculated on market top-sellers this retailer doesn't yet carry. The bar shows covered articles vs total top-sellers.">i</span></div>
           <div class="cat-rank-list" id="catRankList"></div>
         </div>
       </div>
@@ -223,11 +234,9 @@
 
     </div>
 
-    <div class="an-preview__cta">
-      <a href="contact.html" class="btn btn-primary" data-i18n="an.preview.cta">Être prévenu en avant-première →</a>
-    </div>
   </div>
 </main>
+<div class="cat-donut-tip" id="catDonutTip"></div>
 
 <footer class="footer">
   <div class="container">
@@ -284,6 +293,8 @@
 
   var currentCat = null;
   var currentPackIndex = 0;
+  var catDonutTip = document.getElementById('catDonutTip');
+  var lastDonutSegs = [];
 
   var RANK_COLORS = ['#1fae7a', '#47b668', '#6fbe56', '#9ac34a', '#cec24c', '#ffc04d', '#f7a443', '#f0893a', '#e96735', '#e2452f'];
 
@@ -299,13 +310,45 @@
     return segs;
   }
 
+  // Hover tooltip sur le donut (détection angulaire)
+  catDonut.addEventListener('mousemove', function (e) {
+    var rect = catDonut.getBoundingClientRect();
+    var cx = rect.left + rect.width / 2;
+    var cy = rect.top + rect.height / 2;
+    var dx = e.clientX - cx, dy = e.clientY - cy;
+    var dist = Math.sqrt(dx * dx + dy * dy);
+    var scale = rect.width / 120;
+    if (dist < 32 * scale || dist > 62 * scale) { catDonutTip.style.display = 'none'; return; }
+    var angle = (Math.atan2(dy, dx) * 180 / Math.PI + 90 + 360) % 360;
+    var seg = null;
+    for (var k = 0; k < lastDonutSegs.length; k++) {
+      if (angle >= lastDonutSegs[k].start && angle < lastDonutSegs[k].end) { seg = lastDonutSegs[k]; break; }
+    }
+    if (seg) {
+      catDonutTip.textContent = seg.label + ' · ' + seg.pct + '%';
+      catDonutTip.style.display = 'block';
+      catDonutTip.style.left = e.clientX + 'px';
+      catDonutTip.style.top = (e.clientY - 44) + 'px';
+    } else {
+      catDonutTip.style.display = 'none';
+    }
+  });
+  catDonut.addEventListener('mouseleave', function () { catDonutTip.style.display = 'none'; });
+
+  function tl(key, fr) {
+    var lang = localStorage.getItem('nr-lang') || 'fr';
+    if (lang === 'fr') return fr;
+    var td = ((window.NRICHER_TRANSLATIONS || {}).en) || {};
+    return td[key] !== undefined ? td[key] : fr;
+  }
+
   function renderPackChrome(cat) {
     var packs = cat.packs || [cat.name];
-    catPackTitle.textContent = packs[currentPackIndex];
+    catPackTitle.textContent = tl('an.pack.' + packs[currentPackIndex], packs[currentPackIndex]);
     packPrev.disabled = currentPackIndex === 0;
     packNext.disabled = currentPackIndex === packs.length - 1;
     catPackDots.innerHTML = packs.map(function (p, i) {
-      return '<button class="cat-pack-dot' + (i === currentPackIndex ? ' is-active' : '') + '" type="button" aria-label="' + p + '" data-i="' + i + '"></button>';
+      return '<button class="cat-pack-dot' + (i === currentPackIndex ? ' is-active' : '') + '" type="button" aria-label="' + tl('an.pack.' + p, p) + '" data-i="' + i + '"></button>';
     }).join('');
     Array.prototype.forEach.call(catPackDots.querySelectorAll('.cat-pack-dot'), function (dot) {
       dot.addEventListener('click', function () { goToPack(parseInt(dot.dataset.i, 10)); });
@@ -321,6 +364,18 @@
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (d) {
         catReportCount.innerHTML = d.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
+
+        var donutDefs = [
+          { label: 'Top sellers', pct: d.topPct },
+          { label: 'Middle sellers', pct: d.midPct },
+          { label: 'Low sellers', pct: d.lowPct }
+        ];
+        lastDonutSegs = [];
+        var cum = 0;
+        donutDefs.forEach(function (s) {
+          lastDonutSegs.push({ label: s.label, pct: s.pct, start: cum * 3.6, end: (cum + s.pct) * 3.6 });
+          cum += s.pct;
+        });
 
         var segs = donutSegments([d.topPct, d.midPct, d.lowPct], ['#60efbe', '#2e58ca', '#cbd5e1']);
         var svgParts = '<g transform="rotate(-90 60 60)">';
@@ -395,9 +450,33 @@
       var card = document.createElement('div');
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
-      card.innerHTML = '<div class="an-cat-card__name">' + cat.name + '</div>' +
-        '<div class="an-cat-card__count">' + (cat.companies || []).length + ' enseignes suivies</div>';
-      card.addEventListener('click', function () { selectCategory(cat); });
+      var companies = cat.companies || [];
+      var maxShow = 5;
+      var shown = companies.slice(0, maxShow);
+      var rest = companies.length - maxShow;
+      var chipsHtml = '';
+      if (companies.length > 0) {
+        chipsHtml = '<div class="an-co-list">' +
+          shown.map(function (co) {
+            return '<div class="an-co-row">' +
+              '<span class="an-co-name">' + co.name + '</span>' +
+              '<div class="an-co-bars">' +
+                '<a href="analyse-pricing.html?cat=' + cat.id + '" class="an-cobar an-cobar--p" title="Pricing"></a>' +
+                '<a href="analyse-quality.html?cat=' + cat.id + '" class="an-cobar an-cobar--q" title="Quality"></a>' +
+                '<a href="analyse-catalogue.html?cat=' + cat.id + '" class="an-cobar an-cobar--c" title="Catalogue"></a>' +
+              '</div></div>';
+          }).join('') +
+          (rest > 0 ? '<div class="an-co-more">+' + rest + ' ' + tl('an.cat.more', 'autres') + '</div>' : '') +
+          '</div>';
+      }
+      card.innerHTML =
+        '<div class="an-cat-card__name">' + tl('an.cat.' + cat.id, cat.name) + '</div>' +
+        '<div class="an-cat-card__count">' + companies.length + ' ' + tl('an.cat.followed', 'enseignes suivies') + '</div>' +
+        chipsHtml;
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.an-co-bars')) return;
+        selectCategory(cat);
+      });
       grid.appendChild(card);
     });
   }
@@ -406,7 +485,7 @@
     Array.prototype.forEach.call(grid.querySelectorAll('.an-cat-card'), function (c) {
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
-    previewTitle.textContent = cat.name;
+    previewTitle.textContent = tl('an.cat.' + cat.id, cat.name);
     currentPackIndex = 0;
     renderCatReport(cat);
     preview.classList.add('is-visible');
@@ -417,7 +496,12 @@
     var q = (search.value || '').trim().toLowerCase();
     var visible = 0;
     Array.prototype.forEach.call(grid.children, function (card, i) {
-      var match = categories[i].name.toLowerCase().indexOf(q) !== -1;
+      var cat = categories[i];
+      var match = !q ||
+        cat.name.toLowerCase().indexOf(q) !== -1 ||
+        (q.length >= 2 && (cat.companies || []).some(function (co) {
+          return co.name.toLowerCase().indexOf(q) !== -1;
+        }));
       card.style.display = match ? '' : 'none';
       if (match) visible++;
     });
@@ -428,7 +512,23 @@
     categories = window.NRICHER_CATEGORIES || [];
     renderGrid();
     if (search) search.addEventListener('input', filterGrid);
+    try {
+      var precat = new URLSearchParams(window.location.search).get('cat');
+      if (precat) {
+        var found = categories.filter(function (c) { return c.id === precat; })[0];
+        if (found) setTimeout(function () { selectCategory(found); }, 50);
+      }
+    } catch (e) {}
   }
+
+  // Re-render on language switch (MutationObserver on html[lang])
+  new MutationObserver(function () {
+    renderGrid();
+    if (currentCat) {
+      previewTitle.textContent = tl('an.cat.' + currentCat.id, currentCat.name);
+      renderPackChrome(currentCat);
+    }
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
   if (window.NRICHER_CATEGORIES && window.NRICHER_CATEGORIES.length) {
     init();
