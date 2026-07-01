@@ -36,6 +36,9 @@
 .an-cobar--q{background:#60efbe;}
 .an-cobar--c{background:#f0883a;}
 .an-co-more{font-size:0.72rem;color:var(--muted);margin-top:1px;}
+.an-co-toggle{background:none;border:none;font-size:0.82rem;color:var(--muted);cursor:pointer;padding:0 3px;vertical-align:middle;line-height:1;transition:color .15s;}
+.an-co-toggle:hover{color:var(--blue);}
+.an-co-list{margin-top:10px;display:none;flex-direction:column;gap:6px;border-top:1px solid var(--border);padding-top:10px;}
 .an-cat-empty{display:none;text-align:center;color:var(--muted);padding:48px 0;}
 .an-preview{display:none;max-width:880px;margin:8px auto 80px;padding:44px 48px;border-radius:var(--r-xl);border:1px solid var(--border-mint);background:var(--card);box-shadow:var(--shadow-card);}
 .an-preview.is-visible{display:block;}
@@ -281,9 +284,6 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       </div>
     </div>
 
-    <div class="an-preview__cta">
-      <a href="contact.html" class="btn btn-primary" data-i18n="an.preview.cta">Être prévenu en avant-première →</a>
-    </div>
   </div>
 </main>
 
@@ -444,6 +444,14 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
               },
             },
           });
+          // Afficher seulement les 6 premières marques par défaut
+          trendChart.data.datasets.forEach(function (ds, i) {
+            if (ds.label === '__ref100') return;
+            if (i >= 6) trendChart.setDatasetVisibility(i, false);
+          });
+          trendChart.update();
+          trendAllHidden = false;
+          if (prTrendToggle) prTrendToggle.textContent = 'Tout déselectionner';
         }
 
         var attract = d.attractiveness || [];
@@ -508,32 +516,38 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
       var companies = cat.companies || [];
-      var maxShow = 5;
-      var shown = companies.slice(0, maxShow);
-      var rest = companies.length - maxShow;
-      var chipsHtml = '';
-      if (companies.length > 0) {
-        chipsHtml = '<div class="an-co-list">' +
-          shown.map(function (co) {
-            return '<div class="an-co-row">' +
-              '<span class="an-co-name">' + co.name + '</span>' +
-              '<div class="an-co-bars">' +
-                '<a href="analyse-pricing.html?cat=' + cat.id + '" class="an-cobar an-cobar--p" title="Pricing"></a>' +
-                '<a href="analyse-quality.html?cat=' + cat.id + '" class="an-cobar an-cobar--q" title="Quality"></a>' +
-                '<a href="analyse-catalogue.html?cat=' + cat.id + '" class="an-cobar an-cobar--c" title="Catalogue"></a>' +
-              '</div></div>';
-          }).join('') +
-          (rest > 0 ? '<div class="an-co-more">+' + rest + ' ' + tl('an.cat.more', 'autres') + '</div>' : '') +
-          '</div>';
-      }
+      var chipsHtml = companies.length > 0 ? (
+        '<div class="an-co-list">' +
+        companies.map(function (co) {
+          return '<div class="an-co-row">' +
+            '<span class="an-co-name">' + co.name + '</span>' +
+            '<div class="an-co-bars">' +
+              '<a href="analyse-pricing.html?cat=' + cat.id + '" class="an-cobar an-cobar--p" title="Pricing"></a>' +
+              '<a href="analyse-quality.html?cat=' + cat.id + '" class="an-cobar an-cobar--q" title="Quality"></a>' +
+              '<a href="analyse-catalogue.html?cat=' + cat.id + '" class="an-cobar an-cobar--c" title="Catalogue"></a>' +
+            '</div></div>';
+        }).join('') + '</div>'
+      ) : '';
       card.innerHTML =
         '<div class="an-cat-card__name">' + tl('an.cat.' + cat.id, cat.name) + '</div>' +
-        '<div class="an-cat-card__count">' + companies.length + ' ' + tl('an.cat.followed', 'enseignes suivies') + '</div>' +
-        chipsHtml;
+        '<div class="an-cat-card__count">' + companies.length + ' ' + tl('an.cat.followed', 'enseignes suivies') +
+          (companies.length > 0 ? ' <button class="an-co-toggle" type="button">▾</button>' : '') +
+        '</div>' + chipsHtml;
       card.addEventListener('click', function (e) {
-        if (e.target.closest('.an-co-bars')) return;
+        if (e.target.closest('.an-co-bars') || e.target.classList.contains('an-co-toggle')) return;
         selectCategory(cat);
       });
+      var btn = card.querySelector('.an-co-toggle');
+      if (btn) {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var list = card.querySelector('.an-co-list');
+          var wasOpen = list.style.display === 'flex';
+          grid.querySelectorAll('.an-co-list').forEach(function (l) { l.style.display = 'none'; });
+          grid.querySelectorAll('.an-co-toggle').forEach(function (b) { b.textContent = '▾'; });
+          if (!wasOpen) { list.style.display = 'flex'; btn.textContent = '▴'; }
+        });
+      }
       grid.appendChild(card);
     });
   }
