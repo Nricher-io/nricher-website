@@ -65,11 +65,11 @@
 .cat-donut-legend .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
 .cat-rank-head{font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--blue);margin-bottom:18px;}
 .cat-rank-list{display:flex;flex-direction:column;gap:13px;}
-.cat-rank-row{display:grid;grid-template-columns:110px 1fr 54px;align-items:center;gap:14px;}
+.cat-rank-row{display:grid;grid-template-columns:110px 1fr auto 54px;align-items:center;gap:14px;}
 .cat-rank-brand{font-size:0.84rem;font-weight:700;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 .cat-rank-bar-track{position:relative;height:32px;border-radius:8px;background:var(--card-2,#F0F2F5);overflow:hidden;}
 .cat-rank-bar{position:absolute;inset:0;height:100%;border-radius:8px;}
-.cat-rank-count{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:0.74rem;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,0.55);white-space:nowrap;pointer-events:none;}
+.cat-rank-count{font-size:0.74rem;font-weight:600;color:var(--text-2);white-space:nowrap;text-align:right;}
 .cat-rank-pct{font-size:0.82rem;font-weight:700;color:var(--blue);text-align:center;background:rgba(46,88,202,0.08);border-radius:var(--r-pill);padding:6px 0;}
 .cat-report__note{margin-top:30px;font-size:0.78rem;color:var(--muted);font-style:italic;}
 .cat-report__packbar{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:18px;}
@@ -84,7 +84,7 @@
 .cat-report__swipe-area.is-dragging .cat-report__grid{transition:none;}
 @media (max-width:680px){
   .cat-donut-wrap{flex-direction:column;align-items:flex-start;}
-  .cat-rank-row{grid-template-columns:84px 1fr 46px;gap:8px;}
+  .cat-rank-row{grid-template-columns:80px 1fr auto 42px;gap:8px;}
   .cat-report__packtitle{font-size:1rem;min-width:160px;}
 }
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
@@ -401,7 +401,8 @@
           var color = RANK_COLORS[i] || RANK_COLORS[RANK_COLORS.length - 1];
           return '<div class="cat-rank-row">' +
             '<span class="cat-rank-brand">' + row.name + '</span>' +
-            '<div class="cat-rank-bar-track"><div class="cat-rank-bar" style="width:' + Math.max(pct, 10) + '%;background:' + color + ';"></div><span class="cat-rank-count">' + row.topSellerArticles.toLocaleString('fr-FR') + ' / ' + d.topSellersCount.toLocaleString('fr-FR') + '</span></div>' +
+            '<div class="cat-rank-bar-track"><div class="cat-rank-bar" style="width:' + Math.max(pct, 10) + '%;background:' + color + ';"></div></div>' +
+            '<span class="cat-rank-count">' + row.topSellerArticles.toLocaleString('fr-FR') + ' / ' + d.topSellersCount.toLocaleString('fr-FR') + '</span>' +
             '<span class="cat-rank-pct">+' + row.potentialPct + '%</span>' +
           '</div>';
         }).join('');
