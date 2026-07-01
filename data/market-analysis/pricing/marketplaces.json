@@ -91,6 +91,13 @@
     "priceIndex": 97
   },
   {
+    "slug": "aosom",
+    "name": "Aosom",
+    "articlesAnalysed": 66138,
+    "articlesMatched": 138,
+    "priceIndex": 97
+  },
+  {
     "slug": "best mobilier",
     "name": "Best Mobilier",
     "articlesAnalysed": 66138,
@@ -102,13 +109,6 @@
     "name": "The White Stone",
     "articlesAnalysed": 66138,
     "articlesMatched": 298,
-    "priceIndex": 98
-  },
-  {
-    "slug": "aosom",
-    "name": "Aosom",
-    "articlesAnalysed": 66138,
-    "articlesMatched": 138,
     "priceIndex": 98
   },
   {

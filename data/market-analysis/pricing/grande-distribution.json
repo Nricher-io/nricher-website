@@ -70,6 +70,13 @@
     "priceIndex": 99
   },
   {
+    "slug": "paris prix",
+    "name": "Paris Prix",
+    "articlesAnalysed": 66879,
+    "articlesMatched": 1003,
+    "priceIndex": 99
+  },
+  {
     "slug": "habitat & jardin",
     "name": "Habitat & Jardin",
     "articlesAnalysed": 66879,
@@ -95,13 +102,6 @@
     "name": "Vidaxl",
     "articlesAnalysed": 66879,
     "articlesMatched": 4418,
-    "priceIndex": 100
-  },
-  {
-    "slug": "paris prix",
-    "name": "Paris Prix",
-    "articlesAnalysed": 66879,
-    "articlesMatched": 1003,
     "priceIndex": 100
   },
   {

@@ -264,26 +264,26 @@
       "pack": "Smartphone",
       "priceIndex": 94,
       "lowerPct": 52,
-      "equalPct": 23,
+      "equalPct": 22,
       "higherPct": 25
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 99,
-      "lowerPct": 58,
+      "priceIndex": 104,
+      "lowerPct": 50,
       "equalPct": 0,
-      "higherPct": 42
+      "higherPct": 50
     },
     {
       "pack": "Télévision",
-      "priceIndex": 115,
-      "lowerPct": 35,
+      "priceIndex": 113,
+      "lowerPct": 37,
       "equalPct": 5,
-      "higherPct": 60
+      "higherPct": 58
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 102,
+      "priceIndex": 103,
       "lowerPct": 38,
       "equalPct": 38,
       "higherPct": 25

@@ -63,6 +63,13 @@
     "priceIndex": 98
   },
   {
+    "slug": "paris prix",
+    "name": "Paris Prix",
+    "articlesAnalysed": 78790,
+    "articlesMatched": 539,
+    "priceIndex": 99
+  },
+  {
     "slug": "best mobilier",
     "name": "Best Mobilier",
     "articlesAnalysed": 78790,
@@ -137,13 +144,6 @@
     "name": "Pegane",
     "articlesAnalysed": 78790,
     "articlesMatched": 579,
-    "priceIndex": 100
-  },
-  {
-    "slug": "paris prix",
-    "name": "Paris Prix",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 539,
     "priceIndex": 100
   },
   {

@@ -1,0 +1,273 @@
+{
+  "slug": "dmora",
+  "name": "Dmora",
+  "priceIndex": 111,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        140,
+        161,
+        152,
+        130,
+        140,
+        163
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        115,
+        112,
+        115,
+        116,
+        109,
+        111
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        98,
+        96,
+        98,
+        99,
+        100,
+        112
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        158,
+        164,
+        163,
+        168,
+        160,
+        168
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        112,
+        107,
+        115,
+        112,
+        113,
+        105
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        103,
+        102,
+        101,
+        99,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        159,
+        155,
+        165,
+        158,
+        157,
+        153
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        143,
+        143,
+        132,
+        137,
+        127,
+        142
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        136,
+        137,
+        118,
+        134,
+        172,
+        160
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        105,
+        110,
+        107,
+        105,
+        105,
+        103
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        185,
+        190,
+        184,
+        111,
+        111,
+        121
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        119,
+        128,
+        139,
+        132,
+        128,
+        124
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        131,
+        127,
+        139,
+        128,
+        132,
+        134
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        108,
+        117,
+        109,
+        112,
+        110,
+        112
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        107,
+        107,
+        107,
+        108,
+        108,
+        107
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        110,
+        110,
+        107,
+        106,
+        107,
+        108
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        103,
+        103,
+        104,
+        103,
+        103,
+        105
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        107,
+        107,
+        108,
+        109,
+        109,
+        107
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        101,
+        104,
+        102,
+        102,
+        106,
+        102
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        103,
+        103,
+        104,
+        104,
+        103,
+        103
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Salon de jardin",
+      "priceIndex": 111,
+      "lowerPct": 36,
+      "equalPct": 10,
+      "higherPct": 54
+    },
+    {
+      "pack": "Canapé",
+      "priceIndex": 92,
+      "lowerPct": 88,
+      "equalPct": 2,
+      "higherPct": 10
+    },
+    {
+      "pack": "Matelas",
+      "priceIndex": 98,
+      "lowerPct": 69,
+      "equalPct": 2,
+      "higherPct": 30
+    },
+    {
+      "pack": "Lit",
+      "priceIndex": 97,
+      "lowerPct": 84,
+      "equalPct": 0,
+      "higherPct": 16
+    },
+    {
+      "pack": "Commode",
+      "priceIndex": 100,
+      "lowerPct": 54,
+      "equalPct": 12,
+      "higherPct": 34
+    }
+  ]
+}

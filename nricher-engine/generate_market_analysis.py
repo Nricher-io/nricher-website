@@ -86,20 +86,19 @@ def main():
         print(f"[{cat_id}] {cat['name']} — {len(companies)} enseigne(s), {len(packs)} pack(s)")
 
         # ── Pricing overview ──────────────────────────────────────────────────
+        pricing_slugs = []
         try:
-            write_json(
-                OUT_DIR / "pricing" / f"{cat_id}.json",
-                api_get(f"/v1/market-analysis/pricing/{cat_id}"),
-            )
-            print(f"  ✓ pricing overview")
+            pricing_overview = api_get(f"/v1/market-analysis/pricing/{cat_id}")
+            write_json(OUT_DIR / "pricing" / f"{cat_id}.json", pricing_overview)
+            pricing_slugs = [r["slug"] for r in pricing_overview if r.get("slug")]
+            print(f"  ✓ pricing overview ({len(pricing_slugs)} enseignes)")
             ok += 1
         except requests.RequestException as e:
             print(f"  ✗ pricing overview : {e}", file=sys.stderr)
             failed += 1
 
-        # ── Pricing détail par enseigne ───────────────────────────────────────
-        for company in companies:
-            slug = company["slug"]
+        # ── Pricing détail — slugs extraits de l'overview (source de vérité) ──
+        for slug in pricing_slugs:
             try:
                 write_json(
                     OUT_DIR / "pricing" / cat_id / f"{slug}.json",
@@ -111,20 +110,19 @@ def main():
                 failed += 1
 
         # ── Quality overview ──────────────────────────────────────────────────
+        quality_slugs = []
         try:
-            write_json(
-                OUT_DIR / "quality" / f"{cat_id}.json",
-                api_get(f"/v1/market-analysis/quality/{cat_id}"),
-            )
-            print(f"  ✓ quality overview")
+            quality_overview = api_get(f"/v1/market-analysis/quality/{cat_id}")
+            write_json(OUT_DIR / "quality" / f"{cat_id}.json", quality_overview)
+            quality_slugs = [r["slug"] for r in quality_overview if r.get("slug")]
+            print(f"  ✓ quality overview ({len(quality_slugs)} enseignes)")
             ok += 1
         except requests.RequestException as e:
             print(f"  ✗ quality overview : {e}", file=sys.stderr)
             failed += 1
 
-        # ── Quality détail par enseigne ───────────────────────────────────────
-        for company in companies:
-            slug = company["slug"]
+        # ── Quality détail — slugs extraits de l'overview ────────────────────
+        for slug in quality_slugs:
             try:
                 write_json(
                     OUT_DIR / "quality" / cat_id / f"{slug}.json",

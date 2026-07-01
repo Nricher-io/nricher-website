@@ -25,7 +25,7 @@
     "name": "Leasi",
     "articlesAnalysed": 16400,
     "articlesMatched": 291,
-    "priceIndex": 96
+    "priceIndex": 95
   },
   {
     "slug": "carrefour",
@@ -49,13 +49,6 @@
     "priceIndex": 97
   },
   {
-    "slug": "gpasplus",
-    "name": "Gpasplus",
-    "articlesAnalysed": 16400,
-    "articlesMatched": 781,
-    "priceIndex": 98
-  },
-  {
     "slug": "la boutique du net",
     "name": "La Boutique Du Net",
     "articlesAnalysed": 16400,
@@ -70,17 +63,17 @@
     "priceIndex": 98
   },
   {
+    "slug": "gpasplus",
+    "name": "Gpasplus",
+    "articlesAnalysed": 16400,
+    "articlesMatched": 781,
+    "priceIndex": 99
+  },
+  {
     "slug": "as discount",
     "name": "As Discount",
     "articlesAnalysed": 16400,
     "articlesMatched": 476,
-    "priceIndex": 99
-  },
-  {
-    "slug": "infopavon",
-    "name": "Infopavon",
-    "articlesAnalysed": 16400,
-    "articlesMatched": 205,
     "priceIndex": 99
   },
   {
@@ -102,6 +95,13 @@
     "name": "Yonis Shop",
     "articlesAnalysed": 16400,
     "articlesMatched": 228,
+    "priceIndex": 100
+  },
+  {
+    "slug": "infopavon",
+    "name": "Infopavon",
+    "articlesAnalysed": 16400,
+    "articlesMatched": 205,
     "priceIndex": 100
   },
   {
@@ -137,7 +137,7 @@
     "name": "You Get Innovation & Technology",
     "articlesAnalysed": 16400,
     "articlesMatched": 150,
-    "priceIndex": 103
+    "priceIndex": 104
   },
   {
     "slug": "rue du commerce",
@@ -168,18 +168,18 @@
     "priceIndex": 118
   },
   {
+    "slug": "house partners",
+    "name": "House Partners",
+    "articlesAnalysed": 16400,
+    "articlesMatched": 2353,
+    "priceIndex": 119
+  },
+  {
     "slug": "alloccaz",
     "name": "Alloccaz",
     "articlesAnalysed": 16400,
     "articlesMatched": 850,
     "priceIndex": 119
-  },
-  {
-    "slug": "house partners",
-    "name": "House Partners",
-    "articlesAnalysed": 16400,
-    "articlesMatched": 2353,
-    "priceIndex": 120
   },
   {
     "slug": "cheng tech",

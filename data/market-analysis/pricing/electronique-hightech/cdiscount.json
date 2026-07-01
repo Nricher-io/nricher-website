@@ -1,7 +1,7 @@
 {
   "slug": "cdiscount",
   "name": "Cdiscount",
-  "priceIndex": 113,
+  "priceIndex": 114,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -262,17 +262,17 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 113,
-      "lowerPct": 13,
+      "priceIndex": 114,
+      "lowerPct": 11,
       "equalPct": 3,
-      "higherPct": 84
+      "higherPct": 86
     },
     {
       "pack": "Ordinateur portable",
       "priceIndex": 124,
-      "lowerPct": 7,
+      "lowerPct": 6,
       "equalPct": 6,
-      "higherPct": 87
+      "higherPct": 88
     },
     {
       "pack": "Télévision",
@@ -284,9 +284,9 @@
     {
       "pack": "Casque audio",
       "priceIndex": 126,
-      "lowerPct": 10,
-      "equalPct": 19,
-      "higherPct": 71
+      "lowerPct": 12,
+      "equalPct": 18,
+      "higherPct": 70
     },
     {
       "pack": "Tablette",

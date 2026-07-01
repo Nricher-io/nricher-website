@@ -265,28 +265,28 @@
       "priceIndex": 108,
       "lowerPct": 18,
       "equalPct": 35,
-      "higherPct": 47
+      "higherPct": 48
     },
     {
       "pack": "Ordinateur portable",
       "priceIndex": 104,
-      "lowerPct": 52,
+      "lowerPct": 51,
       "equalPct": 12,
-      "higherPct": 37
+      "higherPct": 38
     },
     {
       "pack": "Télévision",
       "priceIndex": 105,
-      "lowerPct": 20,
-      "equalPct": 53,
+      "lowerPct": 18,
+      "equalPct": 55,
       "higherPct": 27
     },
     {
       "pack": "Casque audio",
       "priceIndex": 115,
       "lowerPct": 8,
-      "equalPct": 46,
-      "higherPct": 46
+      "equalPct": 47,
+      "higherPct": 45
     },
     {
       "pack": "Tablette",

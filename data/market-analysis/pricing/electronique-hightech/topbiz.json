@@ -1,0 +1,273 @@
+{
+  "slug": "topbiz",
+  "name": "Topbiz",
+  "priceIndex": 102,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        121,
+        135,
+        124,
+        119,
+        120,
+        139
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        129,
+        126,
+        132,
+        133,
+        126,
+        126
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        126,
+        125,
+        122,
+        123,
+        123,
+        123
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        113,
+        110,
+        115,
+        112,
+        115,
+        112
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        132,
+        132,
+        134,
+        137,
+        142,
+        135
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        141,
+        140,
+        141,
+        140,
+        139,
+        143
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        127,
+        127,
+        128,
+        129,
+        128,
+        129
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        113,
+        116,
+        116,
+        111,
+        110,
+        106
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        155,
+        156,
+        158,
+        150,
+        151,
+        145
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        116,
+        107,
+        104,
+        105,
+        107,
+        110
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        128,
+        127,
+        132,
+        129,
+        131,
+        131
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        111,
+        110,
+        113,
+        111,
+        112,
+        112
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        125,
+        116,
+        120,
+        136,
+        138,
+        129
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        114,
+        114,
+        114,
+        113,
+        115,
+        114
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        109,
+        109,
+        110,
+        109,
+        109,
+        108
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        108,
+        112,
+        115,
+        116,
+        115,
+        113
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        103,
+        109,
+        107,
+        109,
+        112,
+        109
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        103,
+        103,
+        103,
+        103,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        114,
+        113,
+        118,
+        115,
+        115,
+        116
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        111,
+        110,
+        112,
+        112,
+        109,
+        109
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "priceIndex": 102,
+      "lowerPct": 50,
+      "equalPct": 20,
+      "higherPct": 30
+    },
+    {
+      "pack": "Ordinateur portable",
+      "priceIndex": 100,
+      "lowerPct": 34,
+      "equalPct": 45,
+      "higherPct": 21
+    },
+    {
+      "pack": "Télévision",
+      "priceIndex": 98,
+      "lowerPct": 38,
+      "equalPct": 38,
+      "higherPct": 25
+    },
+    {
+      "pack": "Casque audio",
+      "priceIndex": 101,
+      "lowerPct": 48,
+      "equalPct": 20,
+      "higherPct": 32
+    },
+    {
+      "pack": "Tablette",
+      "priceIndex": 101,
+      "lowerPct": 58,
+      "equalPct": 11,
+      "higherPct": 32
+    }
+  ]
+}
