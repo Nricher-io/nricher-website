@@ -257,6 +257,7 @@
   </div>
 </footer>
 
+<script src="js/nricher-config.js?v=20260701"></script>
 <script src="js/analyse-categories.js?v=20260626"></script>
 <script>
 (function () {
@@ -274,47 +275,12 @@
   var packPrev = document.getElementById('packPrev');
   var packNext = document.getElementById('packNext');
   var swipeArea = document.getElementById('catSwipeArea');
-  var categories = window.NRICHER_CATEGORIES || [];
-
-  var RANK_COLORS = ['#1fae7a', '#47b668', '#6fbe56', '#9ac34a', '#cec24c', '#ffc04d', '#f7a443', '#f0893a', '#e96735', '#e2452f'];
+  var categories = [];
 
   var currentCat = null;
   var currentPackIndex = 0;
 
-  function seedFromString(str) {
-    var h = 0;
-    for (var i = 0; i < str.length; i++) { h = (h * 31 + str.charCodeAt(i)) | 0; }
-    return h;
-  }
-  function mulberry32(seed) {
-    return function () {
-      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
-      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-
-  function buildMockReport(cat, packName) {
-    var rng = mulberry32(seedFromString(cat.id + '::' + packName));
-    var totalArticles = Math.round(4000 + rng() * 9000);
-    var topPct = Math.round(16 + rng() * 14);
-    var midPct = Math.round(28 + rng() * 14);
-    var lowPct = 100 - topPct - midPct;
-    var topSellersCount = Math.round(totalArticles * topPct / 100);
-
-    var rows = cat.brands.map(function (b) {
-      var share = 0.22 + rng() * 0.7;
-      return { name: b, count: Math.round(topSellersCount * share) };
-    });
-    rows.sort(function (a, c) { return c.count - a.count; });
-    rows = rows.slice(0, 10);
-    rows.forEach(function (r) {
-      r.potential = Math.max(8, Math.round((topSellersCount - r.count) / r.count * 100));
-    });
-
-    return { totalArticles: totalArticles, topPct: topPct, midPct: midPct, lowPct: lowPct, topSellersCount: topSellersCount, rows: rows };
-  }
+  var RANK_COLORS = ['#1fae7a', '#47b668', '#6fbe56', '#9ac34a', '#cec24c', '#ffc04d', '#f7a443', '#f0893a', '#e96735', '#e2452f'];
 
   function donutSegments(pcts, colors) {
     var circumference = 2 * Math.PI * 50;
@@ -341,52 +307,56 @@
     });
   }
 
+  function renderCatReport(cat) {
+    currentCat = cat;
+    renderPackChrome(cat);
+    catRankList.innerHTML = '<div style="text-align:center;padding:24px;color:var(--muted);">Chargement…</div>';
+
+    return fetch('/data/market-analysis/catalogue/' + cat.id + '/' + currentPackIndex + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        catReportCount.innerHTML = d.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
+
+        var segs = donutSegments([d.topPct, d.midPct, d.lowPct], ['#60efbe', '#2e58ca', '#cbd5e1']);
+        var svgParts = '<g transform="rotate(-90 60 60)">';
+        segs.forEach(function (seg) {
+          svgParts += '<circle cx="60" cy="60" r="50" fill="none" stroke="' + seg.color + '" stroke-width="20" ' +
+            'stroke-dasharray="' + seg.dasharray + '" stroke-dashoffset="' + seg.dashoffset + '"></circle>';
+        });
+        svgParts += '</g>';
+        svgParts += '<text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="20" fill="var(--text)">' + d.topSellersCount.toLocaleString('fr-FR') + '</text>';
+        svgParts += '<text x="60" y="73" text-anchor="middle" font-size="9.5" fill="var(--muted)">Top sellers</text>';
+        catDonut.innerHTML = svgParts;
+
+        catDonutLegend.innerHTML =
+          '<div class="legend-item"><span class="legend-dot" style="background:#60efbe;"></span>Top sellers · <b>' + d.topPct + '%</b></div>' +
+          '<div class="legend-item"><span class="legend-dot" style="background:#2e58ca;"></span>Middle sellers · <b>' + d.midPct + '%</b></div>' +
+          '<div class="legend-item"><span class="legend-dot" style="background:#cbd5e1;"></span>Low sellers · <b>' + d.lowPct + '%</b></div>';
+
+        catRankList.innerHTML = (d.ranking || []).slice(0, 10).map(function (row, i) {
+          var pct = Math.round(row.topSellerArticles / d.topSellersCount * 100);
+          var color = RANK_COLORS[i] || RANK_COLORS[RANK_COLORS.length - 1];
+          return '<div class="cat-rank-row">' +
+            '<span class="cat-rank-brand">' + row.name + '</span>' +
+            '<div class="cat-rank-bar-track"><div class="cat-rank-bar" style="width:' + Math.max(pct, 10) + '%;background:' + color + ';">' + row.topSellerArticles.toLocaleString('fr-FR') + ' / ' + d.topSellersCount.toLocaleString('fr-FR') + '</div></div>' +
+            '<span class="cat-rank-pct">+' + row.potentialPct + '%</span>' +
+          '</div>';
+        }).join('');
+      })
+      .catch(function (err) {
+        catRankList.innerHTML = '<div style="text-align:center;padding:24px;color:var(--bad);">Erreur de chargement (' + err.message + ')</div>';
+      });
+  }
+
   function goToPack(index) {
     var packs = currentCat.packs || [currentCat.name];
     if (index < 0 || index >= packs.length || index === currentPackIndex) return;
     currentPackIndex = index;
-    var grid = swipeArea.querySelector('.cat-report__grid');
-    grid.style.opacity = '0';
-    setTimeout(function () {
-      renderCatReport(currentCat);
-      grid.style.opacity = '1';
-    }, 130);
-  }
-
-  function renderCatReport(cat) {
-    currentCat = cat;
-    var packs = cat.packs || [cat.name];
-    var packName = packs[currentPackIndex];
-    renderPackChrome(cat);
-    var r = buildMockReport(cat, packName);
-
-    catReportCount.innerHTML = r.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
-
-    var segs = donutSegments([r.topPct, r.midPct, r.lowPct], ['#60efbe', '#2e58ca', '#cbd5e1']);
-    var svgParts = '<g transform="rotate(-90 60 60)">';
-    segs.forEach(function (seg) {
-      svgParts += '<circle cx="60" cy="60" r="50" fill="none" stroke="' + seg.color + '" stroke-width="20" ' +
-        'stroke-dasharray="' + seg.dasharray + '" stroke-dashoffset="' + seg.dashoffset + '"></circle>';
+    var reportGrid = swipeArea.querySelector('.cat-report__grid');
+    reportGrid.style.opacity = '0';
+    renderCatReport(currentCat).then(function () {
+      reportGrid.style.opacity = '1';
     });
-    svgParts += '</g>';
-    svgParts += '<text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="20" fill="var(--text)">' + r.topSellersCount.toLocaleString('fr-FR') + '</text>';
-    svgParts += '<text x="60" y="73" text-anchor="middle" font-size="9.5" fill="var(--muted)">Top sellers</text>';
-    catDonut.innerHTML = svgParts;
-
-    catDonutLegend.innerHTML =
-      '<div class="legend-item"><span class="legend-dot" style="background:#60efbe;"></span>Top sellers · <b>' + r.topPct + '%</b></div>' +
-      '<div class="legend-item"><span class="legend-dot" style="background:#2e58ca;"></span>Middle sellers · <b>' + r.midPct + '%</b></div>' +
-      '<div class="legend-item"><span class="legend-dot" style="background:#cbd5e1;"></span>Low sellers · <b>' + r.lowPct + '%</b></div>';
-
-    catRankList.innerHTML = r.rows.map(function (row, i) {
-      var pct = Math.round(row.count / r.topSellersCount * 100);
-      var color = RANK_COLORS[i] || RANK_COLORS[RANK_COLORS.length - 1];
-      return '<div class="cat-rank-row">' +
-        '<span class="cat-rank-brand">' + row.name + '</span>' +
-        '<div class="cat-rank-bar-track"><div class="cat-rank-bar" style="width:' + Math.max(pct, 10) + '%;background:' + color + ';">' + row.count.toLocaleString('fr-FR') + ' / ' + r.topSellersCount.toLocaleString('fr-FR') + '</div></div>' +
-        '<span class="cat-rank-pct">+' + row.potential + '%</span>' +
-      '</div>';
-    }).join('');
   }
 
   packPrev.addEventListener('click', function () { goToPack(currentPackIndex - 1); });
@@ -421,7 +391,7 @@
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
       card.innerHTML = '<div class="an-cat-card__name">' + cat.name + '</div>' +
-        '<div class="an-cat-card__count">' + cat.brands.length + ' enseignes suivies</div>';
+        '<div class="an-cat-card__count">' + (cat.companies || []).length + ' enseignes suivies</div>';
       card.addEventListener('click', function () { selectCategory(cat); });
       grid.appendChild(card);
     });
@@ -449,8 +419,17 @@
     empty.style.display = visible === 0 ? 'block' : 'none';
   }
 
-  renderGrid();
-  if (search) search.addEventListener('input', filterGrid);
+  function init() {
+    categories = window.NRICHER_CATEGORIES || [];
+    renderGrid();
+    if (search) search.addEventListener('input', filterGrid);
+  }
+
+  if (window.NRICHER_CATEGORIES && window.NRICHER_CATEGORIES.length) {
+    init();
+  } else {
+    document.addEventListener('nricherCategoriesReady', init);
+  }
 })();
 </script>
 <script src="js/i18n.js?v=20260622"></script>

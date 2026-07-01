@@ -301,6 +301,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   </div>
 </footer>
 
+<script src="js/nricher-config.js?v=20260701"></script>
 <script src="js/analyse-categories.js?v=20260626"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script>
@@ -318,73 +319,13 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   var prDetailMatched = document.getElementById('prDetailMatched');
   var prTrendSub = document.getElementById('prTrendSub');
   var prCbarList = document.getElementById('prCbarList');
-  var categories = window.NRICHER_CATEGORIES || [];
+  var categories = [];
 
-  var WEEKS = ['24 Mar', '07 Avr', '21 Avr', '05 Mai', '19 Mai', '02 Juin'];
   var trendChart = null, attractChart = null;
   var currentRows = [];
 
-  function seedFromString(str) {
-    var h = 0;
-    for (var i = 0; i < str.length; i++) { h = (h * 31 + str.charCodeAt(i)) | 0; }
-    return h;
-  }
-  function mulberry32(seed) {
-    return function () {
-      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
-      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-
-  function buildOverviewRow(cat, brand) {
-    var rng = mulberry32(seedFromString(cat.id + '::' + brand + '::overview'));
-    var analysed = Math.round(20000 + rng() * 470000);
-    var matchRate = 0.16 + rng() * 0.5;
-    var matched = Math.round(analysed * matchRate);
-    var pi = Math.round(85 + rng() * 30);
-    return { name: brand, analysed: analysed, matched: matched, pi: pi };
-  }
-
-  function buildPairwise(cat, company, competitor) {
-    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::' + competitor));
-    var pi = Math.round(85 + rng() * 30);
-    var t = (pi - 85) / 30;
-    var higherPct = Math.min(90, Math.round(8 + t * 60 + rng() * 10));
-    var equalPct = Math.min(95 - higherPct, Math.round(6 + rng() * 14));
-    var lowerPct = 100 - higherPct - equalPct;
-    return { name: competitor, pi: pi, lowerPct: lowerPct, equalPct: equalPct, higherPct: higherPct };
-  }
-
-  function buildTrend(cat, company, competitor, finalPI) {
-    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::' + competitor + '::trend'));
-    var arr = [];
-    var v = finalPI + (rng() * 10 - 5);
-    for (var i = 0; i < WEEKS.length; i++) {
-      v += (rng() * 8 - 4);
-      arr.push(v);
-    }
-    arr[WEEKS.length - 1] = finalPI;
-    return arr.map(function (x) { return Math.round(x); });
-  }
-
-  function buildAttractiveness(cat, company) {
-    var rng = mulberry32(seedFromString(cat.id + '::' + company + '::attract'));
-    var cheaper = 45 + rng() * 15;
-    var aligned = 15 + rng() * 10;
-    return WEEKS.map(function (w) {
-      cheaper = Math.max(15, Math.min(75, cheaper + (rng() * 10 - 5)));
-      aligned = Math.max(5, Math.min(30, aligned + (rng() * 6 - 3)));
-      var pricier = 100 - cheaper - aligned;
-      if (pricier < 5) { pricier = 5; aligned = 100 - cheaper - pricier; }
-      return { week: w, cheaperPct: Math.round(cheaper), equalPct: Math.round(aligned), higherPct: 100 - Math.round(cheaper) - Math.round(aligned) };
-    });
-  }
-
-  function renderTable(cat) {
-    currentRows = cat.brands.map(function (b) { return buildOverviewRow(cat, b); });
-    currentRows.sort(function (a, c) { return a.pi - c.pi; });
+  function renderTable(cat, rows) {
+    currentRows = rows.slice().sort(function (a, c) { return a.pi - c.pi; });
     prTableBody.innerHTML = currentRows.map(function (r, i) {
       var sev = r.pi <= 100 ? 'good' : 'bad';
       return '<tr data-i="' + i + '">' +
@@ -404,92 +345,112 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
     prDetail.classList.remove('is-visible');
   }
 
-  function showDetail(cat, company) {
-    var competitors = currentRows.filter(function (r) { return r.name !== company.name; });
+  function loadPricingOverview(cat) {
+    prTableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--muted);">Chargement…</td></tr>';
+    prDetail.classList.remove('is-visible');
+    fetch('/data/market-analysis/pricing/' + cat.id + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (data) {
+        renderTable(cat, data.map(function (d) {
+          return { slug: d.slug, name: d.name, analysed: d.articlesAnalysed, matched: d.articlesMatched, pi: d.priceIndex };
+        }));
+      })
+      .catch(function (err) {
+        prTableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:24px;color:var(--bad);">Erreur de chargement (' + err.message + ')</td></tr>';
+      });
+  }
 
+  function showDetail(cat, company) {
     prDetailName.textContent = company.name;
     var sev = company.pi <= 100 ? 'good' : 'bad';
     prDetailPill.textContent = 'PI ' + company.pi;
     prDetailPill.style.background = sev === 'good' ? 'var(--good)' : 'var(--bad)';
     prDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' articles analysés';
     prDetailMatched.textContent = company.matched.toLocaleString('fr-FR') + ' articles matchés';
-    prTrendSub.textContent = 'Tracé généré automatiquement — vs ' + competitors.length + ' concurrents.';
-
-    var pairwise = competitors.map(function (c) { return buildPairwise(cat, company.name, c.name); });
-    var palette = ['#f59e0b', '#14b8a6', '#8b5cf6', '#ec4899', '#3b82f6', '#84cc16', '#f97316', '#06b6d4', '#a855f7'];
-
-    var trendDatasets = pairwise.map(function (p, i) {
-      return {
-        label: p.name, data: buildTrend(cat, company.name, p.name, p.pi),
-        borderColor: palette[i % palette.length], backgroundColor: 'transparent',
-        tension: 0.35, pointRadius: 3,
-      };
-    });
-    trendDatasets.push({
-      label: '__ref100', data: WEEKS.map(function () { return 100; }),
-      borderColor: 'rgba(0,0,0,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false,
-    });
-
-    if (trendChart) trendChart.destroy();
-    if (window.Chart) {
-      trendChart = new Chart(document.getElementById('prTrendCanvas'), {
-        type: 'line',
-        data: { labels: WEEKS, datasets: trendDatasets },
-        options: {
-          maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
-          plugins: {
-            legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 }, filter: function (item) { return item.text !== '__ref100'; } } },
-            tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8, filter: function (item) { return item.dataset.label !== '__ref100'; } },
-          },
-        },
-      });
-    }
-
-    var attract = buildAttractiveness(cat, company.name);
-    if (attractChart) attractChart.destroy();
-    if (window.Chart) {
-      attractChart = new Chart(document.getElementById('prAttractCanvas'), {
-        type: 'line',
-        data: {
-          labels: attract.map(function (r) { return r.week; }),
-          datasets: [
-            { label: 'Cheaper', data: attract.map(function (r) { return r.cheaperPct; }), borderColor: '#1fae7a', backgroundColor: 'rgba(31,174,122,0.85)', fill: 'origin', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
-            { label: 'Aligned', data: attract.map(function (r) { return r.equalPct; }), borderColor: '#2e58ca', backgroundColor: 'rgba(46,88,202,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
-            { label: 'Pricier', data: attract.map(function (r) { return r.higherPct; }), borderColor: '#e2452f', backgroundColor: 'rgba(226,69,47,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
-          ],
-        },
-        options: {
-          maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          scales: {
-            x: { stacked: true, grid: { display: true, color: 'rgba(255,255,255,0.65)', lineWidth: 1.5, drawTicks: false } },
-            y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
-          },
-          plugins: {
-            legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 } } },
-            tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
-          },
-        },
-      });
-    }
-
-    prCbarList.innerHTML = pairwise.map(function (p) {
-      var pisev = p.pi <= 100 ? 'good' : 'bad';
-      return '<div class="cbar-row">' +
-        '<div class="cbar-name">' + p.name + '</div>' +
-        '<div class="cbar-track">' +
-          '<div style="width:' + p.lowerPct + '%;background:var(--good);">' + (p.lowerPct >= 9 ? '<span class="cbar-seg__pct">' + p.lowerPct + '%</span>' : '') + '</div>' +
-          '<div style="width:' + p.equalPct + '%;background:var(--blue);">' + (p.equalPct >= 9 ? '<span class="cbar-seg__pct">' + p.equalPct + '%</span>' : '') + '</div>' +
-          '<div style="width:' + p.higherPct + '%;background:var(--bad);">' + (p.higherPct >= 9 ? '<span class="cbar-seg__pct">' + p.higherPct + '%</span>' : '') + '</div>' +
-        '</div>' +
-        '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + p.pi + '</div>' +
-      '</div>';
-    }).join('');
-
+    prTrendSub.textContent = '';
+    if (trendChart) { trendChart.destroy(); trendChart = null; }
+    if (attractChart) { attractChart.destroy(); attractChart = null; }
+    prCbarList.innerHTML = '<div style="text-align:center;padding:16px;color:var(--muted);">Chargement…</div>';
     prDetail.classList.add('is-visible');
     prDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    fetch('/data/market-analysis/pricing/' + cat.id + '/' + company.slug + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        var weeks = d.weeks || [];
+        var palette = ['#f59e0b', '#14b8a6', '#8b5cf6', '#ec4899', '#3b82f6', '#84cc16', '#f97316', '#06b6d4', '#a855f7'];
+        prTrendSub.textContent = 'vs ' + (d.competitorTrends || []).length + ' concurrents.';
+
+        var trendDatasets = (d.competitorTrends || []).map(function (c, i) {
+          return {
+            label: c.name, data: c.piHistory,
+            borderColor: palette[i % palette.length], backgroundColor: 'transparent',
+            tension: 0.35, pointRadius: 3,
+          };
+        });
+        trendDatasets.push({
+          label: '__ref100', data: weeks.map(function () { return 100; }),
+          borderColor: 'rgba(0,0,0,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false,
+        });
+        if (window.Chart) {
+          trendChart = new Chart(document.getElementById('prTrendCanvas'), {
+            type: 'line',
+            data: { labels: weeks, datasets: trendDatasets },
+            options: {
+              maintainAspectRatio: false,
+              interaction: { mode: 'index', intersect: false },
+              scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
+              plugins: {
+                legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 }, filter: function (item) { return item.text !== '__ref100'; } } },
+                tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8, filter: function (item) { return item.dataset.label !== '__ref100'; } },
+              },
+            },
+          });
+        }
+
+        var attract = d.attractiveness || [];
+        if (window.Chart) {
+          attractChart = new Chart(document.getElementById('prAttractCanvas'), {
+            type: 'line',
+            data: {
+              labels: attract.map(function (r) { return r.week; }),
+              datasets: [
+                { label: 'Cheaper', data: attract.map(function (r) { return r.cheaperPct; }), borderColor: '#1fae7a', backgroundColor: 'rgba(31,174,122,0.85)', fill: 'origin', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+                { label: 'Aligned', data: attract.map(function (r) { return r.equalPct; }), borderColor: '#2e58ca', backgroundColor: 'rgba(46,88,202,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+                { label: 'Pricier', data: attract.map(function (r) { return r.higherPct; }), borderColor: '#e2452f', backgroundColor: 'rgba(226,69,47,0.85)', fill: '-1', tension: 0.3, pointRadius: 0, pointHoverRadius: 5 },
+              ],
+            },
+            options: {
+              maintainAspectRatio: false,
+              interaction: { mode: 'index', intersect: false },
+              scales: {
+                x: { stacked: true, grid: { display: true, color: 'rgba(255,255,255,0.65)', lineWidth: 1.5, drawTicks: false } },
+                y: { stacked: true, min: 0, max: 100, grid: { color: 'rgba(0,0,0,0.06)' } },
+              },
+              plugins: {
+                legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 } } },
+                tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8 },
+              },
+            },
+          });
+        }
+
+        prCbarList.innerHTML = (d.pairwise || []).map(function (p) {
+          var pisev = p.priceIndex <= 100 ? 'good' : 'bad';
+          return '<div class="cbar-row">' +
+            '<div class="cbar-name">' + p.name + '</div>' +
+            '<div class="cbar-track">' +
+              '<div style="width:' + p.lowerPct + '%;background:var(--good);">' + (p.lowerPct >= 9 ? '<span class="cbar-seg__pct">' + p.lowerPct + '%</span>' : '') + '</div>' +
+              '<div style="width:' + p.equalPct + '%;background:var(--blue);">' + (p.equalPct >= 9 ? '<span class="cbar-seg__pct">' + p.equalPct + '%</span>' : '') + '</div>' +
+              '<div style="width:' + p.higherPct + '%;background:var(--bad);">' + (p.higherPct >= 9 ? '<span class="cbar-seg__pct">' + p.higherPct + '%</span>' : '') + '</div>' +
+            '</div>' +
+            '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + p.priceIndex + '</div>' +
+          '</div>';
+        }).join('');
+      })
+      .catch(function (err) {
+        prCbarList.innerHTML = '<div style="text-align:center;padding:16px;color:var(--bad);">Erreur de chargement (' + err.message + ')</div>';
+      });
   }
 
   function renderGrid() {
@@ -499,7 +460,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
       card.innerHTML = '<div class="an-cat-card__name">' + cat.name + '</div>' +
-        '<div class="an-cat-card__count">' + cat.brands.length + ' enseignes suivies</div>';
+        '<div class="an-cat-card__count">' + (cat.companies || []).length + ' enseignes suivies</div>';
       card.addEventListener('click', function () { selectCategory(cat); });
       grid.appendChild(card);
     });
@@ -510,7 +471,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       c.classList.toggle('is-selected', c.dataset.id === cat.id);
     });
     previewTitle.textContent = cat.name;
-    renderTable(cat);
+    loadPricingOverview(cat);
     preview.classList.add('is-visible');
     preview.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
@@ -526,8 +487,17 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
     empty.style.display = visible === 0 ? 'block' : 'none';
   }
 
-  renderGrid();
-  if (search) search.addEventListener('input', filterGrid);
+  function init() {
+    categories = window.NRICHER_CATEGORIES || [];
+    renderGrid();
+    if (search) search.addEventListener('input', filterGrid);
+  }
+
+  if (window.NRICHER_CATEGORIES && window.NRICHER_CATEGORIES.length) {
+    init();
+  } else {
+    document.addEventListener('nricherCategoriesReady', init);
+  }
 })();
 </script>
 <script src="js/i18n.js?v=20260622"></script>
