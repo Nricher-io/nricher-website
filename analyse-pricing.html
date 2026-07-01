@@ -67,11 +67,14 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 .pr-detail__name{font-family:var(--font-display);font-weight:700;font-size:1.25rem;}
 .pr-detail__pill{font-family:var(--font-display);font-weight:700;font-size:0.92rem;padding:7px 16px;border-radius:var(--r-pill);color:#fff;}
 .pr-detail__meta{font-size:0.78rem;font-weight:600;padding:6px 14px;border-radius:var(--r-pill);border:1px solid var(--border);color:var(--text-2);}
-.pr-detail__grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:stretch;margin-bottom:26px;}
+.pr-detail__grid{display:grid;grid-template-columns:1fr;gap:22px;margin-bottom:26px;}
 .pr-report .chart-card{background:var(--card-2,#F5F7FA);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px 26px 20px;}
 .pr-report .chart-card h3{font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text);}
 .pr-report .chart-sub{color:var(--muted);font-size:0.82rem;margin-top:4px;margin-bottom:14px;}
-.pr-report .chart-canvas-wrap{position:relative;height:230px;}
+.pr-report .chart-canvas-wrap{position:relative;height:300px;}
+.pr-trend-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:0;}
+.pr-trend-toggle{font-size:0.74rem;font-weight:600;color:var(--blue);background:rgba(46,88,202,0.08);border:none;border-radius:var(--r-pill);padding:4px 12px;cursor:pointer;white-space:nowrap;transition:background .15s;}
+.pr-trend-toggle:hover{background:rgba(46,88,202,0.16);}
 .pr-report .legend{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;}
 .pr-report .legend-item{display:flex;align-items:center;gap:7px;font-size:0.8rem;color:var(--muted);}
 .pr-report .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
@@ -243,7 +246,10 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 
         <div class="pr-detail__grid">
           <div class="chart-card">
-            <h3 data-i18n="an.pricing.chart1.title">Price index evolution <span class="info-tip" tabindex="0" data-tip="L'indice prix (PI) mesure le positionnement tarifaire face aux concurrents. PI &lt; 100 = moins cher, PI = 100 = aligné, PI &gt; 100 = plus cher. Graphique semaine par semaine.">i</span></h3>
+            <div class="pr-trend-bar">
+              <h3 data-i18n="an.pricing.chart1.title">Price index evolution <span class="info-tip" tabindex="0" data-tip="L'indice prix (PI) mesure le positionnement tarifaire face aux concurrents. PI &lt; 100 = moins cher, PI = 100 = aligné, PI &gt; 100 = plus cher. Graphique semaine par semaine.">i</span></h3>
+              <button class="pr-trend-toggle" id="prTrendToggle" type="button">Tout déselectionner</button>
+            </div>
             <div class="chart-sub" id="prTrendSub"></div>
             <div class="chart-canvas-wrap"><canvas id="prTrendCanvas"></canvas></div>
           </div>
@@ -321,8 +327,23 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   var prDetailAnalysed = document.getElementById('prDetailAnalysed');
   var prDetailMatched = document.getElementById('prDetailMatched');
   var prTrendSub = document.getElementById('prTrendSub');
+  var prTrendToggle = document.getElementById('prTrendToggle');
   var prCbarList = document.getElementById('prCbarList');
   var categories = [];
+  var trendAllHidden = false;
+
+  if (prTrendToggle) {
+    prTrendToggle.addEventListener('click', function () {
+      if (!trendChart) return;
+      trendAllHidden = !trendAllHidden;
+      trendChart.data.datasets.forEach(function (ds, i) {
+        if (ds.label === '__ref100') return;
+        trendChart.setDatasetVisibility(i, !trendAllHidden);
+      });
+      trendChart.update();
+      prTrendToggle.textContent = trendAllHidden ? 'Tout sélectionner' : 'Tout déselectionner';
+    });
+  }
 
   var trendChart = null, attractChart = null;
   var currentRows = [];
@@ -364,6 +385,8 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   }
 
   function showDetail(cat, company) {
+    trendAllHidden = false;
+    if (prTrendToggle) prTrendToggle.textContent = 'Tout déselectionner';
     prDetailName.textContent = company.name;
     var sev = company.pi <= 100 ? 'good' : 'bad';
     prDetailPill.textContent = 'PI ' + company.pi;
