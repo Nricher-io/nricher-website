@@ -112,6 +112,9 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
 .info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
 .info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
+.cbar-track > div[data-tip]{position:relative;cursor:default;}
+.cbar-track > div[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:11px;font-weight:600;padding:5px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:100;}
+.cbar-track > div[data-tip]:hover::after{opacity:1;}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -217,7 +220,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 
       <div class="an-search-wrap reveal" data-delay="4">
         <span class="an-search-ico">⌕</span>
-        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Beauté…" autocomplete="off">
+        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Darty…" autocomplete="off">
       </div>
     </div>
   </div>
@@ -351,7 +354,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         trendChart.setDatasetVisibility(i, !trendAllHidden);
       });
       trendChart.update();
-      prTrendToggle.textContent = trendAllHidden ? 'Tout sélectionner' : 'Tout déselectionner';
+      prTrendToggle.textContent = trendAllHidden ? tl('an.pricing.selectall', 'Tout sélectionner') : tl('an.pricing.deselectall', 'Tout déselectionner');
     });
   }
 
@@ -367,7 +370,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         '<td>' + r.analysed.toLocaleString('fr-FR') + '</td>' +
         '<td>' + r.matched.toLocaleString('fr-FR') + '</td>' +
         '<td><span class="pr-pi-pill ' + sev + '">' + r.pi + '</span></td>' +
-        '<td class="pr-table-chevron"><span class="pr-row-cta" data-i18n="an.pricing.viewdetail">Voir le détail<span class="pr-row-cta__ico">›</span></span></td>' +
+        '<td class="pr-table-chevron"><span class="pr-row-cta">' + tl('an.pricing.viewdetail', 'Voir le détail') + '<span class="pr-row-cta__ico">›</span></span></td>' +
       '</tr>';
     }).join('');
     Array.prototype.forEach.call(prTableBody.querySelectorAll('tr'), function (row) {
@@ -396,13 +399,13 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
 
   function showDetail(cat, company) {
     trendAllHidden = false;
-    if (prTrendToggle) prTrendToggle.textContent = 'Tout déselectionner';
+    if (prTrendToggle) prTrendToggle.textContent = tl('an.pricing.deselectall', 'Tout déselectionner');
     prDetailName.textContent = company.name;
     var sev = company.pi <= 100 ? 'good' : 'bad';
     prDetailPill.textContent = 'PI ' + company.pi;
     prDetailPill.style.background = sev === 'good' ? 'var(--good)' : 'var(--bad)';
-    prDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' articles analysés';
-    prDetailMatched.textContent = company.matched.toLocaleString('fr-FR') + ' articles matchés';
+    prDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' ' + tl('an.pricing.art_analysed', 'articles analysés');
+    prDetailMatched.textContent = company.matched.toLocaleString('fr-FR') + ' ' + tl('an.pricing.art_matched', 'articles matchés');
     prTrendSub.textContent = '';
     if (trendChart) { trendChart.destroy(); trendChart = null; }
     if (attractChart) { attractChart.destroy(); attractChart = null; }
@@ -417,7 +420,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
       .then(function (d) {
         var weeks = d.weeks || [];
         var palette = ['#f59e0b', '#14b8a6', '#8b5cf6', '#ec4899', '#3b82f6', '#84cc16', '#f97316', '#06b6d4', '#a855f7'];
-        prTrendSub.textContent = 'vs ' + (d.competitorTrends || []).length + ' concurrents.';
+        prTrendSub.textContent = 'vs ' + (d.competitorTrends || []).length + ' ' + tl('an.pricing.competitors', 'concurrents') + '.';
 
         var trendDatasets = (d.competitorTrends || []).map(function (c, i) {
           return {
@@ -439,8 +442,8 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
               interaction: { mode: 'index', intersect: false },
               scales: { x: { grid: { display: false } }, y: { grid: { color: 'rgba(0,0,0,0.06)' } } },
               plugins: {
-                legend: { align: 'center', labels: { boxWidth: 10, padding: 10, font: { size: 10 }, generateLabels: function (chart) { var labels = Chart.defaults.plugins.legend.labels.generateLabels(chart); return labels.filter(function (l) { return l.text !== '__ref100'; }).map(function (label) { if (label.hidden) { label.fontColor = 'rgba(0,0,0,0.3)'; label.fillStyle = 'rgba(160,160,160,0.25)'; label.strokeStyle = 'rgba(160,160,160,0.25)'; } return label; }); } } },
-                tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8, filter: function (item) { return item.dataset.label !== '__ref100'; } },
+                legend: { align: 'center', onClick: function (e, legendItem, legend) { var idx = legendItem.datasetIndex; var ch = legend.chart; if (ch.isDatasetVisible(idx)) { ch.hide(idx); } else { ch.show(idx); } }, labels: { boxWidth: 10, padding: 10, font: { size: 10 }, generateLabels: function (chart) { var labels = Chart.defaults.plugins.legend.labels.generateLabels(chart); return labels.filter(function (l) { return l.text !== '__ref100'; }).map(function (label) { if (!chart.isDatasetVisible(label.datasetIndex)) { label.fontColor = 'rgba(0,0,0,0.3)'; label.fillStyle = 'rgba(160,160,160,0.25)'; label.strokeStyle = 'rgba(160,160,160,0.25)'; label.hidden = false; } return label; }); } } },
+                tooltip: { backgroundColor: '#000', padding: 10, cornerRadius: 8, filter: function (item) { return item.dataset.label !== '__ref100'; }, itemSort: function (a, b) { return (b.raw || 0) - (a.raw || 0); } },
               },
             },
           });
@@ -451,7 +454,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
           });
           trendChart.update();
           trendAllHidden = false;
-          if (prTrendToggle) prTrendToggle.textContent = 'Tout déselectionner';
+          if (prTrendToggle) prTrendToggle.textContent = tl('an.pricing.deselectall', 'Tout déselectionner');
         }
 
         var attract = d.attractiveness || [];
@@ -486,12 +489,17 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         prCbarList.innerHTML = (d.pairwise || []).map(function (p) {
           var pi = p.priceIndex;
           var pisev = pi === null ? 'muted' : (pi <= 100 ? 'good' : 'bad');
+          var lo = p.lowerPct || 0, eq = p.equalPct || 0, hi = p.higherPct || 0;
+          var tot = lo + eq + hi;
+          var wLo = tot > 0 ? (lo / tot * 100).toFixed(1) : 0;
+          var wEq = tot > 0 ? (eq / tot * 100).toFixed(1) : 0;
+          var wHi = tot > 0 ? (hi / tot * 100).toFixed(1) : 0;
           return '<div class="cbar-row">' +
             '<div class="cbar-name">' + p.pack + '</div>' +
             '<div class="cbar-track">' +
-              '<div style="width:' + p.lowerPct + '%;background:var(--good);">' + (p.lowerPct >= 9 ? '<span class="cbar-seg__pct">' + p.lowerPct + '%</span>' : '') + '</div>' +
-              '<div style="width:' + p.equalPct + '%;background:var(--blue);">' + (p.equalPct >= 9 ? '<span class="cbar-seg__pct">' + p.equalPct + '%</span>' : '') + '</div>' +
-              '<div style="width:' + p.higherPct + '%;background:var(--bad);">' + (p.higherPct >= 9 ? '<span class="cbar-seg__pct">' + p.higherPct + '%</span>' : '') + '</div>' +
+              '<div data-tip="Lower: ' + lo + '%" style="width:' + wLo + '%;background:var(--good);">' + (lo >= 9 ? '<span class="cbar-seg__pct">' + lo + '%</span>' : '') + '</div>' +
+              '<div data-tip="Equal: ' + eq + '%" style="width:' + wEq + '%;background:var(--blue);">' + (eq >= 9 ? '<span class="cbar-seg__pct">' + eq + '%</span>' : '') + '</div>' +
+              '<div data-tip="Higher: ' + hi + '%" style="width:' + wHi + '%;background:var(--bad);">' + (hi >= 9 ? '<span class="cbar-seg__pct">' + hi + '%</span>' : '') + '</div>' +
             '</div>' +
             '<div class="cbar-pi" style="color:var(--' + pisev + ');">' + (pi !== null ? pi : '—') + '</div>' +
           '</div>';
@@ -597,6 +605,7 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   new MutationObserver(function () {
     renderGrid();
     if (currentCatPr) previewTitle.textContent = tl('an.cat.' + currentCatPr.id, currentCatPr.name);
+    if (prTrendToggle) prTrendToggle.textContent = trendAllHidden ? tl('an.pricing.selectall', 'Tout sélectionner') : tl('an.pricing.deselectall', 'Tout déselectionner');
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 
   if (window.NRICHER_CATEGORIES && window.NRICHER_CATEGORIES.length) {

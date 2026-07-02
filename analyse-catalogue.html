@@ -57,7 +57,7 @@
 .cat-report__count{font-family:var(--font-display);font-weight:700;font-size:1.35rem;color:var(--text);margin-bottom:28px;}
 .cat-report__count span{font-family:var(--font-body);font-weight:500;font-size:0.85rem;color:var(--muted);margin-left:8px;}
 .cat-report__grid{display:flex;flex-direction:column;gap:28px;transition:opacity .13s ease;}
-.cat-donut-wrap{display:flex;flex-direction:row;align-items:center;gap:28px;justify-content:center;}
+.cat-donut-wrap{display:flex;flex-direction:row;align-items:center;gap:28px;justify-content:center;padding-right:80px;}
 .cat-donut-svg{width:160px;height:160px;flex-shrink:0;}
 .cat-donut-legend{display:flex;flex-direction:column;gap:9px;}
 .cat-donut-legend .legend-item{display:flex;align-items:center;gap:9px;font-size:0.82rem;font-weight:600;color:var(--text-2);}
@@ -83,7 +83,7 @@
 .cat-report__swipe-area{touch-action:pan-y;user-select:none;}
 .cat-report__swipe-area.is-dragging .cat-report__grid{transition:none;}
 @media (max-width:680px){
-  .cat-donut-wrap{flex-direction:column;align-items:flex-start;}
+  .cat-donut-wrap{flex-direction:column;align-items:flex-start;padding-right:0;}
   .cat-rank-row{grid-template-columns:80px 1fr auto 42px;gap:8px;}
   .cat-report__packtitle{font-size:1rem;min-width:160px;}
 }
@@ -196,7 +196,7 @@
 
       <div class="an-search-wrap reveal" data-delay="4">
         <span class="an-search-ico">⌕</span>
-        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Beauté…" autocomplete="off">
+        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Darty…" autocomplete="off">
       </div>
     </div>
   </div>
@@ -366,7 +366,7 @@
     return fetch('/data/market-analysis/catalogue/' + cat.id + '/' + currentPackIndex + '.json')
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (d) {
-        catReportCount.innerHTML = d.totalArticles.toLocaleString('fr-FR') + ' <span data-i18n="an.catalogue.report.articles">articles en vente</span>';
+        catReportCount.innerHTML = d.totalArticles.toLocaleString('fr-FR') + ' <span>' + tl('an.catalogue.report.articles', 'articles en vente') + '</span>';
 
         var donutDefs = [
           { label: 'Top sellers', pct: d.topPct },

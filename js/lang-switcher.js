@@ -140,7 +140,9 @@
           } else if (el.tagName === 'TITLE') {
             document.title = htmlTrans;
             el.innerHTML = htmlTrans;
-          } else if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
+          } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.setAttribute('placeholder', htmlTrans);
+          } else {
             el.innerHTML = htmlTrans;
           }
         }

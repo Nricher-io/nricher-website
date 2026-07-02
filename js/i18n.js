@@ -505,7 +505,7 @@
 
       // --- PAGES: ANALYSE (Pricing / Quality / Catalogue) ---
       "an.eyebrow": "Market analysis",
-      "an.search.placeholder": "Sport, Home, Beauty…",
+      "an.search.placeholder": "Sport, Home, Darty…",
       "an.empty": "No category matches your search.",
       "an.preview.sub": "Comparison between the retailers in this category, side by side.",
       "an.preview.cta": "Get notified at launch →",
@@ -585,6 +585,12 @@
       "an.pricing.chart2.sub": "Share of items cheaper / aligned / pricier than competitors.",
       "an.pricing.chart3.title": "Pricing analysis",
       "an.pricing.viewdetail": "View detail",
+      "an.pricing.competitors": "competitors",
+      "an.pricing.deselectall": "Deselect all",
+      "an.pricing.selectall": "Select all",
+      "an.pricing.art_analysed": "items analysed",
+      "an.pricing.art_matched": "items matched",
+      "an.quality.art_analysed": "items analysed",
       "an.quality.th.score": "Quality score",
       "an.quality.avggrade": "average grade",
       "an.quality.globaltitle": "global grade - % of articles",

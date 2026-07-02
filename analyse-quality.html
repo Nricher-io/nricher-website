@@ -101,6 +101,9 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
 .info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
 .info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
+.ql-gradebar-track > div[data-tip]{position:relative;cursor:default;}
+.ql-gradebar-track > div[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:11px;font-weight:600;padding:5px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:100;}
+.ql-gradebar-track > div[data-tip]:hover::after{opacity:1;}
 </style>
   <script>
     if (localStorage.getItem('nr-lang') === 'en') {
@@ -206,7 +209,7 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
 
       <div class="an-search-wrap reveal" data-delay="4">
         <span class="an-search-ico">⌕</span>
-        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Beauté…" autocomplete="off">
+        <input id="catSearch" class="an-search-input" type="text" data-i18n="an.search.placeholder" placeholder="Sport, Maison, Darty…" autocomplete="off">
       </div>
     </div>
   </div>
@@ -331,9 +334,11 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
   }
 
   function renderGradeBar(container, pcts) {
+    var total = pcts.reduce(function (s, p) { return s + p; }, 0);
     container.innerHTML = pcts.map(function (pct, i) {
       if (pct <= 0) return '';
-      return '<div style="width:' + pct + '%;background:' + GRADE_COLORS[i] + ';" data-tip="' + GRADES[i] + ' grade : ' + pct + '%">' +
+      var w = total > 0 ? (pct / total * 100).toFixed(1) : 0;
+      return '<div style="width:' + w + '%;background:' + GRADE_COLORS[i] + ';" data-tip="' + GRADES[i] + ' grade : ' + pct + '%">' +
         (pct >= 9 ? '<span class="ql-gradebar-seg__pct">' + pct + '%</span>' : '') + '</div>';
     }).join('');
   }
@@ -345,7 +350,7 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
       return '<tr data-i="' + i + '">' +
         '<td class="ql-table-name">' + r.name + '</td>' +
         '<td><span class="ql-score-pill ' + sev + '">' + r.score + ' / 100</span></td>' +
-        '<td class="ql-table-chevron"><span class="ql-row-cta" data-i18n="an.pricing.viewdetail">Voir le détail<span class="ql-row-cta__ico">›</span></span></td>' +
+        '<td class="ql-table-chevron"><span class="ql-row-cta">' + tl('an.pricing.viewdetail', 'Voir le détail') + '<span class="ql-row-cta__ico">›</span></span></td>' +
       '</tr>';
     }).join('');
     Array.prototype.forEach.call(qlTableBody.querySelectorAll('tr'), function (row) {
@@ -374,7 +379,7 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
 
   function showDetail(cat, company) {
     qlDetailName.textContent = company.name;
-    qlDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' articles analysées';
+    qlDetailAnalysed.textContent = company.analysed.toLocaleString('fr-FR') + ' ' + tl('an.quality.art_analysed', 'articles analysées');
     var sev = scoreSeverity(company.score);
     qlAvgPill.textContent = company.score + ' / 100';
     qlAvgPill.className = 'ql-avg-pill ql-score-pill ' + sev;
