@@ -664,7 +664,37 @@
       "rp.category.title": "Category analysis — % breakdown by category",
       "rp.category.sub": "Share of items cheaper, aligned, more expensive — category by category.",
       "rp.verdict.badge": "WHAT NRICHER SEES THAT YOU DON'T YET",
-      "rp.verdict.cta": "See the article-by-article detail →"
+      "rp.verdict.cta": "See the article-by-article detail →",
+
+      // --- Info popovers (rapport pages) ---
+      "rp.info.gauge.all.p1": "Average price index calculated across all competitor offers. 100 = aligned with the market.",
+      "rp.info.gauge.1p.p1": "Price index against the best own offer (1P, your own sellers). 100 = aligned.",
+      "rp.info.gauge.1p.p2": "Same reading as the other gauges: below 100 you are competitive (green), above you are more expensive (red).",
+      "rp.info.gauge.3p.p1": "Price index against the best marketplace offer (3P). This is the worst-case view.",
+      "rp.info.gauge.3p.p2": "If you are below 100 here, you are the cheapest on the market for these items. Above 100, a competitor is doing better.",
+      "rp.info.trend.chart1.p1": "Tracks the weekly evolution of your average price index. <strong>1P</strong> curve = your own offers, <strong>3P</strong> = the best marketplace offer.",
+      "rp.info.trend.chart1.p2": "The dashed line at 100 = aligned with the market. Below 100 you are cheaper, above more expensive. Hover over a point for the week's detail.",
+      "rp.info.trend.chart2.p1": "Distribution of your articles each week: share <strong>cheaper</strong> (green), <strong>aligned</strong> (blue) and <strong>more expensive</strong> (red) than competitors.",
+      "rp.info.trend.chart2.p2": "A growing green area over time = you are gaining in price competitiveness.",
+      "rp.info.priority.p1": "Average price index by sales segment (<strong>Top</strong> / <strong>Middle</strong> / <strong>Low sales</strong>) over the last 3 weeks. 100 = market aligned.",
+      "rp.info.priority.p2": "The <strong>All</strong> column shows the 1P and 3P views. Prioritize repricing on your strategic segments (Top) where the index exceeds 100.",
+      "rp.info.overview.chart1.p1": "Average share of your articles cheaper / aligned / more expensive, across all competitors.",
+      "rp.info.overview.chart1.p2": "The larger the <strong>red</strong> portion (more expensive), the more room you have to reprice downward.",
+      "rp.info.overview.chart2.p1": "Each point positions the competitor's price index on a scale from <strong>80</strong> (very competitive) to <strong>120</strong> (very expensive). The vertical mark indicates <strong>100</strong>, your alignment point.",
+      "rp.info.overview.chart2.p2": "A competitor to the left of 100 is on average cheaper than you: monitor them as a priority.",
+      "rp.info.competitors.p1": "For each retailer: distribution of your articles cheaper / aligned / more expensive vs. them, and your price index (<strong>PI</strong>) relative to them.",
+      "rp.info.competitors.p2": "<strong>PI &gt; 100</strong> = you are on average more expensive than this retailer. Hover over a bar for the exact percentage.",
+      "rp.info.competitors_table.p1": "Detailed breakdown by competitor:",
+      "rp.info.competitors_table.p2": "<strong>All articles</strong> = shared catalog; <strong>PI all</strong> = index across all sellers. <strong>Min articles</strong> / <strong>PI min</strong> = on the cheapest seller.",
+      "rp.info.competitors_table.p3": "<strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = number of articles where you are more expensive / aligned / cheaper.",
+      "rp.info.sellers.p1": "Sellers ranked by volume of matched articles. <strong>PI min &lt; 100</strong> = systematically cheaper than you.",
+      "rp.info.sellers.p2": "Columns <strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = number of articles where you are more expensive / aligned / cheaper than this seller.",
+      "rp.info.seller_analysis.p1": "For each seller: share of your articles cheaper / aligned / more expensive, and their price index (<strong>PI</strong>).",
+      "rp.info.seller_analysis.p2": "Identify sellers that are systematically cheaper (<strong>PI &lt; 100</strong>): they are the ones driving the market down.",
+      "rp.info.category.p1": "For each category: share of your articles cheaper / aligned / more expensive, volume, and price index (<strong>PI</strong>).",
+      "rp.info.category.p2": "Target high-volume categories where the red portion (more expensive) dominates: that's where repricing has the most impact.",
+      "rp.info.verdict.p0": "<strong>How to read these figures</strong>",
+      "rp.info.verdict.p2": "Competitive sellers and continuously tracked articles are calculated at the time the report is generated: they reflect the current market, not just last week's snapshot."
     }
   };
 

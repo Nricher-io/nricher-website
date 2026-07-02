@@ -264,20 +264,20 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         <div class="pr-detail__grid">
           <div class="chart-card">
             <div class="pr-trend-bar">
-              <h3 data-i18n="an.pricing.chart1.title">Price index evolution <span class="info-tip" tabindex="0" data-tip="L'indice prix (PI) mesure le positionnement tarifaire face aux concurrents. PI &lt; 100 = moins cher, PI = 100 = aligné, PI &gt; 100 = plus cher. Graphique semaine par semaine.">i</span></h3>
+              <h3><span data-i18n="an.pricing.chart1.title">Price index evolution</span> <span class="info-tip" tabindex="0" data-tip="L'indice prix (PI) mesure le positionnement tarifaire face aux concurrents. PI &lt; 100 = moins cher, PI = 100 = aligné, PI &gt; 100 = plus cher. Graphique semaine par semaine." data-tip-en="The price index (PI) measures pricing position vs. competitors. PI &lt; 100 = cheaper, PI = 100 = aligned, PI &gt; 100 = more expensive. Week-by-week chart.">i</span></h3>
               <button class="pr-trend-toggle" id="prTrendToggle" type="button">Tout déselectionner</button>
             </div>
             <div class="chart-sub" id="prTrendSub"></div>
             <div class="chart-canvas-wrap"><canvas id="prTrendCanvas"></canvas></div>
           </div>
           <div class="chart-card" id="prAttractCard">
-            <h3 data-i18n="an.pricing.chart2.title">Price attractivity evolution <span class="info-tip" tabindex="0" data-tip="Part des articles moins chers (Lower), au même prix (Equal) ou plus chers (Higher) que la meilleure offre concurrente sur ce même article. Évolution semaine par semaine.">i</span></h3>
+            <h3><span data-i18n="an.pricing.chart2.title">Price attractivity evolution</span> <span class="info-tip" tabindex="0" data-tip="Part des articles moins chers (Lower), au même prix (Equal) ou plus chers (Higher) que la meilleure offre concurrente sur ce même article. Évolution semaine par semaine." data-tip-en="Share of articles cheaper (Lower), same price (Equal) or more expensive (Higher) than the best competitor offer for the same article. Week-by-week evolution.">i</span></h3>
             <div class="chart-sub" data-i18n="an.pricing.chart2.sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
             <div class="chart-canvas-wrap"><canvas id="prAttractCanvas"></canvas></div>
           </div>
         </div>
 
-        <h3 data-i18n="an.pricing.chart3.title" style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:16px;">Pricing analysis <span class="info-tip" tabindex="0" data-tip="Comparaison par pack produit : pour chaque univers, part des articles de l'enseigne moins chers, alignés ou plus chers que les concurrents. PI affiché à droite.">i</span></h3>
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:16px;"><span data-i18n="an.pricing.chart3.title">Pricing analysis</span> <span class="info-tip" tabindex="0" data-tip="Comparaison par pack produit : pour chaque univers, part des articles de l'enseigne moins chers, alignés ou plus chers que les concurrents. PI affiché à droite." data-tip-en="Comparison by product pack: for each universe, share of brand articles cheaper, aligned or more expensive than competitors. PI shown on the right.">i</span></h3>
         <div class="cbar-legend-centered">
           <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
           <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>
@@ -430,9 +430,14 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
             tension: 0.35, pointRadius: 3,
           };
         });
+        trendDatasets.unshift({
+          label: company.name, data: weeks.map(function () { return 100; }),
+          borderColor: '#2e58ca', backgroundColor: 'transparent',
+          borderWidth: 2.5, tension: 0, pointRadius: 3, pointHoverRadius: 5,
+        });
         trendDatasets.push({
           label: '__ref100', data: weeks.map(function () { return 100; }),
-          borderColor: 'rgba(0,0,0,0.2)', borderDash: [4, 4], pointRadius: 0, fill: false,
+          borderColor: 'rgba(0,0,0,0.12)', borderDash: [4, 4], pointRadius: 0, fill: false,
         });
         if (window.Chart) {
           trendChart = new Chart(document.getElementById('prTrendCanvas'), {
@@ -448,10 +453,10 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
               },
             },
           });
-          // Afficher seulement les 6 premières marques par défaut
+          // Afficher la marque principale + 6 concurrents par défaut
           trendChart.data.datasets.forEach(function (ds, i) {
-            if (ds.label === '__ref100') return;
-            if (i >= 6) trendChart.setDatasetVisibility(i, false);
+            if (ds.label === '__ref100' || ds.label === company.name) return;
+            if (i >= 7) trendChart.setDatasetVisibility(i, false);
           });
           trendChart.update();
           trendAllHidden = false;
