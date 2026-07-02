@@ -91,6 +91,7 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
 .ql-gradebar-track > div{display:flex;align-items:center;justify-content:center;transition:filter .2s ease;}
 .ql-gradebar-track > div:first-child{border-radius:8px 0 0 8px;}
 .ql-gradebar-track > div:last-child{border-radius:0 8px 8px 0;}
+.ql-gradebar-track > div:first-child:last-child{border-radius:8px;}
 .ql-gradebar-track > div:hover{filter:brightness(1.1);}
 .ql-gradebar-seg__pct{font-size:11px;font-weight:700;color:#fff;white-space:nowrap;pointer-events:none;}
 .ql-global-wrap{margin-bottom:34px;}
@@ -401,8 +402,11 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
         var rows = qlCriteriaList.querySelectorAll('.ql-gradebar-row');
         var cg = d.criteriaGrades || {};
         CRITERIA.forEach(function (crit, i) {
+          var pcts = gradesToArray(cg[crit] || {});
+          var hasData = pcts.some(function (v) { return v > 0; });
+          rows[i].style.display = hasData ? '' : 'none';
           rows[i].querySelector('.ql-gradebar-label').textContent = crit;
-          renderGradeBar(rows[i].querySelector('.ql-gradebar-track'), gradesToArray(cg[crit] || {}));
+          renderGradeBar(rows[i].querySelector('.ql-gradebar-track'), pcts);
         });
 
         qlLegend.innerHTML = GRADES.map(function (g, i) {
