@@ -324,7 +324,12 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
 
   var GRADES = ['A+', 'A', 'B', 'C', 'D', 'E', 'F'];
   var GRADE_COLORS = ['#3b82f6', '#2e58ca', '#1e3a6e', '#6b7280', '#f87171', '#dc2626', '#7f1d1d'];
-  var CRITERIA = ['Title', 'Image', 'Video', 'Description'];
+  var CRITERIA = [
+    { key: 'Titre',       label: 'Titre',       i18n: 'an.quality.crit.titre' },
+    { key: 'Image',       label: 'Image',       i18n: 'an.quality.crit.image' },
+    { key: 'Vidéo',       label: 'Vidéo',       i18n: 'an.quality.crit.video' },
+    { key: 'Description', label: 'Description', i18n: 'an.quality.crit.description' },
+  ];
 
   function scoreSeverity(score) {
     if (score >= 70) return 'good';
@@ -402,10 +407,10 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
         var rows = qlCriteriaList.querySelectorAll('.ql-gradebar-row');
         var cg = d.criteriaGrades || {};
         CRITERIA.forEach(function (crit, i) {
-          var pcts = gradesToArray(cg[crit] || {});
+          var pcts = gradesToArray(cg[crit.key] || {});
           var hasData = pcts.some(function (v) { return v > 0; });
           rows[i].style.display = hasData ? '' : 'none';
-          rows[i].querySelector('.ql-gradebar-label').textContent = crit;
+          rows[i].querySelector('.ql-gradebar-label').textContent = tl(crit.i18n, crit.label);
           renderGradeBar(rows[i].querySelector('.ql-gradebar-track'), pcts);
         });
 

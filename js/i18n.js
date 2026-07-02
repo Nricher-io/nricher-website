@@ -595,6 +595,10 @@
       "an.quality.avggrade": "Average grade",
       "an.quality.globaltitle": "global grade - % of articles",
       "an.quality.criteriatitle": "distribution of articles by criteria - % of articles",
+      "an.quality.crit.titre": "Title",
+      "an.quality.crit.image": "Image",
+      "an.quality.crit.video": "Video",
+      "an.quality.crit.description": "Description",
 
       // --- PAGE: RAPPORTS (Weekly KPIs) — chrome statique du template uniquement,
       // le contenu genere par entreprise (hero, gauges, verdict...) reste en francais ---
