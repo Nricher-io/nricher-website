@@ -592,7 +592,7 @@
       "an.pricing.art_matched": "items matched",
       "an.quality.art_analysed": "items analysed",
       "an.quality.th.score": "Quality score",
-      "an.quality.avggrade": "average grade",
+      "an.quality.avggrade": "Average grade",
       "an.quality.globaltitle": "global grade - % of articles",
       "an.quality.criteriatitle": "distribution of articles by criteria - % of articles",
 
