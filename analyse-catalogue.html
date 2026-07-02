@@ -82,10 +82,35 @@
 .cat-pack-dot.is-active{background:#1fae7a;transform:scale(1.35);}
 .cat-report__swipe-area{touch-action:pan-y;user-select:none;}
 .cat-report__swipe-area.is-dragging .cat-report__grid{transition:none;}
-@media (max-width:680px){
-  .cat-donut-wrap{flex-direction:column;align-items:flex-start;padding-right:0;}
+@media (max-width:640px){
+  /* grille catégories */
+  .an-cat-grid{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px;}
+  .an-cat-card{padding:18px 16px;}
+  /* onglets & recherche */
+  .an-tab{font-size:0.8rem;padding:8px 14px;}
+  .an-search-input{font-size:0.95rem;padding:12px 14px 12px 40px;}
+  /* preview catégorie */
+  .an-preview{padding:26px 18px;margin-bottom:40px;}
+  .an-preview__title{font-size:1.25rem;}
+  .an-preview__soon{flex-direction:column;gap:10px;padding:16px;}
+  /* donut : passe en colonne */
+  .cat-donut-wrap{flex-direction:column;align-items:center;padding-right:0;gap:18px;}
+  .cat-donut-svg{width:130px;height:130px;}
+  /* rapport count */
+  .cat-report__count{font-size:1.1rem;}
+  /* ranking */
   .cat-rank-row{grid-template-columns:80px 1fr auto 42px;gap:8px;}
-  .cat-report__packtitle{font-size:1rem;min-width:160px;}
+  .cat-rank-brand{font-size:0.78rem;}
+  .cat-rank-bar-track{height:26px;}
+  /* navigation packs */
+  .cat-report__packtitle{font-size:0.95rem;min-width:140px;}
+  .cat-pack-arrow{width:30px;height:30px;font-size:1rem;}
+}
+@media (max-width:420px){
+  .an-cat-grid{grid-template-columns:1fr;}
+  .cat-rank-row{grid-template-columns:66px 1fr auto 36px;gap:6px;}
+  .cat-rank-count{font-size:0.68rem;}
+  .cat-rank-pct{font-size:0.74rem;padding:4px 0;}
 }
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
 .info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-family:var(--font-body);font-size:12px;font-weight:400;line-height:1.6;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
