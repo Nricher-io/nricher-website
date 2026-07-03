@@ -32,8 +32,7 @@ jobs:
         working-directory: nricher-engine
         env:
           NRICHER_SITE_TOKEN: ${{ secrets.NRICHER_SITE_TOKEN }}
-          # À basculer sur https://api.nricher.io quand les endpoints market-analysis seront déployés en prod
-          NRICHER_API_BASE_URL: https://api-scw-staging.nricher.io
+          NRICHER_API_BASE_URL: https://api.nricher.io
         run: python3 generate_market_analysis.py
 
       - name: Commit et push si changements

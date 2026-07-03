@@ -1,11 +1,5 @@
 name: Weekly KPIs - refresh des rapports
 
-# NOTE : ce job echoue tant que GET /v1/companies n'est pas disponible cote
-# API nricher (endpoint demande, pas encore livre - voir
-# handoff-dev/SITE_REQUEST_companies_list_endpoint.md). L'echec est attendu
-# et documente clairement dans les logs du step "Generer tous les rapports" ;
-# pas la peine de re-investiguer a chaque run rouge, juste verifier si
-# l'endpoint a ete livre entre-temps.
 
 on:
   schedule:
