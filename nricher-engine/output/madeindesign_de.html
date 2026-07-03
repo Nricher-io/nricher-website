@@ -218,6 +218,38 @@
     .kpi-report .hero-stats{grid-template-columns:1fr 1fr;}
     .kpi-report table.prio-table th, .kpi-report table.prio-table td{padding:12px 8px;}
   }
+  @media (max-width:640px){
+    .kpi-report .hero{padding-top:28px;padding-bottom:28px;}
+    .kpi-report .hero p.lede{font-size:0.95rem;}
+    .kpi-report .hero-stats{gap:12px;margin-top:24px;}
+    .kpi-report .hstat{padding:18px 16px;}
+    .kpi-report .kpi{padding:22px 18px 18px;}
+    .kpi-report .kpi__gauge{width:100px;}
+    .kpi-report .chart-card{padding:20px 16px 14px;}
+    .kpi-report .chart-canvas-wrap{height:200px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 90px;}
+    .kpi-report .cbar-name{font-size:0.78rem;}
+    .kpi-report .prio-table-wrap{overflow-x:auto;}
+    .kpi-report .prio-chip{font-size:0.95rem;padding:6px 12px;}
+    .kpi-report .rank-row,.kpi-report .rank-header{grid-template-columns:22px 76px 1fr 38px;gap:8px;}
+    .kpi-report .rank-name{font-size:0.75rem;}
+    .kpi-report .verdict{padding:24px 20px;}
+    .kpi-report .verdict-figs{gap:24px;margin-bottom:24px;}
+    .kpi-report .vfig .n{font-size:1.4rem;}
+    .kpi-report .section-header{margin-bottom:24px;}
+    .kpi-report .info-popover{width:240px;right:-10px;}
+    .kpi-report .sellers-wrap{max-height:320px;}
+    .kpi-report table.sellers th,.kpi-report table.sellers td{padding:10px 12px;}
+    .kpi-report .gated-lock{padding:30px 20px;}
+  }
+  @media (max-width:420px){
+    .kpi-report .hero-stats{grid-template-columns:1fr;}
+    .kpi-report .kpi__gauge{width:80px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 72px;}
+    .kpi-report table.sellers th,.kpi-report table.sellers td{padding:8px 10px;font-size:0.82rem;}
+  }
 
   /* Interactivite : tooltips au survol (graphiques + barres) */
   .kpi-report [data-tip]{position:relative;cursor:default;}
@@ -351,34 +383,34 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       <span data-i18n="rp.hero.download">Télécharger</span>
     </a>
-    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 26 <span class="sep">·</span> PRICE INDEX</div>
+    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 27 <span class="sep">·</span> PRICE INDEX</div>
     <h1>
       <span data-i18n="rp.hero.title_prefix">Le marché a bougé.</span>
       <span class="tagline good" data-i18n="rp.hero.tagline.good">Vous reprenez l'avantage.</span>
       
     </h1>
     <p class="lede">
-      15 510 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      15 402 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
       2 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">15 510 <span class="down">▼</span></div>
+        <div class="n">15 402 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
-        <div class="delta-sub">-3 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">-2 % <span data-i18n="rp.hero.vs">vs</span> S26</div>
       </div>
       <div class="hstat">
-        <div class="n">4 948</div>
+        <div class="n">4 945</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
-        <div class="n bad">104 <span class="down">▼</span></div>
+        <div class="n bad">101 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat2.label">Price Index global</div>
-        <div class="delta-sub">-1 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">-6 pts <span data-i18n="rp.hero.vs">vs</span> S26</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T12:36:06.503Z">26 juin à 12h36</div>
+        <div class="n" data-generated-at="2026-07-03T14:21:00.626Z">03 juil. à 14h21</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -407,12 +439,12 @@
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
             
-            <p>Indice prix moyen calculé sur l'ensemble des offres concurrentes. 100 = aligné au marché.</p>
-            <p>L'aiguille et la couleur indiquent votre position : vert = vous êtes moins cher, rouge = plus cher. Le repère S25 sous la jauge montre la semaine précédente, et la pastille le delta en points.</p>
+            <p data-i18n="rp.info.gauge.all.p1">Indice prix moyen calculé sur l'ensemble des offres concurrentes. 100 = aligné au marché.</p>
+            <p>L'aiguille et la couleur indiquent votre position : vert = vous êtes moins cher, rouge = plus cher. Le repère S26 sous la jauge montre la semaine précédente, et la pastille le delta en points.</p>
             
           </div>
         </div>
-        <span class="kpi__ghost bad">104</span>
+        <span class="kpi__ghost bad">101</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
@@ -425,12 +457,12 @@
               </linearGradient>
             </defs>
             <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-0)" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="118.8" y2="42.2" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="104.8" y2="39.4" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip bad">-1 pts</div>
+          <div class="kpi__chip bad">-6 pts</div>
         </div>
-        <div class="kpi__num bad">104</div>
+        <div class="kpi__num bad">101</div>
         <div class="kpi__label">Price Index All</div>
         <div class="kpi__desc">
           <span data-i18n="rp.gauge.all.desc">Toutes les offres confondues, tous vendeurs.</span>
@@ -448,13 +480,13 @@
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-0)"/>
-            <rect x="122.8" y="0" width="2" height="8" fill="#fff"/>
-            <circle cx="120.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+            <rect x="134.6" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="104.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="kpi__ref">
           <span>80</span>
-          <span>S25 : 105</span>
+          <span>S26 : 107</span>
           <span>120</span>
         </div>
       </div>
@@ -465,12 +497,12 @@
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
             
-            <p>Indice prix face à la meilleure offre en propre (1P, vos propres vendeurs). 100 = aligné.</p>
-            <p>Même lecture que les autres jauges : sous 100 vous êtes compétitif (vert), au-dessus vous êtes plus cher (rouge).</p>
+            <p data-i18n="rp.info.gauge.1p.p1">Indice prix face à la meilleure offre en propre (1P, vos propres vendeurs). 100 = aligné.</p>
+            <p data-i18n="rp.info.gauge.1p.p2">Même lecture que les autres jauges : sous 100 vous êtes compétitif (vert), au-dessus vous êtes plus cher (rouge).</p>
             
           </div>
         </div>
-        <span class="kpi__ghost bad">104</span>
+        <span class="kpi__ghost bad">101</span>
         <div class="kpi-top">
           <svg class="kpi__gauge" viewBox="0 0 200 116">
             <defs>
@@ -483,12 +515,12 @@
               </linearGradient>
             </defs>
             <path d="M20,100 A80,80 0 0 1 180,100" fill="none" stroke="url(#gaugeArcGrad-1)" stroke-width="12" stroke-linecap="round"/>
-            <line x1="100" y1="100" x2="118.8" y2="42.2" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="100" y1="100" x2="104.8" y2="39.4" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="6" fill="var(--text)"/>
           </svg>
-          <div class="kpi__chip bad">-1 pts</div>
+          <div class="kpi__chip bad">-6 pts</div>
         </div>
-        <div class="kpi__num bad">104</div>
+        <div class="kpi__num bad">101</div>
         <div class="kpi__label">Price Index 1P min</div>
         <div class="kpi__desc">
           <span data-i18n="rp.gauge.1p_min.desc">Votre meilleure offre, comparée au marché.</span>
@@ -506,13 +538,13 @@
               </linearGradient>
             </defs>
             <rect x="0" y="0" width="200" height="8" rx="4" fill="url(#gaugeBarGrad-1)"/>
-            <rect x="122.8" y="0" width="2" height="8" fill="#fff"/>
-            <circle cx="120.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
+            <rect x="134.6" y="0" width="2" height="8" fill="#fff"/>
+            <circle cx="104.0" cy="4" r="4.5" fill="#fff" stroke="var(--text)" stroke-width="1.5"/>
           </svg>
         </div>
         <div class="kpi__ref">
           <span>80</span>
-          <span>S25 : 105</span>
+          <span>S26 : 107</span>
           <span>120</span>
         </div>
       </div>
@@ -523,8 +555,8 @@
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
             
-            <p>Indice prix face à la meilleure offre du marché (3P, marketplaces). C'est la vue « pire cas ».</p>
-            <p>Si vous êtes sous 100 ici, vous êtes le moins cher du marché sur ces articles. Au-dessus de 100, un concurrent fait mieux.</p>
+            <p data-i18n="rp.info.gauge.3p.p1">Indice prix face à la meilleure offre du marché (3P, marketplaces). C'est la vue « pire cas ».</p>
+            <p data-i18n="rp.info.gauge.3p.p2">Si vous êtes sous 100 ici, vous êtes le moins cher du marché sur ces articles. Au-dessus de 100, un concurrent fait mieux.</p>
             
           </div>
         </div>
@@ -590,15 +622,15 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">31 mars → Ajd</span></div>
+    <div class="tag-row"><span class="tag tag--watch">07 avr. → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
-            <p>Suit l'évolution hebdomadaire de votre indice prix moyen. Courbe <strong>1P</strong> = vos offres en propre, <strong>3P</strong> = la meilleure offre marketplace.</p>
-            <p>La ligne pointillée à 100 = aligné au marché. Sous 100 vous êtes moins cher, au-dessus plus cher. Survolez un point pour le détail d'une semaine.</p>
+            <p data-i18n="rp.info.trend.chart1.p1">Suit l'évolution hebdomadaire de votre indice prix moyen. Courbe <strong>1P</strong> = vos offres en propre, <strong>3P</strong> = la meilleure offre marketplace.</p>
+            <p data-i18n="rp.info.trend.chart1.p2">La ligne pointillée à 100 = aligné au marché. Sous 100 vous êtes moins cher, au-dessus plus cher. Survolez un point pour le détail d'une semaine.</p>
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
@@ -610,8 +642,8 @@
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
-            <p>Répartition de vos articles chaque semaine : part <strong>moins chers</strong> (vert), <strong>alignés</strong> (bleu) et <strong>plus chers</strong> (rouge) que la concurrence.</p>
-            <p>Une zone verte qui s'agrandit dans le temps = vous gagnez en compétitivité prix.</p>
+            <p data-i18n="rp.info.trend.chart2.p1">Répartition de vos articles chaque semaine : part <strong>moins chers</strong> (vert), <strong>alignés</strong> (bleu) et <strong>plus chers</strong> (rouge) que la concurrence.</p>
+            <p data-i18n="rp.info.trend.chart2.p2">Une zone verte qui s'agrandit dans le temps = vous gagnez en compétitivité prix.</p>
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart2.title">Attractivité prix</h3>
@@ -636,8 +668,8 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Indice prix moyen par segment commercial (<strong>Top</strong> / <strong>Middle</strong> / <strong>Low sales</strong>) sur les 3 dernières semaines. 100 = aligné au marché.</p>
-          <p>La colonne <strong>All</strong> donne les vues 1P et 3P. Priorisez le repricing sur vos segments stratégiques (Top) où l'indice dépasse 100.</p>
+          <p data-i18n="rp.info.priority.p1">Indice prix moyen par segment commercial (<strong>Top</strong> / <strong>Middle</strong> / <strong>Low sales</strong>) sur les 3 dernières semaines. 100 = aligné au marché.</p>
+          <p data-i18n="rp.info.priority.p2">La colonne <strong>All</strong> donne les vues 1P et 3P. Priorisez le repricing sur vos segments stratégiques (Top) où l'indice dépasse 100.</p>
         </div>
       </div>
       <span class="tag tag--watch">MY PRIO</span>
@@ -658,36 +690,36 @@
           
           
           <tr>
-            <td class="wk">S26 ★</td>
+            <td class="wk">S27 ★</td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Top sales S26 : 104">
-                104
+              <span class="prio-chip blue" data-tip="Top sales S27 : 100">
+                100
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Middle sales S26 : 105">
-                105
+              <span class="prio-chip bad" data-tip="Middle sales S27 : 101">
+                101
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Low sales S26 : 104">
-                104
+              <span class="prio-chip bad" data-tip="Low sales S27 : 102">
+                102
                 
               </span>
             </td>
             
             <td>
               <div class="prio-all">
-                <span class="prio-all__item" data-tip="1P S26 : 104">
+                <span class="prio-all__item" data-tip="1P S27 : 101">
                   <span class="prio-all__lbl">1P</span>
-                  <span class="pi-chip r">104</span>
+                  <span class="pi-chip r">101</span>
                 </span>
-                <span class="prio-all__item" data-tip="3P S26 : —">
+                <span class="prio-all__item" data-tip="3P S27 : —">
                   <span class="prio-all__lbl">3P</span>
                   <span class="pi-chip n">—</span>
                 </span>
@@ -717,8 +749,8 @@
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
-            <p>Part moyenne de vos articles moins chers / alignés / plus chers, tous concurrents confondus.</p>
-            <p>Plus la part <strong>rouge</strong> (plus cher) est grande, plus vous avez de marge de repricing à la baisse.</p>
+            <p data-i18n="rp.info.overview.chart1.p1">Part moyenne de vos articles moins chers / alignés / plus chers, tous concurrents confondus.</p>
+            <p data-i18n="rp.info.overview.chart1.p2">Plus la part <strong>rouge</strong> (plus cher) est grande, plus vous avez de marge de repricing à la baisse.</p>
           </div>
         </div>
         <h3 data-i18n="rp.overview.chart1.title">Répartition moyenne</h3>
@@ -728,38 +760,38 @@
             <g transform="rotate(-90 60 60)">
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--good)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="42.67 271.49" stroke-dashoffset="-0.00"
-                      data-tip="14%"></circle>
+                      stroke-dasharray="74.09 240.07" stroke-dashoffset="-0.00"
+                      data-tip="24%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="136.92 177.24" stroke-dashoffset="-43.98"
-                      data-tip="44%"></circle>
+                      stroke-dasharray="130.64 183.52" stroke-dashoffset="-75.40"
+                      data-tip="42%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="130.64 183.52" stroke-dashoffset="-182.21"
-                      data-tip="42%"></circle>
+                      stroke-dasharray="105.51 208.65" stroke-dashoffset="-207.35"
+                      data-tip="34%"></circle>
               
             </g>
             
             
-            <text x="81.3" y="14.8" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">14%</text>
+            <text x="94.2" y="23.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">24%</text>
             
             
             
-            <text x="98.5" y="91.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">44%</text>
+            <text x="75.5" y="107.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">42%</text>
             
             
             
-            <text x="11.6" y="47.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">42%</text>
+            <text x="16.2" y="35.9" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">34%</text>
             
             
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">42%</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">34%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 14%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 44%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 42%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 24%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 42%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 34%</div>
           </div>
         </div>
       </div>
@@ -768,8 +800,8 @@
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
           <div class="info-popover">
-            <p>Chaque point situe l'indice prix du concurrent sur une échelle de <strong>80</strong> (très compétitif) à <strong>120</strong> (très cher). Le repère vertical marque <strong>100</strong>, votre point d'alignement.</p>
-            <p>Un concurrent à gauche de 100 est en moyenne moins cher que vous : surveillez-le en priorité.</p>
+            <p data-i18n="rp.info.overview.chart2.p1">Chaque point situe l'indice prix du concurrent sur une échelle de <strong>80</strong> (très compétitif) à <strong>120</strong> (très cher). Le repère vertical marque <strong>100</strong>, votre point d'alignement.</p>
+            <p data-i18n="rp.info.overview.chart2.p2">Un concurrent à gauche de 100 est en moyenne moins cher que vous : surveillez-le en priorité.</p>
           </div>
         </div>
         <h3 data-i18n="rp.overview.chart2.title">Classement par indice prix</h3>
@@ -781,24 +813,24 @@
         </div>
         <div class="rank-list">
           
-          <div class="rank-row" data-tip="Connox DE : PI 104">
+          <div class="rank-row" data-tip="Connox DE : PI 101">
             <span class="rank-badge rank-badge--1">1</span>
             <span class="rank-name">Connox DE</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:60%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:52%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">104</span></span>
+            <span class="rank-pi"><span class="pi-chip r">101</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Designbestseller DE : PI 105">
+          <div class="rank-row" data-tip="Designbestseller DE : PI 102">
             <span class="rank-badge rank-badge--2">2</span>
             <span class="rank-name">Designbestseller DE</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:62%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:55%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">105</span></span>
+            <span class="rank-pi"><span class="pi-chip r">102</span></span>
           </div>
           
         </div>
@@ -821,8 +853,8 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Pour chaque enseigne : répartition de vos articles moins chers / alignés / plus chers face à elle, et votre indice prix (<strong>PI</strong>) vis-à-vis d'elle.</p>
-          <p><strong>PI &gt; 100</strong> = vous êtes en moyenne plus cher que cette enseigne. Survolez une barre pour le pourcentage exact.</p>
+          <p data-i18n="rp.info.competitors.p1">Pour chaque enseigne : répartition de vos articles moins chers / alignés / plus chers face à elle, et votre indice prix (<strong>PI</strong>) vis-à-vis d'elle.</p>
+          <p data-i18n="rp.info.competitors.p2"><strong>PI &gt; 100</strong> = vous êtes en moyenne plus cher que cette enseigne. Survolez une barre pour le pourcentage exact.</p>
         </div>
       </div>
     </div>
@@ -839,21 +871,21 @@
       <div class="cbar-row">
         <div><div class="cbar-name">Connox DE</div><div class="cbar-meta">4 859 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Connox DE — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="Connox DE — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
-          <div data-tip="Connox DE — plus cher : 41%" style="width:41%;background:var(--bad);"><span class="cbar-seg__pct">41%</span></div>
+          <div data-tip="Connox DE — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="Connox DE — aligné : 39%" style="width:39%;background:var(--blue);"><span class="cbar-seg__pct">39%</span></div>
+          <div data-tip="Connox DE — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">104</div>
+        <div class="cbar-pi" style="color:var(--bad);">101</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Designbestseller DE</div><div class="cbar-meta">89 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Designbestseller DE</div><div class="cbar-meta">86 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Designbestseller DE — moins cher : 12%" style="width:12%;background:var(--good);"><span class="cbar-seg__pct">12%</span></div>
-          <div data-tip="Designbestseller DE — aligné : 45%" style="width:45%;background:var(--blue);"><span class="cbar-seg__pct">45%</span></div>
-          <div data-tip="Designbestseller DE — plus cher : 43%" style="width:43%;background:var(--bad);"><span class="cbar-seg__pct">43%</span></div>
+          <div data-tip="Designbestseller DE — moins cher : 22%" style="width:22%;background:var(--good);"><span class="cbar-seg__pct">22%</span></div>
+          <div data-tip="Designbestseller DE — aligné : 44%" style="width:44%;background:var(--blue);"><span class="cbar-seg__pct">44%</span></div>
+          <div data-tip="Designbestseller DE — plus cher : 34%" style="width:34%;background:var(--bad);"><span class="cbar-seg__pct">34%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">105</div>
+        <div class="cbar-pi" style="color:var(--bad);">102</div>
       </div>
       
     </div>
@@ -874,9 +906,9 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Détail chiffré par concurrent :</p>
-          <p><strong>Articles all</strong> = catalogue commun ; <strong>PI all</strong> = indice sur tous les vendeurs. <strong>Articles min</strong> / <strong>PI min</strong> = sur le vendeur le moins cher.</p>
-          <p><strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher.</p>
+          <p data-i18n="rp.info.competitors_table.p1">Détail chiffré par concurrent :</p>
+          <p data-i18n="rp.info.competitors_table.p2"><strong>Articles all</strong> = catalogue commun ; <strong>PI all</strong> = indice sur tous les vendeurs. <strong>Articles min</strong> / <strong>PI min</strong> = sur le vendeur le moins cher.</p>
+          <p data-i18n="rp.info.competitors_table.p3"><strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher.</p>
         </div>
       </div>
       <span class="tag tag--watch">PI Market Analysis</span>
@@ -891,24 +923,24 @@
           
           <tr>
             <td>Connox DE</td>
-            <td class="num">4 885</td>
-            <td class="num"><span class="pi-chip r">104</span></td>
+            <td class="num">4 884</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
             <td class="num">4 859</td>
-            <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">1 978</td>
-            <td class="num">2 034</td>
-            <td class="num">847</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
+            <td class="num">1 709</td>
+            <td class="num">1 872</td>
+            <td class="num">1 278</td>
           </tr>
           
           <tr>
             <td>Designbestseller DE</td>
-            <td class="num">179</td>
+            <td class="num">178</td>
+            <td class="num"><span class="pi-chip g">99</span></td>
+            <td class="num">86</td>
             <td class="num"><span class="pi-chip r">102</span></td>
-            <td class="num">89</td>
-            <td class="num"><span class="pi-chip r">105</span></td>
+            <td class="num">29</td>
             <td class="num">38</td>
-            <td class="num">40</td>
-            <td class="num">11</td>
+            <td class="num">19</td>
           </tr>
           
         </tbody>
@@ -931,11 +963,11 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Vendeurs classés par volume d'articles matchés. <strong>PI min &lt; 100</strong> = systématiquement moins cher que vous.</p>
-          <p>Colonnes <strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher que ce vendeur.</p>
+          <p data-i18n="rp.info.sellers.p1">Vendeurs classés par volume d'articles matchés. <strong>PI min &lt; 100</strong> = systématiquement moins cher que vous.</p>
+          <p data-i18n="rp.info.sellers.p2">Colonnes <strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher que ce vendeur.</p>
         </div>
       </div>
-      <span class="tag tag--watch">S26</span>
+      <span class="tag tag--watch">S27</span>
     </div>
 
     <div class="sellers-wrap">
@@ -947,12 +979,12 @@
           
           <tr >
             <td>madeindesignde</td>
-            <td class="num">15 510</td>
-            <td class="num">4 948</td>
-            <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">2 016</td>
-            <td class="num">2 074</td>
-            <td class="num">858</td>
+            <td class="num">15 402</td>
+            <td class="num">4 945</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
+            <td class="num">1 738</td>
+            <td class="num">1 910</td>
+            <td class="num">1 297</td>
           </tr>
           
         </tbody>
@@ -975,8 +1007,8 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Pour chaque vendeur : part de vos articles moins chers / alignés / plus chers, et son indice prix (<strong>PI</strong>).</p>
-          <p>Repérez les vendeurs systématiquement moins chers (<strong>PI &lt; 100</strong>) : ce sont eux qui tirent le marché vers le bas.</p>
+          <p data-i18n="rp.info.seller_analysis.p1">Pour chaque vendeur : part de vos articles moins chers / alignés / plus chers, et son indice prix (<strong>PI</strong>).</p>
+          <p data-i18n="rp.info.seller_analysis.p2">Repérez les vendeurs systématiquement moins chers (<strong>PI &lt; 100</strong>) : ce sont eux qui tirent le marché vers le bas.</p>
         </div>
       </div>
     </div>
@@ -993,11 +1025,11 @@
       <div class="cbar-row ">
         <div><div class="cbar-name">madeindesignde</div></div>
         <div class="cbar-track">
-          <div data-tip="madeindesignde — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="madeindesignde — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
-          <div data-tip="madeindesignde — plus cher : 41%" style="width:41%;background:var(--bad);"><span class="cbar-seg__pct">41%</span></div>
+          <div data-tip="madeindesignde — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="madeindesignde — aligné : 39%" style="width:39%;background:var(--blue);"><span class="cbar-seg__pct">39%</span></div>
+          <div data-tip="madeindesignde — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">104</div>
+        <div class="cbar-pi" style="color:var(--bad);">101</div>
       </div>
       
     </div>
@@ -1018,8 +1050,8 @@
       <div class="info-btn-wrap info-btn-wrap--inline">
         <button class="info-btn" type="button" aria-label="Plus d'infos">i</button>
         <div class="info-popover">
-          <p>Pour chaque catégorie : part de vos articles moins chers / alignés / plus chers, le volume et l'indice prix (<strong>PI</strong>).</p>
-          <p>Ciblez les catégories à fort volume où la part rouge (plus cher) domine : c'est là que le repricing a le plus d'impact.</p>
+          <p data-i18n="rp.info.category.p1">Pour chaque catégorie : part de vos articles moins chers / alignés / plus chers, le volume et l'indice prix (<strong>PI</strong>).</p>
+          <p data-i18n="rp.info.category.p2">Ciblez les catégories à fort volume où la part rouge (plus cher) domine : c'est là que le repricing a le plus d'impact.</p>
         </div>
       </div>
     </div>
@@ -1035,11 +1067,11 @@
       <div class="cbar-row">
         <div><div class="cbar-name">divers</div></div>
         <div class="cbar-track">
-          <div data-tip="divers — moins cher : 17%" style="width:17%;background:var(--good);"><span class="cbar-seg__pct">17%</span></div>
-          <div data-tip="divers — aligné : 42%" style="width:42%;background:var(--blue);"><span class="cbar-seg__pct">42%</span></div>
-          <div data-tip="divers — plus cher : 41%" style="width:41%;background:var(--bad);"><span class="cbar-seg__pct">41%</span></div>
+          <div data-tip="divers — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="divers — aligné : 39%" style="width:39%;background:var(--blue);"><span class="cbar-seg__pct">39%</span></div>
+          <div data-tip="divers — plus cher : 35%" style="width:35%;background:var(--bad);"><span class="cbar-seg__pct">35%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">4 948</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">104</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">4 945</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">101</span></div>
       </div>
       
     </div>
@@ -1054,22 +1086,22 @@
         <div class="info-btn-wrap">
           <button class="info-btn" type="button" aria-label="Comment lire ces chiffres">i</button>
           <div class="info-popover">
-            <p><strong>Comment lire ces chiffres</strong></p>
-            <p>Indice global et part d'articles moins chers comparent la semaine en cours à S25 : ces deux chiffres ne bougent qu'une fois par semaine, quand une nouvelle semaine se clôture.</p>
-            <p>Vendeurs plus compétitifs et articles suivis en continu sont calculés à l'instant où le rapport est généré : ils reflètent l'état du marché aujourd'hui, pas seulement la photo de la semaine dernière.</p>
+            <p data-i18n="rp.info.verdict.p0"><strong>Comment lire ces chiffres</strong></p>
+            <p>Indice global et part d'articles moins chers comparent la semaine en cours à S26 : ces deux chiffres ne bougent qu'une fois par semaine, quand une nouvelle semaine se clôture.</p>
+            <p data-i18n="rp.info.verdict.p2">Vendeurs plus compétitifs et articles suivis en continu sont calculés à l'instant où le rapport est généré : ils reflètent l'état du marché aujourd'hui, pas seulement la photo de la semaine dernière.</p>
           </div>
         </div>
         <span class="eyebrow" data-i18n="rp.verdict.badge">CE QUE NRICHER VOIT QUE VOUS NE VOYEZ PAS ENCORE</span>
-        <h2>L'écart se creuse — l'indice progresse de 2 pts vs la semaine précédente.</h2>
+        <h2>Le repricing porte ses fruits — l'indice recule de 3 pts vs la semaine précédente.</h2>
         <div class="verdict-figs">
           
-          <div class="vfig"><div class="n bad">+2 pts</div><div class="l">indice global vs S25</div></div>
+          <div class="vfig"><div class="n good">-3 pts</div><div class="l">indice global vs S26</div></div>
           
-          <div class="vfig"><div class="n bad">-4 pts</div><div class="l">d'articles moins chers vs S25</div></div>
+          <div class="vfig"><div class="n good">+6 pts</div><div class="l">d'articles moins chers vs S26</div></div>
           
           <div class="vfig"><div class="n good">0</div><div class="l">vendeurs plus compétitifs que vous</div></div>
           
-          <div class="vfig"><div class="n good">4 948</div><div class="l">articles suivis en continu</div></div>
+          <div class="vfig"><div class="n good">4 945</div><div class="l">articles suivis en continu</div></div>
           
         </div>
         <div class="cta-row">
@@ -1159,8 +1191,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [106, 108, 108, 108, 109, 109, 109, 112, 112, 112, 110, 105, 107, 104], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin", "Ajd"]};
-  var attractiveness = [{"equalPct": 48.7, "higherPct": 39, "lowerPct": 12.3, "week": "31 mars"}, {"equalPct": 44.7, "higherPct": 45.3, "lowerPct": 9.9, "week": "07 avr."}, {"equalPct": 46.8, "higherPct": 45.7, "lowerPct": 7.5, "week": "14 avr."}, {"equalPct": 31.2, "higherPct": 58.7, "lowerPct": 10.2, "week": "21 avr."}, {"equalPct": 31.8, "higherPct": 54.7, "lowerPct": 13.4, "week": "28 avr."}, {"equalPct": 32, "higherPct": 54.4, "lowerPct": 13.6, "week": "05 mai"}, {"equalPct": 32.2, "higherPct": 54, "lowerPct": 13.8, "week": "12 mai"}, {"equalPct": 33.4, "higherPct": 60, "lowerPct": 6.6, "week": "19 mai"}, {"equalPct": 33.2, "higherPct": 59.1, "lowerPct": 7.7, "week": "26 mai"}, {"equalPct": 34.1, "higherPct": 59.4, "lowerPct": 6.4, "week": "02 juin"}, {"equalPct": 44.4, "higherPct": 48.8, "lowerPct": 6.8, "week": "09 juin"}, {"equalPct": 42.8, "higherPct": 40.8, "lowerPct": 16.4, "week": "16 juin"}, {"equalPct": 40.8, "higherPct": 47.3, "lowerPct": 11.9, "week": "23 juin"}, {"equalPct": 44, "higherPct": 42, "lowerPct": 14, "week": "Ajd"}];
+  var trendChart = {"priceIndex1P": [108, 108, 108, 109, 109, 109, 112, 112, 112, 110, 105, 107, 104, 101], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin", "30 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 44.7, "higherPct": 45.3, "lowerPct": 9.9, "week": "07 avr."}, {"equalPct": 46.8, "higherPct": 45.7, "lowerPct": 7.5, "week": "14 avr."}, {"equalPct": 31.2, "higherPct": 58.7, "lowerPct": 10.2, "week": "21 avr."}, {"equalPct": 31.8, "higherPct": 54.7, "lowerPct": 13.4, "week": "28 avr."}, {"equalPct": 32, "higherPct": 54.4, "lowerPct": 13.6, "week": "05 mai"}, {"equalPct": 32.2, "higherPct": 54, "lowerPct": 13.8, "week": "12 mai"}, {"equalPct": 33.4, "higherPct": 60, "lowerPct": 6.6, "week": "19 mai"}, {"equalPct": 33.2, "higherPct": 59.1, "lowerPct": 7.7, "week": "26 mai"}, {"equalPct": 34.1, "higherPct": 59.4, "lowerPct": 6.4, "week": "02 juin"}, {"equalPct": 44.4, "higherPct": 48.8, "lowerPct": 6.8, "week": "09 juin"}, {"equalPct": 42.8, "higherPct": 40.8, "lowerPct": 16.4, "week": "16 juin"}, {"equalPct": 40.8, "higherPct": 47.3, "lowerPct": 11.9, "week": "23 juin"}, {"equalPct": 42.5, "higherPct": 39.9, "lowerPct": 17.6, "week": "30 juin"}, {"equalPct": 42, "higherPct": 34, "lowerPct": 24, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 

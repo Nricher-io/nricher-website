@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -224,12 +224,15 @@
     .kpi-report .hero-stats{gap:12px;margin-top:24px;}
     .kpi-report .hstat{padding:18px 16px;}
     .kpi-report .kpi{padding:22px 18px 18px;}
+    .kpi-report .kpi__gauge{width:100px;}
     .kpi-report .chart-card{padding:20px 16px 14px;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .chart-canvas-wrap{height:200px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 90px;}
     .kpi-report .cbar-name{font-size:0.78rem;}
     .kpi-report .prio-table-wrap{overflow-x:auto;}
     .kpi-report .prio-chip{font-size:0.95rem;padding:6px 12px;}
-    .kpi-report .rank-row{grid-template-columns:90px 1fr 36px;gap:8px;}
+    .kpi-report .rank-row,.kpi-report .rank-header{grid-template-columns:22px 76px 1fr 38px;gap:8px;}
     .kpi-report .rank-name{font-size:0.75rem;}
     .kpi-report .verdict{padding:24px 20px;}
     .kpi-report .verdict-figs{gap:24px;margin-bottom:24px;}
@@ -242,7 +245,9 @@
   }
   @media (max-width:420px){
     .kpi-report .hero-stats{grid-template-columns:1fr;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .kpi__gauge{width:80px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 72px;}
     .kpi-report table.sellers th,.kpi-report table.sellers td{padding:8px 10px;font-size:0.82rem;}
   }
 
@@ -378,7 +383,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       <span data-i18n="rp.hero.download">Télécharger</span>
     </a>
-    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 26 <span class="sep">·</span> PRICE INDEX</div>
+    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 27 <span class="sep">·</span> PRICE INDEX</div>
     <h1>
       <span data-i18n="rp.hero.title_prefix">Le marché a bougé.</span>
       <span class="tagline neutral" data-i18n="rp.hero.tagline.neutral">Votre prix tient bon.</span>
@@ -404,7 +409,7 @@
         
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T12:33:34.341Z">26 juin à 12h33</div>
+        <div class="n" data-generated-at="2026-07-03T14:20:03.499Z">03 juil. à 14h20</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -684,24 +689,24 @@
           
           
           <tr>
-            <td class="wk">S26 ★</td>
+            <td class="wk">S27 ★</td>
             
             <td>
-              <span class="prio-chip None" data-tip="Top sales S26 : None">
+              <span class="prio-chip None" data-tip="Top sales S27 : None">
                 None
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip None" data-tip="Middle sales S26 : None">
+              <span class="prio-chip None" data-tip="Middle sales S27 : None">
                 None
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip None" data-tip="Low sales S26 : None">
+              <span class="prio-chip None" data-tip="Low sales S27 : None">
                 None
                 
               </span>
@@ -709,11 +714,11 @@
             
             <td>
               <div class="prio-all">
-                <span class="prio-all__item" data-tip="1P S26 : —">
+                <span class="prio-all__item" data-tip="1P S27 : —">
                   <span class="prio-all__lbl">1P</span>
                   <span class="pi-chip n">—</span>
                 </span>
-                <span class="prio-all__item" data-tip="3P S26 : —">
+                <span class="prio-all__item" data-tip="3P S27 : —">
                   <span class="prio-all__lbl">3P</span>
                   <span class="pi-chip n">—</span>
                 </span>
@@ -895,7 +900,7 @@
           <p data-i18n="rp.info.sellers.p2">Colonnes <strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher que ce vendeur.</p>
         </div>
       </div>
-      <span class="tag tag--watch">S26</span>
+      <span class="tag tag--watch">S27</span>
     </div>
 
     <div class="sellers-wrap">

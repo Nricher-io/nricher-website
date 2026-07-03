@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -224,12 +224,15 @@
     .kpi-report .hero-stats{gap:12px;margin-top:24px;}
     .kpi-report .hstat{padding:18px 16px;}
     .kpi-report .kpi{padding:22px 18px 18px;}
+    .kpi-report .kpi__gauge{width:100px;}
     .kpi-report .chart-card{padding:20px 16px 14px;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .chart-canvas-wrap{height:200px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 90px;}
     .kpi-report .cbar-name{font-size:0.78rem;}
     .kpi-report .prio-table-wrap{overflow-x:auto;}
     .kpi-report .prio-chip{font-size:0.95rem;padding:6px 12px;}
-    .kpi-report .rank-row{grid-template-columns:90px 1fr 36px;gap:8px;}
+    .kpi-report .rank-row,.kpi-report .rank-header{grid-template-columns:22px 76px 1fr 38px;gap:8px;}
     .kpi-report .rank-name{font-size:0.75rem;}
     .kpi-report .verdict{padding:24px 20px;}
     .kpi-report .verdict-figs{gap:24px;margin-bottom:24px;}
@@ -242,7 +245,9 @@
   }
   @media (max-width:420px){
     .kpi-report .hero-stats{grid-template-columns:1fr;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .kpi__gauge{width:80px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 72px;}
     .kpi-report table.sellers th,.kpi-report table.sellers td{padding:8px 10px;font-size:0.82rem;}
   }
 
@@ -378,33 +383,33 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       <span data-i18n="rp.hero.download">Télécharger</span>
     </a>
-    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 26 <span class="sep">·</span> PRICE INDEX</div>
+    <div class="eyebrow">WEEKLY KPIS <span class="sep">·</span> <span data-i18n="rp.hero.week">SEMAINE</span> 27 <span class="sep">·</span> PRICE INDEX</div>
     <h1>
       <span data-i18n="rp.hero.title_prefix">Le marché a bougé.</span>
       <span class="tagline neutral" data-i18n="rp.hero.tagline.neutral">Votre prix tient bon.</span>
     </h1>
     <p class="lede">
-      255 135 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
+      251 344 <span data-i18n="rp.hero.sub_middle">articles analysés cette semaine sur</span>
       4 <span data-i18n="rp.hero.sub_suffix">concurrents directs.</span>
     </p>
 
     <div class="hero-stats">
       <div class="hstat">
-        <div class="n">255 135 <span class="up">▲</span></div>
+        <div class="n">251 344 <span class="down">▼</span></div>
         <div class="l" data-i18n="rp.hero.stat0.label">Articles analysés</div>
-        <div class="delta-sub">0 % <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">-4 % <span data-i18n="rp.hero.vs">vs</span> S26</div>
       </div>
       <div class="hstat">
-        <div class="n">23 917</div>
+        <div class="n">23 872</div>
         <div class="l" data-i18n="rp.hero.stat1.label">Matchés concurrence</div>
       </div>
       <div class="hstat">
         <div class="n bad">101 <span class="up">▲</span></div>
         <div class="l" data-i18n="rp.hero.stat2.label">Price Index global</div>
-        <div class="delta-sub">0 pts <span data-i18n="rp.hero.vs">vs</span> S25</div>
+        <div class="delta-sub">0 pts <span data-i18n="rp.hero.vs">vs</span> S26</div>
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T12:36:57.360Z">26 juin à 12h36</div>
+        <div class="n" data-generated-at="2026-07-03T14:21:28.202Z">03 juil. à 14h21</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -434,7 +439,7 @@
           <div class="info-popover">
             
             <p data-i18n="rp.info.gauge.all.p1">Indice prix moyen calculé sur l'ensemble des offres concurrentes. 100 = aligné au marché.</p>
-            <p>L'aiguille et la couleur indiquent votre position : vert = vous êtes moins cher, rouge = plus cher. Le repère S25 sous la jauge montre la semaine précédente, et la pastille le delta en points.</p>
+            <p>L'aiguille et la couleur indiquent votre position : vert = vous êtes moins cher, rouge = plus cher. Le repère S26 sous la jauge montre la semaine précédente, et la pastille le delta en points.</p>
             
           </div>
         </div>
@@ -480,7 +485,7 @@
         </div>
         <div class="kpi__ref">
           <span>80</span>
-          <span>S25 : 100</span>
+          <span>S26 : 100</span>
           <span>120</span>
         </div>
       </div>
@@ -595,7 +600,7 @@
         </div>
         <div class="kpi__ref">
           <span>80</span>
-          <span>S25 : 101</span>
+          <span>S26 : 101</span>
           <span>120</span>
         </div>
       </div>
@@ -616,7 +621,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">31 mars → Ajd</span></div>
+    <div class="tag-row"><span class="tag tag--watch">07 avr. → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -684,36 +689,36 @@
           
           
           <tr>
-            <td class="wk">S26 ★</td>
+            <td class="wk">S27 ★</td>
             
             <td>
-              <span class="prio-chip blue" data-tip="Top sales S26 : 100">
+              <span class="prio-chip blue" data-tip="Top sales S27 : 100">
                 100
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Middle sales S26 : 101">
+              <span class="prio-chip bad" data-tip="Middle sales S27 : 101">
                 101
                 
               </span>
             </td>
             
             <td>
-              <span class="prio-chip bad" data-tip="Low sales S26 : 101">
-                101
+              <span class="prio-chip bad" data-tip="Low sales S27 : 102">
+                102
                 
               </span>
             </td>
             
             <td>
               <div class="prio-all">
-                <span class="prio-all__item" data-tip="1P S26 : —">
+                <span class="prio-all__item" data-tip="1P S27 : —">
                   <span class="prio-all__lbl">1P</span>
                   <span class="pi-chip n">—</span>
                 </span>
-                <span class="prio-all__item" data-tip="3P S26 : 101">
+                <span class="prio-all__item" data-tip="3P S27 : 101">
                   <span class="prio-all__lbl">3P</span>
                   <span class="pi-chip r">101</span>
                 </span>
@@ -754,38 +759,38 @@
             <g transform="rotate(-90 60 60)">
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--good)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="80.37 233.79" stroke-dashoffset="-0.00"
-                      data-tip="26%"></circle>
+                      stroke-dasharray="92.94 221.22" stroke-dashoffset="-0.00"
+                      data-tip="30%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--blue)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="162.05 152.11" stroke-dashoffset="-81.68"
-                      data-tip="52%"></circle>
+                      stroke-dasharray="146.35 167.81" stroke-dashoffset="-94.25"
+                      data-tip="47%"></circle>
               
               <circle cx="60" cy="60" r="50" fill="none" stroke="var(--bad)" stroke-width="20" stroke-linecap="round"
-                      stroke-dasharray="67.81 246.35" stroke-dashoffset="-245.04"
-                      data-tip="22%"></circle>
+                      stroke-dasharray="70.95 243.21" stroke-dashoffset="-241.90"
+                      data-tip="23%"></circle>
               
             </g>
             
             
-            <text x="96.4" y="25.8" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">26%</text>
+            <text x="100.5" y="30.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">30%</text>
             
             
             
-            <text x="53.7" y="109.6" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">52%</text>
+            <text x="49.1" y="108.8" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">47%</text>
             
             
             
-            <text x="28.1" y="21.5" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">22%</text>
+            <text x="26.9" y="22.5" text-anchor="middle" dominant-baseline="central" font-family="var(--font-body)" font-weight="700" font-size="9.5" fill="#fff" stroke="rgba(0,0,0,0.3)" stroke-width="1" paint-order="stroke" style="letter-spacing:-0.01em;">23%</text>
             
             
-            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">22%</text>
+            <text x="60" y="56" text-anchor="middle" font-family="var(--font-display)" font-weight="700" font-size="22" fill="var(--text)">23%</text>
             <text x="60" y="74" text-anchor="middle" font-size="10" fill="var(--muted)" data-i18n="rp.overview.donut.center">plus cher</text>
           </svg>
           <div class="donut-legend">
-            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 26%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 52%</div>
-            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 22%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--good);"></span><span data-i18n="rp.legend.lower">Moins cher</span> · 30%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span><span data-i18n="rp.legend.equal">Aligné</span> · 47%</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--bad);"></span><span data-i18n="rp.legend.higher">Plus cher</span> · 23%</div>
           </div>
         </div>
       </div>
@@ -807,8 +812,18 @@
         </div>
         <div class="rank-list">
           
-          <div class="rank-row" data-tip="Maisons du Monde IT : PI 99">
+          <div class="rank-row" data-tip="Leroy Merlin IT : PI 99">
             <span class="rank-badge rank-badge--1">1</span>
+            <span class="rank-name">Leroy Merlin IT</span>
+            <div class="rank-track">
+              <div class="rank-track__ref"></div>
+              <div class="rank-track__marker" style="left:48%;background:var(--good);"></div>
+            </div>
+            <span class="rank-pi"><span class="pi-chip g">99</span></span>
+          </div>
+          
+          <div class="rank-row" data-tip="Maisons du Monde IT : PI 99">
+            <span class="rank-badge rank-badge--2">2</span>
             <span class="rank-name">Maisons du Monde IT</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
@@ -817,34 +832,24 @@
             <span class="rank-pi"><span class="pi-chip g">99</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Vente Unique IT : PI 100">
-            <span class="rank-badge rank-badge--2">2</span>
+          <div class="rank-row" data-tip="Vente Unique IT : PI 102">
+            <span class="rank-badge rank-badge--3">3</span>
             <span class="rank-name">Vente Unique IT</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:50%;background:var(--blue);"></div>
+              <div class="rank-track__marker" style="left:55%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip b">100</span></span>
+            <span class="rank-pi"><span class="pi-chip r">102</span></span>
           </div>
           
-          <div class="rank-row" data-tip="Leroy Merlin IT : PI 100">
-            <span class="rank-badge rank-badge--3">3</span>
-            <span class="rank-name">Leroy Merlin IT</span>
-            <div class="rank-track">
-              <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:50%;background:var(--blue);"></div>
-            </div>
-            <span class="rank-pi"><span class="pi-chip b">100</span></span>
-          </div>
-          
-          <div class="rank-row" data-tip="Amazon IT : PI 106">
+          <div class="rank-row" data-tip="Amazon IT : PI 104">
             <span class="rank-badge rank-badge--n">4</span>
             <span class="rank-name">Amazon IT</span>
             <div class="rank-track">
               <div class="rank-track__ref"></div>
-              <div class="rank-track__marker" style="left:65%;background:var(--bad);"></div>
+              <div class="rank-track__marker" style="left:60%;background:var(--bad);"></div>
             </div>
-            <span class="rank-pi"><span class="pi-chip r">106</span></span>
+            <span class="rank-pi"><span class="pi-chip r">104</span></span>
           </div>
           
         </div>
@@ -883,40 +888,40 @@
     <div class="cbar-list">
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Vente Unique IT</div><div class="cbar-meta">10 330 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Leroy Merlin IT</div><div class="cbar-meta">9 284 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Vente Unique IT — moins cher : 21%" style="width:21%;background:var(--good);"><span class="cbar-seg__pct">21%</span></div>
-          <div data-tip="Vente Unique IT — aligné : 59%" style="width:59%;background:var(--blue);"><span class="cbar-seg__pct">59%</span></div>
-          <div data-tip="Vente Unique IT — plus cher : 20%" style="width:20%;background:var(--bad);"><span class="cbar-seg__pct">20%</span></div>
-        </div>
-        <div class="cbar-pi" style="color:var(--blue);">100</div>
-      </div>
-      
-      <div class="cbar-row">
-        <div><div class="cbar-name">Leroy Merlin IT</div><div class="cbar-meta">9 172 <span data-i18n="rp.matched">matchés</span></div></div>
-        <div class="cbar-track">
-          <div data-tip="Leroy Merlin IT — moins cher : 32%" style="width:32%;background:var(--good);"><span class="cbar-seg__pct">32%</span></div>
+          <div data-tip="Leroy Merlin IT — moins cher : 33%" style="width:33%;background:var(--good);"><span class="cbar-seg__pct">33%</span></div>
           <div data-tip="Leroy Merlin IT — aligné : 39%" style="width:39%;background:var(--blue);"><span class="cbar-seg__pct">39%</span></div>
-          <div data-tip="Leroy Merlin IT — plus cher : 29%" style="width:29%;background:var(--bad);"><span class="cbar-seg__pct">29%</span></div>
+          <div data-tip="Leroy Merlin IT — plus cher : 28%" style="width:28%;background:var(--bad);"><span class="cbar-seg__pct">28%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--blue);">100</div>
+        <div class="cbar-pi" style="color:var(--good);">99</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Amazon IT</div><div class="cbar-meta">3 767 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Vente Unique IT</div><div class="cbar-meta">9 119 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Amazon IT — moins cher : 24%" style="width:24%;background:var(--good);"><span class="cbar-seg__pct">24%</span></div>
-          <div data-tip="Amazon IT — aligné : 43%" style="width:43%;background:var(--blue);"><span class="cbar-seg__pct">43%</span></div>
-          <div data-tip="Amazon IT — plus cher : 33%" style="width:33%;background:var(--bad);"><span class="cbar-seg__pct">33%</span></div>
+          <div data-tip="Vente Unique IT — moins cher : 25%" style="width:25%;background:var(--good);"><span class="cbar-seg__pct">25%</span></div>
+          <div data-tip="Vente Unique IT — aligné : 51%" style="width:51%;background:var(--blue);"><span class="cbar-seg__pct">51%</span></div>
+          <div data-tip="Vente Unique IT — plus cher : 24%" style="width:24%;background:var(--bad);"><span class="cbar-seg__pct">24%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">106</div>
+        <div class="cbar-pi" style="color:var(--bad);">102</div>
       </div>
       
       <div class="cbar-row">
-        <div><div class="cbar-name">Maisons du Monde IT</div><div class="cbar-meta">3 014 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div><div class="cbar-name">Amazon IT</div><div class="cbar-meta">4 363 <span data-i18n="rp.matched">matchés</span></div></div>
         <div class="cbar-track">
-          <div data-tip="Maisons du Monde IT — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
-          <div data-tip="Maisons du Monde IT — aligné : 65%" style="width:65%;background:var(--blue);"><span class="cbar-seg__pct">65%</span></div>
+          <div data-tip="Amazon IT — moins cher : 30%" style="width:30%;background:var(--good);"><span class="cbar-seg__pct">30%</span></div>
+          <div data-tip="Amazon IT — aligné : 38%" style="width:38%;background:var(--blue);"><span class="cbar-seg__pct">38%</span></div>
+          <div data-tip="Amazon IT — plus cher : 32%" style="width:32%;background:var(--bad);"><span class="cbar-seg__pct">32%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">104</div>
+      </div>
+      
+      <div class="cbar-row">
+        <div><div class="cbar-name">Maisons du Monde IT</div><div class="cbar-meta">3 324 <span data-i18n="rp.matched">matchés</span></div></div>
+        <div class="cbar-track">
+          <div data-tip="Maisons du Monde IT — moins cher : 32%" style="width:32%;background:var(--good);"><span class="cbar-seg__pct">32%</span></div>
+          <div data-tip="Maisons du Monde IT — aligné : 59%" style="width:59%;background:var(--blue);"><span class="cbar-seg__pct">59%</span></div>
           <div data-tip="Maisons du Monde IT — plus cher : 9%" style="width:9%;background:var(--bad);"><span class="cbar-seg__pct">9%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--good);">99</div>
@@ -956,47 +961,47 @@
         <tbody>
           
           <tr>
-            <td>Vente Unique IT</td>
-            <td class="num">11 433</td>
-            <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">10 330</td>
-            <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">2 077</td>
-            <td class="num">6 084</td>
-            <td class="num">2 170</td>
+            <td>Leroy Merlin IT</td>
+            <td class="num">9 661</td>
+            <td class="num"><span class="pi-chip g">99</span></td>
+            <td class="num">9 284</td>
+            <td class="num"><span class="pi-chip g">99</span></td>
+            <td class="num">2 587</td>
+            <td class="num">3 658</td>
+            <td class="num">3 061</td>
           </tr>
           
           <tr>
-            <td>Leroy Merlin IT</td>
-            <td class="num">9 815</td>
-            <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">9 172</td>
-            <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">2 647</td>
-            <td class="num">3 604</td>
-            <td class="num">2 952</td>
+            <td>Vente Unique IT</td>
+            <td class="num">10 683</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
+            <td class="num">9 119</td>
+            <td class="num"><span class="pi-chip r">102</span></td>
+            <td class="num">2 211</td>
+            <td class="num">4 652</td>
+            <td class="num">2 259</td>
           </tr>
           
           <tr>
             <td>Amazon IT</td>
-            <td class="num">4 483</td>
+            <td class="num">5 334</td>
+            <td class="num"><span class="pi-chip r">103</span></td>
+            <td class="num">4 363</td>
             <td class="num"><span class="pi-chip r">104</span></td>
-            <td class="num">3 767</td>
-            <td class="num"><span class="pi-chip r">106</span></td>
-            <td class="num">1 259</td>
-            <td class="num">1 602</td>
-            <td class="num">907</td>
+            <td class="num">1 382</td>
+            <td class="num">1 660</td>
+            <td class="num">1 327</td>
           </tr>
           
           <tr>
             <td>Maisons du Monde IT</td>
-            <td class="num">3 811</td>
+            <td class="num">3 868</td>
             <td class="num"><span class="pi-chip g">98</span></td>
-            <td class="num">3 014</td>
+            <td class="num">3 324</td>
             <td class="num"><span class="pi-chip g">99</span></td>
-            <td class="num">289</td>
-            <td class="num">1 953</td>
-            <td class="num">772</td>
+            <td class="num">300</td>
+            <td class="num">1 964</td>
+            <td class="num">1 060</td>
           </tr>
           
         </tbody>
@@ -1023,7 +1028,7 @@
           <p data-i18n="rp.info.sellers.p2">Colonnes <strong>&gt; 100</strong> / <strong>= 100</strong> / <strong>&lt; 100</strong> = nombre d'articles où vous êtes plus cher / aligné / moins cher que ce vendeur.</p>
         </div>
       </div>
-      <span class="tag tag--watch">S26</span>
+      <span class="tag tag--watch">S27</span>
     </div>
 
     <div class="sellers-wrap">
@@ -1035,122 +1040,122 @@
           
           <tr >
             <td>beliani</td>
-            <td class="num">3 395</td>
-            <td class="num">2 075</td>
+            <td class="num">3 262</td>
+            <td class="num">2 010</td>
             <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">36</td>
-            <td class="num">2 626</td>
-            <td class="num">69</td>
-          </tr>
-          
-          <tr >
-            <td>helloshop26</td>
-            <td class="num">7 043</td>
-            <td class="num">1 324</td>
-            <td class="num"><span class="pi-chip b">100</span></td>
-            <td class="num">37</td>
-            <td class="num">1 356</td>
-            <td class="num">2</td>
+            <td class="num">19</td>
+            <td class="num">2 477</td>
+            <td class="num">90</td>
           </tr>
           
           <tr >
             <td>vente unique</td>
-            <td class="num">2 200</td>
-            <td class="num">1 052</td>
+            <td class="num">1 220</td>
+            <td class="num">961</td>
             <td class="num"><span class="pi-chip r">116</span></td>
-            <td class="num">796</td>
-            <td class="num">198</td>
-            <td class="num">136</td>
+            <td class="num">779</td>
+            <td class="num">276</td>
+            <td class="num">71</td>
           </tr>
           
           <tr >
-            <td>petits meubles</td>
-            <td class="num">660</td>
-            <td class="num">690</td>
-            <td class="num"><span class="pi-chip g">96</span></td>
-            <td class="num">47</td>
-            <td class="num">142</td>
-            <td class="num">698</td>
+            <td>meublorama</td>
+            <td class="num">893</td>
+            <td class="num">656</td>
+            <td class="num"><span class="pi-chip b">100</span></td>
+            <td class="num">32</td>
+            <td class="num">623</td>
+            <td class="num">3</td>
           </tr>
           
           <tr >
             <td>dmora</td>
-            <td class="num">1 535</td>
-            <td class="num">622</td>
-            <td class="num"><span class="pi-chip r">102</span></td>
-            <td class="num">172</td>
-            <td class="num">451</td>
-            <td class="num">33</td>
+            <td class="num">1 512</td>
+            <td class="num">606</td>
+            <td class="num"><span class="pi-chip g">94</span></td>
+            <td class="num">189</td>
+            <td class="num">45</td>
+            <td class="num">436</td>
+          </tr>
+          
+          <tr >
+            <td>helloshop26</td>
+            <td class="num">8 604</td>
+            <td class="num">603</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
+            <td class="num">9</td>
+            <td class="num">627</td>
+            <td class="num">1</td>
+          </tr>
+          
+          <tr >
+            <td>petits meubles</td>
+            <td class="num">657</td>
+            <td class="num">596</td>
+            <td class="num"><span class="pi-chip g">98</span></td>
+            <td class="num">122</td>
+            <td class="num">123</td>
+            <td class="num">460</td>
           </tr>
           
           <tr >
             <td>aosom</td>
-            <td class="num">1 018</td>
-            <td class="num">603</td>
-            <td class="num"><span class="pi-chip r">101</span></td>
-            <td class="num">77</td>
-            <td class="num">768</td>
-            <td class="num">55</td>
-          </tr>
-          
-          <tr >
-            <td>digital bay</td>
-            <td class="num">2 388</td>
-            <td class="num">449</td>
-            <td class="num"><span class="pi-chip r">103</span></td>
-            <td class="num">274</td>
-            <td class="num">31</td>
-            <td class="num">149</td>
-          </tr>
-          
-          <tr >
-            <td>ledkia lighting</td>
-            <td class="num">880</td>
-            <td class="num">435</td>
-            <td class="num"><span class="pi-chip g">89</span></td>
-            <td class="num">39</td>
-            <td class="num">11</td>
-            <td class="num">388</td>
+            <td class="num">935</td>
+            <td class="num">557</td>
+            <td class="num"><span class="pi-chip g">99</span></td>
+            <td class="num">40</td>
+            <td class="num">606</td>
+            <td class="num">100</td>
           </tr>
           
           <tr >
             <td>decoration brands</td>
-            <td class="num">1 981</td>
-            <td class="num">421</td>
-            <td class="num"><span class="pi-chip r">116</span></td>
-            <td class="num">227</td>
-            <td class="num">113</td>
-            <td class="num">85</td>
-          </tr>
-          
-          <tr >
-            <td>electropolis</td>
-            <td class="num">4 231</td>
-            <td class="num">405</td>
-            <td class="num"><span class="pi-chip g">92</span></td>
-            <td class="num">35</td>
-            <td class="num">248</td>
-            <td class="num">125</td>
+            <td class="num">1 977</td>
+            <td class="num">459</td>
+            <td class="num"><span class="pi-chip r">110</span></td>
+            <td class="num">209</td>
+            <td class="num">132</td>
+            <td class="num">129</td>
           </tr>
           
           <tr >
             <td>ecd</td>
-            <td class="num">542</td>
-            <td class="num">377</td>
+            <td class="num">712</td>
+            <td class="num">441</td>
             <td class="num"><span class="pi-chip r">105</span></td>
-            <td class="num">228</td>
+            <td class="num">290</td>
             <td class="num">186</td>
-            <td class="num">18</td>
+            <td class="num">29</td>
+          </tr>
+          
+          <tr >
+            <td>the retailer network it</td>
+            <td class="num">950</td>
+            <td class="num">441</td>
+            <td class="num"><span class="pi-chip r">113</span></td>
+            <td class="num">261</td>
+            <td class="num">10</td>
+            <td class="num">185</td>
+          </tr>
+          
+          <tr >
+            <td>ledkia</td>
+            <td class="num">867</td>
+            <td class="num">429</td>
+            <td class="num"><span class="pi-chip g">92</span></td>
+            <td class="num">66</td>
+            <td class="num">40</td>
+            <td class="num">334</td>
           </tr>
           
           <tr >
             <td>lampada e luce</td>
-            <td class="num">1 206</td>
-            <td class="num">376</td>
-            <td class="num"><span class="pi-chip r">102</span></td>
-            <td class="num">77</td>
-            <td class="num">342</td>
-            <td class="num">1</td>
+            <td class="num">1 167</td>
+            <td class="num">387</td>
+            <td class="num"><span class="pi-chip r">101</span></td>
+            <td class="num">21</td>
+            <td class="num">414</td>
+            <td class="num">3</td>
           </tr>
           
         </tbody>
@@ -1199,113 +1204,113 @@
       </div>
       
       <div class="cbar-row ">
-        <div><div class="cbar-name">helloshop26</div></div>
+        <div><div class="cbar-name">vente unique</div></div>
         <div class="cbar-track">
-          <div data-tip="helloshop26 — moins cher : 0%" style="width:0%;background:var(--good);"></div>
-          <div data-tip="helloshop26 — aligné : 97%" style="width:97%;background:var(--blue);"><span class="cbar-seg__pct">97%</span></div>
-          <div data-tip="helloshop26 — plus cher : 3%" style="width:3%;background:var(--bad);"></div>
+          <div data-tip="vente unique — moins cher : 6%" style="width:6%;background:var(--good);"></div>
+          <div data-tip="vente unique — aligné : 25%" style="width:25%;background:var(--blue);"><span class="cbar-seg__pct">25%</span></div>
+          <div data-tip="vente unique — plus cher : 69%" style="width:69%;background:var(--bad);"><span class="cbar-seg__pct">69%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">116</div>
+      </div>
+      
+      <div class="cbar-row ">
+        <div><div class="cbar-name">meublorama</div></div>
+        <div class="cbar-track">
+          <div data-tip="meublorama — moins cher : 0%" style="width:0%;background:var(--good);"></div>
+          <div data-tip="meublorama — aligné : 95%" style="width:95%;background:var(--blue);"><span class="cbar-seg__pct">95%</span></div>
+          <div data-tip="meublorama — plus cher : 5%" style="width:5%;background:var(--bad);"></div>
         </div>
         <div class="cbar-pi" style="color:var(--blue);">100</div>
       </div>
       
       <div class="cbar-row ">
-        <div><div class="cbar-name">vente unique</div></div>
-        <div class="cbar-track">
-          <div data-tip="vente unique — moins cher : 12%" style="width:12%;background:var(--good);"><span class="cbar-seg__pct">12%</span></div>
-          <div data-tip="vente unique — aligné : 18%" style="width:18%;background:var(--blue);"><span class="cbar-seg__pct">18%</span></div>
-          <div data-tip="vente unique — plus cher : 70%" style="width:70%;background:var(--bad);"><span class="cbar-seg__pct">70%</span></div>
-        </div>
-        <div class="cbar-pi" style="color:var(--bad);">116</div>
-      </div>
-      
-      <div class="cbar-row ">
-        <div><div class="cbar-name">petits meubles</div></div>
-        <div class="cbar-track">
-          <div data-tip="petits meubles — moins cher : 79%" style="width:79%;background:var(--good);"><span class="cbar-seg__pct">79%</span></div>
-          <div data-tip="petits meubles — aligné : 16%" style="width:16%;background:var(--blue);"><span class="cbar-seg__pct">16%</span></div>
-          <div data-tip="petits meubles — plus cher : 5%" style="width:5%;background:var(--bad);"></div>
-        </div>
-        <div class="cbar-pi" style="color:var(--good);">96</div>
-      </div>
-      
-      <div class="cbar-row ">
         <div><div class="cbar-name">dmora</div></div>
         <div class="cbar-track">
-          <div data-tip="dmora — moins cher : 5%" style="width:5%;background:var(--good);"></div>
-          <div data-tip="dmora — aligné : 69%" style="width:69%;background:var(--blue);"><span class="cbar-seg__pct">69%</span></div>
-          <div data-tip="dmora — plus cher : 26%" style="width:26%;background:var(--bad);"><span class="cbar-seg__pct">26%</span></div>
+          <div data-tip="dmora — moins cher : 65%" style="width:65%;background:var(--good);"><span class="cbar-seg__pct">65%</span></div>
+          <div data-tip="dmora — aligné : 7%" style="width:7%;background:var(--blue);"></div>
+          <div data-tip="dmora — plus cher : 28%" style="width:28%;background:var(--bad);"><span class="cbar-seg__pct">28%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">102</div>
+        <div class="cbar-pi" style="color:var(--good);">94</div>
       </div>
       
       <div class="cbar-row ">
-        <div><div class="cbar-name">aosom</div></div>
+        <div><div class="cbar-name">helloshop26</div></div>
         <div class="cbar-track">
-          <div data-tip="aosom — moins cher : 6%" style="width:6%;background:var(--good);"></div>
-          <div data-tip="aosom — aligné : 85%" style="width:85%;background:var(--blue);"><span class="cbar-seg__pct">85%</span></div>
-          <div data-tip="aosom — plus cher : 9%" style="width:9%;background:var(--bad);"><span class="cbar-seg__pct">9%</span></div>
+          <div data-tip="helloshop26 — moins cher : 0%" style="width:0%;background:var(--good);"></div>
+          <div data-tip="helloshop26 — aligné : 99%" style="width:99%;background:var(--blue);"><span class="cbar-seg__pct">99%</span></div>
+          <div data-tip="helloshop26 — plus cher : 1%" style="width:1%;background:var(--bad);"></div>
         </div>
         <div class="cbar-pi" style="color:var(--bad);">101</div>
       </div>
       
       <div class="cbar-row ">
-        <div><div class="cbar-name">digital bay</div></div>
+        <div><div class="cbar-name">petits meubles</div></div>
         <div class="cbar-track">
-          <div data-tip="digital bay — moins cher : 33%" style="width:33%;background:var(--good);"><span class="cbar-seg__pct">33%</span></div>
-          <div data-tip="digital bay — aligné : 7%" style="width:7%;background:var(--blue);"></div>
-          <div data-tip="digital bay — plus cher : 60%" style="width:60%;background:var(--bad);"><span class="cbar-seg__pct">60%</span></div>
+          <div data-tip="petits meubles — moins cher : 65%" style="width:65%;background:var(--good);"><span class="cbar-seg__pct">65%</span></div>
+          <div data-tip="petits meubles — aligné : 18%" style="width:18%;background:var(--blue);"><span class="cbar-seg__pct">18%</span></div>
+          <div data-tip="petits meubles — plus cher : 17%" style="width:17%;background:var(--bad);"><span class="cbar-seg__pct">17%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">103</div>
+        <div class="cbar-pi" style="color:var(--good);">98</div>
       </div>
       
       <div class="cbar-row ">
-        <div><div class="cbar-name">ledkia lighting</div></div>
+        <div><div class="cbar-name">aosom</div></div>
         <div class="cbar-track">
-          <div data-tip="ledkia lighting — moins cher : 89%" style="width:89%;background:var(--good);"><span class="cbar-seg__pct">89%</span></div>
-          <div data-tip="ledkia lighting — aligné : 2%" style="width:2%;background:var(--blue);"></div>
-          <div data-tip="ledkia lighting — plus cher : 9%" style="width:9%;background:var(--bad);"><span class="cbar-seg__pct">9%</span></div>
+          <div data-tip="aosom — moins cher : 14%" style="width:14%;background:var(--good);"><span class="cbar-seg__pct">14%</span></div>
+          <div data-tip="aosom — aligné : 81%" style="width:81%;background:var(--blue);"><span class="cbar-seg__pct">81%</span></div>
+          <div data-tip="aosom — plus cher : 5%" style="width:5%;background:var(--bad);"></div>
         </div>
-        <div class="cbar-pi" style="color:var(--good);">89</div>
+        <div class="cbar-pi" style="color:var(--good);">99</div>
       </div>
       
       <div class="cbar-row ">
         <div><div class="cbar-name">decoration brands</div></div>
         <div class="cbar-track">
-          <div data-tip="decoration brands — moins cher : 20%" style="width:20%;background:var(--good);"><span class="cbar-seg__pct">20%</span></div>
-          <div data-tip="decoration brands — aligné : 27%" style="width:27%;background:var(--blue);"><span class="cbar-seg__pct">27%</span></div>
-          <div data-tip="decoration brands — plus cher : 53%" style="width:53%;background:var(--bad);"><span class="cbar-seg__pct">53%</span></div>
+          <div data-tip="decoration brands — moins cher : 27%" style="width:27%;background:var(--good);"><span class="cbar-seg__pct">27%</span></div>
+          <div data-tip="decoration brands — aligné : 28%" style="width:28%;background:var(--blue);"><span class="cbar-seg__pct">28%</span></div>
+          <div data-tip="decoration brands — plus cher : 45%" style="width:45%;background:var(--bad);"><span class="cbar-seg__pct">45%</span></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">116</div>
-      </div>
-      
-      <div class="cbar-row ">
-        <div><div class="cbar-name">electropolis</div></div>
-        <div class="cbar-track">
-          <div data-tip="electropolis — moins cher : 31%" style="width:31%;background:var(--good);"><span class="cbar-seg__pct">31%</span></div>
-          <div data-tip="electropolis — aligné : 61%" style="width:61%;background:var(--blue);"><span class="cbar-seg__pct">61%</span></div>
-          <div data-tip="electropolis — plus cher : 8%" style="width:8%;background:var(--bad);"></div>
-        </div>
-        <div class="cbar-pi" style="color:var(--good);">92</div>
+        <div class="cbar-pi" style="color:var(--bad);">110</div>
       </div>
       
       <div class="cbar-row ">
         <div><div class="cbar-name">ecd</div></div>
         <div class="cbar-track">
-          <div data-tip="ecd — moins cher : 4%" style="width:4%;background:var(--good);"></div>
-          <div data-tip="ecd — aligné : 43%" style="width:43%;background:var(--blue);"><span class="cbar-seg__pct">43%</span></div>
-          <div data-tip="ecd — plus cher : 53%" style="width:53%;background:var(--bad);"><span class="cbar-seg__pct">53%</span></div>
+          <div data-tip="ecd — moins cher : 6%" style="width:6%;background:var(--good);"></div>
+          <div data-tip="ecd — aligné : 37%" style="width:37%;background:var(--blue);"><span class="cbar-seg__pct">37%</span></div>
+          <div data-tip="ecd — plus cher : 57%" style="width:57%;background:var(--bad);"><span class="cbar-seg__pct">57%</span></div>
         </div>
         <div class="cbar-pi" style="color:var(--bad);">105</div>
       </div>
       
       <div class="cbar-row ">
+        <div><div class="cbar-name">the retailer network it</div></div>
+        <div class="cbar-track">
+          <div data-tip="the retailer network it — moins cher : 41%" style="width:41%;background:var(--good);"><span class="cbar-seg__pct">41%</span></div>
+          <div data-tip="the retailer network it — aligné : 2%" style="width:2%;background:var(--blue);"></div>
+          <div data-tip="the retailer network it — plus cher : 57%" style="width:57%;background:var(--bad);"><span class="cbar-seg__pct">57%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--bad);">113</div>
+      </div>
+      
+      <div class="cbar-row ">
+        <div><div class="cbar-name">ledkia</div></div>
+        <div class="cbar-track">
+          <div data-tip="ledkia — moins cher : 76%" style="width:76%;background:var(--good);"><span class="cbar-seg__pct">76%</span></div>
+          <div data-tip="ledkia — aligné : 9%" style="width:9%;background:var(--blue);"><span class="cbar-seg__pct">9%</span></div>
+          <div data-tip="ledkia — plus cher : 15%" style="width:15%;background:var(--bad);"><span class="cbar-seg__pct">15%</span></div>
+        </div>
+        <div class="cbar-pi" style="color:var(--good);">92</div>
+      </div>
+      
+      <div class="cbar-row ">
         <div><div class="cbar-name">lampada e luce</div></div>
         <div class="cbar-track">
-          <div data-tip="lampada e luce — moins cher : 0%" style="width:0%;background:var(--good);"></div>
-          <div data-tip="lampada e luce — aligné : 82%" style="width:82%;background:var(--blue);"><span class="cbar-seg__pct">82%</span></div>
-          <div data-tip="lampada e luce — plus cher : 18%" style="width:18%;background:var(--bad);"><span class="cbar-seg__pct">18%</span></div>
+          <div data-tip="lampada e luce — moins cher : 1%" style="width:1%;background:var(--good);"></div>
+          <div data-tip="lampada e luce — aligné : 94%" style="width:94%;background:var(--blue);"><span class="cbar-seg__pct">94%</span></div>
+          <div data-tip="lampada e luce — plus cher : 5%" style="width:5%;background:var(--bad);"></div>
         </div>
-        <div class="cbar-pi" style="color:var(--bad);">102</div>
+        <div class="cbar-pi" style="color:var(--bad);">101</div>
       </div>
       
     </div>
@@ -1343,11 +1348,11 @@
       <div class="cbar-row">
         <div><div class="cbar-name">divers</div></div>
         <div class="cbar-track">
-          <div data-tip="divers — moins cher : 26%" style="width:26%;background:var(--good);"><span class="cbar-seg__pct">26%</span></div>
-          <div data-tip="divers — aligné : 50%" style="width:50%;background:var(--blue);"><span class="cbar-seg__pct">50%</span></div>
-          <div data-tip="divers — plus cher : 24%" style="width:24%;background:var(--bad);"><span class="cbar-seg__pct">24%</span></div>
+          <div data-tip="divers — moins cher : 29%" style="width:29%;background:var(--good);"><span class="cbar-seg__pct">29%</span></div>
+          <div data-tip="divers — aligné : 46%" style="width:46%;background:var(--blue);"><span class="cbar-seg__pct">46%</span></div>
+          <div data-tip="divers — plus cher : 25%" style="width:25%;background:var(--bad);"><span class="cbar-seg__pct">25%</span></div>
         </div>
-        <div class="cbar-pi"><span style="color:var(--muted);">23 925</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">101</span></div>
+        <div class="cbar-pi"><span style="color:var(--muted);">23 878</span> <span style="color:var(--muted);">·</span> <span style="color:var(--bad);">101</span></div>
       </div>
       
     </div>
@@ -1363,7 +1368,7 @@
           <button class="info-btn" type="button" aria-label="Comment lire ces chiffres">i</button>
           <div class="info-popover">
             <p data-i18n="rp.info.verdict.p0"><strong>Comment lire ces chiffres</strong></p>
-            <p>Indice global et part d'articles moins chers comparent la semaine en cours à S25 : ces deux chiffres ne bougent qu'une fois par semaine, quand une nouvelle semaine se clôture.</p>
+            <p>Indice global et part d'articles moins chers comparent la semaine en cours à S26 : ces deux chiffres ne bougent qu'une fois par semaine, quand une nouvelle semaine se clôture.</p>
             <p data-i18n="rp.info.verdict.p2">Vendeurs plus compétitifs et articles suivis en continu sont calculés à l'instant où le rapport est généré : ils reflètent l'état du marché aujourd'hui, pas seulement la photo de la semaine dernière.</p>
           </div>
         </div>
@@ -1371,13 +1376,13 @@
         <h2>Le repricing porte ses fruits — l'indice recule de 0 pts vs la semaine précédente.</h2>
         <div class="verdict-figs">
           
-          <div class="vfig"><div class="n good">0 pts</div><div class="l">indice global vs S25</div></div>
+          <div class="vfig"><div class="n good">0 pts</div><div class="l">indice global vs S26</div></div>
           
-          <div class="vfig"><div class="n good">0 pts</div><div class="l">d'articles moins chers vs S25</div></div>
+          <div class="vfig"><div class="n good">+3 pts</div><div class="l">d'articles moins chers vs S26</div></div>
           
-          <div class="vfig"><div class="n bad">39</div><div class="l">vendeurs plus compétitifs que vous</div></div>
+          <div class="vfig"><div class="n bad">43</div><div class="l">vendeurs plus compétitifs que vous</div></div>
           
-          <div class="vfig"><div class="n good">23 917</div><div class="l">articles suivis en continu</div></div>
+          <div class="vfig"><div class="n good">23 872</div><div class="l">articles suivis en continu</div></div>
           
         </div>
         <div class="cta-row">
@@ -1467,8 +1472,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [null, null, null, null, null, null, null, null, null, null, null, null, null, null], "priceIndex3P": [101, 101, 100, 101, 100, 99, 98, 99, 99, 99, 101, 101, 101, 101], "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin", "Ajd"]};
-  var attractiveness = [{"equalPct": 39.6, "higherPct": 29.1, "lowerPct": 31.3, "week": "31 mars"}, {"equalPct": 38.7, "higherPct": 29.2, "lowerPct": 32.2, "week": "07 avr."}, {"equalPct": 40.7, "higherPct": 27.4, "lowerPct": 31.9, "week": "14 avr."}, {"equalPct": 39.2, "higherPct": 30, "lowerPct": 30.8, "week": "21 avr."}, {"equalPct": 38.4, "higherPct": 28.2, "lowerPct": 33.4, "week": "28 avr."}, {"equalPct": 37.7, "higherPct": 27.3, "lowerPct": 34.9, "week": "05 mai"}, {"equalPct": 37, "higherPct": 26.5, "lowerPct": 36.5, "week": "12 mai"}, {"equalPct": 38.4, "higherPct": 26, "lowerPct": 35.6, "week": "19 mai"}, {"equalPct": 45.1, "higherPct": 23.4, "lowerPct": 31.5, "week": "26 mai"}, {"equalPct": 46.4, "higherPct": 22.6, "lowerPct": 31, "week": "02 juin"}, {"equalPct": 49.5, "higherPct": 25.3, "lowerPct": 25.2, "week": "09 juin"}, {"equalPct": 49.8, "higherPct": 25.1, "lowerPct": 25.1, "week": "16 juin"}, {"equalPct": 49.8, "higherPct": 24.7, "lowerPct": 25.5, "week": "23 juin"}, {"equalPct": 52, "higherPct": 22, "lowerPct": 26, "week": "Ajd"}];
+  var trendChart = {"priceIndex1P": [null, null, null, null, null, null, null, null, null, null, null, null, null, null], "priceIndex3P": [101, 100, 101, 100, 99, 98, 99, 99, 99, 101, 101, 101, 101, 101], "weeks": ["07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "23 juin", "30 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 38.7, "higherPct": 29.2, "lowerPct": 32.2, "week": "07 avr."}, {"equalPct": 40.7, "higherPct": 27.4, "lowerPct": 31.9, "week": "14 avr."}, {"equalPct": 39.2, "higherPct": 30, "lowerPct": 30.8, "week": "21 avr."}, {"equalPct": 38.4, "higherPct": 28.2, "lowerPct": 33.4, "week": "28 avr."}, {"equalPct": 37.7, "higherPct": 27.3, "lowerPct": 34.9, "week": "05 mai"}, {"equalPct": 37, "higherPct": 26.5, "lowerPct": 36.5, "week": "12 mai"}, {"equalPct": 38.4, "higherPct": 26, "lowerPct": 35.6, "week": "19 mai"}, {"equalPct": 45.1, "higherPct": 23.4, "lowerPct": 31.5, "week": "26 mai"}, {"equalPct": 46.4, "higherPct": 22.6, "lowerPct": 31, "week": "02 juin"}, {"equalPct": 49.5, "higherPct": 25.3, "lowerPct": 25.2, "week": "09 juin"}, {"equalPct": 49.8, "higherPct": 25.1, "lowerPct": 25.1, "week": "16 juin"}, {"equalPct": 49.8, "higherPct": 24.7, "lowerPct": 25.5, "week": "23 juin"}, {"equalPct": 47, "higherPct": 25.1, "lowerPct": 28, "week": "30 juin"}, {"equalPct": 47, "higherPct": 23, "lowerPct": 30, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 

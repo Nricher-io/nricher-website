@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -224,12 +224,15 @@
     .kpi-report .hero-stats{gap:12px;margin-top:24px;}
     .kpi-report .hstat{padding:18px 16px;}
     .kpi-report .kpi{padding:22px 18px 18px;}
+    .kpi-report .kpi__gauge{width:100px;}
     .kpi-report .chart-card{padding:20px 16px 14px;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .chart-canvas-wrap{height:200px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:80px 1fr 52px;gap:10px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:80px 1fr 90px;}
     .kpi-report .cbar-name{font-size:0.78rem;}
     .kpi-report .prio-table-wrap{overflow-x:auto;}
     .kpi-report .prio-chip{font-size:0.95rem;padding:6px 12px;}
-    .kpi-report .rank-row{grid-template-columns:90px 1fr 36px;gap:8px;}
+    .kpi-report .rank-row,.kpi-report .rank-header{grid-template-columns:22px 76px 1fr 38px;gap:8px;}
     .kpi-report .rank-name{font-size:0.75rem;}
     .kpi-report .verdict{padding:24px 20px;}
     .kpi-report .verdict-figs{gap:24px;margin-bottom:24px;}
@@ -242,7 +245,9 @@
   }
   @media (max-width:420px){
     .kpi-report .hero-stats{grid-template-columns:1fr;}
-    .kpi-report .cbar-row,.kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .kpi__gauge{width:80px;}
+    .kpi-report .cbar-row,.kpi-report .cbar-header{grid-template-columns:64px 1fr 44px;gap:8px;}
+    .kpi-report .cbar-list--category .cbar-row{grid-template-columns:64px 1fr 72px;}
     .kpi-report table.sellers th,.kpi-report table.sellers td{padding:8px 10px;font-size:0.82rem;}
   }
 
@@ -404,7 +409,7 @@
         
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-06-26T12:32:44.233Z">26 juin à 12h32</div>
+        <div class="n" data-generated-at="2026-07-03T14:19:43.062Z">03 juil. à 14h19</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -616,7 +621,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">24 mars → Ajd</span></div>
+    <div class="tag-row"><span class="tag tag--watch">31 mars → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -628,7 +633,7 @@
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 14 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 13 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -1089,8 +1094,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [100, 100, 100, 100, 101, 101, 101, 101, 102, 102, 102, 102, 103, null], "priceIndex3P": [109, 109, 109, 109, 109, 110, 111, 111, 111, 111, 111, 111, 112, null], "weeks": ["24 mars", "31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "Ajd"]};
-  var attractiveness = [{"equalPct": 47.2, "higherPct": 30.6, "lowerPct": 22.2, "week": "24 mars"}, {"equalPct": 47, "higherPct": 31, "lowerPct": 21.9, "week": "31 mars"}, {"equalPct": 47.2, "higherPct": 31.1, "lowerPct": 21.7, "week": "07 avr."}, {"equalPct": 47.5, "higherPct": 31, "lowerPct": 21.4, "week": "14 avr."}, {"equalPct": 43.1, "higherPct": 32.5, "lowerPct": 24.5, "week": "21 avr."}, {"equalPct": 45.8, "higherPct": 33.1, "lowerPct": 21.1, "week": "28 avr."}, {"equalPct": 46.6, "higherPct": 33.1, "lowerPct": 20.3, "week": "05 mai"}, {"equalPct": 47.4, "higherPct": 33.1, "lowerPct": 19.5, "week": "12 mai"}, {"equalPct": 46.5, "higherPct": 33.5, "lowerPct": 20, "week": "19 mai"}, {"equalPct": 46.9, "higherPct": 33.7, "lowerPct": 19.4, "week": "26 mai"}, {"equalPct": 48.7, "higherPct": 33, "lowerPct": 18.3, "week": "02 juin"}, {"equalPct": 49.4, "higherPct": 32.5, "lowerPct": 18.1, "week": "09 juin"}, {"equalPct": 48.7, "higherPct": 34, "lowerPct": 17.3, "week": "16 juin"}, {"equalPct": 0, "higherPct": 100, "lowerPct": 0, "week": "Ajd"}];
+  var trendChart = {"priceIndex1P": [100, 100, 100, 101, 101, 101, 101, 102, 102, 102, 102, 103, null], "priceIndex3P": [109, 109, 109, 109, 110, 111, 111, 111, 111, 111, 111, 112, null], "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 47, "higherPct": 31, "lowerPct": 21.9, "week": "31 mars"}, {"equalPct": 47.2, "higherPct": 31.1, "lowerPct": 21.7, "week": "07 avr."}, {"equalPct": 47.5, "higherPct": 31, "lowerPct": 21.4, "week": "14 avr."}, {"equalPct": 43.1, "higherPct": 32.5, "lowerPct": 24.5, "week": "21 avr."}, {"equalPct": 45.8, "higherPct": 33.1, "lowerPct": 21.1, "week": "28 avr."}, {"equalPct": 46.6, "higherPct": 33.1, "lowerPct": 20.3, "week": "05 mai"}, {"equalPct": 47.4, "higherPct": 33.1, "lowerPct": 19.5, "week": "12 mai"}, {"equalPct": 46.5, "higherPct": 33.5, "lowerPct": 20, "week": "19 mai"}, {"equalPct": 46.9, "higherPct": 33.7, "lowerPct": 19.4, "week": "26 mai"}, {"equalPct": 48.7, "higherPct": 33, "lowerPct": 18.3, "week": "02 juin"}, {"equalPct": 49.4, "higherPct": 32.5, "lowerPct": 18.1, "week": "09 juin"}, {"equalPct": 48.7, "higherPct": 34, "lowerPct": 17.3, "week": "16 juin"}, {"equalPct": 0, "higherPct": 100, "lowerPct": 0, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 
