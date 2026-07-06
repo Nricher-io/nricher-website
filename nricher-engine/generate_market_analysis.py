@@ -198,7 +198,17 @@ def main():
                         }
                         for h in hist
                     ],
-                    "pairwise": detail.get("byPack", []),
+                    "pairwise": [
+                        {
+                            "pack":       r.get("pack", ""),
+                            "matched":    r.get("matched", 0),
+                            "priceIndex": r.get("pi"),
+                            "lowerPct":   r.get("lowerPct", 0),
+                            "equalPct":   r.get("equalPct", 0),
+                            "higherPct":  r.get("higherPct", 0),
+                        }
+                        for r in detail.get("byPack", [])
+                    ],
                 })
                 print(f"  ✓ pricing/{cat_id}/{slug}.json")
                 ok += 1
