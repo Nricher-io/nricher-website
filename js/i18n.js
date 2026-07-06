@@ -7,6 +7,7 @@
       "nav.home": "Home",
       "nav.platform": "Platform ▾",
       "breadcrumb.platform": "Platform",
+      "breadcrumb.analysis": "Analysis",
       "nav.platform.product.title": "Right Product",
       "nav.platform.product.desc": "Pilot your assortment with market data",
       "nav.platform.price.title": "Right Price",

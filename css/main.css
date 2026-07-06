@@ -322,8 +322,7 @@ body.menu-open .mobile-menu { transform: translateX(0); }
 }
 .mobile-menu a:hover { color: var(--mint); }
 body.menu-open .mobile-menu > a,
-body.menu-open .mobile-menu > .mob-group,
-body.menu-open .mobile-menu > .mob-menu__btns { animation: mm-in .42s forwards; }
+body.menu-open .mobile-menu > .mob-group { animation: mm-in .42s forwards; }
 body.menu-open .mobile-menu > *:nth-child(2){animation-delay:.08s}
 body.menu-open .mobile-menu > *:nth-child(3){animation-delay:.14s}
 body.menu-open .mobile-menu > *:nth-child(4){animation-delay:.20s}
@@ -351,7 +350,7 @@ body.menu-open .mobile-menu > *:nth-child(8){animation-delay:.44s}
 .mob-group.is-open .mob-group__items { display: flex; }
 .mob-group__items a { font-size: 1.15rem !important; padding: 7px 0 !important; opacity: 1 !important; transform: none !important; animation: none !important; }
 /* Boutons connexion + démo en bas */
-.mob-menu__btns { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; opacity: 0; transform: translateX(24px); }
+.mob-menu__btns { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 .mob-menu__btns .btn { align-self: flex-start; }
 .menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); z-index: 150; opacity: 0; visibility: hidden; transition: opacity .3s ease; }
 body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }

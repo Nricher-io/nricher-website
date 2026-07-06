@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="favicon.png">
 <title data-i18n="re.meta.title">Recherche entreprise — Weekly KPIs · nricher</title>
 <meta name="robots" content="noindex, nofollow" />
-<link rel="stylesheet" href="css/main.css?v=20260622" />
+<link rel="stylesheet" href="css/main.css?v=20260706" />
 <script src="js/zoom-persist.js?v=20260622"></script>
 <style>
 .search-wrap { margin-top: 36px; position: relative; max-width: 560px; margin-inline: auto; }
@@ -58,7 +58,7 @@
     <ul class="nav__links">
       <li><a href="index.html" class="nav__link" data-i18n="nav.home">Accueil</a></li>
       <li class="nav__item">
-        <a href="le-bon-catalogue.html" class="nav__link" data-i18n="nav.platform">La plateforme ▾</a>
+        <a href="le-bon-catalogue.html" class="nav__link" data-i18n="breadcrumb.platform">La plateforme ▾</a>
         <div class="nav__dropdown">
           <a href="le-bon-catalogue.html" class="nav__dd-link"><span class="nav__dd-ico">📊</span><span><span class="nav__dd-t" data-i18n="nav.platform.product.title">Le bon produit</span><span class="nav__dd-d" data-i18n="nav.platform.product.desc">Pilotez votre assortiment avec la donnée marché</span></span></a>
           <a href="le-bon-prix.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.platform.price.title">Le bon prix</span><span class="nav__dd-d" data-i18n="nav.platform.price.desc">Benchmark prix concurrent en temps réel</span></span></a>
@@ -69,7 +69,7 @@
       <li><a href="cas-clients.html" class="nav__link" data-i18n="nav.cases">Cas clients</a></li>
       <li><a href="lequipe.html" class="nav__link" data-i18n="nav.team">L'équipe</a></li>
       <li class="nav__item">
-        <a href="analyse-pricing.html" class="nav__link" data-i18n="nav.analysis">Analyse ▾</a>
+        <a href="analyse-pricing.html" class="nav__link" data-i18n="breadcrumb.analysis">Analyse ▾</a>
         <div class="nav__dropdown">
           <a href="analyse-pricing.html" class="nav__dd-link"><span class="nav__dd-ico">💰</span><span><span class="nav__dd-t" data-i18n="nav.analysis.pricing.title">Pricing</span><span class="nav__dd-d" data-i18n="nav.analysis.pricing.desc">Comparez les prix par catégorie de marché</span></span></a>
           <a href="analyse-quality.html" class="nav__dd-link"><span class="nav__dd-ico">✏️</span><span><span class="nav__dd-t" data-i18n="nav.analysis.quality.title">Quality</span><span class="nav__dd-d" data-i18n="nav.analysis.quality.desc">Comparez la qualité des fiches produits</span></span></a>
@@ -99,17 +99,30 @@
 <aside class="mobile-menu">
   <button class="mobile-menu__close" aria-label="Fermer le menu" data-i18n="nav.close.aria-label">&#x2715;</button>
   <a href="index.html" data-i18n="nav.home">Accueil</a>
-  <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
-  <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
-  <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
-  <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+  <div class="mob-group">
+    <button class="mob-group__toggle" type="button"><span data-i18n="breadcrumb.platform">La plateforme</span> <span class="mob-group__arrow">▾</span></button>
+    <div class="mob-group__items">
+      <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+      <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+      <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
+      <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+    </div>
+  </div>
   <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
   <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
-  <a href="analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
-  <a href="analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
-  <a href="analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
-  <a href="recherche.html" class="is-current" data-i18n="nav.mycompany">PI Entreprise</a>
-  <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  <div class="mob-group">
+    <button class="mob-group__toggle" type="button"><span data-i18n="breadcrumb.analysis">Analyse</span> <span class="mob-group__arrow">▾</span></button>
+    <div class="mob-group__items">
+      <a href="analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
+      <a href="analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
+      <a href="analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
+    </div>
+  </div>
+  <a href="recherche.html" data-i18n="nav.mycompany">PI Entreprise</a>
+  <div class="mob-menu__btns">
+    <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow" data-i18n="nav.login">Connexion</a>
+    <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  </div>
   <div class="lang-switch">
         <button class="lang-switch__btn" aria-label="Changer de langue" aria-haspopup="true" aria-expanded="false">
           <svg class="flag-icon flag-icon--fr" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg>
@@ -907,6 +920,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);</script>
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script src="js/main.js?v=20260622"></script>
+<script src="js/main.js?v=20260706"></script>
 </body>
 </html>
