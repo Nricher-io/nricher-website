@@ -7,63 +7,63 @@
   "lowPct": 9,
   "ranking": [
     {
-      "brand": "Lemaitredeslampes",
-      "count": 236,
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 236,
       "potentialPct": 76
     },
     {
-      "brand": "The Cool Republic",
-      "count": 213,
+      "name": "The Cool Republic",
+      "topSellerArticles": 213,
       "potentialPct": 79
     },
     {
-      "brand": "Lamptwist",
-      "count": 201,
+      "name": "Lamptwist",
+      "topSellerArticles": 201,
       "potentialPct": 80
     },
     {
-      "brand": "Connox",
-      "count": 195,
+      "name": "Connox",
+      "topSellerArticles": 195,
       "potentialPct": 80
     },
     {
-      "brand": "Nedgis",
-      "count": 135,
+      "name": "Nedgis",
+      "topSellerArticles": 135,
       "potentialPct": 86
     },
     {
-      "brand": "Madeindesign",
-      "count": 124,
+      "name": "Madeindesign",
+      "topSellerArticles": 124,
       "potentialPct": 88
     },
     {
-      "brand": "Asteri",
-      "count": 74,
+      "name": "Asteri",
+      "topSellerArticles": 74,
       "potentialPct": 93
     },
     {
-      "brand": "Light11",
-      "count": 59,
+      "name": "Light11",
+      "topSellerArticles": 59,
       "potentialPct": 94
     },
     {
-      "brand": "Le Cedre Rouge",
-      "count": 51,
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 51,
       "potentialPct": 95
     },
     {
-      "brand": "Dyberg Larsen",
-      "count": 33,
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 33,
       "potentialPct": 97
     },
     {
-      "brand": "Dbs Rdc",
-      "count": 28,
+      "name": "Dbs Rdc",
+      "topSellerArticles": 28,
       "potentialPct": 97
     },
     {
-      "brand": "Myareadesign",
-      "count": 22,
+      "name": "Myareadesign",
+      "topSellerArticles": 22,
       "potentialPct": 98
     }
   ]

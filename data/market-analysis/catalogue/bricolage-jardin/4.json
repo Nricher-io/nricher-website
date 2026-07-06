@@ -7,63 +7,63 @@
   "lowPct": 13,
   "ranking": [
     {
-      "brand": "Abiks Meubles",
-      "count": 5365,
+      "name": "Abiks Meubles",
+      "topSellerArticles": 5365,
       "potentialPct": 72
     },
     {
-      "brand": "Ok Living",
-      "count": 978,
+      "name": "Ok Living",
+      "topSellerArticles": 978,
       "potentialPct": 95
     },
     {
-      "brand": "Vidaxl",
-      "count": 431,
+      "name": "Vidaxl",
+      "topSellerArticles": 431,
       "potentialPct": 98
     },
     {
-      "brand": "Pegane",
-      "count": 395,
+      "name": "Pegane",
+      "topSellerArticles": 395,
       "potentialPct": 98
     },
     {
-      "brand": "Htmeubles",
-      "count": 359,
+      "name": "Htmeubles",
+      "topSellerArticles": 359,
       "potentialPct": 98
     },
     {
-      "brand": "Dmora",
-      "count": 343,
+      "name": "Dmora",
+      "topSellerArticles": 343,
       "potentialPct": 98
     },
     {
-      "brand": "Rust Oleum",
-      "count": 343,
+      "name": "Rust Oleum",
+      "topSellerArticles": 343,
       "potentialPct": 98
     },
     {
-      "brand": "Visiodirect",
-      "count": 335,
+      "name": "Visiodirect",
+      "topSellerArticles": 335,
       "potentialPct": 98
     },
     {
-      "brand": "3xe Living",
-      "count": 320,
+      "name": "3xe Living",
+      "topSellerArticles": 320,
       "potentialPct": 98
     },
     {
-      "brand": "Meublorama",
-      "count": 308,
+      "name": "Meublorama",
+      "topSellerArticles": 308,
       "potentialPct": 98
     },
     {
-      "brand": "Bb Loisir",
-      "count": 216,
+      "name": "Bb Loisir",
+      "topSellerArticles": 216,
       "potentialPct": 99
     },
     {
-      "brand": "Petits Meubles",
-      "count": 196,
+      "name": "Petits Meubles",
+      "topSellerArticles": 196,
       "potentialPct": 99
     }
   ]

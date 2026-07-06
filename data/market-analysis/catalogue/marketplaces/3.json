@@ -7,63 +7,63 @@
   "lowPct": 26,
   "ranking": [
     {
-      "brand": "Vidaxl",
-      "count": 290,
+      "name": "Vidaxl",
+      "topSellerArticles": 290,
       "potentialPct": 98
     },
     {
-      "brand": "Kids Literie",
-      "count": 243,
+      "name": "Kids Literie",
+      "topSellerArticles": 243,
       "potentialPct": 98
     },
     {
-      "brand": "Vie Moderne",
-      "count": 223,
+      "name": "Vie Moderne",
+      "topSellerArticles": 223,
       "potentialPct": 98
     },
     {
-      "brand": "Vente Unique",
-      "count": 163,
+      "name": "Vente Unique",
+      "topSellerArticles": 163,
       "potentialPct": 99
     },
     {
-      "brand": "House Partners",
-      "count": 146,
+      "name": "House Partners",
+      "topSellerArticles": 146,
       "potentialPct": 99
     },
     {
-      "brand": "Literie Moins Cher",
-      "count": 122,
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 122,
       "potentialPct": 99
     },
     {
-      "brand": "1001jouets",
-      "count": 113,
+      "name": "1001jouets",
+      "topSellerArticles": 113,
       "potentialPct": 99
     },
     {
-      "brand": "Maison Vibe",
-      "count": 110,
+      "name": "Maison Vibe",
+      "topSellerArticles": 110,
       "potentialPct": 99
     },
     {
-      "brand": "Ecd",
-      "count": 98,
+      "name": "Ecd",
+      "topSellerArticles": 98,
       "potentialPct": 99
     },
     {
-      "brand": "Zoomici",
-      "count": 88,
+      "name": "Zoomici",
+      "topSellerArticles": 88,
       "potentialPct": 99
     },
     {
-      "brand": "Kobi",
-      "count": 87,
+      "name": "Kobi",
+      "topSellerArticles": 87,
       "potentialPct": 99
     },
     {
-      "brand": "Meublorama",
-      "count": 84,
+      "name": "Meublorama",
+      "topSellerArticles": 84,
       "potentialPct": 99
     }
   ]

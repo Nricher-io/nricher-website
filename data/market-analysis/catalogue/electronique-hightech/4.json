@@ -7,63 +7,63 @@
   "lowPct": 20,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 193,
+      "name": "House Partners",
+      "topSellerArticles": 193,
       "potentialPct": 88
     },
     {
-      "brand": "Multishop",
-      "count": 149,
+      "name": "Multishop",
+      "topSellerArticles": 149,
       "potentialPct": 91
     },
     {
-      "brand": "Yonis Shop",
-      "count": 113,
+      "name": "Yonis Shop",
+      "topSellerArticles": 113,
       "potentialPct": 93
     },
     {
-      "brand": "Gpasplus",
-      "count": 99,
+      "name": "Gpasplus",
+      "topSellerArticles": 99,
       "potentialPct": 94
     },
     {
-      "brand": "Cdiscount",
-      "count": 93,
+      "name": "Cdiscount",
+      "topSellerArticles": 93,
       "potentialPct": 94
     },
     {
-      "brand": "Boulanger",
-      "count": 85,
+      "name": "Boulanger",
+      "topSellerArticles": 85,
       "potentialPct": 95
     },
     {
-      "brand": "Rps Technologies",
-      "count": 73,
+      "name": "Rps Technologies",
+      "topSellerArticles": 73,
       "potentialPct": 95
     },
     {
-      "brand": "Rue Du Commerce",
-      "count": 68,
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 68,
       "potentialPct": 96
     },
     {
-      "brand": "2kings",
-      "count": 67,
+      "name": "2kings",
+      "topSellerArticles": 67,
       "potentialPct": 96
     },
     {
-      "brand": "Carrefour",
-      "count": 61,
+      "name": "Carrefour",
+      "topSellerArticles": 61,
       "potentialPct": 96
     },
     {
-      "brand": "Monsieurplus",
-      "count": 51,
+      "name": "Monsieurplus",
+      "topSellerArticles": 51,
       "potentialPct": 97
     },
     {
-      "brand": "Zoomici",
-      "count": 51,
+      "name": "Zoomici",
+      "topSellerArticles": 51,
       "potentialPct": 97
     }
   ]

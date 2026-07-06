@@ -7,63 +7,63 @@
   "lowPct": 25,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 1178,
+      "name": "House Partners",
+      "topSellerArticles": 1178,
       "potentialPct": 90
     },
     {
-      "brand": "Junmingshop",
-      "count": 521,
+      "name": "Junmingshop",
+      "topSellerArticles": 521,
       "potentialPct": 95
     },
     {
-      "brand": "Jiddenks",
-      "count": 415,
+      "name": "Jiddenks",
+      "topSellerArticles": 415,
       "potentialPct": 96
     },
     {
-      "brand": "Fnac",
-      "count": 414,
+      "name": "Fnac",
+      "topSellerArticles": 414,
       "potentialPct": 96
     },
     {
-      "brand": "Ecofone",
-      "count": 367,
+      "name": "Ecofone",
+      "topSellerArticles": 367,
       "potentialPct": 97
     },
     {
-      "brand": "Alloccaz",
-      "count": 295,
+      "name": "Alloccaz",
+      "topSellerArticles": 295,
       "potentialPct": 97
     },
     {
-      "brand": "Carrefour",
-      "count": 270,
+      "name": "Carrefour",
+      "topSellerArticles": 270,
       "potentialPct": 98
     },
     {
-      "brand": "Darty",
-      "count": 230,
+      "name": "Darty",
+      "topSellerArticles": 230,
       "potentialPct": 98
     },
     {
-      "brand": "Boulanger",
-      "count": 216,
+      "name": "Boulanger",
+      "topSellerArticles": 216,
       "potentialPct": 98
     },
     {
-      "brand": "As Discount",
-      "count": 203,
+      "name": "As Discount",
+      "topSellerArticles": 203,
       "potentialPct": 98
     },
     {
-      "brand": "Zenkaa",
-      "count": 202,
+      "name": "Zenkaa",
+      "topSellerArticles": 202,
       "potentialPct": 98
     },
     {
-      "brand": "Procomponentes",
-      "count": 197,
+      "name": "Procomponentes",
+      "topSellerArticles": 197,
       "potentialPct": 98
     }
   ]

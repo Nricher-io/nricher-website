@@ -125,37 +125,37 @@
   "attractiveness": [
     {
       "week": "2026-05-19",
-      "lowerPct": 24,
+      "cheaperPct": 24,
       "equalPct": 10,
       "higherPct": 66
     },
     {
       "week": "2026-05-26",
-      "lowerPct": 27,
+      "cheaperPct": 27,
       "equalPct": 10,
       "higherPct": 63
     },
     {
       "week": "2026-06-02",
-      "lowerPct": 33,
+      "cheaperPct": 33,
       "equalPct": 12,
       "higherPct": 56
     },
     {
       "week": "2026-06-09",
-      "lowerPct": 39,
+      "cheaperPct": 39,
       "equalPct": 10,
       "higherPct": 51
     },
     {
       "week": "2026-06-16",
-      "lowerPct": 39,
+      "cheaperPct": 39,
       "equalPct": 7,
       "higherPct": 54
     },
     {
       "week": "2026-06-30",
-      "lowerPct": 22,
+      "cheaperPct": 22,
       "equalPct": 6,
       "higherPct": 72
     }

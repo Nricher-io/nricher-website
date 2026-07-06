@@ -7,63 +7,63 @@
   "lowPct": 11,
   "ranking": [
     {
-      "brand": "N Wood",
-      "count": 2867,
+      "name": "N Wood",
+      "topSellerArticles": 2867,
       "potentialPct": 87
     },
     {
-      "brand": "Clicnbuy",
-      "count": 1933,
+      "name": "Clicnbuy",
+      "topSellerArticles": 1933,
       "potentialPct": 91
     },
     {
-      "brand": "Les Tendances",
-      "count": 1280,
+      "name": "Les Tendances",
+      "topSellerArticles": 1280,
       "potentialPct": 94
     },
     {
-      "brand": "1001jouets",
-      "count": 1105,
+      "name": "1001jouets",
+      "topSellerArticles": 1105,
       "potentialPct": 95
     },
     {
-      "brand": "Vidaxl",
-      "count": 686,
+      "name": "Vidaxl",
+      "topSellerArticles": 686,
       "potentialPct": 97
     },
     {
-      "brand": "Indream",
-      "count": 569,
+      "name": "Indream",
+      "topSellerArticles": 569,
       "potentialPct": 97
     },
     {
-      "brand": "House Partners",
-      "count": 523,
+      "name": "House Partners",
+      "topSellerArticles": 523,
       "potentialPct": 98
     },
     {
-      "brand": "Komhtom",
-      "count": 520,
+      "name": "Komhtom",
+      "topSellerArticles": 520,
       "potentialPct": 98
     },
     {
-      "brand": "Paris Prix",
-      "count": 383,
+      "name": "Paris Prix",
+      "topSellerArticles": 383,
       "potentialPct": 98
     },
     {
-      "brand": "Kobi",
-      "count": 252,
+      "name": "Kobi",
+      "topSellerArticles": 252,
       "potentialPct": 99
     },
     {
-      "brand": "Zoomici",
-      "count": 210,
+      "name": "Zoomici",
+      "topSellerArticles": 210,
       "potentialPct": 99
     },
     {
-      "brand": "Beliani",
-      "count": 195,
+      "name": "Beliani",
+      "topSellerArticles": 195,
       "potentialPct": 99
     }
   ]

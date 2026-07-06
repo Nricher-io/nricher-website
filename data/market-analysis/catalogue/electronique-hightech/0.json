@@ -7,63 +7,63 @@
   "lowPct": 24,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 1114,
+      "name": "House Partners",
+      "topSellerArticles": 1114,
       "potentialPct": 82
     },
     {
-      "brand": "Ecofone",
-      "count": 715,
+      "name": "Ecofone",
+      "topSellerArticles": 715,
       "potentialPct": 89
     },
     {
-      "brand": "Junmingshop",
-      "count": 686,
+      "name": "Junmingshop",
+      "topSellerArticles": 686,
       "potentialPct": 89
     },
     {
-      "brand": "Alloccaz",
-      "count": 661,
+      "name": "Alloccaz",
+      "topSellerArticles": 661,
       "potentialPct": 89
     },
     {
-      "brand": "Darty",
-      "count": 360,
+      "name": "Darty",
+      "topSellerArticles": 360,
       "potentialPct": 94
     },
     {
-      "brand": "Carrefour",
-      "count": 345,
+      "name": "Carrefour",
+      "topSellerArticles": 345,
       "potentialPct": 94
     },
     {
-      "brand": "Boulanger",
-      "count": 307,
+      "name": "Boulanger",
+      "topSellerArticles": 307,
       "potentialPct": 95
     },
     {
-      "brand": "Rps Technologies",
-      "count": 298,
+      "name": "Rps Technologies",
+      "topSellerArticles": 298,
       "potentialPct": 95
     },
     {
-      "brand": "Cheng Tech",
-      "count": 287,
+      "name": "Cheng Tech",
+      "topSellerArticles": 287,
       "potentialPct": 95
     },
     {
-      "brand": "Multishop",
-      "count": 250,
+      "name": "Multishop",
+      "topSellerArticles": 250,
       "potentialPct": 96
     },
     {
-      "brand": "Zoomici",
-      "count": 223,
+      "name": "Zoomici",
+      "topSellerArticles": 223,
       "potentialPct": 96
     },
     {
-      "brand": "Auchan",
-      "count": 219,
+      "name": "Auchan",
+      "topSellerArticles": 219,
       "potentialPct": 96
     }
   ]

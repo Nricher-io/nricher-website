@@ -7,63 +7,63 @@
   "lowPct": 12,
   "ranking": [
     {
-      "brand": "Les Tendances",
-      "count": 1964,
+      "name": "Les Tendances",
+      "topSellerArticles": 1964,
       "potentialPct": 78
     },
     {
-      "brand": "Vidaxl",
-      "count": 1140,
+      "name": "Vidaxl",
+      "topSellerArticles": 1140,
       "potentialPct": 87
     },
     {
-      "brand": "Casaarredostudio",
-      "count": 510,
+      "name": "Casaarredostudio",
+      "topSellerArticles": 510,
       "potentialPct": 94
     },
     {
-      "brand": "Paris Prix",
-      "count": 387,
+      "name": "Paris Prix",
+      "topSellerArticles": 387,
       "potentialPct": 96
     },
     {
-      "brand": "Sololed",
-      "count": 352,
+      "name": "Sololed",
+      "topSellerArticles": 352,
       "potentialPct": 96
     },
     {
-      "brand": "Beliani",
-      "count": 314,
+      "name": "Beliani",
+      "topSellerArticles": 314,
       "potentialPct": 96
     },
     {
-      "brand": "Materiel Chr Pro",
-      "count": 311,
+      "name": "Materiel Chr Pro",
+      "topSellerArticles": 311,
       "potentialPct": 96
     },
     {
-      "brand": "Wearredo",
-      "count": 245,
+      "name": "Wearredo",
+      "topSellerArticles": 245,
       "potentialPct": 97
     },
     {
-      "brand": "House Partners",
-      "count": 228,
+      "name": "House Partners",
+      "topSellerArticles": 228,
       "potentialPct": 97
     },
     {
-      "brand": "Id Market",
-      "count": 199,
+      "name": "Id Market",
+      "topSellerArticles": 199,
       "potentialPct": 98
     },
     {
-      "brand": "Kivio",
-      "count": 193,
+      "name": "Kivio",
+      "topSellerArticles": 193,
       "potentialPct": 98
     },
     {
-      "brand": "Shopnova",
-      "count": 148,
+      "name": "Shopnova",
+      "topSellerArticles": 148,
       "potentialPct": 98
     }
   ]

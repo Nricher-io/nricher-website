@@ -7,63 +7,63 @@
   "lowPct": 22,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 326,
+      "name": "House Partners",
+      "topSellerArticles": 326,
       "potentialPct": 96
     },
     {
-      "brand": "As Discount",
-      "count": 223,
+      "name": "As Discount",
+      "topSellerArticles": 223,
       "potentialPct": 97
     },
     {
-      "brand": "Id Market",
-      "count": 177,
+      "name": "Id Market",
+      "topSellerArticles": 177,
       "potentialPct": 98
     },
     {
-      "brand": "Vidaxl",
-      "count": 165,
+      "name": "Vidaxl",
+      "topSellerArticles": 165,
       "potentialPct": 98
     },
     {
-      "brand": "Gpasplus",
-      "count": 141,
+      "name": "Gpasplus",
+      "topSellerArticles": 141,
       "potentialPct": 98
     },
     {
-      "brand": "Zoomici",
-      "count": 130,
+      "name": "Zoomici",
+      "topSellerArticles": 130,
       "potentialPct": 98
     },
     {
-      "brand": "Paris Prix",
-      "count": 105,
+      "name": "Paris Prix",
+      "topSellerArticles": 105,
       "potentialPct": 99
     },
     {
-      "brand": "2kings",
-      "count": 85,
+      "name": "2kings",
+      "topSellerArticles": 85,
       "potentialPct": 99
     },
     {
-      "brand": "Super10count",
-      "count": 67,
+      "name": "Super10count",
+      "topSellerArticles": 67,
       "potentialPct": 99
     },
     {
-      "brand": "Premium Xl",
-      "count": 62,
+      "name": "Premium Xl",
+      "topSellerArticles": 62,
       "potentialPct": 99
     },
     {
-      "brand": "Monsieurplus",
-      "count": 59,
+      "name": "Monsieurplus",
+      "topSellerArticles": 59,
       "potentialPct": 99
     },
     {
-      "brand": "Cstore",
-      "count": 58,
+      "name": "Cstore",
+      "topSellerArticles": 58,
       "potentialPct": 99
     }
   ]

@@ -7,63 +7,63 @@
   "lowPct": 8,
   "ranking": [
     {
-      "brand": "Lamptwist",
-      "count": 399,
+      "name": "Lamptwist",
+      "topSellerArticles": 399,
       "potentialPct": 80
     },
     {
-      "brand": "Nedgis",
-      "count": 369,
+      "name": "Nedgis",
+      "topSellerArticles": 369,
       "potentialPct": 81
     },
     {
-      "brand": "The Cool Republic",
-      "count": 240,
+      "name": "The Cool Republic",
+      "topSellerArticles": 240,
       "potentialPct": 88
     },
     {
-      "brand": "Madeindesign",
-      "count": 209,
+      "name": "Madeindesign",
+      "topSellerArticles": 209,
       "potentialPct": 89
     },
     {
-      "brand": "Lemaitredeslampes",
-      "count": 104,
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 104,
       "potentialPct": 95
     },
     {
-      "brand": "Light11",
-      "count": 94,
+      "name": "Light11",
+      "topSellerArticles": 94,
       "potentialPct": 95
     },
     {
-      "brand": "Asteri",
-      "count": 89,
+      "name": "Asteri",
+      "topSellerArticles": 89,
       "potentialPct": 95
     },
     {
-      "brand": "Evolutiv Solutions",
-      "count": 63,
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 63,
       "potentialPct": 97
     },
     {
-      "brand": "Myareadesign",
-      "count": 42,
+      "name": "Myareadesign",
+      "topSellerArticles": 42,
       "potentialPct": 98
     },
     {
-      "brand": "Connox",
-      "count": 42,
+      "name": "Connox",
+      "topSellerArticles": 42,
       "potentialPct": 98
     },
     {
-      "brand": "Dyberg Larsen",
-      "count": 35,
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 35,
       "potentialPct": 98
     },
     {
-      "brand": "Dbs Rdc",
-      "count": 27,
+      "name": "Dbs Rdc",
+      "topSellerArticles": 27,
       "potentialPct": 99
     }
   ]

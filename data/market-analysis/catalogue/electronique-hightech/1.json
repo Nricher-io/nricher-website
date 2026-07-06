@@ -7,63 +7,63 @@
   "lowPct": 22,
   "ranking": [
     {
-      "brand": "Kiatoo",
-      "count": 392,
+      "name": "Kiatoo",
+      "topSellerArticles": 392,
       "potentialPct": 89
     },
     {
-      "brand": "Gpasplus",
-      "count": 243,
+      "name": "Gpasplus",
+      "topSellerArticles": 243,
       "potentialPct": 93
     },
     {
-      "brand": "Topbiz",
-      "count": 223,
+      "name": "Topbiz",
+      "topSellerArticles": 223,
       "potentialPct": 94
     },
     {
-      "brand": "Darty",
-      "count": 197,
+      "name": "Darty",
+      "topSellerArticles": 197,
       "potentialPct": 95
     },
     {
-      "brand": "Monsieurplus",
-      "count": 195,
+      "name": "Monsieurplus",
+      "topSellerArticles": 195,
       "potentialPct": 95
     },
     {
-      "brand": "Cdiscount",
-      "count": 170,
+      "name": "Cdiscount",
+      "topSellerArticles": 170,
       "potentialPct": 95
     },
     {
-      "brand": "Icoza",
-      "count": 156,
+      "name": "Icoza",
+      "topSellerArticles": 156,
       "potentialPct": 96
     },
     {
-      "brand": "Rue Du Commerce",
-      "count": 153,
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 153,
       "potentialPct": 96
     },
     {
-      "brand": "Leasi",
-      "count": 150,
+      "name": "Leasi",
+      "topSellerArticles": 150,
       "potentialPct": 96
     },
     {
-      "brand": "Okamac",
-      "count": 138,
+      "name": "Okamac",
+      "topSellerArticles": 138,
       "potentialPct": 96
     },
     {
-      "brand": "House Partners",
-      "count": 126,
+      "name": "House Partners",
+      "topSellerArticles": 126,
       "potentialPct": 97
     },
     {
-      "brand": "Fnac 2nde Vie",
-      "count": 118,
+      "name": "Fnac 2nde Vie",
+      "topSellerArticles": 118,
       "potentialPct": 97
     }
   ]

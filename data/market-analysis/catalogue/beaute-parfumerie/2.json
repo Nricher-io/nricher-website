@@ -7,13 +7,13 @@
   "lowPct": 0,
   "ranking": [
     {
-      "brand": "Myorigines",
-      "count": 77,
+      "name": "Myorigines",
+      "topSellerArticles": 77,
       "potentialPct": 76
     },
     {
-      "brand": "Marionnaud",
-      "count": 44,
+      "name": "Marionnaud",
+      "topSellerArticles": 44,
       "potentialPct": 86
     }
   ]

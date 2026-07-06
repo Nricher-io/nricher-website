@@ -7,58 +7,58 @@
   "lowPct": 17,
   "ranking": [
     {
-      "brand": "Snowleader",
-      "count": 1327,
+      "name": "Snowleader",
+      "topSellerArticles": 1327,
       "potentialPct": 30
     },
     {
-      "brand": "Trekkinn",
-      "count": 380,
+      "name": "Trekkinn",
+      "topSellerArticles": 380,
       "potentialPct": 80
     },
     {
-      "brand": "Ekosport",
-      "count": 371,
+      "name": "Ekosport",
+      "topSellerArticles": 371,
       "potentialPct": 80
     },
     {
-      "brand": "Hardloop",
-      "count": 367,
+      "name": "Hardloop",
+      "topSellerArticles": 367,
       "potentialPct": 81
     },
     {
-      "brand": "Alltricks",
-      "count": 236,
+      "name": "Alltricks",
+      "topSellerArticles": 236,
       "potentialPct": 88
     },
     {
-      "brand": "Irun",
-      "count": 156,
+      "name": "Irun",
+      "topSellerArticles": 156,
       "potentialPct": 92
     },
     {
-      "brand": "Snowinn",
-      "count": 136,
+      "name": "Snowinn",
+      "topSellerArticles": 136,
       "potentialPct": 93
     },
     {
-      "brand": "Zalando",
-      "count": 126,
+      "name": "Zalando",
+      "topSellerArticles": 126,
       "potentialPct": 93
     },
     {
-      "brand": "Glisshop",
-      "count": 88,
+      "name": "Glisshop",
+      "topSellerArticles": 88,
       "potentialPct": 95
     },
     {
-      "brand": "Runnerinn",
-      "count": 16,
+      "name": "Runnerinn",
+      "topSellerArticles": 16,
       "potentialPct": 99
     },
     {
-      "brand": "Sports Partners",
-      "count": 1,
+      "name": "Sports Partners",
+      "topSellerArticles": 1,
       "potentialPct": 100
     }
   ]

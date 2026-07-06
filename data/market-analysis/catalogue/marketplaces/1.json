@@ -7,63 +7,63 @@
   "lowPct": 15,
   "ranking": [
     {
-      "brand": "Masseno",
-      "count": 2082,
+      "name": "Masseno",
+      "topSellerArticles": 2082,
       "potentialPct": 89
     },
     {
-      "brand": "Best Mobilier",
-      "count": 1550,
+      "name": "Best Mobilier",
+      "topSellerArticles": 1550,
       "potentialPct": 92
     },
     {
-      "brand": "Vente Unique",
-      "count": 1367,
+      "name": "Vente Unique",
+      "topSellerArticles": 1367,
       "potentialPct": 93
     },
     {
-      "brand": "Loungitude",
-      "count": 935,
+      "name": "Loungitude",
+      "topSellerArticles": 935,
       "potentialPct": 95
     },
     {
-      "brand": "Usinestreet",
-      "count": 625,
+      "name": "Usinestreet",
+      "topSellerArticles": 625,
       "potentialPct": 97
     },
     {
-      "brand": "Beliani",
-      "count": 421,
+      "name": "Beliani",
+      "topSellerArticles": 421,
       "potentialPct": 98
     },
     {
-      "brand": "Selsey",
-      "count": 374,
+      "name": "Selsey",
+      "topSellerArticles": 374,
       "potentialPct": 98
     },
     {
-      "brand": "Mobilier Prive",
-      "count": 311,
+      "name": "Mobilier Prive",
+      "topSellerArticles": 311,
       "potentialPct": 98
     },
     {
-      "brand": "Tendencio",
-      "count": 254,
+      "name": "Tendencio",
+      "topSellerArticles": 254,
       "potentialPct": 99
     },
     {
-      "brand": "Super10count",
-      "count": 230,
+      "name": "Super10count",
+      "topSellerArticles": 230,
       "potentialPct": 99
     },
     {
-      "brand": "Cstore",
-      "count": 225,
+      "name": "Cstore",
+      "topSellerArticles": 225,
       "potentialPct": 99
     },
     {
-      "brand": "Paris Prix",
-      "count": 203,
+      "name": "Paris Prix",
+      "topSellerArticles": 203,
       "potentialPct": 99
     }
   ]

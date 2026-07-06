@@ -7,63 +7,63 @@
   "lowPct": 22,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 291,
+      "name": "House Partners",
+      "topSellerArticles": 291,
       "potentialPct": 86
     },
     {
-      "brand": "Boulanger",
-      "count": 264,
+      "name": "Boulanger",
+      "topSellerArticles": 264,
       "potentialPct": 87
     },
     {
-      "brand": "Icoza",
-      "count": 229,
+      "name": "Icoza",
+      "topSellerArticles": 229,
       "potentialPct": 89
     },
     {
-      "brand": "Darty",
-      "count": 179,
+      "name": "Darty",
+      "topSellerArticles": 179,
       "potentialPct": 91
     },
     {
-      "brand": "Gpasplus",
-      "count": 136,
+      "name": "Gpasplus",
+      "topSellerArticles": 136,
       "potentialPct": 93
     },
     {
-      "brand": "Super10count",
-      "count": 118,
+      "name": "Super10count",
+      "topSellerArticles": 118,
       "potentialPct": 94
     },
     {
-      "brand": "Monsieurplus",
-      "count": 107,
+      "name": "Monsieurplus",
+      "topSellerArticles": 107,
       "potentialPct": 95
     },
     {
-      "brand": "But",
-      "count": 96,
+      "name": "But",
+      "topSellerArticles": 96,
       "potentialPct": 95
     },
     {
-      "brand": "Rue Du Commerce",
-      "count": 89,
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 89,
       "potentialPct": 96
     },
     {
-      "brand": "You Get Innovation & Technology",
-      "count": 84,
+      "name": "You Get Innovation & Technology",
+      "topSellerArticles": 84,
       "potentialPct": 96
     },
     {
-      "brand": "Carrefour",
-      "count": 76,
+      "name": "Carrefour",
+      "topSellerArticles": 76,
       "potentialPct": 96
     },
     {
-      "brand": "Cdiscount",
-      "count": 72,
+      "name": "Cdiscount",
+      "topSellerArticles": 72,
       "potentialPct": 97
     }
   ]

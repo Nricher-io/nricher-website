@@ -7,63 +7,63 @@
   "lowPct": 10,
   "ranking": [
     {
-      "brand": "The White Stone",
-      "count": 2235,
+      "name": "The White Stone",
+      "topSellerArticles": 2235,
       "potentialPct": 82
     },
     {
-      "brand": "Indream",
-      "count": 1004,
+      "name": "Indream",
+      "topSellerArticles": 1004,
       "potentialPct": 92
     },
     {
-      "brand": "Sommeil De Plomb",
-      "count": 953,
+      "name": "Sommeil De Plomb",
+      "topSellerArticles": 953,
       "potentialPct": 92
     },
     {
-      "brand": "Actisom",
-      "count": 522,
+      "name": "Actisom",
+      "topSellerArticles": 522,
       "potentialPct": 96
     },
     {
-      "brand": "Senso Pur",
-      "count": 358,
+      "name": "Senso Pur",
+      "topSellerArticles": 358,
       "potentialPct": 97
     },
     {
-      "brand": "Sport4heros",
-      "count": 304,
+      "name": "Sport4heros",
+      "topSellerArticles": 304,
       "potentialPct": 97
     },
     {
-      "brand": "Matris",
-      "count": 263,
+      "name": "Matris",
+      "topSellerArticles": 263,
       "potentialPct": 98
     },
     {
-      "brand": "Emma Matelas",
-      "count": 159,
+      "name": "Emma Matelas",
+      "topSellerArticles": 159,
       "potentialPct": 99
     },
     {
-      "brand": "Idliterie",
-      "count": 125,
+      "name": "Idliterie",
+      "topSellerArticles": 125,
       "potentialPct": 99
     },
     {
-      "brand": "Ilovesleep",
-      "count": 120,
+      "name": "Ilovesleep",
+      "topSellerArticles": 120,
       "potentialPct": 99
     },
     {
-      "brand": "Altobuy",
-      "count": 107,
+      "name": "Altobuy",
+      "topSellerArticles": 107,
       "potentialPct": 99
     },
     {
-      "brand": "Vitalit",
-      "count": 105,
+      "name": "Vitalit",
+      "topSellerArticles": 105,
       "potentialPct": 99
     }
   ]

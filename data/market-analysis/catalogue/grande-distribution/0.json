@@ -7,63 +7,63 @@
   "lowPct": 11,
   "ranking": [
     {
-      "brand": "Les Tendances",
-      "count": 3774,
+      "name": "Les Tendances",
+      "topSellerArticles": 3774,
       "potentialPct": 83
     },
     {
-      "brand": "Vidaxl",
-      "count": 3574,
+      "name": "Vidaxl",
+      "topSellerArticles": 3574,
       "potentialPct": 84
     },
     {
-      "brand": "Best Mobilier",
-      "count": 1684,
+      "name": "Best Mobilier",
+      "topSellerArticles": 1684,
       "potentialPct": 92
     },
     {
-      "brand": "Beliani",
-      "count": 1369,
+      "name": "Beliani",
+      "topSellerArticles": 1369,
       "potentialPct": 94
     },
     {
-      "brand": "Shopnova",
-      "count": 626,
+      "name": "Shopnova",
+      "topSellerArticles": 626,
       "potentialPct": 97
     },
     {
-      "brand": "Casanova Paris",
-      "count": 486,
+      "name": "Casanova Paris",
+      "topSellerArticles": 486,
       "potentialPct": 98
     },
     {
-      "brand": "Silverstore",
-      "count": 342,
+      "name": "Silverstore",
+      "topSellerArticles": 342,
       "potentialPct": 98
     },
     {
-      "brand": "Rama Shop",
-      "count": 336,
+      "name": "Rama Shop",
+      "topSellerArticles": 336,
       "potentialPct": 98
     },
     {
-      "brand": "Dmora",
-      "count": 332,
+      "name": "Dmora",
+      "topSellerArticles": 332,
       "potentialPct": 98
     },
     {
-      "brand": "Mercatoxl",
-      "count": 326,
+      "name": "Mercatoxl",
+      "topSellerArticles": 326,
       "potentialPct": 99
     },
     {
-      "brand": "Go Garden",
-      "count": 311,
+      "name": "Go Garden",
+      "topSellerArticles": 311,
       "potentialPct": 99
     },
     {
-      "brand": "Cornero",
-      "count": 306,
+      "name": "Cornero",
+      "topSellerArticles": 306,
       "potentialPct": 99
     }
   ]

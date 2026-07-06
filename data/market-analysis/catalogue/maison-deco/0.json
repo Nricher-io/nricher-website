@@ -7,63 +7,63 @@
   "lowPct": 3,
   "ranking": [
     {
-      "brand": "Lamptwist",
-      "count": 832,
+      "name": "Lamptwist",
+      "topSellerArticles": 832,
       "potentialPct": 81
     },
     {
-      "brand": "Connox",
-      "count": 764,
+      "name": "Connox",
+      "topSellerArticles": 764,
       "potentialPct": 82
     },
     {
-      "brand": "Lemaitredeslampes",
-      "count": 740,
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 740,
       "potentialPct": 83
     },
     {
-      "brand": "The Cool Republic",
-      "count": 718,
+      "name": "The Cool Republic",
+      "topSellerArticles": 718,
       "potentialPct": 83
     },
     {
-      "brand": "Nedgis",
-      "count": 667,
+      "name": "Nedgis",
+      "topSellerArticles": 667,
       "potentialPct": 85
     },
     {
-      "brand": "Madeindesign",
-      "count": 520,
+      "name": "Madeindesign",
+      "topSellerArticles": 520,
       "potentialPct": 88
     },
     {
-      "brand": "Asteri",
-      "count": 373,
+      "name": "Asteri",
+      "topSellerArticles": 373,
       "potentialPct": 91
     },
     {
-      "brand": "Le Cedre Rouge",
-      "count": 195,
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 195,
       "potentialPct": 95
     },
     {
-      "brand": "Light11",
-      "count": 179,
+      "name": "Light11",
+      "topSellerArticles": 179,
       "potentialPct": 96
     },
     {
-      "brand": "Myareadesign",
-      "count": 82,
+      "name": "Myareadesign",
+      "topSellerArticles": 82,
       "potentialPct": 98
     },
     {
-      "brand": "Voltex",
-      "count": 81,
+      "name": "Voltex",
+      "topSellerArticles": 81,
       "potentialPct": 98
     },
     {
-      "brand": "Dbs Rdc",
-      "count": 67,
+      "name": "Dbs Rdc",
+      "topSellerArticles": 67,
       "potentialPct": 98
     }
   ]

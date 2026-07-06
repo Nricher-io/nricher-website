@@ -7,63 +7,63 @@
   "lowPct": 17,
   "ranking": [
     {
-      "brand": "Masseno",
-      "count": 1751,
+      "name": "Masseno",
+      "topSellerArticles": 1751,
       "potentialPct": 92
     },
     {
-      "brand": "Sommeil De Plomb",
-      "count": 1630,
+      "name": "Sommeil De Plomb",
+      "topSellerArticles": 1630,
       "potentialPct": 93
     },
     {
-      "brand": "Beliani",
-      "count": 1098,
+      "name": "Beliani",
+      "topSellerArticles": 1098,
       "potentialPct": 95
     },
     {
-      "brand": "Okwish",
-      "count": 1013,
+      "name": "Okwish",
+      "topSellerArticles": 1013,
       "potentialPct": 95
     },
     {
-      "brand": "Vente Unique",
-      "count": 881,
+      "name": "Vente Unique",
+      "topSellerArticles": 881,
       "potentialPct": 96
     },
     {
-      "brand": "Box Deco Couleurs",
-      "count": 660,
+      "name": "Box Deco Couleurs",
+      "topSellerArticles": 660,
       "potentialPct": 97
     },
     {
-      "brand": "Redom",
-      "count": 622,
+      "name": "Redom",
+      "topSellerArticles": 622,
       "potentialPct": 97
     },
     {
-      "brand": "Rust Oleum",
-      "count": 611,
+      "name": "Rust Oleum",
+      "topSellerArticles": 611,
       "potentialPct": 97
     },
     {
-      "brand": "Petits Meubles",
-      "count": 433,
+      "name": "Petits Meubles",
+      "topSellerArticles": 433,
       "potentialPct": 98
     },
     {
-      "brand": "Bb Loisir",
-      "count": 416,
+      "name": "Bb Loisir",
+      "topSellerArticles": 416,
       "potentialPct": 98
     },
     {
-      "brand": "1001jouets",
-      "count": 396,
+      "name": "1001jouets",
+      "topSellerArticles": 396,
       "potentialPct": 98
     },
     {
-      "brand": "Meublorama",
-      "count": 374,
+      "name": "Meublorama",
+      "topSellerArticles": 374,
       "potentialPct": 98
     }
   ]

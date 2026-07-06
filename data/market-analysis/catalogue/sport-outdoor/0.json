@@ -7,53 +7,53 @@
   "lowPct": 27,
   "ranking": [
     {
-      "brand": "Snowleader",
-      "count": 1942,
+      "name": "Snowleader",
+      "topSellerArticles": 1942,
       "potentialPct": 25
     },
     {
-      "brand": "Ekosport",
-      "count": 1390,
+      "name": "Ekosport",
+      "topSellerArticles": 1390,
       "potentialPct": 46
     },
     {
-      "brand": "Irun",
-      "count": 1314,
+      "name": "Irun",
+      "topSellerArticles": 1314,
       "potentialPct": 49
     },
     {
-      "brand": "Trekkinn",
-      "count": 1293,
+      "name": "Trekkinn",
+      "topSellerArticles": 1293,
       "potentialPct": 50
     },
     {
-      "brand": "Runnerinn",
-      "count": 995,
+      "name": "Runnerinn",
+      "topSellerArticles": 995,
       "potentialPct": 62
     },
     {
-      "brand": "Alltricks",
-      "count": 893,
+      "name": "Alltricks",
+      "topSellerArticles": 893,
       "potentialPct": 66
     },
     {
-      "brand": "Hardloop",
-      "count": 791,
+      "name": "Hardloop",
+      "topSellerArticles": 791,
       "potentialPct": 70
     },
     {
-      "brand": "Zalando",
-      "count": 469,
+      "name": "Zalando",
+      "topSellerArticles": 469,
       "potentialPct": 82
     },
     {
-      "brand": "Glisshop",
-      "count": 362,
+      "name": "Glisshop",
+      "topSellerArticles": 362,
       "potentialPct": 86
     },
     {
-      "brand": "An Mai Mao Yi",
-      "count": 3,
+      "name": "An Mai Mao Yi",
+      "topSellerArticles": 3,
       "potentialPct": 100
     }
   ]

@@ -7,63 +7,63 @@
   "lowPct": 23,
   "ranking": [
     {
-      "brand": "Vidaxl",
-      "count": 731,
+      "name": "Vidaxl",
+      "topSellerArticles": 731,
       "potentialPct": 87
     },
     {
-      "brand": "Beliani",
-      "count": 281,
+      "name": "Beliani",
+      "topSellerArticles": 281,
       "potentialPct": 95
     },
     {
-      "brand": "Oviala",
-      "count": 225,
+      "name": "Oviala",
+      "topSellerArticles": 225,
       "potentialPct": 96
     },
     {
-      "brand": "Concept Usine",
-      "count": 192,
+      "name": "Concept Usine",
+      "topSellerArticles": 192,
       "potentialPct": 97
     },
     {
-      "brand": "Meublesbrillant",
-      "count": 144,
+      "name": "Meublesbrillant",
+      "topSellerArticles": 144,
       "potentialPct": 97
     },
     {
-      "brand": "Aosom",
-      "count": 138,
+      "name": "Aosom",
+      "topSellerArticles": 138,
       "potentialPct": 98
     },
     {
-      "brand": "Defora Home",
-      "count": 131,
+      "name": "Defora Home",
+      "topSellerArticles": 131,
       "potentialPct": 98
     },
     {
-      "brand": "Shopnova",
-      "count": 122,
+      "name": "Shopnova",
+      "topSellerArticles": 122,
       "potentialPct": 98
     },
     {
-      "brand": "Paris Prix",
-      "count": 107,
+      "name": "Paris Prix",
+      "topSellerArticles": 107,
       "potentialPct": 98
     },
     {
-      "brand": "Mercatoxl",
-      "count": 94,
+      "name": "Mercatoxl",
+      "topSellerArticles": 94,
       "potentialPct": 98
     },
     {
-      "brand": "Habitat & Jardin",
-      "count": 88,
+      "name": "Habitat & Jardin",
+      "topSellerArticles": 88,
       "potentialPct": 98
     },
     {
-      "brand": "Go Garden",
-      "count": 85,
+      "name": "Go Garden",
+      "topSellerArticles": 85,
       "potentialPct": 98
     }
   ]

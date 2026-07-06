@@ -180,13 +180,13 @@
   "attractiveness": [
     {
       "week": "2026-06-23",
-      "lowerPct": 23,
+      "cheaperPct": 23,
       "equalPct": 33,
       "higherPct": 44
     },
     {
       "week": "2026-06-30",
-      "lowerPct": 17,
+      "cheaperPct": 17,
       "equalPct": 45,
       "higherPct": 39
     }

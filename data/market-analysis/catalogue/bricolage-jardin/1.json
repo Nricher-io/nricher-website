@@ -7,63 +7,63 @@
   "lowPct": 12,
   "ranking": [
     {
-      "brand": "Masseno",
-      "count": 2091,
+      "name": "Masseno",
+      "topSellerArticles": 2091,
       "potentialPct": 84
     },
     {
-      "brand": "Best Mobilier",
-      "count": 1715,
+      "name": "Best Mobilier",
+      "topSellerArticles": 1715,
       "potentialPct": 87
     },
     {
-      "brand": "Vente Unique",
-      "count": 1418,
+      "name": "Vente Unique",
+      "topSellerArticles": 1418,
       "potentialPct": 89
     },
     {
-      "brand": "Beliani",
-      "count": 1254,
+      "name": "Beliani",
+      "topSellerArticles": 1254,
       "potentialPct": 90
     },
     {
-      "brand": "Vidaxl",
-      "count": 656,
+      "name": "Vidaxl",
+      "topSellerArticles": 656,
       "potentialPct": 95
     },
     {
-      "brand": "Meublorama",
-      "count": 397,
+      "name": "Meublorama",
+      "topSellerArticles": 397,
       "potentialPct": 97
     },
     {
-      "brand": "Mercatoxl",
-      "count": 288,
+      "name": "Mercatoxl",
+      "topSellerArticles": 288,
       "potentialPct": 98
     },
     {
-      "brand": "Paris Prix",
-      "count": 278,
+      "name": "Paris Prix",
+      "topSellerArticles": 278,
       "potentialPct": 98
     },
     {
-      "brand": "Besolux Group",
-      "count": 278,
+      "name": "Besolux Group",
+      "topSellerArticles": 278,
       "potentialPct": 98
     },
     {
-      "brand": "Sweeek",
-      "count": 271,
+      "name": "Sweeek",
+      "topSellerArticles": 271,
       "potentialPct": 98
     },
     {
-      "brand": "Petits Meubles",
-      "count": 264,
+      "name": "Petits Meubles",
+      "topSellerArticles": 264,
       "potentialPct": 98
     },
     {
-      "brand": "Bonne Vie Meuble",
-      "count": 252,
+      "name": "Bonne Vie Meuble",
+      "topSellerArticles": 252,
       "potentialPct": 98
     }
   ]

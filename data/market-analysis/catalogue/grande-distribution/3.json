@@ -7,63 +7,63 @@
   "lowPct": 18,
   "ranking": [
     {
-      "brand": "Beliani",
-      "count": 472,
+      "name": "Beliani",
+      "topSellerArticles": 472,
       "potentialPct": 95
     },
     {
-      "brand": "Vidaxl",
-      "count": 303,
+      "name": "Vidaxl",
+      "topSellerArticles": 303,
       "potentialPct": 97
     },
     {
-      "brand": "Paris Prix",
-      "count": 259,
+      "name": "Paris Prix",
+      "topSellerArticles": 259,
       "potentialPct": 97
     },
     {
-      "brand": "Recollection",
-      "count": 217,
+      "name": "Recollection",
+      "topSellerArticles": 217,
       "potentialPct": 98
     },
     {
-      "brand": "Mycocooning",
-      "count": 213,
+      "name": "Mycocooning",
+      "topSellerArticles": 213,
       "potentialPct": 98
     },
     {
-      "brand": "Decoration Brands",
-      "count": 130,
+      "name": "Decoration Brands",
+      "topSellerArticles": 130,
       "potentialPct": 99
     },
     {
-      "brand": "Rama Shop",
-      "count": 114,
+      "name": "Rama Shop",
+      "topSellerArticles": 114,
       "potentialPct": 99
     },
     {
-      "brand": "Altobuy",
-      "count": 93,
+      "name": "Altobuy",
+      "topSellerArticles": 93,
       "potentialPct": 99
     },
     {
-      "brand": "Toilinux",
-      "count": 74,
+      "name": "Toilinux",
+      "topSellerArticles": 74,
       "potentialPct": 99
     },
     {
-      "brand": "Maxibazar",
-      "count": 74,
+      "name": "Maxibazar",
+      "topSellerArticles": 74,
       "potentialPct": 99
     },
     {
-      "brand": "The Concept Factory",
-      "count": 72,
+      "name": "The Concept Factory",
+      "topSellerArticles": 72,
       "potentialPct": 99
     },
     {
-      "brand": "House Partners",
-      "count": 64,
+      "name": "House Partners",
+      "topSellerArticles": 64,
       "potentialPct": 99
     }
   ]

@@ -7,63 +7,63 @@
   "lowPct": 18,
   "ranking": [
     {
-      "brand": "House Partners",
-      "count": 466,
+      "name": "House Partners",
+      "topSellerArticles": 466,
       "potentialPct": 81
     },
     {
-      "brand": "Darty",
-      "count": 291,
+      "name": "Darty",
+      "topSellerArticles": 291,
       "potentialPct": 88
     },
     {
-      "brand": "Boulanger",
-      "count": 254,
+      "name": "Boulanger",
+      "topSellerArticles": 254,
       "potentialPct": 90
     },
     {
-      "brand": "2kings",
-      "count": 242,
+      "name": "2kings",
+      "topSellerArticles": 242,
       "potentialPct": 90
     },
     {
-      "brand": "As Discount",
-      "count": 212,
+      "name": "As Discount",
+      "topSellerArticles": 212,
       "potentialPct": 91
     },
     {
-      "brand": "Zoomici",
-      "count": 205,
+      "name": "Zoomici",
+      "topSellerArticles": 205,
       "potentialPct": 92
     },
     {
-      "brand": "Gpasplus",
-      "count": 163,
+      "name": "Gpasplus",
+      "topSellerArticles": 163,
       "potentialPct": 93
     },
     {
-      "brand": "Monsieurplus",
-      "count": 143,
+      "name": "Monsieurplus",
+      "topSellerArticles": 143,
       "potentialPct": 94
     },
     {
-      "brand": "Rue Du Commerce",
-      "count": 130,
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 130,
       "potentialPct": 95
     },
     {
-      "brand": "Cdiscount",
-      "count": 126,
+      "name": "Cdiscount",
+      "topSellerArticles": 126,
       "potentialPct": 95
     },
     {
-      "brand": "Multishop",
-      "count": 94,
+      "name": "Multishop",
+      "topSellerArticles": 94,
       "potentialPct": 96
     },
     {
-      "brand": "Zenkaa",
-      "count": 88,
+      "name": "Zenkaa",
+      "topSellerArticles": 88,
       "potentialPct": 96
     }
   ]

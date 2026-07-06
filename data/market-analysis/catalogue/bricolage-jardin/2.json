@@ -7,63 +7,63 @@
   "lowPct": 13,
   "ranking": [
     {
-      "brand": "Literie Moins Cher",
-      "count": 4426,
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 4426,
       "potentialPct": 70
     },
     {
-      "brand": "The White Stone",
-      "count": 2224,
+      "name": "The White Stone",
+      "topSellerArticles": 2224,
       "potentialPct": 85
     },
     {
-      "brand": "Sommeil De Plomb",
-      "count": 902,
+      "name": "Sommeil De Plomb",
+      "topSellerArticles": 902,
       "potentialPct": 94
     },
     {
-      "brand": "Indream",
-      "count": 752,
+      "name": "Indream",
+      "topSellerArticles": 752,
       "potentialPct": 95
     },
     {
-      "brand": "Moonia",
-      "count": 665,
+      "name": "Moonia",
+      "topSellerArticles": 665,
       "potentialPct": 96
     },
     {
-      "brand": "1001lits",
-      "count": 561,
+      "name": "1001lits",
+      "topSellerArticles": 561,
       "potentialPct": 96
     },
     {
-      "brand": "Actisom",
-      "count": 525,
+      "name": "Actisom",
+      "topSellerArticles": 525,
       "potentialPct": 96
     },
     {
-      "brand": "Senso Pur",
-      "count": 402,
+      "name": "Senso Pur",
+      "topSellerArticles": 402,
       "potentialPct": 97
     },
     {
-      "brand": "Simpur",
-      "count": 309,
+      "name": "Simpur",
+      "topSellerArticles": 309,
       "potentialPct": 98
     },
     {
-      "brand": "La Redoute",
-      "count": 305,
+      "name": "La Redoute",
+      "topSellerArticles": 305,
       "potentialPct": 98
     },
     {
-      "brand": "Ideoideal",
-      "count": 285,
+      "name": "Ideoideal",
+      "topSellerArticles": 285,
       "potentialPct": 98
     },
     {
-      "brand": "Vidaxl",
-      "count": 232,
+      "name": "Vidaxl",
+      "topSellerArticles": 232,
       "potentialPct": 98
     }
   ]
