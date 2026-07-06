@@ -56,6 +56,8 @@ GRADE_SCALE = [
 ]
 
 REQUEST_DELAY = 0.3  # secondes entre pages paginées
+MAX_PAGES = 15       # cap par endpoint paginé — évite les boucles infinies sur gros catalogues
+MIN_CAT_COMPANIES = 2  # ignore les catégories niche présentes chez < 2 enseignes
 
 
 # ── Auth ──────────────────────────────────────────────────────────────────────
@@ -83,10 +85,11 @@ def _scrub(msg):
 
 
 def fetch_all_pages(company_id, path, extra_params=None):
-    """Parcourt toutes les pages searchAfter et retourne la liste data fusionnée."""
+    """Parcourt les pages searchAfter jusqu'à MAX_PAGES et retourne la liste data fusionnée."""
     token = mint_token(company_id)
     params = {"token": token, **(extra_params or {})}
     rows = []
+    pages = 0
     while True:
         try:
             resp = requests.get(
@@ -99,8 +102,9 @@ def fetch_all_pages(company_id, path, extra_params=None):
         body = resp.json()
         page = body.get("data", [])
         rows.extend(page)
+        pages += 1
         sa = body.get("searchAfter")
-        if not sa or not page:
+        if not sa or not page or pages >= MAX_PAGES:
             break
         params["searchAfter"] = sa
         time.sleep(REQUEST_DELAY)
@@ -255,6 +259,7 @@ def main():
             "packs": e["packs"],
         }
         for e in cat_map.values()
+        if len(e["_companies"]) >= MIN_CAT_COMPANIES
     ]
     write_json(OUT_DIR / "categories.json", categories)
     print(f"✓ categories.json ({len(categories)} catégories)\n")
