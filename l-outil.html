@@ -563,17 +563,30 @@
 <aside class="mobile-menu">
   <button class="mobile-menu__close" aria-label="Fermer le menu" data-i18n="nav.close.aria-label">&#x2715;</button>
   <a href="index.html" data-i18n="nav.home">Accueil</a>
-  <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
-  <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
-  <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
-  <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+  <div class="mob-group">
+    <button class="mob-group__toggle" type="button"><span data-i18n="nav.platform">La plateforme</span> <span class="mob-group__arrow">▾</span></button>
+    <div class="mob-group__items">
+      <a href="le-bon-catalogue.html" data-i18n="nav.platform.product.title">Le bon produit</a>
+      <a href="le-bon-prix.html" data-i18n="nav.platform.price.title">Le bon prix</a>
+      <a href="bien-presente.html" data-i18n="nav.platform.presented.title">Bien présenté</a>
+      <a href="l-outil.html" data-i18n="nav.platform.tool.title">L'outil</a>
+    </div>
+  </div>
   <a href="cas-clients.html" data-i18n="nav.cases">Cas clients</a>
   <a href="lequipe.html" data-i18n="nav.team">L'équipe</a>
-  <a href="analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
-  <a href="analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
-  <a href="analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
+  <div class="mob-group">
+    <button class="mob-group__toggle" type="button"><span data-i18n="nav.analysis">Analyse</span> <span class="mob-group__arrow">▾</span></button>
+    <div class="mob-group__items">
+      <a href="analyse-pricing.html" data-i18n="nav.analysis.pricing.title">Pricing</a>
+      <a href="analyse-quality.html" data-i18n="nav.analysis.quality.title">Quality</a>
+      <a href="analyse-catalogue.html" data-i18n="nav.analysis.catalogue.title">Catalogue</a>
+    </div>
+  </div>
   <a href="recherche.html" data-i18n="nav.mycompany">PI Entreprise</a>
-  <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  <div class="mob-menu__btns">
+    <a href="https://app.nricher.io/" class="btn btn-ghost-dark nav-login" rel="nofollow" data-i18n="nav.login">Connexion</a>
+    <a href="contact.html" class="btn btn-primary" data-i18n="nav.demo">Demander une démo →</a>
+  </div>
   <div class="lang-switch">
         <button class="lang-switch__btn" aria-label="Changer de langue" aria-haspopup="true" aria-expanded="false">
           <svg class="flag-icon flag-icon--fr" viewBox="0 0 24 16" aria-hidden="true"><rect width="8" height="16" fill="#002654"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ED2939"/></svg>

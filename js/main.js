@@ -53,12 +53,24 @@
     document.querySelectorAll('.mobile-menu a').forEach(function (a) { a.addEventListener('click', closeMenu); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
-    /* Highlight current page in mobile menu */
+    /* Toggle mob-group sections (La plateforme ▾, Analyse ▾) */
+    document.querySelectorAll('.mob-group__toggle').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        btn.closest('.mob-group').classList.toggle('is-open');
+      });
+    });
+
+    /* Highlight current page in mobile menu + auto-open parent group */
     (function () {
       var page = window.location.pathname.split('/').pop() || 'index.html';
       if (page === '') page = 'index.html';
       document.querySelectorAll('.mobile-menu a:not(.btn)').forEach(function (a) {
-        if (a.getAttribute('href') === page) a.classList.add('is-current');
+        if (a.getAttribute('href') === page) {
+          a.classList.add('is-current');
+          var group = a.closest('.mob-group');
+          if (group) group.classList.add('is-open');
+        }
       });
     })();
 

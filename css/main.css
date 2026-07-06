@@ -321,21 +321,38 @@ body.menu-open .mobile-menu { transform: translateX(0); }
   transition: color .2s ease;
 }
 .mobile-menu a:hover { color: var(--mint); }
-body.menu-open .mobile-menu a { animation: mm-in .42s forwards; }
-body.menu-open .mobile-menu a:nth-of-type(1){animation-delay:.08s}
-body.menu-open .mobile-menu a:nth-of-type(2){animation-delay:.13s}
-body.menu-open .mobile-menu a:nth-of-type(3){animation-delay:.18s}
-body.menu-open .mobile-menu a:nth-of-type(4){animation-delay:.23s}
-body.menu-open .mobile-menu a:nth-of-type(5){animation-delay:.28s}
-body.menu-open .mobile-menu a:nth-of-type(6){animation-delay:.33s}
-body.menu-open .mobile-menu a:nth-of-type(7){animation-delay:.38s}
-body.menu-open .mobile-menu a:nth-of-type(8){animation-delay:.43s}
-body.menu-open .mobile-menu a:nth-of-type(9){animation-delay:.48s}
+body.menu-open .mobile-menu > a,
+body.menu-open .mobile-menu > .mob-group,
+body.menu-open .mobile-menu > .mob-menu__btns { animation: mm-in .42s forwards; }
+body.menu-open .mobile-menu > *:nth-child(2){animation-delay:.08s}
+body.menu-open .mobile-menu > *:nth-child(3){animation-delay:.14s}
+body.menu-open .mobile-menu > *:nth-child(4){animation-delay:.20s}
+body.menu-open .mobile-menu > *:nth-child(5){animation-delay:.26s}
+body.menu-open .mobile-menu > *:nth-child(6){animation-delay:.32s}
+body.menu-open .mobile-menu > *:nth-child(7){animation-delay:.38s}
+body.menu-open .mobile-menu > *:nth-child(8){animation-delay:.44s}
 .mobile-menu__close { display: none; }
-.mobile-menu .btn { align-self: flex-start; margin-top: 16px; font-family: var(--font-body) !important; font-size: 0.98rem !important; font-weight: 700 !important; padding: 14px 28px !important; }
+.mobile-menu .btn { align-self: flex-start; font-family: var(--font-body) !important; font-size: 0.98rem !important; font-weight: 700 !important; padding: 13px 24px !important; }
 .mobile-menu a.is-current { color: var(--blue) !important; }
 .mobile-menu a.is-current::after { width: 100% !important; background: var(--blue); }
 @keyframes mm-in { to { opacity: 1; transform: none; } }
+/* mob-group : sections expansibles (La plateforme ▾, Analyse ▾) */
+.mob-group { display: flex; flex-direction: column; opacity: 0; transform: translateX(24px); }
+.mob-group__toggle {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.6rem;
+  padding: 10px 0; color: var(--text-2); background: none; border: none; cursor: pointer;
+  display: flex; align-items: center; gap: 5px; text-align: left; width: 100%;
+  transition: color .2s ease;
+}
+.mob-group__toggle:hover { color: var(--mint); }
+.mob-group__arrow { font-size: 1.1rem; display: inline-block; transition: transform .22s ease; line-height: 1; }
+.mob-group.is-open .mob-group__arrow { transform: rotate(180deg); }
+.mob-group__items { display: none; flex-direction: column; padding-left: 14px; gap: 0; border-left: 2px solid var(--border); margin: 4px 0 8px; }
+.mob-group.is-open .mob-group__items { display: flex; }
+.mob-group__items a { font-size: 1.15rem !important; padding: 7px 0 !important; opacity: 1 !important; transform: none !important; animation: none !important; }
+/* Boutons connexion + démo en bas */
+.mob-menu__btns { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; opacity: 0; transform: translateX(24px); }
+.mob-menu__btns .btn { align-self: flex-start; }
 .menu-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); z-index: 150; opacity: 0; visibility: hidden; transition: opacity .3s ease; }
 body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 
