@@ -1,7 +1,7 @@
 {
   "slug": "lamptwist",
   "name": "Lamptwist",
-  "priceIndex": 123,
+  "priceIndex": 256,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -53,6 +53,17 @@
         89,
         93,
         96
+      ]
+    },
+    {
+      "name": "Lamptwist",
+      "piHistory": [
+        107,
+        106,
+        107,
+        111,
+        106,
+        114
       ]
     },
     {
@@ -169,37 +180,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 32,
+      "lowerPct": 32,
       "equalPct": 11,
       "higherPct": 58
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 35,
+      "lowerPct": 35,
       "equalPct": 9,
       "higherPct": 56
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 30,
+      "lowerPct": 30,
       "equalPct": 10,
       "higherPct": 60
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 18,
+      "lowerPct": 18,
       "equalPct": 12,
       "higherPct": 69
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 32,
+      "lowerPct": 32,
       "equalPct": 12,
       "higherPct": 56
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 20,
+      "lowerPct": 20,
       "equalPct": 13,
       "higherPct": 67
     }
@@ -207,38 +218,43 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 123,
-      "lowerPct": 30,
+      "matched": 832,
+      "pi": 236,
+      "lowerPct": 31,
       "equalPct": 12,
-      "higherPct": 57
+      "higherPct": 56
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 245,
-      "lowerPct": 25,
-      "equalPct": 11,
-      "higherPct": 64
-    },
-    {
-      "pack": "Applique murale",
-      "priceIndex": 113,
-      "lowerPct": 22,
+      "matched": 651,
+      "pi": 153,
+      "lowerPct": 27,
       "equalPct": 12,
-      "higherPct": 66
-    },
-    {
-      "pack": "Lampadaire",
-      "priceIndex": 110,
-      "lowerPct": 23,
-      "equalPct": 15,
       "higherPct": 62
     },
     {
+      "pack": "Applique murale",
+      "matched": 399,
+      "pi": 113,
+      "lowerPct": 23,
+      "equalPct": 9,
+      "higherPct": 68
+    },
+    {
+      "pack": "Lampadaire",
+      "matched": 201,
+      "pi": 108,
+      "lowerPct": 23,
+      "equalPct": 11,
+      "higherPct": 66
+    },
+    {
       "pack": "Plafonnier",
-      "priceIndex": 117,
-      "lowerPct": 7,
-      "equalPct": 15,
-      "higherPct": 78
+      "matched": 102,
+      "pi": 1807,
+      "lowerPct": 4,
+      "equalPct": 21,
+      "higherPct": 75
     }
   ]
 }

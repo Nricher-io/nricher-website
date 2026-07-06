@@ -1,81 +1,69 @@
 {
   "packName": "Salon de jardin",
-  "totalArticles": 5771,
-  "topPct": 50,
-  "midPct": 29,
-  "lowPct": 21,
-  "topSellersCount": 1778,
+  "totalArticles": 5652,
+  "topSellersCount": 1711,
+  "topPct": 51,
+  "midPct": 26,
+  "lowPct": 23,
   "ranking": [
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 587,
-      "potentialPct": 90
+      "brand": "Vidaxl",
+      "count": 731,
+      "potentialPct": 87
     },
     {
-      "slug": "oviala",
-      "name": "Oviala",
-      "topSellerArticles": 273,
+      "brand": "Beliani",
+      "count": 281,
       "potentialPct": 95
     },
     {
-      "slug": "beliani",
-      "name": "Beliani",
-      "topSellerArticles": 273,
-      "potentialPct": 95
+      "brand": "Oviala",
+      "count": 225,
+      "potentialPct": 96
     },
     {
-      "slug": "buyspace",
-      "name": "Buyspace",
-      "topSellerArticles": 269,
-      "potentialPct": 95
-    },
-    {
-      "slug": "concept-usine",
-      "name": "Concept Usine",
-      "topSellerArticles": 195,
+      "brand": "Concept Usine",
+      "count": 192,
       "potentialPct": 97
     },
     {
-      "slug": "rama-shop",
-      "name": "Rama Shop",
-      "topSellerArticles": 181,
+      "brand": "Meublesbrillant",
+      "count": 144,
       "potentialPct": 97
     },
     {
-      "slug": "shopnova",
-      "name": "Shopnova",
-      "topSellerArticles": 179,
-      "potentialPct": 97
-    },
-    {
-      "slug": "meublesbrillant",
-      "name": "Meublesbrillant",
-      "topSellerArticles": 151,
-      "potentialPct": 97
-    },
-    {
-      "slug": "aosom",
-      "name": "Aosom",
-      "topSellerArticles": 139,
+      "brand": "Aosom",
+      "count": 138,
       "potentialPct": 98
     },
     {
-      "slug": "defora-home",
-      "name": "Defora Home",
-      "topSellerArticles": 132,
+      "brand": "Defora Home",
+      "count": 131,
       "potentialPct": 98
     },
     {
-      "slug": "paris-prix",
-      "name": "Paris Prix",
-      "topSellerArticles": 99,
+      "brand": "Shopnova",
+      "count": 122,
       "potentialPct": 98
     },
     {
-      "slug": "sweeek",
-      "name": "Sweeek",
-      "topSellerArticles": 93,
+      "brand": "Paris Prix",
+      "count": 107,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Mercatoxl",
+      "count": 94,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Habitat & Jardin",
+      "count": 88,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Go Garden",
+      "count": 85,
       "potentialPct": 98
     }
   ]

@@ -1,81 +1,69 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 3618,
-  "topPct": 42,
+  "totalArticles": 3645,
+  "topSellersCount": 1420,
+  "topPct": 43,
   "midPct": 35,
-  "lowPct": 23,
-  "topSellersCount": 1407,
+  "lowPct": 22,
   "ranking": [
     {
-      "slug": "kiatoo",
-      "name": "Kiatoo",
-      "topSellerArticles": 389,
+      "brand": "Kiatoo",
+      "count": 392,
       "potentialPct": 89
     },
     {
-      "slug": "gpasplus",
-      "name": "Gpasplus",
-      "topSellerArticles": 226,
+      "brand": "Gpasplus",
+      "count": 243,
+      "potentialPct": 93
+    },
+    {
+      "brand": "Topbiz",
+      "count": 223,
       "potentialPct": 94
     },
     {
-      "slug": "topbiz",
-      "name": "Topbiz",
-      "topSellerArticles": 225,
-      "potentialPct": 94
-    },
-    {
-      "slug": "icoza",
-      "name": "Icoza",
-      "topSellerArticles": 194,
+      "brand": "Darty",
+      "count": 197,
       "potentialPct": 95
     },
     {
-      "slug": "darty",
-      "name": "Darty",
-      "topSellerArticles": 194,
+      "brand": "Monsieurplus",
+      "count": 195,
       "potentialPct": 95
     },
     {
-      "slug": "cdiscount",
-      "name": "Cdiscount",
-      "topSellerArticles": 179,
+      "brand": "Cdiscount",
+      "count": 170,
       "potentialPct": 95
     },
     {
-      "slug": "rue-du-commerce",
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 155,
+      "brand": "Icoza",
+      "count": 156,
       "potentialPct": 96
     },
     {
-      "slug": "monsieurplus",
-      "name": "Monsieurplus",
-      "topSellerArticles": 148,
+      "brand": "Rue Du Commerce",
+      "count": 153,
       "potentialPct": 96
     },
     {
-      "slug": "leasi",
-      "name": "Leasi",
-      "topSellerArticles": 138,
+      "brand": "Leasi",
+      "count": 150,
       "potentialPct": 96
     },
     {
-      "slug": "okamac",
-      "name": "Okamac",
-      "topSellerArticles": 136,
+      "brand": "Okamac",
+      "count": 138,
       "potentialPct": 96
     },
     {
-      "slug": "fnac-2nde-vie",
-      "name": "Fnac 2nde Vie",
-      "topSellerArticles": 126,
+      "brand": "House Partners",
+      "count": 126,
       "potentialPct": 97
     },
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 125,
+      "brand": "Fnac 2nde Vie",
+      "count": 118,
       "potentialPct": 97
     }
   ]

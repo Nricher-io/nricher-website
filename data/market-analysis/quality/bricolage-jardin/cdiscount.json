@@ -1,53 +1,53 @@
 {
   "slug": "cdiscount",
   "name": "Cdiscount",
-  "articlesAnalysed": 1180654,
-  "qualityScore": 75,
-  "globalGrades": {
-    "Aplus": 11,
-    "A": 19,
-    "B": 27,
-    "C": 24,
-    "D": 11,
-    "E": 5,
-    "F": 2
-  },
+  "articlesAnalysed": 1097686,
+  "qualityScore": 76,
+  "globalGrades": [
+    12,
+    19,
+    27,
+    24,
+    11,
+    5,
+    2
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 76,
-      "A": 5,
-      "B": 4,
-      "C": 7,
-      "D": 3,
-      "E": 2,
-      "F": 2
-    },
-    "Image": {
-      "Aplus": 35,
-      "A": 8,
-      "B": 23,
-      "C": 6,
-      "D": 0,
-      "E": 7,
-      "F": 20
-    },
-    "Vidéo": {
-      "Aplus": 37,
-      "A": 6,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 57
-    },
-    "Description": {
-      "Aplus": 39,
-      "A": 7,
-      "B": 7,
-      "C": 12,
-      "D": 8,
-      "E": 11,
-      "F": 16
-    }
+    "Titre": [
+      76,
+      5,
+      4,
+      7,
+      3,
+      2,
+      2
+    ],
+    "Image": [
+      36,
+      8,
+      23,
+      6,
+      0,
+      7,
+      20
+    ],
+    "Vidéo": [
+      37,
+      6,
+      0,
+      0,
+      0,
+      0,
+      57
+    ],
+    "Description": [
+      39,
+      7,
+      7,
+      12,
+      8,
+      11,
+      16
+    ]
   }
 }

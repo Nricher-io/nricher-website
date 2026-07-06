@@ -1,53 +1,53 @@
 {
   "slug": "rue-du-commerce",
-  "name": "rue-du-commerce",
-  "articlesAnalysed": 0,
-  "qualityScore": 0,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 0,
-    "B": 0,
-    "C": 0,
-    "D": 0,
-    "E": 0,
-    "F": 0
-  },
+  "name": "Rue Du Commerce",
+  "articlesAnalysed": 451137,
+  "qualityScore": 56,
+  "globalGrades": [
+    0,
+    4,
+    9,
+    29,
+    23,
+    19,
+    16
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Image": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Description": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    }
+    "Titre": [
+      13,
+      5,
+      7,
+      19,
+      16,
+      16,
+      24
+    ],
+    "Image": [
+      27,
+      24,
+      9,
+      16,
+      0,
+      8,
+      16
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      34,
+      6,
+      5,
+      9,
+      8,
+      9,
+      29
+    ]
   }
 }

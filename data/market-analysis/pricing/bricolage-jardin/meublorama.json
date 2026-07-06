@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
+      "matched": 1,
+      "pi": 100,
       "lowerPct": 0,
-      "equalPct": 0,
+      "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": 100,
+      "matched": 397,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 100,
+      "matched": 374,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 98,
       "higherPct": 2
     },
     {
       "pack": "Commode",
-      "priceIndex": 101,
+      "matched": 308,
+      "pi": 100,
       "lowerPct": 0,
-      "equalPct": 95,
-      "higherPct": 4
+      "equalPct": 98,
+      "higherPct": 2
     }
   ]
 }

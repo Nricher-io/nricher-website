@@ -1,7 +1,7 @@
 {
   "slug": "okwish",
   "name": "Okwish",
-  "priceIndex": 111,
+  "priceIndex": 101,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": 111,
-      "lowerPct": 57,
-      "equalPct": 14,
-      "higherPct": 30
+      "matched": 23,
+      "pi": 119,
+      "lowerPct": 40,
+      "equalPct": 29,
+      "higherPct": 31
     },
     {
       "pack": "Canapé",
-      "priceIndex": 127,
-      "lowerPct": 43,
-      "equalPct": 21,
-      "higherPct": 36
+      "matched": 205,
+      "pi": 108,
+      "lowerPct": 45,
+      "equalPct": 31,
+      "higherPct": 24
     },
     {
       "pack": "Matelas",
-      "priceIndex": 95,
+      "matched": 3,
+      "pi": 91,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 99,
-      "lowerPct": 84,
-      "equalPct": 5,
+      "matched": 1013,
+      "pi": 99,
+      "lowerPct": 85,
+      "equalPct": 4,
       "higherPct": 11
     },
     {
       "pack": "Commode",
-      "priceIndex": 95,
-      "lowerPct": 94,
+      "matched": 27,
+      "pi": 96,
+      "lowerPct": 92,
       "equalPct": 0,
-      "higherPct": 6
+      "higherPct": 8
     }
   ]
 }

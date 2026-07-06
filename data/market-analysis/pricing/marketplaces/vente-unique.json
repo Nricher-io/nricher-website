@@ -1,7 +1,7 @@
 {
   "slug": "vente-unique",
-  "name": "Vente-unique",
-  "priceIndex": null,
+  "name": "Vente Unique",
+  "priceIndex": 100,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -235,37 +235,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 20,
+      "lowerPct": 20,
       "equalPct": 31,
       "higherPct": 48
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 21,
+      "lowerPct": 21,
       "equalPct": 44,
       "higherPct": 35
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 23,
+      "lowerPct": 23,
       "equalPct": 34,
       "higherPct": 43
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 18,
+      "lowerPct": 18,
       "equalPct": 29,
       "higherPct": 53
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 27,
+      "lowerPct": 27,
       "equalPct": 32,
       "higherPct": 41
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 27,
+      "lowerPct": 27,
       "equalPct": 22,
       "higherPct": 51
     }
@@ -273,38 +273,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 1,
+      "pi": 115,
       "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "equalPct": 50,
+      "higherPct": 50
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 1367,
+      "pi": 98,
+      "lowerPct": 52,
+      "equalPct": 20,
+      "higherPct": 29
     },
     {
       "pack": "Matelas",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 129,
+      "pi": 107,
+      "lowerPct": 18,
+      "equalPct": 50,
+      "higherPct": 32
     },
     {
       "pack": "Lit",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 163,
+      "pi": 105,
+      "lowerPct": 27,
+      "equalPct": 42,
+      "higherPct": 31
     },
     {
       "pack": "Table à manger",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 26,
+      "pi": 105,
+      "lowerPct": 24,
+      "equalPct": 50,
+      "higherPct": 27
     }
   ]
 }

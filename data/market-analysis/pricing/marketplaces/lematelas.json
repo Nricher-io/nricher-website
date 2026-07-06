@@ -1,7 +1,7 @@
 {
   "slug": "lematelas",
   "name": "Lematelas",
-  "priceIndex": 101,
+  "priceIndex": 99,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,36 +236,41 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": 101,
-      "lowerPct": 30,
-      "equalPct": 64,
-      "higherPct": 6
+      "matched": 590,
+      "pi": 99,
+      "lowerPct": 27,
+      "equalPct": 67,
+      "higherPct": 5
     },
     {
       "pack": "Lit",
-      "priceIndex": 99,
-      "lowerPct": 29,
-      "equalPct": 64,
-      "higherPct": 7
+      "matched": 58,
+      "pi": 100,
+      "lowerPct": 30,
+      "equalPct": 68,
+      "higherPct": 2
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 75,
-      "lowerPct": 100,
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     }

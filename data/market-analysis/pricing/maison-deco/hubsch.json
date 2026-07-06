@@ -1,7 +1,7 @@
 {
   "slug": "hubsch",
   "name": "Hubsch",
-  "priceIndex": 125,
+  "priceIndex": 130,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -181,35 +181,40 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 125,
-      "lowerPct": 32,
+      "matched": 19,
+      "pi": 132,
+      "lowerPct": 21,
       "equalPct": 5,
-      "higherPct": 64
+      "higherPct": 74
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 126,
-      "lowerPct": 44,
+      "matched": 54,
+      "pi": 132,
+      "lowerPct": 35,
       "equalPct": 0,
-      "higherPct": 56
+      "higherPct": 65
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 107,
-      "lowerPct": 59,
+      "matched": 21,
+      "pi": 121,
+      "lowerPct": 45,
       "equalPct": 0,
-      "higherPct": 41
+      "higherPct": 55
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 77,
-      "lowerPct": 100,
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

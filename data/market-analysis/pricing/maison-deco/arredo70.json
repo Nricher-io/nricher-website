@@ -1,7 +1,7 @@
 {
   "slug": "arredo70",
   "name": "Arredo70",
-  "priceIndex": 113,
+  "priceIndex": 111,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -181,38 +181,43 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 113,
+      "matched": 2,
+      "pi": 112,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 110,
+      "matched": 3,
+      "pi": 115,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 106,
+      "matched": 9,
+      "pi": 105,
       "lowerPct": 33,
       "equalPct": 0,
       "higherPct": 67
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 132,
+      "matched": 2,
+      "pi": 132,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": 102,
-      "lowerPct": 50,
+      "matched": 2,
+      "pi": 105,
+      "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 50
+      "higherPct": 100
     }
   ]
 }

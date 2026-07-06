@@ -1,81 +1,69 @@
 {
   "packName": "Commode",
-  "totalArticles": 19419,
-  "topPct": 69,
+  "totalArticles": 18830,
+  "topSellersCount": 7871,
+  "topPct": 68,
   "midPct": 19,
-  "lowPct": 12,
-  "topSellersCount": 8279,
+  "lowPct": 13,
   "ranking": [
     {
-      "slug": "abiks-meubles",
-      "name": "Abiks Meubles",
-      "topSellerArticles": 5703,
-      "potentialPct": 71
+      "brand": "Abiks Meubles",
+      "count": 5365,
+      "potentialPct": 72
     },
     {
-      "slug": "ok-living",
-      "name": "Ok Living",
-      "topSellerArticles": 1034,
+      "brand": "Ok Living",
+      "count": 978,
       "potentialPct": 95
     },
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 437,
+      "brand": "Vidaxl",
+      "count": 431,
       "potentialPct": 98
     },
     {
-      "slug": "pegane",
-      "name": "Pegane",
-      "topSellerArticles": 402,
+      "brand": "Pegane",
+      "count": 395,
       "potentialPct": 98
     },
     {
-      "slug": "3xe-living",
-      "name": "3xe Living",
-      "topSellerArticles": 352,
+      "brand": "Htmeubles",
+      "count": 359,
       "potentialPct": 98
     },
     {
-      "slug": "visiodirect",
-      "name": "Visiodirect",
-      "topSellerArticles": 351,
+      "brand": "Dmora",
+      "count": 343,
       "potentialPct": 98
     },
     {
-      "slug": "dmora",
-      "name": "Dmora",
-      "topSellerArticles": 347,
+      "brand": "Rust Oleum",
+      "count": 343,
       "potentialPct": 98
     },
     {
-      "slug": "rust-oleum",
-      "name": "Rust Oleum",
-      "topSellerArticles": 345,
+      "brand": "Visiodirect",
+      "count": 335,
       "potentialPct": 98
     },
     {
-      "slug": "htmeubles",
-      "name": "Htmeubles",
-      "topSellerArticles": 322,
+      "brand": "3xe Living",
+      "count": 320,
       "potentialPct": 98
     },
     {
-      "slug": "meublorama",
-      "name": "Meublorama",
-      "topSellerArticles": 303,
+      "brand": "Meublorama",
+      "count": 308,
       "potentialPct": 98
     },
     {
-      "slug": "shopnova",
-      "name": "Shopnova",
-      "topSellerArticles": 219,
+      "brand": "Bb Loisir",
+      "count": 216,
       "potentialPct": 99
     },
     {
-      "slug": "bb-loisir",
-      "name": "Bb Loisir",
-      "topSellerArticles": 212,
+      "brand": "Petits Meubles",
+      "count": 196,
       "potentialPct": 99
     }
   ]

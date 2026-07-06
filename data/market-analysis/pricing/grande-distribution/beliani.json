@@ -1,7 +1,7 @@
 {
   "slug": "beliani",
   "name": "Beliani",
-  "priceIndex": 99,
+  "priceIndex": 98,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "priceIndex": 99,
-      "lowerPct": 10,
-      "equalPct": 88,
-      "higherPct": 2
+      "matched": 1369,
+      "pi": 100,
+      "lowerPct": 8,
+      "equalPct": 92,
+      "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 97,
-      "lowerPct": 29,
-      "equalPct": 67,
-      "higherPct": 4
+      "matched": 195,
+      "pi": 98,
+      "lowerPct": 20,
+      "equalPct": 76,
+      "higherPct": 5
     },
     {
       "pack": "Matelas",
-      "priceIndex": 95,
-      "lowerPct": 48,
-      "equalPct": 51,
-      "higherPct": 1
+      "matched": 84,
+      "pi": 95,
+      "lowerPct": 45,
+      "equalPct": 52,
+      "higherPct": 3
     },
     {
       "pack": "Fauteuil",
-      "priceIndex": 95,
-      "lowerPct": 58,
-      "equalPct": 37,
+      "matched": 472,
+      "pi": 95,
+      "lowerPct": 53,
+      "equalPct": 42,
       "higherPct": 5
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 96,
-      "lowerPct": 39,
-      "equalPct": 58,
-      "higherPct": 3
+      "matched": 314,
+      "pi": 96,
+      "lowerPct": 38,
+      "equalPct": 60,
+      "higherPct": 2
     }
   ]
 }

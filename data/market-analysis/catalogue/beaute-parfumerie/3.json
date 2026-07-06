@@ -1,22 +1,20 @@
 {
   "packName": "Coffret",
-  "totalArticles": 263,
-  "topPct": 92,
-  "midPct": 8,
+  "totalArticles": 257,
+  "topSellersCount": 60,
+  "topPct": 61,
+  "midPct": 39,
   "lowPct": 0,
-  "topSellersCount": 58,
   "ranking": [
     {
-      "slug": "marionnaud",
-      "name": "Marionnaud",
-      "topSellerArticles": 58,
-      "potentialPct": 78
+      "brand": "Marionnaud",
+      "count": 60,
+      "potentialPct": 77
     },
     {
-      "slug": "myorigines",
-      "name": "Myorigines",
-      "topSellerArticles": 5,
-      "potentialPct": 98
+      "brand": "Myorigines",
+      "count": 39,
+      "potentialPct": 85
     }
   ]
 }

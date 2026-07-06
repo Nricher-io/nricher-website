@@ -133,6 +133,17 @@
       ]
     },
     {
+      "name": "Silvera",
+      "piHistory": [
+        103,
+        101,
+        null,
+        101,
+        93,
+        102
+      ]
+    },
+    {
       "name": "Light11",
       "piHistory": [
         97,
@@ -169,37 +180,37 @@
   "attractiveness": [
     {
       "week": "2026-05-19",
-      "cheaperPct": 45,
+      "lowerPct": 45,
       "equalPct": 34,
       "higherPct": 21
     },
     {
       "week": "2026-05-26",
-      "cheaperPct": 41,
+      "lowerPct": 41,
       "equalPct": 38,
       "higherPct": 21
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 52,
+      "lowerPct": 52,
       "equalPct": 24,
       "higherPct": 24
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 33,
+      "lowerPct": 33,
       "equalPct": 33,
       "higherPct": 33
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 100,
+      "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 0,
+      "lowerPct": 0,
       "equalPct": 40,
       "higherPct": 60
     }
@@ -207,38 +218,43 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 100,
+      "matched": 9,
+      "pi": 99,
       "lowerPct": 44,
       "equalPct": 22,
       "higherPct": 33
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 100,
+      "matched": 1,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Applique murale",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": 108,
-      "lowerPct": 17,
+      "matched": 2,
+      "pi": 100,
+      "lowerPct": 33,
       "equalPct": 0,
-      "higherPct": 83
+      "higherPct": 67
     }
   ]
 }

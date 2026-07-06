@@ -1,7 +1,7 @@
 {
   "slug": "ecd",
   "name": "Ecd",
-  "priceIndex": 101,
+  "priceIndex": 100,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 101,
-      "lowerPct": 41,
-      "equalPct": 3,
-      "higherPct": 56
+      "matched": 167,
+      "pi": 100,
+      "lowerPct": 37,
+      "equalPct": 17,
+      "higherPct": 45
     },
     {
       "pack": "Matelas",
-      "priceIndex": 92,
+      "matched": 1,
+      "pi": 97,
+      "lowerPct": 67,
+      "equalPct": 0,
+      "higherPct": 33
+    },
+    {
+      "pack": "Fauteuil",
+      "matched": 1,
+      "pi": 97,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
-      "pack": "Fauteuil",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
-    },
-    {
       "pack": "Table à manger",
-      "priceIndex": 98,
-      "lowerPct": 65,
-      "equalPct": 18,
-      "higherPct": 18
+      "matched": 9,
+      "pi": 102,
+      "lowerPct": 27,
+      "equalPct": 27,
+      "higherPct": 46
     }
   ]
 }

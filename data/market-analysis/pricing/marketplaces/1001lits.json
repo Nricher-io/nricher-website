@@ -1,7 +1,7 @@
 {
   "slug": "1001lits",
   "name": "1001lits",
-  "priceIndex": 101,
+  "priceIndex": 100,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": 101,
-      "lowerPct": 15,
-      "equalPct": 70,
-      "higherPct": 15
+      "matched": 318,
+      "pi": 100,
+      "lowerPct": 10,
+      "equalPct": 81,
+      "higherPct": 10
     },
     {
       "pack": "Lit",
-      "priceIndex": 100,
-      "lowerPct": 40,
-      "equalPct": 40,
-      "higherPct": 20
+      "matched": 8,
+      "pi": 98,
+      "lowerPct": 42,
+      "equalPct": 50,
+      "higherPct": 8
     },
     {
       "pack": "Table à manger",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

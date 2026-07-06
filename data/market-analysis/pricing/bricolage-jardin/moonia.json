@@ -1,7 +1,7 @@
 {
   "slug": "moonia",
   "name": "Moonia",
-  "priceIndex": 90,
+  "priceIndex": 93,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": 90,
-      "lowerPct": 49,
-      "equalPct": 48,
-      "higherPct": 3
+      "matched": 665,
+      "pi": 93,
+      "lowerPct": 48,
+      "equalPct": 38,
+      "higherPct": 14
     },
     {
       "pack": "Lit",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Commode",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

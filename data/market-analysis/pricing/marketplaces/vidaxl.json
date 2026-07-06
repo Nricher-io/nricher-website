@@ -1,7 +1,7 @@
 {
   "slug": "vidaxl",
   "name": "Vidaxl",
-  "priceIndex": 94,
+  "priceIndex": 95,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,36 +236,41 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 94,
-      "lowerPct": 67,
-      "equalPct": 33,
+      "matched": 2,
+      "pi": 91,
+      "lowerPct": 100,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": 99,
-      "lowerPct": 35,
-      "equalPct": 31,
-      "higherPct": 35
+      "matched": 164,
+      "pi": 100,
+      "lowerPct": 37,
+      "equalPct": 32,
+      "higherPct": 31
     },
     {
       "pack": "Matelas",
-      "priceIndex": 92,
-      "lowerPct": 88,
-      "equalPct": 12,
+      "matched": 8,
+      "pi": 91,
+      "lowerPct": 100,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 94,
-      "lowerPct": 72,
-      "equalPct": 9,
-      "higherPct": 18
+      "matched": 290,
+      "pi": 93,
+      "lowerPct": 80,
+      "equalPct": 6,
+      "higherPct": 14
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 93,
-      "lowerPct": 82,
+      "matched": 165,
+      "pi": 93,
+      "lowerPct": 84,
       "equalPct": 2,
       "higherPct": 15
     }

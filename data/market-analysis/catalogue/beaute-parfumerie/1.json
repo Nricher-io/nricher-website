@@ -1,22 +1,20 @@
 {
   "packName": "Parfum",
-  "totalArticles": 975,
-  "topPct": 74,
-  "midPct": 26,
+  "totalArticles": 969,
+  "topSellersCount": 283,
+  "topPct": 78,
+  "midPct": 22,
   "lowPct": 0,
-  "topSellersCount": 82,
   "ranking": [
     {
-      "slug": "marionnaud",
-      "name": "Marionnaud",
-      "topSellerArticles": 82,
-      "potentialPct": 92
+      "brand": "Myorigines",
+      "count": 283,
+      "potentialPct": 71
     },
     {
-      "slug": "myorigines",
-      "name": "Myorigines",
-      "topSellerArticles": 29,
-      "potentialPct": 97
+      "brand": "Marionnaud",
+      "count": 80,
+      "potentialPct": 92
     }
   ]
 }

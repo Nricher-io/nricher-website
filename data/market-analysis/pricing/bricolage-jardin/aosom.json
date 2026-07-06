@@ -1,7 +1,7 @@
 {
   "slug": "aosom",
   "name": "Aosom",
-  "priceIndex": 100,
+  "priceIndex": 98,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": 100,
-      "lowerPct": 19,
-      "equalPct": 71,
-      "higherPct": 10
+      "matched": 138,
+      "pi": 96,
+      "lowerPct": 39,
+      "equalPct": 52,
+      "higherPct": 9
     },
     {
       "pack": "Canapé",
-      "priceIndex": 100,
-      "lowerPct": 17,
-      "equalPct": 70,
-      "higherPct": 13
+      "matched": 24,
+      "pi": 98,
+      "lowerPct": 29,
+      "equalPct": 63,
+      "higherPct": 8
     },
     {
       "pack": "Matelas",
-      "priceIndex": 97,
-      "lowerPct": 22,
-      "equalPct": 74,
+      "matched": 17,
+      "pi": 93,
+      "lowerPct": 51,
+      "equalPct": 45,
       "higherPct": 4
     },
     {
       "pack": "Lit",
-      "priceIndex": 99,
-      "lowerPct": 20,
-      "equalPct": 74,
-      "higherPct": 6
+      "matched": 65,
+      "pi": 102,
+      "lowerPct": 10,
+      "equalPct": 80,
+      "higherPct": 9
     },
     {
       "pack": "Commode",
-      "priceIndex": 100,
-      "lowerPct": 16,
+      "matched": 164,
+      "pi": 99,
+      "lowerPct": 18,
       "equalPct": 71,
-      "higherPct": 13
+      "higherPct": 11
     }
   ]
 }

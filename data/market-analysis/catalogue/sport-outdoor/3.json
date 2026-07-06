@@ -1,69 +1,64 @@
 {
   "packName": "Veste",
-  "totalArticles": 1882,
-  "topPct": 54,
-  "midPct": 34,
-  "lowPct": 12,
-  "topSellersCount": 1722,
+  "totalArticles": 1897,
+  "topSellersCount": 1707,
+  "topPct": 53,
+  "midPct": 30,
+  "lowPct": 17,
   "ranking": [
     {
-      "slug": "snowleader",
-      "name": "Snowleader",
-      "topSellerArticles": 1343,
-      "potentialPct": 29
+      "brand": "Snowleader",
+      "count": 1327,
+      "potentialPct": 30
     },
     {
-      "slug": "trekkinn",
-      "name": "Trekkinn",
-      "topSellerArticles": 379,
+      "brand": "Trekkinn",
+      "count": 380,
       "potentialPct": 80
     },
     {
-      "slug": "ekosport",
-      "name": "Ekosport",
-      "topSellerArticles": 374,
+      "brand": "Ekosport",
+      "count": 371,
       "potentialPct": 80
     },
     {
-      "slug": "hardloop",
-      "name": "Hardloop",
-      "topSellerArticles": 370,
-      "potentialPct": 80
+      "brand": "Hardloop",
+      "count": 367,
+      "potentialPct": 81
     },
     {
-      "slug": "alltricks",
-      "name": "Alltricks",
-      "topSellerArticles": 327,
-      "potentialPct": 83
+      "brand": "Alltricks",
+      "count": 236,
+      "potentialPct": 88
     },
     {
-      "slug": "irun",
-      "name": "Irun",
-      "topSellerArticles": 159,
+      "brand": "Irun",
+      "count": 156,
       "potentialPct": 92
     },
     {
-      "slug": "snowinn",
-      "name": "Snowinn",
-      "topSellerArticles": 130,
+      "brand": "Snowinn",
+      "count": 136,
       "potentialPct": 93
     },
     {
-      "slug": "glisshop",
-      "name": "Glisshop",
-      "topSellerArticles": 95,
+      "brand": "Zalando",
+      "count": 126,
+      "potentialPct": 93
+    },
+    {
+      "brand": "Glisshop",
+      "count": 88,
       "potentialPct": 95
     },
     {
-      "slug": "runnerinn",
-      "name": "Runnerinn",
-      "topSellerArticles": 14,
+      "brand": "Runnerinn",
+      "count": 16,
       "potentialPct": 99
     },
     {
-      "slug": "sports-partners",
-      "name": "Sports Partners",
-      "topSellerArticles": 2,
+      "brand": "Sports Partners",
+      "count": 1,
       "potentialPct": 100
     }
   ]

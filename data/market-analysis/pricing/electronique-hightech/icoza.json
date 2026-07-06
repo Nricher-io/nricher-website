@@ -1,7 +1,7 @@
 {
   "slug": "icoza",
   "name": "Icoza",
-  "priceIndex": 101,
+  "priceIndex": 100,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 101,
-      "lowerPct": 45,
-      "equalPct": 15,
-      "higherPct": 40
+      "matched": 46,
+      "pi": 102,
+      "lowerPct": 41,
+      "equalPct": 17,
+      "higherPct": 42
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 95,
-      "lowerPct": 50,
-      "equalPct": 13,
+      "matched": 156,
+      "pi": 95,
+      "lowerPct": 47,
+      "equalPct": 14,
       "higherPct": 38
     },
     {
       "pack": "Télévision",
-      "priceIndex": 103,
-      "lowerPct": 24,
-      "equalPct": 45,
-      "higherPct": 31
+      "matched": 229,
+      "pi": 101,
+      "lowerPct": 23,
+      "equalPct": 48,
+      "higherPct": 29
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 101,
-      "lowerPct": 41,
-      "equalPct": 7,
-      "higherPct": 52
+      "matched": 28,
+      "pi": 98,
+      "lowerPct": 55,
+      "equalPct": 13,
+      "higherPct": 32
     },
     {
       "pack": "Tablette",
-      "priceIndex": 97,
-      "lowerPct": 66,
-      "equalPct": 5,
-      "higherPct": 30
+      "matched": 32,
+      "pi": 94,
+      "lowerPct": 61,
+      "equalPct": 11,
+      "higherPct": 28
     }
   ]
 }

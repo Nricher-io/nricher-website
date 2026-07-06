@@ -1,0 +1,278 @@
+{
+  "slug": "the-white-stone",
+  "name": "The White Stone",
+  "priceIndex": 95,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        133,
+        141,
+        137,
+        137,
+        136,
+        135
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        123,
+        113,
+        117,
+        120,
+        113,
+        117
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        124,
+        122,
+        127,
+        124,
+        125,
+        133
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        146,
+        152,
+        154,
+        167,
+        169,
+        160
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        105,
+        104,
+        104,
+        103,
+        105,
+        105
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        101,
+        104,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        160,
+        162,
+        167,
+        150,
+        156,
+        159
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        158,
+        159,
+        158,
+        158,
+        156,
+        164
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        141,
+        143,
+        143,
+        132,
+        133,
+        134
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        103,
+        106,
+        105,
+        103,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        151,
+        147,
+        156,
+        154,
+        154,
+        152
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        138,
+        131,
+        136,
+        138,
+        135,
+        127
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        134,
+        139,
+        143,
+        138,
+        140,
+        138
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        109,
+        109,
+        110,
+        110,
+        111,
+        114
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        111,
+        112,
+        109,
+        117,
+        115,
+        117
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        115,
+        116,
+        114,
+        112,
+        115,
+        116
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        102,
+        104,
+        104,
+        104,
+        105,
+        104
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        97,
+        99,
+        100,
+        100,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        101,
+        100,
+        100,
+        102,
+        101,
+        102
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        114,
+        112,
+        116,
+        113,
+        116,
+        115
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Canapé",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Lit",
+      "matched": 60,
+      "pi": 94,
+      "lowerPct": 97,
+      "equalPct": 0,
+      "higherPct": 3
+    },
+    {
+      "pack": "Matelas",
+      "matched": 2235,
+      "pi": 95,
+      "lowerPct": 78,
+      "equalPct": 11,
+      "higherPct": 11
+    },
+    {
+      "pack": "Fauteuil",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Table à manger",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    }
+  ]
+}

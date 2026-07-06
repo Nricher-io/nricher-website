@@ -1,7 +1,7 @@
 {
   "slug": "julien",
   "name": "Julien",
-  "priceIndex": 94,
+  "priceIndex": 97,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": 94,
-      "lowerPct": 35,
-      "equalPct": 62,
+      "matched": 1967,
+      "pi": 97,
+      "lowerPct": 26,
+      "equalPct": 71,
       "higherPct": 3
     },
     {
       "pack": "Lit",
-      "priceIndex": 91,
-      "lowerPct": 34,
+      "matched": 32,
+      "pi": 96,
+      "lowerPct": 32,
       "equalPct": 65,
-      "higherPct": 2
+      "higherPct": 3
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 100,
+      "matched": 1,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0

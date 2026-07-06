@@ -1,7 +1,7 @@
 {
   "slug": "komhtom",
   "name": "Komhtom",
-  "priceIndex": 90,
+  "priceIndex": 88,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "priceIndex": 90,
+      "matched": 244,
+      "pi": 90,
       "lowerPct": 92,
       "equalPct": 1,
-      "higherPct": 7
+      "higherPct": 8
     },
     {
       "pack": "Lit",
-      "priceIndex": 87,
+      "matched": 520,
+      "pi": 86,
       "lowerPct": 94,
       "equalPct": 0,
       "higherPct": 6
     },
     {
       "pack": "Matelas",
-      "priceIndex": 93,
+      "matched": 5,
+      "pi": 95,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Fauteuil",
-      "priceIndex": 75,
+      "matched": 13,
+      "pi": 77,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 86,
+      "matched": 6,
+      "pi": 86,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0

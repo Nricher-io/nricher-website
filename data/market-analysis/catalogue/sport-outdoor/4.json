@@ -1,69 +1,64 @@
 {
   "packName": "T-shirt",
-  "totalArticles": 3508,
-  "topPct": 59,
-  "midPct": 29,
-  "lowPct": 12,
-  "topSellersCount": 3391,
+  "totalArticles": 3518,
+  "topSellersCount": 3228,
+  "topPct": 57,
+  "midPct": 26,
+  "lowPct": 17,
   "ranking": [
     {
-      "slug": "snowleader",
-      "name": "Snowleader",
-      "topSellerArticles": 2516,
-      "potentialPct": 28
+      "brand": "Snowleader",
+      "count": 2364,
+      "potentialPct": 33
     },
     {
-      "slug": "trekkinn",
-      "name": "Trekkinn",
-      "topSellerArticles": 875,
+      "brand": "Ekosport",
+      "count": 864,
       "potentialPct": 75
     },
     {
-      "slug": "ekosport",
-      "name": "Ekosport",
-      "topSellerArticles": 873,
-      "potentialPct": 75
+      "brand": "Trekkinn",
+      "count": 832,
+      "potentialPct": 76
     },
     {
-      "slug": "alltricks",
-      "name": "Alltricks",
-      "topSellerArticles": 442,
-      "potentialPct": 87
-    },
-    {
-      "slug": "irun",
-      "name": "Irun",
-      "topSellerArticles": 339,
-      "potentialPct": 90
-    },
-    {
-      "slug": "hardloop",
-      "name": "Hardloop",
-      "topSellerArticles": 321,
+      "brand": "Hardloop",
+      "count": 321,
       "potentialPct": 91
     },
     {
-      "slug": "glisshop",
-      "name": "Glisshop",
-      "topSellerArticles": 243,
+      "brand": "Irun",
+      "count": 317,
+      "potentialPct": 91
+    },
+    {
+      "brand": "Alltricks",
+      "count": 294,
+      "potentialPct": 92
+    },
+    {
+      "brand": "Zalando",
+      "count": 245,
       "potentialPct": 93
     },
     {
-      "slug": "runnerinn",
-      "name": "Runnerinn",
-      "topSellerArticles": 113,
+      "brand": "Glisshop",
+      "count": 214,
+      "potentialPct": 94
+    },
+    {
+      "brand": "Runnerinn",
+      "count": 111,
       "potentialPct": 97
     },
     {
-      "slug": "snowinn",
-      "name": "Snowinn",
-      "topSellerArticles": 65,
+      "brand": "Snowinn",
+      "count": 59,
       "potentialPct": 98
     },
     {
-      "slug": "an-mai-mao-yi",
-      "name": "An Mai Mao Yi",
-      "topSellerArticles": 1,
+      "brand": "An Mai Mao Yi",
+      "count": 1,
       "potentialPct": 100
     }
   ]

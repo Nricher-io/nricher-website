@@ -1,0 +1,168 @@
+{
+  "slug": "sports-partners",
+  "name": "Sports Partners",
+  "priceIndex": 82,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "AllTricks",
+      "piHistory": [
+        110,
+        109,
+        108,
+        105,
+        104,
+        113
+      ]
+    },
+    {
+      "name": "Ekosport",
+      "piHistory": [
+        112,
+        111,
+        102,
+        103,
+        102,
+        122
+      ]
+    },
+    {
+      "name": "Runnerinn",
+      "piHistory": [
+        111,
+        112,
+        110,
+        116,
+        115,
+        114
+      ]
+    },
+    {
+      "name": "Snowinn",
+      "piHistory": [
+        102,
+        97,
+        104,
+        102,
+        93,
+        93
+      ]
+    },
+    {
+      "name": "Snowleader",
+      "piHistory": [
+        111,
+        110,
+        106,
+        105,
+        104,
+        114
+      ]
+    },
+    {
+      "name": "Trekkinn",
+      "piHistory": [
+        117,
+        116,
+        115,
+        114,
+        113,
+        109
+      ]
+    },
+    {
+      "name": "Irun",
+      "piHistory": [
+        108,
+        105,
+        103,
+        104,
+        null,
+        109
+      ]
+    },
+    {
+      "name": "Glisshop",
+      "piHistory": [
+        122,
+        123,
+        116,
+        115,
+        113,
+        121
+      ]
+    },
+    {
+      "name": "Hardloop",
+      "piHistory": [
+        110,
+        110,
+        109,
+        109,
+        109,
+        110
+      ]
+    },
+    {
+      "name": "Salomon",
+      "piHistory": [
+        85,
+        86,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Chaussures de trail",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Chaussures de randonnée",
+      "matched": 1,
+      "pi": 94,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Sac à dos",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Veste",
+      "matched": 1,
+      "pi": 70,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "T-shirt",
+      "matched": 0,
+      "pi": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    }
+  ]
+}

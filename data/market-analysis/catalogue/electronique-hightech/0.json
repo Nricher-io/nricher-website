@@ -1,81 +1,69 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 6478,
-  "topPct": 51,
-  "midPct": 26,
-  "lowPct": 23,
-  "topSellersCount": 4177,
+  "totalArticles": 6249,
+  "topSellersCount": 3881,
+  "topPct": 49,
+  "midPct": 27,
+  "lowPct": 24,
   "ranking": [
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 1238,
-      "potentialPct": 81
+      "brand": "House Partners",
+      "count": 1114,
+      "potentialPct": 82
     },
     {
-      "slug": "alloccaz",
-      "name": "Alloccaz",
-      "topSellerArticles": 770,
-      "potentialPct": 88
-    },
-    {
-      "slug": "ecofone",
-      "name": "Ecofone",
-      "topSellerArticles": 756,
-      "potentialPct": 88
-    },
-    {
-      "slug": "junmingshop",
-      "name": "Junmingshop",
-      "topSellerArticles": 695,
+      "brand": "Ecofone",
+      "count": 715,
       "potentialPct": 89
     },
     {
-      "slug": "darty",
-      "name": "Darty",
-      "topSellerArticles": 374,
+      "brand": "Junmingshop",
+      "count": 686,
+      "potentialPct": 89
+    },
+    {
+      "brand": "Alloccaz",
+      "count": 661,
+      "potentialPct": 89
+    },
+    {
+      "brand": "Darty",
+      "count": 360,
       "potentialPct": 94
     },
     {
-      "slug": "carrefour",
-      "name": "Carrefour",
-      "topSellerArticles": 344,
+      "brand": "Carrefour",
+      "count": 345,
+      "potentialPct": 94
+    },
+    {
+      "brand": "Boulanger",
+      "count": 307,
       "potentialPct": 95
     },
     {
-      "slug": "boulanger",
-      "name": "Boulanger",
-      "topSellerArticles": 342,
+      "brand": "Rps Technologies",
+      "count": 298,
       "potentialPct": 95
     },
     {
-      "slug": "cheng-tech",
-      "name": "Cheng Tech",
-      "topSellerArticles": 289,
+      "brand": "Cheng Tech",
+      "count": 287,
+      "potentialPct": 95
+    },
+    {
+      "brand": "Multishop",
+      "count": 250,
       "potentialPct": 96
     },
     {
-      "slug": "multishop",
-      "name": "Multishop",
-      "topSellerArticles": 256,
+      "brand": "Zoomici",
+      "count": 223,
       "potentialPct": 96
     },
     {
-      "slug": "rps-technologies",
-      "name": "Rps Technologies",
-      "topSellerArticles": 242,
-      "potentialPct": 96
-    },
-    {
-      "slug": "zoomici",
-      "name": "Zoomici",
-      "topSellerArticles": 234,
-      "potentialPct": 96
-    },
-    {
-      "slug": "auchan",
-      "name": "Auchan",
-      "topSellerArticles": 227,
+      "brand": "Auchan",
+      "count": 219,
       "potentialPct": 96
     }
   ]

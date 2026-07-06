@@ -1,7 +1,7 @@
 {
   "slug": "kiatoo",
   "name": "Kiatoo",
-  "priceIndex": 9,
+  "priceIndex": 95,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 9,
+      "matched": 1,
+      "pi": 9,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 95,
+      "matched": 392,
+      "pi": 95,
       "lowerPct": 71,
-      "equalPct": 16,
+      "equalPct": 15,
       "higherPct": 13
     },
     {
       "pack": "Télévision",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Casque audio",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Tablette",
-      "priceIndex": 123,
-      "lowerPct": 75,
+      "matched": 9,
+      "pi": 139,
+      "lowerPct": 67,
       "equalPct": 0,
-      "higherPct": 25
+      "higherPct": 33
     }
   ]
 }

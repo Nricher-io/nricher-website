@@ -1,81 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 16610,
-  "topPct": 75,
-  "midPct": 16,
-  "lowPct": 9,
-  "topSellersCount": 9620,
+  "totalArticles": 22056,
+  "topSellersCount": 11513,
+  "topPct": 72,
+  "midPct": 17,
+  "lowPct": 11,
   "ranking": [
     {
-      "slug": "les-tendances",
-      "name": "Les Tendances",
-      "topSellerArticles": 3478,
-      "potentialPct": 79
+      "brand": "Les Tendances",
+      "count": 3774,
+      "potentialPct": 83
     },
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 2348,
-      "potentialPct": 86
+      "brand": "Vidaxl",
+      "count": 3574,
+      "potentialPct": 84
     },
     {
-      "slug": "best-mobilier",
-      "name": "Best Mobilier",
-      "topSellerArticles": 1667,
-      "potentialPct": 90
-    },
-    {
-      "slug": "beliani",
-      "name": "Beliani",
-      "topSellerArticles": 1301,
+      "brand": "Best Mobilier",
+      "count": 1684,
       "potentialPct": 92
     },
     {
-      "slug": "silverstore",
-      "name": "Silverstore",
-      "topSellerArticles": 496,
+      "brand": "Beliani",
+      "count": 1369,
+      "potentialPct": 94
+    },
+    {
+      "brand": "Shopnova",
+      "count": 626,
       "potentialPct": 97
     },
     {
-      "slug": "dmora",
-      "name": "Dmora",
-      "topSellerArticles": 330,
+      "brand": "Casanova Paris",
+      "count": 486,
       "potentialPct": 98
     },
     {
-      "slug": "mercatoxl",
-      "name": "Mercatoxl",
-      "topSellerArticles": 291,
+      "brand": "Silverstore",
+      "count": 342,
       "potentialPct": 98
     },
     {
-      "slug": "rama-shop",
-      "name": "Rama Shop",
-      "topSellerArticles": 277,
+      "brand": "Rama Shop",
+      "count": 336,
       "potentialPct": 98
     },
     {
-      "slug": "cdiscount",
-      "name": "Cdiscount",
-      "topSellerArticles": 263,
+      "brand": "Dmora",
+      "count": 332,
       "potentialPct": 98
     },
     {
-      "slug": "paris-prix",
-      "name": "Paris Prix",
-      "topSellerArticles": 252,
-      "potentialPct": 98
-    },
-    {
-      "slug": "komhtom",
-      "name": "Komhtom",
-      "topSellerArticles": 241,
+      "brand": "Mercatoxl",
+      "count": 326,
       "potentialPct": 99
     },
     {
-      "slug": "super10count",
-      "name": "Super10count",
-      "topSellerArticles": 240,
+      "brand": "Go Garden",
+      "count": 311,
+      "potentialPct": 99
+    },
+    {
+      "brand": "Cornero",
+      "count": 306,
       "potentialPct": 99
     }
   ]

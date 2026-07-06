@@ -1,82 +1,70 @@
 {
   "packName": "Télévision",
-  "totalArticles": 2039,
-  "topPct": 48,
-  "midPct": 30,
+  "totalArticles": 2061,
+  "topSellersCount": 1217,
+  "topPct": 49,
+  "midPct": 29,
   "lowPct": 22,
-  "topSellersCount": 1250,
   "ranking": [
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 306,
-      "potentialPct": 85
+      "brand": "House Partners",
+      "count": 291,
+      "potentialPct": 86
     },
     {
-      "slug": "boulanger",
-      "name": "Boulanger",
-      "topSellerArticles": 261,
+      "brand": "Boulanger",
+      "count": 264,
       "potentialPct": 87
     },
     {
-      "slug": "icoza",
-      "name": "Icoza",
-      "topSellerArticles": 248,
-      "potentialPct": 88
+      "brand": "Icoza",
+      "count": 229,
+      "potentialPct": 89
     },
     {
-      "slug": "darty",
-      "name": "Darty",
-      "topSellerArticles": 194,
-      "potentialPct": 90
+      "brand": "Darty",
+      "count": 179,
+      "potentialPct": 91
     },
     {
-      "slug": "gpasplus",
-      "name": "Gpasplus",
-      "topSellerArticles": 130,
+      "brand": "Gpasplus",
+      "count": 136,
+      "potentialPct": 93
+    },
+    {
+      "brand": "Super10count",
+      "count": 118,
       "potentialPct": 94
     },
     {
-      "slug": "super10count",
-      "name": "Super10count",
-      "topSellerArticles": 111,
+      "brand": "Monsieurplus",
+      "count": 107,
       "potentialPct": 95
     },
     {
-      "slug": "monsieurplus",
-      "name": "Monsieurplus",
-      "topSellerArticles": 110,
+      "brand": "But",
+      "count": 96,
       "potentialPct": 95
     },
     {
-      "slug": "bighub",
-      "name": "Bighub",
-      "topSellerArticles": 104,
-      "potentialPct": 95
-    },
-    {
-      "slug": "you-get-innovation-&-technology",
-      "name": "You Get Innovation & Technology",
-      "topSellerArticles": 94,
-      "potentialPct": 95
-    },
-    {
-      "slug": "rue-du-commerce",
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 92,
-      "potentialPct": 95
-    },
-    {
-      "slug": "but",
-      "name": "But",
-      "topSellerArticles": 91,
+      "brand": "Rue Du Commerce",
+      "count": 89,
       "potentialPct": 96
     },
     {
-      "slug": "carrefour",
-      "name": "Carrefour",
-      "topSellerArticles": 78,
+      "brand": "You Get Innovation & Technology",
+      "count": 84,
       "potentialPct": 96
+    },
+    {
+      "brand": "Carrefour",
+      "count": 76,
+      "potentialPct": 96
+    },
+    {
+      "brand": "Cdiscount",
+      "count": 72,
+      "potentialPct": 97
     }
   ]
 }

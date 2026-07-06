@@ -236,36 +236,41 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": 100,
+      "matched": 99,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 100,
+      "matched": 84,
+      "pi": 100,
       "lowerPct": 0,
-      "equalPct": 98,
-      "higherPct": 2
+      "equalPct": 97,
+      "higherPct": 3
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 100,
-      "lowerPct": 1,
+      "matched": 35,
+      "pi": 101,
+      "lowerPct": 0,
       "equalPct": 96,
       "higherPct": 4
     }

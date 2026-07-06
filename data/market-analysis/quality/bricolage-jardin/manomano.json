@@ -1,53 +1,53 @@
 {
   "slug": "manomano",
   "name": "Manomano",
-  "articlesAnalysed": 1690156,
-  "qualityScore": 73,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 37,
-    "B": 21,
-    "C": 19,
-    "D": 12,
-    "E": 7,
-    "F": 5
-  },
+  "articlesAnalysed": 1523225,
+  "qualityScore": 74,
+  "globalGrades": [
+    0,
+    38,
+    20,
+    18,
+    11,
+    7,
+    5
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 70,
-      "A": 8,
-      "B": 7,
-      "C": 8,
-      "D": 3,
-      "E": 2,
-      "F": 2
-    },
-    "Image": {
-      "Aplus": 1,
-      "A": 56,
-      "B": 14,
-      "C": 6,
-      "D": 0,
-      "E": 7,
-      "F": 15
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 100
-    },
-    "Description": {
-      "Aplus": 45,
-      "A": 9,
-      "B": 8,
-      "C": 10,
-      "D": 6,
-      "E": 5,
-      "F": 17
-    }
+    "Titre": [
+      72,
+      7,
+      6,
+      8,
+      3,
+      2,
+      2
+    ],
+    "Image": [
+      1,
+      56,
+      14,
+      6,
+      0,
+      7,
+      15
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      46,
+      9,
+      8,
+      9,
+      6,
+      5,
+      17
+    ]
   }
 }

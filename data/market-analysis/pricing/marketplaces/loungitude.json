@@ -1,7 +1,7 @@
 {
   "slug": "loungitude",
   "name": "Loungitude",
-  "priceIndex": 99,
+  "priceIndex": 100,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": 99,
-      "lowerPct": 9,
+      "matched": 935,
+      "pi": 99,
+      "lowerPct": 8,
       "equalPct": 87,
       "higherPct": 5
     },
     {
       "pack": "Matelas",
-      "priceIndex": 100,
+      "matched": 2,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 101,
+      "matched": 27,
+      "pi": 101,
       "lowerPct": 0,
-      "equalPct": 95,
-      "higherPct": 5
+      "equalPct": 94,
+      "higherPct": 6
     },
     {
       "pack": "Table à manger",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

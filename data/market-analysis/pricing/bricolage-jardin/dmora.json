@@ -1,7 +1,7 @@
 {
   "slug": "dmora",
   "name": "Dmora",
-  "priceIndex": 111,
+  "priceIndex": 99,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": 111,
+      "matched": 62,
+      "pi": 111,
       "lowerPct": 36,
-      "equalPct": 10,
-      "higherPct": 54
+      "equalPct": 11,
+      "higherPct": 53
     },
     {
       "pack": "Canapé",
-      "priceIndex": 92,
-      "lowerPct": 88,
-      "equalPct": 2,
-      "higherPct": 10
+      "matched": 192,
+      "pi": 93,
+      "lowerPct": 80,
+      "equalPct": 7,
+      "higherPct": 13
     },
     {
       "pack": "Matelas",
-      "priceIndex": 98,
-      "lowerPct": 69,
-      "equalPct": 2,
-      "higherPct": 30
+      "matched": 130,
+      "pi": 98,
+      "lowerPct": 68,
+      "equalPct": 3,
+      "higherPct": 28
     },
     {
       "pack": "Lit",
-      "priceIndex": 97,
-      "lowerPct": 84,
-      "equalPct": 0,
-      "higherPct": 16
+      "matched": 107,
+      "pi": 97,
+      "lowerPct": 76,
+      "equalPct": 5,
+      "higherPct": 19
     },
     {
       "pack": "Commode",
-      "priceIndex": 100,
+      "matched": 343,
+      "pi": 100,
       "lowerPct": 54,
-      "equalPct": 12,
-      "higherPct": 34
+      "equalPct": 13,
+      "higherPct": 32
     }
   ]
 }

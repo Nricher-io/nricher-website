@@ -1,7 +1,7 @@
 {
   "slug": "lilis",
   "name": "Lilis",
-  "priceIndex": 98,
+  "priceIndex": 88,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -181,35 +181,40 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 98,
+      "matched": 12,
+      "pi": 98,
       "lowerPct": 92,
       "equalPct": 0,
       "higherPct": 8
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 81,
+      "matched": 9,
+      "pi": 75,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 90,
+      "matched": 2,
+      "pi": 76,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 99,
+      "matched": 1,
+      "pi": 98,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

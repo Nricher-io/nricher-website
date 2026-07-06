@@ -1,0 +1,278 @@
+{
+  "slug": "house-partners",
+  "name": "House Partners",
+  "priceIndex": 100,
+  "weeks": [
+    "2026-05-26",
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        121,
+        135,
+        124,
+        119,
+        120,
+        139
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        129,
+        126,
+        132,
+        133,
+        126,
+        126
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        126,
+        125,
+        122,
+        123,
+        123,
+        123
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        113,
+        110,
+        115,
+        112,
+        115,
+        112
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        132,
+        132,
+        134,
+        137,
+        142,
+        135
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        141,
+        140,
+        141,
+        140,
+        139,
+        143
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        127,
+        127,
+        128,
+        129,
+        128,
+        129
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        113,
+        116,
+        116,
+        111,
+        110,
+        106
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        155,
+        156,
+        158,
+        150,
+        151,
+        145
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        116,
+        107,
+        104,
+        105,
+        107,
+        110
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        128,
+        127,
+        132,
+        129,
+        131,
+        131
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        111,
+        110,
+        113,
+        111,
+        112,
+        112
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        125,
+        116,
+        120,
+        136,
+        138,
+        129
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        114,
+        114,
+        114,
+        113,
+        115,
+        114
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        109,
+        109,
+        110,
+        109,
+        109,
+        108
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        108,
+        112,
+        115,
+        116,
+        115,
+        113
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        103,
+        109,
+        107,
+        109,
+        112,
+        109
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        103,
+        103,
+        103,
+        103,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        114,
+        113,
+        118,
+        115,
+        115,
+        116
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        111,
+        110,
+        112,
+        112,
+        109,
+        109
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "matched": 1114,
+      "pi": 101,
+      "lowerPct": 43,
+      "equalPct": 6,
+      "higherPct": 50
+    },
+    {
+      "pack": "Ordinateur portable",
+      "matched": 126,
+      "pi": 96,
+      "lowerPct": 60,
+      "equalPct": 7,
+      "higherPct": 33
+    },
+    {
+      "pack": "Télévision",
+      "matched": 291,
+      "pi": 98,
+      "lowerPct": 56,
+      "equalPct": 5,
+      "higherPct": 38
+    },
+    {
+      "pack": "Casque audio",
+      "matched": 466,
+      "pi": 100,
+      "lowerPct": 45,
+      "equalPct": 12,
+      "higherPct": 43
+    },
+    {
+      "pack": "Tablette",
+      "matched": 193,
+      "pi": 101,
+      "lowerPct": 45,
+      "equalPct": 6,
+      "higherPct": 49
+    }
+  ]
+}

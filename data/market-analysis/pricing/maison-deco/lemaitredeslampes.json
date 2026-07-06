@@ -122,6 +122,17 @@
       ]
     },
     {
+      "name": "Lemaitredeslampes",
+      "piHistory": [
+        102,
+        103,
+        null,
+        102,
+        102,
+        104
+      ]
+    },
+    {
       "name": "Silvera",
       "piHistory": [
         103,
@@ -169,37 +180,37 @@
   "attractiveness": [
     {
       "week": "2026-05-19",
-      "cheaperPct": 23,
+      "lowerPct": 23,
       "equalPct": 49,
       "higherPct": 28
     },
     {
       "week": "2026-05-26",
-      "cheaperPct": 27,
+      "lowerPct": 27,
       "equalPct": 49,
       "higherPct": 25
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 25,
+      "lowerPct": 25,
       "equalPct": 49,
       "higherPct": 26
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 27,
+      "lowerPct": 27,
       "equalPct": 48,
       "higherPct": 25
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 28,
+      "lowerPct": 28,
       "equalPct": 47,
       "higherPct": 24
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 26,
+      "lowerPct": 26,
       "equalPct": 51,
       "higherPct": 23
     }
@@ -207,37 +218,42 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 104,
-      "lowerPct": 30,
-      "equalPct": 39,
-      "higherPct": 31
+      "matched": 740,
+      "pi": 103,
+      "lowerPct": 33,
+      "equalPct": 40,
+      "higherPct": 28
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 104,
-      "lowerPct": 32,
-      "equalPct": 29,
+      "matched": 631,
+      "pi": 105,
+      "lowerPct": 33,
+      "equalPct": 28,
       "higherPct": 39
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 107,
-      "lowerPct": 25,
-      "equalPct": 35,
-      "higherPct": 40
+      "matched": 104,
+      "pi": 106,
+      "lowerPct": 27,
+      "equalPct": 37,
+      "higherPct": 37
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 103,
-      "lowerPct": 30,
-      "equalPct": 41,
-      "higherPct": 28
+      "matched": 236,
+      "pi": 103,
+      "lowerPct": 26,
+      "equalPct": 45,
+      "higherPct": 29
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": 103,
-      "lowerPct": 18,
-      "equalPct": 59,
+      "matched": 142,
+      "pi": 103,
+      "lowerPct": 25,
+      "equalPct": 53,
       "higherPct": 23
     }
   ]

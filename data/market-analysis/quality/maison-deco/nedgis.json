@@ -1,53 +1,53 @@
 {
   "slug": "nedgis",
   "name": "Nedgis",
-  "articlesAnalysed": 27492,
-  "qualityScore": 81,
-  "globalGrades": {
-    "Aplus": 1,
-    "A": 32,
-    "B": 43,
-    "C": 21,
-    "D": 2,
-    "E": 1,
-    "F": 0
-  },
+  "articlesAnalysed": 7948,
+  "qualityScore": 80,
+  "globalGrades": [
+    1,
+    30,
+    37,
+    27,
+    3,
+    1,
+    0
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 71,
-      "A": 12,
-      "B": 11,
-      "C": 6,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Image": {
-      "Aplus": 12,
-      "A": 9,
-      "B": 14,
-      "C": 21,
-      "D": 0,
-      "E": 25,
-      "F": 20
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 100
-    },
-    "Description": {
-      "Aplus": 92,
-      "A": 5,
-      "B": 2,
-      "C": 1,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    }
+    "Titre": [
+      73,
+      11,
+      10,
+      6,
+      0,
+      0,
+      0
+    ],
+    "Image": [
+      12,
+      8,
+      13,
+      18,
+      0,
+      21,
+      27
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      91,
+      5,
+      2,
+      1,
+      0,
+      1,
+      1
+    ]
   }
 }

@@ -1,82 +1,70 @@
 {
   "packName": "Tablette",
-  "totalArticles": 1625,
-  "topPct": 50,
-  "midPct": 30,
+  "totalArticles": 1620,
+  "topSellersCount": 732,
+  "topPct": 48,
+  "midPct": 32,
   "lowPct": 20,
-  "topSellersCount": 785,
   "ranking": [
     {
-      "slug": "multishop",
-      "name": "Multishop",
-      "topSellerArticles": 186,
-      "potentialPct": 89
+      "brand": "House Partners",
+      "count": 193,
+      "potentialPct": 88
     },
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 184,
-      "potentialPct": 89
+      "brand": "Multishop",
+      "count": 149,
+      "potentialPct": 91
     },
     {
-      "slug": "gpasplus",
-      "name": "Gpasplus",
-      "topSellerArticles": 110,
+      "brand": "Yonis Shop",
+      "count": 113,
       "potentialPct": 93
     },
     {
-      "slug": "yonis-shop",
-      "name": "Yonis Shop",
-      "topSellerArticles": 109,
-      "potentialPct": 93
-    },
-    {
-      "slug": "cdiscount",
-      "name": "Cdiscount",
-      "topSellerArticles": 99,
+      "brand": "Gpasplus",
+      "count": 99,
       "potentialPct": 94
     },
     {
-      "slug": "boulanger",
-      "name": "Boulanger",
-      "topSellerArticles": 97,
+      "brand": "Cdiscount",
+      "count": 93,
       "potentialPct": 94
     },
     {
-      "slug": "rps-technologies",
-      "name": "Rps Technologies",
-      "topSellerArticles": 81,
+      "brand": "Boulanger",
+      "count": 85,
       "potentialPct": 95
     },
     {
-      "slug": "rue-du-commerce",
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 69,
+      "brand": "Rps Technologies",
+      "count": 73,
+      "potentialPct": 95
+    },
+    {
+      "brand": "Rue Du Commerce",
+      "count": 68,
       "potentialPct": 96
     },
     {
-      "slug": "carrefour",
-      "name": "Carrefour",
-      "topSellerArticles": 60,
+      "brand": "2kings",
+      "count": 67,
       "potentialPct": 96
     },
     {
-      "slug": "infopavon",
-      "name": "Infopavon",
-      "topSellerArticles": 59,
+      "brand": "Carrefour",
+      "count": 61,
       "potentialPct": 96
     },
     {
-      "slug": "zoomici",
-      "name": "Zoomici",
-      "topSellerArticles": 48,
+      "brand": "Monsieurplus",
+      "count": 51,
       "potentialPct": 97
     },
     {
-      "slug": "2kings",
-      "name": "2kings",
-      "topSellerArticles": 40,
-      "potentialPct": 98
+      "brand": "Zoomici",
+      "count": 51,
+      "potentialPct": 97
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "actisom",
   "name": "Actisom",
-  "priceIndex": 93,
+  "priceIndex": 97,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": 93,
-      "lowerPct": 50,
-      "equalPct": 5,
-      "higherPct": 44
+      "matched": 525,
+      "pi": 97,
+      "lowerPct": 41,
+      "equalPct": 6,
+      "higherPct": 53
     },
     {
       "pack": "Lit",
-      "priceIndex": 89,
-      "lowerPct": 53,
-      "equalPct": 5,
-      "higherPct": 42
+      "matched": 6,
+      "pi": 102,
+      "lowerPct": 35,
+      "equalPct": 6,
+      "higherPct": 59
     },
     {
       "pack": "Commode",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

@@ -1,7 +1,7 @@
 {
   "slug": "zoomici",
   "name": "Zoomici",
-  "priceIndex": 101,
+  "priceIndex": 97,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 101,
-      "lowerPct": 55,
+      "matched": 223,
+      "pi": 94,
+      "lowerPct": 58,
       "equalPct": 4,
-      "higherPct": 41
+      "higherPct": 38
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 103,
+      "matched": 108,
+      "pi": 100,
       "lowerPct": 50,
-      "equalPct": 5,
-      "higherPct": 44
+      "equalPct": 10,
+      "higherPct": 40
     },
     {
       "pack": "Télévision",
-      "priceIndex": 104,
-      "lowerPct": 67,
-      "equalPct": 7,
-      "higherPct": 27
+      "matched": 44,
+      "pi": 90,
+      "lowerPct": 82,
+      "equalPct": 2,
+      "higherPct": 16
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 97,
-      "lowerPct": 43,
-      "equalPct": 6,
-      "higherPct": 51
+      "matched": 205,
+      "pi": 99,
+      "lowerPct": 47,
+      "equalPct": 4,
+      "higherPct": 49
     },
     {
       "pack": "Tablette",
-      "priceIndex": 107,
-      "lowerPct": 38,
-      "equalPct": 0,
-      "higherPct": 62
+      "matched": 51,
+      "pi": 100,
+      "lowerPct": 56,
+      "equalPct": 6,
+      "higherPct": 37
     }
   ]
 }

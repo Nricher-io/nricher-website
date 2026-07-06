@@ -1,7 +1,7 @@
 {
   "slug": "super10count",
   "name": "Super10count",
-  "priceIndex": 84,
+  "priceIndex": 73,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 84,
-      "lowerPct": 98,
-      "equalPct": 0,
-      "higherPct": 2
+      "matched": 33,
+      "pi": 85,
+      "lowerPct": 91,
+      "equalPct": 2,
+      "higherPct": 7
     },
     {
       "pack": "Canapé",
-      "priceIndex": 73,
-      "lowerPct": 100,
+      "matched": 230,
+      "pi": 74,
+      "lowerPct": 99,
       "equalPct": 0,
-      "higherPct": 0
+      "higherPct": 1
     },
     {
       "pack": "Matelas",
-      "priceIndex": 62,
+      "matched": 43,
+      "pi": 59,
+      "lowerPct": 88,
+      "equalPct": 1,
+      "higherPct": 11
+    },
+    {
+      "pack": "Lit",
+      "matched": 64,
+      "pi": 71,
       "lowerPct": 92,
       "equalPct": 2,
       "higherPct": 6
     },
     {
-      "pack": "Lit",
-      "priceIndex": 70,
-      "lowerPct": 95,
-      "equalPct": 2,
-      "higherPct": 3
-    },
-    {
       "pack": "Table à manger",
-      "priceIndex": 77,
-      "lowerPct": 87,
-      "equalPct": 7,
-      "higherPct": 6
+      "matched": 67,
+      "pi": 78,
+      "lowerPct": 84,
+      "equalPct": 8,
+      "higherPct": 8
     }
   ]
 }

@@ -8,67 +8,67 @@
   {
     "slug": "bq",
     "name": "Bq",
-    "articlesAnalysed": 1859235,
+    "articlesAnalysed": 1814304,
     "qualityScore": 76
   },
   {
     "slug": "cdiscount",
     "name": "Cdiscount",
-    "articlesAnalysed": 1180654,
-    "qualityScore": 75
-  },
-  {
-    "slug": "amazon",
-    "name": "Amazon",
-    "articlesAnalysed": 241804,
-    "qualityScore": 74
+    "articlesAnalysed": 1097686,
+    "qualityScore": 76
   },
   {
     "slug": "manomano",
     "name": "Manomano",
-    "articlesAnalysed": 1690156,
-    "qualityScore": 73
+    "articlesAnalysed": 1523225,
+    "qualityScore": 74
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "articlesAnalysed": 241868,
+    "qualityScore": 74
   },
   {
     "slug": "castorama",
     "name": "Castorama",
-    "articlesAnalysed": 1036377,
+    "articlesAnalysed": 989976,
     "qualityScore": 72
   },
   {
     "slug": "leroy-merlin",
     "name": "Leroy Merlin",
-    "articlesAnalysed": 463098,
+    "articlesAnalysed": 443080,
     "qualityScore": 69
   },
   {
     "slug": "conforama",
     "name": "Conforama",
-    "articlesAnalysed": 394160,
-    "qualityScore": 64
+    "articlesAnalysed": 365929,
+    "qualityScore": 63
   },
   {
     "slug": "auchan",
     "name": "Auchan",
-    "articlesAnalysed": 48146,
+    "articlesAnalysed": 50193,
     "qualityScore": 62
   },
   {
     "slug": "la-redoute",
     "name": "La Redoute",
-    "articlesAnalysed": 347606,
+    "articlesAnalysed": 344545,
     "qualityScore": 60
   },
   {
     "slug": "vente-unique",
     "name": "Vente Unique",
-    "articlesAnalysed": 677458,
+    "articlesAnalysed": 674111,
     "qualityScore": 58
   },
   {
     "slug": "maxibazar",
     "name": "Maxibazar",
-    "articlesAnalysed": 7478,
+    "articlesAnalysed": 7394,
     "qualityScore": 32
   }
 ]

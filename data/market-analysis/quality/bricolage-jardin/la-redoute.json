@@ -1,53 +1,53 @@
 {
   "slug": "la-redoute",
-  "name": "la-redoute",
-  "articlesAnalysed": 0,
-  "qualityScore": 0,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 0,
-    "B": 0,
-    "C": 0,
-    "D": 0,
-    "E": 0,
-    "F": 0
-  },
+  "name": "La Redoute",
+  "articlesAnalysed": 344545,
+  "qualityScore": 60,
+  "globalGrades": [
+    0,
+    3,
+    13,
+    36,
+    20,
+    17,
+    10
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Image": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Description": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    }
+    "Titre": [
+      4,
+      4,
+      7,
+      24,
+      20,
+      18,
+      23
+    ],
+    "Image": [
+      38,
+      20,
+      14,
+      13,
+      0,
+      10,
+      5
+    ],
+    "Vidéo": [
+      0,
+      4,
+      0,
+      0,
+      0,
+      0,
+      95
+    ],
+    "Description": [
+      48,
+      8,
+      8,
+      10,
+      7,
+      7,
+      11
+    ]
   }
 }

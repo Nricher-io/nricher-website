@@ -1,7 +1,7 @@
 {
   "slug": "leasi",
   "name": "Leasi",
-  "priceIndex": 90,
+  "priceIndex": 99,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 90,
-      "lowerPct": 70,
+      "matched": 60,
+      "pi": 97,
+      "lowerPct": 65,
       "equalPct": 1,
-      "higherPct": 28
+      "higherPct": 33
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 95,
-      "lowerPct": 60,
-      "equalPct": 3,
-      "higherPct": 37
+      "matched": 150,
+      "pi": 97,
+      "lowerPct": 54,
+      "equalPct": 8,
+      "higherPct": 39
     },
     {
       "pack": "Télévision",
-      "priceIndex": 108,
-      "lowerPct": 36,
-      "equalPct": 4,
-      "higherPct": 60
+      "matched": 47,
+      "pi": 111,
+      "lowerPct": 32,
+      "equalPct": 7,
+      "higherPct": 62
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 80,
-      "lowerPct": 73,
-      "equalPct": 0,
-      "higherPct": 27
+      "matched": 25,
+      "pi": 85,
+      "lowerPct": 61,
+      "equalPct": 11,
+      "higherPct": 29
     },
     {
       "pack": "Tablette",
-      "priceIndex": 96,
-      "lowerPct": 64,
-      "equalPct": 7,
-      "higherPct": 29
+      "matched": 11,
+      "pi": 101,
+      "lowerPct": 67,
+      "equalPct": 8,
+      "higherPct": 25
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "vidaxl",
   "name": "Vidaxl",
-  "priceIndex": 103,
+  "priceIndex": 99,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": 103,
-      "lowerPct": 12,
+      "matched": 731,
+      "pi": 102,
+      "lowerPct": 20,
       "equalPct": 50,
-      "higherPct": 37
+      "higherPct": 30
     },
     {
       "pack": "Canapé",
-      "priceIndex": 97,
-      "lowerPct": 41,
-      "equalPct": 42,
-      "higherPct": 17
+      "matched": 656,
+      "pi": 97,
+      "lowerPct": 49,
+      "equalPct": 39,
+      "higherPct": 12
     },
     {
       "pack": "Matelas",
-      "priceIndex": 99,
-      "lowerPct": 30,
+      "matched": 232,
+      "pi": 99,
+      "lowerPct": 31,
       "equalPct": 68,
-      "higherPct": 2
+      "higherPct": 1
     },
     {
       "pack": "Lit",
-      "priceIndex": 102,
-      "lowerPct": 27,
-      "equalPct": 41,
-      "higherPct": 32
+      "matched": 101,
+      "pi": 102,
+      "lowerPct": 21,
+      "equalPct": 49,
+      "higherPct": 30
     },
     {
       "pack": "Commode",
-      "priceIndex": 100,
-      "lowerPct": 29,
-      "equalPct": 54,
-      "higherPct": 17
+      "matched": 431,
+      "pi": 100,
+      "lowerPct": 34,
+      "equalPct": 49,
+      "higherPct": 16
     }
   ]
 }

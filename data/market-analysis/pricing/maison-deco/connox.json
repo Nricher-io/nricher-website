@@ -1,7 +1,7 @@
 {
   "slug": "connox",
   "name": "Connox",
-  "priceIndex": 90,
+  "priceIndex": 91,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -20,6 +20,17 @@
         101,
         103,
         115
+      ]
+    },
+    {
+      "name": "Connox",
+      "piHistory": [
+        99,
+        97,
+        98,
+        98,
+        95,
+        98
       ]
     },
     {
@@ -169,37 +180,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 45,
+      "lowerPct": 45,
       "equalPct": 29,
       "higherPct": 26
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 51,
+      "lowerPct": 51,
       "equalPct": 28,
       "higherPct": 22
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 51,
+      "lowerPct": 51,
       "equalPct": 24,
       "higherPct": 25
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 51,
+      "lowerPct": 51,
       "equalPct": 26,
       "higherPct": 23
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 56,
+      "lowerPct": 56,
       "equalPct": 26,
       "higherPct": 18
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 48,
+      "lowerPct": 48,
       "equalPct": 31,
       "higherPct": 22
     }
@@ -207,38 +218,43 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 90,
-      "lowerPct": 68,
-      "equalPct": 21,
-      "higherPct": 12
+      "matched": 764,
+      "pi": 90,
+      "lowerPct": 64,
+      "equalPct": 22,
+      "higherPct": 14
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 89,
-      "lowerPct": 74,
-      "equalPct": 13,
-      "higherPct": 13
+      "matched": 859,
+      "pi": 90,
+      "lowerPct": 68,
+      "equalPct": 16,
+      "higherPct": 16
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 95,
-      "lowerPct": 60,
-      "equalPct": 19,
-      "higherPct": 21
+      "matched": 42,
+      "pi": 97,
+      "lowerPct": 52,
+      "equalPct": 14,
+      "higherPct": 33
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 87,
-      "lowerPct": 76,
-      "equalPct": 14,
-      "higherPct": 10
+      "matched": 195,
+      "pi": 89,
+      "lowerPct": 71,
+      "equalPct": 11,
+      "higherPct": 18
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": 95,
-      "lowerPct": 66,
-      "equalPct": 22,
-      "higherPct": 12
+      "matched": 41,
+      "pi": 97,
+      "lowerPct": 34,
+      "equalPct": 51,
+      "higherPct": 15
     }
   ]
 }

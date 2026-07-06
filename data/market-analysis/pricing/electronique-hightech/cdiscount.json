@@ -1,7 +1,7 @@
 {
   "slug": "cdiscount",
   "name": "Cdiscount",
-  "priceIndex": 114,
+  "priceIndex": 119,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -155,6 +155,17 @@
       ]
     },
     {
+      "name": "CDiscount",
+      "piHistory": [
+        114,
+        114,
+        114,
+        113,
+        115,
+        114
+      ]
+    },
+    {
       "name": "Carrefour",
       "piHistory": [
         109,
@@ -224,37 +235,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 24,
+      "lowerPct": 24,
       "equalPct": 15,
       "higherPct": 61
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 21,
+      "lowerPct": 21,
       "equalPct": 21,
       "higherPct": 57
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 19,
+      "lowerPct": 19,
       "equalPct": 26,
       "higherPct": 55
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 17,
+      "lowerPct": 17,
       "equalPct": 30,
       "higherPct": 53
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 18,
+      "lowerPct": 18,
       "equalPct": 24,
       "higherPct": 58
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 21,
+      "lowerPct": 21,
       "equalPct": 24,
       "higherPct": 55
     }
@@ -262,38 +273,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 114,
-      "lowerPct": 11,
-      "equalPct": 3,
-      "higherPct": 86
-    },
-    {
-      "pack": "Ordinateur portable",
-      "priceIndex": 124,
-      "lowerPct": 6,
-      "equalPct": 6,
-      "higherPct": 88
-    },
-    {
-      "pack": "Télévision",
-      "priceIndex": 122,
+      "matched": 140,
+      "pi": 111,
       "lowerPct": 14,
-      "equalPct": 7,
+      "equalPct": 6,
       "higherPct": 80
     },
     {
+      "pack": "Ordinateur portable",
+      "matched": 170,
+      "pi": 125,
+      "lowerPct": 6,
+      "equalPct": 9,
+      "higherPct": 85
+    },
+    {
+      "pack": "Télévision",
+      "matched": 72,
+      "pi": 121,
+      "lowerPct": 15,
+      "equalPct": 6,
+      "higherPct": 79
+    },
+    {
       "pack": "Casque audio",
-      "priceIndex": 126,
-      "lowerPct": 12,
-      "equalPct": 18,
-      "higherPct": 70
+      "matched": 126,
+      "pi": 128,
+      "lowerPct": 13,
+      "equalPct": 14,
+      "higherPct": 73
     },
     {
       "pack": "Tablette",
-      "priceIndex": 101,
-      "lowerPct": 28,
-      "equalPct": 46,
-      "higherPct": 25
+      "matched": 93,
+      "pi": 105,
+      "lowerPct": 16,
+      "equalPct": 26,
+      "higherPct": 58
     }
   ]
 }

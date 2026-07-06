@@ -1,7 +1,7 @@
 {
   "slug": "1001jouets",
   "name": "1001jouets",
-  "priceIndex": 92,
+  "priceIndex": 90,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,37 +236,42 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Matelas",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 92,
-      "lowerPct": 71,
-      "equalPct": 8,
-      "higherPct": 21
+      "matched": 396,
+      "pi": 89,
+      "lowerPct": 76,
+      "equalPct": 6,
+      "higherPct": 19
     },
     {
       "pack": "Commode",
-      "priceIndex": 94,
-      "lowerPct": 56,
-      "equalPct": 10,
+      "matched": 23,
+      "pi": 95,
+      "lowerPct": 58,
+      "equalPct": 8,
       "higherPct": 34
     }
   ]

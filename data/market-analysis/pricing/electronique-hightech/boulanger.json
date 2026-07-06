@@ -1,7 +1,7 @@
 {
   "slug": "boulanger",
   "name": "Boulanger",
-  "priceIndex": 108,
+  "priceIndex": 111,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -133,6 +133,17 @@
       ]
     },
     {
+      "name": "Boulanger",
+      "piHistory": [
+        111,
+        110,
+        113,
+        111,
+        112,
+        112
+      ]
+    },
+    {
       "name": "Bricorama",
       "piHistory": [
         125,
@@ -224,37 +235,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 23,
+      "lowerPct": 23,
       "equalPct": 31,
       "higherPct": 46
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 17,
+      "lowerPct": 17,
       "equalPct": 41,
       "higherPct": 42
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 19,
+      "lowerPct": 19,
       "equalPct": 30,
       "higherPct": 52
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 17,
+      "lowerPct": 17,
       "equalPct": 29,
       "higherPct": 53
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 21,
+      "lowerPct": 21,
       "equalPct": 23,
       "higherPct": 56
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 19,
+      "lowerPct": 19,
       "equalPct": 27,
       "higherPct": 54
     }
@@ -262,38 +273,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 108,
+      "matched": 307,
+      "pi": 120,
       "lowerPct": 18,
-      "equalPct": 35,
-      "higherPct": 48
+      "equalPct": 40,
+      "higherPct": 42
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 104,
-      "lowerPct": 51,
-      "equalPct": 12,
-      "higherPct": 38
+      "matched": 104,
+      "pi": 100,
+      "lowerPct": 47,
+      "equalPct": 19,
+      "higherPct": 33
     },
     {
       "pack": "Télévision",
-      "priceIndex": 105,
-      "lowerPct": 18,
-      "equalPct": 55,
-      "higherPct": 27
+      "matched": 264,
+      "pi": 102,
+      "lowerPct": 19,
+      "equalPct": 51,
+      "higherPct": 30
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 115,
+      "matched": 254,
+      "pi": 117,
       "lowerPct": 8,
-      "equalPct": 47,
-      "higherPct": 45
+      "equalPct": 40,
+      "higherPct": 53
     },
     {
       "pack": "Tablette",
-      "priceIndex": 103,
-      "lowerPct": 37,
-      "equalPct": 36,
-      "higherPct": 27
+      "matched": 85,
+      "pi": 110,
+      "lowerPct": 11,
+      "equalPct": 28,
+      "higherPct": 62
     }
   ]
 }

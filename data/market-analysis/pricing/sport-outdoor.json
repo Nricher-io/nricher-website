@@ -1,79 +1,86 @@
 [
   {
-    "slug": "sports partners",
+    "slug": "sports-partners",
     "name": "Sports Partners",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 3,
-    "priceIndex": 86
+    "articlesAnalysed": 13357,
+    "articlesMatched": 2,
+    "priceIndex": 82
   },
   {
     "slug": "snowinn",
     "name": "Snowinn",
-    "articlesAnalysed": 13340,
+    "articlesAnalysed": 13357,
     "articlesMatched": 211,
     "priceIndex": 97
   },
   {
-    "slug": "An Mai Mao Yi ",
-    "name": "An Mai Mao Yi",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 4,
-    "priceIndex": 106
-  },
-  {
     "slug": "irun",
     "name": "Irun",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 2672,
+    "articlesAnalysed": 13357,
+    "articlesMatched": 2554,
     "priceIndex": 107
-  },
-  {
-    "slug": "hardloop",
-    "name": "Hardloop",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 2799,
-    "priceIndex": 109
   },
   {
     "slug": "trekkinn",
     "name": "Trekkinn",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 5237,
-    "priceIndex": 111
+    "articlesAnalysed": 13357,
+    "articlesMatched": 5153,
+    "priceIndex": 110
+  },
+  {
+    "slug": "hardloop",
+    "name": "Hardloop",
+    "articlesAnalysed": 13357,
+    "articlesMatched": 2778,
+    "priceIndex": 110
+  },
+  {
+    "slug": "an-mai-mao-yi",
+    "name": "An Mai Mao Yi",
+    "articlesAnalysed": 13357,
+    "articlesMatched": 7,
+    "priceIndex": 110
   },
   {
     "slug": "runnerinn",
     "name": "Runnerinn",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 1202,
+    "articlesAnalysed": 13357,
+    "articlesMatched": 1193,
     "priceIndex": 111
   },
   {
     "slug": "alltricks",
     "name": "Alltricks",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 3376,
-    "priceIndex": 113
+    "articlesAnalysed": 13357,
+    "articlesMatched": 2824,
+    "priceIndex": 115
   },
   {
     "slug": "snowleader",
     "name": "Snowleader",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 10045,
-    "priceIndex": 115
+    "articlesAnalysed": 13357,
+    "articlesMatched": 9581,
+    "priceIndex": 116
+  },
+  {
+    "slug": "zalando",
+    "name": "Zalando",
+    "articlesAnalysed": 13357,
+    "articlesMatched": 1423,
+    "priceIndex": 117
   },
   {
     "slug": "ekosport",
     "name": "Ekosport",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 4381,
+    "articlesAnalysed": 13357,
+    "articlesMatched": 4331,
     "priceIndex": 118
   },
   {
     "slug": "glisshop",
     "name": "Glisshop",
-    "articlesAnalysed": 13340,
-    "articlesMatched": 1649,
+    "articlesAnalysed": 13357,
+    "articlesMatched": 1571,
     "priceIndex": 118
   }
 ]

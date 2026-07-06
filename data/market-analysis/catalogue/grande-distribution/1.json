@@ -1,81 +1,69 @@
 {
   "packName": "Lit",
-  "totalArticles": 21067,
-  "topPct": 67,
-  "midPct": 20,
-  "lowPct": 13,
-  "topSellersCount": 8504,
+  "totalArticles": 21980,
+  "topSellersCount": 8440,
+  "topPct": 68,
+  "midPct": 21,
+  "lowPct": 11,
   "ranking": [
     {
-      "slug": "n-wood",
-      "name": "N Wood",
-      "topSellerArticles": 2867,
-      "potentialPct": 86
+      "brand": "N Wood",
+      "count": 2867,
+      "potentialPct": 87
     },
     {
-      "slug": "clicnbuy",
-      "name": "Clicnbuy",
-      "topSellerArticles": 1930,
+      "brand": "Clicnbuy",
+      "count": 1933,
       "potentialPct": 91
     },
     {
-      "slug": "les-tendances",
-      "name": "Les Tendances",
-      "topSellerArticles": 1311,
+      "brand": "Les Tendances",
+      "count": 1280,
       "potentialPct": 94
     },
     {
-      "slug": "1001jouets",
-      "name": "1001jouets",
-      "topSellerArticles": 1085,
+      "brand": "1001jouets",
+      "count": 1105,
       "potentialPct": 95
     },
     {
-      "slug": "indream",
-      "name": "Indream",
-      "topSellerArticles": 771,
-      "potentialPct": 96
-    },
-    {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 540,
+      "brand": "Vidaxl",
+      "count": 686,
       "potentialPct": 97
     },
     {
-      "slug": "komhtom",
-      "name": "Komhtom",
-      "topSellerArticles": 523,
+      "brand": "Indream",
+      "count": 569,
+      "potentialPct": 97
+    },
+    {
+      "brand": "House Partners",
+      "count": 523,
       "potentialPct": 98
     },
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 497,
+      "brand": "Komhtom",
+      "count": 520,
       "potentialPct": 98
     },
     {
-      "slug": "paris-prix",
-      "name": "Paris Prix",
-      "topSellerArticles": 292,
+      "brand": "Paris Prix",
+      "count": 383,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Kobi",
+      "count": 252,
       "potentialPct": 99
     },
     {
-      "slug": "kobi",
-      "name": "Kobi",
-      "topSellerArticles": 262,
+      "brand": "Zoomici",
+      "count": 210,
       "potentialPct": 99
     },
     {
-      "slug": "rama-shop",
-      "name": "Rama Shop",
-      "topSellerArticles": 239,
-      "potentialPct": 99
-    },
-    {
-      "slug": "zoomici",
-      "name": "Zoomici",
-      "topSellerArticles": 213,
+      "brand": "Beliani",
+      "count": 195,
       "potentialPct": 99
     }
   ]

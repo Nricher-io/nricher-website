@@ -1,81 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 18863,
-  "topPct": 66,
-  "midPct": 21,
-  "lowPct": 13,
-  "topSellersCount": 6907,
+  "totalArticles": 19728,
+  "topSellersCount": 6980,
+  "topPct": 65,
+  "midPct": 20,
+  "lowPct": 15,
   "ranking": [
     {
-      "slug": "masseno",
-      "name": "Masseno",
-      "topSellerArticles": 2069,
+      "brand": "Masseno",
+      "count": 2082,
       "potentialPct": 89
     },
     {
-      "slug": "best-mobilier",
-      "name": "Best Mobilier",
-      "topSellerArticles": 1566,
+      "brand": "Best Mobilier",
+      "count": 1550,
       "potentialPct": 92
     },
     {
-      "slug": "vente-unique",
-      "name": "Vente Unique",
-      "topSellerArticles": 1349,
+      "brand": "Vente Unique",
+      "count": 1367,
       "potentialPct": 93
     },
     {
-      "slug": "loungitude",
-      "name": "Loungitude",
-      "topSellerArticles": 958,
+      "brand": "Loungitude",
+      "count": 935,
       "potentialPct": 95
     },
     {
-      "slug": "usinestreet",
-      "name": "Usinestreet",
-      "topSellerArticles": 496,
+      "brand": "Usinestreet",
+      "count": 625,
       "potentialPct": 97
     },
     {
-      "slug": "beliani",
-      "name": "Beliani",
-      "topSellerArticles": 469,
+      "brand": "Beliani",
+      "count": 421,
       "potentialPct": 98
     },
     {
-      "slug": "selsey",
-      "name": "Selsey",
-      "topSellerArticles": 352,
+      "brand": "Selsey",
+      "count": 374,
       "potentialPct": 98
     },
     {
-      "slug": "mobilier-prive",
-      "name": "Mobilier Prive",
-      "topSellerArticles": 328,
+      "brand": "Mobilier Prive",
+      "count": 311,
       "potentialPct": 98
     },
     {
-      "slug": "tendencio",
-      "name": "Tendencio",
-      "topSellerArticles": 272,
+      "brand": "Tendencio",
+      "count": 254,
       "potentialPct": 99
     },
     {
-      "slug": "super10count",
-      "name": "Super10count",
-      "topSellerArticles": 245,
+      "brand": "Super10count",
+      "count": 230,
       "potentialPct": 99
     },
     {
-      "slug": "cstore",
-      "name": "Cstore",
-      "topSellerArticles": 230,
+      "brand": "Cstore",
+      "count": 225,
       "potentialPct": 99
     },
     {
-      "slug": "petits-meubles",
-      "name": "Petits Meubles",
-      "topSellerArticles": 215,
+      "brand": "Paris Prix",
+      "count": 203,
       "potentialPct": 99
     }
   ]

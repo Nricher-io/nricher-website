@@ -1,53 +1,53 @@
 {
   "slug": "vente-unique",
-  "name": "vente-unique",
-  "articlesAnalysed": 0,
-  "qualityScore": 0,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 0,
-    "B": 0,
-    "C": 0,
-    "D": 0,
-    "E": 0,
-    "F": 0
-  },
+  "name": "Vente Unique",
+  "articlesAnalysed": 674111,
+  "qualityScore": 58,
+  "globalGrades": [
+    0,
+    6,
+    8,
+    31,
+    20,
+    24,
+    11
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Image": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Description": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    }
+    "Titre": [
+      38,
+      17,
+      19,
+      17,
+      5,
+      2,
+      1
+    ],
+    "Image": [
+      67,
+      20,
+      5,
+      4,
+      0,
+      1,
+      2
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      13,
+      2,
+      2,
+      3,
+      3,
+      3,
+      74
+    ]
   }
 }

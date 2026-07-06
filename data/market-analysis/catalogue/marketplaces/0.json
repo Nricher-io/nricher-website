@@ -1,81 +1,69 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 11292,
-  "topPct": 49,
+  "totalArticles": 11321,
+  "topSellersCount": 3190,
+  "topPct": 47,
   "midPct": 28,
-  "lowPct": 23,
-  "topSellersCount": 3360,
+  "lowPct": 25,
   "ranking": [
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 1284,
-      "potentialPct": 89
+      "brand": "House Partners",
+      "count": 1178,
+      "potentialPct": 90
     },
     {
-      "slug": "junmingshop",
-      "name": "Junmingshop",
-      "topSellerArticles": 531,
+      "brand": "Junmingshop",
+      "count": 521,
       "potentialPct": 95
     },
     {
-      "slug": "fnac",
-      "name": "Fnac",
-      "topSellerArticles": 442,
+      "brand": "Jiddenks",
+      "count": 415,
       "potentialPct": 96
     },
     {
-      "slug": "jiddenks",
-      "name": "Jiddenks",
-      "topSellerArticles": 416,
+      "brand": "Fnac",
+      "count": 414,
       "potentialPct": 96
     },
     {
-      "slug": "ecofone",
-      "name": "Ecofone",
-      "topSellerArticles": 348,
+      "brand": "Ecofone",
+      "count": 367,
       "potentialPct": 97
     },
     {
-      "slug": "alloccaz",
-      "name": "Alloccaz",
-      "topSellerArticles": 339,
+      "brand": "Alloccaz",
+      "count": 295,
       "potentialPct": 97
     },
     {
-      "slug": "carrefour",
-      "name": "Carrefour",
-      "topSellerArticles": 266,
+      "brand": "Carrefour",
+      "count": 270,
       "potentialPct": 98
     },
     {
-      "slug": "bighub",
-      "name": "Bighub",
-      "topSellerArticles": 247,
+      "brand": "Darty",
+      "count": 230,
       "potentialPct": 98
     },
     {
-      "slug": "boulanger",
-      "name": "Boulanger",
-      "topSellerArticles": 242,
+      "brand": "Boulanger",
+      "count": 216,
       "potentialPct": 98
     },
     {
-      "slug": "darty",
-      "name": "Darty",
-      "topSellerArticles": 236,
+      "brand": "As Discount",
+      "count": 203,
       "potentialPct": 98
     },
     {
-      "slug": "multishop",
-      "name": "Multishop",
-      "topSellerArticles": 203,
+      "brand": "Zenkaa",
+      "count": 202,
       "potentialPct": 98
     },
     {
-      "slug": "procomponentes",
-      "name": "Procomponentes",
-      "topSellerArticles": 192,
+      "brand": "Procomponentes",
+      "count": 197,
       "potentialPct": 98
     }
   ]

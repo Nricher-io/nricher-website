@@ -1,81 +1,69 @@
 {
   "packName": "Applique murale",
-  "totalArticles": 1954,
-  "topPct": 78,
-  "midPct": 16,
-  "lowPct": 6,
-  "topSellersCount": 1521,
+  "totalArticles": 1951,
+  "topSellersCount": 1217,
+  "topPct": 68,
+  "midPct": 24,
+  "lowPct": 8,
   "ranking": [
     {
-      "slug": "nedgis",
-      "name": "Nedgis",
-      "topSellerArticles": 814,
-      "potentialPct": 58
+      "brand": "Lamptwist",
+      "count": 399,
+      "potentialPct": 80
     },
     {
-      "slug": "lamptwist",
-      "name": "Lamptwist",
-      "topSellerArticles": 358,
-      "potentialPct": 82
+      "brand": "Nedgis",
+      "count": 369,
+      "potentialPct": 81
     },
     {
-      "slug": "the-cool-republic",
-      "name": "The Cool Republic",
-      "topSellerArticles": 235,
+      "brand": "The Cool Republic",
+      "count": 240,
       "potentialPct": 88
     },
     {
-      "slug": "lemaitredeslampes",
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 114,
-      "potentialPct": 94
+      "brand": "Madeindesign",
+      "count": 209,
+      "potentialPct": 89
     },
     {
-      "slug": "light11",
-      "name": "Light11",
-      "topSellerArticles": 93,
+      "brand": "Lemaitredeslampes",
+      "count": 104,
       "potentialPct": 95
     },
     {
-      "slug": "asteri",
-      "name": "Asteri",
-      "topSellerArticles": 65,
+      "brand": "Light11",
+      "count": 94,
+      "potentialPct": 95
+    },
+    {
+      "brand": "Asteri",
+      "count": 89,
+      "potentialPct": 95
+    },
+    {
+      "brand": "Evolutiv Solutions",
+      "count": 63,
       "potentialPct": 97
     },
     {
-      "slug": "evolutiv-solutions",
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 63,
-      "potentialPct": 97
-    },
-    {
-      "slug": "myareadesign",
-      "name": "Myareadesign",
-      "topSellerArticles": 42,
+      "brand": "Myareadesign",
+      "count": 42,
       "potentialPct": 98
     },
     {
-      "slug": "connox",
-      "name": "Connox",
-      "topSellerArticles": 42,
+      "brand": "Connox",
+      "count": 42,
       "potentialPct": 98
     },
     {
-      "slug": "dyberg-larsen",
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 34,
+      "brand": "Dyberg Larsen",
+      "count": 35,
       "potentialPct": 98
     },
     {
-      "slug": "dbs-rdc",
-      "name": "Dbs Rdc",
-      "topSellerArticles": 26,
-      "potentialPct": 99
-    },
-    {
-      "slug": "hubsch",
-      "name": "Hubsch",
-      "topSellerArticles": 21,
+      "brand": "Dbs Rdc",
+      "count": 27,
       "potentialPct": 99
     }
   ]

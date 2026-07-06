@@ -1,7 +1,7 @@
 {
   "slug": "snowinn",
   "name": "Snowinn",
-  "priceIndex": 98,
+  "priceIndex": 97,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -42,6 +42,17 @@
         116,
         115,
         114
+      ]
+    },
+    {
+      "name": "Snowinn",
+      "piHistory": [
+        102,
+        97,
+        104,
+        102,
+        93,
+        93
       ]
     },
     {
@@ -114,37 +125,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 49,
+      "lowerPct": 49,
       "equalPct": 2,
       "higherPct": 50
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 56,
+      "lowerPct": 56,
       "equalPct": 1,
       "higherPct": 43
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 39,
+      "lowerPct": 39,
       "equalPct": 2,
       "higherPct": 58
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 46,
+      "lowerPct": 46,
       "equalPct": 3,
       "higherPct": 51
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 60,
+      "lowerPct": 60,
       "equalPct": 2,
       "higherPct": 38
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 64,
+      "lowerPct": 64,
       "equalPct": 1,
       "higherPct": 34
     }
@@ -152,38 +163,43 @@
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Chaussures de randonnée",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Sac à dos",
-      "priceIndex": 98,
+      "matched": 16,
+      "pi": 96,
       "lowerPct": 25,
-      "equalPct": 13,
-      "higherPct": 63
+      "equalPct": 31,
+      "higherPct": 44
     },
     {
       "pack": "Veste",
-      "priceIndex": 95,
-      "lowerPct": 72,
-      "equalPct": 2,
-      "higherPct": 26
+      "matched": 136,
+      "pi": 96,
+      "lowerPct": 51,
+      "equalPct": 6,
+      "higherPct": 43
     },
     {
       "pack": "T-shirt",
-      "priceIndex": 100,
-      "lowerPct": 25,
-      "equalPct": 6,
-      "higherPct": 69
+      "matched": 59,
+      "pi": 98,
+      "lowerPct": 27,
+      "equalPct": 7,
+      "higherPct": 66
     }
   ]
 }

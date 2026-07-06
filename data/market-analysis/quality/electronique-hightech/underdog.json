@@ -1,53 +1,53 @@
 {
   "slug": "underdog",
   "name": "Underdog",
-  "articlesAnalysed": 515,
-  "qualityScore": 60,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 0,
-    "B": 0,
-    "C": 71,
-    "D": 10,
-    "E": 14,
-    "F": 4
-  },
+  "articlesAnalysed": 499,
+  "qualityScore": 61,
+  "globalGrades": [
+    0,
+    0,
+    0,
+    75,
+    9,
+    11,
+    5
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 68,
-      "A": 28,
-      "B": 4,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 0
-    },
-    "Image": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 100
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 100
-    },
-    "Description": {
-      "Aplus": 82,
-      "A": 4,
-      "B": 4,
-      "C": 3,
-      "D": 1,
-      "E": 2,
-      "F": 4
-    }
+    "Titre": [
+      70,
+      25,
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    "Image": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      83,
+      4,
+      4,
+      3,
+      1,
+      2,
+      3
+    ]
   }
 }

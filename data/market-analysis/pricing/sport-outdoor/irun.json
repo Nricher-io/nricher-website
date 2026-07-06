@@ -1,7 +1,7 @@
 {
   "slug": "irun",
   "name": "Irun",
-  "priceIndex": 106,
+  "priceIndex": 107,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -78,6 +78,17 @@
       ]
     },
     {
+      "name": "Irun",
+      "piHistory": [
+        108,
+        105,
+        103,
+        104,
+        null,
+        109
+      ]
+    },
+    {
       "name": "Glisshop",
       "piHistory": [
         122,
@@ -114,37 +125,37 @@
   "attractiveness": [
     {
       "week": "2026-05-19",
-      "cheaperPct": 24,
+      "lowerPct": 24,
       "equalPct": 10,
       "higherPct": 66
     },
     {
       "week": "2026-05-26",
-      "cheaperPct": 27,
+      "lowerPct": 27,
       "equalPct": 10,
       "higherPct": 63
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 33,
+      "lowerPct": 33,
       "equalPct": 12,
       "higherPct": 56
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 39,
+      "lowerPct": 39,
       "equalPct": 10,
       "higherPct": 51
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 39,
+      "lowerPct": 39,
       "equalPct": 7,
       "higherPct": 54
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 22,
+      "lowerPct": 22,
       "equalPct": 6,
       "higherPct": 72
     }
@@ -152,37 +163,42 @@
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "priceIndex": 106,
-      "lowerPct": 18,
-      "equalPct": 20,
-      "higherPct": 62
+      "matched": 1314,
+      "pi": 106,
+      "lowerPct": 20,
+      "equalPct": 17,
+      "higherPct": 63
     },
     {
       "pack": "Chaussures de randonnée",
-      "priceIndex": 107,
-      "lowerPct": 11,
-      "equalPct": 7,
-      "higherPct": 83
+      "matched": 615,
+      "pi": 107,
+      "lowerPct": 13,
+      "equalPct": 5,
+      "higherPct": 82
     },
     {
       "pack": "Sac à dos",
-      "priceIndex": 108,
-      "lowerPct": 23,
-      "equalPct": 3,
-      "higherPct": 75
+      "matched": 152,
+      "pi": 108,
+      "lowerPct": 24,
+      "equalPct": 2,
+      "higherPct": 74
     },
     {
       "pack": "Veste",
-      "priceIndex": 110,
-      "lowerPct": 8,
+      "matched": 156,
+      "pi": 110,
+      "lowerPct": 9,
       "equalPct": 33,
       "higherPct": 59
     },
     {
       "pack": "T-shirt",
-      "priceIndex": 106,
+      "matched": 317,
+      "pi": 106,
       "lowerPct": 26,
-      "equalPct": 12,
+      "equalPct": 13,
       "higherPct": 61
     }
   ]

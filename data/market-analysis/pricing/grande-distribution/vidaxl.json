@@ -1,7 +1,7 @@
 {
   "slug": "vidaxl",
   "name": "Vidaxl",
-  "priceIndex": 100,
+  "priceIndex": 99,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "priceIndex": 100,
-      "lowerPct": 27,
-      "equalPct": 50,
-      "higherPct": 24
+      "matched": 3574,
+      "pi": 99,
+      "lowerPct": 38,
+      "equalPct": 46,
+      "higherPct": 16
     },
     {
       "pack": "Lit",
-      "priceIndex": 102,
-      "lowerPct": 25,
-      "equalPct": 53,
-      "higherPct": 22
+      "matched": 686,
+      "pi": 101,
+      "lowerPct": 18,
+      "equalPct": 67,
+      "higherPct": 15
     },
     {
       "pack": "Matelas",
-      "priceIndex": 97,
-      "lowerPct": 49,
-      "equalPct": 44,
-      "higherPct": 8
+      "matched": 88,
+      "pi": 99,
+      "lowerPct": 10,
+      "equalPct": 75,
+      "higherPct": 15
     },
     {
       "pack": "Fauteuil",
-      "priceIndex": 99,
-      "lowerPct": 42,
-      "equalPct": 52,
-      "higherPct": 6
+      "matched": 303,
+      "pi": 100,
+      "lowerPct": 52,
+      "equalPct": 43,
+      "higherPct": 5
     },
     {
       "pack": "Table à manger",
-      "priceIndex": 98,
-      "lowerPct": 46,
-      "equalPct": 45,
-      "higherPct": 8
+      "matched": 1140,
+      "pi": 100,
+      "lowerPct": 18,
+      "equalPct": 74,
+      "higherPct": 9
     }
   ]
 }

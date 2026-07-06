@@ -1,82 +1,70 @@
 {
   "packName": "Lampe à poser",
-  "totalArticles": 3001,
-  "topPct": 78,
-  "midPct": 20,
-  "lowPct": 2,
-  "topSellersCount": 3766,
+  "totalArticles": 3002,
+  "topSellersCount": 2823,
+  "topPct": 58,
+  "midPct": 37,
+  "lowPct": 5,
   "ranking": [
     {
-      "slug": "nedgis",
-      "name": "Nedgis",
-      "topSellerArticles": 1065,
-      "potentialPct": 65
-    },
-    {
-      "slug": "connox",
-      "name": "Connox",
-      "topSellerArticles": 858,
+      "brand": "Connox",
+      "count": 859,
       "potentialPct": 71
     },
     {
-      "slug": "the-cool-republic",
-      "name": "The Cool Republic",
-      "topSellerArticles": 658,
+      "brand": "The Cool Republic",
+      "count": 682,
+      "potentialPct": 77
+    },
+    {
+      "brand": "Lamptwist",
+      "count": 651,
       "potentialPct": 78
     },
     {
-      "slug": "lamptwist",
-      "name": "Lamptwist",
-      "topSellerArticles": 646,
-      "potentialPct": 78
+      "brand": "Lemaitredeslampes",
+      "count": 631,
+      "potentialPct": 79
     },
     {
-      "slug": "lemaitredeslampes",
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 539,
-      "potentialPct": 82
+      "brand": "Madeindesign",
+      "count": 591,
+      "potentialPct": 80
     },
     {
-      "slug": "asteri",
-      "name": "Asteri",
-      "topSellerArticles": 269,
-      "potentialPct": 91
+      "brand": "Nedgis",
+      "count": 367,
+      "potentialPct": 88
     },
     {
-      "slug": "le-cedre-rouge",
-      "name": "Le Cedre Rouge",
-      "topSellerArticles": 217,
+      "brand": "Asteri",
+      "count": 318,
+      "potentialPct": 89
+    },
+    {
+      "brand": "Le Cedre Rouge",
+      "count": 218,
       "potentialPct": 93
     },
     {
-      "slug": "light11",
-      "name": "Light11",
-      "topSellerArticles": 162,
+      "brand": "Light11",
+      "count": 162,
       "potentialPct": 95
     },
     {
-      "slug": "myareadesign",
-      "name": "Myareadesign",
-      "topSellerArticles": 93,
+      "brand": "Myareadesign",
+      "count": 88,
       "potentialPct": 97
     },
     {
-      "slug": "dbs-rdc",
-      "name": "Dbs Rdc",
-      "topSellerArticles": 81,
+      "brand": "Dbs Rdc",
+      "count": 85,
       "potentialPct": 97
     },
     {
-      "slug": "dyberg-larsen",
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 76,
+      "brand": "Dyberg Larsen",
+      "count": 78,
       "potentialPct": 97
-    },
-    {
-      "slug": "hubsch",
-      "name": "Hubsch",
-      "topSellerArticles": 54,
-      "potentialPct": 98
     }
   ]
 }

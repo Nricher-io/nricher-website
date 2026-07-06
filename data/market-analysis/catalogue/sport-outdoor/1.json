@@ -1,63 +1,64 @@
 {
   "packName": "Chaussures de randonnée",
-  "totalArticles": 3599,
-  "topPct": 52,
-  "midPct": 34,
-  "lowPct": 14,
-  "topSellersCount": 4775,
+  "totalArticles": 3583,
+  "topSellersCount": 4566,
+  "topPct": 48,
+  "midPct": 33,
+  "lowPct": 19,
   "ranking": [
     {
-      "slug": "snowleader",
-      "name": "Snowleader",
-      "topSellerArticles": 2759,
-      "potentialPct": 23
+      "brand": "Snowleader",
+      "count": 2572,
+      "potentialPct": 28
     },
     {
-      "slug": "trekkinn",
-      "name": "Trekkinn",
-      "topSellerArticles": 2016,
+      "brand": "Trekkinn",
+      "count": 1994,
       "potentialPct": 44
     },
     {
-      "slug": "ekosport",
-      "name": "Ekosport",
-      "topSellerArticles": 1237,
+      "brand": "Ekosport",
+      "count": 1210,
       "potentialPct": 66
     },
     {
-      "slug": "hardloop",
-      "name": "Hardloop",
-      "topSellerArticles": 1123,
+      "brand": "Hardloop",
+      "count": 1112,
       "potentialPct": 69
     },
     {
-      "slug": "alltricks",
-      "name": "Alltricks",
-      "topSellerArticles": 754,
-      "potentialPct": 79
+      "brand": "Alltricks",
+      "count": 814,
+      "potentialPct": 77
     },
     {
-      "slug": "irun",
-      "name": "Irun",
-      "topSellerArticles": 645,
-      "potentialPct": 82
+      "brand": "Glisshop",
+      "count": 624,
+      "potentialPct": 83
     },
     {
-      "slug": "glisshop",
-      "name": "Glisshop",
-      "topSellerArticles": 639,
-      "potentialPct": 82
+      "brand": "Irun",
+      "count": 615,
+      "potentialPct": 83
     },
     {
-      "slug": "runnerinn",
-      "name": "Runnerinn",
-      "topSellerArticles": 59,
+      "brand": "Zalando",
+      "count": 485,
+      "potentialPct": 86
+    },
+    {
+      "brand": "Runnerinn",
+      "count": 59,
       "potentialPct": 98
     },
     {
-      "slug": "sports-partners",
-      "name": "Sports Partners",
-      "topSellerArticles": 1,
+      "brand": "An Mai Mao Yi",
+      "count": 1,
+      "potentialPct": 100
+    },
+    {
+      "brand": "Sports Partners",
+      "count": 1,
       "potentialPct": 100
     }
   ]

@@ -1,81 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 11326,
-  "topPct": 76,
-  "midPct": 15,
-  "lowPct": 9,
-  "topSellersCount": 5284,
+  "totalArticles": 12092,
+  "topSellersCount": 5376,
+  "topPct": 74,
+  "midPct": 16,
+  "lowPct": 10,
   "ranking": [
     {
-      "slug": "the-white-stone",
-      "name": "The White Stone",
-      "topSellerArticles": 2173,
-      "potentialPct": 81
+      "brand": "The White Stone",
+      "count": 2235,
+      "potentialPct": 82
     },
     {
-      "slug": "indream",
-      "name": "Indream",
-      "topSellerArticles": 1001,
-      "potentialPct": 91
-    },
-    {
-      "slug": "sommeil-de-plomb",
-      "name": "Sommeil De Plomb",
-      "topSellerArticles": 956,
+      "brand": "Indream",
+      "count": 1004,
       "potentialPct": 92
     },
     {
-      "slug": "actisom",
-      "name": "Actisom",
-      "topSellerArticles": 524,
-      "potentialPct": 95
+      "brand": "Sommeil De Plomb",
+      "count": 953,
+      "potentialPct": 92
     },
     {
-      "slug": "senso-pur",
-      "name": "Senso Pur",
-      "topSellerArticles": 326,
+      "brand": "Actisom",
+      "count": 522,
+      "potentialPct": 96
+    },
+    {
+      "brand": "Senso Pur",
+      "count": 358,
       "potentialPct": 97
     },
     {
-      "slug": "sport4heros",
-      "name": "Sport4heros",
-      "topSellerArticles": 304,
+      "brand": "Sport4heros",
+      "count": 304,
       "potentialPct": 97
     },
     {
-      "slug": "emma-matelas",
-      "name": "Emma Matelas",
-      "topSellerArticles": 154,
+      "brand": "Matris",
+      "count": 263,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Emma Matelas",
+      "count": 159,
       "potentialPct": 99
     },
     {
-      "slug": "indream-sleep",
-      "name": "Indream Sleep",
-      "topSellerArticles": 149,
+      "brand": "Idliterie",
+      "count": 125,
       "potentialPct": 99
     },
     {
-      "slug": "altobuy",
-      "name": "Altobuy",
-      "topSellerArticles": 119,
+      "brand": "Ilovesleep",
+      "count": 120,
       "potentialPct": 99
     },
     {
-      "slug": "idliterie",
-      "name": "Idliterie",
-      "topSellerArticles": 115,
+      "brand": "Altobuy",
+      "count": 107,
       "potentialPct": 99
     },
     {
-      "slug": "matris",
-      "name": "Matris",
-      "topSellerArticles": 114,
-      "potentialPct": 99
-    },
-    {
-      "slug": "vitalit",
-      "name": "Vitalit",
-      "topSellerArticles": 105,
+      "brand": "Vitalit",
+      "count": 105,
       "potentialPct": 99
     }
   ]

@@ -1,7 +1,7 @@
 {
   "slug": "multishop",
   "name": "Multishop",
-  "priceIndex": 89,
+  "priceIndex": 92,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 89,
-      "lowerPct": 70,
-      "equalPct": 3,
-      "higherPct": 27
+      "matched": 250,
+      "pi": 92,
+      "lowerPct": 65,
+      "equalPct": 2,
+      "higherPct": 33
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 93,
-      "lowerPct": 75,
-      "equalPct": 1,
-      "higherPct": 23
+      "matched": 43,
+      "pi": 94,
+      "lowerPct": 72,
+      "equalPct": 2,
+      "higherPct": 26
     },
     {
       "pack": "Télévision",
-      "priceIndex": 90,
-      "lowerPct": 74,
-      "equalPct": 8,
-      "higherPct": 18
+      "matched": 70,
+      "pi": 91,
+      "lowerPct": 71,
+      "equalPct": 6,
+      "higherPct": 23
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 102,
-      "lowerPct": 36,
-      "equalPct": 7,
-      "higherPct": 57
+      "matched": 94,
+      "pi": 101,
+      "lowerPct": 34,
+      "equalPct": 6,
+      "higherPct": 60
     },
     {
       "pack": "Tablette",
-      "priceIndex": 87,
-      "lowerPct": 72,
+      "matched": 149,
+      "pi": 87,
+      "lowerPct": 66,
       "equalPct": 2,
-      "higherPct": 27
+      "higherPct": 32
     }
   ]
 }

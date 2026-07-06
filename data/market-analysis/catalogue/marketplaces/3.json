@@ -1,81 +1,69 @@
 {
   "packName": "Lit",
-  "totalArticles": 12247,
-  "topPct": 43,
-  "midPct": 31,
+  "totalArticles": 12081,
+  "topSellersCount": 1187,
+  "topPct": 44,
+  "midPct": 30,
   "lowPct": 26,
-  "topSellersCount": 1231,
   "ranking": [
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 289,
+      "brand": "Vidaxl",
+      "count": 290,
       "potentialPct": 98
     },
     {
-      "slug": "kids-literie",
-      "name": "Kids Literie",
-      "topSellerArticles": 264,
+      "brand": "Kids Literie",
+      "count": 243,
       "potentialPct": 98
     },
     {
-      "slug": "vie-moderne",
-      "name": "Vie Moderne",
-      "topSellerArticles": 223,
+      "brand": "Vie Moderne",
+      "count": 223,
       "potentialPct": 98
     },
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 166,
+      "brand": "Vente Unique",
+      "count": 163,
       "potentialPct": 99
     },
     {
-      "slug": "vente-unique",
-      "name": "Vente Unique",
-      "topSellerArticles": 148,
+      "brand": "House Partners",
+      "count": 146,
       "potentialPct": 99
     },
     {
-      "slug": "literie-moins-cher",
-      "name": "Literie Moins Cher",
-      "topSellerArticles": 141,
+      "brand": "Literie Moins Cher",
+      "count": 122,
       "potentialPct": 99
     },
     {
-      "slug": "maison-vibe",
-      "name": "Maison Vibe",
-      "topSellerArticles": 123,
+      "brand": "1001jouets",
+      "count": 113,
       "potentialPct": 99
     },
     {
-      "slug": "1001jouets",
-      "name": "1001jouets",
-      "topSellerArticles": 118,
+      "brand": "Maison Vibe",
+      "count": 110,
       "potentialPct": 99
     },
     {
-      "slug": "gpasplus",
-      "name": "Gpasplus",
-      "topSellerArticles": 102,
+      "brand": "Ecd",
+      "count": 98,
       "potentialPct": 99
     },
     {
-      "slug": "meublorama",
-      "name": "Meublorama",
-      "topSellerArticles": 100,
+      "brand": "Zoomici",
+      "count": 88,
       "potentialPct": 99
     },
     {
-      "slug": "ecd",
-      "name": "Ecd",
-      "topSellerArticles": 95,
+      "brand": "Kobi",
+      "count": 87,
       "potentialPct": 99
     },
     {
-      "slug": "homifab",
-      "name": "Homifab",
-      "topSellerArticles": 95,
+      "brand": "Meublorama",
+      "count": 84,
       "potentialPct": 99
     }
   ]

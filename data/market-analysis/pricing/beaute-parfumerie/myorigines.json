@@ -1,7 +1,7 @@
 {
   "slug": "myorigines",
   "name": "Myorigines",
-  "priceIndex": 132,
+  "priceIndex": 127,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -21,42 +21,53 @@
         70,
         88
       ]
+    },
+    {
+      "name": "MyOrigines",
+      "piHistory": [
+        119,
+        123,
+        128,
+        130,
+        130,
+        130
+      ]
     }
   ],
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 13,
+      "lowerPct": 13,
       "equalPct": 8,
       "higherPct": 79
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 14,
+      "lowerPct": 14,
       "equalPct": 6,
       "higherPct": 80
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 7,
+      "lowerPct": 7,
       "equalPct": 3,
       "higherPct": 90
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 5,
+      "lowerPct": 5,
       "equalPct": 2,
       "higherPct": 93
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 8,
+      "lowerPct": 8,
       "equalPct": 5,
       "higherPct": 88
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 22,
+      "lowerPct": 22,
       "equalPct": 1,
       "higherPct": 76
     }
@@ -64,31 +75,35 @@
   "pairwise": [
     {
       "pack": "Maquillage",
-      "priceIndex": 132,
-      "lowerPct": 14,
-      "equalPct": 0,
-      "higherPct": 86
+      "matched": 47,
+      "pi": 133,
+      "lowerPct": 6,
+      "equalPct": 4,
+      "higherPct": 90
     },
     {
       "pack": "Parfum",
-      "priceIndex": 141,
-      "lowerPct": 14,
-      "equalPct": 0,
-      "higherPct": 86
+      "matched": 283,
+      "pi": 130,
+      "lowerPct": 26,
+      "equalPct": 4,
+      "higherPct": 71
     },
     {
       "pack": "Soin du visage",
-      "priceIndex": 151,
-      "lowerPct": 7,
-      "equalPct": 0,
-      "higherPct": 93
+      "matched": 77,
+      "pi": 121,
+      "lowerPct": 22,
+      "equalPct": 4,
+      "higherPct": 74
     },
     {
       "pack": "Coffret",
-      "priceIndex": 102,
-      "lowerPct": 20,
-      "equalPct": 40,
-      "higherPct": 40
+      "matched": 39,
+      "pi": 108,
+      "lowerPct": 27,
+      "equalPct": 5,
+      "higherPct": 68
     }
   ]
 }

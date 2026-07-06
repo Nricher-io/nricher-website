@@ -1,7 +1,7 @@
 {
   "slug": "idimex",
   "name": "Idimex",
-  "priceIndex": 94,
+  "priceIndex": 102,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Canapé",
-      "priceIndex": 94,
-      "lowerPct": 76,
+      "matched": 6,
+      "pi": 94,
+      "lowerPct": 75,
       "equalPct": 0,
-      "higherPct": 24
+      "higherPct": 25
     },
     {
       "pack": "Matelas",
-      "priceIndex": 102,
+      "matched": 1,
+      "pi": 102,
       "lowerPct": 0,
       "equalPct": 50,
       "higherPct": 50
     },
     {
       "pack": "Lit",
-      "priceIndex": 102,
+      "matched": 172,
+      "pi": 102,
       "lowerPct": 27,
       "equalPct": 30,
-      "higherPct": 42
+      "higherPct": 43
     },
     {
       "pack": "Commode",
-      "priceIndex": 102,
+      "matched": 84,
+      "pi": 102,
       "lowerPct": 23,
-      "equalPct": 29,
-      "higherPct": 48
+      "equalPct": 30,
+      "higherPct": 47
     }
   ]
 }

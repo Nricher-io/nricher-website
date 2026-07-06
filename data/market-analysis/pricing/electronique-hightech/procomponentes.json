@@ -1,7 +1,7 @@
 {
   "slug": "procomponentes",
   "name": "Procomponentes",
-  "priceIndex": 103,
+  "priceIndex": 117,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -236,38 +236,43 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "priceIndex": 103,
-      "lowerPct": 38,
-      "equalPct": 3,
-      "higherPct": 60
+      "matched": 182,
+      "pi": 118,
+      "lowerPct": 17,
+      "equalPct": 1,
+      "higherPct": 81
     },
     {
       "pack": "Ordinateur portable",
-      "priceIndex": 101,
-      "lowerPct": 50,
+      "matched": 1,
+      "pi": 109,
+      "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 50
+      "higherPct": 100
     },
     {
       "pack": "Télévision",
-      "priceIndex": 99,
-      "lowerPct": 54,
-      "equalPct": 4,
-      "higherPct": 43
+      "matched": 18,
+      "pi": 121,
+      "lowerPct": 20,
+      "equalPct": 0,
+      "higherPct": 80
     },
     {
       "pack": "Casque audio",
-      "priceIndex": 105,
-      "lowerPct": 67,
+      "matched": 55,
+      "pi": 122,
+      "lowerPct": 20,
       "equalPct": 0,
-      "higherPct": 33
+      "higherPct": 80
     },
     {
       "pack": "Tablette",
-      "priceIndex": 106,
-      "lowerPct": 31,
-      "equalPct": 2,
-      "higherPct": 67
+      "matched": 45,
+      "pi": 104,
+      "lowerPct": 36,
+      "equalPct": 0,
+      "higherPct": 64
     }
   ]
 }

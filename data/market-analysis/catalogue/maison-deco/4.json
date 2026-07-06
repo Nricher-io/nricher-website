@@ -1,81 +1,69 @@
 {
   "packName": "Plafonnier",
-  "totalArticles": 849,
-  "topPct": 78,
-  "midPct": 18,
-  "lowPct": 4,
-  "topSellersCount": 461,
+  "totalArticles": 820,
+  "topSellersCount": 310,
+  "topPct": 57,
+  "midPct": 37,
+  "lowPct": 6,
   "ranking": [
     {
-      "slug": "nedgis",
-      "name": "Nedgis",
-      "topSellerArticles": 182,
-      "potentialPct": 79
+      "brand": "Lemaitredeslampes",
+      "count": 142,
+      "potentialPct": 83
     },
     {
-      "slug": "lemaitredeslampes",
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 126,
-      "potentialPct": 85
+      "brand": "Lamptwist",
+      "count": 102,
+      "potentialPct": 88
     },
     {
-      "slug": "lamptwist",
-      "name": "Lamptwist",
-      "topSellerArticles": 91,
-      "potentialPct": 89
+      "brand": "Nedgis",
+      "count": 66,
+      "potentialPct": 92
     },
     {
-      "slug": "asteri",
-      "name": "Asteri",
-      "topSellerArticles": 62,
+      "brand": "Asteri",
+      "count": 61,
       "potentialPct": 93
     },
     {
-      "slug": "connox",
-      "name": "Connox",
-      "topSellerArticles": 41,
+      "brand": "Madeindesign",
+      "count": 49,
+      "potentialPct": 94
+    },
+    {
+      "brand": "Connox",
+      "count": 41,
       "potentialPct": 95
     },
     {
-      "slug": "light11",
-      "name": "Light11",
-      "topSellerArticles": 27,
+      "brand": "Light11",
+      "count": 27,
       "potentialPct": 97
     },
     {
-      "slug": "the-cool-republic",
-      "name": "The Cool Republic",
-      "topSellerArticles": 21,
-      "potentialPct": 98
+      "brand": "The Cool Republic",
+      "count": 22,
+      "potentialPct": 97
     },
     {
-      "slug": "myareadesign",
-      "name": "Myareadesign",
-      "topSellerArticles": 9,
+      "brand": "Myareadesign",
+      "count": 9,
       "potentialPct": 99
     },
     {
-      "slug": "evolutiv-solutions",
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 6,
+      "brand": "Evolutiv Solutions",
+      "count": 6,
       "potentialPct": 99
     },
     {
-      "slug": "dbs-rdc",
-      "name": "Dbs Rdc",
-      "topSellerArticles": 6,
+      "brand": "Dbs Rdc",
+      "count": 6,
       "potentialPct": 99
     },
     {
-      "slug": "nordlux",
-      "name": "Nordlux",
-      "topSellerArticles": 4,
-      "potentialPct": 100
-    },
-    {
-      "slug": "luminairestotalfr-depuis-1968",
-      "name": "Luminairestotalfr Depuis 1968",
-      "topSellerArticles": 3,
+      "brand": "Nordlux",
+      "count": 4,
       "potentialPct": 100
     }
   ]

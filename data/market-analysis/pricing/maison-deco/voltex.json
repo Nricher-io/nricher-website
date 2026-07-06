@@ -1,7 +1,7 @@
 {
   "slug": "voltex",
   "name": "Voltex",
-  "priceIndex": 74,
+  "priceIndex": 76,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -181,35 +181,40 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 74,
+      "matched": 81,
+      "pi": 74,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 82,
-      "lowerPct": 91,
+      "matched": 22,
+      "pi": 84,
+      "lowerPct": 86,
       "equalPct": 0,
-      "higherPct": 9
+      "higherPct": 14
     },
     {
       "pack": "Applique murale",
-      "priceIndex": 72,
+      "matched": 13,
+      "pi": 72,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

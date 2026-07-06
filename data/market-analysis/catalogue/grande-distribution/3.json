@@ -1,81 +1,69 @@
 {
   "packName": "Fauteuil",
-  "totalArticles": 10024,
-  "topPct": 60,
+  "totalArticles": 10280,
+  "topSellersCount": 1594,
+  "topPct": 58,
   "midPct": 24,
-  "lowPct": 16,
-  "topSellersCount": 1667,
+  "lowPct": 18,
   "ranking": [
     {
-      "slug": "beliani",
-      "name": "Beliani",
-      "topSellerArticles": 418,
-      "potentialPct": 96
+      "brand": "Beliani",
+      "count": 472,
+      "potentialPct": 95
     },
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 325,
+      "brand": "Vidaxl",
+      "count": 303,
       "potentialPct": 97
     },
     {
-      "slug": "mycocooning",
-      "name": "Mycocooning",
-      "topSellerArticles": 309,
+      "brand": "Paris Prix",
+      "count": 259,
       "potentialPct": 97
     },
     {
-      "slug": "paris-prix",
-      "name": "Paris Prix",
-      "topSellerArticles": 221,
+      "brand": "Recollection",
+      "count": 217,
       "potentialPct": 98
     },
     {
-      "slug": "recollection",
-      "name": "Recollection",
-      "topSellerArticles": 217,
+      "brand": "Mycocooning",
+      "count": 213,
       "potentialPct": 98
     },
     {
-      "slug": "heute-wohnen",
-      "name": "Heute Wohnen",
-      "topSellerArticles": 177,
-      "potentialPct": 98
-    },
-    {
-      "slug": "decoration-brands",
-      "name": "Decoration Brands",
-      "topSellerArticles": 113,
+      "brand": "Decoration Brands",
+      "count": 130,
       "potentialPct": 99
     },
     {
-      "slug": "rama-shop",
-      "name": "Rama Shop",
-      "topSellerArticles": 101,
+      "brand": "Rama Shop",
+      "count": 114,
       "potentialPct": 99
     },
     {
-      "slug": "altobuy",
-      "name": "Altobuy",
-      "topSellerArticles": 83,
+      "brand": "Altobuy",
+      "count": 93,
       "potentialPct": 99
     },
     {
-      "slug": "toilinux",
-      "name": "Toilinux",
-      "topSellerArticles": 70,
+      "brand": "Toilinux",
+      "count": 74,
       "potentialPct": 99
     },
     {
-      "slug": "the-concept-factory",
-      "name": "The Concept Factory",
-      "topSellerArticles": 66,
+      "brand": "Maxibazar",
+      "count": 74,
       "potentialPct": 99
     },
     {
-      "slug": "maxibazar",
-      "name": "Maxibazar",
-      "topSellerArticles": 64,
+      "brand": "The Concept Factory",
+      "count": 72,
+      "potentialPct": 99
+    },
+    {
+      "brand": "House Partners",
+      "count": 64,
       "potentialPct": 99
     }
   ]

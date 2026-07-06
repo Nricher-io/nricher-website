@@ -1,81 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 13054,
-  "topPct": 70,
-  "midPct": 19,
-  "lowPct": 11,
-  "topSellersCount": 7626,
+  "totalArticles": 13052,
+  "topSellersCount": 7531,
+  "topPct": 68,
+  "midPct": 20,
+  "lowPct": 12,
   "ranking": [
     {
-      "slug": "masseno",
-      "name": "Masseno",
-      "topSellerArticles": 2087,
+      "brand": "Masseno",
+      "count": 2091,
       "potentialPct": 84
     },
     {
-      "slug": "best-mobilier",
-      "name": "Best Mobilier",
-      "topSellerArticles": 1725,
+      "brand": "Best Mobilier",
+      "count": 1715,
       "potentialPct": 87
     },
     {
-      "slug": "vente-unique",
-      "name": "Vente Unique",
-      "topSellerArticles": 1490,
+      "brand": "Vente Unique",
+      "count": 1418,
       "potentialPct": 89
     },
     {
-      "slug": "beliani",
-      "name": "Beliani",
-      "topSellerArticles": 1295,
+      "brand": "Beliani",
+      "count": 1254,
       "potentialPct": 90
     },
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 651,
+      "brand": "Vidaxl",
+      "count": 656,
       "potentialPct": 95
     },
     {
-      "slug": "meublorama",
-      "name": "Meublorama",
-      "topSellerArticles": 378,
+      "brand": "Meublorama",
+      "count": 397,
       "potentialPct": 97
     },
     {
-      "slug": "besolux-group",
-      "name": "Besolux Group",
-      "topSellerArticles": 280,
+      "brand": "Mercatoxl",
+      "count": 288,
       "potentialPct": 98
     },
     {
-      "slug": "sweeek",
-      "name": "Sweeek",
-      "topSellerArticles": 270,
+      "brand": "Paris Prix",
+      "count": 278,
       "potentialPct": 98
     },
     {
-      "slug": "petits-meubles",
-      "name": "Petits Meubles",
-      "topSellerArticles": 264,
+      "brand": "Besolux Group",
+      "count": 278,
       "potentialPct": 98
     },
     {
-      "slug": "okwish",
-      "name": "Okwish",
-      "topSellerArticles": 241,
+      "brand": "Sweeek",
+      "count": 271,
       "potentialPct": 98
     },
     {
-      "slug": "shopnova",
-      "name": "Shopnova",
-      "topSellerArticles": 211,
+      "brand": "Petits Meubles",
+      "count": 264,
       "potentialPct": 98
     },
     {
-      "slug": "cdiscount",
-      "name": "Cdiscount",
-      "topSellerArticles": 202,
+      "brand": "Bonne Vie Meuble",
+      "count": 252,
       "potentialPct": 98
     }
   ]

@@ -1,63 +1,59 @@
 {
   "packName": "Chaussures de trail",
-  "totalArticles": 2595,
-  "topPct": 36,
-  "midPct": 41,
-  "lowPct": 23,
-  "topSellersCount": 3411,
+  "totalArticles": 2594,
+  "topSellersCount": 3332,
+  "topPct": 35,
+  "midPct": 38,
+  "lowPct": 27,
   "ranking": [
     {
-      "slug": "snowleader",
-      "name": "Snowleader",
-      "topSellerArticles": 2021,
-      "potentialPct": 22
+      "brand": "Snowleader",
+      "count": 1942,
+      "potentialPct": 25
     },
     {
-      "slug": "ekosport",
-      "name": "Ekosport",
-      "topSellerArticles": 1390,
+      "brand": "Ekosport",
+      "count": 1390,
       "potentialPct": 46
     },
     {
-      "slug": "irun",
-      "name": "Irun",
-      "topSellerArticles": 1373,
-      "potentialPct": 47
+      "brand": "Irun",
+      "count": 1314,
+      "potentialPct": 49
     },
     {
-      "slug": "trekkinn",
-      "name": "Trekkinn",
-      "topSellerArticles": 1308,
+      "brand": "Trekkinn",
+      "count": 1293,
       "potentialPct": 50
     },
     {
-      "slug": "alltricks",
-      "name": "Alltricks",
-      "topSellerArticles": 1185,
-      "potentialPct": 54
+      "brand": "Runnerinn",
+      "count": 995,
+      "potentialPct": 62
     },
     {
-      "slug": "runnerinn",
-      "name": "Runnerinn",
-      "topSellerArticles": 1004,
-      "potentialPct": 61
+      "brand": "Alltricks",
+      "count": 893,
+      "potentialPct": 66
     },
     {
-      "slug": "hardloop",
-      "name": "Hardloop",
-      "topSellerArticles": 797,
-      "potentialPct": 69
+      "brand": "Hardloop",
+      "count": 791,
+      "potentialPct": 70
     },
     {
-      "slug": "glisshop",
-      "name": "Glisshop",
-      "topSellerArticles": 369,
+      "brand": "Zalando",
+      "count": 469,
+      "potentialPct": 82
+    },
+    {
+      "brand": "Glisshop",
+      "count": 362,
       "potentialPct": 86
     },
     {
-      "slug": "an-mai-mao-yi",
-      "name": "An Mai Mao Yi",
-      "topSellerArticles": 2,
+      "brand": "An Mai Mao Yi",
+      "count": 3,
       "potentialPct": 100
     }
   ]

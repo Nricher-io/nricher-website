@@ -1,82 +1,70 @@
 {
   "packName": "Suspension",
-  "totalArticles": 4509,
-  "topPct": 68,
-  "midPct": 29,
+  "totalArticles": 4321,
+  "topSellersCount": 3721,
+  "topPct": 69,
+  "midPct": 28,
   "lowPct": 3,
-  "topSellersCount": 3754,
   "ranking": [
     {
-      "slug": "nedgis",
-      "name": "Nedgis",
-      "topSellerArticles": 1402,
-      "potentialPct": 69
+      "brand": "Lamptwist",
+      "count": 832,
+      "potentialPct": 81
     },
     {
-      "slug": "lamptwist",
-      "name": "Lamptwist",
-      "topSellerArticles": 799,
+      "brand": "Connox",
+      "count": 764,
       "potentialPct": 82
     },
     {
-      "slug": "connox",
-      "name": "Connox",
-      "topSellerArticles": 777,
+      "brand": "Lemaitredeslampes",
+      "count": 740,
       "potentialPct": 83
     },
     {
-      "slug": "lemaitredeslampes",
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 776,
+      "brand": "The Cool Republic",
+      "count": 718,
       "potentialPct": 83
     },
     {
-      "slug": "the-cool-republic",
-      "name": "The Cool Republic",
-      "topSellerArticles": 719,
-      "potentialPct": 84
+      "brand": "Nedgis",
+      "count": 667,
+      "potentialPct": 85
     },
     {
-      "slug": "asteri",
-      "name": "Asteri",
-      "topSellerArticles": 239,
+      "brand": "Madeindesign",
+      "count": 520,
+      "potentialPct": 88
+    },
+    {
+      "brand": "Asteri",
+      "count": 373,
+      "potentialPct": 91
+    },
+    {
+      "brand": "Le Cedre Rouge",
+      "count": 195,
       "potentialPct": 95
     },
     {
-      "slug": "le-cedre-rouge",
-      "name": "Le Cedre Rouge",
-      "topSellerArticles": 200,
+      "brand": "Light11",
+      "count": 179,
       "potentialPct": 96
     },
     {
-      "slug": "light11",
-      "name": "Light11",
-      "topSellerArticles": 189,
-      "potentialPct": 96
-    },
-    {
-      "slug": "myareadesign",
-      "name": "Myareadesign",
-      "topSellerArticles": 83,
+      "brand": "Myareadesign",
+      "count": 82,
       "potentialPct": 98
     },
     {
-      "slug": "voltex",
-      "name": "Voltex",
-      "topSellerArticles": 81,
+      "brand": "Voltex",
+      "count": 81,
       "potentialPct": 98
     },
     {
-      "slug": "dyberg-larsen",
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 66,
-      "potentialPct": 99
-    },
-    {
-      "slug": "dbs-rdc",
-      "name": "Dbs Rdc",
-      "topSellerArticles": 50,
-      "potentialPct": 99
+      "brand": "Dbs Rdc",
+      "count": 67,
+      "potentialPct": 98
     }
   ]
 }

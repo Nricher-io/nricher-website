@@ -1,81 +1,69 @@
 {
   "packName": "Lampadaire",
   "totalArticles": 995,
-  "topPct": 66,
-  "midPct": 28,
-  "lowPct": 6,
-  "topSellersCount": 967,
+  "topSellersCount": 845,
+  "topPct": 60,
+  "midPct": 31,
+  "lowPct": 9,
   "ranking": [
     {
-      "slug": "lemaitredeslampes",
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 306,
-      "potentialPct": 69
+      "brand": "Lemaitredeslampes",
+      "count": 236,
+      "potentialPct": 76
     },
     {
-      "slug": "nedgis",
-      "name": "Nedgis",
-      "topSellerArticles": 255,
-      "potentialPct": 74
-    },
-    {
-      "slug": "the-cool-republic",
-      "name": "The Cool Republic",
-      "topSellerArticles": 211,
+      "brand": "The Cool Republic",
+      "count": 213,
       "potentialPct": 79
     },
     {
-      "slug": "lamptwist",
-      "name": "Lamptwist",
-      "topSellerArticles": 195,
+      "brand": "Lamptwist",
+      "count": 201,
       "potentialPct": 80
     },
     {
-      "slug": "connox",
-      "name": "Connox",
-      "topSellerArticles": 195,
+      "brand": "Connox",
+      "count": 195,
       "potentialPct": 80
     },
     {
-      "slug": "asteri",
-      "name": "Asteri",
-      "topSellerArticles": 69,
+      "brand": "Nedgis",
+      "count": 135,
+      "potentialPct": 86
+    },
+    {
+      "brand": "Madeindesign",
+      "count": 124,
+      "potentialPct": 88
+    },
+    {
+      "brand": "Asteri",
+      "count": 74,
       "potentialPct": 93
     },
     {
-      "slug": "light11",
-      "name": "Light11",
-      "topSellerArticles": 59,
+      "brand": "Light11",
+      "count": 59,
       "potentialPct": 94
     },
     {
-      "slug": "le-cedre-rouge",
-      "name": "Le Cedre Rouge",
-      "topSellerArticles": 51,
+      "brand": "Le Cedre Rouge",
+      "count": 51,
       "potentialPct": 95
     },
     {
-      "slug": "dyberg-larsen",
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 34,
+      "brand": "Dyberg Larsen",
+      "count": 33,
       "potentialPct": 97
     },
     {
-      "slug": "dbs-rdc",
-      "name": "Dbs Rdc",
-      "topSellerArticles": 31,
+      "brand": "Dbs Rdc",
+      "count": 28,
       "potentialPct": 97
     },
     {
-      "slug": "myareadesign",
-      "name": "Myareadesign",
-      "topSellerArticles": 22,
-      "potentialPct": 98
-    },
-    {
-      "slug": "evolutiv-solutions",
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 18,
+      "brand": "Myareadesign",
+      "count": 22,
       "potentialPct": 98
     }
   ]

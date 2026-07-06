@@ -1,212 +1,212 @@
 [
   {
-    "slug": "moonia",
-    "name": "Moonia",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 678,
-    "priceIndex": 90
+    "slug": "simpur",
+    "name": "Simpur",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 309,
+    "priceIndex": 89
   },
   {
     "slug": "1001jouets",
     "name": "1001jouets",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 421,
-    "priceIndex": 92
+    "articlesAnalysed": 74972,
+    "articlesMatched": 419,
+    "priceIndex": 90
+  },
+  {
+    "slug": "moonia",
+    "name": "Moonia",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 665,
+    "priceIndex": 93
+  },
+  {
+    "slug": "petits-meubles",
+    "name": "Petits Meubles",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 895,
+    "priceIndex": 94
+  },
+  {
+    "slug": "rust-oleum",
+    "name": "Rust Oleum",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 954,
+    "priceIndex": 95
+  },
+  {
+    "slug": "concept-usine",
+    "name": "Concept Usine",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 350,
+    "priceIndex": 96
+  },
+  {
+    "slug": "habitat-et-jardin",
+    "name": "Habitat & Jardin",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 260,
+    "priceIndex": 96
   },
   {
     "slug": "actisom",
     "name": "Actisom",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 534,
-    "priceIndex": 93
+    "articlesAnalysed": 74972,
+    "articlesMatched": 531,
+    "priceIndex": 97
   },
   {
-    "slug": "petits meubles",
-    "name": "Petits Meubles",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1000,
-    "priceIndex": 94
-  },
-  {
-    "slug": "concept usine",
-    "name": "Concept Usine",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 382,
-    "priceIndex": 96
-  },
-  {
-    "slug": "habitat & jardin",
-    "name": "Habitat & Jardin",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 304,
-    "priceIndex": 96
-  },
-  {
-    "slug": "sommeil de plomb",
+    "slug": "sommeil-de-plomb",
     "name": "Sommeil De Plomb",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 2658,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 2532,
     "priceIndex": 98
   },
   {
-    "slug": "dmora",
-    "name": "Dmora",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1224,
+    "slug": "aosom",
+    "name": "Aosom",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 408,
     "priceIndex": 98
   },
   {
     "slug": "indream",
     "name": "Indream",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 763,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 757,
     "priceIndex": 98
   },
   {
-    "slug": "paris prix",
-    "name": "Paris Prix",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 539,
+    "slug": "vidaxl",
+    "name": "Vidaxl",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 2151,
     "priceIndex": 99
   },
   {
-    "slug": "best mobilier",
-    "name": "Best Mobilier",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1893,
-    "priceIndex": 100
+    "slug": "paris-prix",
+    "name": "Paris Prix",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 701,
+    "priceIndex": 99
+  },
+  {
+    "slug": "dmora",
+    "name": "Dmora",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 834,
+    "priceIndex": 99
+  },
+  {
+    "slug": "le-quai-des-affaires",
+    "name": "Le Quai Des Affaires",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 296,
+    "priceIndex": 99
   },
   {
     "slug": "beliani",
     "name": "Beliani",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 3290,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 2932,
     "priceIndex": 100
   },
   {
     "slug": "masseno",
     "name": "Masseno",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 3876,
-    "priceIndex": 100
-  },
-  {
-    "slug": "vidaxl",
-    "name": "Vidaxl",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 2004,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 3841,
     "priceIndex": 100
   },
   {
     "slug": "meublorama",
     "name": "Meublorama",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1065,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 1080,
     "priceIndex": 100
   },
   {
-    "slug": "the white stone",
-    "name": "The White Stone",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 780,
-    "priceIndex": 100
-  },
-  {
-    "slug": "id market",
-    "name": "Id Market",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 340,
-    "priceIndex": 100
-  },
-  {
-    "slug": "ok living",
-    "name": "Ok Living",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1168,
-    "priceIndex": 100
-  },
-  {
-    "slug": "aosom",
-    "name": "Aosom",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 410,
-    "priceIndex": 100
-  },
-  {
-    "slug": "le quai des affaires",
-    "name": "Le Quai Des Affaires",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 336,
-    "priceIndex": 100
-  },
-  {
-    "slug": "pegane",
-    "name": "Pegane",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 579,
-    "priceIndex": 100
-  },
-  {
-    "slug": "abiks meubles",
-    "name": "Abiks Meubles",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 5768,
-    "priceIndex": 101
-  },
-  {
-    "slug": "senso pur",
+    "slug": "senso-pur",
     "name": "Senso Pur",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 414,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 431,
+    "priceIndex": 100
+  },
+  {
+    "slug": "id-market",
+    "name": "Id Market",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 343,
+    "priceIndex": 100
+  },
+  {
+    "slug": "ok-living",
+    "name": "Ok Living",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 1095,
+    "priceIndex": 100
+  },
+  {
+    "slug": "best-mobilier",
+    "name": "Best Mobilier",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 1775,
     "priceIndex": 101
   },
   {
-    "slug": "sweeek",
-    "name": "Sweeek",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 516,
+    "slug": "abiks-meubles",
+    "name": "Abiks Meubles",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 5430,
+    "priceIndex": 101
+  },
+  {
+    "slug": "okwish",
+    "name": "Okwish",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 1271,
+    "priceIndex": 101
+  },
+  {
+    "slug": "the-white-stone",
+    "name": "The White Stone",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 2308,
     "priceIndex": 102
   },
   {
     "slug": "idimex",
     "name": "Idimex",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 267,
+    "articlesAnalysed": 74972,
+    "articlesMatched": 263,
     "priceIndex": 102
   },
   {
-    "slug": "literie moins cher",
+    "slug": "literie-moins-cher",
     "name": "Literie Moins Cher",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 4862,
-    "priceIndex": 104
+    "articlesAnalysed": 74972,
+    "articlesMatched": 4656,
+    "priceIndex": 103
   },
   {
-    "slug": "okwish",
-    "name": "Okwish",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 1468,
-    "priceIndex": 104
+    "slug": "sweeek",
+    "name": "Sweeek",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 492,
+    "priceIndex": 103
   },
   {
-    "slug": "idliterie",
-    "name": "Idliterie",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 237,
+    "slug": "bb-loisir",
+    "name": "Bb Loisir",
+    "articlesAnalysed": 74972,
+    "articlesMatched": 646,
     "priceIndex": 105
   },
   {
-    "slug": "vente unique",
+    "slug": "vente-unique",
     "name": "Vente Unique",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 2858,
-    "priceIndex": 107
-  },
-  {
-    "slug": "redom",
-    "name": "Redom",
-    "articlesAnalysed": 78790,
-    "articlesMatched": 966,
-    "priceIndex": 109
+    "articlesAnalysed": 74972,
+    "articlesMatched": 2659,
+    "priceIndex": 108
   }
 ]

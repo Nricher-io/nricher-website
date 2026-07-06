@@ -1,53 +1,53 @@
 {
   "slug": "runnerinn",
   "name": "Runnerinn",
-  "articlesAnalysed": 74133,
+  "articlesAnalysed": 74610,
   "qualityScore": 73,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 21,
-    "B": 30,
-    "C": 32,
-    "D": 11,
-    "E": 5,
-    "F": 1
-  },
+  "globalGrades": [
+    0,
+    21,
+    30,
+    32,
+    11,
+    5,
+    1
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 35,
-      "A": 16,
-      "B": 16,
-      "C": 20,
-      "D": 9,
-      "E": 4,
-      "F": 1
-    },
-    "Image": {
-      "Aplus": 51,
-      "A": 13,
-      "B": 12,
-      "C": 6,
-      "D": 0,
-      "E": 9,
-      "F": 10
-    },
-    "Vidéo": {
-      "Aplus": 0,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 100
-    },
-    "Description": {
-      "Aplus": 28,
-      "A": 8,
-      "B": 10,
-      "C": 28,
-      "D": 20,
-      "E": 4,
-      "F": 4
-    }
+    "Titre": [
+      36,
+      16,
+      16,
+      19,
+      8,
+      4,
+      1
+    ],
+    "Image": [
+      51,
+      13,
+      12,
+      6,
+      0,
+      9,
+      10
+    ],
+    "Vidéo": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "Description": [
+      28,
+      8,
+      10,
+      28,
+      19,
+      4,
+      4
+    ]
   }
 }

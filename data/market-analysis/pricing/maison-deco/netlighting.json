@@ -1,7 +1,7 @@
 {
   "slug": "netlighting",
   "name": "Netlighting",
-  "priceIndex": 100,
+  "priceIndex": 109,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -181,35 +181,40 @@
   "pairwise": [
     {
       "pack": "Suspension",
-      "priceIndex": 100,
+      "matched": 1,
+      "pi": 100,
       "lowerPct": 0,
       "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Lampe à poser",
-      "priceIndex": 113,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 100
+      "higherPct": 0
     },
     {
       "pack": "Applique murale",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lampadaire",
-      "priceIndex": 112,
+      "matched": 3,
+      "pi": 112,
       "lowerPct": 33,
       "equalPct": 0,
       "higherPct": 67
     },
     {
       "pack": "Plafonnier",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

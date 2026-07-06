@@ -23,6 +23,17 @@
       ]
     },
     {
+      "name": "Ekosport",
+      "piHistory": [
+        112,
+        111,
+        102,
+        103,
+        102,
+        122
+      ]
+    },
+    {
       "name": "Runnerinn",
       "piHistory": [
         111,
@@ -114,37 +125,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 22,
+      "lowerPct": 22,
       "equalPct": 23,
       "higherPct": 55
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 25,
+      "lowerPct": 25,
       "equalPct": 19,
       "higherPct": 56
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 42,
+      "lowerPct": 42,
       "equalPct": 24,
       "higherPct": 34
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 44,
+      "lowerPct": 44,
       "equalPct": 8,
       "higherPct": 47
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 48,
+      "lowerPct": 48,
       "equalPct": 9,
       "higherPct": 43
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 8,
+      "lowerPct": 8,
       "equalPct": 1,
       "higherPct": 91
     }
@@ -152,38 +163,43 @@
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "priceIndex": 118,
-      "lowerPct": 7,
-      "equalPct": 9,
-      "higherPct": 84
+      "matched": 1390,
+      "pi": 118,
+      "lowerPct": 3,
+      "equalPct": 8,
+      "higherPct": 89
     },
     {
       "pack": "Chaussures de randonnée",
-      "priceIndex": 117,
+      "matched": 1210,
+      "pi": 117,
       "lowerPct": 5,
       "equalPct": 3,
       "higherPct": 92
     },
     {
       "pack": "Sac à dos",
-      "priceIndex": 119,
-      "lowerPct": 7,
-      "equalPct": 3,
+      "matched": 496,
+      "pi": 119,
+      "lowerPct": 6,
+      "equalPct": 4,
       "higherPct": 90
     },
     {
       "pack": "Veste",
-      "priceIndex": 115,
+      "matched": 371,
+      "pi": 115,
       "lowerPct": 17,
       "equalPct": 13,
       "higherPct": 70
     },
     {
       "pack": "T-shirt",
-      "priceIndex": 121,
+      "matched": 864,
+      "pi": 121,
       "lowerPct": 6,
       "equalPct": 7,
-      "higherPct": 88
+      "higherPct": 87
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "slug": "vente-unique",
-  "name": "Vente-unique",
-  "priceIndex": null,
+  "name": "Vente Unique",
+  "priceIndex": 108,
   "weeks": [
     "2026-05-26",
     "2026-06-02",
@@ -235,37 +235,37 @@
   "attractiveness": [
     {
       "week": "2026-05-26",
-      "cheaperPct": 14,
+      "lowerPct": 14,
       "equalPct": 53,
       "higherPct": 33
     },
     {
       "week": "2026-06-02",
-      "cheaperPct": 14,
+      "lowerPct": 14,
       "equalPct": 54,
       "higherPct": 32
     },
     {
       "week": "2026-06-09",
-      "cheaperPct": 16,
+      "lowerPct": 16,
       "equalPct": 48,
       "higherPct": 37
     },
     {
       "week": "2026-06-16",
-      "cheaperPct": 17,
+      "lowerPct": 17,
       "equalPct": 46,
       "higherPct": 37
     },
     {
       "week": "2026-06-23",
-      "cheaperPct": 16,
+      "lowerPct": 16,
       "equalPct": 48,
       "higherPct": 36
     },
     {
       "week": "2026-06-30",
-      "cheaperPct": 17,
+      "lowerPct": 17,
       "equalPct": 44,
       "higherPct": 39
     }
@@ -273,38 +273,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 48,
+      "pi": 107,
+      "lowerPct": 4,
+      "equalPct": 52,
+      "higherPct": 44
     },
     {
       "pack": "Canapé",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 1418,
+      "pi": 107,
+      "lowerPct": 2,
+      "equalPct": 53,
+      "higherPct": 45
     },
     {
       "pack": "Matelas",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 199,
+      "pi": 108,
+      "lowerPct": 4,
+      "equalPct": 56,
+      "higherPct": 40
     },
     {
       "pack": "Lit",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 881,
+      "pi": 111,
+      "lowerPct": 2,
+      "equalPct": 49,
+      "higherPct": 49
     },
     {
       "pack": "Commode",
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 113,
+      "pi": 109,
+      "lowerPct": 2,
+      "equalPct": 58,
+      "higherPct": 40
     }
   ]
 }

@@ -1,81 +1,69 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 8572,
-  "topPct": 51,
-  "midPct": 27,
+  "totalArticles": 8543,
+  "topSellersCount": 1162,
+  "topPct": 52,
+  "midPct": 26,
   "lowPct": 22,
-  "topSellersCount": 1206,
   "ranking": [
     {
-      "slug": "house-partners",
-      "name": "House Partners",
-      "topSellerArticles": 367,
+      "brand": "House Partners",
+      "count": 326,
       "potentialPct": 96
     },
     {
-      "slug": "as-discount",
-      "name": "As Discount",
-      "topSellerArticles": 225,
+      "brand": "As Discount",
+      "count": 223,
       "potentialPct": 97
     },
     {
-      "slug": "id-market",
-      "name": "Id Market",
-      "topSellerArticles": 177,
+      "brand": "Id Market",
+      "count": 177,
       "potentialPct": 98
     },
     {
-      "slug": "vidaxl",
-      "name": "Vidaxl",
-      "topSellerArticles": 166,
+      "brand": "Vidaxl",
+      "count": 165,
       "potentialPct": 98
     },
     {
-      "slug": "gpasplus",
-      "name": "Gpasplus",
-      "topSellerArticles": 146,
+      "brand": "Gpasplus",
+      "count": 141,
       "potentialPct": 98
     },
     {
-      "slug": "zoomici",
-      "name": "Zoomici",
-      "topSellerArticles": 125,
+      "brand": "Zoomici",
+      "count": 130,
+      "potentialPct": 98
+    },
+    {
+      "brand": "Paris Prix",
+      "count": 105,
       "potentialPct": 99
     },
     {
-      "slug": "paris-prix",
-      "name": "Paris Prix",
-      "topSellerArticles": 110,
+      "brand": "2kings",
+      "count": 85,
       "potentialPct": 99
     },
     {
-      "slug": "sydae",
-      "name": "Sydae",
-      "topSellerArticles": 89,
+      "brand": "Super10count",
+      "count": 67,
       "potentialPct": 99
     },
     {
-      "slug": "2kings",
-      "name": "2kings",
-      "topSellerArticles": 88,
+      "brand": "Premium Xl",
+      "count": 62,
       "potentialPct": 99
     },
     {
-      "slug": "super10count",
-      "name": "Super10count",
-      "topSellerArticles": 72,
+      "brand": "Monsieurplus",
+      "count": 59,
       "potentialPct": 99
     },
     {
-      "slug": "premium-xl",
-      "name": "Premium Xl",
-      "topSellerArticles": 64,
-      "potentialPct": 99
-    },
-    {
-      "slug": "cstore",
-      "name": "Cstore",
-      "topSellerArticles": 57,
+      "brand": "Cstore",
+      "count": 58,
       "potentialPct": 99
     }
   ]

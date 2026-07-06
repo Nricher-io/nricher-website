@@ -1,53 +1,53 @@
 {
   "slug": "jardindeco",
   "name": "Jardindeco",
-  "articlesAnalysed": 7907,
-  "qualityScore": 45,
-  "globalGrades": {
-    "Aplus": 0,
-    "A": 0,
-    "B": 1,
-    "C": 11,
-    "D": 22,
-    "E": 29,
-    "F": 38
-  },
+  "articlesAnalysed": 7848,
+  "qualityScore": 44,
+  "globalGrades": [
+    0,
+    0,
+    1,
+    11,
+    22,
+    29,
+    38
+  ],
   "criteriaGrades": {
-    "Titre": {
-      "Aplus": 4,
-      "A": 5,
-      "B": 10,
-      "C": 31,
-      "D": 23,
-      "E": 17,
-      "F": 9
-    },
-    "Image": {
-      "Aplus": 23,
-      "A": 11,
-      "B": 16,
-      "C": 15,
-      "D": 0,
-      "E": 17,
-      "F": 19
-    },
-    "Vidéo": {
-      "Aplus": 2,
-      "A": 0,
-      "B": 0,
-      "C": 0,
-      "D": 0,
-      "E": 0,
-      "F": 98
-    },
-    "Description": {
-      "Aplus": 5,
-      "A": 0,
-      "B": 1,
-      "C": 5,
-      "D": 4,
-      "E": 3,
-      "F": 81
-    }
+    "Titre": [
+      4,
+      5,
+      10,
+      32,
+      23,
+      17,
+      9
+    ],
+    "Image": [
+      22,
+      11,
+      16,
+      15,
+      0,
+      17,
+      19
+    ],
+    "Vidéo": [
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      98
+    ],
+    "Description": [
+      5,
+      0,
+      1,
+      5,
+      4,
+      3,
+      81
+    ]
   }
 }

@@ -236,35 +236,40 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Lit",
-      "priceIndex": 101,
+      "matched": 569,
+      "pi": 101,
       "lowerPct": 0,
-      "equalPct": 96,
-      "higherPct": 4
+      "equalPct": 94,
+      "higherPct": 6
     },
     {
       "pack": "Matelas",
-      "priceIndex": 101,
+      "matched": 1004,
+      "pi": 101,
       "lowerPct": 0,
-      "equalPct": 61,
-      "higherPct": 39
+      "equalPct": 60,
+      "higherPct": 40
     },
     {
       "pack": "Fauteuil",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Table à manger",
-      "priceIndex": null,
+      "matched": 0,
+      "pi": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0

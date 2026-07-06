@@ -1,21 +1,19 @@
 {
   "packName": "Maquillage",
-  "totalArticles": 556,
-  "topPct": 64,
-  "midPct": 36,
+  "totalArticles": 549,
+  "topSellersCount": 47,
+  "topPct": 92,
+  "midPct": 8,
   "lowPct": 0,
-  "topSellersCount": 7,
   "ranking": [
     {
-      "slug": "myorigines",
-      "name": "Myorigines",
-      "topSellerArticles": 7,
-      "potentialPct": 99
+      "brand": "Myorigines",
+      "count": 47,
+      "potentialPct": 91
     },
     {
-      "slug": "marionnaud",
-      "name": "Marionnaud",
-      "topSellerArticles": 4,
+      "brand": "Marionnaud",
+      "count": 4,
       "potentialPct": 99
     }
   ]
