@@ -7,8 +7,8 @@ name: Market Analysis - refresh des données JSON
 
 on:
   schedule:
-    # Lundis 07:00 UTC, juste après le refresh Weekly KPIs (06:00)
-    - cron: '0 7 * * 1'
+    # Lundis 08:00 UTC, après le refresh Weekly KPIs (07:00)
+    - cron: '0 8 * * 1'
   workflow_dispatch: {}
 
 permissions:
