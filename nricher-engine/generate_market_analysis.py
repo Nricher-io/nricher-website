@@ -109,6 +109,15 @@ def write_json(path, data):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+_GRADE_KEYS = ["Aplus", "A", "B", "C", "D", "E", "F"]
+
+def dist_to_grades(dist):
+    """Convert array [Aplus%, A%, …, F%] → {Aplus, A, B, C, D, E, F} expected by gradesToArray()."""
+    if isinstance(dist, list):
+        return {_GRADE_KEYS[i]: dist[i] if i < len(dist) else 0 for i in range(7)}
+    return dist or {}
+
+
 def main():
     print(f"API  : {BASE_URL}")
     print(f"Vers : {OUT_DIR}\n")
@@ -183,7 +192,7 @@ def main():
                     "attractiveness": [
                         {
                             "week":       h.get("weekDate", ""),
-                            "lowerPct":   h.get("lowerPct", 0),
+                            "cheaperPct": h.get("lowerPct", 0),
                             "equalPct":   h.get("equalPct", 0),
                             "higherPct":  h.get("higherPct", 0),
                         }
@@ -227,16 +236,18 @@ def main():
                     "categoryId": cat_id,
                     "brand":      row["brandName"],
                 })
-                # criteriaGrades : transforme [{criterion, dist}] → {criterion: dist}
                 criteria_raw = detail.get("criteria", [])
-                criteria_grades = {c["criterion"]: c["dist"] for c in criteria_raw} if criteria_raw else {}
+                criteria_grades = {
+                    c["criterion"]: dist_to_grades(c.get("dist", []))
+                    for c in criteria_raw
+                } if criteria_raw else {}
 
                 write_json(OUT_DIR / "quality" / cat_id / f"{slug}.json", {
                     "slug":             slug,
                     "name":             row["name"],
                     "articlesAnalysed": detail.get("analysed", row["articlesAnalysed"]),
                     "qualityScore":     detail.get("score", row["qualityScore"]),
-                    "globalGrades":     detail.get("globalDist", {}),
+                    "globalGrades":     dist_to_grades(detail.get("globalDist", [])),
                     "criteriaGrades":   criteria_grades,
                 })
                 print(f"  ✓ quality/{cat_id}/{slug}.json")
@@ -260,7 +271,14 @@ def main():
                     "topPct":         data.get("topPct", 0),
                     "midPct":         data.get("middlePct", 0),
                     "lowPct":         data.get("lowPct", 0),
-                    "ranking":        data.get("rows", []),
+                    "ranking": [
+                        {
+                            "name":             r.get("brand", ""),
+                            "topSellerArticles": r.get("count", 0),
+                            "potentialPct":      r.get("potentialPct", 0),
+                        }
+                        for r in data.get("rows", [])
+                    ],
                 })
                 print(f"  ✓ catalogue/{cat_id}/{i}.json ({pack})")
                 ok += 1
