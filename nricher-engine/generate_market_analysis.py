@@ -123,7 +123,8 @@ def main():
     print(f"Vers : {OUT_DIR}\n")
 
     ok = failed = 0
-    companies_by_cat = {}  # cat_id → [{slug, name}]
+    companies_by_cat = {}         # cat_id → [{slug, name}] from pricing
+    quality_companies_by_cat = {} # cat_id → [{slug, name}] from quality
 
     for cat in CATEGORIES:
         cat_id  = cat["id"]
@@ -230,6 +231,7 @@ def main():
                     "qualityScore":     r.get("score", 0),
                 })
             quality_rows.sort(key=lambda x: x["qualityScore"], reverse=True)
+            quality_companies_by_cat[cat_id] = [{"slug": r["slug"], "name": r["name"]} for r in quality_rows]
             overview_out = [{k: v for k, v in r.items() if k != "brandName"} for r in quality_rows]
             write_json(OUT_DIR / "quality" / f"{cat_id}.json", overview_out)
             print(f"  ✓ quality/{cat_id}.json ({len(quality_rows)} enseignes)")
@@ -302,10 +304,11 @@ def main():
     # ── categories.json ───────────────────────────────────────────────────
     write_json(OUT_DIR / "categories.json", [
         {
-            "id":        cat["id"],
-            "name":      cat["name"],
-            "companies": companies_by_cat.get(cat["id"], []),
-            "packs":     cat["packs"],
+            "id":               cat["id"],
+            "name":             cat["name"],
+            "companies":        companies_by_cat.get(cat["id"], []),
+            "qualityCompanies": quality_companies_by_cat.get(cat["id"], []),
+            "packs":            cat["packs"],
         }
         for cat in CATEGORIES
     ])

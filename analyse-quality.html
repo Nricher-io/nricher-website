@@ -459,7 +459,7 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
       var card = document.createElement('div');
       card.className = 'an-cat-card';
       card.dataset.id = cat.id;
-      var companies = cat.companies || [];
+      var companies = cat.qualityCompanies || cat.companies || [];
       var chipsHtml = companies.length > 0 ? (
         '<div class="an-co-list">' +
         companies.map(function (co) {
