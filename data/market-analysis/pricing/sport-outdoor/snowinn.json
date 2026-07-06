@@ -164,7 +164,7 @@
     {
       "pack": "Chaussures de trail",
       "matched": 0,
-      "pi": null,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
@@ -172,7 +172,7 @@
     {
       "pack": "Chaussures de randonnée",
       "matched": 0,
-      "pi": null,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
@@ -180,7 +180,7 @@
     {
       "pack": "Sac à dos",
       "matched": 16,
-      "pi": 96,
+      "priceIndex": 96,
       "lowerPct": 25,
       "equalPct": 31,
       "higherPct": 44
@@ -188,7 +188,7 @@
     {
       "pack": "Veste",
       "matched": 136,
-      "pi": 96,
+      "priceIndex": 96,
       "lowerPct": 51,
       "equalPct": 6,
       "higherPct": 43
@@ -196,7 +196,7 @@
     {
       "pack": "T-shirt",
       "matched": 59,
-      "pi": 98,
+      "priceIndex": 98,
       "lowerPct": 27,
       "equalPct": 7,
       "higherPct": 66

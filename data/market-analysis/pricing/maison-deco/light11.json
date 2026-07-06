@@ -219,7 +219,7 @@
     {
       "pack": "Suspension",
       "matched": 179,
-      "pi": 109,
+      "priceIndex": 109,
       "lowerPct": 57,
       "equalPct": 23,
       "higherPct": 20
@@ -227,7 +227,7 @@
     {
       "pack": "Lampe à poser",
       "matched": 162,
-      "pi": 94,
+      "priceIndex": 94,
       "lowerPct": 55,
       "equalPct": 20,
       "higherPct": 25
@@ -235,7 +235,7 @@
     {
       "pack": "Applique murale",
       "matched": 94,
-      "pi": 96,
+      "priceIndex": 96,
       "lowerPct": 49,
       "equalPct": 26,
       "higherPct": 25
@@ -243,7 +243,7 @@
     {
       "pack": "Lampadaire",
       "matched": 59,
-      "pi": 94,
+      "priceIndex": 94,
       "lowerPct": 55,
       "equalPct": 22,
       "higherPct": 23
@@ -251,7 +251,7 @@
     {
       "pack": "Plafonnier",
       "matched": 27,
-      "pi": 94,
+      "priceIndex": 94,
       "lowerPct": 54,
       "equalPct": 18,
       "higherPct": 29

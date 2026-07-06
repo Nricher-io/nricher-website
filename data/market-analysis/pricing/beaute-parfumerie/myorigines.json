@@ -76,7 +76,7 @@
     {
       "pack": "Maquillage",
       "matched": 47,
-      "pi": 133,
+      "priceIndex": 133,
       "lowerPct": 6,
       "equalPct": 4,
       "higherPct": 90
@@ -84,7 +84,7 @@
     {
       "pack": "Parfum",
       "matched": 283,
-      "pi": 130,
+      "priceIndex": 130,
       "lowerPct": 26,
       "equalPct": 4,
       "higherPct": 71
@@ -92,7 +92,7 @@
     {
       "pack": "Soin du visage",
       "matched": 77,
-      "pi": 121,
+      "priceIndex": 121,
       "lowerPct": 22,
       "equalPct": 4,
       "higherPct": 74
@@ -100,7 +100,7 @@
     {
       "pack": "Coffret",
       "matched": 39,
-      "pi": 108,
+      "priceIndex": 108,
       "lowerPct": 27,
       "equalPct": 5,
       "higherPct": 68

@@ -237,7 +237,7 @@
     {
       "pack": "Smartphone",
       "matched": 661,
-      "pi": 117,
+      "priceIndex": 117,
       "lowerPct": 37,
       "equalPct": 13,
       "higherPct": 50
@@ -245,7 +245,7 @@
     {
       "pack": "Ordinateur portable",
       "matched": 59,
-      "pi": 97,
+      "priceIndex": 97,
       "lowerPct": 68,
       "equalPct": 14,
       "higherPct": 18
@@ -253,7 +253,7 @@
     {
       "pack": "Télévision",
       "matched": 0,
-      "pi": null,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
@@ -261,7 +261,7 @@
     {
       "pack": "Casque audio",
       "matched": 0,
-      "pi": null,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
@@ -269,7 +269,7 @@
     {
       "pack": "Tablette",
       "matched": 10,
-      "pi": 136,
+      "priceIndex": 136,
       "lowerPct": 27,
       "equalPct": 9,
       "higherPct": 64

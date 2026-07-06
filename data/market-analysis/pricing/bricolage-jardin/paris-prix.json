@@ -237,7 +237,7 @@
     {
       "pack": "Salon de jardin",
       "matched": 107,
-      "pi": 91,
+      "priceIndex": 91,
       "lowerPct": 60,
       "equalPct": 32,
       "higherPct": 8
@@ -245,7 +245,7 @@
     {
       "pack": "Canapé",
       "matched": 278,
-      "pi": 99,
+      "priceIndex": 99,
       "lowerPct": 26,
       "equalPct": 59,
       "higherPct": 14
@@ -253,7 +253,7 @@
     {
       "pack": "Matelas",
       "matched": 41,
-      "pi": 102,
+      "priceIndex": 102,
       "lowerPct": 19,
       "equalPct": 40,
       "higherPct": 42
@@ -261,7 +261,7 @@
     {
       "pack": "Lit",
       "matched": 186,
-      "pi": 101,
+      "priceIndex": 101,
       "lowerPct": 14,
       "equalPct": 68,
       "higherPct": 18
@@ -269,7 +269,7 @@
     {
       "pack": "Commode",
       "matched": 89,
-      "pi": 102,
+      "priceIndex": 102,
       "lowerPct": 13,
       "equalPct": 62,
       "higherPct": 26

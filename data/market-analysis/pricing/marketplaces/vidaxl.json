@@ -237,7 +237,7 @@
     {
       "pack": "Smartphone",
       "matched": 2,
-      "pi": 91,
+      "priceIndex": 91,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
@@ -245,7 +245,7 @@
     {
       "pack": "Canapé",
       "matched": 164,
-      "pi": 100,
+      "priceIndex": 100,
       "lowerPct": 37,
       "equalPct": 32,
       "higherPct": 31
@@ -253,7 +253,7 @@
     {
       "pack": "Matelas",
       "matched": 8,
-      "pi": 91,
+      "priceIndex": 91,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
@@ -261,7 +261,7 @@
     {
       "pack": "Lit",
       "matched": 290,
-      "pi": 93,
+      "priceIndex": 93,
       "lowerPct": 80,
       "equalPct": 6,
       "higherPct": 14
@@ -269,7 +269,7 @@
     {
       "pack": "Table à manger",
       "matched": 165,
-      "pi": 93,
+      "priceIndex": 93,
       "lowerPct": 84,
       "equalPct": 2,
       "higherPct": 15

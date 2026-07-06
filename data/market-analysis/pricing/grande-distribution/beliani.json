@@ -237,7 +237,7 @@
     {
       "pack": "Canapé",
       "matched": 1369,
-      "pi": 100,
+      "priceIndex": 100,
       "lowerPct": 8,
       "equalPct": 92,
       "higherPct": 0
@@ -245,7 +245,7 @@
     {
       "pack": "Lit",
       "matched": 195,
-      "pi": 98,
+      "priceIndex": 98,
       "lowerPct": 20,
       "equalPct": 76,
       "higherPct": 5
@@ -253,7 +253,7 @@
     {
       "pack": "Matelas",
       "matched": 84,
-      "pi": 95,
+      "priceIndex": 95,
       "lowerPct": 45,
       "equalPct": 52,
       "higherPct": 3
@@ -261,7 +261,7 @@
     {
       "pack": "Fauteuil",
       "matched": 472,
-      "pi": 95,
+      "priceIndex": 95,
       "lowerPct": 53,
       "equalPct": 42,
       "higherPct": 5
@@ -269,7 +269,7 @@
     {
       "pack": "Table à manger",
       "matched": 314,
-      "pi": 96,
+      "priceIndex": 96,
       "lowerPct": 38,
       "equalPct": 60,
       "higherPct": 2
