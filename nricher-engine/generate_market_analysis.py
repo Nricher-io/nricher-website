@@ -260,8 +260,8 @@ def main():
     print(f"✓ categories.json ({len(categories)} catégories)\n")
 
     # Accumulateurs cross-entreprise
-    # cat_id → comp_name → {pi_values, matched}
-    pricing_overview_acc = defaultdict(lambda: defaultdict(lambda: {"pi_values": [], "matched": 0}))
+    # cat_id → comp_name → {pi_values, matched, total}
+    pricing_overview_acc = defaultdict(lambda: defaultdict(lambda: {"pi_values": [], "matched": 0, "total": 0}))
     # cat_id → pack_name → {all_eans, top_eans, co_top: {slug → {name, count}}}
     catalogue_acc = defaultdict(lambda: defaultdict(lambda: {
         "all_eans": set(), "top_eans": set(), "co_top": {},
@@ -343,10 +343,12 @@ def main():
                 comp = r.get("COMPETITOR", "")
                 my_p = r.get("MY_PRICE") or 0
                 co_p = r.get("COMPET_PRICE") or 0
-                if comp and my_p and co_p:
-                    # PI du concurrent relatif à nous : COMPET_PRICE/MY_PRICE×100
-                    pricing_overview_acc[cat_id][comp]["pi_values"].append(co_p / my_p * 100)
-                    pricing_overview_acc[cat_id][comp]["matched"] += 1
+                if comp:
+                    pricing_overview_acc[cat_id][comp]["total"] += 1
+                    if my_p and co_p:
+                        # PI du concurrent relatif à nous : COMPET_PRICE/MY_PRICE×100
+                        pricing_overview_acc[cat_id][comp]["pi_values"].append(co_p / my_p * 100)
+                        pricing_overview_acc[cat_id][comp]["matched"] += 1
 
             # Pairwise PI par pack
             pairwise = []
@@ -453,13 +455,12 @@ def main():
         acc = pricing_overview_acc.get(cat_id, {})
         if not acc:
             continue
-        total_matched = sum(d["matched"] for d in acc.values()) or 1
         overview = []
         for comp_name, d in acc.items():
             pis = d["pi_values"]
             overview.append({
                 "slug": slugify(comp_name), "name": comp_name,
-                "articlesAnalysed": total_matched,
+                "articlesAnalysed": d["total"],
                 "articlesMatched": d["matched"],
                 "priceIndex": round(median(pis)) if pis else None,
             })
