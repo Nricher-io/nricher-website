@@ -105,9 +105,6 @@
   .cat-rank-count{font-size:0.68rem;}
   .cat-rank-pct{font-size:0.74rem;padding:4px 0;}
 }
-.info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
-.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-family:var(--font-body);font-size:12px;font-weight:400;line-height:1.6;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
-.info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
 .cat-donut-tip{display:none;position:fixed;background:#1a1a2e;color:#fff;font-size:12px;font-weight:600;padding:7px 12px;border-radius:8px;pointer-events:none;z-index:300;transform:translateX(-50%);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,0.22);}
 </style>
   <script>
@@ -254,12 +251,12 @@
       <div class="cat-report__swipe-area" id="catSwipeArea">
       <div class="cat-report__grid">
         <div class="cat-donut-wrap">
-          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;"><span data-i18n="an.catalogue.donut.title">Répartition du catalogue</span> <span class="info-tip" tabindex="0" data-tip="Répartition en 3 segments : Top sellers (articles bien référencés et performants sur le marché), Middle sellers, Low sellers (faible couverture ou performance). Calculé sur ce pack produit." data-tip-en="Breakdown into 3 segments: Top sellers (well-referenced, high-performing articles in the market), Middle sellers, Low sellers (low coverage or performance). Calculated for this product pack.">i</span></div>
+          <div style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;"><span data-i18n="an.catalogue.donut.title">Répartition du catalogue</span> <span class="info-tip" tabindex="0" data-tip="Répartition en 3 segments : <strong>Top sellers</strong> (articles performants), <strong>Middle sellers</strong>, <strong>Low sellers</strong> (faible couverture). Calculé sur ce pack produit." data-tip-en="3 segments: <strong>Top sellers</strong> (high-performing articles), <strong>Middle sellers</strong>, <strong>Low sellers</strong> (low coverage). Calculated for this product pack.">i</span></div>
           <svg class="cat-donut-svg" id="catDonut" viewBox="0 0 120 120"></svg>
           <div class="cat-donut-legend" id="catDonutLegend"></div>
         </div>
         <div>
-          <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne <span class="info-tip" tabindex="0" data-tip="Classement par potentiel de chiffre d'affaires additionnel estimé. Calculé sur les articles top-sellers du marché que l'enseigne ne vend pas encore. La barre montre le nombre d'articles couverts vs le total top-sellers." data-tip-en="Ranking by estimated additional revenue potential. Calculated on market top-sellers this retailer doesn't yet carry. The bar shows covered articles vs total top-sellers.">i</span></div>
+          <div class="cat-rank-head" data-i18n="an.catalogue.report.rankhead">Potentiel de CA supplémentaire par enseigne <span class="info-tip" tabindex="0" data-tip="Classement par <strong>potentiel de CA</strong> additionnel estimé. Calculé sur les <strong>articles top-sellers</strong> du marché que l'enseigne ne vend pas encore." data-tip-en="Ranking by estimated <strong>additional revenue potential</strong>. Based on <strong>market top-sellers</strong> this retailer doesn't yet carry.">i</span></div>
           <div class="cat-rank-list" id="catRankList"></div>
         </div>
       </div>

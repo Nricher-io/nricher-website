@@ -86,9 +86,15 @@
 
       function positionDropdown() {
         var rect = form.getBoundingClientRect();
-        dropdown.style.left = rect.left + 'px';
+        var vw = window.innerWidth;
+        if (vw < 640) {
+          dropdown.style.left = '12px';
+          dropdown.style.width = (vw - 24) + 'px';
+        } else {
+          dropdown.style.left = rect.left + 'px';
+          dropdown.style.width = rect.width + 'px';
+        }
         dropdown.style.top = (rect.bottom + 8) + 'px';
-        dropdown.style.width = rect.width + 'px';
       }
 
       function closeDropdown() { dropdown.classList.remove('is-open'); dropdown.innerHTML = ''; }
@@ -820,4 +826,40 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 
+})();
+
+/* Info-tip (i) popover — pages Analyse (hors init pour être dispo partout) */
+(function () {
+  var pop = document.createElement('div');
+  pop.className = 'info-tip-pop';
+  document.body.appendChild(pop);
+
+  function closePop() { pop.classList.remove('is-open'); pop._src = null; }
+
+  function openPop(tip) {
+    var lang = document.documentElement.getAttribute('lang') || 'fr';
+    var content = (lang === 'en' && tip.dataset.tipEn) ? tip.dataset.tipEn : tip.dataset.tip;
+    pop._src = tip;
+    pop.innerHTML = content || '';
+    pop.classList.add('is-open');
+    var r = tip.getBoundingClientRect();
+    var vw = window.innerWidth;
+    var top = r.bottom + 8;
+    var left = r.left + r.width / 2 - 136;
+    left = Math.max(12, Math.min(left, vw - 284));
+    if (top + 220 > window.innerHeight) top = Math.max(8, r.top - 220 - 8);
+    pop.style.top = top + 'px';
+    pop.style.left = left + 'px';
+  }
+
+  document.addEventListener('click', function (e) {
+    var tip = e.target.closest('.info-tip');
+    if (tip) {
+      e.stopPropagation();
+      if (pop.classList.contains('is-open') && pop._src === tip) { closePop(); return; }
+      openPop(tip);
+    } else {
+      closePop();
+    }
+  });
 })();

@@ -137,9 +137,6 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
   .pr-report .cbar-header{grid-template-columns:72px 1fr 36px;gap:6px;}
   .pr-report .cbar-row{grid-template-columns:72px 1fr 36px;gap:6px;}
 }
-.info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
-.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-family:var(--font-body);font-size:12px;font-weight:400;line-height:1.6;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
-.info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
 .cbar-track > div[data-tip]{position:relative;cursor:default;}
 .cbar-track > div[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:11px;font-weight:600;padding:5px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:100;}
 .cbar-track > div[data-tip]:hover::after{opacity:1;}
@@ -304,20 +301,20 @@ table.pr-table tbody tr:hover .pr-row-cta__ico{transform:translateX(2px);}
         <div class="pr-detail__grid">
           <div class="chart-card">
             <div class="pr-trend-bar">
-              <h3><span data-i18n="an.pricing.chart1.title">Price index evolution</span> <span class="info-tip" tabindex="0" data-tip="L'indice prix (PI) mesure le positionnement tarifaire face aux concurrents. PI &lt; 100 = moins cher, PI = 100 = aligné, PI &gt; 100 = plus cher. Graphique semaine par semaine." data-tip-en="The price index (PI) measures pricing position vs. competitors. PI &lt; 100 = cheaper, PI = 100 = aligned, PI &gt; 100 = more expensive. Week-by-week chart.">i</span></h3>
+              <h3><span data-i18n="an.pricing.chart1.title">Price index evolution</span> <span class="info-tip" tabindex="0" data-tip="L'indice prix (<strong>PI</strong>) mesure le positionnement face aux concurrents. <strong>PI &lt; 100</strong> = moins cher, <strong>PI = 100</strong> = aligné, <strong>PI &gt; 100</strong> = plus cher." data-tip-en="The <strong>price index (PI)</strong> measures pricing position vs. competitors. <strong>PI &lt; 100</strong> = cheaper, <strong>PI = 100</strong> = aligned, <strong>PI &gt; 100</strong> = more expensive.">i</span></h3>
               <button class="pr-trend-toggle" id="prTrendToggle" type="button">Tout déselectionner</button>
             </div>
             <div class="chart-sub" id="prTrendSub"></div>
             <div class="chart-canvas-wrap"><canvas id="prTrendCanvas"></canvas></div>
           </div>
           <div class="chart-card" id="prAttractCard">
-            <h3><span data-i18n="an.pricing.chart2.title">Price attractivity evolution</span> <span class="info-tip" tabindex="0" data-tip="Part des articles moins chers (Lower), au même prix (Equal) ou plus chers (Higher) que la meilleure offre concurrente sur ce même article. Évolution semaine par semaine." data-tip-en="Share of articles cheaper (Lower), same price (Equal) or more expensive (Higher) than the best competitor offer for the same article. Week-by-week evolution.">i</span></h3>
+            <h3><span data-i18n="an.pricing.chart2.title">Price attractivity evolution</span> <span class="info-tip" tabindex="0" data-tip="Part des articles <strong>moins chers</strong> (Lower), au <strong>même prix</strong> (Equal) ou <strong>plus chers</strong> (Higher) que la meilleure offre concurrente. Évolution semaine par semaine." data-tip-en="Share of articles <strong>cheaper</strong> (Lower), <strong>same price</strong> (Equal) or <strong>more expensive</strong> (Higher) than the best competitor offer.">i</span></h3>
             <div class="chart-sub" data-i18n="an.pricing.chart2.sub">Part des articles moins chers / alignés / plus chers que la concurrence.</div>
             <div class="chart-canvas-wrap"><canvas id="prAttractCanvas"></canvas></div>
           </div>
         </div>
 
-        <h3 style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:16px;"><span data-i18n="an.pricing.chart3.title">Pricing analysis</span> <span class="info-tip" tabindex="0" data-tip="Comparaison par pack produit : pour chaque univers, part des articles de l'enseigne moins chers, alignés ou plus chers que les concurrents. PI affiché à droite." data-tip-en="Comparison by product pack: for each universe, share of brand articles cheaper, aligned or more expensive than competitors. PI shown on the right.">i</span></h3>
+        <h3 style="font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:16px;"><span data-i18n="an.pricing.chart3.title">Pricing analysis</span> <span class="info-tip" tabindex="0" data-tip="Comparaison par <strong>pack produit</strong> : pour chaque univers, part des articles <strong>moins chers</strong>, alignés ou <strong>plus chers</strong> que les concurrents. <strong>PI</strong> affiché à droite." data-tip-en="Comparison by <strong>product pack</strong>: share of articles <strong>cheaper</strong>, aligned or <strong>more expensive</strong> than competitors. <strong>PI</strong> shown on the right.">i</span></h3>
         <div class="cbar-legend-centered">
           <span class="legend-item"><span class="legend-dot" style="background:var(--good);"></span>Lower</span>
           <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span>Equal</span>

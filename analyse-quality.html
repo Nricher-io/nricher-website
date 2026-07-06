@@ -124,9 +124,6 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
   .an-cat-grid{grid-template-columns:1fr;}
   .ql-gradebar-row{grid-template-columns:60px 1fr;gap:8px;}
 }
-.info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--muted);color:var(--muted);font-size:9px;font-style:normal;font-weight:700;cursor:pointer;position:relative;margin-left:7px;vertical-align:middle;user-select:none;flex-shrink:0;top:-1px;}
-.info-tip::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-family:var(--font-body);font-size:12px;font-weight:400;line-height:1.6;padding:10px 13px;border-radius:9px;width:240px;text-align:left;white-space:normal;opacity:0;pointer-events:none;transition:opacity .15s;z-index:200;box-shadow:0 4px 20px rgba(0,0,0,0.2);text-transform:none;letter-spacing:0;}
-.info-tip:hover::after,.info-tip:focus::after{opacity:1;outline:none;}
 .ql-gradebar-track > div[data-tip]{position:relative;cursor:default;}
 .ql-gradebar-track > div[data-tip]::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 6px);transform:translateX(-50%);background:#1a1a2e;color:#fff;font-size:11px;font-weight:600;padding:5px 9px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:100;}
 .ql-gradebar-track > div[data-tip]:hover::after{opacity:1;}
@@ -290,11 +287,11 @@ table.ql-table tbody tr:hover .ql-row-cta__ico{transform:translateX(2px);}
         </div>
 
         <div class="ql-global-wrap">
-          <div class="ql-section-title"><span data-i18n="an.quality.globaltitle">global grade - % of articles</span> <span class="info-tip" tabindex="0" data-tip="Distribution des articles par note globale de qualité de fiche produit, de A+ (excellent) à F (insuffisant). Calculée sur le contenu, la complétude et la richesse des fiches." data-tip-en="Distribution of articles by overall product sheet quality grade, from A+ (excellent) to F (insufficient). Based on content, completeness and richness.">i</span></div>
+          <div class="ql-section-title"><span data-i18n="an.quality.globaltitle">global grade - % of articles</span> <span class="info-tip" tabindex="0" data-tip="Distribution des articles par note globale, de <strong>A+</strong> (excellent) à <strong>F</strong> (insuffisant). Calculée sur le <strong>contenu</strong>, la <strong>complétude</strong> et la <strong>richesse</strong> des fiches." data-tip-en="Distribution by overall grade, from <strong>A+</strong> (excellent) to <strong>F</strong> (insufficient). Based on <strong>content</strong>, <strong>completeness</strong> and <strong>richness</strong>.">i</span></div>
           <div class="ql-gradebar-track" id="qlGlobalBar"></div>
         </div>
 
-        <div class="ql-section-title"><span data-i18n="an.quality.criteriatitle">distribution of articles by criteria - % of articles</span> <span class="info-tip" tabindex="0" data-tip="Décomposition de la note par critère d'évaluation : titre, images, description, attributs… Identifie les axes d'amélioration prioritaires pour chaque enseigne." data-tip-en="Grade breakdown by evaluation criteria: title, images, description, attributes… Identifies priority improvement areas for each brand.">i</span></div>
+        <div class="ql-section-title"><span data-i18n="an.quality.criteriatitle">distribution of articles by criteria - % of articles</span> <span class="info-tip" tabindex="0" data-tip="Décomposition par <strong>critère</strong> : <strong>titre</strong>, <strong>images</strong>, <strong>description</strong>, attributs… Identifie les <strong>axes d'amélioration</strong> prioritaires pour chaque enseigne." data-tip-en="Breakdown by <strong>criteria</strong>: <strong>title</strong>, <strong>images</strong>, <strong>description</strong>, attributes… Identifies <strong>priority areas</strong> for each brand.">i</span></div>
         <div id="qlCriteriaList"></div>
 
         <div class="ql-legend" id="qlLegend"></div>
