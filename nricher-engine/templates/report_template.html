@@ -597,9 +597,14 @@
             <td class="wk">S{{ r.week }}{% if r.isCurrent %} ★{% endif %}</td>
             {% for key in ['top', 'middle', 'low'] %}
             <td>
-              <span class="prio-chip {{ r[key + 'Severity'] }}" data-tip="{{ key|capitalize }} sales S{{ r.week }} : {{ r[key] }}">
-                {{ r[key] }}
-                {% if prev %}{% set d = r[key] - prev[key] %}<span class="prio-chip__d">{{ '▲' if d > 0 else ('▼' if d < 0 else '—') }}</span>{% endif %}
+              {% set val = r[key] %}
+              {% set prevVal = prev[key] if prev else none %}
+              <span class="prio-chip {{ r[key + 'Severity'] }}" data-tip="{{ key|capitalize }} sales S{{ r.week }} : {{ val if val is not none else '—' }}">
+                {{ val if val is not none else '—' }}
+                {% if prev and val is not none and prevVal is not none %}
+                  {% set d = val - prevVal %}
+                  <span class="prio-chip__d">{{ '▲' if d > 0 else ('▼' if d < 0 else '—') }}</span>
+                {% endif %}
               </span>
             </td>
             {% endfor %}
