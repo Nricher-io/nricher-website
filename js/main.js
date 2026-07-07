@@ -79,6 +79,7 @@
       var form = document.getElementById('hero-search-form');
       var input = document.getElementById('hero-search-input');
       var dropdown = document.getElementById('hero-search-dropdown');
+      var mobPanel = document.getElementById('mob-search-panel');
       if (!form || !input || !dropdown) return;
 
       var companies = window.NRICHER_COMPANIES || [];
@@ -86,32 +87,51 @@
 
       function positionDropdown() {
         var rect = form.getBoundingClientRect();
-        var vw = window.innerWidth;
-        if (vw < 640) {
-          dropdown.style.left = '12px';
-          dropdown.style.width = (vw - 24) + 'px';
-        } else {
-          dropdown.style.left = rect.left + 'px';
-          dropdown.style.width = rect.width + 'px';
-        }
+        dropdown.style.left = rect.left + 'px';
+        dropdown.style.width = rect.width + 'px';
         dropdown.style.top = (rect.bottom + 8) + 'px';
       }
 
-      function closeDropdown() { dropdown.classList.remove('is-open'); dropdown.innerHTML = ''; }
+      function closeDropdown() {
+        dropdown.classList.remove('is-open'); dropdown.innerHTML = '';
+        if (mobPanel) { mobPanel.classList.remove('is-open'); mobPanel.innerHTML = ''; }
+      }
 
       function renderDropdown(query) {
         var q = query.trim().toLowerCase();
         if (!q) { closeDropdown(); return; }
-        positionDropdown();
 
         var matches = companies.filter(function (c) { return c.name.toLowerCase().indexOf(q) !== -1; });
 
+        /* ── Mobile : panel inline sous le champ ── */
+        if (window.innerWidth < 640 && mobPanel) {
+          var html = '';
+          if (matches.length === 0) {
+            html = '<div class="mob-sp-empty">Aucune entreprise trouvée</div>';
+          } else {
+            html = matches.slice(0, 5).map(function (c) {
+              var badge = c.available
+                ? '<span class="mob-sp-badge mob-sp-badge--ok">Rapport dispo</span>'
+                : '<span class="mob-sp-badge mob-sp-badge--no">Bientôt</span>';
+              var href = c.available ? 'rapports/' + c.slug + '.html' : 'recherche.html?q=' + encodeURIComponent(q);
+              return '<a href="' + href + '" class="mob-sp-item"><span class="mob-sp-name">' + c.name + '</span>' + badge + '</a>';
+            }).join('');
+            if (matches.length > 5) {
+              html += '<a href="recherche.html?q=' + encodeURIComponent(q) + '" class="mob-sp-more">Voir les ' + matches.length + ' résultats →</a>';
+            }
+          }
+          mobPanel.innerHTML = html;
+          mobPanel.classList.add('is-open');
+          return;
+        }
+
+        /* ── Desktop : dropdown fixe ── */
+        positionDropdown();
         if (matches.length === 0) {
           dropdown.innerHTML = '<div class="hero__search-dropdown__empty">Aucune entreprise trouvée</div>';
           dropdown.classList.add('is-open');
           return;
         }
-
         var html = matches.slice(0, MAX_RESULTS).map(function (c) {
           var badge = c.available
             ? '<span class="hero__search-dropdown__badge hero__search-dropdown__badge--ok">Voir le rapport</span>'
@@ -120,11 +140,9 @@
           return '<div class="hero__search-dropdown__item' + disabledClass + '" data-slug="' + c.slug + '" data-available="' + c.available + '">' +
                  '<span>' + c.name + '</span>' + badge + '</div>';
         }).join('');
-
         if (matches.length > MAX_RESULTS) {
           html += '<div class="hero__search-dropdown__more" data-seeall="1">Voir les ' + matches.length + ' résultats →</div>';
         }
-
         dropdown.innerHTML = html;
         dropdown.classList.add('is-open');
       }
@@ -137,9 +155,7 @@
       dropdown.addEventListener('click', function (e) {
         var item = e.target.closest('.hero__search-dropdown__item');
         if (item) {
-          if (item.dataset.available === 'true') {
-            window.location.href = 'rapports/' + item.dataset.slug + '.html';
-          }
+          if (item.dataset.available === 'true') { window.location.href = 'rapports/' + item.dataset.slug + '.html'; }
           return;
         }
         if (e.target.closest('[data-seeall]')) {
@@ -148,7 +164,7 @@
       });
 
       document.addEventListener('click', function (e) {
-        if (!form.contains(e.target) && !dropdown.contains(e.target)) closeDropdown();
+        if (!form.contains(e.target) && !dropdown.contains(e.target) && !(mobPanel && mobPanel.contains(e.target))) closeDropdown();
       });
 
       form.addEventListener('submit', function (e) {

@@ -423,6 +423,37 @@ body.menu-open .menu-backdrop { opacity: 1; visibility: visible; }
 .hero__search-dropdown__empty { padding: 16px 18px; font-size: 0.88rem; color: var(--muted); text-align: center; }
 .hero__search-dropdown__more { padding: 10px 18px; font-size: 0.8rem; color: var(--blue); text-align: center; border-top: 1px solid var(--card-2); cursor: none; }
 .hero__search-dropdown__more:hover { background: rgba(96,239,190,0.08); }
+
+/* ── Mobile search panel (inline, remplace dropdown fixed sur mobile) ── */
+.mob-search-panel { display: none; }
+@media (max-width: 640px) {
+  .hero__search-dropdown { display: none !important; }
+  .mob-search-panel {
+    margin-top: 8px; border-radius: 14px; overflow: hidden;
+    background: var(--card); border: 1px solid var(--border);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12); text-align: left;
+  }
+  .mob-search-panel.is-open { display: block; }
+  .mob-sp-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 13px 16px; color: var(--text); -webkit-text-fill-color: var(--text);
+    text-decoration: none; border-bottom: 1px solid var(--border); font-size: 0.88rem;
+  }
+  .mob-sp-item:active { background: rgba(96,239,190,0.08); }
+  .mob-sp-name { font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mob-sp-badge {
+    font-size: 0.58rem; font-weight: 700; padding: 3px 8px; letter-spacing: 0.04em;
+    border-radius: 100px; white-space: nowrap; text-transform: uppercase; flex-shrink: 0;
+  }
+  .mob-sp-badge--ok { background: rgba(96,239,190,0.16); color: #1fae7a; }
+  .mob-sp-badge--no { background: var(--card-2, #F5F7FA); color: var(--muted); }
+  .mob-sp-more {
+    display: block; padding: 12px 16px; font-size: 0.82rem; color: var(--blue);
+    -webkit-text-fill-color: var(--blue); font-weight: 700; text-align: center;
+    text-decoration: none; border-top: 1px solid var(--border);
+  }
+  .mob-sp-empty { padding: 16px; font-size: 0.85rem; color: var(--muted); text-align: center; }
+}
 .hero__trust { display: flex; align-items: center; gap: 16px; margin-top: 44px; }
 .hero__trust p { font-size: 0.93rem; color: var(--muted); }
 .hero__trust strong { color: var(--text); }
