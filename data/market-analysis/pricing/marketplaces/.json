@@ -1,0 +1,278 @@
+{
+  "slug": "",
+  "name": "",
+  "priceIndex": 97,
+  "weeks": [
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        128,
+        110,
+        111,
+        111,
+        128,
+        125
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        107,
+        112,
+        113,
+        107,
+        109,
+        105
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        95,
+        96,
+        68,
+        58,
+        93,
+        94
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        121,
+        134,
+        155,
+        167,
+        148,
+        143
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        103,
+        104,
+        104,
+        105,
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        136,
+        143,
+        136,
+        145,
+        139,
+        120
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        146,
+        146,
+        146,
+        145,
+        154,
+        153
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        116,
+        116,
+        117,
+        117,
+        124,
+        125
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        105,
+        105,
+        103,
+        102,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        164,
+        146,
+        137,
+        139,
+        144,
+        138
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        121,
+        139,
+        135,
+        136,
+        123,
+        138
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        124,
+        131,
+        131,
+        129,
+        135,
+        135
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        101,
+        103,
+        102,
+        103,
+        104,
+        101
+      ]
+    },
+    {
+      "name": "Bricorama",
+      "piHistory": [
+        108,
+        108,
+        110,
+        107,
+        107,
+        103
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        116,
+        117,
+        117,
+        119,
+        120,
+        124
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        102,
+        103,
+        102,
+        101,
+        102,
+        101
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        101,
+        102,
+        103,
+        102,
+        102,
+        100
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        102,
+        101,
+        101,
+        102,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        98,
+        98,
+        100,
+        99,
+        99,
+        99
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "matched": 79,
+      "priceIndex": 159,
+      "lowerPct": 35,
+      "equalPct": 38,
+      "higherPct": 27
+    },
+    {
+      "pack": "Canapé",
+      "matched": 1330,
+      "priceIndex": 98,
+      "lowerPct": 37,
+      "equalPct": 51,
+      "higherPct": 13
+    },
+    {
+      "pack": "Matelas",
+      "matched": 775,
+      "priceIndex": 91,
+      "lowerPct": 77,
+      "equalPct": 14,
+      "higherPct": 9
+    },
+    {
+      "pack": "Lit",
+      "matched": 103,
+      "priceIndex": 92,
+      "lowerPct": 59,
+      "equalPct": 34,
+      "higherPct": 7
+    },
+    {
+      "pack": "Table à manger",
+      "matched": 150,
+      "priceIndex": 98,
+      "lowerPct": 43,
+      "equalPct": 46,
+      "higherPct": 11
+    }
+  ]
+}

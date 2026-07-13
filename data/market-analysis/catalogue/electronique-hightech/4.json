@@ -1,69 +1,69 @@
 {
   "packName": "Tablette",
-  "totalArticles": 1620,
-  "topSellersCount": 732,
-  "topPct": 48,
-  "midPct": 32,
+  "totalArticles": 1586,
+  "topSellersCount": 739,
+  "topPct": 49,
+  "midPct": 31,
   "lowPct": 20,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 193,
-      "potentialPct": 88
+      "topSellerArticles": 228,
+      "potentialPct": 86
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 149,
-      "potentialPct": 91
+      "topSellerArticles": 128,
+      "potentialPct": 92
     },
     {
       "name": "Yonis Shop",
-      "topSellerArticles": 113,
+      "topSellerArticles": 115,
       "potentialPct": 93
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 99,
+      "topSellerArticles": 94,
       "potentialPct": 94
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 93,
+      "name": "2kings",
+      "topSellerArticles": 88,
       "potentialPct": 94
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 85,
+      "topSellerArticles": 86,
       "potentialPct": 95
     },
     {
-      "name": "Rps Technologies",
-      "topSellerArticles": 73,
+      "name": "Cdiscount",
+      "topSellerArticles": 77,
       "potentialPct": 95
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 68,
-      "potentialPct": 96
-    },
-    {
-      "name": "2kings",
-      "topSellerArticles": 67,
+      "topSellerArticles": 65,
       "potentialPct": 96
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 61,
+      "topSellerArticles": 63,
       "potentialPct": 96
     },
     {
-      "name": "Monsieurplus",
-      "topSellerArticles": 51,
+      "name": "Rps Technologies",
+      "topSellerArticles": 63,
+      "potentialPct": 96
+    },
+    {
+      "name": "Thyssus",
+      "topSellerArticles": 49,
       "potentialPct": 97
     },
     {
       "name": "Zoomici",
-      "topSellerArticles": 51,
+      "topSellerArticles": 44,
       "potentialPct": 97
     }
   ]

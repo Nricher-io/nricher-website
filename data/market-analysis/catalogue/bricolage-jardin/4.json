@@ -1,69 +1,69 @@
 {
   "packName": "Commode",
-  "totalArticles": 18830,
-  "topSellersCount": 7871,
-  "topPct": 68,
+  "totalArticles": 19393,
+  "topSellersCount": 7638,
+  "topPct": 67,
   "midPct": 19,
-  "lowPct": 13,
+  "lowPct": 14,
   "ranking": [
     {
       "name": "Abiks Meubles",
-      "topSellerArticles": 5365,
-      "potentialPct": 72
+      "topSellerArticles": 5294,
+      "potentialPct": 73
     },
     {
       "name": "Ok Living",
-      "topSellerArticles": 978,
+      "topSellerArticles": 927,
       "potentialPct": 95
     },
     {
-      "name": "Vidaxl",
-      "topSellerArticles": 431,
+      "name": "Pegane",
+      "topSellerArticles": 394,
       "potentialPct": 98
     },
     {
-      "name": "Pegane",
-      "topSellerArticles": 395,
+      "name": "Vidaxl",
+      "topSellerArticles": 350,
       "potentialPct": 98
     },
     {
       "name": "Htmeubles",
-      "topSellerArticles": 359,
-      "potentialPct": 98
-    },
-    {
-      "name": "Dmora",
-      "topSellerArticles": 343,
-      "potentialPct": 98
-    },
-    {
-      "name": "Rust Oleum",
-      "topSellerArticles": 343,
+      "topSellerArticles": 337,
       "potentialPct": 98
     },
     {
       "name": "Visiodirect",
-      "topSellerArticles": 335,
+      "topSellerArticles": 336,
       "potentialPct": 98
     },
     {
-      "name": "3xe Living",
-      "topSellerArticles": 320,
+      "name": "Dmora",
+      "topSellerArticles": 334,
+      "potentialPct": 98
+    },
+    {
+      "name": "Rust Oleum",
+      "topSellerArticles": 325,
       "potentialPct": 98
     },
     {
       "name": "Meublorama",
-      "topSellerArticles": 308,
+      "topSellerArticles": 312,
       "potentialPct": 98
     },
     {
-      "name": "Bb Loisir",
+      "name": "",
+      "topSellerArticles": 240,
+      "potentialPct": 99
+    },
+    {
+      "name": "3xe Living",
       "topSellerArticles": 216,
       "potentialPct": 99
     },
     {
-      "name": "Petits Meubles",
-      "topSellerArticles": 196,
+      "name": "Bb Loisir",
+      "topSellerArticles": 205,
       "potentialPct": 99
     }
   ]

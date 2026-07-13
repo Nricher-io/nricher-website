@@ -1,69 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 12092,
-  "topSellersCount": 5376,
-  "topPct": 74,
-  "midPct": 16,
-  "lowPct": 10,
+  "totalArticles": 11754,
+  "topSellersCount": 5881,
+  "topPct": 79,
+  "midPct": 12,
+  "lowPct": 9,
   "ranking": [
     {
       "name": "The White Stone",
       "topSellerArticles": 2235,
-      "potentialPct": 82
+      "potentialPct": 81
     },
     {
       "name": "Indream",
-      "topSellerArticles": 1004,
-      "potentialPct": 92
+      "topSellerArticles": 1021,
+      "potentialPct": 91
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 953,
+      "topSellerArticles": 954,
       "potentialPct": 92
     },
     {
+      "name": "",
+      "topSellerArticles": 793,
+      "potentialPct": 93
+    },
+    {
       "name": "Actisom",
-      "topSellerArticles": 522,
+      "topSellerArticles": 521,
       "potentialPct": 96
     },
     {
       "name": "Senso Pur",
-      "topSellerArticles": 358,
+      "topSellerArticles": 357,
       "potentialPct": 97
-    },
-    {
-      "name": "Sport4heros",
-      "topSellerArticles": 304,
-      "potentialPct": 97
-    },
-    {
-      "name": "Matris",
-      "topSellerArticles": 263,
-      "potentialPct": 98
     },
     {
       "name": "Emma Matelas",
-      "topSellerArticles": 159,
+      "topSellerArticles": 158,
       "potentialPct": 99
     },
     {
       "name": "Idliterie",
-      "topSellerArticles": 125,
-      "potentialPct": 99
-    },
-    {
-      "name": "Ilovesleep",
-      "topSellerArticles": 120,
-      "potentialPct": 99
-    },
-    {
-      "name": "Altobuy",
-      "topSellerArticles": 107,
+      "topSellerArticles": 110,
       "potentialPct": 99
     },
     {
       "name": "Vitalit",
       "topSellerArticles": 105,
+      "potentialPct": 99
+    },
+    {
+      "name": "Altobuy",
+      "topSellerArticles": 103,
+      "potentialPct": 99
+    },
+    {
+      "name": "Ikon Sleep",
+      "topSellerArticles": 94,
+      "potentialPct": 99
+    },
+    {
+      "name": "Beliani",
+      "topSellerArticles": 88,
       "potentialPct": 99
     }
   ]

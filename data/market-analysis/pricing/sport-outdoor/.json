@@ -1,0 +1,157 @@
+{
+  "slug": "",
+  "name": "",
+  "priceIndex": 113,
+  "weeks": [
+    "2026-06-02",
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07"
+  ],
+  "competitorTrends": [
+    {
+      "name": "AllTricks",
+      "piHistory": [
+        109,
+        108,
+        105,
+        104,
+        113,
+        115
+      ]
+    },
+    {
+      "name": "Ekosport",
+      "piHistory": [
+        111,
+        102,
+        103,
+        102,
+        122,
+        121
+      ]
+    },
+    {
+      "name": "Runnerinn",
+      "piHistory": [
+        112,
+        110,
+        116,
+        115,
+        114,
+        113
+      ]
+    },
+    {
+      "name": "Snowinn",
+      "piHistory": [
+        97,
+        104,
+        102,
+        93,
+        93,
+        99
+      ]
+    },
+    {
+      "name": "Snowleader",
+      "piHistory": [
+        110,
+        106,
+        105,
+        104,
+        114,
+        116
+      ]
+    },
+    {
+      "name": "Trekkinn",
+      "piHistory": [
+        116,
+        115,
+        114,
+        113,
+        109,
+        111
+      ]
+    },
+    {
+      "name": "Irun",
+      "piHistory": [
+        105,
+        103,
+        104,
+        null,
+        109,
+        108
+      ]
+    },
+    {
+      "name": "Glisshop",
+      "piHistory": [
+        123,
+        116,
+        115,
+        113,
+        121,
+        121
+      ]
+    },
+    {
+      "name": "Hardloop",
+      "piHistory": [
+        110,
+        109,
+        109,
+        109,
+        110,
+        109
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Chaussures de trail",
+      "matched": 3,
+      "priceIndex": 106,
+      "lowerPct": 0,
+      "equalPct": 33,
+      "higherPct": 67
+    },
+    {
+      "pack": "Chaussures de randonnée",
+      "matched": 2,
+      "priceIndex": 113,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 100
+    },
+    {
+      "pack": "Sac à dos",
+      "matched": 7,
+      "priceIndex": 118,
+      "lowerPct": 14,
+      "equalPct": 0,
+      "higherPct": 86
+    },
+    {
+      "pack": "Veste",
+      "matched": 4,
+      "priceIndex": 114,
+      "lowerPct": 25,
+      "equalPct": 0,
+      "higherPct": 75
+    },
+    {
+      "pack": "T-shirt",
+      "matched": 7,
+      "priceIndex": 111,
+      "lowerPct": 14,
+      "equalPct": 14,
+      "higherPct": 71
+    }
+  ]
+}

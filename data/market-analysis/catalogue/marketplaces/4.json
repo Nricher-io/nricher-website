@@ -1,69 +1,69 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 8543,
-  "topSellersCount": 1162,
-  "topPct": 52,
-  "midPct": 26,
-  "lowPct": 22,
+  "totalArticles": 8109,
+  "topSellersCount": 1181,
+  "topPct": 49,
+  "midPct": 30,
+  "lowPct": 21,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 326,
+      "topSellerArticles": 347,
       "potentialPct": 96
     },
     {
       "name": "As Discount",
-      "topSellerArticles": 223,
-      "potentialPct": 97
+      "topSellerArticles": 199,
+      "potentialPct": 98
     },
     {
       "name": "Id Market",
-      "topSellerArticles": 177,
+      "topSellerArticles": 174,
       "potentialPct": 98
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 165,
+      "topSellerArticles": 168,
+      "potentialPct": 98
+    },
+    {
+      "name": "",
+      "topSellerArticles": 150,
       "potentialPct": 98
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 141,
+      "topSellerArticles": 143,
       "potentialPct": 98
     },
     {
       "name": "Zoomici",
-      "topSellerArticles": 130,
+      "topSellerArticles": 137,
       "potentialPct": 98
     },
     {
-      "name": "Paris Prix",
-      "topSellerArticles": 105,
+      "name": "Mercatoxl",
+      "topSellerArticles": 95,
+      "potentialPct": 99
+    },
+    {
+      "name": "Vente Unique",
+      "topSellerArticles": 93,
       "potentialPct": 99
     },
     {
       "name": "2kings",
-      "topSellerArticles": 85,
-      "potentialPct": 99
-    },
-    {
-      "name": "Super10count",
-      "topSellerArticles": 67,
+      "topSellerArticles": 74,
       "potentialPct": 99
     },
     {
       "name": "Premium Xl",
-      "topSellerArticles": 62,
+      "topSellerArticles": 66,
       "potentialPct": 99
     },
     {
-      "name": "Monsieurplus",
-      "topSellerArticles": 59,
-      "potentialPct": 99
-    },
-    {
-      "name": "Cstore",
-      "topSellerArticles": 58,
+      "name": "Paris Prix",
+      "topSellerArticles": 65,
       "potentialPct": 99
     }
   ]

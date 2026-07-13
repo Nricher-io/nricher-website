@@ -1,35 +1,35 @@
 {
   "slug": "alltricks",
   "name": "Alltricks",
-  "articlesAnalysed": 50551,
-  "qualityScore": 75,
+  "articlesAnalysed": 113172,
+  "qualityScore": 76,
   "globalGrades": {
     "Aplus": 0,
-    "A": 19,
-    "B": 37,
+    "A": 18,
+    "B": 40,
     "C": 34,
-    "D": 7,
-    "E": 2,
+    "D": 6,
+    "E": 1,
     "F": 1
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 16,
-      "A": 13,
-      "B": 18,
+      "Aplus": 15,
+      "A": 14,
+      "B": 21,
       "C": 30,
       "D": 13,
-      "E": 7,
-      "F": 3
+      "E": 6,
+      "F": 2
     },
     "Image": {
-      "Aplus": 96,
-      "A": 2,
+      "Aplus": 97,
+      "A": 1,
       "B": 0,
       "C": 0,
       "D": 0,
-      "E": 1,
-      "F": 1
+      "E": 0,
+      "F": 0
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 44,
+      "Aplus": 45,
       "A": 10,
       "B": 10,
-      "C": 12,
-      "D": 7,
-      "E": 5,
-      "F": 12
+      "C": 13,
+      "D": 6,
+      "E": 4,
+      "F": 11
     }
   }
 }

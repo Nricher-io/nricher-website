@@ -3,67 +3,67 @@
   "name": "The Cool Republic",
   "priceIndex": 85,
   "weeks": [
-    "2026-05-26",
     "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07"
   ],
   "competitorTrends": [
     {
       "name": "Asteri",
       "piHistory": [
-        103,
         104,
         97,
         101,
         103,
-        115
+        115,
+        111
       ]
     },
     {
       "name": "Connox",
       "piHistory": [
-        99,
         97,
         98,
         98,
         95,
-        98
+        98,
+        101
       ]
     },
     {
       "name": "Design-Bestseller",
       "piHistory": [
-        106,
         94,
         93,
         96,
         95,
-        96
+        96,
+        98
       ]
     },
     {
       "name": "La Redoute",
       "piHistory": [
-        87,
         86,
         84,
         89,
         93,
-        96
+        96,
+        97
       ]
     },
     {
       "name": "Lamptwist",
       "piHistory": [
-        107,
         106,
         107,
         111,
         106,
-        114
+        114,
+        112
       ]
     },
     {
@@ -71,97 +71,97 @@
       "piHistory": [
         101,
         101,
-        101,
         99,
         101,
-        109
+        109,
+        113
       ]
     },
     {
       "name": "Manomano",
       "piHistory": [
-        129,
         122,
         123,
         127,
         129,
-        115
+        115,
+        117
       ]
     },
     {
       "name": "Myareadesign",
       "piHistory": [
-        102,
         103,
         100,
         98,
         100,
-        102
+        102,
+        99
       ]
     },
     {
       "name": "Nedgis",
       "piHistory": [
-        90,
         92,
         93,
         96,
         95,
-        105
-      ]
-    },
-    {
-      "name": "Fermliving",
-      "piHistory": [
-        86,
-        92,
-        84,
-        86,
-        91,
-        null
+        105,
+        106
       ]
     },
     {
       "name": "Lemaitredeslampes",
       "piHistory": [
-        102,
         103,
         null,
         102,
         102,
+        104,
         104
       ]
     },
     {
       "name": "Silvera",
       "piHistory": [
-        103,
         101,
         null,
         101,
         93,
-        102
+        102,
+        101
+      ]
+    },
+    {
+      "name": "Fermliving",
+      "piHistory": [
+        92,
+        84,
+        86,
+        91,
+        null,
+        null
       ]
     },
     {
       "name": "Light11",
       "piHistory": [
         97,
-        97,
         null,
         null,
         null,
-        109
+        109,
+        99
       ]
     },
     {
       "name": "Thecoolrepublic",
       "piHistory": [
         null,
-        null,
         91,
         89,
         89,
+        94,
         94
       ]
     },
@@ -171,9 +171,9 @@
         null,
         null,
         null,
-        null,
         106,
-        107
+        107,
+        108
       ]
     }
   ],
@@ -201,48 +201,54 @@
       "cheaperPct": 57,
       "equalPct": 24,
       "higherPct": 19
+    },
+    {
+      "week": "2026-07-07",
+      "cheaperPct": 54,
+      "equalPct": 24,
+      "higherPct": 23
     }
   ],
   "pairwise": [
     {
       "pack": "Suspension",
-      "matched": 718,
-      "priceIndex": 82,
-      "lowerPct": 79,
+      "matched": 727,
+      "priceIndex": 84,
+      "lowerPct": 78,
       "equalPct": 12,
       "higherPct": 10
     },
     {
       "pack": "Lampe à poser",
-      "matched": 682,
+      "matched": 687,
       "priceIndex": 85,
-      "lowerPct": 76,
-      "equalPct": 13,
+      "lowerPct": 78,
+      "equalPct": 11,
       "higherPct": 11
     },
     {
       "pack": "Applique murale",
-      "matched": 240,
+      "matched": 236,
       "priceIndex": 90,
-      "lowerPct": 72,
-      "equalPct": 15,
-      "higherPct": 13
+      "lowerPct": 74,
+      "equalPct": 14,
+      "higherPct": 12
     },
     {
       "pack": "Lampadaire",
-      "matched": 213,
+      "matched": 212,
       "priceIndex": 86,
-      "lowerPct": 73,
-      "equalPct": 18,
-      "higherPct": 10
+      "lowerPct": 70,
+      "equalPct": 19,
+      "higherPct": 11
     },
     {
       "pack": "Plafonnier",
       "matched": 22,
       "priceIndex": 95,
       "lowerPct": 73,
-      "equalPct": 9,
-      "higherPct": 18
+      "equalPct": 14,
+      "higherPct": 14
     }
   ]
 }

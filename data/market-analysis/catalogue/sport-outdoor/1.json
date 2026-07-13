@@ -1,64 +1,59 @@
 {
   "packName": "Chaussures de randonnée",
-  "totalArticles": 3583,
-  "topSellersCount": 4566,
-  "topPct": 48,
-  "midPct": 33,
-  "lowPct": 19,
+  "totalArticles": 3568,
+  "topSellersCount": 4449,
+  "topPct": 49,
+  "midPct": 34,
+  "lowPct": 17,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 2572,
-      "potentialPct": 28
+      "topSellerArticles": 2433,
+      "potentialPct": 32
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 1994,
-      "potentialPct": 44
+      "topSellerArticles": 2016,
+      "potentialPct": 43
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 1210,
+      "topSellerArticles": 1216,
       "potentialPct": 66
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 1112,
+      "topSellerArticles": 1119,
       "potentialPct": 69
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 814,
-      "potentialPct": 77
-    },
-    {
-      "name": "Glisshop",
-      "topSellerArticles": 624,
-      "potentialPct": 83
+      "topSellerArticles": 731,
+      "potentialPct": 80
     },
     {
       "name": "Irun",
-      "topSellerArticles": 615,
+      "topSellerArticles": 592,
       "potentialPct": 83
     },
     {
+      "name": "Glisshop",
+      "topSellerArticles": 556,
+      "potentialPct": 84
+    },
+    {
       "name": "Zalando",
-      "topSellerArticles": 485,
-      "potentialPct": 86
+      "topSellerArticles": 416,
+      "potentialPct": 88
     },
     {
       "name": "Runnerinn",
-      "topSellerArticles": 59,
+      "topSellerArticles": 60,
       "potentialPct": 98
     },
     {
-      "name": "An Mai Mao Yi",
-      "topSellerArticles": 1,
-      "potentialPct": 100
-    },
-    {
-      "name": "Sports Partners",
-      "topSellerArticles": 1,
+      "name": "",
+      "topSellerArticles": 2,
       "potentialPct": 100
     }
   ]

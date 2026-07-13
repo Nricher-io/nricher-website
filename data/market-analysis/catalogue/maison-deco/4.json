@@ -1,39 +1,39 @@
 {
   "packName": "Plafonnier",
-  "totalArticles": 820,
-  "topSellersCount": 310,
-  "topPct": 57,
-  "midPct": 37,
-  "lowPct": 6,
+  "totalArticles": 852,
+  "topSellersCount": 456,
+  "topPct": 72,
+  "midPct": 23,
+  "lowPct": 5,
   "ranking": [
     {
+      "name": "Nedgis",
+      "topSellerArticles": 184,
+      "potentialPct": 78
+    },
+    {
       "name": "Lemaitredeslampes",
-      "topSellerArticles": 142,
-      "potentialPct": 83
+      "topSellerArticles": 122,
+      "potentialPct": 86
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 102,
+      "topSellerArticles": 100,
       "potentialPct": 88
     },
     {
-      "name": "Nedgis",
-      "topSellerArticles": 66,
-      "potentialPct": 92
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 61,
-      "potentialPct": 93
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 49,
+      "topSellerArticles": 50,
       "potentialPct": 94
     },
     {
       "name": "Connox",
-      "topSellerArticles": 41,
+      "topSellerArticles": 44,
+      "potentialPct": 95
+    },
+    {
+      "name": "Asteri",
+      "topSellerArticles": 43,
       "potentialPct": 95
     },
     {
@@ -52,12 +52,12 @@
       "potentialPct": 99
     },
     {
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 6,
+      "name": "Dbs Rdc",
+      "topSellerArticles": 7,
       "potentialPct": 99
     },
     {
-      "name": "Dbs Rdc",
+      "name": "Evolutiv Solutions",
       "topSellerArticles": 6,
       "potentialPct": 99
     },

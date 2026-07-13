@@ -1,16 +1,16 @@
 {
   "slug": "autourdebebe",
   "name": "Autourdebebe",
-  "articlesAnalysed": 18253,
+  "articlesAnalysed": 18404,
   "qualityScore": 52,
   "globalGrades": {
     "Aplus": 0,
     "A": 1,
     "B": 5,
-    "C": 26,
+    "C": 25,
     "D": 25,
-    "E": 22,
-    "F": 21
+    "E": 23,
+    "F": 22
   },
   "criteriaGrades": {
     "Titre": {
@@ -18,12 +18,12 @@
       "A": 5,
       "B": 8,
       "C": 24,
-      "D": 22,
+      "D": 23,
       "E": 21,
       "F": 17
     },
     "Image": {
-      "Aplus": 29,
+      "Aplus": 30,
       "A": 10,
       "B": 12,
       "C": 14,
@@ -47,7 +47,7 @@
       "C": 11,
       "D": 10,
       "E": 12,
-      "F": 40
+      "F": 41
     }
   }
 }

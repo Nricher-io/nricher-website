@@ -1,69 +1,69 @@
 {
   "packName": "Salon de jardin",
-  "totalArticles": 5652,
-  "topSellersCount": 1711,
-  "topPct": 51,
-  "midPct": 26,
+  "totalArticles": 5578,
+  "topSellersCount": 1740,
+  "topPct": 47,
+  "midPct": 30,
   "lowPct": 23,
   "ranking": [
     {
       "name": "Vidaxl",
-      "topSellerArticles": 731,
-      "potentialPct": 87
+      "topSellerArticles": 505,
+      "potentialPct": 91
+    },
+    {
+      "name": "",
+      "topSellerArticles": 307,
+      "potentialPct": 94
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 281,
+      "topSellerArticles": 276,
       "potentialPct": 95
     },
     {
+      "name": "Buyspace",
+      "topSellerArticles": 229,
+      "potentialPct": 96
+    },
+    {
       "name": "Oviala",
-      "topSellerArticles": 225,
+      "topSellerArticles": 219,
       "potentialPct": 96
     },
     {
       "name": "Concept Usine",
-      "topSellerArticles": 192,
+      "topSellerArticles": 204,
+      "potentialPct": 96
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 201,
+      "potentialPct": 96
+    },
+    {
+      "name": "Decoshop",
+      "topSellerArticles": 150,
       "potentialPct": 97
     },
     {
-      "name": "Meublesbrillant",
-      "topSellerArticles": 144,
-      "potentialPct": 97
-    },
-    {
-      "name": "Aosom",
+      "name": "Defora Home",
       "topSellerArticles": 138,
       "potentialPct": 98
     },
     {
-      "name": "Defora Home",
+      "name": "Aosom",
       "topSellerArticles": 131,
       "potentialPct": 98
     },
     {
-      "name": "Shopnova",
-      "topSellerArticles": 122,
+      "name": "House Partners",
+      "topSellerArticles": 124,
       "potentialPct": 98
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 107,
-      "potentialPct": 98
-    },
-    {
-      "name": "Mercatoxl",
-      "topSellerArticles": 94,
-      "potentialPct": 98
-    },
-    {
-      "name": "Habitat & Jardin",
-      "topSellerArticles": 88,
-      "potentialPct": 98
-    },
-    {
-      "name": "Go Garden",
-      "topSellerArticles": 85,
+      "topSellerArticles": 108,
       "potentialPct": 98
     }
   ]

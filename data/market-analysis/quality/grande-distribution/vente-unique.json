@@ -1,32 +1,32 @@
 {
   "slug": "vente-unique",
   "name": "Vente Unique",
-  "articlesAnalysed": 674111,
-  "qualityScore": 58,
+  "articlesAnalysed": 561484,
+  "qualityScore": 59,
   "globalGrades": {
     "Aplus": 0,
-    "A": 6,
+    "A": 7,
     "B": 8,
-    "C": 31,
-    "D": 20,
-    "E": 24,
-    "F": 11
+    "C": 32,
+    "D": 21,
+    "E": 23,
+    "F": 10
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 38,
       "A": 17,
-      "B": 19,
-      "C": 17,
+      "B": 20,
+      "C": 16,
       "D": 5,
       "E": 2,
       "F": 1
     },
     "Image": {
-      "Aplus": 67,
-      "A": 20,
+      "Aplus": 68,
+      "A": 19,
       "B": 5,
-      "C": 4,
+      "C": 5,
       "D": 0,
       "E": 1,
       "F": 2
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 13,
+      "Aplus": 14,
       "A": 2,
       "B": 2,
       "C": 3,
       "D": 3,
       "E": 3,
-      "F": 74
+      "F": 73
     }
   }
 }

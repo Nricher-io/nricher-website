@@ -1,69 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 13052,
-  "topSellersCount": 7531,
-  "topPct": 68,
-  "midPct": 20,
-  "lowPct": 12,
+  "totalArticles": 13153,
+  "topSellersCount": 8548,
+  "topPct": 67,
+  "midPct": 22,
+  "lowPct": 11,
   "ranking": [
     {
       "name": "Masseno",
-      "topSellerArticles": 2091,
+      "topSellerArticles": 2093,
       "potentialPct": 84
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1715,
+      "topSellerArticles": 1653,
       "potentialPct": 87
     },
     {
+      "name": "",
+      "topSellerArticles": 1530,
+      "potentialPct": 88
+    },
+    {
       "name": "Vente Unique",
-      "topSellerArticles": 1418,
+      "topSellerArticles": 1394,
       "potentialPct": 89
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1254,
-      "potentialPct": 90
+      "topSellerArticles": 1244,
+      "potentialPct": 91
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 656,
+      "topSellerArticles": 634,
       "potentialPct": 95
     },
     {
+      "name": "Petits Meubles",
+      "topSellerArticles": 475,
+      "potentialPct": 96
+    },
+    {
       "name": "Meublorama",
-      "topSellerArticles": 397,
+      "topSellerArticles": 396,
       "potentialPct": 97
     },
     {
       "name": "Mercatoxl",
-      "topSellerArticles": 288,
-      "potentialPct": 98
+      "topSellerArticles": 392,
+      "potentialPct": 97
     },
     {
-      "name": "Paris Prix",
-      "topSellerArticles": 278,
+      "name": "Go Garden",
+      "topSellerArticles": 323,
       "potentialPct": 98
     },
     {
       "name": "Besolux Group",
-      "topSellerArticles": 278,
+      "topSellerArticles": 280,
       "potentialPct": 98
     },
     {
       "name": "Sweeek",
-      "topSellerArticles": 271,
-      "potentialPct": 98
-    },
-    {
-      "name": "Petits Meubles",
-      "topSellerArticles": 264,
-      "potentialPct": 98
-    },
-    {
-      "name": "Bonne Vie Meuble",
-      "topSellerArticles": 252,
+      "topSellerArticles": 279,
       "potentialPct": 98
     }
   ]

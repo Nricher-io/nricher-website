@@ -1,69 +1,69 @@
 {
   "packName": "Télévision",
-  "totalArticles": 2061,
-  "topSellersCount": 1217,
-  "topPct": 49,
-  "midPct": 29,
+  "totalArticles": 2016,
+  "topSellersCount": 1154,
+  "topPct": 50,
+  "midPct": 28,
   "lowPct": 22,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 291,
-      "potentialPct": 86
+      "topSellerArticles": 304,
+      "potentialPct": 85
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 264,
-      "potentialPct": 87
+      "topSellerArticles": 234,
+      "potentialPct": 88
     },
     {
       "name": "Icoza",
-      "topSellerArticles": 229,
-      "potentialPct": 89
+      "topSellerArticles": 208,
+      "potentialPct": 90
     },
     {
       "name": "Darty",
-      "topSellerArticles": 179,
-      "potentialPct": 91
+      "topSellerArticles": 169,
+      "potentialPct": 92
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 136,
-      "potentialPct": 93
-    },
-    {
-      "name": "Super10count",
-      "topSellerArticles": 118,
+      "topSellerArticles": 129,
       "potentialPct": 94
     },
     {
+      "name": "Super10count",
+      "topSellerArticles": 110,
+      "potentialPct": 95
+    },
+    {
       "name": "Monsieurplus",
-      "topSellerArticles": 107,
+      "topSellerArticles": 94,
       "potentialPct": 95
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 96,
-      "potentialPct": 95
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 89,
-      "potentialPct": 96
     },
     {
       "name": "You Get Innovation & Technology",
-      "topSellerArticles": 84,
+      "topSellerArticles": 83,
+      "potentialPct": 96
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 83,
       "potentialPct": 96
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 76,
+      "topSellerArticles": 73,
       "potentialPct": 96
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 72,
+      "name": "Multishop",
+      "topSellerArticles": 66,
+      "potentialPct": 97
+    },
+    {
+      "name": "Domtek",
+      "topSellerArticles": 65,
       "potentialPct": 97
     }
   ]

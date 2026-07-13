@@ -1,69 +1,69 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 8758,
-  "topSellersCount": 4667,
-  "topPct": 65,
-  "midPct": 23,
-  "lowPct": 12,
+  "totalArticles": 8077,
+  "topSellersCount": 4231,
+  "topPct": 62,
+  "midPct": 25,
+  "lowPct": 13,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 1964,
+      "topSellerArticles": 1766,
       "potentialPct": 78
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 1140,
+      "topSellerArticles": 1013,
       "potentialPct": 87
     },
     {
-      "name": "Casaarredostudio",
-      "topSellerArticles": 510,
-      "potentialPct": 94
+      "name": "House Partners",
+      "topSellerArticles": 393,
+      "potentialPct": 95
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 387,
-      "potentialPct": 96
+      "topSellerArticles": 390,
+      "potentialPct": 95
     },
     {
-      "name": "Sololed",
-      "topSellerArticles": 352,
-      "potentialPct": 96
-    },
-    {
-      "name": "Beliani",
-      "topSellerArticles": 314,
+      "name": "Casaarredostudio",
+      "topSellerArticles": 360,
       "potentialPct": 96
     },
     {
       "name": "Materiel Chr Pro",
-      "topSellerArticles": 311,
+      "topSellerArticles": 309,
       "potentialPct": 96
     },
     {
-      "name": "Wearredo",
-      "topSellerArticles": 245,
+      "name": "Beliani",
+      "topSellerArticles": 300,
+      "potentialPct": 96
+    },
+    {
+      "name": "",
+      "topSellerArticles": 290,
+      "potentialPct": 96
+    },
+    {
+      "name": "Sololed",
+      "topSellerArticles": 219,
       "potentialPct": 97
     },
     {
-      "name": "House Partners",
-      "topSellerArticles": 228,
-      "potentialPct": 97
+      "name": "Mercatoxl",
+      "topSellerArticles": 201,
+      "potentialPct": 98
     },
     {
       "name": "Id Market",
-      "topSellerArticles": 199,
+      "topSellerArticles": 197,
       "potentialPct": 98
     },
     {
-      "name": "Kivio",
-      "topSellerArticles": 193,
-      "potentialPct": 98
-    },
-    {
-      "name": "Shopnova",
-      "topSellerArticles": 148,
+      "name": "Wearredo",
+      "topSellerArticles": 168,
       "potentialPct": 98
     }
   ]

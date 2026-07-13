@@ -1,19 +1,19 @@
 {
   "packName": "Matelas",
-  "totalArticles": 14795,
-  "topSellersCount": 9530,
-  "topPct": 68,
-  "midPct": 19,
+  "totalArticles": 14927,
+  "topSellersCount": 10011,
+  "topPct": 67,
+  "midPct": 20,
   "lowPct": 13,
   "ranking": [
     {
       "name": "Literie Moins Cher",
-      "topSellerArticles": 4426,
-      "potentialPct": 70
+      "topSellerArticles": 4577,
+      "potentialPct": 69
     },
     {
       "name": "The White Stone",
-      "topSellerArticles": 2224,
+      "topSellerArticles": 2252,
       "potentialPct": 85
     },
     {
@@ -22,14 +22,19 @@
       "potentialPct": 94
     },
     {
+      "name": "",
+      "topSellerArticles": 819,
+      "potentialPct": 95
+    },
+    {
       "name": "Indream",
-      "topSellerArticles": 752,
+      "topSellerArticles": 785,
       "potentialPct": 95
     },
     {
       "name": "Moonia",
-      "topSellerArticles": 665,
-      "potentialPct": 96
+      "topSellerArticles": 676,
+      "potentialPct": 95
     },
     {
       "name": "1001lits",
@@ -38,7 +43,7 @@
     },
     {
       "name": "Actisom",
-      "topSellerArticles": 525,
+      "topSellerArticles": 524,
       "potentialPct": 96
     },
     {
@@ -48,22 +53,17 @@
     },
     {
       "name": "Simpur",
-      "topSellerArticles": 309,
+      "topSellerArticles": 317,
       "potentialPct": 98
     },
     {
       "name": "La Redoute",
-      "topSellerArticles": 305,
+      "topSellerArticles": 302,
       "potentialPct": 98
     },
     {
       "name": "Ideoideal",
-      "topSellerArticles": 285,
-      "potentialPct": 98
-    },
-    {
-      "name": "Vidaxl",
-      "topSellerArticles": 232,
+      "topSellerArticles": 281,
       "potentialPct": 98
     }
   ]

@@ -1,59 +1,59 @@
 {
   "packName": "Suspension",
-  "totalArticles": 4321,
-  "topSellersCount": 3721,
-  "topPct": 69,
-  "midPct": 28,
-  "lowPct": 3,
+  "totalArticles": 4502,
+  "topSellersCount": 4583,
+  "topPct": 75,
+  "midPct": 23,
+  "lowPct": 2,
   "ranking": [
     {
+      "name": "Nedgis",
+      "topSellerArticles": 1381,
+      "potentialPct": 69
+    },
+    {
       "name": "Lamptwist",
-      "topSellerArticles": 832,
+      "topSellerArticles": 874,
       "potentialPct": 81
     },
     {
-      "name": "Connox",
-      "topSellerArticles": 764,
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 827,
       "potentialPct": 82
     },
     {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 740,
+      "name": "Connox",
+      "topSellerArticles": 774,
       "potentialPct": 83
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 718,
-      "potentialPct": 83
-    },
-    {
-      "name": "Nedgis",
-      "topSellerArticles": 667,
-      "potentialPct": 85
+      "topSellerArticles": 727,
+      "potentialPct": 84
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 520,
+      "topSellerArticles": 522,
       "potentialPct": 88
     },
     {
       "name": "Asteri",
-      "topSellerArticles": 373,
-      "potentialPct": 91
-    },
-    {
-      "name": "Le Cedre Rouge",
-      "topSellerArticles": 195,
+      "topSellerArticles": 218,
       "potentialPct": 95
     },
     {
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 200,
+      "potentialPct": 96
+    },
+    {
       "name": "Light11",
-      "topSellerArticles": 179,
+      "topSellerArticles": 191,
       "potentialPct": 96
     },
     {
       "name": "Myareadesign",
-      "topSellerArticles": 82,
+      "topSellerArticles": 83,
       "potentialPct": 98
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 67,
+      "topSellerArticles": 75,
       "potentialPct": 98
     }
   ]

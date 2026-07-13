@@ -1,14 +1,14 @@
 {
   "slug": "trekkinn",
   "name": "Trekkinn",
-  "articlesAnalysed": 204114,
+  "articlesAnalysed": 204678,
   "qualityScore": 47,
   "globalGrades": {
     "Aplus": 1,
     "A": 7,
     "B": 16,
     "C": 27,
-    "D": 11,
+    "D": 10,
     "E": 4,
     "F": 35
   },
@@ -46,7 +46,7 @@
       "B": 4,
       "C": 19,
       "D": 19,
-      "E": 5,
+      "E": 4,
       "F": 36
     }
   }

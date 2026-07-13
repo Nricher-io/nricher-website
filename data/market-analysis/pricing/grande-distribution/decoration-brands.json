@@ -1,76 +1,76 @@
 {
   "slug": "decoration-brands",
   "name": "Decoration Brands",
-  "priceIndex": 101,
+  "priceIndex": 102,
   "weeks": [
-    "2026-05-26",
     "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        133,
         141,
         137,
         137,
         136,
-        135
+        135,
+        139
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        123,
         113,
         117,
         120,
         113,
-        117
+        117,
+        111
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        124,
         122,
         127,
         124,
         125,
-        133
+        133,
+        135
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        146,
         152,
         154,
         167,
         169,
-        160
+        160,
+        151
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        105,
         104,
         104,
         103,
         105,
-        105
+        105,
+        104
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        101,
         104,
+        100,
         100,
         100,
         100,
@@ -80,154 +80,154 @@
     {
       "name": "Autourdebebe",
       "piHistory": [
-        160,
         162,
         167,
         150,
         156,
-        159
+        159,
+        138
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        158,
         159,
         158,
         158,
         156,
+        164,
         164
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
-        141,
         143,
         143,
         132,
         133,
-        134
+        134,
+        146
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        103,
         106,
         105,
         103,
         103,
+        102,
         102
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        151,
         147,
         156,
         154,
         154,
-        152
+        152,
+        146
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        138,
         131,
         136,
         138,
         135,
-        127
+        127,
+        125
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        134,
         139,
         143,
         138,
         140,
-        138
+        138,
+        136
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
         109,
-        109,
         110,
         110,
         111,
-        114
+        114,
+        108
       ]
     },
     {
       "name": "Bricorama",
       "piHistory": [
-        111,
         112,
         109,
         117,
         115,
-        117
+        117,
+        110
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        115,
         116,
         114,
         112,
         115,
-        116
+        116,
+        111
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        102,
         104,
         104,
         104,
         105,
-        104
+        104,
+        102
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        97,
         99,
         100,
         100,
         100,
+        101,
         101
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
-        101,
         100,
         100,
         102,
         101,
-        102
+        102,
+        101
       ]
     },
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        114,
         112,
         116,
         113,
         116,
+        115,
         115
       ]
     }
@@ -236,43 +236,43 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "matched": 71,
-      "priceIndex": 100,
-      "lowerPct": 3,
-      "equalPct": 94,
-      "higherPct": 4
+      "matched": 64,
+      "priceIndex": 108,
+      "lowerPct": 7,
+      "equalPct": 86,
+      "higherPct": 7
     },
     {
       "pack": "Lit",
-      "matched": 17,
-      "priceIndex": 106,
-      "lowerPct": 5,
-      "equalPct": 67,
-      "higherPct": 27
-    },
-    {
-      "pack": "Matelas",
-      "matched": 7,
+      "matched": 16,
       "priceIndex": 99,
-      "lowerPct": 19,
-      "equalPct": 63,
+      "lowerPct": 12,
+      "equalPct": 69,
       "higherPct": 19
     },
     {
+      "pack": "Matelas",
+      "matched": 6,
+      "priceIndex": 107,
+      "lowerPct": 33,
+      "equalPct": 33,
+      "higherPct": 33
+    },
+    {
       "pack": "Fauteuil",
-      "matched": 130,
+      "matched": 128,
       "priceIndex": 101,
-      "lowerPct": 13,
-      "equalPct": 70,
-      "higherPct": 17
+      "lowerPct": 17,
+      "equalPct": 69,
+      "higherPct": 14
     },
     {
       "pack": "Table à manger",
-      "matched": 51,
-      "priceIndex": 100,
-      "lowerPct": 21,
-      "equalPct": 66,
-      "higherPct": 14
+      "matched": 50,
+      "priceIndex": 99,
+      "lowerPct": 28,
+      "equalPct": 61,
+      "higherPct": 11
     }
   ]
 }

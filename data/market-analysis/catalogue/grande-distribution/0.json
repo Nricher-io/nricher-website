@@ -1,70 +1,70 @@
 {
   "packName": "Canapé",
-  "totalArticles": 22056,
-  "topSellersCount": 11513,
-  "topPct": 72,
-  "midPct": 17,
-  "lowPct": 11,
+  "totalArticles": 21880,
+  "topSellersCount": 12262,
+  "topPct": 69,
+  "midPct": 22,
+  "lowPct": 9,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 3774,
+      "topSellerArticles": 3818,
       "potentialPct": 83
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 3574,
-      "potentialPct": 84
+      "topSellerArticles": 3179,
+      "potentialPct": 85
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1684,
+      "topSellerArticles": 1669,
       "potentialPct": 92
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1369,
+      "topSellerArticles": 1393,
       "potentialPct": 94
     },
     {
-      "name": "Shopnova",
-      "topSellerArticles": 626,
+      "name": "",
+      "topSellerArticles": 1239,
+      "potentialPct": 94
+    },
+    {
+      "name": "Decoshop",
+      "topSellerArticles": 964,
+      "potentialPct": 96
+    },
+    {
+      "name": "House Partners",
+      "topSellerArticles": 786,
+      "potentialPct": 96
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 660,
       "potentialPct": 97
     },
     {
+      "name": "Go Garden",
+      "topSellerArticles": 492,
+      "potentialPct": 98
+    },
+    {
       "name": "Casanova Paris",
-      "topSellerArticles": 486,
+      "topSellerArticles": 419,
       "potentialPct": 98
     },
     {
-      "name": "Silverstore",
-      "topSellerArticles": 342,
-      "potentialPct": 98
-    },
-    {
-      "name": "Rama Shop",
-      "topSellerArticles": 336,
+      "name": "Shopnova",
+      "topSellerArticles": 389,
       "potentialPct": 98
     },
     {
       "name": "Dmora",
       "topSellerArticles": 332,
       "potentialPct": 98
-    },
-    {
-      "name": "Mercatoxl",
-      "topSellerArticles": 326,
-      "potentialPct": 99
-    },
-    {
-      "name": "Go Garden",
-      "topSellerArticles": 311,
-      "potentialPct": 99
-    },
-    {
-      "name": "Cornero",
-      "topSellerArticles": 306,
-      "potentialPct": 99
     }
   ]
 }

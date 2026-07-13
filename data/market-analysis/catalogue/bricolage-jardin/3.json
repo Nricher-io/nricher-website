@@ -1,69 +1,69 @@
 {
   "packName": "Lit",
-  "totalArticles": 22282,
-  "topSellersCount": 7033,
+  "totalArticles": 20827,
+  "topSellersCount": 6565,
   "topPct": 55,
   "midPct": 28,
   "lowPct": 17,
   "ranking": [
     {
       "name": "Masseno",
-      "topSellerArticles": 1751,
-      "potentialPct": 92
+      "topSellerArticles": 1780,
+      "potentialPct": 91
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 1630,
-      "potentialPct": 93
+      "topSellerArticles": 1612,
+      "potentialPct": 92
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1098,
-      "potentialPct": 95
-    },
-    {
-      "name": "Okwish",
-      "topSellerArticles": 1013,
-      "potentialPct": 95
-    },
-    {
-      "name": "Vente Unique",
-      "topSellerArticles": 881,
+      "topSellerArticles": 930,
       "potentialPct": 96
     },
     {
-      "name": "Box Deco Couleurs",
-      "topSellerArticles": 660,
-      "potentialPct": 97
+      "name": "Okwish",
+      "topSellerArticles": 862,
+      "potentialPct": 96
+    },
+    {
+      "name": "Vente Unique",
+      "topSellerArticles": 845,
+      "potentialPct": 96
     },
     {
       "name": "Redom",
-      "topSellerArticles": 622,
-      "potentialPct": 97
-    },
-    {
-      "name": "Rust Oleum",
-      "topSellerArticles": 611,
+      "topSellerArticles": 536,
       "potentialPct": 97
     },
     {
       "name": "Petits Meubles",
+      "topSellerArticles": 452,
+      "potentialPct": 98
+    },
+    {
+      "name": "Rust Oleum",
+      "topSellerArticles": 436,
+      "potentialPct": 98
+    },
+    {
+      "name": "Box Deco Couleurs",
       "topSellerArticles": 433,
       "potentialPct": 98
     },
     {
       "name": "Bb Loisir",
-      "topSellerArticles": 416,
+      "topSellerArticles": 412,
       "potentialPct": 98
     },
     {
       "name": "1001jouets",
-      "topSellerArticles": 396,
+      "topSellerArticles": 402,
       "potentialPct": 98
     },
     {
       "name": "Meublorama",
-      "topSellerArticles": 374,
+      "topSellerArticles": 365,
       "potentialPct": 98
     }
   ]

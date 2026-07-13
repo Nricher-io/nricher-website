@@ -1,10 +1,10 @@
 {
   "packName": "Lit",
-  "totalArticles": 21980,
-  "topSellersCount": 8440,
-  "topPct": 68,
+  "totalArticles": 21810,
+  "topSellersCount": 8416,
+  "topPct": 67,
   "midPct": 21,
-  "lowPct": 11,
+  "lowPct": 12,
   "ranking": [
     {
       "name": "N Wood",
@@ -13,57 +13,57 @@
     },
     {
       "name": "Clicnbuy",
-      "topSellerArticles": 1933,
+      "topSellerArticles": 1904,
       "potentialPct": 91
     },
     {
       "name": "Les Tendances",
-      "topSellerArticles": 1280,
+      "topSellerArticles": 1274,
       "potentialPct": 94
     },
     {
       "name": "1001jouets",
-      "topSellerArticles": 1105,
+      "topSellerArticles": 1033,
       "potentialPct": 95
     },
     {
-      "name": "Vidaxl",
-      "topSellerArticles": 686,
-      "potentialPct": 97
-    },
-    {
       "name": "Indream",
-      "topSellerArticles": 569,
-      "potentialPct": 97
+      "topSellerArticles": 773,
+      "potentialPct": 96
     },
     {
       "name": "House Partners",
-      "topSellerArticles": 523,
-      "potentialPct": 98
+      "topSellerArticles": 565,
+      "potentialPct": 97
     },
     {
       "name": "Komhtom",
-      "topSellerArticles": 520,
+      "topSellerArticles": 552,
+      "potentialPct": 97
+    },
+    {
+      "name": "Vidaxl",
+      "topSellerArticles": 541,
       "potentialPct": 98
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 383,
+      "topSellerArticles": 386,
       "potentialPct": 98
     },
     {
-      "name": "Kobi",
-      "topSellerArticles": 252,
+      "name": "Zoomici",
+      "topSellerArticles": 221,
       "potentialPct": 99
     },
     {
-      "name": "Zoomici",
-      "topSellerArticles": 210,
+      "name": "Ecd",
+      "topSellerArticles": 191,
       "potentialPct": 99
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 195,
+      "topSellerArticles": 190,
       "potentialPct": 99
     }
   ]

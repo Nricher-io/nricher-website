@@ -1,25 +1,30 @@
 {
   "packName": "Lampadaire",
-  "totalArticles": 995,
-  "topSellersCount": 845,
+  "totalArticles": 994,
+  "topSellersCount": 913,
   "topPct": 60,
-  "midPct": 31,
-  "lowPct": 9,
+  "midPct": 32,
+  "lowPct": 8,
   "ranking": [
     {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 236,
-      "potentialPct": 76
+      "name": "Nedgis",
+      "topSellerArticles": 252,
+      "potentialPct": 75
     },
     {
-      "name": "The Cool Republic",
-      "topSellerArticles": 213,
-      "potentialPct": 79
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 232,
+      "potentialPct": 77
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 201,
-      "potentialPct": 80
+      "topSellerArticles": 217,
+      "potentialPct": 78
+    },
+    {
+      "name": "The Cool Republic",
+      "topSellerArticles": 212,
+      "potentialPct": 79
     },
     {
       "name": "Connox",
@@ -27,23 +32,13 @@
       "potentialPct": 80
     },
     {
-      "name": "Nedgis",
-      "topSellerArticles": 135,
-      "potentialPct": 86
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 124,
+      "topSellerArticles": 121,
       "potentialPct": 88
     },
     {
-      "name": "Asteri",
-      "topSellerArticles": 74,
-      "potentialPct": 93
-    },
-    {
       "name": "Light11",
-      "topSellerArticles": 59,
+      "topSellerArticles": 61,
       "potentialPct": 94
     },
     {
@@ -52,13 +47,18 @@
       "potentialPct": 95
     },
     {
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 33,
-      "potentialPct": 97
+      "name": "Asteri",
+      "topSellerArticles": 51,
+      "potentialPct": 95
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 28,
+      "topSellerArticles": 34,
+      "potentialPct": 97
+    },
+    {
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 33,
       "potentialPct": 97
     },
     {

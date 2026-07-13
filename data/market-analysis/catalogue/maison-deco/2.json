@@ -1,49 +1,49 @@
 {
   "packName": "Applique murale",
-  "totalArticles": 1951,
-  "topSellersCount": 1217,
-  "topPct": 68,
-  "midPct": 24,
-  "lowPct": 8,
+  "totalArticles": 1923,
+  "topSellersCount": 1657,
+  "topPct": 76,
+  "midPct": 18,
+  "lowPct": 6,
   "ranking": [
     {
-      "name": "Lamptwist",
-      "topSellerArticles": 399,
-      "potentialPct": 80
+      "name": "Nedgis",
+      "topSellerArticles": 797,
+      "potentialPct": 59
     },
     {
-      "name": "Nedgis",
-      "topSellerArticles": 369,
-      "potentialPct": 81
+      "name": "Lamptwist",
+      "topSellerArticles": 418,
+      "potentialPct": 78
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 240,
+      "topSellerArticles": 236,
       "potentialPct": 88
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 209,
+      "topSellerArticles": 206,
       "potentialPct": 89
     },
     {
       "name": "Lemaitredeslampes",
-      "topSellerArticles": 104,
+      "topSellerArticles": 93,
       "potentialPct": 95
     },
     {
       "name": "Light11",
-      "topSellerArticles": 94,
-      "potentialPct": 95
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 89,
+      "topSellerArticles": 92,
       "potentialPct": 95
     },
     {
       "name": "Evolutiv Solutions",
-      "topSellerArticles": 63,
+      "topSellerArticles": 60,
+      "potentialPct": 97
+    },
+    {
+      "name": "Asteri",
+      "topSellerArticles": 57,
       "potentialPct": 97
     },
     {
@@ -53,18 +53,18 @@
     },
     {
       "name": "Connox",
-      "topSellerArticles": 42,
-      "potentialPct": 98
-    },
-    {
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 35,
+      "topSellerArticles": 41,
       "potentialPct": 98
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 27,
-      "potentialPct": 99
+      "topSellerArticles": 37,
+      "potentialPct": 98
+    },
+    {
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 34,
+      "potentialPct": 98
     }
   ]
 }

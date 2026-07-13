@@ -1,46 +1,40 @@
 {
   "slug": "myorigines",
   "name": "Myorigines",
-  "priceIndex": 127,
+  "priceIndex": 125,
   "weeks": [
-    "2026-05-26",
     "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07"
   ],
   "competitorTrends": [
     {
       "name": "Marionnaud",
       "piHistory": [
-        72,
         71,
         69,
         69,
         70,
-        88
+        88,
+        91
       ]
     },
     {
       "name": "MyOrigines",
       "piHistory": [
-        119,
         123,
         128,
         130,
         130,
-        130
+        130,
+        125
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-05-26",
-      "cheaperPct": 13,
-      "equalPct": 8,
-      "higherPct": 79
-    },
     {
       "week": "2026-06-02",
       "cheaperPct": 14,
@@ -70,40 +64,46 @@
       "cheaperPct": 22,
       "equalPct": 1,
       "higherPct": 76
+    },
+    {
+      "week": "2026-07-07",
+      "cheaperPct": 23,
+      "equalPct": 4,
+      "higherPct": 74
     }
   ],
   "pairwise": [
     {
       "pack": "Maquillage",
-      "matched": 47,
-      "priceIndex": 133,
-      "lowerPct": 6,
+      "matched": 94,
+      "priceIndex": 126,
+      "lowerPct": 11,
       "equalPct": 4,
-      "higherPct": 90
+      "higherPct": 84
     },
     {
       "pack": "Parfum",
-      "matched": 283,
-      "priceIndex": 130,
-      "lowerPct": 26,
+      "matched": 357,
+      "priceIndex": 128,
+      "lowerPct": 29,
       "equalPct": 4,
-      "higherPct": 71
+      "higherPct": 66
     },
     {
       "pack": "Soin du visage",
-      "matched": 77,
-      "priceIndex": 121,
-      "lowerPct": 22,
+      "matched": 88,
+      "priceIndex": 117,
+      "lowerPct": 28,
       "equalPct": 4,
-      "higherPct": 74
+      "higherPct": 67
     },
     {
       "pack": "Coffret",
-      "matched": 39,
+      "matched": 36,
       "priceIndex": 108,
-      "lowerPct": 27,
+      "lowerPct": 40,
       "equalPct": 5,
-      "higherPct": 68
+      "higherPct": 55
     }
   ]
 }

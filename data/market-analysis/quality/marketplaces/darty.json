@@ -1,7 +1,7 @@
 {
   "slug": "darty",
   "name": "Darty",
-  "articlesAnalysed": 783757,
+  "articlesAnalysed": 768953,
   "qualityScore": 52,
   "globalGrades": {
     "Aplus": 0,
@@ -10,7 +10,7 @@
     "C": 31,
     "D": 25,
     "E": 28,
-    "F": 17
+    "F": 16
   },
   "criteriaGrades": {
     "Titre": {
@@ -25,10 +25,10 @@
     "Image": {
       "Aplus": 4,
       "A": 2,
-      "B": 42,
+      "B": 43,
       "C": 11,
       "D": 0,
-      "E": 14,
+      "E": 15,
       "F": 27
     },
     "Vidéo": {

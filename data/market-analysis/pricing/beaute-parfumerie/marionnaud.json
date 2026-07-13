@@ -1,46 +1,40 @@
 {
   "slug": "marionnaud",
   "name": "Marionnaud",
-  "priceIndex": 93,
+  "priceIndex": 102,
   "weeks": [
-    "2026-05-26",
     "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07"
   ],
   "competitorTrends": [
     {
       "name": "Marionnaud",
       "piHistory": [
-        72,
         71,
         69,
         69,
         70,
-        88
+        88,
+        91
       ]
     },
     {
       "name": "MyOrigines",
       "piHistory": [
-        119,
         123,
         128,
         130,
         130,
-        130
+        130,
+        125
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-05-26",
-      "cheaperPct": 94,
-      "equalPct": 0,
-      "higherPct": 6
-    },
     {
       "week": "2026-06-02",
       "cheaperPct": 98,
@@ -70,40 +64,46 @@
       "cheaperPct": 81,
       "equalPct": 0,
       "higherPct": 18
+    },
+    {
+      "week": "2026-07-07",
+      "cheaperPct": 66,
+      "equalPct": 0,
+      "higherPct": 34
     }
   ],
   "pairwise": [
     {
       "pack": "Maquillage",
-      "matched": 4,
-      "priceIndex": 89,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Parfum",
+      "matched": 25,
+      "priceIndex": 104,
+      "lowerPct": 19,
+      "equalPct": 0,
+      "higherPct": 81
+    },
+    {
+      "pack": "Soin du visage",
+      "matched": 8,
+      "priceIndex": 99,
       "lowerPct": 50,
       "equalPct": 0,
       "higherPct": 50
     },
     {
-      "pack": "Parfum",
-      "matched": 80,
-      "priceIndex": 91,
-      "lowerPct": 61,
-      "equalPct": 0,
-      "higherPct": 39
-    },
-    {
-      "pack": "Soin du visage",
-      "matched": 44,
-      "priceIndex": 89,
-      "lowerPct": 80,
-      "equalPct": 0,
-      "higherPct": 20
-    },
-    {
       "pack": "Coffret",
-      "matched": 60,
-      "priceIndex": 97,
-      "lowerPct": 54,
+      "matched": 29,
+      "priceIndex": 100,
+      "lowerPct": 29,
       "equalPct": 0,
-      "higherPct": 46
+      "higherPct": 71
     }
   ]
 }

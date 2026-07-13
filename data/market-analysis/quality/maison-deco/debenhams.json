@@ -1,7 +1,7 @@
 {
   "slug": "debenhams",
   "name": "Debenhams",
-  "articlesAnalysed": 636765,
+  "articlesAnalysed": 650298,
   "qualityScore": 73,
   "globalGrades": {
     "Aplus": 0,
@@ -20,13 +20,13 @@
       "C": 12,
       "D": 12,
       "E": 3,
-      "F": 1
+      "F": 0
     },
     "Image": {
       "Aplus": 33,
       "A": 29,
       "B": 12,
-      "C": 10,
+      "C": 9,
       "D": 0,
       "E": 12,
       "F": 4
@@ -46,7 +46,7 @@
       "B": 7,
       "C": 11,
       "D": 7,
-      "E": 9,
+      "E": 8,
       "F": 26
     }
   }

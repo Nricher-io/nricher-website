@@ -1,31 +1,31 @@
 {
   "slug": "maisons-du-monde",
   "name": "Maisons Du Monde",
-  "articlesAnalysed": 196754,
-  "qualityScore": 64,
+  "articlesAnalysed": 233122,
+  "qualityScore": 66,
   "globalGrades": {
     "Aplus": 0,
-    "A": 12,
-    "B": 19,
-    "C": 26,
-    "D": 21,
-    "E": 16,
-    "F": 7
+    "A": 13,
+    "B": 21,
+    "C": 27,
+    "D": 19,
+    "E": 14,
+    "F": 6
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 19,
       "A": 16,
       "B": 18,
-      "C": 26,
+      "C": 27,
       "D": 12,
       "E": 6,
       "F": 3
     },
     "Image": {
       "Aplus": 53,
-      "A": 14,
-      "B": 11,
+      "A": 15,
+      "B": 12,
       "C": 11,
       "D": 0,
       "E": 6,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 40,
+      "Aplus": 41,
       "A": 7,
       "B": 7,
       "C": 10,
       "D": 7,
       "E": 8,
-      "F": 21
+      "F": 20
     }
   }
 }

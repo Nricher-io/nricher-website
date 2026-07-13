@@ -1,69 +1,69 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 11321,
-  "topSellersCount": 3190,
-  "topPct": 47,
-  "midPct": 28,
-  "lowPct": 25,
+  "totalArticles": 11060,
+  "topSellersCount": 3295,
+  "topPct": 50,
+  "midPct": 26,
+  "lowPct": 24,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 1178,
-      "potentialPct": 90
-    },
-    {
-      "name": "Junmingshop",
-      "topSellerArticles": 521,
-      "potentialPct": 95
-    },
-    {
-      "name": "Jiddenks",
-      "topSellerArticles": 415,
-      "potentialPct": 96
+      "topSellerArticles": 1189,
+      "potentialPct": 89
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 414,
-      "potentialPct": 96
+      "topSellerArticles": 553,
+      "potentialPct": 95
+    },
+    {
+      "name": "Junmingshop",
+      "topSellerArticles": 549,
+      "potentialPct": 95
     },
     {
       "name": "Ecofone",
-      "topSellerArticles": 367,
+      "topSellerArticles": 359,
       "potentialPct": 97
     },
     {
       "name": "Alloccaz",
-      "topSellerArticles": 295,
+      "topSellerArticles": 343,
       "potentialPct": 97
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 270,
-      "potentialPct": 98
+      "topSellerArticles": 302,
+      "potentialPct": 97
     },
     {
       "name": "Darty",
-      "topSellerArticles": 230,
-      "potentialPct": 98
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 216,
-      "potentialPct": 98
-    },
-    {
-      "name": "As Discount",
-      "topSellerArticles": 203,
+      "topSellerArticles": 215,
       "potentialPct": 98
     },
     {
       "name": "Zenkaa",
-      "topSellerArticles": 202,
+      "topSellerArticles": 208,
       "potentialPct": 98
     },
     {
       "name": "Procomponentes",
-      "topSellerArticles": 197,
+      "topSellerArticles": 199,
+      "potentialPct": 98
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 199,
+      "potentialPct": 98
+    },
+    {
+      "name": "Multishop",
+      "topSellerArticles": 196,
+      "potentialPct": 98
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 182,
       "potentialPct": 98
     }
   ]

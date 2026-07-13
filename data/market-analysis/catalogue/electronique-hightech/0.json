@@ -1,70 +1,70 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 6249,
-  "topSellersCount": 3881,
-  "topPct": 49,
-  "midPct": 27,
-  "lowPct": 24,
+  "totalArticles": 6028,
+  "topSellersCount": 3871,
+  "topPct": 51,
+  "midPct": 26,
+  "lowPct": 23,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 1114,
-      "potentialPct": 82
+      "topSellerArticles": 1166,
+      "potentialPct": 81
     },
     {
-      "name": "Ecofone",
-      "topSellerArticles": 715,
+      "name": "Alloccaz",
+      "topSellerArticles": 677,
       "potentialPct": 89
     },
     {
       "name": "Junmingshop",
-      "topSellerArticles": 686,
+      "topSellerArticles": 665,
       "potentialPct": 89
     },
     {
-      "name": "Alloccaz",
-      "topSellerArticles": 661,
-      "potentialPct": 89
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 360,
-      "potentialPct": 94
+      "name": "Ecofone",
+      "topSellerArticles": 630,
+      "potentialPct": 90
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 345,
+      "topSellerArticles": 385,
+      "potentialPct": 94
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 348,
       "potentialPct": 94
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 307,
-      "potentialPct": 95
-    },
-    {
-      "name": "Rps Technologies",
       "topSellerArticles": 298,
       "potentialPct": 95
     },
     {
       "name": "Cheng Tech",
-      "topSellerArticles": 287,
+      "topSellerArticles": 275,
       "potentialPct": 95
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 250,
-      "potentialPct": 96
-    },
-    {
-      "name": "Zoomici",
-      "topSellerArticles": 223,
+      "topSellerArticles": 253,
       "potentialPct": 96
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 219,
+      "topSellerArticles": 234,
       "potentialPct": 96
+    },
+    {
+      "name": "Zoomici",
+      "topSellerArticles": 215,
+      "potentialPct": 96
+    },
+    {
+      "name": "Rps Technologies",
+      "topSellerArticles": 199,
+      "potentialPct": 97
     }
   ]
 }

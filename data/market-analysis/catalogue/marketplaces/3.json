@@ -1,39 +1,39 @@
 {
   "packName": "Lit",
-  "totalArticles": 12081,
-  "topSellersCount": 1187,
-  "topPct": 44,
-  "midPct": 30,
-  "lowPct": 26,
+  "totalArticles": 11736,
+  "topSellersCount": 1056,
+  "topPct": 38,
+  "midPct": 32,
+  "lowPct": 30,
   "ranking": [
     {
       "name": "Vidaxl",
-      "topSellerArticles": 290,
-      "potentialPct": 98
-    },
-    {
-      "name": "Kids Literie",
-      "topSellerArticles": 243,
+      "topSellerArticles": 241,
       "potentialPct": 98
     },
     {
       "name": "Vie Moderne",
-      "topSellerArticles": 223,
+      "topSellerArticles": 211,
+      "potentialPct": 98
+    },
+    {
+      "name": "Maison Vibe",
+      "topSellerArticles": 186,
       "potentialPct": 98
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 163,
+      "topSellerArticles": 154,
+      "potentialPct": 99
+    },
+    {
+      "name": "Kids Literie",
+      "topSellerArticles": 143,
       "potentialPct": 99
     },
     {
       "name": "House Partners",
-      "topSellerArticles": 146,
-      "potentialPct": 99
-    },
-    {
-      "name": "Literie Moins Cher",
-      "topSellerArticles": 122,
+      "topSellerArticles": 121,
       "potentialPct": 99
     },
     {
@@ -42,28 +42,28 @@
       "potentialPct": 99
     },
     {
-      "name": "Maison Vibe",
-      "topSellerArticles": 110,
-      "potentialPct": 99
-    },
-    {
       "name": "Ecd",
-      "topSellerArticles": 98,
+      "topSellerArticles": 105,
       "potentialPct": 99
     },
     {
-      "name": "Zoomici",
-      "topSellerArticles": 88,
+      "name": "",
+      "topSellerArticles": 103,
       "potentialPct": 99
     },
     {
-      "name": "Kobi",
-      "topSellerArticles": 87,
+      "name": "Homifab",
+      "topSellerArticles": 99,
       "potentialPct": 99
     },
     {
-      "name": "Meublorama",
-      "topSellerArticles": 84,
+      "name": "Ml Design",
+      "topSellerArticles": 97,
+      "potentialPct": 99
+    },
+    {
+      "name": "Premium Xl",
+      "topSellerArticles": 96,
       "potentialPct": 99
     }
   ]

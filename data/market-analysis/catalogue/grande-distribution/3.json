@@ -1,19 +1,19 @@
 {
   "packName": "Fauteuil",
-  "totalArticles": 10280,
-  "topSellersCount": 1594,
-  "topPct": 58,
-  "midPct": 24,
+  "totalArticles": 10237,
+  "topSellersCount": 1577,
+  "topPct": 56,
+  "midPct": 26,
   "lowPct": 18,
   "ranking": [
     {
       "name": "Beliani",
-      "topSellerArticles": 472,
+      "topSellerArticles": 484,
       "potentialPct": 95
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 303,
+      "topSellerArticles": 300,
       "potentialPct": 97
     },
     {
@@ -23,27 +23,37 @@
     },
     {
       "name": "Recollection",
-      "topSellerArticles": 217,
+      "topSellerArticles": 199,
       "potentialPct": 98
     },
     {
       "name": "Mycocooning",
-      "topSellerArticles": 213,
+      "topSellerArticles": 194,
       "potentialPct": 98
     },
     {
-      "name": "Decoration Brands",
-      "topSellerArticles": 130,
+      "name": "Decoshop",
+      "topSellerArticles": 141,
       "potentialPct": 99
     },
     {
-      "name": "Rama Shop",
-      "topSellerArticles": 114,
+      "name": "Decoration Brands",
+      "topSellerArticles": 128,
+      "potentialPct": 99
+    },
+    {
+      "name": "",
+      "topSellerArticles": 105,
       "potentialPct": 99
     },
     {
       "name": "Altobuy",
-      "topSellerArticles": 93,
+      "topSellerArticles": 92,
+      "potentialPct": 99
+    },
+    {
+      "name": "House Partners",
+      "topSellerArticles": 85,
       "potentialPct": 99
     },
     {
@@ -54,16 +64,6 @@
     {
       "name": "Maxibazar",
       "topSellerArticles": 74,
-      "potentialPct": 99
-    },
-    {
-      "name": "The Concept Factory",
-      "topSellerArticles": 72,
-      "potentialPct": 99
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 64,
       "potentialPct": 99
     }
   ]

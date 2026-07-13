@@ -3,67 +3,67 @@
   "name": "Julien",
   "priceIndex": 97,
   "weeks": [
-    "2026-05-26",
     "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        105,
         128,
         110,
         111,
         111,
-        128
+        128,
+        125
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        111,
         107,
         112,
         113,
         107,
-        109
+        109,
+        105
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        85,
         95,
         96,
         68,
         58,
-        93
+        93,
+        94
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        126,
         121,
         134,
         155,
         167,
-        148
+        148,
+        143
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
         103,
-        103,
         104,
         104,
         105,
-        103
+        103,
+        102
       ]
     },
     {
@@ -80,23 +80,23 @@
     {
       "name": "Autourdebebe",
       "piHistory": [
-        133,
         136,
         143,
         136,
         145,
-        139
+        139,
+        120
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        145,
         146,
         146,
         146,
         145,
-        154
+        154,
+        153
       ]
     },
     {
@@ -104,120 +104,120 @@
       "piHistory": [
         116,
         116,
-        116,
         117,
         117,
-        124
+        124,
+        125
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        102,
         105,
         105,
         103,
         102,
-        100
+        100,
+        101
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        169,
         164,
         146,
         137,
         139,
-        144
+        144,
+        138
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        100,
         121,
         139,
         135,
         136,
-        123
+        123,
+        138
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        126,
         124,
         131,
         131,
         129,
+        135,
         135
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        100,
         101,
         103,
         102,
         103,
-        104
+        104,
+        101
       ]
     },
     {
       "name": "Bricorama",
       "piHistory": [
-        106,
         108,
         108,
         110,
         107,
-        107
+        107,
+        103
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        117,
         116,
         117,
         117,
         119,
-        120
+        120,
+        124
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
         102,
-        102,
         103,
         102,
         101,
-        102
+        102,
+        101
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        100,
         101,
         102,
         103,
         102,
-        102
+        102,
+        100
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        99,
         102,
         101,
         101,
         102,
-        100
+        100,
+        101
       ]
     },
     {
@@ -225,8 +225,8 @@
       "piHistory": [
         98,
         98,
-        98,
         100,
+        99,
         99,
         99
       ]
@@ -252,19 +252,19 @@
     },
     {
       "pack": "Matelas",
-      "matched": 1967,
+      "matched": 1653,
       "priceIndex": 97,
-      "lowerPct": 26,
-      "equalPct": 71,
+      "lowerPct": 25,
+      "equalPct": 72,
       "higherPct": 3
     },
     {
       "pack": "Lit",
-      "matched": 32,
-      "priceIndex": 96,
-      "lowerPct": 32,
-      "equalPct": 65,
-      "higherPct": 3
+      "matched": 21,
+      "priceIndex": 99,
+      "lowerPct": 19,
+      "equalPct": 76,
+      "higherPct": 5
     },
     {
       "pack": "Table à manger",

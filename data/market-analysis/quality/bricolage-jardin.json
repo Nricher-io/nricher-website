@@ -2,25 +2,25 @@
   {
     "slug": "drawer",
     "name": "Drawer",
-    "articlesAnalysed": 36,
-    "qualityScore": 79
+    "articlesAnalysed": 35,
+    "qualityScore": 80
   },
   {
     "slug": "bq",
     "name": "Bq",
-    "articlesAnalysed": 1814304,
-    "qualityScore": 76
+    "articlesAnalysed": 1317531,
+    "qualityScore": 75
   },
   {
     "slug": "cdiscount",
     "name": "Cdiscount",
-    "articlesAnalysed": 1097686,
-    "qualityScore": 76
+    "articlesAnalysed": 1060809,
+    "qualityScore": 75
   },
   {
     "slug": "manomano",
     "name": "Manomano",
-    "articlesAnalysed": 1523225,
+    "articlesAnalysed": 1754368,
     "qualityScore": 74
   },
   {
@@ -32,43 +32,43 @@
   {
     "slug": "castorama",
     "name": "Castorama",
-    "articlesAnalysed": 989976,
+    "articlesAnalysed": 1023144,
     "qualityScore": 72
   },
   {
     "slug": "leroy-merlin",
     "name": "Leroy Merlin",
-    "articlesAnalysed": 443080,
-    "qualityScore": 69
+    "articlesAnalysed": 172501,
+    "qualityScore": 68
   },
   {
     "slug": "conforama",
     "name": "Conforama",
-    "articlesAnalysed": 365929,
-    "qualityScore": 63
+    "articlesAnalysed": 462758,
+    "qualityScore": 66
   },
   {
     "slug": "auchan",
     "name": "Auchan",
-    "articlesAnalysed": 50193,
+    "articlesAnalysed": 51622,
     "qualityScore": 62
   },
   {
     "slug": "la-redoute",
     "name": "La Redoute",
-    "articlesAnalysed": 344545,
+    "articlesAnalysed": 345242,
     "qualityScore": 60
   },
   {
     "slug": "vente-unique",
     "name": "Vente Unique",
-    "articlesAnalysed": 674111,
-    "qualityScore": 58
+    "articlesAnalysed": 561484,
+    "qualityScore": 59
   },
   {
     "slug": "maxibazar",
     "name": "Maxibazar",
-    "articlesAnalysed": 7394,
+    "articlesAnalysed": 7074,
     "qualityScore": 32
   }
 ]

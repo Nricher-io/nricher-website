@@ -1,69 +1,69 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 3645,
-  "topSellersCount": 1420,
-  "topPct": 43,
-  "midPct": 35,
-  "lowPct": 22,
+  "totalArticles": 3543,
+  "topSellersCount": 1519,
+  "topPct": 47,
+  "midPct": 33,
+  "lowPct": 20,
   "ranking": [
     {
       "name": "Kiatoo",
-      "topSellerArticles": 392,
+      "topSellerArticles": 405,
       "potentialPct": 89
     },
     {
+      "name": "House Partners",
+      "topSellerArticles": 297,
+      "potentialPct": 92
+    },
+    {
       "name": "Gpasplus",
-      "topSellerArticles": 243,
+      "topSellerArticles": 247,
       "potentialPct": 93
     },
     {
       "name": "Topbiz",
-      "topSellerArticles": 223,
+      "topSellerArticles": 213,
       "potentialPct": 94
     },
     {
+      "name": "Icoza",
+      "topSellerArticles": 180,
+      "potentialPct": 95
+    },
+    {
       "name": "Darty",
-      "topSellerArticles": 197,
+      "topSellerArticles": 177,
       "potentialPct": 95
     },
     {
       "name": "Monsieurplus",
-      "topSellerArticles": 195,
+      "topSellerArticles": 167,
       "potentialPct": 95
-    },
-    {
-      "name": "Cdiscount",
-      "topSellerArticles": 170,
-      "potentialPct": 95
-    },
-    {
-      "name": "Icoza",
-      "topSellerArticles": 156,
-      "potentialPct": 96
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 153,
+      "topSellerArticles": 140,
       "potentialPct": 96
     },
     {
       "name": "Leasi",
-      "topSellerArticles": 150,
+      "topSellerArticles": 128,
       "potentialPct": 96
     },
     {
       "name": "Okamac",
-      "topSellerArticles": 138,
+      "topSellerArticles": 127,
       "potentialPct": 96
     },
     {
-      "name": "House Partners",
-      "topSellerArticles": 126,
+      "name": "Fnac 2nde Vie",
+      "topSellerArticles": 105,
       "potentialPct": 97
     },
     {
-      "name": "Fnac 2nde Vie",
-      "topSellerArticles": 118,
+      "name": "Ma Fabrik",
+      "topSellerArticles": 104,
       "potentialPct": 97
     }
   ]

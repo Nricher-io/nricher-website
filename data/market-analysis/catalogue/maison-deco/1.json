@@ -1,69 +1,69 @@
 {
   "packName": "Lampe à poser",
-  "totalArticles": 3002,
-  "topSellersCount": 2823,
-  "topPct": 58,
-  "midPct": 37,
-  "lowPct": 5,
+  "totalArticles": 2998,
+  "topSellersCount": 3827,
+  "topPct": 70,
+  "midPct": 28,
+  "lowPct": 2,
   "ranking": [
     {
+      "name": "Nedgis",
+      "topSellerArticles": 1042,
+      "potentialPct": 65
+    },
+    {
       "name": "Connox",
-      "topSellerArticles": 859,
+      "topSellerArticles": 856,
       "potentialPct": 71
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 682,
+      "topSellerArticles": 687,
       "potentialPct": 77
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 651,
+      "topSellerArticles": 663,
       "potentialPct": 78
     },
     {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 631,
-      "potentialPct": 79
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 591,
-      "potentialPct": 80
+      "topSellerArticles": 579,
+      "potentialPct": 81
     },
     {
-      "name": "Nedgis",
-      "topSellerArticles": 367,
-      "potentialPct": 88
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 572,
+      "potentialPct": 81
     },
     {
       "name": "Asteri",
-      "topSellerArticles": 318,
-      "potentialPct": 89
+      "topSellerArticles": 249,
+      "potentialPct": 92
     },
     {
       "name": "Le Cedre Rouge",
-      "topSellerArticles": 218,
+      "topSellerArticles": 217,
       "potentialPct": 93
     },
     {
       "name": "Light11",
-      "topSellerArticles": 162,
+      "topSellerArticles": 161,
       "potentialPct": 95
     },
     {
-      "name": "Myareadesign",
-      "topSellerArticles": 88,
+      "name": "Dbs Rdc",
+      "topSellerArticles": 104,
       "potentialPct": 97
     },
     {
-      "name": "Dbs Rdc",
-      "topSellerArticles": 85,
+      "name": "Myareadesign",
+      "topSellerArticles": 93,
       "potentialPct": 97
     },
     {
       "name": "Dyberg Larsen",
-      "topSellerArticles": 78,
+      "topSellerArticles": 77,
       "potentialPct": 97
     }
   ]

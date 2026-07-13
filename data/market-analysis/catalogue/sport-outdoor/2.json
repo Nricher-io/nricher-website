@@ -1,64 +1,64 @@
 {
   "packName": "Sac à dos",
-  "totalArticles": 1764,
-  "topSellersCount": 2031,
-  "topPct": 53,
-  "midPct": 35,
+  "totalArticles": 1728,
+  "topSellersCount": 1901,
+  "topPct": 51,
+  "midPct": 37,
   "lowPct": 12,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 1377,
-      "potentialPct": 22
-    },
-    {
-      "name": "Trekkinn",
-      "topSellerArticles": 654,
-      "potentialPct": 63
+      "topSellerArticles": 1252,
+      "potentialPct": 28
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 587,
-      "potentialPct": 67
+      "topSellerArticles": 649,
+      "potentialPct": 62
+    },
+    {
+      "name": "Trekkinn",
+      "topSellerArticles": 640,
+      "potentialPct": 63
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 496,
+      "topSellerArticles": 484,
       "potentialPct": 72
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 283,
-      "potentialPct": 84
+      "topSellerArticles": 256,
+      "potentialPct": 85
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 187,
+      "topSellerArticles": 188,
       "potentialPct": 89
     },
     {
       "name": "Irun",
-      "topSellerArticles": 152,
-      "potentialPct": 91
+      "topSellerArticles": 142,
+      "potentialPct": 92
     },
     {
       "name": "Zalando",
-      "topSellerArticles": 98,
-      "potentialPct": 94
+      "topSellerArticles": 74,
+      "potentialPct": 96
     },
     {
       "name": "Snowinn",
-      "topSellerArticles": 16,
+      "topSellerArticles": 19,
       "potentialPct": 99
     },
     {
       "name": "Runnerinn",
-      "topSellerArticles": 12,
+      "topSellerArticles": 15,
       "potentialPct": 99
     },
     {
-      "name": "An Mai Mao Yi",
-      "topSellerArticles": 2,
+      "name": "",
+      "topSellerArticles": 7,
       "potentialPct": 100
     }
   ]

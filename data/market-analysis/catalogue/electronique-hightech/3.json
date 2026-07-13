@@ -1,69 +1,69 @@
 {
   "packName": "Casque audio",
-  "totalArticles": 2442,
-  "topSellersCount": 1670,
-  "topPct": 52,
-  "midPct": 30,
-  "lowPct": 18,
+  "totalArticles": 2410,
+  "topSellersCount": 1759,
+  "topPct": 54,
+  "midPct": 27,
+  "lowPct": 19,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 466,
-      "potentialPct": 81
+      "topSellerArticles": 567,
+      "potentialPct": 76
     },
     {
       "name": "Darty",
-      "topSellerArticles": 291,
+      "topSellerArticles": 290,
       "potentialPct": 88
     },
     {
-      "name": "Boulanger",
-      "topSellerArticles": 254,
-      "potentialPct": 90
-    },
-    {
       "name": "2kings",
-      "topSellerArticles": 242,
-      "potentialPct": 90
+      "topSellerArticles": 270,
+      "potentialPct": 89
     },
     {
-      "name": "As Discount",
-      "topSellerArticles": 212,
-      "potentialPct": 91
+      "name": "Boulanger",
+      "topSellerArticles": 259,
+      "potentialPct": 89
     },
     {
       "name": "Zoomici",
-      "topSellerArticles": 205,
+      "topSellerArticles": 201,
       "potentialPct": 92
     },
     {
-      "name": "Gpasplus",
-      "topSellerArticles": 163,
+      "name": "As Discount",
+      "topSellerArticles": 172,
       "potentialPct": 93
     },
     {
-      "name": "Monsieurplus",
-      "topSellerArticles": 143,
+      "name": "Gpasplus",
+      "topSellerArticles": 139,
       "potentialPct": 94
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 130,
-      "potentialPct": 95
+      "topSellerArticles": 134,
+      "potentialPct": 94
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 126,
-      "potentialPct": 95
+      "name": "Zenkaa",
+      "topSellerArticles": 102,
+      "potentialPct": 96
     },
     {
-      "name": "Multishop",
+      "name": "Monsieurplus",
+      "topSellerArticles": 97,
+      "potentialPct": 96
+    },
+    {
+      "name": "Warenwelt 24",
       "topSellerArticles": 94,
       "potentialPct": 96
     },
     {
-      "name": "Zenkaa",
-      "topSellerArticles": 88,
+      "name": "Multishop",
+      "topSellerArticles": 85,
       "potentialPct": 96
     }
   ]
