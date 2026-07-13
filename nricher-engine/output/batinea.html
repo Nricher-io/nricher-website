@@ -409,7 +409,7 @@
         
       </div>
       <div class="hstat">
-        <div class="n" data-generated-at="2026-07-06T16:34:06.705Z">06 juil. à 16h34</div>
+        <div class="n" data-generated-at="2026-07-13T10:28:41.820Z">13 juil. à 10h28</div>
         <div class="l"><span data-i18n="rp.bar.updated">Mis à jour le</span></div>
       </div>
     </div>
@@ -621,7 +621,7 @@
         <div class="section-sub" data-i18n="rp.trend.sub">Indice prix 1P/3P et répartition de l'attractivité.</div>
       </div>
     </div>
-    <div class="tag-row"><span class="tag tag--watch">31 mars → Ajd</span></div>
+    <div class="tag-row"><span class="tag tag--watch">07 avr. → Ajd</span></div>
 
     <div class="grid-2">
       <div class="chart-card">
@@ -633,7 +633,7 @@
           </div>
         </div>
         <h3 data-i18n="rp.trend.chart1.title">Évolution Indice Prix (1P / 3P)</h3>
-        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 13 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
+        <div class="chart-sub"><span data-i18n="rp.trend.chart1.sub_prefix">Tracé généré automatiquement à partir des</span> 12 <span data-i18n="rp.trend.chart1.sub_suffix">dernières semaines.</span></div>
         <div class="chart-canvas-wrap"><canvas id="trendChartCanvas"></canvas></div>
       </div>
 
@@ -1100,8 +1100,8 @@
   Chart.defaults.borderColor = 'rgba(0,0,0,0.08)';
   Chart.defaults.font.family = "'Satoshi', -apple-system, sans-serif";
 
-  var trendChart = {"priceIndex1P": [108, 108, 108, 108, 106, 106, 106, 106, 105, 106, 107, 108, null], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["31 mars", "07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "Ajd"]};
-  var attractiveness = [{"equalPct": 66.2, "higherPct": 29.2, "lowerPct": 4.6, "week": "31 mars"}, {"equalPct": 68.3, "higherPct": 28.5, "lowerPct": 3.2, "week": "07 avr."}, {"equalPct": 69.4, "higherPct": 27.8, "lowerPct": 2.8, "week": "14 avr."}, {"equalPct": 69.4, "higherPct": 27.5, "lowerPct": 3.1, "week": "21 avr."}, {"equalPct": 18, "higherPct": 26.4, "lowerPct": 55.6, "week": "28 avr."}, {"equalPct": 9.7, "higherPct": 27.3, "lowerPct": 63, "week": "05 mai"}, {"equalPct": 2.1, "higherPct": 28.1, "lowerPct": 69.8, "week": "12 mai"}, {"equalPct": 1.7, "higherPct": 24.5, "lowerPct": 73.8, "week": "19 mai"}, {"equalPct": 2.2, "higherPct": 24.2, "lowerPct": 73.6, "week": "26 mai"}, {"equalPct": 4.1, "higherPct": 26.2, "lowerPct": 69.7, "week": "02 juin"}, {"equalPct": 5.2, "higherPct": 27.8, "lowerPct": 67, "week": "09 juin"}, {"equalPct": 4.6, "higherPct": 29.8, "lowerPct": 65.6, "week": "16 juin"}, {"equalPct": 0, "higherPct": 100, "lowerPct": 0, "week": "Ajd"}];
+  var trendChart = {"priceIndex1P": [108, 108, 108, 106, 106, 106, 106, 105, 106, 107, 108, null], "priceIndex3P": [null, null, null, null, null, null, null, null, null, null, null, null], "weeks": ["07 avr.", "14 avr.", "21 avr.", "28 avr.", "05 mai", "12 mai", "19 mai", "26 mai", "02 juin", "09 juin", "16 juin", "Ajd"]};
+  var attractiveness = [{"equalPct": 68.3, "higherPct": 28.5, "lowerPct": 3.2, "week": "07 avr."}, {"equalPct": 69.4, "higherPct": 27.8, "lowerPct": 2.8, "week": "14 avr."}, {"equalPct": 69.4, "higherPct": 27.5, "lowerPct": 3.1, "week": "21 avr."}, {"equalPct": 18, "higherPct": 26.4, "lowerPct": 55.6, "week": "28 avr."}, {"equalPct": 9.7, "higherPct": 27.3, "lowerPct": 63, "week": "05 mai"}, {"equalPct": 2.1, "higherPct": 28.1, "lowerPct": 69.8, "week": "12 mai"}, {"equalPct": 1.7, "higherPct": 24.5, "lowerPct": 73.8, "week": "19 mai"}, {"equalPct": 2.2, "higherPct": 24.2, "lowerPct": 73.6, "week": "26 mai"}, {"equalPct": 4.1, "higherPct": 26.2, "lowerPct": 69.7, "week": "02 juin"}, {"equalPct": 5.2, "higherPct": 27.8, "lowerPct": 67, "week": "09 juin"}, {"equalPct": 4.6, "higherPct": 29.8, "lowerPct": 65.6, "week": "16 juin"}, {"equalPct": 0, "higherPct": 100, "lowerPct": 0, "week": "Ajd"}];
 
   var hasData = function (arr) { return arr.some(function (v) { return v !== null; }); };
 
