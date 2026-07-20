@@ -4,8 +4,13 @@ generate_all_reports.py
 ========================
 
 Génère les pages Weekly KPIs pour TOUTES les entreprises avec
-weeklyKpisEnabled=true (GET /v1/companies), au lieu d'une seule via
-generate_report.py --company-id. Pensé pour être lancé par un job planifié
+weeklyKpisEnabled=true. Deux sources possibles pour la liste :
+
+1. GET /v1/companies (endpoint API nricher) — utilisé en priorité.
+2. data/weekly_companies.json — repli local si l'API échoue.
+   Format : [{"id": 11, "name": "Nedgis", "weeklyKpisEnabled": true}, ...]
+
+Pensé pour être lancé par un job planifié
 (voir .github/workflows/weekly-kpis-refresh.yml) — l'échec d'une entreprise
 (ex: pas encore de snapshot calculé côté nricher) n'interrompt pas les autres.
 
@@ -16,11 +21,34 @@ USAGE
 """
 
 import argparse
+import json
 import sys
+from pathlib import Path
 
 import requests
 
 import generate_report as gr
+
+FALLBACK_JSON = Path(__file__).parent / "data" / "weekly_companies.json"
+
+
+def load_companies_from_api(base_url, jwt_token):
+    response = requests.get(
+        f"{base_url}/v1/companies",
+        headers={"Authorization": f"Bearer {jwt_token}"},
+        timeout=15,
+    )
+    response.raise_for_status()
+    return [c for c in response.json() if c.get("weeklyKpisEnabled")]
+
+
+def load_companies_from_fallback():
+    if not FALLBACK_JSON.exists():
+        return None
+    with open(FALLBACK_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    # Ignorer les entrées placeholder (id null)
+    return [c for c in data if c.get("weeklyKpisEnabled") and c.get("id") is not None]
 
 
 def main():
@@ -36,27 +64,30 @@ def main():
         print(f"Configuration manquante : {e}", file=sys.stderr)
         sys.exit(1)
 
+    # 1. Essai via l'API
+    companies = None
     try:
-        response = requests.get(
-            f"{base_url}/v1/companies",
-            headers={"Authorization": f"Bearer {jwt_token}"},
-            timeout=15,
-        )
-        response.raise_for_status()
-        companies = [c for c in response.json() if c.get("weeklyKpisEnabled")]
+        companies = load_companies_from_api(base_url, jwt_token)
+        print(f"API /v1/companies OK — {len(companies)} entreprise(s) weeklyKpisEnabled")
     except requests.RequestException as e:
-        print(
-            f"GET {base_url}/v1/companies a echoue ({e}). "
-            "Cet endpoint n'est pas encore disponible cote API nricher — voir "
-            "handoff-dev/SITE_REQUEST_companies_list_endpoint.md pour le suivi. "
-            "Rien a generer sans la liste des entreprises, la regeneration automatique "
-            "est suspendue jusqu'a ce que l'endpoint soit en place.",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+        print(f"GET /v1/companies a échoué ({e}) — tentative repli JSON...", file=sys.stderr)
+
+    # 2. Repli local si l'API a échoué
+    if companies is None:
+        companies = load_companies_from_fallback()
+        if companies:
+            print(f"Repli JSON OK — {len(companies)} entreprise(s) dans {FALLBACK_JSON}")
+        else:
+            print(
+                f"Ni l'API ni le repli JSON ({FALLBACK_JSON}) ne fournissent de liste.\n"
+                "Renseigner nricher-engine/data/weekly_companies.json avec les IDs des\n"
+                "entreprises weeklyKpisEnabled=true pour activer la génération automatique.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
 
     if not companies:
-        print("Aucune entreprise weeklyKpisEnabled=true reçue depuis l'API.", file=sys.stderr)
+        print("Aucune entreprise weeklyKpisEnabled=true disponible.", file=sys.stderr)
         sys.exit(1)
 
     gr.OUTPUT_DIR.mkdir(exist_ok=True)
@@ -78,7 +109,7 @@ def main():
         print(f"  X   {name:30s} : {err}", file=sys.stderr)
 
     if not ok:
-        sys.exit(1)  # rien généré du tout = vrai problème ; des échecs partiels restent acceptables
+        sys.exit(1)
 
 
 if __name__ == "__main__":

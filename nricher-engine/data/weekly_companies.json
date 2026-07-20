@@ -1,0 +1,8 @@
+[
+  {
+    "_comment": "Renseigner les IDs numeriques des entreprises ayant weeklyKpisEnabled=true (visible dans l'app admin nricher). Ce fichier sert de repli quand GET /v1/companies n'est pas disponible.",
+    "id": null,
+    "name": "EXEMPLE — remplacer par les vraies entrees",
+    "weeklyKpisEnabled": false
+  }
+]
