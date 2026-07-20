@@ -1,69 +1,69 @@
 {
   "packName": "Tablette",
-  "totalArticles": 1586,
-  "topSellersCount": 739,
+  "totalArticles": 1500,
+  "topSellersCount": 697,
   "topPct": 49,
-  "midPct": 31,
-  "lowPct": 20,
+  "midPct": 30,
+  "lowPct": 21,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 228,
-      "potentialPct": 86
+      "topSellerArticles": 197,
+      "potentialPct": 87
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 128,
-      "potentialPct": 92
+      "topSellerArticles": 140,
+      "potentialPct": 91
     },
     {
       "name": "Yonis Shop",
-      "topSellerArticles": 115,
+      "topSellerArticles": 111,
       "potentialPct": 93
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 94,
-      "potentialPct": 94
-    },
-    {
-      "name": "2kings",
       "topSellerArticles": 88,
       "potentialPct": 94
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 86,
-      "potentialPct": 95
+      "topSellerArticles": 85,
+      "potentialPct": 94
     },
     {
       "name": "Cdiscount",
-      "topSellerArticles": 77,
+      "topSellerArticles": 76,
+      "potentialPct": 95
+    },
+    {
+      "name": "2kings",
+      "topSellerArticles": 70,
       "potentialPct": 95
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 65,
+      "topSellerArticles": 63,
       "potentialPct": 96
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 63,
+      "topSellerArticles": 55,
       "potentialPct": 96
     },
     {
-      "name": "Rps Technologies",
-      "topSellerArticles": 63,
-      "potentialPct": 96
-    },
-    {
-      "name": "Thyssus",
-      "topSellerArticles": 49,
+      "name": "Procomponentes",
+      "topSellerArticles": 51,
       "potentialPct": 97
     },
     {
-      "name": "Zoomici",
-      "topSellerArticles": 44,
+      "name": "Rps Technologies",
+      "topSellerArticles": 48,
+      "potentialPct": 97
+    },
+    {
+      "name": "Infopavon",
+      "topSellerArticles": 39,
       "potentialPct": 97
     }
   ]

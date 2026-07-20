@@ -3,219 +3,208 @@
   "name": "Masseno",
   "priceIndex": 100,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        161,
         152,
         130,
         140,
         163,
-        153
+        153,
+        150
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        112,
         115,
         116,
         109,
         111,
-        107
+        107,
+        112
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        96,
         98,
         99,
         100,
         112,
-        111
+        111,
+        106
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        164,
         163,
         168,
         160,
         168,
-        172
+        172,
+        178
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        107,
         115,
         112,
         113,
         105,
-        105
+        105,
+        113
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        102,
         101,
         99,
         100,
         101,
-        101
+        101,
+        103
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        155,
         165,
         158,
         157,
         153,
-        139
+        139,
+        153
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        143,
         132,
         137,
         127,
         142,
-        136
+        136,
+        125
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
-        137,
         118,
         134,
         172,
         160,
-        145
+        145,
+        143
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        110,
         107,
         105,
         105,
         103,
-        103
+        103,
+        109
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        190,
         184,
         111,
         111,
         121,
-        173
+        173,
+        186
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        128,
         139,
         132,
         128,
         124,
-        140
+        140,
+        146
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        127,
         139,
         128,
         132,
         134,
-        134
+        134,
+        137
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        117,
         109,
         112,
         110,
         112,
+        108,
         108
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        107,
-        107,
-        108,
-        108,
-        107,
-        105
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        110,
         107,
         106,
         107,
         108,
-        106
+        106,
+        109
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        103,
         104,
         103,
         103,
         105,
-        103
+        103,
+        102
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        107,
         108,
         109,
         109,
         107,
-        108
+        108,
+        99
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        104,
         102,
         102,
         106,
+        102,
         102,
         102
       ]
@@ -223,12 +212,23 @@
     {
       "name": "Darty",
       "piHistory": [
-        103,
         104,
         104,
         103,
         103,
-        103
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Drawer",
+      "piHistory": [
+        173,
+        92,
+        125,
+        100,
+        138,
+        107
       ]
     }
   ],
@@ -244,10 +244,10 @@
     },
     {
       "pack": "Canapé",
-      "matched": 2093,
+      "matched": 2053,
       "priceIndex": 100,
       "lowerPct": 2,
-      "equalPct": 93,
+      "equalPct": 92,
       "higherPct": 5
     },
     {
@@ -260,7 +260,7 @@
     },
     {
       "pack": "Lit",
-      "matched": 1780,
+      "matched": 1774,
       "priceIndex": 100,
       "lowerPct": 0,
       "equalPct": 100,

@@ -1,69 +1,69 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 6028,
-  "topSellersCount": 3871,
-  "topPct": 51,
-  "midPct": 26,
-  "lowPct": 23,
+  "totalArticles": 5236,
+  "topSellersCount": 3372,
+  "topPct": 52,
+  "midPct": 27,
+  "lowPct": 21,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 1166,
-      "potentialPct": 81
+      "topSellerArticles": 1147,
+      "potentialPct": 78
     },
     {
       "name": "Alloccaz",
-      "topSellerArticles": 677,
-      "potentialPct": 89
-    },
-    {
-      "name": "Junmingshop",
-      "topSellerArticles": 665,
-      "potentialPct": 89
+      "topSellerArticles": 681,
+      "potentialPct": 87
     },
     {
       "name": "Ecofone",
-      "topSellerArticles": 630,
-      "potentialPct": 90
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 385,
-      "potentialPct": 94
+      "topSellerArticles": 598,
+      "potentialPct": 89
     },
     {
       "name": "Darty",
-      "topSellerArticles": 348,
+      "topSellerArticles": 336,
+      "potentialPct": 94
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 323,
       "potentialPct": 94
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 298,
-      "potentialPct": 95
-    },
-    {
-      "name": "Cheng Tech",
-      "topSellerArticles": 275,
+      "topSellerArticles": 287,
       "potentialPct": 95
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 253,
+      "topSellerArticles": 241,
+      "potentialPct": 95
+    },
+    {
+      "name": "Junmingshop",
+      "topSellerArticles": 236,
+      "potentialPct": 95
+    },
+    {
+      "name": "Rps Technologies",
+      "topSellerArticles": 218,
       "potentialPct": 96
     },
     {
-      "name": "Auchan",
-      "topSellerArticles": 234,
-      "potentialPct": 96
-    },
-    {
-      "name": "Zoomici",
+      "name": "Digital Bay",
       "topSellerArticles": 215,
       "potentialPct": 96
     },
     {
-      "name": "Rps Technologies",
-      "topSellerArticles": 199,
+      "name": "Auchan",
+      "topSellerArticles": 212,
+      "potentialPct": 96
+    },
+    {
+      "name": "Procomponentes",
+      "topSellerArticles": 166,
       "potentialPct": 97
     }
   ]

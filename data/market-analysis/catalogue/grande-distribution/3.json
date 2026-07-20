@@ -1,69 +1,69 @@
 {
   "packName": "Fauteuil",
-  "totalArticles": 10237,
-  "topSellersCount": 1577,
-  "topPct": 56,
-  "midPct": 26,
-  "lowPct": 18,
+  "totalArticles": 10219,
+  "topSellersCount": 1747,
+  "topPct": 58,
+  "midPct": 25,
+  "lowPct": 17,
   "ranking": [
     {
       "name": "Beliani",
-      "topSellerArticles": 484,
+      "topSellerArticles": 487,
       "potentialPct": 95
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 300,
+      "topSellerArticles": 294,
+      "potentialPct": 97
+    },
+    {
+      "name": "",
+      "topSellerArticles": 286,
       "potentialPct": 97
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 259,
-      "potentialPct": 97
-    },
-    {
-      "name": "Recollection",
-      "topSellerArticles": 199,
+      "topSellerArticles": 253,
       "potentialPct": 98
     },
     {
       "name": "Mycocooning",
-      "topSellerArticles": 194,
+      "topSellerArticles": 225,
       "potentialPct": 98
     },
     {
-      "name": "Decoshop",
-      "topSellerArticles": 141,
-      "potentialPct": 99
+      "name": "Recollection",
+      "topSellerArticles": 202,
+      "potentialPct": 98
     },
     {
       "name": "Decoration Brands",
-      "topSellerArticles": 128,
-      "potentialPct": 99
-    },
-    {
-      "name": "",
-      "topSellerArticles": 105,
-      "potentialPct": 99
-    },
-    {
-      "name": "Altobuy",
-      "topSellerArticles": 92,
+      "topSellerArticles": 127,
       "potentialPct": 99
     },
     {
       "name": "House Partners",
-      "topSellerArticles": 85,
+      "topSellerArticles": 115,
       "potentialPct": 99
     },
     {
-      "name": "Toilinux",
-      "topSellerArticles": 74,
+      "name": "Altobuy",
+      "topSellerArticles": 91,
+      "potentialPct": 99
+    },
+    {
+      "name": "Decoshop",
+      "topSellerArticles": 83,
       "potentialPct": 99
     },
     {
       "name": "Maxibazar",
-      "topSellerArticles": 74,
+      "topSellerArticles": 72,
+      "potentialPct": 99
+    },
+    {
+      "name": "The Concept Factory",
+      "topSellerArticles": 70,
       "potentialPct": 99
     }
   ]

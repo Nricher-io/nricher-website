@@ -1,123 +1,128 @@
 {
   "slug": "irun",
   "name": "Irun",
-  "priceIndex": 103,
+  "priceIndex": 102,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        109,
         108,
         105,
         104,
         113,
-        115
+        115,
+        111
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        111,
         102,
         103,
         102,
         122,
-        121
+        121,
+        120
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        112,
         110,
         116,
         115,
         114,
-        113
+        113,
+        109
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        97,
         104,
         102,
         93,
         93,
-        99
+        99,
+        91
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        110,
         106,
         105,
         104,
         114,
-        116
+        116,
+        120
       ]
     },
     {
       "name": "Trekkinn",
       "piHistory": [
-        116,
         115,
         114,
         113,
         109,
-        111
+        111,
+        106
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        105,
         103,
         104,
         null,
         109,
-        108
+        108,
+        102
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        123,
         116,
         115,
         113,
         121,
-        121
+        121,
+        119
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
-        110,
         109,
         109,
         109,
         110,
+        109,
         109
+      ]
+    },
+    {
+      "name": "Zalando",
+      "piHistory": [
+        null,
+        null,
+        null,
+        null,
+        119,
+        110
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-05-26",
-      "cheaperPct": 27,
-      "equalPct": 10,
-      "higherPct": 63
-    },
     {
       "week": "2026-06-02",
       "cheaperPct": 33,
@@ -147,48 +152,54 @@
       "cheaperPct": 26,
       "equalPct": 9,
       "higherPct": 65
+    },
+    {
+      "week": "2026-07-14",
+      "cheaperPct": 42,
+      "equalPct": 9,
+      "higherPct": 49
     }
   ],
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "matched": 1236,
+      "matched": 1182,
       "priceIndex": 103,
-      "lowerPct": 41,
-      "equalPct": 14,
-      "higherPct": 45
+      "lowerPct": 39,
+      "equalPct": 17,
+      "higherPct": 44
     },
     {
       "pack": "Chaussures de randonnée",
-      "matched": 592,
-      "priceIndex": 104,
-      "lowerPct": 45,
-      "equalPct": 4,
-      "higherPct": 52
+      "matched": 547,
+      "priceIndex": 100,
+      "lowerPct": 52,
+      "equalPct": 7,
+      "higherPct": 41
     },
     {
       "pack": "Sac à dos",
-      "matched": 142,
-      "priceIndex": 106,
-      "lowerPct": 36,
-      "equalPct": 8,
-      "higherPct": 56
+      "matched": 132,
+      "priceIndex": 104,
+      "lowerPct": 43,
+      "equalPct": 3,
+      "higherPct": 54
     },
     {
       "pack": "Veste",
-      "matched": 155,
-      "priceIndex": 104,
-      "lowerPct": 18,
-      "equalPct": 37,
-      "higherPct": 45
+      "matched": 153,
+      "priceIndex": 103,
+      "lowerPct": 26,
+      "equalPct": 39,
+      "higherPct": 34
     },
     {
       "pack": "T-shirt",
-      "matched": 301,
+      "matched": 289,
       "priceIndex": 101,
-      "lowerPct": 34,
-      "equalPct": 20,
-      "higherPct": 46
+      "lowerPct": 33,
+      "equalPct": 28,
+      "higherPct": 39
     }
   ]
 }

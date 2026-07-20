@@ -1,11 +1,16 @@
 {
   "packName": "Matelas",
-  "totalArticles": 11754,
-  "topSellersCount": 5881,
-  "topPct": 79,
-  "midPct": 12,
-  "lowPct": 9,
+  "totalArticles": 11769,
+  "topSellersCount": 8066,
+  "topPct": 83,
+  "midPct": 10,
+  "lowPct": 7,
   "ranking": [
+    {
+      "name": "",
+      "topSellerArticles": 2986,
+      "potentialPct": 75
+    },
     {
       "name": "The White Stone",
       "topSellerArticles": 2235,
@@ -13,27 +18,22 @@
     },
     {
       "name": "Indream",
-      "topSellerArticles": 1021,
+      "topSellerArticles": 1023,
       "potentialPct": 91
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 954,
+      "topSellerArticles": 944,
       "potentialPct": 92
     },
     {
-      "name": "",
-      "topSellerArticles": 793,
-      "potentialPct": 93
-    },
-    {
       "name": "Actisom",
-      "topSellerArticles": 521,
+      "topSellerArticles": 523,
       "potentialPct": 96
     },
     {
       "name": "Senso Pur",
-      "topSellerArticles": 357,
+      "topSellerArticles": 355,
       "potentialPct": 97
     },
     {
@@ -42,8 +42,13 @@
       "potentialPct": 99
     },
     {
+      "name": "Ikon Sleep",
+      "topSellerArticles": 126,
+      "potentialPct": 99
+    },
+    {
       "name": "Idliterie",
-      "topSellerArticles": 110,
+      "topSellerArticles": 109,
       "potentialPct": 99
     },
     {
@@ -53,17 +58,12 @@
     },
     {
       "name": "Altobuy",
-      "topSellerArticles": 103,
+      "topSellerArticles": 101,
       "potentialPct": 99
     },
     {
-      "name": "Ikon Sleep",
-      "topSellerArticles": 94,
-      "potentialPct": 99
-    },
-    {
-      "name": "Beliani",
-      "topSellerArticles": 88,
+      "name": "Visiodirect",
+      "topSellerArticles": 97,
       "potentialPct": 99
     }
   ]

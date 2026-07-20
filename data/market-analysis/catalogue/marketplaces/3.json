@@ -1,59 +1,54 @@
 {
   "packName": "Lit",
-  "totalArticles": 11736,
-  "topSellersCount": 1056,
-  "topPct": 38,
-  "midPct": 32,
-  "lowPct": 30,
+  "totalArticles": 10862,
+  "topSellersCount": 1348,
+  "topPct": 44,
+  "midPct": 30,
+  "lowPct": 26,
   "ranking": [
     {
+      "name": "",
+      "topSellerArticles": 396,
+      "potentialPct": 96
+    },
+    {
       "name": "Vidaxl",
-      "topSellerArticles": 241,
+      "topSellerArticles": 246,
       "potentialPct": 98
     },
     {
       "name": "Vie Moderne",
-      "topSellerArticles": 211,
+      "topSellerArticles": 208,
       "potentialPct": 98
     },
     {
       "name": "Maison Vibe",
-      "topSellerArticles": 186,
+      "topSellerArticles": 173,
       "potentialPct": 98
     },
     {
-      "name": "Vente Unique",
-      "topSellerArticles": 154,
-      "potentialPct": 99
-    },
-    {
       "name": "Kids Literie",
-      "topSellerArticles": 143,
-      "potentialPct": 99
+      "topSellerArticles": 168,
+      "potentialPct": 98
     },
     {
       "name": "House Partners",
-      "topSellerArticles": 121,
+      "topSellerArticles": 157,
       "potentialPct": 99
     },
     {
-      "name": "1001jouets",
-      "topSellerArticles": 113,
+      "name": "Vente Unique",
+      "topSellerArticles": 144,
       "potentialPct": 99
     },
     {
       "name": "Ecd",
-      "topSellerArticles": 105,
+      "topSellerArticles": 107,
       "potentialPct": 99
     },
     {
-      "name": "",
-      "topSellerArticles": 103,
-      "potentialPct": 99
-    },
-    {
-      "name": "Homifab",
-      "topSellerArticles": 99,
+      "name": "1001jouets",
+      "topSellerArticles": 104,
       "potentialPct": 99
     },
     {
@@ -62,8 +57,13 @@
       "potentialPct": 99
     },
     {
-      "name": "Premium Xl",
-      "topSellerArticles": 96,
+      "name": "Homifab",
+      "topSellerArticles": 95,
+      "potentialPct": 99
+    },
+    {
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 94,
       "potentialPct": 99
     }
   ]

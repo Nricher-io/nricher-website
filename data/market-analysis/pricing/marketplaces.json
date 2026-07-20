@@ -1,212 +1,212 @@
 [
   {
-    "slug": "junmingshop",
-    "name": "Junmingshop",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 550,
-    "priceIndex": 73
-  },
-  {
     "slug": "cstore",
     "name": "Cstore",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 414,
-    "priceIndex": 87
-  },
-  {
-    "slug": "gpasplus",
-    "name": "Gpasplus",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 477,
-    "priceIndex": 89
+    "articlesAnalysed": 60348,
+    "articlesMatched": 397,
+    "priceIndex": 75
   },
   {
     "slug": "super10count",
     "name": "Super10count",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 398,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 379,
+    "priceIndex": 77
+  },
+  {
+    "slug": "gpasplus",
+    "name": "Gpasplus",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 429,
+    "priceIndex": 87
+  },
+  {
+    "slug": "actisom",
+    "name": "Actisom",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 429,
     "priceIndex": 90
   },
   {
     "slug": "simpur",
     "name": "Simpur",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 237,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 234,
     "priceIndex": 91
-  },
-  {
-    "slug": "habitat-et-jardin",
-    "name": "Habitat & Jardin",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 136,
-    "priceIndex": 92
   },
   {
     "slug": "house-partners",
     "name": "House Partners",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 1759,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 1915,
     "priceIndex": 93
   },
   {
-    "slug": "actisom",
-    "name": "Actisom",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 459,
+    "slug": "habitat-et-jardin",
+    "name": "Habitat & Jardin",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 135,
     "priceIndex": 93
   },
   {
     "slug": "sommeil-de-plomb",
     "name": "Sommeil De Plomb",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 1012,
-    "priceIndex": 94
+    "articlesAnalysed": 60348,
+    "articlesMatched": 992,
+    "priceIndex": 95
   },
   {
     "slug": "",
     "name": "",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 2436,
-    "priceIndex": 97
+    "articlesAnalysed": 60348,
+    "articlesMatched": 4122,
+    "priceIndex": 96
   },
   {
-    "slug": "julien",
-    "name": "Julien",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 1675,
-    "priceIndex": 97
-  },
-  {
-    "slug": "the-white-stone",
-    "name": "The White Stone",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 313,
+    "slug": "sweeek",
+    "name": "Sweeek",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 248,
     "priceIndex": 97
   },
   {
     "slug": "best-mobilier",
     "name": "Best Mobilier",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 1495,
-    "priceIndex": 98
-  },
-  {
-    "slug": "sweeek",
-    "name": "Sweeek",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 255,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 1435,
     "priceIndex": 98
   },
   {
     "slug": "vidaxl",
     "name": "Vidaxl",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 574,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 562,
     "priceIndex": 98
   },
   {
-    "slug": "fnac",
-    "name": "Fnac",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 659,
+    "slug": "selsey",
+    "name": "Selsey",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 368,
     "priceIndex": 98
   },
   {
-    "slug": "tendencio",
-    "name": "Tendencio",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 292,
-    "priceIndex": 98
-  },
-  {
-    "slug": "lematelas",
-    "name": "Lematelas",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 667,
+    "slug": "the-white-stone",
+    "name": "The White Stone",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 232,
     "priceIndex": 99
   },
   {
     "slug": "indream",
     "name": "Indream",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 410,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 369,
     "priceIndex": 99
+  },
+  {
+    "slug": "vente-unique",
+    "name": "Vente Unique",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 1712,
+    "priceIndex": 100
   },
   {
     "slug": "masseno",
     "name": "Masseno",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 2090,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 1960,
     "priceIndex": 100
   },
   {
-    "slug": "literie-moins-cher",
-    "name": "Literie Moins Cher",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 2215,
+    "slug": "lematelas",
+    "name": "Lematelas",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 578,
     "priceIndex": 100
   },
   {
     "slug": "id-market",
     "name": "Id Market",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 213,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 209,
     "priceIndex": 100
   },
   {
     "slug": "senso-pur",
     "name": "Senso Pur",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 173,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 164,
     "priceIndex": 100
   },
   {
     "slug": "homifab",
     "name": "Homifab",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 273,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 247,
     "priceIndex": 100
   },
   {
-    "slug": "vente-unique",
-    "name": "Vente Unique",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 1770,
+    "slug": "1001lits",
+    "name": "1001lits",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 324,
+    "priceIndex": 100
+  },
+  {
+    "slug": "aosom",
+    "name": "Aosom",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 113,
+    "priceIndex": 100
+  },
+  {
+    "slug": "literie-moins-cher",
+    "name": "Literie Moins Cher",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 2272,
     "priceIndex": 101
   },
   {
     "slug": "loungitude",
     "name": "Loungitude",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 992,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 931,
     "priceIndex": 101
   },
   {
     "slug": "moonia",
     "name": "Moonia",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 210,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 204,
     "priceIndex": 101
   },
   {
-    "slug": "1001lits",
-    "name": "1001lits",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 339,
-    "priceIndex": 101
+    "slug": "mobilier-prive",
+    "name": "Mobilier Prive",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 323,
+    "priceIndex": 102
   },
   {
     "slug": "beliani",
     "name": "Beliani",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 502,
+    "articlesAnalysed": 60348,
+    "articlesMatched": 470,
+    "priceIndex": 104
+  },
+  {
+    "slug": "julien",
+    "name": "Julien",
+    "articlesAnalysed": 60348,
+    "articlesMatched": 1630,
     "priceIndex": 104
   },
   {
     "slug": "shaula-confort",
     "name": "Shaula Confort",
-    "articlesAnalysed": 63789,
-    "articlesMatched": 483,
-    "priceIndex": 105
+    "articlesAnalysed": 60348,
+    "articlesMatched": 478,
+    "priceIndex": 104
   }
 ]

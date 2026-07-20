@@ -1,0 +1,223 @@
+{
+  "slug": "mysupplify",
+  "name": "Mysupplify",
+  "priceIndex": 103,
+  "weeks": [
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07",
+    "2026-07-14"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Asteri",
+      "piHistory": [
+        97,
+        101,
+        103,
+        115,
+        111,
+        110
+      ]
+    },
+    {
+      "name": "Connox",
+      "piHistory": [
+        98,
+        98,
+        95,
+        98,
+        101,
+        103
+      ]
+    },
+    {
+      "name": "Design-Bestseller",
+      "piHistory": [
+        93,
+        96,
+        95,
+        96,
+        98,
+        96
+      ]
+    },
+    {
+      "name": "La Redoute",
+      "piHistory": [
+        84,
+        89,
+        93,
+        96,
+        97,
+        101
+      ]
+    },
+    {
+      "name": "Lamptwist",
+      "piHistory": [
+        107,
+        111,
+        106,
+        114,
+        112,
+        113
+      ]
+    },
+    {
+      "name": "Madeindesign",
+      "piHistory": [
+        101,
+        99,
+        101,
+        109,
+        113,
+        114
+      ]
+    },
+    {
+      "name": "Manomano",
+      "piHistory": [
+        123,
+        127,
+        129,
+        115,
+        117,
+        115
+      ]
+    },
+    {
+      "name": "Myareadesign",
+      "piHistory": [
+        100,
+        98,
+        100,
+        102,
+        99,
+        105
+      ]
+    },
+    {
+      "name": "Nedgis",
+      "piHistory": [
+        93,
+        96,
+        95,
+        105,
+        106,
+        105
+      ]
+    },
+    {
+      "name": "Lemaitredeslampes",
+      "piHistory": [
+        null,
+        102,
+        102,
+        104,
+        104,
+        104
+      ]
+    },
+    {
+      "name": "Silvera",
+      "piHistory": [
+        null,
+        101,
+        93,
+        102,
+        101,
+        100
+      ]
+    },
+    {
+      "name": "Fermliving",
+      "piHistory": [
+        84,
+        86,
+        91,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "name": "Light11",
+      "piHistory": [
+        null,
+        null,
+        null,
+        109,
+        99,
+        100
+      ]
+    },
+    {
+      "name": "Thecoolrepublic",
+      "piHistory": [
+        91,
+        89,
+        89,
+        94,
+        94,
+        96
+      ]
+    },
+    {
+      "name": "LeCedreRouge",
+      "piHistory": [
+        null,
+        null,
+        106,
+        107,
+        108,
+        109
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Suspension",
+      "matched": 1,
+      "priceIndex": 103,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 100
+    },
+    {
+      "pack": "Lampe à poser",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Applique murale",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Lampadaire",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Plafonnier",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    }
+  ]
+}

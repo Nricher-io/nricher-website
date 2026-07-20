@@ -3,67 +3,67 @@
   "name": "Best Mobilier",
   "priceIndex": 98,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        128,
         110,
         111,
         111,
         128,
-        125
+        125,
+        108
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        107,
         112,
         113,
         107,
         109,
-        105
+        105,
+        110
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        95,
         96,
         68,
         58,
         93,
-        94
+        94,
+        95
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        121,
         134,
         155,
         167,
         148,
-        143
+        143,
+        158
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        103,
         104,
         104,
         105,
         103,
-        102
+        102,
+        103
       ]
     },
     {
@@ -80,12 +80,12 @@
     {
       "name": "Autourdebebe",
       "piHistory": [
-        136,
         143,
         136,
         145,
         139,
-        120
+        120,
+        134
       ]
     },
     {
@@ -93,142 +93,142 @@
       "piHistory": [
         146,
         146,
-        146,
         145,
         154,
-        153
+        153,
+        154
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
         116,
-        116,
         117,
         117,
         124,
-        125
+        125,
+        130
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
         105,
-        105,
         103,
         102,
         100,
-        101
+        101,
+        105
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        164,
         146,
         137,
         139,
         144,
-        138
+        138,
+        134
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        121,
         139,
         135,
         136,
         123,
-        138
+        138,
+        126
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        124,
         131,
         131,
         129,
         135,
-        135
+        135,
+        136
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        101,
         103,
         102,
         103,
         104,
-        101
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        108,
-        108,
-        110,
-        107,
-        107,
-        103
+        101,
+        99
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        116,
         117,
         117,
         119,
         120,
-        124
+        124,
+        132
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        102,
         103,
         102,
         101,
         102,
-        101
+        101,
+        98
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        101,
         102,
         103,
         102,
         102,
-        100
+        100,
+        101
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        102,
         101,
         101,
         102,
         100,
-        101
+        101,
+        100
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
         98,
-        98,
         100,
         99,
         99,
+        99,
         99
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        111,
+        107,
+        109,
+        108,
+        110,
+        112
       ]
     }
   ],
@@ -244,11 +244,11 @@
     },
     {
       "pack": "Canapé",
-      "matched": 1476,
+      "matched": 1417,
       "priceIndex": 98,
-      "lowerPct": 13,
-      "equalPct": 73,
-      "higherPct": 14
+      "lowerPct": 14,
+      "equalPct": 74,
+      "higherPct": 12
     },
     {
       "pack": "Matelas",
@@ -268,11 +268,11 @@
     },
     {
       "pack": "Table à manger",
-      "matched": 19,
-      "priceIndex": 94,
-      "lowerPct": 47,
+      "matched": 18,
+      "priceIndex": 95,
+      "lowerPct": 48,
       "equalPct": 49,
-      "higherPct": 5
+      "higherPct": 3
     }
   ]
 }

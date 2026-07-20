@@ -1,69 +1,69 @@
 {
   "packName": "Commode",
-  "totalArticles": 19393,
-  "topSellersCount": 7638,
-  "topPct": 67,
+  "totalArticles": 18461,
+  "topSellersCount": 7862,
+  "topPct": 69,
   "midPct": 19,
-  "lowPct": 14,
+  "lowPct": 12,
   "ranking": [
     {
       "name": "Abiks Meubles",
-      "topSellerArticles": 5294,
-      "potentialPct": 73
+      "topSellerArticles": 5211,
+      "potentialPct": 72
     },
     {
       "name": "Ok Living",
-      "topSellerArticles": 927,
-      "potentialPct": 95
-    },
-    {
-      "name": "Pegane",
-      "topSellerArticles": 394,
-      "potentialPct": 98
+      "topSellerArticles": 1021,
+      "potentialPct": 94
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 350,
-      "potentialPct": 98
-    },
-    {
-      "name": "Htmeubles",
-      "topSellerArticles": 337,
-      "potentialPct": 98
-    },
-    {
-      "name": "Visiodirect",
-      "topSellerArticles": 336,
-      "potentialPct": 98
-    },
-    {
-      "name": "Dmora",
-      "topSellerArticles": 334,
-      "potentialPct": 98
-    },
-    {
-      "name": "Rust Oleum",
-      "topSellerArticles": 325,
-      "potentialPct": 98
-    },
-    {
-      "name": "Meublorama",
-      "topSellerArticles": 312,
+      "topSellerArticles": 447,
       "potentialPct": 98
     },
     {
       "name": "",
-      "topSellerArticles": 240,
-      "potentialPct": 99
+      "topSellerArticles": 439,
+      "potentialPct": 98
+    },
+    {
+      "name": "Pegane",
+      "topSellerArticles": 395,
+      "potentialPct": 98
+    },
+    {
+      "name": "Dmora",
+      "topSellerArticles": 349,
+      "potentialPct": 98
+    },
+    {
+      "name": "Visiodirect",
+      "topSellerArticles": 340,
+      "potentialPct": 98
     },
     {
       "name": "3xe Living",
-      "topSellerArticles": 216,
+      "topSellerArticles": 306,
+      "potentialPct": 98
+    },
+    {
+      "name": "Meublorama",
+      "topSellerArticles": 296,
+      "potentialPct": 98
+    },
+    {
+      "name": "Rust Oleum",
+      "topSellerArticles": 236,
       "potentialPct": 99
     },
     {
-      "name": "Bb Loisir",
-      "topSellerArticles": 205,
+      "name": "Htmeubles",
+      "topSellerArticles": 217,
+      "potentialPct": 99
+    },
+    {
+      "name": "Petits Meubles",
+      "topSellerArticles": 193,
       "potentialPct": 99
     }
   ]

@@ -1,13 +1,13 @@
 {
   "slug": "debenhams",
   "name": "Debenhams",
-  "articlesAnalysed": 650298,
+  "articlesAnalysed": 638064,
   "qualityScore": 73,
   "globalGrades": {
     "Aplus": 0,
-    "A": 25,
-    "B": 28,
-    "C": 26,
+    "A": 24,
+    "B": 27,
+    "C": 27,
     "D": 13,
     "E": 6,
     "F": 2
@@ -20,15 +20,15 @@
       "C": 12,
       "D": 12,
       "E": 3,
-      "F": 0
+      "F": 1
     },
     "Image": {
       "Aplus": 33,
-      "A": 29,
+      "A": 28,
       "B": 12,
       "C": 9,
       "D": 0,
-      "E": 12,
+      "E": 13,
       "F": 4
     },
     "Vidéo": {
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 36,
+      "Aplus": 35,
       "A": 5,
       "B": 7,
       "C": 11,
       "D": 7,
-      "E": 8,
-      "F": 26
+      "E": 9,
+      "F": 27
     }
   }
 }

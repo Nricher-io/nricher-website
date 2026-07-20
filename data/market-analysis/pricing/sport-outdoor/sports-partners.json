@@ -1,75 +1,42 @@
 {
   "slug": "sports-partners",
   "name": "Sports Partners",
-  "priceIndex": 82,
+  "priceIndex": 41,
   "weeks": [
-    "2026-05-26",
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
-    "2026-06-30"
+    "2026-06-30",
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        110,
-        109,
         108,
         105,
         104,
-        113
+        113,
+        115,
+        111
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        112,
-        111,
         102,
         103,
         102,
-        122
+        122,
+        121,
+        120
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        111,
-        112,
         110,
-        116,
-        115,
-        114
-      ]
-    },
-    {
-      "name": "Snowinn",
-      "piHistory": [
-        102,
-        97,
-        104,
-        102,
-        93,
-        93
-      ]
-    },
-    {
-      "name": "Snowleader",
-      "piHistory": [
-        111,
-        110,
-        106,
-        105,
-        104,
-        114
-      ]
-    },
-    {
-      "name": "Trekkinn",
-      "piHistory": [
-        117,
         116,
         115,
         114,
@@ -78,47 +45,80 @@
       ]
     },
     {
+      "name": "Snowinn",
+      "piHistory": [
+        104,
+        102,
+        93,
+        93,
+        99,
+        91
+      ]
+    },
+    {
+      "name": "Snowleader",
+      "piHistory": [
+        106,
+        105,
+        104,
+        114,
+        116,
+        120
+      ]
+    },
+    {
+      "name": "Trekkinn",
+      "piHistory": [
+        115,
+        114,
+        113,
+        109,
+        111,
+        106
+      ]
+    },
+    {
       "name": "Irun",
       "piHistory": [
-        108,
-        105,
         103,
         104,
         null,
-        109
+        109,
+        108,
+        102
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        122,
-        123,
         116,
         115,
         113,
-        121
+        121,
+        121,
+        119
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
+        109,
+        109,
+        109,
         110,
-        110,
         109,
-        109,
-        109,
-        110
+        109
       ]
     },
     {
-      "name": "Salomon",
+      "name": "Zalando",
       "piHistory": [
-        85,
-        86,
         null,
         null,
         null,
-        null
+        null,
+        119,
+        110
       ]
     }
   ],
@@ -134,9 +134,9 @@
     },
     {
       "pack": "Chaussures de randonnée",
-      "matched": 1,
-      "priceIndex": 94,
-      "lowerPct": 100,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },
@@ -151,7 +151,7 @@
     {
       "pack": "Veste",
       "matched": 1,
-      "priceIndex": 70,
+      "priceIndex": 41,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0

@@ -1,69 +1,69 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 8109,
-  "topSellersCount": 1181,
-  "topPct": 49,
-  "midPct": 30,
-  "lowPct": 21,
+  "totalArticles": 7906,
+  "topSellersCount": 1375,
+  "topPct": 54,
+  "midPct": 26,
+  "lowPct": 20,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 347,
+      "topSellerArticles": 397,
+      "potentialPct": 95
+    },
+    {
+      "name": "",
+      "topSellerArticles": 310,
       "potentialPct": 96
     },
     {
       "name": "As Discount",
-      "topSellerArticles": 199,
+      "topSellerArticles": 197,
       "potentialPct": 98
     },
     {
       "name": "Id Market",
-      "topSellerArticles": 174,
+      "topSellerArticles": 171,
       "potentialPct": 98
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 168,
-      "potentialPct": 98
-    },
-    {
-      "name": "",
-      "topSellerArticles": 150,
+      "topSellerArticles": 164,
       "potentialPct": 98
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 143,
+      "topSellerArticles": 136,
       "potentialPct": 98
     },
     {
       "name": "Zoomici",
-      "topSellerArticles": 137,
-      "potentialPct": 98
-    },
-    {
-      "name": "Mercatoxl",
-      "topSellerArticles": 95,
+      "topSellerArticles": 112,
       "potentialPct": 99
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 93,
+      "topSellerArticles": 97,
+      "potentialPct": 99
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 80,
       "potentialPct": 99
     },
     {
       "name": "2kings",
-      "topSellerArticles": 74,
+      "topSellerArticles": 77,
       "potentialPct": 99
     },
     {
       "name": "Premium Xl",
-      "topSellerArticles": 66,
+      "topSellerArticles": 60,
       "potentialPct": 99
     },
     {
-      "name": "Paris Prix",
-      "topSellerArticles": 65,
+      "name": "Super10count",
+      "topSellerArticles": 60,
       "potentialPct": 99
     }
   ]

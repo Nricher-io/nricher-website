@@ -1,15 +1,15 @@
 {
   "packName": "Maquillage",
-  "totalArticles": 545,
-  "topSellersCount": 94,
+  "totalArticles": 542,
+  "topSellersCount": 12,
   "topPct": 100,
   "midPct": 0,
   "lowPct": 0,
   "ranking": [
     {
       "name": "Myorigines",
-      "topSellerArticles": 94,
-      "potentialPct": 83
+      "topSellerArticles": 12,
+      "potentialPct": 98
     }
   ]
 }

@@ -1,70 +1,70 @@
 {
   "packName": "Lampe à poser",
-  "totalArticles": 2998,
-  "topSellersCount": 3827,
-  "topPct": 70,
-  "midPct": 28,
+  "totalArticles": 2979,
+  "topSellersCount": 3806,
+  "topPct": 73,
+  "midPct": 25,
   "lowPct": 2,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 1042,
+      "topSellerArticles": 1041,
       "potentialPct": 65
     },
     {
       "name": "Connox",
-      "topSellerArticles": 856,
+      "topSellerArticles": 854,
       "potentialPct": 71
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 687,
+      "topSellerArticles": 684,
       "potentialPct": 77
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 663,
+      "topSellerArticles": 656,
       "potentialPct": 78
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 579,
+      "topSellerArticles": 571,
       "potentialPct": 81
     },
     {
       "name": "Lemaitredeslampes",
-      "topSellerArticles": 572,
-      "potentialPct": 81
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 249,
-      "potentialPct": 92
+      "topSellerArticles": 497,
+      "potentialPct": 83
     },
     {
       "name": "Le Cedre Rouge",
-      "topSellerArticles": 217,
+      "topSellerArticles": 213,
       "potentialPct": 93
     },
     {
-      "name": "Light11",
-      "topSellerArticles": 161,
-      "potentialPct": 95
+      "name": "Asteri",
+      "topSellerArticles": 189,
+      "potentialPct": 94
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 104,
-      "potentialPct": 97
+      "topSellerArticles": 164,
+      "potentialPct": 94
     },
     {
       "name": "Myareadesign",
-      "topSellerArticles": 93,
+      "topSellerArticles": 91,
       "potentialPct": 97
     },
     {
       "name": "Dyberg Larsen",
       "topSellerArticles": 77,
       "potentialPct": 97
+    },
+    {
+      "name": "Hubsch",
+      "topSellerArticles": 54,
+      "potentialPct": 98
     }
   ]
 }

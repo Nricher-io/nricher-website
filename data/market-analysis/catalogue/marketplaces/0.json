@@ -1,69 +1,69 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 11060,
-  "topSellersCount": 3295,
-  "topPct": 50,
+  "totalArticles": 10663,
+  "topSellersCount": 3039,
+  "topPct": 49,
   "midPct": 26,
-  "lowPct": 24,
+  "lowPct": 25,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 1189,
-      "potentialPct": 89
-    },
-    {
-      "name": "Fnac",
-      "topSellerArticles": 553,
-      "potentialPct": 95
+      "topSellerArticles": 1229,
+      "potentialPct": 88
     },
     {
       "name": "Junmingshop",
-      "topSellerArticles": 549,
+      "topSellerArticles": 529,
       "potentialPct": 95
     },
     {
-      "name": "Ecofone",
-      "topSellerArticles": 359,
-      "potentialPct": 97
+      "name": "Fnac",
+      "topSellerArticles": 382,
+      "potentialPct": 96
     },
     {
       "name": "Alloccaz",
-      "topSellerArticles": 343,
+      "topSellerArticles": 323,
+      "potentialPct": 97
+    },
+    {
+      "name": "Ecofone",
+      "topSellerArticles": 321,
       "potentialPct": 97
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 302,
-      "potentialPct": 97
+      "topSellerArticles": 255,
+      "potentialPct": 98
+    },
+    {
+      "name": "Destock Access",
+      "topSellerArticles": 212,
+      "potentialPct": 98
     },
     {
       "name": "Darty",
-      "topSellerArticles": 215,
-      "potentialPct": 98
-    },
-    {
-      "name": "Zenkaa",
-      "topSellerArticles": 208,
-      "potentialPct": 98
-    },
-    {
-      "name": "Procomponentes",
       "topSellerArticles": 199,
       "potentialPct": 98
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 199,
+      "topSellerArticles": 192,
       "potentialPct": 98
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 196,
+      "topSellerArticles": 187,
       "potentialPct": 98
     },
     {
-      "name": "Auchan",
-      "topSellerArticles": 182,
+      "name": "Digital Bay",
+      "topSellerArticles": 181,
+      "potentialPct": 98
+    },
+    {
+      "name": "Zenkaa",
+      "topSellerArticles": 170,
       "potentialPct": 98
     }
   ]

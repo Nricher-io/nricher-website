@@ -1,50 +1,50 @@
 {
   "packName": "Applique murale",
-  "totalArticles": 1923,
-  "topSellersCount": 1657,
-  "topPct": 76,
-  "midPct": 18,
+  "totalArticles": 1937,
+  "topSellersCount": 1652,
+  "topPct": 79,
+  "midPct": 15,
   "lowPct": 6,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 797,
+      "topSellerArticles": 799,
       "potentialPct": 59
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 418,
-      "potentialPct": 78
+      "topSellerArticles": 411,
+      "potentialPct": 79
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 236,
+      "topSellerArticles": 238,
       "potentialPct": 88
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 206,
+      "topSellerArticles": 204,
       "potentialPct": 89
     },
     {
       "name": "Lemaitredeslampes",
-      "topSellerArticles": 93,
-      "potentialPct": 95
-    },
-    {
-      "name": "Light11",
-      "topSellerArticles": 92,
-      "potentialPct": 95
+      "topSellerArticles": 74,
+      "potentialPct": 96
     },
     {
       "name": "Evolutiv Solutions",
-      "topSellerArticles": 60,
+      "topSellerArticles": 63,
+      "potentialPct": 97
+    },
+    {
+      "name": "Dbs Rdc",
+      "topSellerArticles": 50,
       "potentialPct": 97
     },
     {
       "name": "Asteri",
-      "topSellerArticles": 57,
-      "potentialPct": 97
+      "topSellerArticles": 45,
+      "potentialPct": 98
     },
     {
       "name": "Myareadesign",
@@ -53,18 +53,18 @@
     },
     {
       "name": "Connox",
-      "topSellerArticles": 41,
-      "potentialPct": 98
-    },
-    {
-      "name": "Dbs Rdc",
-      "topSellerArticles": 37,
+      "topSellerArticles": 40,
       "potentialPct": 98
     },
     {
       "name": "Dyberg Larsen",
-      "topSellerArticles": 34,
+      "topSellerArticles": 33,
       "potentialPct": 98
+    },
+    {
+      "name": "Hubsch",
+      "topSellerArticles": 21,
+      "potentialPct": 99
     }
   ]
 }

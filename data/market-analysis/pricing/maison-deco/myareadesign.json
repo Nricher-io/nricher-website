@@ -3,120 +3,120 @@
   "name": "Myareadesign",
   "priceIndex": 82,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "Asteri",
       "piHistory": [
-        104,
         97,
         101,
         103,
         115,
-        111
+        111,
+        110
       ]
     },
     {
       "name": "Connox",
       "piHistory": [
-        97,
         98,
         98,
         95,
         98,
-        101
+        101,
+        103
       ]
     },
     {
       "name": "Design-Bestseller",
       "piHistory": [
-        94,
         93,
         96,
         95,
         96,
-        98
+        98,
+        96
       ]
     },
     {
       "name": "La Redoute",
       "piHistory": [
-        86,
         84,
         89,
         93,
         96,
-        97
+        97,
+        101
       ]
     },
     {
       "name": "Lamptwist",
       "piHistory": [
-        106,
         107,
         111,
         106,
         114,
-        112
+        112,
+        113
       ]
     },
     {
       "name": "Madeindesign",
       "piHistory": [
         101,
-        101,
         99,
         101,
         109,
-        113
+        113,
+        114
       ]
     },
     {
       "name": "Manomano",
       "piHistory": [
-        122,
         123,
         127,
         129,
         115,
-        117
+        117,
+        115
       ]
     },
     {
       "name": "Myareadesign",
       "piHistory": [
-        103,
         100,
         98,
         100,
         102,
-        99
+        99,
+        105
       ]
     },
     {
       "name": "Nedgis",
       "piHistory": [
-        92,
         93,
         96,
         95,
         105,
-        106
+        106,
+        105
       ]
     },
     {
       "name": "Lemaitredeslampes",
       "piHistory": [
-        103,
         null,
         102,
         102,
+        104,
         104,
         104
       ]
@@ -124,21 +124,21 @@
     {
       "name": "Silvera",
       "piHistory": [
-        101,
         null,
         101,
         93,
         102,
-        101
+        101,
+        100
       ]
     },
     {
       "name": "Fermliving",
       "piHistory": [
-        92,
         84,
         86,
         91,
+        null,
         null,
         null
       ]
@@ -146,23 +146,23 @@
     {
       "name": "Light11",
       "piHistory": [
-        97,
         null,
         null,
         null,
         109,
-        99
+        99,
+        100
       ]
     },
     {
       "name": "Thecoolrepublic",
       "piHistory": [
-        null,
         91,
         89,
         89,
         94,
-        94
+        94,
+        96
       ]
     },
     {
@@ -170,20 +170,14 @@
       "piHistory": [
         null,
         null,
-        null,
         106,
         107,
-        108
+        108,
+        109
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-06-02",
-      "cheaperPct": 41,
-      "equalPct": 13,
-      "higherPct": 47
-    },
     {
       "week": "2026-06-09",
       "cheaperPct": 52,
@@ -213,6 +207,12 @@
       "cheaperPct": 53,
       "equalPct": 6,
       "higherPct": 41
+    },
+    {
+      "week": "2026-07-14",
+      "cheaperPct": 40,
+      "equalPct": 1,
+      "higherPct": 59
     }
   ],
   "pairwise": [
@@ -222,27 +222,27 @@
       "priceIndex": 68,
       "lowerPct": 88,
       "equalPct": 0,
-      "higherPct": 12
+      "higherPct": 13
     },
     {
       "pack": "Lampe à poser",
-      "matched": 93,
+      "matched": 91,
       "priceIndex": 86,
-      "lowerPct": 63,
+      "lowerPct": 64,
       "equalPct": 5,
-      "higherPct": 32
+      "higherPct": 31
     },
     {
       "pack": "Applique murale",
       "matched": 42,
-      "priceIndex": 93,
+      "priceIndex": 94,
       "lowerPct": 51,
       "equalPct": 28,
       "higherPct": 21
     },
     {
       "pack": "Lampadaire",
-      "matched": 22,
+      "matched": 21,
       "priceIndex": 96,
       "lowerPct": 40,
       "equalPct": 0,

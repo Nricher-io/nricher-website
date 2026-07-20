@@ -1,69 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 14302,
-  "topSellersCount": 6621,
-  "topPct": 59,
-  "midPct": 25,
-  "lowPct": 16,
+  "totalArticles": 14171,
+  "topSellersCount": 7632,
+  "topPct": 64,
+  "midPct": 22,
+  "lowPct": 14,
   "ranking": [
     {
       "name": "Literie Moins Cher",
-      "topSellerArticles": 2116,
+      "topSellerArticles": 2171,
       "potentialPct": 85
     },
     {
+      "name": "",
+      "topSellerArticles": 1877,
+      "potentialPct": 87
+    },
+    {
       "name": "Julien",
-      "topSellerArticles": 1653,
-      "potentialPct": 88
+      "topSellerArticles": 1611,
+      "potentialPct": 89
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 990,
+      "topSellerArticles": 974,
       "potentialPct": 93
     },
     {
-      "name": "",
-      "topSellerArticles": 775,
-      "potentialPct": 95
-    },
-    {
       "name": "Lematelas",
-      "topSellerArticles": 604,
+      "topSellerArticles": 521,
       "potentialPct": 96
     },
     {
       "name": "Shaula Confort",
-      "topSellerArticles": 483,
+      "topSellerArticles": 478,
       "potentialPct": 97
     },
     {
       "name": "Actisom",
-      "topSellerArticles": 459,
+      "topSellerArticles": 429,
       "potentialPct": 97
     },
     {
       "name": "Indream",
-      "topSellerArticles": 409,
+      "topSellerArticles": 368,
       "potentialPct": 97
     },
     {
       "name": "1001lits",
-      "topSellerArticles": 332,
-      "potentialPct": 98
-    },
-    {
-      "name": "The White Stone",
-      "topSellerArticles": 313,
+      "topSellerArticles": 317,
       "potentialPct": 98
     },
     {
       "name": "La Redoute",
-      "topSellerArticles": 299,
+      "topSellerArticles": 294,
       "potentialPct": 98
     },
     {
       "name": "Ideoideal",
-      "topSellerArticles": 268,
+      "topSellerArticles": 264,
+      "potentialPct": 98
+    },
+    {
+      "name": "Dreaming Kamahaus",
+      "topSellerArticles": 237,
       "potentialPct": 98
     }
   ]

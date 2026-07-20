@@ -2,211 +2,211 @@
   {
     "slug": "idliterie",
     "name": "Idliterie",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 250,
-    "priceIndex": 86
+    "articlesAnalysed": 72385,
+    "articlesMatched": 249,
+    "priceIndex": 87
   },
   {
     "slug": "komhtom",
     "name": "Komhtom",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 840,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 852,
     "priceIndex": 89
   },
   {
     "slug": "house-partners",
     "name": "House Partners",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1889,
-    "priceIndex": 92
+    "articlesAnalysed": 72385,
+    "articlesMatched": 1809,
+    "priceIndex": 90
   },
   {
-    "slug": "the-white-stone",
-    "name": "The White Stone",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 2295,
+    "slug": "cstore",
+    "name": "Cstore",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 392,
+    "priceIndex": 94
+  },
+  {
+    "slug": "",
+    "name": "",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 8238,
     "priceIndex": 95
   },
   {
     "slug": "clicnbuy",
     "name": "Clicnbuy",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 2084,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 2050,
     "priceIndex": 95
+  },
+  {
+    "slug": "casanova-paris",
+    "name": "Casanova Paris",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 470,
+    "priceIndex": 96
+  },
+  {
+    "slug": "the-white-stone",
+    "name": "The White Stone",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 2294,
+    "priceIndex": 97
   },
   {
     "slug": "beliani",
     "name": "Beliani",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 2455,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 2440,
     "priceIndex": 98
   },
   {
     "slug": "paris-prix",
     "name": "Paris Prix",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1365,
-    "priceIndex": 98
-  },
-  {
-    "slug": "casanova-paris",
-    "name": "Casanova Paris",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 426,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 1371,
     "priceIndex": 98
   },
   {
     "slug": "les-tendances",
     "name": "Les Tendances",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 6926,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 6576,
     "priceIndex": 99
   },
   {
     "slug": "indream",
     "name": "Indream",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1794,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 1798,
     "priceIndex": 99
   },
   {
     "slug": "1001jouets",
     "name": "1001jouets",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1180,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 915,
     "priceIndex": 99
   },
   {
-    "slug": "habitat-et-jardin",
-    "name": "Habitat & Jardin",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 289,
-    "priceIndex": 99
+    "slug": "best-mobilier",
+    "name": "Best Mobilier",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 1903,
+    "priceIndex": 100
   },
   {
     "slug": "vidaxl",
     "name": "Vidaxl",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 5076,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 4804,
     "priceIndex": 100
   },
   {
     "slug": "senso-pur",
     "name": "Senso Pur",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 372,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 370,
     "priceIndex": 100
   },
   {
     "slug": "id-market",
     "name": "Id Market",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 259,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 261,
     "priceIndex": 100
   },
   {
     "slug": "altobuy",
     "name": "Altobuy",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 305,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 301,
     "priceIndex": 100
   },
   {
     "slug": "meublorama",
     "name": "Meublorama",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 339,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 349,
     "priceIndex": 100
   },
   {
-    "slug": "mercatoxl",
-    "name": "Mercatoxl",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 969,
+    "slug": "decoration-brands",
+    "name": "Decoration Brands",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 262,
     "priceIndex": 100
   },
   {
-    "slug": "best-mobilier",
-    "name": "Best Mobilier",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1914,
-    "priceIndex": 101
-  },
-  {
-    "slug": "concept-usine",
-    "name": "Concept Usine",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 150,
+    "slug": "aosom",
+    "name": "Aosom",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 223,
     "priceIndex": 101
   },
   {
     "slug": "ecd",
     "name": "Ecd",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 205,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 227,
     "priceIndex": 101
   },
   {
-    "slug": "",
-    "name": "",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 2570,
+    "slug": "habitat-et-jardin",
+    "name": "Habitat & Jardin",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 293,
     "priceIndex": 102
   },
   {
-    "slug": "aosom",
-    "name": "Aosom",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 229,
-    "priceIndex": 102
-  },
-  {
-    "slug": "decoration-brands",
-    "name": "Decoration Brands",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 264,
+    "slug": "concept-usine",
+    "name": "Concept Usine",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 148,
     "priceIndex": 102
   },
   {
     "slug": "decoshop",
     "name": "Decoshop",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 1394,
-    "priceIndex": 106
+    "articlesAnalysed": 72385,
+    "articlesMatched": 812,
+    "priceIndex": 102
   },
   {
     "slug": "shopnova",
     "name": "Shopnova",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 630,
+    "articlesAnalysed": 72385,
+    "articlesMatched": 874,
     "priceIndex": 107
   },
   {
     "slug": "n-wood",
     "name": "N Wood",
-    "articlesAnalysed": 73770,
+    "articlesAnalysed": 72385,
     "articlesMatched": 2867,
     "priceIndex": 110
   },
   {
-    "slug": "sommeil-de-plomb",
-    "name": "Sommeil De Plomb",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 999,
-    "priceIndex": 113
-  },
-  {
     "slug": "actisom",
     "name": "Actisom",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 521,
-    "priceIndex": 113
+    "articlesAnalysed": 72385,
+    "articlesMatched": 523,
+    "priceIndex": 111
+  },
+  {
+    "slug": "sommeil-de-plomb",
+    "name": "Sommeil De Plomb",
+    "articlesAnalysed": 72385,
+    "articlesMatched": 982,
+    "priceIndex": 114
   },
   {
     "slug": "le-quai-des-affaires",
     "name": "Le Quai Des Affaires",
-    "articlesAnalysed": 73770,
-    "articlesMatched": 161,
-    "priceIndex": 123
+    "articlesAnalysed": 72385,
+    "articlesMatched": 162,
+    "priceIndex": 124
   }
 ]

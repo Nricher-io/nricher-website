@@ -1,70 +1,70 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 8077,
-  "topSellersCount": 4231,
-  "topPct": 62,
-  "midPct": 25,
-  "lowPct": 13,
+  "totalArticles": 7289,
+  "topSellersCount": 4279,
+  "topPct": 69,
+  "midPct": 20,
+  "lowPct": 11,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 1766,
-      "potentialPct": 78
+      "topSellerArticles": 1462,
+      "potentialPct": 80
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 1013,
+      "topSellerArticles": 976,
       "potentialPct": 87
     },
     {
-      "name": "House Partners",
-      "topSellerArticles": 393,
-      "potentialPct": 95
+      "name": "",
+      "topSellerArticles": 753,
+      "potentialPct": 90
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 390,
+      "topSellerArticles": 388,
       "potentialPct": 95
     },
     {
-      "name": "Casaarredostudio",
+      "name": "House Partners",
       "topSellerArticles": 360,
-      "potentialPct": 96
+      "potentialPct": 95
     },
     {
       "name": "Materiel Chr Pro",
-      "topSellerArticles": 309,
-      "potentialPct": 96
+      "topSellerArticles": 340,
+      "potentialPct": 95
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 300,
-      "potentialPct": 96
-    },
-    {
-      "name": "",
-      "topSellerArticles": 290,
-      "potentialPct": 96
-    },
-    {
-      "name": "Sololed",
-      "topSellerArticles": 219,
-      "potentialPct": 97
-    },
-    {
-      "name": "Mercatoxl",
-      "topSellerArticles": 201,
-      "potentialPct": 98
+      "topSellerArticles": 330,
+      "potentialPct": 95
     },
     {
       "name": "Id Market",
-      "topSellerArticles": 197,
+      "topSellerArticles": 199,
+      "potentialPct": 97
+    },
+    {
+      "name": "Shopnova",
+      "topSellerArticles": 138,
       "potentialPct": 98
     },
     {
-      "name": "Wearredo",
-      "topSellerArticles": 168,
+      "name": "Gpasplus",
+      "topSellerArticles": 113,
       "potentialPct": 98
+    },
+    {
+      "name": "As Discount",
+      "topSellerArticles": 97,
+      "potentialPct": 99
+    },
+    {
+      "name": "Helloshop26",
+      "topSellerArticles": 95,
+      "potentialPct": 99
     }
   ]
 }

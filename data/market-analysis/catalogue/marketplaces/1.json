@@ -1,69 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 18597,
-  "topSellersCount": 7749,
-  "topPct": 65,
+  "totalArticles": 16720,
+  "topSellersCount": 7514,
+  "topPct": 66,
   "midPct": 22,
-  "lowPct": 13,
+  "lowPct": 12,
   "ranking": [
     {
       "name": "Masseno",
-      "topSellerArticles": 2090,
-      "potentialPct": 89
+      "topSellerArticles": 1960,
+      "potentialPct": 88
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1476,
+      "topSellerArticles": 1417,
+      "potentialPct": 92
+    },
+    {
+      "name": "",
+      "topSellerArticles": 1402,
       "potentialPct": 92
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 1388,
-      "potentialPct": 93
-    },
-    {
-      "name": "",
-      "topSellerArticles": 1330,
-      "potentialPct": 93
+      "topSellerArticles": 1332,
+      "potentialPct": 92
     },
     {
       "name": "Loungitude",
-      "topSellerArticles": 961,
+      "topSellerArticles": 909,
       "potentialPct": 95
     },
     {
       "name": "Usinestreet",
-      "topSellerArticles": 504,
+      "topSellerArticles": 494,
       "potentialPct": 97
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 462,
-      "potentialPct": 98
+      "topSellerArticles": 432,
+      "potentialPct": 97
     },
     {
       "name": "Selsey",
-      "topSellerArticles": 330,
+      "topSellerArticles": 352,
       "potentialPct": 98
     },
     {
       "name": "Mobilier Prive",
-      "topSellerArticles": 328,
+      "topSellerArticles": 323,
       "potentialPct": 98
     },
     {
       "name": "Tendencio",
-      "topSellerArticles": 290,
+      "topSellerArticles": 283,
       "potentialPct": 98
     },
     {
       "name": "Idohome",
-      "topSellerArticles": 282,
+      "topSellerArticles": 272,
       "potentialPct": 98
     },
     {
       "name": "Cstore",
-      "topSellerArticles": 243,
+      "topSellerArticles": 233,
       "potentialPct": 99
     }
   ]

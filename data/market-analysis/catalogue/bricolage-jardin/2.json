@@ -1,69 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 14927,
-  "topSellersCount": 10011,
-  "topPct": 67,
-  "midPct": 20,
-  "lowPct": 13,
+  "totalArticles": 14682,
+  "topSellersCount": 12557,
+  "topPct": 73,
+  "midPct": 17,
+  "lowPct": 10,
   "ranking": [
     {
       "name": "Literie Moins Cher",
-      "topSellerArticles": 4577,
+      "topSellerArticles": 4546,
       "potentialPct": 69
     },
     {
+      "name": "",
+      "topSellerArticles": 3400,
+      "potentialPct": 77
+    },
+    {
       "name": "The White Stone",
-      "topSellerArticles": 2252,
+      "topSellerArticles": 2249,
       "potentialPct": 85
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 902,
+      "topSellerArticles": 903,
       "potentialPct": 94
     },
     {
-      "name": "",
-      "topSellerArticles": 819,
-      "potentialPct": 95
-    },
-    {
       "name": "Indream",
-      "topSellerArticles": 785,
+      "topSellerArticles": 776,
       "potentialPct": 95
     },
     {
       "name": "Moonia",
-      "topSellerArticles": 676,
+      "topSellerArticles": 683,
       "potentialPct": 95
     },
     {
       "name": "1001lits",
-      "topSellerArticles": 561,
+      "topSellerArticles": 595,
       "potentialPct": 96
     },
     {
       "name": "Actisom",
-      "topSellerArticles": 524,
+      "topSellerArticles": 527,
       "potentialPct": 96
     },
     {
       "name": "Senso Pur",
-      "topSellerArticles": 402,
+      "topSellerArticles": 397,
       "potentialPct": 97
     },
     {
       "name": "Simpur",
-      "topSellerArticles": 317,
+      "topSellerArticles": 316,
       "potentialPct": 98
     },
     {
       "name": "La Redoute",
-      "topSellerArticles": 302,
+      "topSellerArticles": 301,
       "potentialPct": 98
     },
     {
       "name": "Ideoideal",
-      "topSellerArticles": 281,
+      "topSellerArticles": 283,
       "potentialPct": 98
     }
   ]

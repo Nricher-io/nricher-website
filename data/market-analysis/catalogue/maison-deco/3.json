@@ -1,69 +1,69 @@
 {
   "packName": "Lampadaire",
-  "totalArticles": 994,
-  "topSellersCount": 913,
-  "topPct": 60,
-  "midPct": 32,
-  "lowPct": 8,
+  "totalArticles": 945,
+  "topSellersCount": 839,
+  "topPct": 61,
+  "midPct": 33,
+  "lowPct": 6,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 252,
-      "potentialPct": 75
-    },
-    {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 232,
-      "potentialPct": 77
-    },
-    {
-      "name": "Lamptwist",
-      "topSellerArticles": 217,
-      "potentialPct": 78
+      "topSellerArticles": 245,
+      "potentialPct": 74
     },
     {
       "name": "The Cool Republic",
-      "topSellerArticles": 212,
+      "topSellerArticles": 206,
+      "potentialPct": 78
+    },
+    {
+      "name": "Lemaitredeslampes",
+      "topSellerArticles": 196,
       "potentialPct": 79
     },
     {
+      "name": "Lamptwist",
+      "topSellerArticles": 192,
+      "potentialPct": 80
+    },
+    {
       "name": "Connox",
-      "topSellerArticles": 195,
+      "topSellerArticles": 192,
       "potentialPct": 80
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 121,
-      "potentialPct": 88
+      "topSellerArticles": 119,
+      "potentialPct": 87
     },
     {
-      "name": "Light11",
-      "topSellerArticles": 61,
+      "name": "Asteri",
+      "topSellerArticles": 55,
       "potentialPct": 94
     },
     {
       "name": "Le Cedre Rouge",
-      "topSellerArticles": 51,
-      "potentialPct": 95
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 51,
+      "topSellerArticles": 46,
       "potentialPct": 95
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 34,
-      "potentialPct": 97
+      "topSellerArticles": 36,
+      "potentialPct": 96
     },
     {
       "name": "Dyberg Larsen",
-      "topSellerArticles": 33,
+      "topSellerArticles": 31,
       "potentialPct": 97
     },
     {
       "name": "Myareadesign",
-      "topSellerArticles": 22,
+      "topSellerArticles": 21,
+      "potentialPct": 98
+    },
+    {
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 17,
       "potentialPct": 98
     }
   ]

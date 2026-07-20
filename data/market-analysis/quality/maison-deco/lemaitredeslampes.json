@@ -1,7 +1,7 @@
 {
   "slug": "lemaitredeslampes",
   "name": "Lemaitredeslampes",
-  "articlesAnalysed": 6289,
+  "articlesAnalysed": 5830,
   "qualityScore": 46,
   "globalGrades": {
     "Aplus": 0,
@@ -9,15 +9,15 @@
     "B": 0,
     "C": 9,
     "D": 36,
-    "E": 30,
+    "E": 29,
     "F": 25
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 2,
-      "A": 7,
+      "A": 8,
       "B": 16,
-      "C": 40,
+      "C": 39,
       "D": 24,
       "E": 10,
       "F": 0
@@ -46,8 +46,8 @@
       "B": 0,
       "C": 0,
       "D": 1,
-      "E": 21,
-      "F": 78
+      "E": 22,
+      "F": 77
     }
   }
 }

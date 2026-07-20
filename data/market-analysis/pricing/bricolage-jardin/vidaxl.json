@@ -1,221 +1,210 @@
 {
   "slug": "vidaxl",
   "name": "Vidaxl",
-  "priceIndex": 98,
+  "priceIndex": 99,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        161,
         152,
         130,
         140,
         163,
-        153
+        153,
+        150
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        112,
         115,
         116,
         109,
         111,
-        107
+        107,
+        112
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        96,
         98,
         99,
         100,
         112,
-        111
+        111,
+        106
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        164,
         163,
         168,
         160,
         168,
-        172
+        172,
+        178
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        107,
         115,
         112,
         113,
         105,
-        105
+        105,
+        113
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        102,
         101,
         99,
         100,
         101,
-        101
+        101,
+        103
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        155,
         165,
         158,
         157,
         153,
-        139
+        139,
+        153
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        143,
         132,
         137,
         127,
         142,
-        136
+        136,
+        125
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
-        137,
         118,
         134,
         172,
         160,
-        145
+        145,
+        143
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        110,
         107,
         105,
         105,
         103,
-        103
+        103,
+        109
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        190,
         184,
         111,
         111,
         121,
-        173
+        173,
+        186
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        128,
         139,
         132,
         128,
         124,
-        140
+        140,
+        146
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        127,
         139,
         128,
         132,
         134,
-        134
+        134,
+        137
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        117,
         109,
         112,
         110,
         112,
+        108,
         108
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        107,
-        107,
-        108,
-        108,
-        107,
-        105
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        110,
         107,
         106,
         107,
         108,
-        106
+        106,
+        109
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        103,
         104,
         103,
         103,
         105,
-        103
+        103,
+        102
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        107,
         108,
         109,
         109,
         107,
-        108
+        108,
+        99
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        104,
         102,
         102,
         106,
+        102,
         102,
         102
       ]
@@ -223,12 +212,23 @@
     {
       "name": "Darty",
       "piHistory": [
-        103,
         104,
         104,
         103,
         103,
-        103
+        103,
+        102
+      ]
+    },
+    {
+      "name": "Drawer",
+      "piHistory": [
+        173,
+        92,
+        125,
+        100,
+        138,
+        107
       ]
     }
   ],
@@ -236,43 +236,43 @@
   "pairwise": [
     {
       "pack": "Salon de jardin",
-      "matched": 505,
-      "priceIndex": 101,
-      "lowerPct": 48,
-      "equalPct": 14,
-      "higherPct": 38
+      "matched": 586,
+      "priceIndex": 102,
+      "lowerPct": 21,
+      "equalPct": 34,
+      "higherPct": 44
     },
     {
       "pack": "Canapé",
-      "matched": 634,
-      "priceIndex": 95,
-      "lowerPct": 61,
-      "equalPct": 30,
-      "higherPct": 9
+      "matched": 625,
+      "priceIndex": 96,
+      "lowerPct": 44,
+      "equalPct": 45,
+      "higherPct": 12
     },
     {
       "pack": "Matelas",
-      "matched": 237,
-      "priceIndex": 98,
-      "lowerPct": 61,
-      "equalPct": 38,
-      "higherPct": 1
+      "matched": 173,
+      "priceIndex": 99,
+      "lowerPct": 27,
+      "equalPct": 70,
+      "higherPct": 4
     },
     {
       "pack": "Lit",
-      "matched": 93,
-      "priceIndex": 99,
-      "lowerPct": 43,
-      "equalPct": 41,
-      "higherPct": 16
+      "matched": 89,
+      "priceIndex": 100,
+      "lowerPct": 34,
+      "equalPct": 43,
+      "higherPct": 23
     },
     {
       "pack": "Commode",
-      "matched": 350,
+      "matched": 447,
       "priceIndex": 100,
-      "lowerPct": 37,
-      "equalPct": 39,
-      "higherPct": 24
+      "lowerPct": 28,
+      "equalPct": 54,
+      "higherPct": 18
     }
   ]
 }

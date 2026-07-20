@@ -1,69 +1,69 @@
 {
   "packName": "Télévision",
-  "totalArticles": 2016,
-  "topSellersCount": 1154,
-  "topPct": 50,
-  "midPct": 28,
-  "lowPct": 22,
+  "totalArticles": 1953,
+  "topSellersCount": 1199,
+  "topPct": 53,
+  "midPct": 27,
+  "lowPct": 20,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 304,
-      "potentialPct": 85
+      "topSellerArticles": 352,
+      "potentialPct": 82
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 234,
-      "potentialPct": 88
+      "topSellerArticles": 223,
+      "potentialPct": 89
     },
     {
       "name": "Icoza",
-      "topSellerArticles": 208,
+      "topSellerArticles": 203,
       "potentialPct": 90
     },
     {
       "name": "Darty",
-      "topSellerArticles": 169,
+      "topSellerArticles": 160,
       "potentialPct": 92
     },
     {
+      "name": "Super10count",
+      "topSellerArticles": 142,
+      "potentialPct": 93
+    },
+    {
       "name": "Gpasplus",
-      "topSellerArticles": 129,
+      "topSellerArticles": 119,
       "potentialPct": 94
     },
     {
-      "name": "Super10count",
-      "topSellerArticles": 110,
-      "potentialPct": 95
-    },
-    {
-      "name": "Monsieurplus",
-      "topSellerArticles": 94,
-      "potentialPct": 95
+      "name": "But",
+      "topSellerArticles": 86,
+      "potentialPct": 96
     },
     {
       "name": "You Get Innovation & Technology",
-      "topSellerArticles": 83,
+      "topSellerArticles": 85,
       "potentialPct": 96
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 83,
+      "topSellerArticles": 84,
       "potentialPct": 96
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 73,
+      "topSellerArticles": 69,
       "potentialPct": 96
     },
     {
       "name": "Multishop",
-      "topSellerArticles": 66,
+      "topSellerArticles": 63,
       "potentialPct": 97
     },
     {
-      "name": "Domtek",
-      "topSellerArticles": 65,
+      "name": "Villatech",
+      "topSellerArticles": 62,
       "potentialPct": 97
     }
   ]

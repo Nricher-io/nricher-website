@@ -1,0 +1,278 @@
+{
+  "slug": "cstore",
+  "name": "Cstore",
+  "priceIndex": 94,
+  "weeks": [
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07",
+    "2026-07-14"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        137,
+        137,
+        136,
+        135,
+        139,
+        139
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        117,
+        120,
+        113,
+        117,
+        111,
+        114
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        127,
+        124,
+        125,
+        133,
+        135,
+        129
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        154,
+        167,
+        169,
+        160,
+        151,
+        157
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        104,
+        103,
+        105,
+        105,
+        104,
+        105
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        167,
+        150,
+        156,
+        159,
+        138,
+        139
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        158,
+        158,
+        156,
+        164,
+        164,
+        175
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        143,
+        132,
+        133,
+        134,
+        146,
+        159
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        105,
+        103,
+        103,
+        102,
+        102,
+        107
+      ]
+    },
+    {
+      "name": "Babylux",
+      "piHistory": [
+        181,
+        177,
+        177,
+        173,
+        129,
+        141
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        156,
+        154,
+        154,
+        152,
+        146,
+        160
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        136,
+        138,
+        135,
+        127,
+        125,
+        135
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        143,
+        138,
+        140,
+        138,
+        136,
+        142
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        110,
+        110,
+        111,
+        114,
+        108,
+        111
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        114,
+        112,
+        115,
+        116,
+        111,
+        116
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        104,
+        104,
+        105,
+        104,
+        102,
+        104
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        100,
+        100,
+        100,
+        101,
+        101,
+        101
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        100,
+        102,
+        101,
+        102,
+        101,
+        102
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        116,
+        113,
+        116,
+        115,
+        115,
+        117
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Canapé",
+      "matched": 231,
+      "priceIndex": 94,
+      "lowerPct": 94,
+      "equalPct": 1,
+      "higherPct": 6
+    },
+    {
+      "pack": "Lit",
+      "matched": 62,
+      "priceIndex": 93,
+      "lowerPct": 93,
+      "equalPct": 3,
+      "higherPct": 4
+    },
+    {
+      "pack": "Matelas",
+      "matched": 27,
+      "priceIndex": 93,
+      "lowerPct": 73,
+      "equalPct": 0,
+      "higherPct": 27
+    },
+    {
+      "pack": "Fauteuil",
+      "matched": 13,
+      "priceIndex": 89,
+      "lowerPct": 87,
+      "equalPct": 7,
+      "higherPct": 7
+    },
+    {
+      "pack": "Table à manger",
+      "matched": 59,
+      "priceIndex": 95,
+      "lowerPct": 76,
+      "equalPct": 3,
+      "higherPct": 21
+    }
+  ]
+}

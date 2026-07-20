@@ -1,49 +1,44 @@
 {
   "packName": "Veste",
-  "totalArticles": 1854,
-  "topSellersCount": 1589,
-  "topPct": 49,
-  "midPct": 34,
-  "lowPct": 17,
+  "totalArticles": 1809,
+  "topSellersCount": 1471,
+  "topPct": 50,
+  "midPct": 41,
+  "lowPct": 9,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 1199,
-      "potentialPct": 35
+      "topSellerArticles": 1091,
+      "potentialPct": 40
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 390,
+      "topSellerArticles": 380,
       "potentialPct": 79
     },
     {
-      "name": "Alltricks",
-      "topSellerArticles": 370,
-      "potentialPct": 80
-    },
-    {
-      "name": "Ekosport",
-      "topSellerArticles": 363,
-      "potentialPct": 80
-    },
-    {
       "name": "Hardloop",
-      "topSellerArticles": 356,
+      "topSellerArticles": 354,
+      "potentialPct": 80
+    },
+    {
+      "name": "Alltricks",
+      "topSellerArticles": 351,
       "potentialPct": 81
     },
     {
-      "name": "Zalando",
-      "topSellerArticles": 185,
-      "potentialPct": 90
+      "name": "Ekosport",
+      "topSellerArticles": 348,
+      "potentialPct": 81
     },
     {
       "name": "Irun",
-      "topSellerArticles": 155,
+      "topSellerArticles": 153,
       "potentialPct": 92
     },
     {
       "name": "Snowinn",
-      "topSellerArticles": 123,
+      "topSellerArticles": 120,
       "potentialPct": 93
     },
     {
@@ -52,13 +47,23 @@
       "potentialPct": 96
     },
     {
+      "name": "Zalando",
+      "topSellerArticles": 69,
+      "potentialPct": 96
+    },
+    {
       "name": "Runnerinn",
-      "topSellerArticles": 15,
+      "topSellerArticles": 11,
       "potentialPct": 99
     },
     {
       "name": "",
-      "topSellerArticles": 4,
+      "topSellerArticles": 3,
+      "potentialPct": 100
+    },
+    {
+      "name": "Sports Partners",
+      "topSellerArticles": 1,
       "potentialPct": 100
     }
   ]

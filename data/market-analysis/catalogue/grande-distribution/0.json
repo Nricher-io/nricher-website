@@ -1,69 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 21880,
-  "topSellersCount": 12262,
-  "topPct": 69,
-  "midPct": 22,
-  "lowPct": 9,
+  "totalArticles": 21652,
+  "topSellersCount": 13902,
+  "topPct": 71,
+  "midPct": 19,
+  "lowPct": 10,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 3818,
-      "potentialPct": 83
+      "topSellerArticles": 3806,
+      "potentialPct": 82
+    },
+    {
+      "name": "",
+      "topSellerArticles": 3382,
+      "potentialPct": 84
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 3179,
-      "potentialPct": 85
+      "topSellerArticles": 2964,
+      "potentialPct": 86
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1669,
+      "topSellerArticles": 1661,
       "potentialPct": 92
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1393,
+      "topSellerArticles": 1376,
       "potentialPct": 94
-    },
-    {
-      "name": "",
-      "topSellerArticles": 1239,
-      "potentialPct": 94
-    },
-    {
-      "name": "Decoshop",
-      "topSellerArticles": 964,
-      "potentialPct": 96
     },
     {
       "name": "House Partners",
-      "topSellerArticles": 786,
-      "potentialPct": 96
+      "topSellerArticles": 713,
+      "potentialPct": 97
     },
     {
-      "name": "Mercatoxl",
-      "topSellerArticles": 660,
+      "name": "Decoshop",
+      "topSellerArticles": 587,
+      "potentialPct": 97
+    },
+    {
+      "name": "Shopnova",
+      "topSellerArticles": 549,
       "potentialPct": 97
     },
     {
       "name": "Go Garden",
-      "topSellerArticles": 492,
-      "potentialPct": 98
+      "topSellerArticles": 546,
+      "potentialPct": 97
     },
     {
       "name": "Casanova Paris",
-      "topSellerArticles": 419,
+      "topSellerArticles": 463,
       "potentialPct": 98
     },
     {
-      "name": "Shopnova",
-      "topSellerArticles": 389,
+      "name": "Mercatoxl",
+      "topSellerArticles": 405,
       "potentialPct": 98
     },
     {
       "name": "Dmora",
-      "topSellerArticles": 332,
+      "topSellerArticles": 333,
       "potentialPct": 98
     }
   ]

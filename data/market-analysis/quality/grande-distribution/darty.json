@@ -1,20 +1,20 @@
 {
   "slug": "darty",
   "name": "Darty",
-  "articlesAnalysed": 768953,
+  "articlesAnalysed": 742292,
   "qualityScore": 52,
   "globalGrades": {
     "Aplus": 0,
     "A": 0,
     "B": 0,
-    "C": 31,
-    "D": 25,
-    "E": 28,
-    "F": 16
+    "C": 32,
+    "D": 24,
+    "E": 27,
+    "F": 17
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 78,
+      "Aplus": 79,
       "A": 8,
       "B": 6,
       "C": 5,
@@ -25,10 +25,10 @@
     "Image": {
       "Aplus": 4,
       "A": 2,
-      "B": 43,
-      "C": 11,
+      "B": 44,
+      "C": 10,
       "D": 0,
-      "E": 15,
+      "E": 14,
       "F": 27
     },
     "Vidéo": {

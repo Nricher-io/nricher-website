@@ -3,210 +3,199 @@
   "name": "Yonis Shop",
   "priceIndex": 101,
   "weeks": [
-    "2026-06-02",
     "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        135,
         124,
         119,
         120,
         139,
+        136,
         136
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        126,
         132,
         133,
         126,
         126,
-        121
+        121,
+        125
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        125,
         122,
         123,
         123,
         123,
+        121,
         121
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        110,
         115,
         112,
         115,
         112,
-        107
+        107,
+        111
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        132,
         134,
         137,
         142,
         135,
-        117
+        117,
+        128
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        140,
         141,
         140,
         139,
         143,
-        142
+        142,
+        143
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
+        128,
+        129,
+        128,
+        129,
         127,
-        128,
-        129,
-        128,
-        129,
-        127
+        130
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
         116,
-        116,
         111,
         110,
         106,
-        107
+        107,
+        114
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        156,
         158,
         150,
         151,
         145,
-        134
+        134,
+        146
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        107,
         104,
         105,
         107,
         110,
-        104
+        104,
+        109
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        127,
         132,
         129,
         131,
         131,
+        128,
         128
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        110,
         113,
         111,
         112,
         112,
+        107,
         107
       ]
     },
     {
       "name": "Boulanger - Reconditionné",
       "piHistory": [
-        113,
         null,
         null,
         null,
         null,
-        88
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        116,
-        120,
-        136,
-        138,
-        129,
-        118
+        88,
+        101
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
         114,
-        114,
         113,
         115,
         114,
-        110
+        110,
+        113
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        109,
         110,
         109,
         109,
         108,
-        106
+        106,
+        105
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        112,
         115,
         116,
         115,
         113,
-        108
+        108,
+        113
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        109,
         107,
         109,
         112,
         109,
-        107
+        107,
+        109
       ]
     },
     {
@@ -215,20 +204,31 @@
         103,
         103,
         103,
-        103,
         102,
-        101
+        101,
+        102
       ]
     },
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        113,
         118,
         115,
         115,
         116,
-        115
+        115,
+        114
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        112,
+        112,
+        109,
+        109,
+        111,
+        107
       ]
     }
   ],
@@ -236,19 +236,19 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 60,
-      "priceIndex": 103,
+      "matched": 66,
+      "priceIndex": 102,
       "lowerPct": 1,
-      "equalPct": 93,
-      "higherPct": 6
+      "equalPct": 94,
+      "higherPct": 4
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 21,
+      "matched": 24,
       "priceIndex": 99,
-      "lowerPct": 7,
-      "equalPct": 91,
-      "higherPct": 2
+      "lowerPct": 4,
+      "equalPct": 96,
+      "higherPct": 0
     },
     {
       "pack": "Télévision",
@@ -260,19 +260,19 @@
     },
     {
       "pack": "Casque audio",
-      "matched": 19,
-      "priceIndex": 105,
-      "lowerPct": 8,
+      "matched": 20,
+      "priceIndex": 106,
+      "lowerPct": 10,
       "equalPct": 84,
-      "higherPct": 8
+      "higherPct": 6
     },
     {
       "pack": "Tablette",
-      "matched": 115,
+      "matched": 111,
       "priceIndex": 100,
       "lowerPct": 4,
       "equalPct": 96,
-      "higherPct": 0
+      "higherPct": 1
     }
   ]
 }

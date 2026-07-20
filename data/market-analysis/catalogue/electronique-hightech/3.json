@@ -1,70 +1,70 @@
 {
   "packName": "Casque audio",
   "totalArticles": 2410,
-  "topSellersCount": 1759,
-  "topPct": 54,
-  "midPct": 27,
-  "lowPct": 19,
+  "topSellersCount": 1738,
+  "topPct": 53,
+  "midPct": 25,
+  "lowPct": 22,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 567,
-      "potentialPct": 76
+      "topSellerArticles": 533,
+      "potentialPct": 78
     },
     {
       "name": "Darty",
-      "topSellerArticles": 290,
+      "topSellerArticles": 297,
       "potentialPct": 88
     },
     {
       "name": "2kings",
-      "topSellerArticles": 270,
+      "topSellerArticles": 275,
       "potentialPct": 89
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 259,
+      "topSellerArticles": 255,
       "potentialPct": 89
     },
     {
-      "name": "Zoomici",
-      "topSellerArticles": 201,
+      "name": "As Discount",
+      "topSellerArticles": 194,
       "potentialPct": 92
     },
     {
-      "name": "As Discount",
-      "topSellerArticles": 172,
-      "potentialPct": 93
+      "name": "Zoomici",
+      "topSellerArticles": 184,
+      "potentialPct": 92
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 139,
+      "topSellerArticles": 149,
       "potentialPct": 94
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 134,
+      "topSellerArticles": 140,
       "potentialPct": 94
     },
     {
-      "name": "Zenkaa",
-      "topSellerArticles": 102,
-      "potentialPct": 96
-    },
-    {
-      "name": "Monsieurplus",
-      "topSellerArticles": 97,
-      "potentialPct": 96
-    },
-    {
-      "name": "Warenwelt 24",
+      "name": "",
       "topSellerArticles": 94,
       "potentialPct": 96
     },
     {
-      "name": "Multishop",
-      "topSellerArticles": 85,
-      "potentialPct": 96
+      "name": "Cdiscount",
+      "topSellerArticles": 74,
+      "potentialPct": 97
+    },
+    {
+      "name": "Warenwelt 24",
+      "topSellerArticles": 73,
+      "potentialPct": 97
+    },
+    {
+      "name": "TechSnap",
+      "topSellerArticles": 73,
+      "potentialPct": 97
     }
   ]
 }

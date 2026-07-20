@@ -1,0 +1,278 @@
+{
+  "slug": "mobilier-prive",
+  "name": "Mobilier Prive",
+  "priceIndex": 102,
+  "weeks": [
+    "2026-06-09",
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07",
+    "2026-07-14"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        110,
+        111,
+        111,
+        128,
+        125,
+        108
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        112,
+        113,
+        107,
+        109,
+        105,
+        110
+      ]
+    },
+    {
+      "name": "Asteri",
+      "piHistory": [
+        96,
+        68,
+        58,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        134,
+        155,
+        167,
+        148,
+        143,
+        158
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        104,
+        104,
+        105,
+        103,
+        102,
+        103
+      ]
+    },
+    {
+      "name": "Aurlane",
+      "piHistory": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        143,
+        136,
+        145,
+        139,
+        120,
+        134
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        146,
+        146,
+        145,
+        154,
+        153,
+        154
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        116,
+        117,
+        117,
+        124,
+        125,
+        130
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        105,
+        103,
+        102,
+        100,
+        101,
+        105
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        146,
+        137,
+        139,
+        144,
+        138,
+        134
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        139,
+        135,
+        136,
+        123,
+        138,
+        126
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        131,
+        131,
+        129,
+        135,
+        135,
+        136
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        103,
+        102,
+        103,
+        104,
+        101,
+        99
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        117,
+        117,
+        119,
+        120,
+        124,
+        132
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        103,
+        102,
+        101,
+        102,
+        101,
+        98
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        102,
+        103,
+        102,
+        102,
+        100,
+        101
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        101,
+        101,
+        102,
+        100,
+        101,
+        100
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        98,
+        100,
+        99,
+        99,
+        99,
+        99
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        111,
+        107,
+        109,
+        108,
+        110,
+        112
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Canapé",
+      "matched": 323,
+      "priceIndex": 102,
+      "lowerPct": 23,
+      "equalPct": 23,
+      "higherPct": 54
+    },
+    {
+      "pack": "Matelas",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Lit",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Table à manger",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "slug": "la-redoute",
   "name": "La Redoute",
-  "articlesAnalysed": 345242,
+  "articlesAnalysed": 309838,
   "qualityScore": 60,
   "globalGrades": {
     "Aplus": 0,
@@ -10,7 +10,7 @@
     "C": 36,
     "D": 20,
     "E": 17,
-    "F": 10
+    "F": 11
   },
   "criteriaGrades": {
     "Titre": {
@@ -38,7 +38,7 @@
       "C": 0,
       "D": 0,
       "E": 0,
-      "F": 95
+      "F": 96
     },
     "Description": {
       "Aplus": 48,

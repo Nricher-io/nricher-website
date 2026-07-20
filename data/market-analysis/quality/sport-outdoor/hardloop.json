@@ -1,14 +1,14 @@
 {
   "slug": "hardloop",
   "name": "Hardloop",
-  "articlesAnalysed": 251526,
+  "articlesAnalysed": 259350,
   "qualityScore": 78,
   "globalGrades": {
     "Aplus": 0,
     "A": 39,
     "B": 26,
     "C": 25,
-    "D": 5,
+    "D": 6,
     "E": 3,
     "F": 1
   },
@@ -23,9 +23,9 @@
       "F": 0
     },
     "Image": {
-      "Aplus": 43,
+      "Aplus": 42,
       "A": 10,
-      "B": 11,
+      "B": 12,
       "C": 9,
       "D": 0,
       "E": 13,
@@ -41,12 +41,12 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 71,
+      "Aplus": 70,
       "A": 7,
       "B": 5,
       "C": 5,
       "D": 2,
-      "E": 1,
+      "E": 0,
       "F": 11
     }
   }

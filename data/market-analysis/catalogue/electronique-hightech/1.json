@@ -1,69 +1,69 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 3543,
-  "topSellersCount": 1519,
-  "topPct": 47,
-  "midPct": 33,
-  "lowPct": 20,
+  "totalArticles": 3344,
+  "topSellersCount": 1349,
+  "topPct": 44,
+  "midPct": 32,
+  "lowPct": 24,
   "ranking": [
     {
       "name": "Kiatoo",
-      "topSellerArticles": 405,
-      "potentialPct": 89
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 297,
-      "potentialPct": 92
+      "topSellerArticles": 394,
+      "potentialPct": 88
     },
     {
       "name": "Gpasplus",
-      "topSellerArticles": 247,
+      "topSellerArticles": 223,
       "potentialPct": 93
     },
     {
-      "name": "Topbiz",
-      "topSellerArticles": 213,
+      "name": "House Partners",
+      "topSellerArticles": 202,
       "potentialPct": 94
     },
     {
       "name": "Icoza",
-      "topSellerArticles": 180,
+      "topSellerArticles": 192,
+      "potentialPct": 94
+    },
+    {
+      "name": "Topbiz",
+      "topSellerArticles": 178,
       "potentialPct": 95
     },
     {
       "name": "Darty",
-      "topSellerArticles": 177,
+      "topSellerArticles": 160,
       "potentialPct": 95
     },
     {
       "name": "Monsieurplus",
-      "topSellerArticles": 167,
-      "potentialPct": 95
+      "topSellerArticles": 125,
+      "potentialPct": 96
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 140,
+      "topSellerArticles": 123,
+      "potentialPct": 96
+    },
+    {
+      "name": "La Boutique Du Net",
+      "topSellerArticles": 122,
       "potentialPct": 96
     },
     {
       "name": "Leasi",
-      "topSellerArticles": 128,
-      "potentialPct": 96
-    },
-    {
-      "name": "Okamac",
-      "topSellerArticles": 127,
-      "potentialPct": 96
-    },
-    {
-      "name": "Fnac 2nde Vie",
-      "topSellerArticles": 105,
+      "topSellerArticles": 116,
       "potentialPct": 97
     },
     {
-      "name": "Ma Fabrik",
-      "topSellerArticles": 104,
+      "name": "Okamac",
+      "topSellerArticles": 116,
+      "potentialPct": 97
+    },
+    {
+      "name": "Cdiscount",
+      "topSellerArticles": 105,
       "potentialPct": 97
     }
   ]

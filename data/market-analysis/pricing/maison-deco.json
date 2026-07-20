@@ -2,204 +2,211 @@
   {
     "slug": "the-retailer-network",
     "name": "The Retailer Network",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 1,
     "priceIndex": 25
   },
   {
     "slug": "as-discount",
     "name": "As Discount",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 1,
     "priceIndex": 54
   },
   {
     "slug": "voltex",
     "name": "Voltex",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 116,
-    "priceIndex": 76
+    "priceIndex": 75
   },
   {
     "slug": "myareadesign",
     "name": "Myareadesign",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 247,
+    "articlesAnalysed": 11186,
+    "articlesMatched": 244,
     "priceIndex": 82
   },
   {
     "slug": "nordlux",
     "name": "Nordlux",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 76,
+    "articlesAnalysed": 11186,
+    "articlesMatched": 82,
     "priceIndex": 82
-  },
-  {
-    "slug": "raviday",
-    "name": "Raviday",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 1,
-    "priceIndex": 84
   },
   {
     "slug": "the-cool-republic",
     "name": "The Cool Republic",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 1884,
-    "priceIndex": 85
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1876,
+    "priceIndex": 84
   },
   {
-    "slug": "lilis",
-    "name": "Lilis",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 25,
-    "priceIndex": 88
-  },
-  {
-    "slug": "dyberg-larsen",
-    "name": "Dyberg Larsen",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 211,
-    "priceIndex": 89
+    "slug": "raviday",
+    "name": "Raviday",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1,
+    "priceIndex": 84
   },
   {
     "slug": "dbs-rdc",
     "name": "Dbs Rdc",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 257,
-    "priceIndex": 91
+    "articlesAnalysed": 11186,
+    "articlesMatched": 381,
+    "priceIndex": 87
   },
   {
     "slug": "connox",
     "name": "Connox",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 1910,
-    "priceIndex": 92
-  },
-  {
-    "slug": "le-cedre-rouge",
-    "name": "Le Cedre Rouge",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 475,
-    "priceIndex": 98
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1900,
+    "priceIndex": 91
   },
   {
     "slug": "light11",
     "name": "Light11",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 528,
-    "priceIndex": 99
+    "articlesAnalysed": 11186,
+    "articlesMatched": 15,
+    "priceIndex": 91
+  },
+  {
+    "slug": "dyberg-larsen",
+    "name": "Dyberg Larsen",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 206,
+    "priceIndex": 93
+  },
+  {
+    "slug": "le-cedre-rouge",
+    "name": "Le Cedre Rouge",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 464,
+    "priceIndex": 95
   },
   {
     "slug": "silvera",
     "name": "Silvera",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 11,
-    "priceIndex": 99
+    "priceIndex": 100
   },
   {
     "slug": "luminairestotalfr-depuis-1968",
     "name": "Luminairestotalfr Depuis 1968",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 4,
-    "priceIndex": 99
+    "articlesAnalysed": 11186,
+    "articlesMatched": 6,
+    "priceIndex": 100
+  },
+  {
+    "slug": "lemaitredeslampes",
+    "name": "Lemaitredeslampes",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1601,
+    "priceIndex": 101
   },
   {
     "slug": "asteri",
     "name": "Asteri",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 614,
+    "articlesAnalysed": 11186,
+    "articlesMatched": 598,
+    "priceIndex": 101
+  },
+  {
+    "slug": "netlighting",
+    "name": "Netlighting",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 6,
+    "priceIndex": 101
+  },
+  {
+    "slug": "lilis",
+    "name": "Lilis",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 25,
     "priceIndex": 102
   },
   {
     "slug": "galeries-lafayette",
     "name": "Galeries Lafayette",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 5,
     "priceIndex": 102
   },
   {
-    "slug": "lemaitredeslampes",
-    "name": "Lemaitredeslampes",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 1846,
+    "slug": "mysupplify",
+    "name": "Mysupplify",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1,
     "priceIndex": 103
-  },
-  {
-    "slug": "netlighting",
-    "name": "Netlighting",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 5,
-    "priceIndex": 104
   },
   {
     "slug": "nedgis",
     "name": "Nedgis",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 3652,
+    "articlesAnalysed": 11186,
+    "articlesMatched": 3638,
     "priceIndex": 109
   },
   {
     "slug": "batteries-4-pro",
     "name": "Batteries 4 Pro",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 1,
     "priceIndex": 109
   },
   {
     "slug": "evolutiv-solutions",
     "name": "Evolutiv Solutions",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 121,
-    "priceIndex": 113
+    "articlesAnalysed": 11186,
+    "articlesMatched": 123,
+    "priceIndex": 110
   },
   {
     "slug": "arredo70",
     "name": "Arredo70",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 27,
-    "priceIndex": 113
-  },
-  {
-    "slug": "lamptwist",
-    "name": "Lamptwist",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 2268,
-    "priceIndex": 114
+    "articlesAnalysed": 11186,
+    "articlesMatched": 30,
+    "priceIndex": 116
   },
   {
     "slug": "boulanger",
     "name": "Boulanger",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 1,
     "priceIndex": 120
   },
   {
     "slug": "hubsch",
     "name": "Hubsch",
-    "articlesAnalysed": 11266,
+    "articlesAnalysed": 11186,
     "articlesMatched": 93,
-    "priceIndex": 127
+    "priceIndex": 128
   },
   {
     "slug": "luminaires-en-ligne",
     "name": "Luminaires En Ligne",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 21,
-    "priceIndex": 129
+    "articlesAnalysed": 11186,
+    "articlesMatched": 17,
+    "priceIndex": 130
   },
   {
     "slug": "madeindesign",
     "name": "Madeindesign",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 1474,
-    "priceIndex": 133
+    "articlesAnalysed": 11186,
+    "articlesMatched": 1455,
+    "priceIndex": 131
+  },
+  {
+    "slug": "lamptwist",
+    "name": "Lamptwist",
+    "articlesAnalysed": 11186,
+    "articlesMatched": 2167,
+    "priceIndex": 153
   },
   {
     "slug": "",
     "name": "",
-    "articlesAnalysed": 11266,
-    "articlesMatched": 29,
-    "priceIndex": 337
+    "articlesAnalysed": 11186,
+    "articlesMatched": 28,
+    "priceIndex": 344
   }
 ]

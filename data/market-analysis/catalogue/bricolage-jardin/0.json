@@ -1,69 +1,69 @@
 {
   "packName": "Salon de jardin",
-  "totalArticles": 5578,
-  "topSellersCount": 1740,
-  "topPct": 47,
-  "midPct": 30,
-  "lowPct": 23,
+  "totalArticles": 4335,
+  "topSellersCount": 2040,
+  "topPct": 54,
+  "midPct": 26,
+  "lowPct": 20,
   "ranking": [
     {
       "name": "Vidaxl",
-      "topSellerArticles": 505,
-      "potentialPct": 91
+      "topSellerArticles": 586,
+      "potentialPct": 86
     },
     {
       "name": "",
-      "topSellerArticles": 307,
-      "potentialPct": 94
+      "topSellerArticles": 586,
+      "potentialPct": 86
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 276,
+      "topSellerArticles": 281,
+      "potentialPct": 94
+    },
+    {
+      "name": "Oviala",
+      "topSellerArticles": 204,
       "potentialPct": 95
     },
     {
       "name": "Buyspace",
-      "topSellerArticles": 229,
-      "potentialPct": 96
-    },
-    {
-      "name": "Oviala",
-      "topSellerArticles": 219,
-      "potentialPct": 96
+      "topSellerArticles": 202,
+      "potentialPct": 95
     },
     {
       "name": "Concept Usine",
-      "topSellerArticles": 204,
+      "topSellerArticles": 181,
       "potentialPct": 96
     },
     {
       "name": "Mercatoxl",
-      "topSellerArticles": 201,
+      "topSellerArticles": 167,
       "potentialPct": 96
     },
     {
-      "name": "Decoshop",
-      "topSellerArticles": 150,
+      "name": "Defora Home",
+      "topSellerArticles": 136,
       "potentialPct": 97
     },
     {
-      "name": "Defora Home",
-      "topSellerArticles": 138,
-      "potentialPct": 98
+      "name": "Shopnova",
+      "topSellerArticles": 130,
+      "potentialPct": 97
     },
     {
       "name": "Aosom",
-      "topSellerArticles": 131,
-      "potentialPct": 98
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 124,
-      "potentialPct": 98
+      "topSellerArticles": 125,
+      "potentialPct": 97
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 108,
+      "topSellerArticles": 98,
+      "potentialPct": 98
+    },
+    {
+      "name": "Habitat & Jardin",
+      "topSellerArticles": 89,
       "potentialPct": 98
     }
   ]

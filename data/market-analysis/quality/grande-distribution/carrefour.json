@@ -1,24 +1,24 @@
 {
   "slug": "carrefour",
   "name": "Carrefour",
-  "articlesAnalysed": 607813,
+  "articlesAnalysed": 605660,
   "qualityScore": 66,
   "globalGrades": {
     "Aplus": 0,
-    "A": 18,
+    "A": 17,
     "B": 21,
     "C": 22,
-    "D": 20,
-    "E": 11,
+    "D": 21,
+    "E": 12,
     "F": 7
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 42,
+      "Aplus": 41,
       "A": 14,
       "B": 14,
       "C": 16,
-      "D": 6,
+      "D": 7,
       "E": 4,
       "F": 3
     },
@@ -29,7 +29,7 @@
       "C": 8,
       "D": 0,
       "E": 7,
-      "F": 10
+      "F": 11
     },
     "Vidéo": {
       "Aplus": 0,

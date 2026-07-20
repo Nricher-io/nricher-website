@@ -1,9 +1,9 @@
 {
   "packName": "Plafonnier",
-  "totalArticles": 852,
-  "topSellersCount": 456,
-  "topPct": 72,
-  "midPct": 23,
+  "totalArticles": 850,
+  "topSellersCount": 405,
+  "topPct": 66,
+  "midPct": 29,
   "lowPct": 5,
   "ranking": [
     {
@@ -13,33 +13,28 @@
     },
     {
       "name": "Lemaitredeslampes",
-      "topSellerArticles": 122,
+      "topSellerArticles": 115,
       "potentialPct": 86
     },
     {
       "name": "Lamptwist",
-      "topSellerArticles": 100,
+      "topSellerArticles": 106,
       "potentialPct": 88
     },
     {
+      "name": "Asteri",
+      "topSellerArticles": 52,
+      "potentialPct": 94
+    },
+    {
       "name": "Madeindesign",
-      "topSellerArticles": 50,
+      "topSellerArticles": 48,
       "potentialPct": 94
     },
     {
       "name": "Connox",
       "topSellerArticles": 44,
       "potentialPct": 95
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 43,
-      "potentialPct": 95
-    },
-    {
-      "name": "Light11",
-      "topSellerArticles": 27,
-      "potentialPct": 97
     },
     {
       "name": "The Cool Republic",
@@ -53,7 +48,7 @@
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 7,
+      "topSellerArticles": 9,
       "potentialPct": 99
     },
     {
@@ -63,6 +58,11 @@
     },
     {
       "name": "Nordlux",
+      "topSellerArticles": 4,
+      "potentialPct": 100
+    },
+    {
+      "name": "Arredo70",
       "topSellerArticles": 4,
       "potentialPct": 100
     }

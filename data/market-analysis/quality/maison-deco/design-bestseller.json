@@ -1,35 +1,35 @@
 {
   "slug": "design-bestseller",
   "name": "Design-bestseller",
-  "articlesAnalysed": 4534,
-  "qualityScore": 54,
+  "articlesAnalysed": 8452,
+  "qualityScore": 53,
   "globalGrades": {
     "Aplus": 0,
     "A": 1,
-    "B": 4,
-    "C": 32,
-    "D": 25,
-    "E": 21,
-    "F": 17
+    "B": 5,
+    "C": 28,
+    "D": 24,
+    "E": 23,
+    "F": 21
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 10,
-      "A": 4,
-      "B": 8,
-      "C": 21,
-      "D": 20,
-      "E": 19,
-      "F": 19
+      "Aplus": 11,
+      "A": 5,
+      "B": 9,
+      "C": 22,
+      "D": 19,
+      "E": 18,
+      "F": 16
     },
     "Image": {
-      "Aplus": 22,
-      "A": 8,
-      "B": 12,
-      "C": 14,
+      "Aplus": 18,
+      "A": 7,
+      "B": 13,
+      "C": 13,
       "D": 0,
-      "E": 18,
-      "F": 26
+      "E": 14,
+      "F": 35
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 42,
-      "A": 10,
-      "B": 10,
-      "C": 11,
-      "D": 6,
+      "Aplus": 37,
+      "A": 12,
+      "B": 9,
+      "C": 10,
+      "D": 9,
       "E": 6,
-      "F": 15
+      "F": 16
     }
   }
 }
