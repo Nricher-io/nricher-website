@@ -1,13 +1,13 @@
 {
   "slug": "castorama",
   "name": "Castorama",
-  "articlesAnalysed": 1016724,
+  "articlesAnalysed": 982286,
   "qualityScore": 72,
   "globalGrades": {
-    "Aplus": 0,
-    "A": 28,
+    "Aplus": 1,
+    "A": 27,
     "B": 22,
-    "C": 23,
+    "C": 24,
     "D": 16,
     "E": 8,
     "F": 3
@@ -16,7 +16,7 @@
     "Titre": {
       "Aplus": 58,
       "A": 11,
-      "B": 10,
+      "B": 11,
       "C": 13,
       "D": 5,
       "E": 2,
@@ -33,12 +33,12 @@
     },
     "Vidéo": {
       "Aplus": 0,
-      "A": 0,
+      "A": 2,
       "B": 0,
       "C": 0,
       "D": 0,
       "E": 0,
-      "F": 100
+      "F": 98
     },
     "Description": {
       "Aplus": 49,

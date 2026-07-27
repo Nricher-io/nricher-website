@@ -1,24 +1,24 @@
 {
   "slug": "ekosport",
   "name": "Ekosport",
-  "articlesAnalysed": 106967,
+  "articlesAnalysed": 69187,
   "qualityScore": 62,
   "globalGrades": {
     "Aplus": 0,
-    "A": 2,
+    "A": 3,
     "B": 14,
-    "C": 43,
-    "D": 22,
+    "C": 41,
+    "D": 23,
     "E": 13,
     "F": 6
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 4,
-      "A": 6,
+      "A": 7,
       "B": 14,
       "C": 37,
-      "D": 23,
+      "D": 22,
       "E": 13,
       "F": 4
     },
@@ -26,9 +26,9 @@
       "Aplus": 41,
       "A": 13,
       "B": 13,
-      "C": 9,
+      "C": 8,
       "D": 0,
-      "E": 15,
+      "E": 14,
       "F": 10
     },
     "Vidéo": {
@@ -44,7 +44,7 @@
       "Aplus": 15,
       "A": 10,
       "B": 14,
-      "C": 25,
+      "C": 26,
       "D": 13,
       "E": 6,
       "F": 16

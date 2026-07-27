@@ -1,16 +1,16 @@
 {
   "slug": "myareadesign",
   "name": "Myareadesign",
-  "articlesAnalysed": 25543,
-  "qualityScore": 69,
+  "articlesAnalysed": 23143,
+  "qualityScore": 63,
   "globalGrades": {
     "Aplus": 0,
-    "A": 11,
-    "B": 24,
-    "C": 40,
-    "D": 16,
-    "E": 7,
-    "F": 2
+    "A": 9,
+    "B": 15,
+    "C": 31,
+    "D": 19,
+    "E": 18,
+    "F": 8
   },
   "criteriaGrades": {
     "Titre": {
@@ -23,10 +23,10 @@
       "F": 0
     },
     "Image": {
-      "Aplus": 27,
+      "Aplus": 26,
       "A": 10,
       "B": 11,
-      "C": 16,
+      "C": 17,
       "D": 0,
       "E": 13,
       "F": 22
@@ -44,9 +44,9 @@
       "Aplus": 14,
       "A": 5,
       "B": 10,
-      "C": 15,
+      "C": 14,
       "D": 11,
-      "E": 16,
+      "E": 15,
       "F": 30
     }
   }

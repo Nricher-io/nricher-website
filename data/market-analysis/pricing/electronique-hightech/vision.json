@@ -1,0 +1,278 @@
+{
+  "slug": "vision",
+  "name": "Vision",
+  "priceIndex": 112,
+  "weeks": [
+    "2026-06-16",
+    "2026-06-23",
+    "2026-06-30",
+    "2026-07-07",
+    "2026-07-14",
+    "2026-07-21"
+  ],
+  "competitorTrends": [
+    {
+      "name": "Allobebe",
+      "piHistory": [
+        119,
+        120,
+        139,
+        136,
+        136,
+        129
+      ]
+    },
+    {
+      "name": "Amazon",
+      "piHistory": [
+        133,
+        126,
+        126,
+        121,
+        125,
+        131
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        123,
+        123,
+        123,
+        121,
+        121,
+        121
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        112,
+        115,
+        112,
+        107,
+        111,
+        112
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        137,
+        142,
+        135,
+        117,
+        128,
+        134
+      ]
+    },
+    {
+      "name": "Avenuedesjeux",
+      "piHistory": [
+        140,
+        139,
+        143,
+        142,
+        143,
+        142
+      ]
+    },
+    {
+      "name": "BUT",
+      "piHistory": [
+        111,
+        110,
+        106,
+        107,
+        114,
+        108
+      ]
+    },
+    {
+      "name": "Bambinou",
+      "piHistory": [
+        150,
+        151,
+        145,
+        134,
+        146,
+        152
+      ]
+    },
+    {
+      "name": "Bebe9",
+      "piHistory": [
+        105,
+        107,
+        110,
+        104,
+        109,
+        115
+      ]
+    },
+    {
+      "name": "Berceaumagique",
+      "piHistory": [
+        129,
+        131,
+        131,
+        128,
+        128,
+        136
+      ]
+    },
+    {
+      "name": "Boulanger",
+      "piHistory": [
+        111,
+        112,
+        112,
+        107,
+        107,
+        108
+      ]
+    },
+    {
+      "name": "CDiscount",
+      "piHistory": [
+        113,
+        115,
+        114,
+        110,
+        113,
+        109
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "piHistory": [
+        109,
+        109,
+        108,
+        106,
+        105,
+        106
+      ]
+    },
+    {
+      "name": "Castorama",
+      "piHistory": [
+        116,
+        115,
+        113,
+        108,
+        113,
+        107
+      ]
+    },
+    {
+      "name": "Conforama",
+      "piHistory": [
+        109,
+        112,
+        109,
+        107,
+        109,
+        116
+      ]
+    },
+    {
+      "name": "Darty",
+      "piHistory": [
+        103,
+        103,
+        102,
+        101,
+        102,
+        103
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        115,
+        115,
+        116,
+        115,
+        114,
+        118
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        112,
+        109,
+        109,
+        111,
+        107,
+        109
+      ]
+    },
+    {
+      "name": "Jardindeco",
+      "piHistory": [
+        170,
+        169,
+        190,
+        180,
+        177,
+        182
+      ]
+    },
+    {
+      "name": "La Redoute",
+      "piHistory": [
+        106,
+        110,
+        102,
+        104,
+        104,
+        103
+      ]
+    }
+  ],
+  "attractiveness": [],
+  "pairwise": [
+    {
+      "pack": "Smartphone",
+      "matched": 102,
+      "priceIndex": 113,
+      "lowerPct": 14,
+      "equalPct": 5,
+      "higherPct": 81
+    },
+    {
+      "pack": "Ordinateur portable",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Télévision",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Casque audio",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Tablette",
+      "matched": 51,
+      "priceIndex": 111,
+      "lowerPct": 13,
+      "equalPct": 0,
+      "higherPct": 87
+    }
+  ]
+}

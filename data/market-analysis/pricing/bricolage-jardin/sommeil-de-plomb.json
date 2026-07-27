@@ -1,209 +1,198 @@
 {
   "slug": "sommeil-de-plomb",
   "name": "Sommeil De Plomb",
-  "priceIndex": 98,
+  "priceIndex": 119,
   "weeks": [
-    "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
     "2026-07-07",
-    "2026-07-14"
+    "2026-07-14",
+    "2026-07-21"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        152,
         130,
         140,
         163,
         153,
-        150
+        150,
+        154
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        115,
         116,
         109,
         111,
         107,
-        112
+        112,
+        108
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        98,
         99,
         100,
         112,
         111,
+        106,
         106
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        163,
         168,
         160,
         168,
         172,
-        178
+        178,
+        168
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        115,
         112,
         113,
         105,
         105,
-        113
+        113,
+        105
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        101,
         99,
         100,
         101,
         101,
-        103
+        103,
+        101
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        165,
         158,
         157,
         153,
         139,
-        153
+        153,
+        159
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        132,
         137,
         127,
         142,
         136,
-        125
-      ]
-    },
-    {
-      "name": "BCDjeux",
-      "piHistory": [
-        118,
-        134,
-        172,
-        160,
-        145,
-        143
+        125,
+        123
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        107,
         105,
         105,
         103,
         103,
-        109
+        109,
+        103
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        184,
         111,
         111,
         121,
         173,
-        186
+        186,
+        224
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        139,
         132,
         128,
         124,
         140,
-        146
+        146,
+        130
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        139,
         128,
         132,
         134,
         134,
-        137
+        137,
+        139
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        109,
         112,
         110,
         112,
         108,
-        108
+        108,
+        109
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        107,
         106,
         107,
         108,
         106,
-        109
+        109,
+        105
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        104,
         103,
         103,
         105,
         103,
-        102
+        102,
+        103
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        108,
         109,
         109,
         107,
         108,
-        99
+        99,
+        100
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
         102,
-        102,
         106,
+        102,
         102,
         102,
         102
@@ -213,22 +202,33 @@
       "name": "Darty",
       "piHistory": [
         104,
-        104,
         103,
         103,
         103,
+        102,
         102
       ]
     },
     {
       "name": "Drawer",
       "piHistory": [
-        173,
         92,
         125,
         100,
         138,
-        107
+        107,
+        163
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        115,
+        117,
+        117,
+        117,
+        119,
+        115
       ]
     }
   ],
@@ -253,18 +253,18 @@
     {
       "pack": "Matelas",
       "matched": 903,
-      "priceIndex": 100,
-      "lowerPct": 40,
-      "equalPct": 8,
-      "higherPct": 52
+      "priceIndex": 124,
+      "lowerPct": 29,
+      "equalPct": 9,
+      "higherPct": 63
     },
     {
       "pack": "Lit",
-      "matched": 1608,
-      "priceIndex": 96,
-      "lowerPct": 74,
-      "equalPct": 9,
-      "higherPct": 18
+      "matched": 1612,
+      "priceIndex": 116,
+      "lowerPct": 18,
+      "equalPct": 23,
+      "higherPct": 59
     },
     {
       "pack": "Commode",

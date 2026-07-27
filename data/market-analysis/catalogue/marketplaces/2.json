@@ -1,69 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 14171,
-  "topSellersCount": 7632,
-  "topPct": 64,
-  "midPct": 22,
+  "totalArticles": 14617,
+  "topSellersCount": 8474,
+  "topPct": 66,
+  "midPct": 20,
   "lowPct": 14,
   "ranking": [
     {
-      "name": "Literie Moins Cher",
-      "topSellerArticles": 2171,
-      "potentialPct": 85
+      "name": "",
+      "topSellerArticles": 2398,
+      "potentialPct": 84
     },
     {
-      "name": "",
-      "topSellerArticles": 1877,
-      "potentialPct": 87
+      "name": "Literie Moins Cher",
+      "topSellerArticles": 2309,
+      "potentialPct": 84
     },
     {
       "name": "Julien",
-      "topSellerArticles": 1611,
-      "potentialPct": 89
+      "topSellerArticles": 1760,
+      "potentialPct": 88
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 974,
+      "topSellerArticles": 1000,
       "potentialPct": 93
     },
     {
       "name": "Lematelas",
-      "topSellerArticles": 521,
+      "topSellerArticles": 547,
       "potentialPct": 96
     },
     {
       "name": "Shaula Confort",
-      "topSellerArticles": 478,
+      "topSellerArticles": 460,
       "potentialPct": 97
     },
     {
       "name": "Actisom",
-      "topSellerArticles": 429,
+      "topSellerArticles": 405,
       "potentialPct": 97
     },
     {
       "name": "Indream",
-      "topSellerArticles": 368,
+      "topSellerArticles": 397,
       "potentialPct": 97
     },
     {
       "name": "1001lits",
-      "topSellerArticles": 317,
-      "potentialPct": 98
-    },
-    {
-      "name": "La Redoute",
-      "topSellerArticles": 294,
-      "potentialPct": 98
-    },
-    {
-      "name": "Ideoideal",
-      "topSellerArticles": 264,
+      "topSellerArticles": 284,
       "potentialPct": 98
     },
     {
       "name": "Dreaming Kamahaus",
-      "topSellerArticles": 237,
+      "topSellerArticles": 268,
+      "potentialPct": 98
+    },
+    {
+      "name": "The White Stone",
+      "topSellerArticles": 248,
+      "potentialPct": 98
+    },
+    {
+      "name": "Simpur",
+      "topSellerArticles": 235,
       "potentialPct": 98
     }
   ]

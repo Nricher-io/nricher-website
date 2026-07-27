@@ -2,109 +2,103 @@
   {
     "slug": "nedgis",
     "name": "Nedgis",
-    "articlesAnalysed": 27103,
-    "qualityScore": 81
+    "articlesAnalysed": 27862,
+    "qualityScore": 79
   },
   {
     "slug": "drawer",
     "name": "Drawer",
-    "articlesAnalysed": 35,
-    "qualityScore": 80
-  },
-  {
-    "slug": "light11",
-    "name": "Light11",
-    "articlesAnalysed": 41350,
-    "qualityScore": 74
+    "articlesAnalysed": 34,
+    "qualityScore": 78
   },
   {
     "slug": "debenhams",
     "name": "Debenhams",
-    "articlesAnalysed": 638064,
+    "articlesAnalysed": 632349,
+    "qualityScore": 73
+  },
+  {
+    "slug": "light11",
+    "name": "Light11",
+    "articlesAnalysed": 41311,
     "qualityScore": 73
   },
   {
     "slug": "but",
     "name": "But",
-    "articlesAnalysed": 374227,
-    "qualityScore": 71
-  },
-  {
-    "slug": "myareadesign",
-    "name": "Myareadesign",
-    "articlesAnalysed": 25543,
-    "qualityScore": 69
-  },
-  {
-    "slug": "conforama",
-    "name": "Conforama",
-    "articlesAnalysed": 464060,
-    "qualityScore": 67
+    "articlesAnalysed": 371665,
+    "qualityScore": 70
   },
   {
     "slug": "maisons-du-monde",
     "name": "Maisons Du Monde",
-    "articlesAnalysed": 229116,
+    "articlesAnalysed": 230361,
     "qualityScore": 66
   },
   {
     "slug": "connox",
     "name": "Connox",
-    "articlesAnalysed": 33826,
+    "articlesAnalysed": 33709,
     "qualityScore": 64
   },
   {
-    "slug": "andlight",
-    "name": "Andlight",
-    "articlesAnalysed": 31413,
-    "qualityScore": 59
+    "slug": "myareadesign",
+    "name": "Myareadesign",
+    "articlesAnalysed": 23143,
+    "qualityScore": 63
+  },
+  {
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 531557,
+    "qualityScore": 62
   },
   {
     "slug": "vente-unique",
     "name": "Vente Unique",
-    "articlesAnalysed": 671908,
+    "articlesAnalysed": 673372,
     "qualityScore": 58
   },
   {
     "slug": "thecoolrepublic",
     "name": "Thecoolrepublic",
-    "articlesAnalysed": 22289,
-    "qualityScore": 57
+    "articlesAnalysed": 1530,
+    "qualityScore": 56
   },
   {
     "slug": "lecedrerouge",
     "name": "Lecedrerouge",
-    "articlesAnalysed": 16237,
-    "qualityScore": 54
+    "articlesAnalysed": 16209,
+    "qualityScore": 53
   },
   {
     "slug": "design-bestseller",
     "name": "Design-bestseller",
-    "articlesAnalysed": 8452,
+    "articlesAnalysed": 7136,
     "qualityScore": 53
+  },
+  {
+    "slug": "andlight",
+    "name": "Andlight",
+    "articlesAnalysed": 31606,
+    "qualityScore": 46
   },
   {
     "slug": "asteri",
     "name": "Asteri",
-    "articlesAnalysed": 5915,
-    "qualityScore": 49
-  },
-  {
-    "slug": "lemaitredeslampes",
-    "name": "Lemaitredeslampes",
-    "articlesAnalysed": 5830,
-    "qualityScore": 46
+    "articlesAnalysed": 1264,
+    "qualityScore": 45
   },
   {
     "slug": "jardindeco",
     "name": "Jardindeco",
-    "articlesAnalysed": 7755,
+    "articlesAnalysed": 7712,
     "qualityScore": 44
   },
   {
     "slug": "maxibazar",
     "name": "Maxibazar",
-    "articlesAnalysed": 6876,
+    "articlesAnalysed": 6385,
     "qualityScore": 32
   }
 ]

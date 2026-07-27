@@ -1,34 +1,19 @@
 {
   "packName": "Plafonnier",
-  "totalArticles": 850,
-  "topSellersCount": 405,
-  "topPct": 66,
-  "midPct": 29,
+  "totalArticles": 852,
+  "topSellersCount": 276,
+  "topPct": 81,
+  "midPct": 14,
   "lowPct": 5,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 184,
+      "topSellerArticles": 185,
       "potentialPct": 78
     },
     {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 115,
-      "potentialPct": 86
-    },
-    {
-      "name": "Lamptwist",
-      "topSellerArticles": 106,
-      "potentialPct": 88
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 52,
-      "potentialPct": 94
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 48,
+      "topSellerArticles": 47,
       "potentialPct": 94
     },
     {
@@ -37,8 +22,8 @@
       "potentialPct": 95
     },
     {
-      "name": "The Cool Republic",
-      "topSellerArticles": 22,
+      "name": "Asteri",
+      "topSellerArticles": 25,
       "potentialPct": 97
     },
     {
@@ -48,22 +33,37 @@
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 9,
-      "potentialPct": 99
-    },
-    {
-      "name": "Evolutiv Solutions",
       "topSellerArticles": 6,
       "potentialPct": 99
     },
     {
-      "name": "Nordlux",
+      "name": "Arredo70",
       "topSellerArticles": 4,
       "potentialPct": 100
     },
     {
-      "name": "Arredo70",
+      "name": "Luminairestotalfr Depuis 1968",
       "topSellerArticles": 4,
+      "potentialPct": 100
+    },
+    {
+      "name": "The Cool Republic",
+      "topSellerArticles": 4,
+      "potentialPct": 100
+    },
+    {
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 3,
+      "potentialPct": 100
+    },
+    {
+      "name": "Lamptwist",
+      "topSellerArticles": 3,
+      "potentialPct": 100
+    },
+    {
+      "name": "Silvera",
+      "topSellerArticles": 2,
       "potentialPct": 100
     }
   ]

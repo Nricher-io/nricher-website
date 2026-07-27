@@ -1,50 +1,20 @@
 {
   "packName": "Applique murale",
-  "totalArticles": 1937,
-  "topSellersCount": 1652,
-  "topPct": 79,
-  "midPct": 15,
-  "lowPct": 6,
+  "totalArticles": 1948,
+  "topSellersCount": 1111,
+  "topPct": 88,
+  "midPct": 8,
+  "lowPct": 4,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 799,
-      "potentialPct": 59
-    },
-    {
-      "name": "Lamptwist",
-      "topSellerArticles": 411,
-      "potentialPct": 79
-    },
-    {
-      "name": "The Cool Republic",
-      "topSellerArticles": 238,
-      "potentialPct": 88
+      "topSellerArticles": 829,
+      "potentialPct": 57
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 204,
-      "potentialPct": 89
-    },
-    {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 74,
-      "potentialPct": 96
-    },
-    {
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 63,
-      "potentialPct": 97
-    },
-    {
-      "name": "Dbs Rdc",
-      "topSellerArticles": 50,
-      "potentialPct": 97
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 45,
-      "potentialPct": 98
+      "topSellerArticles": 199,
+      "potentialPct": 90
     },
     {
       "name": "Myareadesign",
@@ -53,18 +23,48 @@
     },
     {
       "name": "Connox",
-      "topSellerArticles": 40,
+      "topSellerArticles": 41,
       "potentialPct": 98
+    },
+    {
+      "name": "Dbs Rdc",
+      "topSellerArticles": 28,
+      "potentialPct": 99
+    },
+    {
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 27,
+      "potentialPct": 99
+    },
+    {
+      "name": "Arredo70",
+      "topSellerArticles": 15,
+      "potentialPct": 99
     },
     {
       "name": "Dyberg Larsen",
-      "topSellerArticles": 33,
-      "potentialPct": 98
+      "topSellerArticles": 15,
+      "potentialPct": 99
+    },
+    {
+      "name": "Lamptwist",
+      "topSellerArticles": 10,
+      "potentialPct": 99
+    },
+    {
+      "name": "Asteri",
+      "topSellerArticles": 8,
+      "potentialPct": 100
     },
     {
       "name": "Hubsch",
-      "topSellerArticles": 21,
-      "potentialPct": 99
+      "topSellerArticles": 8,
+      "potentialPct": 100
+    },
+    {
+      "name": "Le Cedre Rouge",
+      "topSellerArticles": 8,
+      "potentialPct": 100
     }
   ]
 }

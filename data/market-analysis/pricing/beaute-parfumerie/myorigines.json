@@ -1,46 +1,40 @@
 {
   "slug": "myorigines",
   "name": "Myorigines",
-  "priceIndex": 115,
+  "priceIndex": 128,
   "weeks": [
-    "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
     "2026-07-07",
-    "2026-07-14"
+    "2026-07-14",
+    "2026-07-21"
   ],
   "competitorTrends": [
     {
       "name": "Marionnaud",
       "piHistory": [
         69,
-        69,
         70,
         88,
         91,
-        102
+        102,
+        100
       ]
     },
     {
       "name": "MyOrigines",
       "piHistory": [
-        128,
         130,
         130,
         130,
         125,
-        121
+        121,
+        119
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-06-09",
-      "cheaperPct": 7,
-      "equalPct": 3,
-      "higherPct": 90
-    },
     {
       "week": "2026-06-16",
       "cheaperPct": 5,
@@ -70,40 +64,46 @@
       "cheaperPct": 31,
       "equalPct": 3,
       "higherPct": 66
+    },
+    {
+      "week": "2026-07-21",
+      "cheaperPct": 28,
+      "equalPct": 1,
+      "higherPct": 71
     }
   ],
   "pairwise": [
     {
       "pack": "Maquillage",
-      "matched": 12,
-      "priceIndex": 123,
-      "lowerPct": 25,
+      "matched": 10,
+      "priceIndex": 125,
+      "lowerPct": 10,
       "equalPct": 0,
-      "higherPct": 75
+      "higherPct": 90
     },
     {
       "pack": "Parfum",
-      "matched": 52,
-      "priceIndex": 117,
-      "lowerPct": 44,
-      "equalPct": 2,
-      "higherPct": 54
+      "matched": 78,
+      "priceIndex": 131,
+      "lowerPct": 24,
+      "equalPct": 1,
+      "higherPct": 75
     },
     {
       "pack": "Soin du visage",
-      "matched": 5,
-      "priceIndex": 84,
-      "lowerPct": 80,
-      "equalPct": 0,
-      "higherPct": 20
+      "matched": 20,
+      "priceIndex": 118,
+      "lowerPct": 30,
+      "equalPct": 5,
+      "higherPct": 65
     },
     {
       "pack": "Coffret",
-      "matched": 4,
-      "priceIndex": 108,
-      "lowerPct": 25,
+      "matched": 21,
+      "priceIndex": 125,
+      "lowerPct": 30,
       "equalPct": 0,
-      "higherPct": 75
+      "higherPct": 70
     }
   ]
 }

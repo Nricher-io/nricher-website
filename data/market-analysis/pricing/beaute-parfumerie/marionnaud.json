@@ -1,46 +1,40 @@
 {
   "slug": "marionnaud",
   "name": "Marionnaud",
-  "priceIndex": 101,
+  "priceIndex": 134,
   "weeks": [
-    "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
     "2026-07-07",
-    "2026-07-14"
+    "2026-07-14",
+    "2026-07-21"
   ],
   "competitorTrends": [
     {
       "name": "Marionnaud",
       "piHistory": [
         69,
-        69,
         70,
         88,
         91,
-        102
+        102,
+        100
       ]
     },
     {
       "name": "MyOrigines",
       "piHistory": [
-        128,
         130,
         130,
         130,
         125,
-        121
+        121,
+        119
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-06-09",
-      "cheaperPct": 100,
-      "equalPct": 0,
-      "higherPct": 0
-    },
     {
       "week": "2026-06-16",
       "cheaperPct": 100,
@@ -70,6 +64,12 @@
       "cheaperPct": 28,
       "equalPct": 0,
       "higherPct": 72
+    },
+    {
+      "week": "2026-07-21",
+      "cheaperPct": 31,
+      "equalPct": 0,
+      "higherPct": 69
     }
   ],
   "pairwise": [
@@ -83,27 +83,27 @@
     },
     {
       "pack": "Parfum",
-      "matched": 24,
-      "priceIndex": 104,
-      "lowerPct": 20,
+      "matched": 22,
+      "priceIndex": 141,
+      "lowerPct": 15,
       "equalPct": 0,
-      "higherPct": 80
+      "higherPct": 85
     },
     {
       "pack": "Soin du visage",
-      "matched": 9,
+      "matched": 10,
       "priceIndex": 95,
-      "lowerPct": 56,
+      "lowerPct": 60,
       "equalPct": 0,
-      "higherPct": 44
+      "higherPct": 40
     },
     {
       "pack": "Coffret",
-      "matched": 24,
-      "priceIndex": 99,
-      "lowerPct": 32,
+      "matched": 22,
+      "priceIndex": 142,
+      "lowerPct": 9,
       "equalPct": 0,
-      "higherPct": 68
+      "higherPct": 91
     }
   ]
 }

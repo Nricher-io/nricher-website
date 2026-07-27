@@ -1,69 +1,69 @@
 {
   "packName": "Lit",
-  "totalArticles": 10862,
-  "topSellersCount": 1348,
+  "totalArticles": 11791,
+  "topSellersCount": 1477,
   "topPct": 44,
-  "midPct": 30,
-  "lowPct": 26,
+  "midPct": 31,
+  "lowPct": 25,
   "ranking": [
     {
       "name": "",
-      "topSellerArticles": 396,
+      "topSellerArticles": 454,
       "potentialPct": 96
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 246,
-      "potentialPct": 98
-    },
-    {
-      "name": "Vie Moderne",
-      "topSellerArticles": 208,
+      "topSellerArticles": 250,
       "potentialPct": 98
     },
     {
       "name": "Maison Vibe",
-      "topSellerArticles": 173,
+      "topSellerArticles": 215,
+      "potentialPct": 98
+    },
+    {
+      "name": "Vie Moderne",
+      "topSellerArticles": 210,
       "potentialPct": 98
     },
     {
       "name": "Kids Literie",
-      "topSellerArticles": 168,
+      "topSellerArticles": 178,
       "potentialPct": 98
     },
     {
-      "name": "House Partners",
-      "topSellerArticles": 157,
+      "name": "Vente Unique",
+      "topSellerArticles": 170,
       "potentialPct": 99
     },
     {
-      "name": "Vente Unique",
-      "topSellerArticles": 144,
+      "name": "House Partners",
+      "topSellerArticles": 170,
+      "potentialPct": 99
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 148,
       "potentialPct": 99
     },
     {
       "name": "Ecd",
-      "topSellerArticles": 107,
+      "topSellerArticles": 120,
       "potentialPct": 99
     },
     {
       "name": "1001jouets",
-      "topSellerArticles": 104,
+      "topSellerArticles": 108,
       "potentialPct": 99
     },
     {
       "name": "Ml Design",
-      "topSellerArticles": 97,
+      "topSellerArticles": 106,
       "potentialPct": 99
     },
     {
-      "name": "Homifab",
-      "topSellerArticles": 95,
-      "potentialPct": 99
-    },
-    {
-      "name": "Literie Moins Cher",
-      "topSellerArticles": 94,
+      "name": "Lemonbest",
+      "topSellerArticles": 101,
       "potentialPct": 99
     }
   ]

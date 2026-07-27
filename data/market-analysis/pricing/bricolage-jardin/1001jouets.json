@@ -3,219 +3,197 @@
   "name": "1001jouets",
   "priceIndex": 90,
   "weeks": [
-    "2026-06-02",
-    "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14",
+    "2026-07-21"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        161,
-        152,
         130,
         140,
         163,
-        153
+        153,
+        150,
+        154
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        112,
-        115,
         116,
         109,
         111,
-        107
+        107,
+        112,
+        108
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        96,
-        98,
         99,
         100,
         112,
-        111
+        111,
+        106,
+        106
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        164,
-        163,
         168,
         160,
         168,
-        172
+        172,
+        178,
+        168
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        107,
-        115,
         112,
         113,
         105,
+        105,
+        113,
         105
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        102,
-        101,
         99,
         100,
         101,
+        101,
+        103,
         101
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        155,
-        165,
         158,
         157,
         153,
-        139
+        139,
+        153,
+        159
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        143,
-        132,
         137,
         127,
         142,
-        136
-      ]
-    },
-    {
-      "name": "BCDjeux",
-      "piHistory": [
-        137,
-        118,
-        134,
-        172,
-        160,
-        145
+        136,
+        125,
+        123
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        110,
-        107,
         105,
         105,
         103,
+        103,
+        109,
         103
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        190,
-        184,
         111,
         111,
         121,
-        173
+        173,
+        186,
+        224
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        128,
-        139,
         132,
         128,
         124,
-        140
+        140,
+        146,
+        130
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        127,
-        139,
         128,
         132,
         134,
-        134
+        134,
+        137,
+        139
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        117,
-        109,
         112,
         110,
         112,
-        108
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        107,
-        107,
         108,
         108,
-        107,
-        105
+        109
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        110,
-        107,
         106,
         107,
         108,
-        106
+        106,
+        109,
+        105
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
         103,
-        104,
-        103,
         103,
         105,
+        103,
+        102,
         103
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
+        109,
+        109,
         107,
         108,
-        109,
-        109,
-        107,
-        108
+        99,
+        100
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        104,
-        102,
         102,
         106,
+        102,
+        102,
         102,
         102
       ]
@@ -223,12 +201,34 @@
     {
       "name": "Darty",
       "piHistory": [
-        103,
-        104,
         104,
         103,
         103,
-        103
+        103,
+        102,
+        102
+      ]
+    },
+    {
+      "name": "Drawer",
+      "piHistory": [
+        92,
+        125,
+        100,
+        138,
+        107,
+        163
+      ]
+    },
+    {
+      "name": "Electromenager_compare",
+      "piHistory": [
+        115,
+        117,
+        117,
+        117,
+        119,
+        115
       ]
     }
   ],
@@ -260,18 +260,18 @@
     },
     {
       "pack": "Lit",
-      "matched": 402,
+      "matched": 399,
       "priceIndex": 90,
-      "lowerPct": 74,
+      "lowerPct": 73,
       "equalPct": 6,
-      "higherPct": 20
+      "higherPct": 21
     },
     {
       "pack": "Commode",
-      "matched": 24,
+      "matched": 25,
       "priceIndex": 95,
-      "lowerPct": 55,
-      "equalPct": 10,
+      "lowerPct": 59,
+      "equalPct": 6,
       "higherPct": 35
     }
   ]

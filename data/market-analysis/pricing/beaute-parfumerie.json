@@ -1,16 +1,16 @@
 [
   {
-    "slug": "marionnaud",
-    "name": "Marionnaud",
-    "articlesAnalysed": 1868,
-    "articlesMatched": 54,
-    "priceIndex": 101
-  },
-  {
     "slug": "myorigines",
     "name": "Myorigines",
-    "articlesAnalysed": 1868,
-    "articlesMatched": 73,
-    "priceIndex": 115
+    "articlesAnalysed": 1855,
+    "articlesMatched": 124,
+    "priceIndex": 128
+  },
+  {
+    "slug": "marionnaud",
+    "name": "Marionnaud",
+    "articlesAnalysed": 1855,
+    "articlesMatched": 51,
+    "priceIndex": 134
   }
 ]

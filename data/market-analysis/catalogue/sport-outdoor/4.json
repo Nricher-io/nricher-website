@@ -1,64 +1,59 @@
 {
   "packName": "T-shirt",
-  "totalArticles": 3446,
-  "topSellersCount": 2589,
-  "topPct": 52,
-  "midPct": 31,
-  "lowPct": 17,
+  "totalArticles": 3427,
+  "topSellersCount": 2373,
+  "topPct": 48,
+  "midPct": 36,
+  "lowPct": 16,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 1795,
-      "potentialPct": 48
-    },
-    {
-      "name": "Ekosport",
-      "topSellerArticles": 794,
-      "potentialPct": 77
+      "topSellerArticles": 1641,
+      "potentialPct": 52
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 759,
-      "potentialPct": 78
+      "topSellerArticles": 732,
+      "potentialPct": 79
+    },
+    {
+      "name": "Ekosport",
+      "topSellerArticles": 656,
+      "potentialPct": 81
+    },
+    {
+      "name": "Zalando",
+      "topSellerArticles": 630,
+      "potentialPct": 82
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 477,
+      "topSellerArticles": 465,
       "potentialPct": 86
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 325,
+      "topSellerArticles": 310,
       "potentialPct": 91
     },
     {
       "name": "Irun",
-      "topSellerArticles": 289,
+      "topSellerArticles": 275,
       "potentialPct": 92
     },
     {
-      "name": "Zalando",
-      "topSellerArticles": 206,
-      "potentialPct": 94
-    },
-    {
-      "name": "Glisshop",
-      "topSellerArticles": 155,
-      "potentialPct": 96
-    },
-    {
       "name": "Runnerinn",
-      "topSellerArticles": 119,
+      "topSellerArticles": 110,
       "potentialPct": 97
     },
     {
       "name": "Snowinn",
-      "topSellerArticles": 69,
+      "topSellerArticles": 66,
       "potentialPct": 98
     },
     {
       "name": "",
-      "topSellerArticles": 8,
+      "topSellerArticles": 11,
       "potentialPct": 100
     }
   ]

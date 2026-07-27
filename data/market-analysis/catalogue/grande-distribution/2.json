@@ -1,69 +1,69 @@
 {
   "packName": "Matelas",
-  "totalArticles": 11769,
-  "topSellersCount": 8066,
-  "topPct": 83,
-  "midPct": 10,
-  "lowPct": 7,
+  "totalArticles": 11012,
+  "topSellersCount": 9549,
+  "topPct": 84,
+  "midPct": 11,
+  "lowPct": 5,
   "ranking": [
     {
       "name": "",
-      "topSellerArticles": 2986,
-      "potentialPct": 75
+      "topSellerArticles": 3731,
+      "potentialPct": 66
     },
     {
       "name": "The White Stone",
       "topSellerArticles": 2235,
-      "potentialPct": 81
+      "potentialPct": 80
     },
     {
       "name": "Indream",
-      "topSellerArticles": 1023,
-      "potentialPct": 91
+      "topSellerArticles": 1212,
+      "potentialPct": 89
     },
     {
       "name": "Sommeil De Plomb",
       "topSellerArticles": 944,
+      "potentialPct": 91
+    },
+    {
+      "name": "Matris",
+      "topSellerArticles": 906,
       "potentialPct": 92
     },
     {
       "name": "Actisom",
-      "topSellerArticles": 523,
-      "potentialPct": 96
+      "topSellerArticles": 521,
+      "potentialPct": 95
     },
     {
       "name": "Senso Pur",
-      "topSellerArticles": 355,
+      "topSellerArticles": 348,
       "potentialPct": 97
     },
     {
       "name": "Emma Matelas",
-      "topSellerArticles": 158,
+      "topSellerArticles": 155,
       "potentialPct": 99
     },
     {
-      "name": "Ikon Sleep",
-      "topSellerArticles": 126,
+      "name": "Altobuy",
+      "topSellerArticles": 114,
+      "potentialPct": 99
+    },
+    {
+      "name": "Visiodirect",
+      "topSellerArticles": 111,
       "potentialPct": 99
     },
     {
       "name": "Idliterie",
-      "topSellerArticles": 109,
+      "topSellerArticles": 107,
       "potentialPct": 99
     },
     {
       "name": "Vitalit",
       "topSellerArticles": 105,
-      "potentialPct": 99
-    },
-    {
-      "name": "Altobuy",
-      "topSellerArticles": 101,
-      "potentialPct": 99
-    },
-    {
-      "name": "Visiodirect",
-      "topSellerArticles": 97,
       "potentialPct": 99
     }
   ]

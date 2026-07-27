@@ -1,69 +1,69 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 7906,
-  "topSellersCount": 1375,
-  "topPct": 54,
-  "midPct": 26,
+  "totalArticles": 7980,
+  "topSellersCount": 1414,
+  "topPct": 53,
+  "midPct": 27,
   "lowPct": 20,
   "ranking": [
     {
       "name": "House Partners",
-      "topSellerArticles": 397,
+      "topSellerArticles": 367,
       "potentialPct": 95
     },
     {
       "name": "",
-      "topSellerArticles": 310,
-      "potentialPct": 96
+      "topSellerArticles": 362,
+      "potentialPct": 95
     },
     {
       "name": "As Discount",
-      "topSellerArticles": 197,
-      "potentialPct": 98
-    },
-    {
-      "name": "Id Market",
-      "topSellerArticles": 171,
+      "topSellerArticles": 191,
       "potentialPct": 98
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 164,
+      "topSellerArticles": 184,
       "potentialPct": 98
     },
     {
-      "name": "Gpasplus",
-      "topSellerArticles": 136,
+      "name": "Id Market",
+      "topSellerArticles": 175,
       "potentialPct": 98
     },
     {
       "name": "Zoomici",
-      "topSellerArticles": 112,
-      "potentialPct": 99
-    },
-    {
-      "name": "Vente Unique",
-      "topSellerArticles": 97,
-      "potentialPct": 99
+      "topSellerArticles": 135,
+      "potentialPct": 98
     },
     {
       "name": "Mercatoxl",
-      "topSellerArticles": 80,
+      "topSellerArticles": 132,
+      "potentialPct": 98
+    },
+    {
+      "name": "Gpasplus",
+      "topSellerArticles": 120,
+      "potentialPct": 98
+    },
+    {
+      "name": "Vente Unique",
+      "topSellerArticles": 99,
       "potentialPct": 99
     },
     {
       "name": "2kings",
-      "topSellerArticles": 77,
-      "potentialPct": 99
-    },
-    {
-      "name": "Premium Xl",
-      "topSellerArticles": 60,
+      "topSellerArticles": 76,
       "potentialPct": 99
     },
     {
       "name": "Super10count",
-      "topSellerArticles": 60,
+      "topSellerArticles": 71,
+      "potentialPct": 99
+    },
+    {
+      "name": "Premium Xl",
+      "topSellerArticles": 61,
       "potentialPct": 99
     }
   ]

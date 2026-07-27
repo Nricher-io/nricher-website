@@ -1,59 +1,59 @@
 {
   "packName": "Canapé",
-  "totalArticles": 12921,
-  "topSellersCount": 8819,
+  "totalArticles": 13113,
+  "topSellersCount": 8990,
   "topPct": 68,
-  "midPct": 20,
-  "lowPct": 12,
+  "midPct": 22,
+  "lowPct": 10,
   "ranking": [
     {
       "name": "Masseno",
-      "topSellerArticles": 2053,
+      "topSellerArticles": 2097,
       "potentialPct": 84
     },
     {
       "name": "",
-      "topSellerArticles": 1910,
+      "topSellerArticles": 1979,
       "potentialPct": 85
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1625,
-      "potentialPct": 87
+      "topSellerArticles": 1624,
+      "potentialPct": 88
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 1383,
+      "topSellerArticles": 1441,
       "potentialPct": 89
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1223,
+      "topSellerArticles": 1217,
       "potentialPct": 91
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 625,
+      "topSellerArticles": 632,
       "potentialPct": 95
     },
     {
       "name": "Petits Meubles",
-      "topSellerArticles": 469,
+      "topSellerArticles": 536,
+      "potentialPct": 96
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 503,
       "potentialPct": 96
     },
     {
       "name": "Meublorama",
-      "topSellerArticles": 396,
+      "topSellerArticles": 397,
       "potentialPct": 97
     },
     {
-      "name": "Mercatoxl",
-      "topSellerArticles": 313,
-      "potentialPct": 98
-    },
-    {
-      "name": "Go Garden",
-      "topSellerArticles": 299,
+      "name": "House Partners",
+      "topSellerArticles": 293,
       "potentialPct": 98
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 267,
+      "topSellerArticles": 274,
       "potentialPct": 98
     }
   ]

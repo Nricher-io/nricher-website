@@ -1,69 +1,69 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 3344,
-  "topSellersCount": 1349,
-  "topPct": 44,
-  "midPct": 32,
-  "lowPct": 24,
+  "totalArticles": 2678,
+  "topSellersCount": 1394,
+  "topPct": 49,
+  "midPct": 28,
+  "lowPct": 23,
   "ranking": [
     {
-      "name": "Kiatoo",
-      "topSellerArticles": 394,
-      "potentialPct": 88
-    },
-    {
-      "name": "Gpasplus",
-      "topSellerArticles": 223,
-      "potentialPct": 93
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 202,
-      "potentialPct": 94
+      "name": "Darty",
+      "topSellerArticles": 554,
+      "potentialPct": 79
     },
     {
       "name": "Icoza",
-      "topSellerArticles": 192,
-      "potentialPct": 94
+      "topSellerArticles": 225,
+      "potentialPct": 92
     },
     {
-      "name": "Topbiz",
-      "topSellerArticles": 178,
-      "potentialPct": 95
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 160,
-      "potentialPct": 95
-    },
-    {
-      "name": "Monsieurplus",
-      "topSellerArticles": 125,
-      "potentialPct": 96
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 123,
-      "potentialPct": 96
-    },
-    {
-      "name": "La Boutique Du Net",
-      "topSellerArticles": 122,
-      "potentialPct": 96
+      "name": "House Partners",
+      "topSellerArticles": 209,
+      "potentialPct": 92
     },
     {
       "name": "Leasi",
-      "topSellerArticles": 116,
+      "topSellerArticles": 141,
+      "potentialPct": 95
+    },
+    {
+      "name": "La Boutique Du Net",
+      "topSellerArticles": 133,
+      "potentialPct": 95
+    },
+    {
+      "name": "Kiatoo",
+      "topSellerArticles": 132,
+      "potentialPct": 95
+    },
+    {
+      "name": "Topbiz",
+      "topSellerArticles": 122,
+      "potentialPct": 95
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 120,
+      "potentialPct": 96
+    },
+    {
+      "name": "Cdiscount",
+      "topSellerArticles": 95,
+      "potentialPct": 96
+    },
+    {
+      "name": "Monsieurplus",
+      "topSellerArticles": 86,
       "potentialPct": 97
     },
     {
       "name": "Okamac",
-      "topSellerArticles": 116,
+      "topSellerArticles": 83,
       "potentialPct": 97
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 105,
+      "name": "Boulanger",
+      "topSellerArticles": 81,
       "potentialPct": 97
     }
   ]

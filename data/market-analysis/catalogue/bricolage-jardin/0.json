@@ -1,69 +1,69 @@
 {
   "packName": "Salon de jardin",
-  "totalArticles": 4335,
-  "topSellersCount": 2040,
-  "topPct": 54,
-  "midPct": 26,
-  "lowPct": 20,
+  "totalArticles": 4441,
+  "topSellersCount": 2122,
+  "topPct": 56,
+  "midPct": 27,
+  "lowPct": 17,
   "ranking": [
     {
-      "name": "Vidaxl",
-      "topSellerArticles": 586,
-      "potentialPct": 86
+      "name": "",
+      "topSellerArticles": 573,
+      "potentialPct": 87
     },
     {
-      "name": "",
-      "topSellerArticles": 586,
-      "potentialPct": 86
+      "name": "Vidaxl",
+      "topSellerArticles": 562,
+      "potentialPct": 87
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 281,
+      "topSellerArticles": 283,
       "potentialPct": 94
     },
     {
-      "name": "Oviala",
-      "topSellerArticles": 204,
-      "potentialPct": 95
+      "name": "Mercatoxl",
+      "topSellerArticles": 280,
+      "potentialPct": 94
     },
     {
       "name": "Buyspace",
-      "topSellerArticles": 202,
+      "topSellerArticles": 224,
       "potentialPct": 95
     },
     {
       "name": "Concept Usine",
-      "topSellerArticles": 181,
-      "potentialPct": 96
+      "topSellerArticles": 200,
+      "potentialPct": 95
     },
     {
-      "name": "Mercatoxl",
-      "topSellerArticles": 167,
+      "name": "Oviala",
+      "topSellerArticles": 195,
       "potentialPct": 96
     },
     {
       "name": "Defora Home",
-      "topSellerArticles": 136,
+      "topSellerArticles": 138,
       "potentialPct": 97
     },
     {
       "name": "Shopnova",
-      "topSellerArticles": 130,
+      "topSellerArticles": 132,
       "potentialPct": 97
     },
     {
       "name": "Aosom",
-      "topSellerArticles": 125,
+      "topSellerArticles": 118,
       "potentialPct": 97
     },
     {
-      "name": "Paris Prix",
-      "topSellerArticles": 98,
+      "name": "House Partners",
+      "topSellerArticles": 108,
       "potentialPct": 98
     },
     {
-      "name": "Habitat & Jardin",
-      "topSellerArticles": 89,
+      "name": "Paris Prix",
+      "topSellerArticles": 105,
       "potentialPct": 98
     }
   ]

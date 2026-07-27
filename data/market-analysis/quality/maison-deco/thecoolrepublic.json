@@ -1,35 +1,35 @@
 {
   "slug": "thecoolrepublic",
   "name": "Thecoolrepublic",
-  "articlesAnalysed": 22289,
-  "qualityScore": 57,
+  "articlesAnalysed": 1530,
+  "qualityScore": 56,
   "globalGrades": {
     "Aplus": 0,
-    "A": 4,
-    "B": 11,
-    "C": 26,
-    "D": 22,
-    "E": 23,
+    "A": 5,
+    "B": 10,
+    "C": 22,
+    "D": 24,
+    "E": 24,
     "F": 15
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 31,
-      "A": 16,
-      "B": 19,
-      "C": 23,
-      "D": 8,
-      "E": 3,
-      "F": 0
+      "Aplus": 21,
+      "A": 13,
+      "B": 21,
+      "C": 28,
+      "D": 11,
+      "E": 5,
+      "F": 1
     },
     "Image": {
-      "Aplus": 23,
-      "A": 9,
-      "B": 13,
+      "Aplus": 31,
+      "A": 10,
+      "B": 12,
       "C": 15,
       "D": 0,
-      "E": 16,
-      "F": 25
+      "E": 15,
+      "F": 16
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 19,
+      "Aplus": 20,
       "A": 7,
-      "B": 9,
-      "C": 20,
-      "D": 14,
-      "E": 13,
-      "F": 19
+      "B": 7,
+      "C": 27,
+      "D": 11,
+      "E": 12,
+      "F": 16
     }
   }
 }

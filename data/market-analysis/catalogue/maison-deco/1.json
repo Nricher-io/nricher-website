@@ -1,40 +1,25 @@
 {
   "packName": "Lampe à poser",
-  "totalArticles": 2979,
-  "topSellersCount": 3806,
-  "topPct": 73,
-  "midPct": 25,
-  "lowPct": 2,
+  "totalArticles": 2983,
+  "topSellersCount": 2792,
+  "topPct": 90,
+  "midPct": 9,
+  "lowPct": 1,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 1041,
-      "potentialPct": 65
+      "topSellerArticles": 1065,
+      "potentialPct": 64
     },
     {
       "name": "Connox",
-      "topSellerArticles": 854,
+      "topSellerArticles": 853,
       "potentialPct": 71
     },
     {
-      "name": "The Cool Republic",
-      "topSellerArticles": 684,
-      "potentialPct": 77
-    },
-    {
-      "name": "Lamptwist",
-      "topSellerArticles": 656,
-      "potentialPct": 78
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 571,
-      "potentialPct": 81
-    },
-    {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 497,
-      "potentialPct": 83
+      "topSellerArticles": 547,
+      "potentialPct": 82
     },
     {
       "name": "Le Cedre Rouge",
@@ -42,29 +27,44 @@
       "potentialPct": 93
     },
     {
-      "name": "Asteri",
-      "topSellerArticles": 189,
-      "potentialPct": 94
-    },
-    {
       "name": "Dbs Rdc",
-      "topSellerArticles": 164,
-      "potentialPct": 94
+      "topSellerArticles": 114,
+      "potentialPct": 96
     },
     {
       "name": "Myareadesign",
-      "topSellerArticles": 91,
+      "topSellerArticles": 90,
       "potentialPct": 97
+    },
+    {
+      "name": "Asteri",
+      "topSellerArticles": 83,
+      "potentialPct": 97
+    },
+    {
+      "name": "The Cool Republic",
+      "topSellerArticles": 31,
+      "potentialPct": 99
     },
     {
       "name": "Dyberg Larsen",
-      "topSellerArticles": 77,
-      "potentialPct": 97
+      "topSellerArticles": 29,
+      "potentialPct": 99
     },
     {
       "name": "Hubsch",
-      "topSellerArticles": 54,
-      "potentialPct": 98
+      "topSellerArticles": 17,
+      "potentialPct": 99
+    },
+    {
+      "name": "Lamptwist",
+      "topSellerArticles": 14,
+      "potentialPct": 100
+    },
+    {
+      "name": "Nordlux",
+      "topSellerArticles": 10,
+      "potentialPct": 100
     }
   ]
 }

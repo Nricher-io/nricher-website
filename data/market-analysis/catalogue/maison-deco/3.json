@@ -1,30 +1,15 @@
 {
   "packName": "Lampadaire",
-  "totalArticles": 945,
-  "topSellersCount": 839,
-  "topPct": 61,
-  "midPct": 33,
-  "lowPct": 6,
+  "totalArticles": 950,
+  "topSellersCount": 563,
+  "topPct": 75,
+  "midPct": 20,
+  "lowPct": 5,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 245,
-      "potentialPct": 74
-    },
-    {
-      "name": "The Cool Republic",
-      "topSellerArticles": 206,
-      "potentialPct": 78
-    },
-    {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 196,
-      "potentialPct": 79
-    },
-    {
-      "name": "Lamptwist",
-      "topSellerArticles": 192,
-      "potentialPct": 80
+      "topSellerArticles": 254,
+      "potentialPct": 73
     },
     {
       "name": "Connox",
@@ -33,27 +18,22 @@
     },
     {
       "name": "Madeindesign",
-      "topSellerArticles": 119,
-      "potentialPct": 87
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 55,
-      "potentialPct": 94
+      "topSellerArticles": 117,
+      "potentialPct": 88
     },
     {
       "name": "Le Cedre Rouge",
-      "topSellerArticles": 46,
+      "topSellerArticles": 47,
       "potentialPct": 95
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 36,
+      "topSellerArticles": 38,
       "potentialPct": 96
     },
     {
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 31,
+      "name": "The Cool Republic",
+      "topSellerArticles": 28,
       "potentialPct": 97
     },
     {
@@ -62,9 +42,29 @@
       "potentialPct": 98
     },
     {
-      "name": "Evolutiv Solutions",
-      "topSellerArticles": 17,
+      "name": "Asteri",
+      "topSellerArticles": 19,
       "potentialPct": 98
+    },
+    {
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 12,
+      "potentialPct": 99
+    },
+    {
+      "name": "Lamptwist",
+      "topSellerArticles": 6,
+      "potentialPct": 99
+    },
+    {
+      "name": "Nordlux",
+      "topSellerArticles": 5,
+      "potentialPct": 99
+    },
+    {
+      "name": "Evolutiv Solutions",
+      "topSellerArticles": 4,
+      "potentialPct": 100
     }
   ]
 }

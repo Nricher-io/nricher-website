@@ -1,20 +1,20 @@
 {
   "slug": "carrefour",
   "name": "Carrefour",
-  "articlesAnalysed": 605660,
-  "qualityScore": 66,
+  "articlesAnalysed": 599749,
+  "qualityScore": 65,
   "globalGrades": {
     "Aplus": 0,
-    "A": 17,
-    "B": 21,
-    "C": 22,
-    "D": 21,
+    "A": 15,
+    "B": 20,
+    "C": 23,
+    "D": 23,
     "E": 12,
-    "F": 7
+    "F": 8
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 41,
+      "Aplus": 42,
       "A": 14,
       "B": 14,
       "C": 16,

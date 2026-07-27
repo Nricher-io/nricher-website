@@ -1,70 +1,70 @@
 {
   "packName": "Canapé",
-  "totalArticles": 21652,
-  "topSellersCount": 13902,
-  "topPct": 71,
-  "midPct": 19,
-  "lowPct": 10,
+  "totalArticles": 21975,
+  "topSellersCount": 14413,
+  "topPct": 70,
+  "midPct": 21,
+  "lowPct": 9,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 3806,
-      "potentialPct": 82
+      "topSellerArticles": 3814,
+      "potentialPct": 83
     },
     {
       "name": "",
-      "topSellerArticles": 3382,
+      "topSellerArticles": 3525,
       "potentialPct": 84
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 2964,
-      "potentialPct": 86
+      "topSellerArticles": 3224,
+      "potentialPct": 85
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1661,
+      "topSellerArticles": 1663,
       "potentialPct": 92
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 1376,
+      "topSellerArticles": 1385,
       "potentialPct": 94
     },
     {
+      "name": "Casanova Paris",
+      "topSellerArticles": 802,
+      "potentialPct": 96
+    },
+    {
+      "name": "Mercatoxl",
+      "topSellerArticles": 783,
+      "potentialPct": 96
+    },
+    {
       "name": "House Partners",
-      "topSellerArticles": 713,
+      "topSellerArticles": 757,
       "potentialPct": 97
     },
     {
       "name": "Decoshop",
-      "topSellerArticles": 587,
+      "topSellerArticles": 706,
       "potentialPct": 97
     },
     {
       "name": "Shopnova",
-      "topSellerArticles": 549,
+      "topSellerArticles": 578,
       "potentialPct": 97
-    },
-    {
-      "name": "Go Garden",
-      "topSellerArticles": 546,
-      "potentialPct": 97
-    },
-    {
-      "name": "Casanova Paris",
-      "topSellerArticles": 463,
-      "potentialPct": 98
-    },
-    {
-      "name": "Mercatoxl",
-      "topSellerArticles": 405,
-      "potentialPct": 98
     },
     {
       "name": "Dmora",
-      "topSellerArticles": 333,
+      "topSellerArticles": 335,
       "potentialPct": 98
+    },
+    {
+      "name": "Go Garden",
+      "topSellerArticles": 323,
+      "potentialPct": 99
     }
   ]
 }

@@ -1,69 +1,69 @@
 {
   "packName": "Canapé",
-  "totalArticles": 16720,
-  "topSellersCount": 7514,
+  "totalArticles": 18097,
+  "topSellersCount": 7755,
   "topPct": 66,
-  "midPct": 22,
-  "lowPct": 12,
+  "midPct": 20,
+  "lowPct": 14,
   "ranking": [
     {
       "name": "Masseno",
-      "topSellerArticles": 1960,
+      "topSellerArticles": 2093,
       "potentialPct": 88
     },
     {
       "name": "Best Mobilier",
-      "topSellerArticles": 1417,
+      "topSellerArticles": 1427,
       "potentialPct": 92
     },
     {
       "name": "",
-      "topSellerArticles": 1402,
+      "topSellerArticles": 1422,
       "potentialPct": 92
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 1332,
+      "topSellerArticles": 1358,
       "potentialPct": 92
     },
     {
       "name": "Loungitude",
-      "topSellerArticles": 909,
+      "topSellerArticles": 943,
       "potentialPct": 95
     },
     {
       "name": "Usinestreet",
-      "topSellerArticles": 494,
-      "potentialPct": 97
-    },
-    {
-      "name": "Beliani",
-      "topSellerArticles": 432,
+      "topSellerArticles": 512,
       "potentialPct": 97
     },
     {
       "name": "Selsey",
-      "topSellerArticles": 352,
+      "topSellerArticles": 394,
+      "potentialPct": 98
+    },
+    {
+      "name": "Beliani",
+      "topSellerArticles": 353,
       "potentialPct": 98
     },
     {
       "name": "Mobilier Prive",
-      "topSellerArticles": 323,
-      "potentialPct": 98
-    },
-    {
-      "name": "Tendencio",
-      "topSellerArticles": 283,
+      "topSellerArticles": 334,
       "potentialPct": 98
     },
     {
       "name": "Idohome",
-      "topSellerArticles": 272,
+      "topSellerArticles": 294,
       "potentialPct": 98
     },
     {
-      "name": "Cstore",
-      "topSellerArticles": 233,
+      "name": "Super10count",
+      "topSellerArticles": 231,
+      "potentialPct": 99
+    },
+    {
+      "name": "Casanova Paris",
+      "topSellerArticles": 211,
       "potentialPct": 99
     }
   ]

@@ -1,15 +1,15 @@
 {
   "slug": "maisons-du-monde",
   "name": "Maisons Du Monde",
-  "articlesAnalysed": 229116,
+  "articlesAnalysed": 230361,
   "qualityScore": 66,
   "globalGrades": {
     "Aplus": 0,
-    "A": 13,
+    "A": 14,
     "B": 21,
     "C": 27,
     "D": 19,
-    "E": 14,
+    "E": 13,
     "F": 6
   },
   "criteriaGrades": {
@@ -25,7 +25,7 @@
     "Image": {
       "Aplus": 53,
       "A": 15,
-      "B": 12,
+      "B": 11,
       "C": 11,
       "D": 0,
       "E": 6,

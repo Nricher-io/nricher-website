@@ -1,75 +1,75 @@
 {
   "slug": "mercatoxl",
   "name": "Mercatoxl",
-  "priceIndex": 100,
+  "priceIndex": 99,
   "weeks": [
-    "2026-06-02",
-    "2026-06-09",
     "2026-06-16",
     "2026-06-23",
     "2026-06-30",
-    "2026-07-07"
+    "2026-07-07",
+    "2026-07-14",
+    "2026-07-21"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        141,
-        137,
         137,
         136,
         135,
-        139
+        139,
+        139,
+        142
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        113,
-        117,
         120,
         113,
         117,
-        111
+        111,
+        114,
+        117
       ]
     },
     {
       "name": "Asteri",
       "piHistory": [
-        122,
-        127,
         124,
         125,
         133,
-        135
+        135,
+        129,
+        133
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        152,
-        154,
         167,
         169,
         160,
-        151
+        151,
+        157,
+        154
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        104,
-        104,
         103,
         105,
         105,
-        104
+        104,
+        105,
+        105
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        104,
+        100,
         100,
         100,
         100,
@@ -80,120 +80,109 @@
     {
       "name": "Autourdebebe",
       "piHistory": [
-        162,
-        167,
         150,
         156,
         159,
-        138
+        138,
+        139,
+        144
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        159,
-        158,
         158,
         156,
         164,
-        164
-      ]
-    },
-    {
-      "name": "BCDjeux",
-      "piHistory": [
-        143,
-        143,
-        132,
-        133,
-        134,
-        146
+        164,
+        175,
+        177
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        106,
-        105,
         103,
         103,
         102,
-        102
+        102,
+        107,
+        103
+      ]
+    },
+    {
+      "name": "Babylux",
+      "piHistory": [
+        177,
+        177,
+        173,
+        129,
+        141,
+        138
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        147,
-        156,
         154,
         154,
         152,
-        146
+        146,
+        160,
+        161
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        131,
-        136,
         138,
         135,
         127,
-        125
+        125,
+        135,
+        134
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        139,
-        143,
         138,
         140,
         138,
-        136
+        136,
+        142,
+        150
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        109,
-        110,
         110,
         111,
         114,
-        108
-      ]
-    },
-    {
-      "name": "Bricorama",
-      "piHistory": [
-        112,
-        109,
-        117,
-        115,
-        117,
+        108,
+        111,
         110
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        116,
-        114,
         112,
         115,
         116,
-        111
+        111,
+        116,
+        112
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
         104,
-        104,
-        104,
         105,
+        104,
+        102,
         104,
         102
       ]
@@ -201,34 +190,45 @@
     {
       "name": "Conforama",
       "piHistory": [
-        99,
-        100,
         100,
         100,
         101,
-        101
+        101,
+        101,
+        102
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
-        100,
-        100,
         102,
         101,
         102,
-        101
+        101,
+        102,
+        102
       ]
     },
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        112,
-        116,
         113,
         116,
         115,
-        115
+        115,
+        117,
+        114
+      ]
+    },
+    {
+      "name": "Fnac",
+      "piHistory": [
+        111,
+        112,
+        109,
+        108,
+        111,
+        116
       ]
     }
   ],
@@ -236,43 +236,43 @@
   "pairwise": [
     {
       "pack": "Canapé",
-      "matched": 660,
-      "priceIndex": 100,
-      "lowerPct": 31,
-      "equalPct": 16,
-      "higherPct": 52
+      "matched": 783,
+      "priceIndex": 99,
+      "lowerPct": 29,
+      "equalPct": 32,
+      "higherPct": 39
     },
     {
       "pack": "Lit",
-      "matched": 89,
-      "priceIndex": 102,
-      "lowerPct": 28,
-      "equalPct": 28,
-      "higherPct": 43
+      "matched": 159,
+      "priceIndex": 99,
+      "lowerPct": 27,
+      "equalPct": 38,
+      "higherPct": 35
     },
     {
       "pack": "Matelas",
       "matched": 2,
-      "priceIndex": 78,
+      "priceIndex": 93,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Fauteuil",
-      "matched": 17,
-      "priceIndex": 92,
-      "lowerPct": 65,
-      "equalPct": 6,
-      "higherPct": 29
+      "matched": 38,
+      "priceIndex": 99,
+      "lowerPct": 28,
+      "equalPct": 46,
+      "higherPct": 26
     },
     {
       "pack": "Table à manger",
-      "matched": 201,
-      "priceIndex": 102,
-      "lowerPct": 23,
-      "equalPct": 18,
-      "higherPct": 58
+      "matched": 158,
+      "priceIndex": 99,
+      "lowerPct": 30,
+      "equalPct": 39,
+      "higherPct": 31
     }
   ]
 }

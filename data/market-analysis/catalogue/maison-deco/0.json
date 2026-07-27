@@ -1,45 +1,25 @@
 {
   "packName": "Suspension",
-  "totalArticles": 4478,
-  "topSellersCount": 4394,
-  "topPct": 75,
-  "midPct": 23,
-  "lowPct": 2,
+  "totalArticles": 4494,
+  "topSellersCount": 2969,
+  "topPct": 93,
+  "midPct": 6,
+  "lowPct": 1,
   "ranking": [
     {
       "name": "Nedgis",
-      "topSellerArticles": 1373,
+      "topSellerArticles": 1408,
       "potentialPct": 69
     },
     {
-      "name": "Lamptwist",
-      "topSellerArticles": 806,
-      "potentialPct": 82
-    },
-    {
       "name": "Connox",
-      "topSellerArticles": 770,
+      "topSellerArticles": 769,
       "potentialPct": 83
     },
     {
-      "name": "The Cool Republic",
-      "topSellerArticles": 726,
-      "potentialPct": 84
-    },
-    {
-      "name": "Lemaitredeslampes",
-      "topSellerArticles": 719,
-      "potentialPct": 84
-    },
-    {
       "name": "Madeindesign",
-      "topSellerArticles": 517,
-      "potentialPct": 88
-    },
-    {
-      "name": "Asteri",
-      "topSellerArticles": 261,
-      "potentialPct": 94
+      "topSellerArticles": 503,
+      "potentialPct": 89
     },
     {
       "name": "Le Cedre Rouge",
@@ -48,8 +28,8 @@
     },
     {
       "name": "Dbs Rdc",
-      "topSellerArticles": 122,
-      "potentialPct": 97
+      "topSellerArticles": 90,
+      "potentialPct": 98
     },
     {
       "name": "Myareadesign",
@@ -57,14 +37,34 @@
       "potentialPct": 98
     },
     {
-      "name": "Voltex",
-      "topSellerArticles": 81,
-      "potentialPct": 98
+      "name": "Dyberg Larsen",
+      "topSellerArticles": 30,
+      "potentialPct": 99
     },
     {
-      "name": "Dyberg Larsen",
-      "topSellerArticles": 64,
+      "name": "Lamptwist",
+      "topSellerArticles": 25,
       "potentialPct": 99
+    },
+    {
+      "name": "The Cool Republic",
+      "topSellerArticles": 24,
+      "potentialPct": 99
+    },
+    {
+      "name": "Hubsch",
+      "topSellerArticles": 10,
+      "potentialPct": 100
+    },
+    {
+      "name": "Nordlux",
+      "topSellerArticles": 10,
+      "potentialPct": 100
+    },
+    {
+      "name": "Asteri",
+      "topSellerArticles": 9,
+      "potentialPct": 100
     }
   ]
 }

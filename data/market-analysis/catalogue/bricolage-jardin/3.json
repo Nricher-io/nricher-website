@@ -1,69 +1,69 @@
 {
   "packName": "Lit",
-  "totalArticles": 20612,
-  "topSellersCount": 7979,
-  "topPct": 57,
-  "midPct": 27,
-  "lowPct": 16,
+  "totalArticles": 20763,
+  "topSellersCount": 8240,
+  "topPct": 56,
+  "midPct": 29,
+  "lowPct": 15,
   "ranking": [
     {
       "name": "",
-      "topSellerArticles": 1791,
+      "topSellerArticles": 1840,
       "potentialPct": 91
     },
     {
       "name": "Masseno",
-      "topSellerArticles": 1774,
+      "topSellerArticles": 1789,
       "potentialPct": 91
     },
     {
       "name": "Sommeil De Plomb",
-      "topSellerArticles": 1608,
+      "topSellerArticles": 1612,
       "potentialPct": 92
     },
     {
-      "name": "Beliani",
-      "topSellerArticles": 990,
+      "name": "Okwish",
+      "topSellerArticles": 1116,
       "potentialPct": 95
     },
     {
-      "name": "Okwish",
-      "topSellerArticles": 969,
+      "name": "Beliani",
+      "topSellerArticles": 1012,
       "potentialPct": 95
     },
     {
       "name": "Vente Unique",
-      "topSellerArticles": 847,
+      "topSellerArticles": 871,
       "potentialPct": 96
     },
     {
       "name": "Redom",
-      "topSellerArticles": 703,
-      "potentialPct": 97
+      "topSellerArticles": 779,
+      "potentialPct": 96
+    },
+    {
+      "name": "Box Deco Couleurs",
+      "topSellerArticles": 774,
+      "potentialPct": 96
     },
     {
       "name": "Rust Oleum",
-      "topSellerArticles": 552,
+      "topSellerArticles": 648,
       "potentialPct": 97
     },
     {
       "name": "Petits Meubles",
-      "topSellerArticles": 435,
+      "topSellerArticles": 447,
       "potentialPct": 98
     },
     {
       "name": "Bb Loisir",
-      "topSellerArticles": 412,
+      "topSellerArticles": 411,
       "potentialPct": 98
     },
     {
       "name": "1001jouets",
-      "topSellerArticles": 403,
-      "potentialPct": 98
-    },
-    {
-      "name": "Box Deco Couleurs",
-      "topSellerArticles": 395,
+      "topSellerArticles": 399,
       "potentialPct": 98
     }
   ]

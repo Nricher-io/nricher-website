@@ -1,45 +1,45 @@
 {
   "packName": "Table à manger",
-  "totalArticles": 7289,
-  "topSellersCount": 4279,
+  "totalArticles": 7211,
+  "topSellersCount": 4402,
   "topPct": 69,
   "midPct": 20,
   "lowPct": 11,
   "ranking": [
     {
       "name": "Les Tendances",
-      "topSellerArticles": 1462,
+      "topSellerArticles": 1473,
       "potentialPct": 80
     },
     {
       "name": "Vidaxl",
-      "topSellerArticles": 976,
-      "potentialPct": 87
+      "topSellerArticles": 1115,
+      "potentialPct": 85
     },
     {
       "name": "",
-      "topSellerArticles": 753,
-      "potentialPct": 90
+      "topSellerArticles": 798,
+      "potentialPct": 89
     },
     {
       "name": "Paris Prix",
-      "topSellerArticles": 388,
-      "potentialPct": 95
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 360,
+      "topSellerArticles": 382,
       "potentialPct": 95
     },
     {
       "name": "Materiel Chr Pro",
-      "topSellerArticles": 340,
-      "potentialPct": 95
+      "topSellerArticles": 323,
+      "potentialPct": 96
+    },
+    {
+      "name": "House Partners",
+      "topSellerArticles": 311,
+      "potentialPct": 96
     },
     {
       "name": "Beliani",
-      "topSellerArticles": 330,
-      "potentialPct": 95
+      "topSellerArticles": 249,
+      "potentialPct": 97
     },
     {
       "name": "Id Market",
@@ -47,23 +47,23 @@
       "potentialPct": 97
     },
     {
-      "name": "Shopnova",
-      "topSellerArticles": 138,
+      "name": "Mercatoxl",
+      "topSellerArticles": 158,
       "potentialPct": 98
     },
     {
-      "name": "Gpasplus",
-      "topSellerArticles": 113,
+      "name": "Shopnova",
+      "topSellerArticles": 143,
       "potentialPct": 98
     },
     {
       "name": "As Discount",
-      "topSellerArticles": 97,
-      "potentialPct": 99
+      "topSellerArticles": 110,
+      "potentialPct": 98
     },
     {
-      "name": "Helloshop26",
-      "topSellerArticles": 95,
+      "name": "Zoomici",
+      "topSellerArticles": 108,
       "potentialPct": 99
     }
   ]

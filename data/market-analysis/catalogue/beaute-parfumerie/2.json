@@ -1,20 +1,20 @@
 {
   "packName": "Soin du visage",
-  "totalArticles": 286,
-  "topSellersCount": 9,
-  "topPct": 64,
-  "midPct": 36,
+  "totalArticles": 281,
+  "topSellersCount": 20,
+  "topPct": 67,
+  "midPct": 33,
   "lowPct": 0,
   "ranking": [
     {
-      "name": "Marionnaud",
-      "topSellerArticles": 9,
-      "potentialPct": 97
+      "name": "Myorigines",
+      "topSellerArticles": 20,
+      "potentialPct": 93
     },
     {
-      "name": "Myorigines",
-      "topSellerArticles": 5,
-      "potentialPct": 98
+      "name": "Marionnaud",
+      "topSellerArticles": 10,
+      "potentialPct": 96
     }
   ]
 }

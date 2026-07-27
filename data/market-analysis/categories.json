@@ -16,24 +16,28 @@
         "name": "Voltex"
       },
       {
-        "slug": "myareadesign",
-        "name": "Myareadesign"
+        "slug": "evolutiv-solutions",
+        "name": "Evolutiv Solutions"
       },
       {
         "slug": "nordlux",
         "name": "Nordlux"
       },
       {
-        "slug": "the-cool-republic",
-        "name": "The Cool Republic"
+        "slug": "myareadesign",
+        "name": "Myareadesign"
       },
       {
-        "slug": "raviday",
-        "name": "Raviday"
+        "slug": "galeries-lafayette",
+        "name": "Galeries Lafayette"
       },
       {
         "slug": "dbs-rdc",
         "name": "Dbs Rdc"
+      },
+      {
+        "slug": "the-cool-republic",
+        "name": "The Cool Republic"
       },
       {
         "slug": "connox",
@@ -44,56 +48,40 @@
         "name": "Light11"
       },
       {
-        "slug": "dyberg-larsen",
-        "name": "Dyberg Larsen"
+        "slug": "nedgis",
+        "name": "Nedgis"
       },
       {
         "slug": "le-cedre-rouge",
         "name": "Le Cedre Rouge"
       },
       {
+        "slug": "lilis",
+        "name": "Lilis"
+      },
+      {
         "slug": "silvera",
         "name": "Silvera"
-      },
-      {
-        "slug": "luminairestotalfr-depuis-1968",
-        "name": "Luminairestotalfr Depuis 1968"
-      },
-      {
-        "slug": "lemaitredeslampes",
-        "name": "Lemaitredeslampes"
-      },
-      {
-        "slug": "asteri",
-        "name": "Asteri"
       },
       {
         "slug": "netlighting",
         "name": "Netlighting"
       },
       {
-        "slug": "lilis",
-        "name": "Lilis"
+        "slug": "luminairestotalfr-depuis-1968",
+        "name": "Luminairestotalfr Depuis 1968"
       },
       {
-        "slug": "galeries-lafayette",
-        "name": "Galeries Lafayette"
+        "slug": "dyberg-larsen",
+        "name": "Dyberg Larsen"
       },
       {
-        "slug": "mysupplify",
-        "name": "Mysupplify"
-      },
-      {
-        "slug": "nedgis",
-        "name": "Nedgis"
+        "slug": "asteri",
+        "name": "Asteri"
       },
       {
         "slug": "batteries-4-pro",
         "name": "Batteries 4 Pro"
-      },
-      {
-        "slug": "evolutiv-solutions",
-        "name": "Evolutiv Solutions"
       },
       {
         "slug": "arredo70",
@@ -104,24 +92,24 @@
         "name": "Boulanger"
       },
       {
-        "slug": "hubsch",
-        "name": "Hubsch"
-      },
-      {
         "slug": "luminaires-en-ligne",
         "name": "Luminaires En Ligne"
+      },
+      {
+        "slug": "hubsch",
+        "name": "Hubsch"
       },
       {
         "slug": "madeindesign",
         "name": "Madeindesign"
       },
       {
-        "slug": "lamptwist",
-        "name": "Lamptwist"
-      },
-      {
         "slug": "",
         "name": ""
+      },
+      {
+        "slug": "lamptwist",
+        "name": "Lamptwist"
       }
     ],
     "qualityCompanies": [
@@ -134,24 +122,16 @@
         "name": "Drawer"
       },
       {
-        "slug": "light11",
-        "name": "Light11"
-      },
-      {
         "slug": "debenhams",
         "name": "Debenhams"
       },
       {
+        "slug": "light11",
+        "name": "Light11"
+      },
+      {
         "slug": "but",
         "name": "But"
-      },
-      {
-        "slug": "myareadesign",
-        "name": "Myareadesign"
-      },
-      {
-        "slug": "conforama",
-        "name": "Conforama"
       },
       {
         "slug": "maisons-du-monde",
@@ -162,8 +142,12 @@
         "name": "Connox"
       },
       {
-        "slug": "andlight",
-        "name": "Andlight"
+        "slug": "myareadesign",
+        "name": "Myareadesign"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
       },
       {
         "slug": "vente-unique",
@@ -182,12 +166,12 @@
         "name": "Design-bestseller"
       },
       {
-        "slug": "asteri",
-        "name": "Asteri"
+        "slug": "andlight",
+        "name": "Andlight"
       },
       {
-        "slug": "lemaitredeslampes",
-        "name": "Lemaitredeslampes"
+        "slug": "asteri",
+        "name": "Asteri"
       },
       {
         "slug": "jardindeco",
@@ -211,48 +195,32 @@
     "name": "Bricolage & Jardin",
     "companies": [
       {
-        "slug": "simpur",
-        "name": "Simpur"
-      },
-      {
-        "slug": "moonia",
-        "name": "Moonia"
+        "slug": "1001jouets",
+        "name": "1001jouets"
       },
       {
         "slug": "petits-meubles",
         "name": "Petits Meubles"
       },
       {
-        "slug": "concept-usine",
-        "name": "Concept Usine"
-      },
-      {
         "slug": "habitat-et-jardin",
         "name": "Habitat & Jardin"
       },
       {
-        "slug": "sommeil-de-plomb",
-        "name": "Sommeil De Plomb"
-      },
-      {
-        "slug": "dmora",
-        "name": "Dmora"
+        "slug": "concept-usine",
+        "name": "Concept Usine"
       },
       {
         "slug": "literie-moins-cher",
         "name": "Literie Moins Cher"
       },
       {
-        "slug": "",
-        "name": ""
-      },
-      {
         "slug": "vidaxl",
         "name": "Vidaxl"
       },
       {
-        "slug": "sweeek",
-        "name": "Sweeek"
+        "slug": "mercatoxl",
+        "name": "Mercatoxl"
       },
       {
         "slug": "le-quai-des-affaires",
@@ -271,8 +239,8 @@
         "name": "Meublorama"
       },
       {
-        "slug": "senso-pur",
-        "name": "Senso Pur"
+        "slug": "ok-living",
+        "name": "Ok Living"
       },
       {
         "slug": "id-market",
@@ -283,16 +251,12 @@
         "name": "Aosom"
       },
       {
-        "slug": "ok-living",
-        "name": "Ok Living"
+        "slug": "indream",
+        "name": "Indream"
       },
       {
         "slug": "paris-prix",
         "name": "Paris Prix"
-      },
-      {
-        "slug": "actisom",
-        "name": "Actisom"
       },
       {
         "slug": "best-mobilier",
@@ -303,32 +267,52 @@
         "name": "Abiks Meubles"
       },
       {
-        "slug": "okwish",
-        "name": "Okwish"
+        "slug": "senso-pur",
+        "name": "Senso Pur"
+      },
+      {
+        "slug": "",
+        "name": ""
       },
       {
         "slug": "idimex",
         "name": "Idimex"
       },
       {
-        "slug": "indream",
-        "name": "Indream"
-      },
-      {
         "slug": "the-white-stone",
         "name": "The White Stone"
+      },
+      {
+        "slug": "sweeek",
+        "name": "Sweeek"
       },
       {
         "slug": "bb-loisir",
         "name": "Bb Loisir"
       },
       {
-        "slug": "redom",
-        "name": "Redom"
+        "slug": "dmora",
+        "name": "Dmora"
       },
       {
         "slug": "vente-unique",
         "name": "Vente Unique"
+      },
+      {
+        "slug": "moonia",
+        "name": "Moonia"
+      },
+      {
+        "slug": "sommeil-de-plomb",
+        "name": "Sommeil De Plomb"
+      },
+      {
+        "slug": "okwish",
+        "name": "Okwish"
+      },
+      {
+        "slug": "redom",
+        "name": "Redom"
       }
     ],
     "qualityCompanies": [
@@ -361,20 +345,20 @@
         "name": "Leroy Merlin"
       },
       {
-        "slug": "conforama",
-        "name": "Conforama"
-      },
-      {
         "slug": "auchan",
         "name": "Auchan"
       },
       {
-        "slug": "la-redoute",
-        "name": "La Redoute"
+        "slug": "conforama",
+        "name": "Conforama"
       },
       {
         "slug": "vente-unique",
         "name": "Vente Unique"
+      },
+      {
+        "slug": "la-redoute",
+        "name": "La Redoute"
       },
       {
         "slug": "maxibazar",
@@ -394,16 +378,16 @@
     "name": "Sport & Outdoor",
     "companies": [
       {
-        "slug": "sports-partners",
-        "name": "Sports Partners"
-      },
-      {
-        "slug": "irun",
-        "name": "Irun"
+        "slug": "zalando",
+        "name": "Zalando"
       },
       {
         "slug": "snowinn",
         "name": "Snowinn"
+      },
+      {
+        "slug": "irun",
+        "name": "Irun"
       },
       {
         "slug": "hardloop",
@@ -418,28 +402,20 @@
         "name": "Runnerinn"
       },
       {
-        "slug": "glisshop",
-        "name": "Glisshop"
-      },
-      {
         "slug": "ekosport",
         "name": "Ekosport"
       },
       {
-        "slug": "alltricks",
-        "name": "Alltricks"
-      },
-      {
-        "slug": "zalando",
-        "name": "Zalando"
+        "slug": "",
+        "name": ""
       },
       {
         "slug": "snowleader",
         "name": "Snowleader"
       },
       {
-        "slug": "",
-        "name": ""
+        "slug": "alltricks",
+        "name": "Alltricks"
       }
     ],
     "qualityCompanies": [
@@ -456,16 +432,12 @@
         "name": "Runnerinn"
       },
       {
-        "slug": "glisshop",
-        "name": "Glisshop"
+        "slug": "alpiniste",
+        "name": "Alpiniste"
       },
       {
         "slug": "ekosport",
         "name": "Ekosport"
-      },
-      {
-        "slug": "alpiniste",
-        "name": "Alpiniste"
       },
       {
         "slug": "snowleader",
@@ -474,6 +446,10 @@
       {
         "slug": "snowleader-ch",
         "name": "Snowleader Ch"
+      },
+      {
+        "slug": "glisshop",
+        "name": "Glisshop"
       },
       {
         "slug": "irun",
@@ -497,12 +473,12 @@
     "name": "Beauté & Parfumerie",
     "companies": [
       {
-        "slug": "marionnaud",
-        "name": "Marionnaud"
-      },
-      {
         "slug": "myorigines",
         "name": "Myorigines"
+      },
+      {
+        "slug": "marionnaud",
+        "name": "Marionnaud"
       }
     ],
     "qualityCompanies": [],
@@ -526,28 +502,24 @@
         "name": "Zoomici"
       },
       {
-        "slug": "zenkaa",
-        "name": "Zenkaa"
+        "slug": "monsieurplus",
+        "name": "Monsieurplus"
       },
       {
-        "slug": "multishop",
-        "name": "Multishop"
+        "slug": "as-discount",
+        "name": "As Discount"
       },
       {
-        "slug": "kiatoo",
-        "name": "Kiatoo"
-      },
-      {
-        "slug": "carrefour",
-        "name": "Carrefour"
+        "slug": "leasi",
+        "name": "Leasi"
       },
       {
         "slug": "auchan",
         "name": "Auchan"
       },
       {
-        "slug": "as-discount",
-        "name": "As Discount"
+        "slug": "carrefour",
+        "name": "Carrefour"
       },
       {
         "slug": "super10count",
@@ -558,52 +530,52 @@
         "name": "La Boutique Du Net"
       },
       {
-        "slug": "monsieurplus",
-        "name": "Monsieurplus"
-      },
-      {
         "slug": "digital-bay",
         "name": "Digital Bay"
-      },
-      {
-        "slug": "house-partners",
-        "name": "House Partners"
-      },
-      {
-        "slug": "icoza",
-        "name": "Icoza"
       },
       {
         "slug": "topbiz",
         "name": "Topbiz"
       },
       {
-        "slug": "leasi",
-        "name": "Leasi"
+        "slug": "kiatoo",
+        "name": "Kiatoo"
       },
       {
-        "slug": "darty",
-        "name": "Darty"
+        "slug": "icoza",
+        "name": "Icoza"
       },
       {
-        "slug": "yonis-shop",
-        "name": "Yonis Shop"
-      },
-      {
-        "slug": "you-get-innovation-et-technology",
-        "name": "You Get Innovation & Technology"
-      },
-      {
-        "slug": "gpasplus",
-        "name": "Gpasplus"
+        "slug": "warenwelt-24",
+        "name": "Warenwelt 24"
       },
       {
         "slug": "2kings",
         "name": "2kings"
       },
       {
-        "slug": "ecofone",
-        "name": "Ecofone"
+        "slug": "multishop",
+        "name": "Multishop"
+      },
+      {
+        "slug": "gpasplus",
+        "name": "Gpasplus"
+      },
+      {
+        "slug": "procomponentes",
+        "name": "Procomponentes"
+      },
+      {
+        "slug": "house-partners",
+        "name": "House Partners"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
       },
       {
         "slug": "rue-du-commerce",
@@ -614,20 +586,24 @@
         "name": ""
       },
       {
-        "slug": "boulanger",
-        "name": "Boulanger"
+        "slug": "vision",
+        "name": "Vision"
       },
       {
-        "slug": "procomponentes",
-        "name": "Procomponentes"
+        "slug": "yonis-shop",
+        "name": "Yonis Shop"
       },
       {
-        "slug": "alloccaz",
-        "name": "Alloccaz"
+        "slug": "ecofone",
+        "name": "Ecofone"
       },
       {
         "slug": "cdiscount",
         "name": "Cdiscount"
+      },
+      {
+        "slug": "alloccaz",
+        "name": "Alloccaz"
       },
       {
         "slug": "rps-technologies",
@@ -652,16 +628,16 @@
         "name": "But"
       },
       {
-        "slug": "conforama",
-        "name": "Conforama"
-      },
-      {
         "slug": "carrefour",
         "name": "Carrefour"
       },
       {
         "slug": "auchan",
         "name": "Auchan"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
       },
       {
         "slug": "underdog",
@@ -709,24 +685,20 @@
         "name": "House Partners"
       },
       {
-        "slug": "cstore",
-        "name": "Cstore"
-      },
-      {
-        "slug": "",
-        "name": ""
+        "slug": "the-white-stone",
+        "name": "The White Stone"
       },
       {
         "slug": "clicnbuy",
         "name": "Clicnbuy"
       },
       {
-        "slug": "casanova-paris",
-        "name": "Casanova Paris"
+        "slug": "",
+        "name": ""
       },
       {
-        "slug": "the-white-stone",
-        "name": "The White Stone"
+        "slug": "casanova-paris",
+        "name": "Casanova Paris"
       },
       {
         "slug": "beliani",
@@ -741,12 +713,12 @@
         "name": "Les Tendances"
       },
       {
-        "slug": "indream",
-        "name": "Indream"
-      },
-      {
         "slug": "1001jouets",
         "name": "1001jouets"
+      },
+      {
+        "slug": "mercatoxl",
+        "name": "Mercatoxl"
       },
       {
         "slug": "best-mobilier",
@@ -755,6 +727,14 @@
       {
         "slug": "vidaxl",
         "name": "Vidaxl"
+      },
+      {
+        "slug": "indream",
+        "name": "Indream"
+      },
+      {
+        "slug": "habitat-et-jardin",
+        "name": "Habitat & Jardin"
       },
       {
         "slug": "senso-pur",
@@ -773,10 +753,6 @@
         "name": "Meublorama"
       },
       {
-        "slug": "decoration-brands",
-        "name": "Decoration Brands"
-      },
-      {
         "slug": "aosom",
         "name": "Aosom"
       },
@@ -785,20 +761,24 @@
         "name": "Ecd"
       },
       {
-        "slug": "habitat-et-jardin",
-        "name": "Habitat & Jardin"
+        "slug": "matris",
+        "name": "Matris"
+      },
+      {
+        "slug": "decoration-brands",
+        "name": "Decoration Brands"
       },
       {
         "slug": "concept-usine",
         "name": "Concept Usine"
       },
       {
-        "slug": "decoshop",
-        "name": "Decoshop"
-      },
-      {
         "slug": "shopnova",
         "name": "Shopnova"
+      },
+      {
+        "slug": "sommeil-de-plomb",
+        "name": "Sommeil De Plomb"
       },
       {
         "slug": "n-wood",
@@ -809,19 +789,11 @@
         "name": "Actisom"
       },
       {
-        "slug": "sommeil-de-plomb",
-        "name": "Sommeil De Plomb"
-      },
-      {
         "slug": "le-quai-des-affaires",
         "name": "Le Quai Des Affaires"
       }
     ],
     "qualityCompanies": [
-      {
-        "slug": "aurlane",
-        "name": "Aurlane"
-      },
       {
         "slug": "cdiscount",
         "name": "Cdiscount"
@@ -829,10 +801,6 @@
       {
         "slug": "amazon",
         "name": "Amazon"
-      },
-      {
-        "slug": "conforama",
-        "name": "Conforama"
       },
       {
         "slug": "carrefour",
@@ -843,8 +811,16 @@
         "name": "Auchan"
       },
       {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
         "slug": "allobebe",
         "name": "Allobebe"
+      },
+      {
+        "slug": "aurlane",
+        "name": "Aurlane"
       },
       {
         "slug": "vente-unique",
@@ -884,20 +860,16 @@
         "name": "Cstore"
       },
       {
-        "slug": "super10count",
-        "name": "Super10count"
-      },
-      {
-        "slug": "gpasplus",
-        "name": "Gpasplus"
-      },
-      {
-        "slug": "actisom",
-        "name": "Actisom"
-      },
-      {
         "slug": "simpur",
         "name": "Simpur"
+      },
+      {
+        "slug": "sommeil-de-plomb",
+        "name": "Sommeil De Plomb"
+      },
+      {
+        "slug": "super10count",
+        "name": "Super10count"
       },
       {
         "slug": "house-partners",
@@ -908,16 +880,20 @@
         "name": "Habitat & Jardin"
       },
       {
-        "slug": "sommeil-de-plomb",
-        "name": "Sommeil De Plomb"
-      },
-      {
         "slug": "",
         "name": ""
       },
       {
         "slug": "sweeek",
         "name": "Sweeek"
+      },
+      {
+        "slug": "the-white-stone",
+        "name": "The White Stone"
+      },
+      {
+        "slug": "moonia",
+        "name": "Moonia"
       },
       {
         "slug": "best-mobilier",
@@ -932,44 +908,44 @@
         "name": "Selsey"
       },
       {
-        "slug": "the-white-stone",
-        "name": "The White Stone"
-      },
-      {
-        "slug": "indream",
-        "name": "Indream"
-      },
-      {
-        "slug": "vente-unique",
-        "name": "Vente Unique"
+        "slug": "aosom",
+        "name": "Aosom"
       },
       {
         "slug": "masseno",
         "name": "Masseno"
       },
       {
-        "slug": "lematelas",
-        "name": "Lematelas"
-      },
-      {
         "slug": "id-market",
         "name": "Id Market"
       },
       {
-        "slug": "senso-pur",
-        "name": "Senso Pur"
+        "slug": "lematelas",
+        "name": "Lematelas"
+      },
+      {
+        "slug": "indream",
+        "name": "Indream"
       },
       {
         "slug": "homifab",
         "name": "Homifab"
       },
       {
+        "slug": "senso-pur",
+        "name": "Senso Pur"
+      },
+      {
         "slug": "1001lits",
         "name": "1001lits"
       },
       {
-        "slug": "aosom",
-        "name": "Aosom"
+        "slug": "ecd",
+        "name": "Ecd"
+      },
+      {
+        "slug": "vente-unique",
+        "name": "Vente Unique"
       },
       {
         "slug": "literie-moins-cher",
@@ -980,24 +956,24 @@
         "name": "Loungitude"
       },
       {
-        "slug": "moonia",
-        "name": "Moonia"
+        "slug": "shaula-confort",
+        "name": "Shaula Confort"
       },
       {
         "slug": "mobilier-prive",
         "name": "Mobilier Prive"
       },
       {
-        "slug": "beliani",
-        "name": "Beliani"
-      },
-      {
         "slug": "julien",
         "name": "Julien"
       },
       {
-        "slug": "shaula-confort",
-        "name": "Shaula Confort"
+        "slug": "casanova-paris",
+        "name": "Casanova Paris"
+      },
+      {
+        "slug": "beliani",
+        "name": "Beliani"
       }
     ],
     "qualityCompanies": [
@@ -1010,10 +986,6 @@
         "name": "Amazon"
       },
       {
-        "slug": "conforama",
-        "name": "Conforama"
-      },
-      {
         "slug": "carrefour",
         "name": "Carrefour"
       },
@@ -1022,8 +994,8 @@
         "name": "Auchan"
       },
       {
-        "slug": "la-redoute",
-        "name": "La Redoute"
+        "slug": "conforama",
+        "name": "Conforama"
       },
       {
         "slug": "vente-unique",
@@ -1036,6 +1008,10 @@
       {
         "slug": "boulanger",
         "name": "Boulanger"
+      },
+      {
+        "slug": "la-redoute",
+        "name": "La Redoute"
       },
       {
         "slug": "fnac",
