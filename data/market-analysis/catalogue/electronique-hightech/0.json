@@ -1,70 +1,55 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 3490,
-  "topSellersCount": 2967,
-  "topPct": 53,
-  "midPct": 27,
-  "lowPct": 20,
+  "totalArticles": 19843,
+  "topSellersCount": 6520,
+  "topPct": 25,
+  "midPct": 30,
+  "lowPct": 45,
   "ranking": [
     {
-      "name": "House Partners",
-      "topSellerArticles": 857,
-      "potentialPct": 75
+      "name": "Cdiscount",
+      "topSellerArticles": 10566,
+      "potentialPct": 47
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 5678,
+      "potentialPct": 71
+    },
+    {
+      "name": "Fnac",
+      "topSellerArticles": 5228,
+      "potentialPct": 74
     },
     {
       "name": "Darty",
-      "topSellerArticles": 711,
-      "potentialPct": 80
-    },
-    {
-      "name": "Alloccaz",
-      "topSellerArticles": 486,
-      "potentialPct": 86
-    },
-    {
-      "name": "Ecofone",
-      "topSellerArticles": 319,
-      "potentialPct": 91
+      "topSellerArticles": 4810,
+      "potentialPct": 76
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 308,
-      "potentialPct": 91
-    },
-    {
-      "name": "Rps Technologies",
-      "topSellerArticles": 286,
-      "potentialPct": 92
+      "topSellerArticles": 3950,
+      "potentialPct": 80
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 271,
+      "topSellerArticles": 2069,
+      "potentialPct": 90
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 1681,
       "potentialPct": 92
     },
     {
-      "name": "Multishop",
-      "topSellerArticles": 228,
-      "potentialPct": 93
-    },
-    {
-      "name": "Junmingshop",
-      "topSellerArticles": 195,
-      "potentialPct": 94
-    },
-    {
       "name": "Auchan",
-      "topSellerArticles": 193,
-      "potentialPct": 94
-    },
-    {
-      "name": "Zoomici",
-      "topSellerArticles": 147,
+      "topSellerArticles": 722,
       "potentialPct": 96
     },
     {
-      "name": "",
-      "topSellerArticles": 140,
-      "potentialPct": 96
+      "name": "But",
+      "topSellerArticles": 528,
+      "potentialPct": 97
     }
   ]
 }

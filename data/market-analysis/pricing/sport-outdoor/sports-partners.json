@@ -1,113 +1,113 @@
 {
   "slug": "sports-partners",
   "name": "Sports Partners",
-  "priceIndex": 41,
+  "priceIndex": 52,
   "weeks": [
-    "2026-06-09",
-    "2026-06-16",
     "2026-06-23",
     "2026-06-30",
     "2026-07-07",
-    "2026-07-14"
+    "2026-07-14",
+    "2026-07-21",
+    "2026-07-28"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        108,
-        105,
         104,
         113,
         115,
-        111
+        111,
+        112,
+        114
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
         102,
-        103,
-        102,
         122,
         121,
-        120
-      ]
-    },
-    {
-      "name": "Runnerinn",
-      "piHistory": [
-        110,
-        116,
-        115,
-        114,
-        113,
-        109
-      ]
-    },
-    {
-      "name": "Snowinn",
-      "piHistory": [
-        104,
-        102,
-        93,
-        93,
-        99,
-        91
-      ]
-    },
-    {
-      "name": "Snowleader",
-      "piHistory": [
-        106,
-        105,
-        104,
-        114,
-        116,
-        120
-      ]
-    },
-    {
-      "name": "Trekkinn",
-      "piHistory": [
-        115,
-        114,
-        113,
-        109,
-        111,
-        106
-      ]
-    },
-    {
-      "name": "Irun",
-      "piHistory": [
-        103,
-        104,
-        null,
-        109,
-        108,
-        102
+        120,
+        117,
+        116
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        116,
-        115,
         113,
         121,
         121,
-        119
+        119,
+        117,
+        123
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
         109,
-        109,
-        109,
         110,
         109,
-        109
+        109,
+        111,
+        110
+      ]
+    },
+    {
+      "name": "Runnerinn",
+      "piHistory": [
+        115,
+        114,
+        113,
+        109,
+        109,
+        113
+      ]
+    },
+    {
+      "name": "Snowinn",
+      "piHistory": [
+        93,
+        93,
+        99,
+        91,
+        108,
+        105
+      ]
+    },
+    {
+      "name": "Snowleader",
+      "piHistory": [
+        104,
+        114,
+        116,
+        120,
+        119,
+        119
+      ]
+    },
+    {
+      "name": "Trekkinn",
+      "piHistory": [
+        113,
+        109,
+        111,
+        106,
+        109,
+        108
+      ]
+    },
+    {
+      "name": "Irun",
+      "piHistory": [
+        null,
+        109,
+        108,
+        102,
+        101,
+        103
       ]
     },
     {
@@ -115,10 +115,10 @@
       "piHistory": [
         null,
         null,
-        null,
-        null,
         119,
-        110
+        110,
+        104,
+        99
       ]
     }
   ],
@@ -151,13 +151,37 @@
     {
       "pack": "Veste",
       "matched": 1,
-      "priceIndex": 41,
+      "priceIndex": 52,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "T-shirt",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Pantalon",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Doudoune",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Short",
       "matched": 0,
       "priceIndex": null,
       "lowerPct": 0,

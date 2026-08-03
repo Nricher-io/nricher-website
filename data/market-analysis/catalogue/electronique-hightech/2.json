@@ -1,70 +1,60 @@
 {
   "packName": "Télévision",
-  "totalArticles": 1596,
-  "topSellersCount": 1105,
-  "topPct": 53,
-  "midPct": 27,
-  "lowPct": 20,
+  "totalArticles": 3519,
+  "topSellersCount": 1325,
+  "topPct": 25,
+  "midPct": 30,
+  "lowPct": 45,
   "ranking": [
     {
-      "name": "House Partners",
-      "topSellerArticles": 329,
-      "potentialPct": 79
+      "name": "Fnac",
+      "topSellerArticles": 1869,
+      "potentialPct": 47
     },
     {
-      "name": "Boulanger",
-      "topSellerArticles": 205,
-      "potentialPct": 87
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 187,
-      "potentialPct": 88
-    },
-    {
-      "name": "Icoza",
-      "topSellerArticles": 184,
-      "potentialPct": 88
-    },
-    {
-      "name": "Super10count",
-      "topSellerArticles": 111,
-      "potentialPct": 93
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 89,
-      "potentialPct": 94
-    },
-    {
-      "name": "Gpasplus",
-      "topSellerArticles": 82,
-      "potentialPct": 95
-    },
-    {
-      "name": "You Get Innovation & Technology",
-      "topSellerArticles": 78,
-      "potentialPct": 95
-    },
-    {
-      "name": "Multishop",
-      "topSellerArticles": 70,
-      "potentialPct": 96
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 66,
-      "potentialPct": 96
+      "name": "Cdiscount",
+      "topSellerArticles": 1190,
+      "potentialPct": 66
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 62,
-      "potentialPct": 96
+      "topSellerArticles": 1143,
+      "potentialPct": 68
     },
     {
-      "name": "",
-      "topSellerArticles": 58,
-      "potentialPct": 96
+      "name": "Darty",
+      "topSellerArticles": 829,
+      "potentialPct": 76
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 820,
+      "potentialPct": 77
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 698,
+      "potentialPct": 80
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 566,
+      "potentialPct": 84
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 425,
+      "potentialPct": 88
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 275,
+      "potentialPct": 92
+    },
+    {
+      "name": "Underdog",
+      "topSellerArticles": 17,
+      "potentialPct": 100
     }
   ]
 }

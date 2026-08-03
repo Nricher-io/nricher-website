@@ -1,70 +1,55 @@
 {
   "packName": "Casque audio",
-  "totalArticles": 1790,
-  "topSellersCount": 1610,
-  "topPct": 56,
-  "midPct": 25,
-  "lowPct": 19,
+  "totalArticles": 11831,
+  "topSellersCount": 3366,
+  "topPct": 22,
+  "midPct": 30,
+  "lowPct": 48,
   "ranking": [
     {
-      "name": "House Partners",
-      "topSellerArticles": 402,
-      "potentialPct": 78
+      "name": "Cdiscount",
+      "topSellerArticles": 4484,
+      "potentialPct": 62
     },
     {
       "name": "Darty",
-      "topSellerArticles": 372,
-      "potentialPct": 79
-    },
-    {
-      "name": "2kings",
-      "topSellerArticles": 268,
-      "potentialPct": 85
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 233,
-      "potentialPct": 87
-    },
-    {
-      "name": "As Discount",
-      "topSellerArticles": 174,
-      "potentialPct": 90
-    },
-    {
-      "name": "Zoomici",
-      "topSellerArticles": 161,
-      "potentialPct": 91
+      "topSellerArticles": 4335,
+      "potentialPct": 63
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 122,
-      "potentialPct": 93
+      "topSellerArticles": 4069,
+      "potentialPct": 66
     },
     {
-      "name": "Gpasplus",
-      "topSellerArticles": 98,
+      "name": "Fnac",
+      "topSellerArticles": 2459,
+      "potentialPct": 79
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 2285,
+      "potentialPct": 81
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 1289,
+      "potentialPct": 89
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 657,
+      "potentialPct": 94
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 576,
       "potentialPct": 95
     },
     {
-      "name": "Multishop",
-      "topSellerArticles": 92,
-      "potentialPct": 95
-    },
-    {
-      "name": "",
-      "topSellerArticles": 87,
-      "potentialPct": 95
-    },
-    {
-      "name": "Warenwelt 24",
-      "topSellerArticles": 75,
-      "potentialPct": 96
-    },
-    {
-      "name": "Amazon",
-      "topSellerArticles": 68,
-      "potentialPct": 96
+      "name": "Auchan",
+      "topSellerArticles": 182,
+      "potentialPct": 98
     }
   ]
 }

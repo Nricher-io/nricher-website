@@ -1,113 +1,113 @@
 {
   "slug": "snowinn",
   "name": "Snowinn",
-  "priceIndex": 102,
+  "priceIndex": 109,
   "weeks": [
-    "2026-06-16",
     "2026-06-23",
     "2026-06-30",
     "2026-07-07",
     "2026-07-14",
-    "2026-07-21"
+    "2026-07-21",
+    "2026-07-28"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        105,
         104,
         113,
         115,
         111,
-        112
+        112,
+        114
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        103,
         102,
         122,
         121,
         120,
-        117
-      ]
-    },
-    {
-      "name": "Runnerinn",
-      "piHistory": [
-        116,
-        115,
-        114,
-        113,
-        109,
-        109
-      ]
-    },
-    {
-      "name": "Snowinn",
-      "piHistory": [
-        102,
-        93,
-        93,
-        99,
-        91,
-        108
-      ]
-    },
-    {
-      "name": "Snowleader",
-      "piHistory": [
-        105,
-        104,
-        114,
-        116,
-        120,
-        119
-      ]
-    },
-    {
-      "name": "Trekkinn",
-      "piHistory": [
-        114,
-        113,
-        109,
-        111,
-        106,
-        109
+        117,
+        116
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        115,
         113,
         121,
         121,
         119,
-        117
+        117,
+        123
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
         109,
-        109,
         110,
         109,
         109,
-        111
+        111,
+        110
+      ]
+    },
+    {
+      "name": "Runnerinn",
+      "piHistory": [
+        115,
+        114,
+        113,
+        109,
+        109,
+        113
+      ]
+    },
+    {
+      "name": "Snowinn",
+      "piHistory": [
+        93,
+        93,
+        99,
+        91,
+        108,
+        105
+      ]
+    },
+    {
+      "name": "Snowleader",
+      "piHistory": [
+        104,
+        114,
+        116,
+        120,
+        119,
+        119
+      ]
+    },
+    {
+      "name": "Trekkinn",
+      "piHistory": [
+        113,
+        109,
+        111,
+        106,
+        109,
+        108
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        104,
         null,
         109,
         108,
         102,
-        101
+        101,
+        103
       ]
     },
     {
@@ -115,20 +115,14 @@
       "piHistory": [
         null,
         null,
-        null,
         119,
         110,
-        104
+        104,
+        99
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-06-16",
-      "cheaperPct": 46,
-      "equalPct": 3,
-      "higherPct": 51
-    },
     {
       "week": "2026-06-23",
       "cheaperPct": 60,
@@ -158,6 +152,12 @@
       "cheaperPct": 33,
       "equalPct": 5,
       "higherPct": 62
+    },
+    {
+      "week": "2026-07-28",
+      "cheaperPct": 44,
+      "equalPct": 2,
+      "higherPct": 54
     }
   ],
   "pairwise": [
@@ -179,27 +179,51 @@
     },
     {
       "pack": "Sac à dos",
-      "matched": 18,
-      "priceIndex": 107,
-      "lowerPct": 22,
+      "matched": 19,
+      "priceIndex": 110,
+      "lowerPct": 21,
       "equalPct": 0,
-      "higherPct": 78
+      "higherPct": 79
     },
     {
       "pack": "Veste",
-      "matched": 123,
-      "priceIndex": 102,
-      "lowerPct": 41,
-      "equalPct": 7,
-      "higherPct": 52
+      "matched": 124,
+      "priceIndex": 101,
+      "lowerPct": 40,
+      "equalPct": 12,
+      "higherPct": 48
     },
     {
       "pack": "T-shirt",
-      "matched": 66,
-      "priceIndex": 103,
-      "lowerPct": 26,
+      "matched": 67,
+      "priceIndex": 98,
+      "lowerPct": 46,
       "equalPct": 0,
-      "higherPct": 74
+      "higherPct": 54
+    },
+    {
+      "pack": "Pantalon",
+      "matched": 53,
+      "priceIndex": 127,
+      "lowerPct": 34,
+      "equalPct": 0,
+      "higherPct": 66
+    },
+    {
+      "pack": "Doudoune",
+      "matched": 13,
+      "priceIndex": 159,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 100
+    },
+    {
+      "pack": "Short",
+      "matched": 4,
+      "priceIndex": 93,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
     }
   ]
 }

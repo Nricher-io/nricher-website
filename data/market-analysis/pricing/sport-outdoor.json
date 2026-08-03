@@ -1,72 +1,86 @@
 [
   {
+    "slug": "sports-partners",
+    "name": "Sports Partners",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 1,
+    "priceIndex": 52
+  },
+  {
     "slug": "zalando",
     "name": "Zalando",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 3683,
-    "priceIndex": 98
-  },
-  {
-    "slug": "snowinn",
-    "name": "Snowinn",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 207,
-    "priceIndex": 102
-  },
-  {
-    "slug": "irun",
-    "name": "Irun",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 2236,
-    "priceIndex": 103
-  },
-  {
-    "slug": "hardloop",
-    "name": "Hardloop",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 2666,
-    "priceIndex": 107
-  },
-  {
-    "slug": "trekkinn",
-    "name": "Trekkinn",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 5006,
-    "priceIndex": 110
-  },
-  {
-    "slug": "runnerinn",
-    "name": "Runnerinn",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 1155,
-    "priceIndex": 110
-  },
-  {
-    "slug": "ekosport",
-    "name": "Ekosport",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 3459,
-    "priceIndex": 114
+    "articlesAnalysed": 16301,
+    "articlesMatched": 3909,
+    "priceIndex": 89
   },
   {
     "slug": "",
     "name": "",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 32,
-    "priceIndex": 115
+    "articlesAnalysed": 16301,
+    "articlesMatched": 11,
+    "priceIndex": 92
   },
   {
-    "slug": "snowleader",
-    "name": "Snowleader",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 7385,
-    "priceIndex": 116
+    "slug": "irun",
+    "name": "Irun",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 2375,
+    "priceIndex": 98
+  },
+  {
+    "slug": "hardloop",
+    "name": "Hardloop",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 3103,
+    "priceIndex": 105
   },
   {
     "slug": "alltricks",
     "name": "Alltricks",
-    "articlesAnalysed": 12967,
-    "articlesMatched": 3314,
-    "priceIndex": 116
+    "articlesAnalysed": 16301,
+    "articlesMatched": 3088,
+    "priceIndex": 106
+  },
+  {
+    "slug": "trekkinn",
+    "name": "Trekkinn",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 5120,
+    "priceIndex": 107
+  },
+  {
+    "slug": "runnerinn",
+    "name": "Runnerinn",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 1249,
+    "priceIndex": 107
+  },
+  {
+    "slug": "ekosport",
+    "name": "Ekosport",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 4644,
+    "priceIndex": 109
+  },
+  {
+    "slug": "glisshop",
+    "name": "Glisshop",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 1366,
+    "priceIndex": 109
+  },
+  {
+    "slug": "snowinn",
+    "name": "Snowinn",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 280,
+    "priceIndex": 109
+  },
+  {
+    "slug": "snowleader",
+    "name": "Snowleader",
+    "articlesAnalysed": 16301,
+    "articlesMatched": 8823,
+    "priceIndex": 111
   }
 ]

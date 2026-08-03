@@ -1,70 +1,55 @@
 {
   "packName": "Tablette",
-  "totalArticles": 1067,
-  "topSellersCount": 640,
-  "topPct": 48,
-  "midPct": 30,
-  "lowPct": 22,
+  "totalArticles": 5362,
+  "topSellersCount": 2104,
+  "topPct": 29,
+  "midPct": 31,
+  "lowPct": 40,
   "ranking": [
     {
-      "name": "House Partners",
-      "topSellerArticles": 195,
-      "potentialPct": 82
-    },
-    {
-      "name": "Multishop",
-      "topSellerArticles": 130,
-      "potentialPct": 88
-    },
-    {
-      "name": "Yonis Shop",
-      "topSellerArticles": 102,
-      "potentialPct": 90
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 85,
-      "potentialPct": 92
-    },
-    {
       "name": "Cdiscount",
-      "topSellerArticles": 75,
-      "potentialPct": 93
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 53,
-      "potentialPct": 95
-    },
-    {
-      "name": "2kings",
-      "topSellerArticles": 52,
-      "potentialPct": 95
-    },
-    {
-      "name": "Vision",
-      "topSellerArticles": 51,
-      "potentialPct": 95
+      "topSellerArticles": 2590,
+      "potentialPct": 52
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 50,
-      "potentialPct": 95
+      "topSellerArticles": 1731,
+      "potentialPct": 68
     },
     {
-      "name": "Zoomici",
-      "topSellerArticles": 47,
-      "potentialPct": 96
+      "name": "Carrefour",
+      "topSellerArticles": 1664,
+      "potentialPct": 69
+    },
+    {
+      "name": "Fnac",
+      "topSellerArticles": 1490,
+      "potentialPct": 72
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 658,
+      "potentialPct": 88
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 430,
+      "potentialPct": 92
     },
     {
       "name": "Darty",
-      "topSellerArticles": 44,
+      "topSellerArticles": 294,
+      "potentialPct": 95
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 234,
       "potentialPct": 96
     },
     {
-      "name": "Rps Technologies",
-      "topSellerArticles": 41,
-      "potentialPct": 96
+      "name": "But",
+      "topSellerArticles": 168,
+      "potentialPct": 97
     }
   ]
 }

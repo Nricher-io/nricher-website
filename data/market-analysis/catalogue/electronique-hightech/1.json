@@ -1,70 +1,55 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 2678,
-  "topSellersCount": 1394,
-  "topPct": 49,
-  "midPct": 28,
-  "lowPct": 23,
+  "totalArticles": 16182,
+  "topSellersCount": 4211,
+  "topPct": 23,
+  "midPct": 30,
+  "lowPct": 47,
   "ranking": [
     {
-      "name": "Darty",
-      "topSellerArticles": 554,
-      "potentialPct": 79
-    },
-    {
-      "name": "Icoza",
-      "topSellerArticles": 225,
-      "potentialPct": 92
-    },
-    {
-      "name": "House Partners",
-      "topSellerArticles": 209,
-      "potentialPct": 92
-    },
-    {
-      "name": "Leasi",
-      "topSellerArticles": 141,
-      "potentialPct": 95
-    },
-    {
-      "name": "La Boutique Du Net",
-      "topSellerArticles": 133,
-      "potentialPct": 95
-    },
-    {
-      "name": "Kiatoo",
-      "topSellerArticles": 132,
-      "potentialPct": 95
-    },
-    {
-      "name": "Topbiz",
-      "topSellerArticles": 122,
-      "potentialPct": 95
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 120,
-      "potentialPct": 96
-    },
-    {
       "name": "Cdiscount",
-      "topSellerArticles": 95,
-      "potentialPct": 96
+      "topSellerArticles": 8842,
+      "potentialPct": 45
     },
     {
-      "name": "Monsieurplus",
-      "topSellerArticles": 86,
-      "potentialPct": 97
+      "name": "Fnac",
+      "topSellerArticles": 3493,
+      "potentialPct": 78
     },
     {
-      "name": "Okamac",
-      "topSellerArticles": 83,
-      "potentialPct": 97
+      "name": "Darty",
+      "topSellerArticles": 2804,
+      "potentialPct": 83
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 81,
-      "potentialPct": 97
+      "topSellerArticles": 2245,
+      "potentialPct": 86
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 2107,
+      "potentialPct": 87
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 1635,
+      "potentialPct": 90
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 927,
+      "potentialPct": 94
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 177,
+      "potentialPct": 99
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 172,
+      "potentialPct": 99
     }
   ]
 }

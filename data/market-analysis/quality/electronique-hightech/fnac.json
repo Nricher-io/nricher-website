@@ -1,35 +1,35 @@
 {
   "slug": "fnac",
   "name": "Fnac",
-  "articlesAnalysed": 216724,
-  "qualityScore": 53,
+  "articlesAnalysed": 665555,
+  "qualityScore": 52,
   "globalGrades": {
     "Aplus": 0,
-    "A": 6,
-    "B": 10,
-    "C": 22,
+    "A": 5,
+    "B": 9,
+    "C": 20,
     "D": 17,
-    "E": 18,
-    "F": 27
+    "E": 21,
+    "F": 28
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 27,
+      "Aplus": 25,
       "A": 7,
       "B": 9,
-      "C": 16,
+      "C": 15,
       "D": 10,
-      "E": 9,
-      "F": 22
+      "E": 10,
+      "F": 24
     },
     "Image": {
-      "Aplus": 10,
+      "Aplus": 7,
       "A": 2,
-      "B": 24,
-      "C": 7,
+      "B": 21,
+      "C": 6,
       "D": 0,
-      "E": 12,
-      "F": 45
+      "E": 10,
+      "F": 53
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 27,
-      "A": 6,
+      "Aplus": 29,
+      "A": 7,
       "B": 7,
       "C": 10,
       "D": 7,
       "E": 7,
-      "F": 36
+      "F": 34
     }
   }
 }

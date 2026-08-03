@@ -1,7 +1,7 @@
 {
-  "slug": "amazon",
-  "name": "Amazon",
-  "priceIndex": 119,
+  "slug": "easylounge",
+  "name": "Easylounge",
+  "priceIndex": 103,
   "weeks": [
     "2026-06-23",
     "2026-06-30",
@@ -232,84 +232,47 @@
       ]
     }
   ],
-  "attractiveness": [
-    {
-      "week": "2026-06-23",
-      "cheaperPct": 5,
-      "equalPct": 24,
-      "higherPct": 71
-    },
-    {
-      "week": "2026-06-30",
-      "cheaperPct": 6,
-      "equalPct": 22,
-      "higherPct": 72
-    },
-    {
-      "week": "2026-07-07",
-      "cheaperPct": 7,
-      "equalPct": 30,
-      "higherPct": 63
-    },
-    {
-      "week": "2026-07-14",
-      "cheaperPct": 6,
-      "equalPct": 19,
-      "higherPct": 75
-    },
-    {
-      "week": "2026-07-21",
-      "cheaperPct": 6,
-      "equalPct": 12,
-      "higherPct": 82
-    },
-    {
-      "week": "2026-07-28",
-      "cheaperPct": 5,
-      "equalPct": 22,
-      "higherPct": 73
-    }
-  ],
+  "attractiveness": [],
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 293,
-      "priceIndex": 116,
-      "lowerPct": 35,
-      "equalPct": 5,
-      "higherPct": 60
+      "matched": 2,
+      "priceIndex": 100,
+      "lowerPct": 0,
+      "equalPct": 100,
+      "higherPct": 0
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 23,
-      "priceIndex": 126,
-      "lowerPct": 22,
-      "equalPct": 13,
-      "higherPct": 65
+      "matched": 1,
+      "priceIndex": 100,
+      "lowerPct": 0,
+      "equalPct": 100,
+      "higherPct": 0
     },
     {
       "pack": "Télévision",
-      "matched": 30,
-      "priceIndex": 116,
-      "lowerPct": 10,
-      "equalPct": 17,
-      "higherPct": 73
+      "matched": 20,
+      "priceIndex": 101,
+      "lowerPct": 4,
+      "equalPct": 84,
+      "higherPct": 12
     },
     {
       "pack": "Casque audio",
-      "matched": 167,
-      "priceIndex": 127,
+      "matched": 55,
+      "priceIndex": 105,
       "lowerPct": 6,
-      "equalPct": 15,
-      "higherPct": 79
+      "equalPct": 73,
+      "higherPct": 21
     },
     {
       "pack": "Tablette",
-      "matched": 50,
-      "priceIndex": 117,
-      "lowerPct": 22,
-      "equalPct": 16,
-      "higherPct": 63
+      "matched": 2,
+      "priceIndex": 106,
+      "lowerPct": 0,
+      "equalPct": 50,
+      "higherPct": 50
     },
     {
       "pack": "Ordinateur de bureau",
@@ -321,11 +284,11 @@
     },
     {
       "pack": "Enceinte audio",
-      "matched": 80,
-      "priceIndex": 116,
-      "lowerPct": 6,
-      "equalPct": 27,
-      "higherPct": 67
+      "matched": 118,
+      "priceIndex": 103,
+      "lowerPct": 14,
+      "equalPct": 76,
+      "higherPct": 11
     }
   ]
 }
