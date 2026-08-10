@@ -2,67 +2,67 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 1044031,
+    "articlesAnalysed": 1040196,
     "qualityScore": 75
   },
   {
     "slug": "amazon",
     "name": "Amazon",
-    "articlesAnalysed": 138124,
-    "qualityScore": 73
+    "articlesAnalysed": 307566,
+    "qualityScore": 72
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 439780,
+    "articlesAnalysed": 453514,
     "qualityScore": 70
   },
   {
     "slug": "carrefour",
     "name": "Carrefour",
-    "articlesAnalysed": 630844,
+    "articlesAnalysed": 561217,
     "qualityScore": 66
   },
   {
     "slug": "conforama",
     "name": "Conforama",
-    "articlesAnalysed": 553405,
+    "articlesAnalysed": 489606,
     "qualityScore": 62
   },
   {
     "slug": "auchan",
     "name": "Auchan",
-    "articlesAnalysed": 48542,
+    "articlesAnalysed": 47231,
     "qualityScore": 62
   },
   {
     "slug": "underdog",
     "name": "Underdog",
-    "articlesAnalysed": 419,
+    "articlesAnalysed": 397,
     "qualityScore": 60
   },
   {
     "slug": "rue-du-commerce",
     "name": "Rue du Commerce",
-    "articlesAnalysed": 789852,
+    "articlesAnalysed": 736786,
+    "qualityScore": 57
+  },
+  {
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 411709,
     "qualityScore": 57
   },
   {
     "slug": "boulanger",
     "name": "Boulanger",
-    "articlesAnalysed": 237249,
+    "articlesAnalysed": 246434,
     "qualityScore": 55
   },
   {
     "slug": "darty",
     "name": "Darty",
-    "articlesAnalysed": 726572,
-    "qualityScore": 52
-  },
-  {
-    "slug": "fnac",
-    "name": "Fnac",
-    "articlesAnalysed": 665555,
+    "articlesAnalysed": 720581,
     "qualityScore": 52
   }
 ]

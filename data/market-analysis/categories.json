@@ -30,10 +30,6 @@
     "name": "Sport & Outdoor",
     "companies": [
       {
-        "slug": "sports-partners",
-        "name": "Sports Partners"
-      },
-      {
         "slug": "zalando",
         "name": "Zalando"
       },
@@ -50,32 +46,40 @@
         "name": "Hardloop"
       },
       {
-        "slug": "alltricks",
-        "name": "Alltricks"
+        "slug": "sports-partners",
+        "name": "Sports Partners"
       },
       {
-        "slug": "trekkinn",
-        "name": "Trekkinn"
+        "slug": "alltricks",
+        "name": "Alltricks"
       },
       {
         "slug": "runnerinn",
         "name": "Runnerinn"
       },
       {
-        "slug": "ekosport",
-        "name": "Ekosport"
+        "slug": "trekkinn",
+        "name": "Trekkinn"
       },
       {
-        "slug": "glisshop",
-        "name": "Glisshop"
+        "slug": "snowleader",
+        "name": "Snowleader"
+      },
+      {
+        "slug": "barrabes",
+        "name": "Barrabes"
+      },
+      {
+        "slug": "ekosport",
+        "name": "Ekosport"
       },
       {
         "slug": "snowinn",
         "name": "Snowinn"
       },
       {
-        "slug": "snowleader",
-        "name": "Snowleader"
+        "slug": "glisshop",
+        "name": "Glisshop"
       }
     ],
     "qualityCompanies": [
@@ -141,16 +145,12 @@
     "name": "Électronique & High-Tech",
     "companies": [
       {
+        "slug": "junmingshop",
+        "name": "Junmingshop"
+      },
+      {
         "slug": "zenkaa",
         "name": "Zenkaa"
-      },
-      {
-        "slug": "monsieurplus",
-        "name": "Monsieurplus"
-      },
-      {
-        "slug": "auchan",
-        "name": "Auchan"
       },
       {
         "slug": "kiatoo",
@@ -161,20 +161,12 @@
         "name": "Multishop"
       },
       {
-        "slug": "la-boutique-du-net",
-        "name": "La Boutique Du Net"
-      },
-      {
-        "slug": "zoomici",
-        "name": "Zoomici"
-      },
-      {
         "slug": "super10count",
         "name": "Super10count"
       },
       {
-        "slug": "as-discount",
-        "name": "As Discount"
+        "slug": "auchan",
+        "name": "Auchan"
       },
       {
         "slug": "sedatech",
@@ -185,6 +177,14 @@
         "name": "Icoza"
       },
       {
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "la-boutique-du-net",
+        "name": "La Boutique Du Net"
+      },
+      {
         "slug": "topbiz",
         "name": "Topbiz"
       },
@@ -193,28 +193,20 @@
         "name": "House Partners"
       },
       {
-        "slug": "carrefour",
-        "name": "Carrefour"
-      },
-      {
-        "slug": "procomponentes",
-        "name": "Procomponentes"
-      },
-      {
-        "slug": "villatech",
-        "name": "Villatech"
-      },
-      {
-        "slug": "easylounge",
-        "name": "Easylounge"
-      },
-      {
         "slug": "darty",
         "name": "Darty"
       },
       {
         "slug": "2kings",
         "name": "2kings"
+      },
+      {
+        "slug": "carrefour",
+        "name": "Carrefour"
+      },
+      {
+        "slug": "villatech",
+        "name": "Villatech"
       },
       {
         "slug": "warenwelt-24",
@@ -229,16 +221,20 @@
         "name": "Gpasplus"
       },
       {
-        "slug": "rue-du-commerce",
-        "name": "Rue Du Commerce"
+        "slug": "",
+        "name": ""
+      },
+      {
+        "slug": "digital-bay",
+        "name": "Digital Bay"
       },
       {
         "slug": "yonis-shop",
         "name": "Yonis Shop"
       },
       {
-        "slug": "",
-        "name": ""
+        "slug": "rue-du-commerce",
+        "name": "Rue Du Commerce"
       },
       {
         "slug": "cdiscount",
@@ -249,16 +245,24 @@
         "name": "Amazon"
       },
       {
-        "slug": "alloccaz",
-        "name": "Alloccaz"
-      },
-      {
         "slug": "ecofone",
         "name": "Ecofone"
       },
       {
         "slug": "rps-technologies",
         "name": "Rps Technologies"
+      },
+      {
+        "slug": "cheng-tech",
+        "name": "Cheng Tech"
+      },
+      {
+        "slug": "alloccaz",
+        "name": "Alloccaz"
+      },
+      {
+        "slug": "as-discount",
+        "name": "As Discount"
       }
     ],
     "qualityCompanies": [
@@ -295,16 +299,16 @@
         "name": "Rue du Commerce"
       },
       {
+        "slug": "fnac",
+        "name": "Fnac"
+      },
+      {
         "slug": "boulanger",
         "name": "Boulanger"
       },
       {
         "slug": "darty",
         "name": "Darty"
-      },
-      {
-        "slug": "fnac",
-        "name": "Fnac"
       }
     ],
     "packs": [

@@ -1,234 +1,234 @@
 {
   "slug": "junmingshop",
   "name": "Junmingshop",
-  "priceIndex": 94,
+  "priceIndex": 82,
   "weeks": [
-    "2026-06-16",
-    "2026-06-23",
     "2026-06-30",
     "2026-07-07",
     "2026-07-14",
-    "2026-07-21"
+    "2026-07-21",
+    "2026-07-28",
+    "2026-08-04"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        119,
-        120,
         139,
         136,
         136,
-        129
+        129,
+        122,
+        142
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        133,
-        126,
         126,
         121,
         125,
-        131
+        131,
+        127,
+        135
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
         123,
-        123,
-        123,
         121,
         121,
-        121
+        121,
+        114,
+        116
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
         112,
-        115,
-        112,
         107,
         111,
-        112
+        112,
+        111,
+        110
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        137,
-        142,
         135,
         117,
         128,
-        134
+        134,
+        135,
+        130
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        140,
-        139,
         143,
         142,
         143,
-        142
+        142,
+        138,
+        144
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        111,
-        110,
         106,
         107,
         114,
-        108
+        108,
+        117,
+        110
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        150,
-        151,
         145,
         134,
         146,
-        152
+        152,
+        154,
+        158
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        105,
-        107,
         110,
         104,
         109,
-        115
+        115,
+        116,
+        111
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        129,
-        131,
         131,
         128,
         128,
-        136
+        136,
+        131,
+        130
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
+        112,
+        107,
+        107,
+        108,
         111,
-        112,
-        112,
-        107,
-        107,
-        108
+        110
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        113,
-        115,
         114,
         110,
         113,
-        109
+        109,
+        110,
+        112
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        109,
-        109,
         108,
         106,
         105,
-        106
+        106,
+        107,
+        111
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        116,
-        115,
         113,
         108,
         113,
-        107
+        107,
+        117,
+        113
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
         109,
-        112,
-        109,
         107,
         109,
-        116
+        116,
+        110,
+        114
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
-        103,
-        103,
         102,
         101,
         102,
-        103
+        103,
+        103,
+        102
       ]
     },
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        115,
-        115,
         116,
         115,
         114,
-        118
+        118,
+        115,
+        112
       ]
     },
     {
       "name": "Fnac",
       "piHistory": [
-        112,
-        109,
         109,
         111,
         107,
-        109
+        109,
+        101,
+        111
       ]
     },
     {
       "name": "Jardindeco",
       "piHistory": [
-        170,
-        169,
         190,
         180,
         177,
-        182
+        182,
+        174,
+        144
       ]
     },
     {
       "name": "La Redoute",
       "piHistory": [
-        106,
-        110,
         102,
         104,
         104,
-        103
+        103,
+        113,
+        104
       ]
     }
   ],
@@ -236,11 +236,11 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 195,
-      "priceIndex": 94,
-      "lowerPct": 35,
-      "equalPct": 35,
-      "higherPct": 30
+      "matched": 382,
+      "priceIndex": 82,
+      "lowerPct": 98,
+      "equalPct": 0,
+      "higherPct": 2
     },
     {
       "pack": "Ordinateur portable",
@@ -268,6 +268,22 @@
     },
     {
       "pack": "Tablette",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Ordinateur de bureau",
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
+    },
+    {
+      "pack": "Enceinte audio",
       "matched": 0,
       "priceIndex": null,
       "lowerPct": 0,

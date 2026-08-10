@@ -1,13 +1,13 @@
 {
   "slug": "ekosport",
   "name": "Ekosport",
-  "articlesAnalysed": 106755,
+  "articlesAnalysed": 105767,
   "qualityScore": 62,
   "globalGrades": {
     "Aplus": 0,
     "A": 3,
-    "B": 14,
-    "C": 42,
+    "B": 15,
+    "C": 41,
     "D": 22,
     "E": 13,
     "F": 6
@@ -41,7 +41,7 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 15,
+      "Aplus": 16,
       "A": 10,
       "B": 15,
       "C": 26,

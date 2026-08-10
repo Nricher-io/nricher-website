@@ -1,7 +1,7 @@
 {
-  "slug": "zalando",
-  "name": "Zalando",
-  "priceIndex": 86,
+  "slug": "barrabes",
+  "name": "Barrabes",
+  "priceIndex": 108,
   "weeks": [
     "2026-06-30",
     "2026-07-07",
@@ -122,101 +122,70 @@
       ]
     }
   ],
-  "attractiveness": [
-    {
-      "week": "2026-07-07",
-      "cheaperPct": 20,
-      "equalPct": 4,
-      "higherPct": 76
-    },
-    {
-      "week": "2026-07-14",
-      "cheaperPct": 32,
-      "equalPct": 6,
-      "higherPct": 62
-    },
-    {
-      "week": "2026-07-21",
-      "cheaperPct": 42,
-      "equalPct": 0,
-      "higherPct": 58
-    },
-    {
-      "week": "2026-07-28",
-      "cheaperPct": 49,
-      "equalPct": 17,
-      "higherPct": 34
-    },
-    {
-      "week": "2026-08-04",
-      "cheaperPct": 64,
-      "equalPct": 22,
-      "higherPct": 13
-    }
-  ],
+  "attractiveness": [],
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "matched": 305,
-      "priceIndex": 90,
-      "lowerPct": 61,
-      "equalPct": 35,
-      "higherPct": 4
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
     },
     {
       "pack": "Chaussures de randonnée",
-      "matched": 316,
-      "priceIndex": 84,
-      "lowerPct": 90,
-      "equalPct": 10,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Sac à dos",
-      "matched": 81,
-      "priceIndex": 91,
-      "lowerPct": 64,
-      "equalPct": 25,
-      "higherPct": 11
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
     },
     {
       "pack": "Veste",
-      "matched": 99,
-      "priceIndex": 82,
-      "lowerPct": 83,
-      "equalPct": 15,
-      "higherPct": 2
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
     },
     {
       "pack": "T-shirt",
-      "matched": 84,
-      "priceIndex": 83,
-      "lowerPct": 87,
-      "equalPct": 13,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Pantalon",
-      "matched": 49,
-      "priceIndex": 82,
-      "lowerPct": 78,
-      "equalPct": 22,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Doudoune",
-      "matched": 35,
-      "priceIndex": 95,
-      "lowerPct": 20,
-      "equalPct": 80,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Short",
-      "matched": 44,
-      "priceIndex": 78,
-      "lowerPct": 91,
-      "equalPct": 9,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
       "higherPct": 0
     }
   ]

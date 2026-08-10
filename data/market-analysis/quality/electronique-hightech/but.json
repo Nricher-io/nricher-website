@@ -1,15 +1,15 @@
 {
   "slug": "but",
   "name": "BUT",
-  "articlesAnalysed": 439780,
+  "articlesAnalysed": 453514,
   "qualityScore": 70,
   "globalGrades": {
     "Aplus": 0,
     "A": 22,
-    "B": 22,
-    "C": 21,
+    "B": 21,
+    "C": 20,
     "D": 23,
-    "E": 11,
+    "E": 10,
     "F": 2
   },
   "criteriaGrades": {
@@ -28,7 +28,7 @@
       "B": 7,
       "C": 5,
       "D": 0,
-      "E": 4,
+      "E": 3,
       "F": 5
     },
     "Vidéo": {
