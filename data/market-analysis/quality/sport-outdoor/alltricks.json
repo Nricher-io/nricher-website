@@ -1,13 +1,13 @@
 {
   "slug": "alltricks",
   "name": "Alltricks",
-  "articlesAnalysed": 133953,
-  "qualityScore": 74,
+  "articlesAnalysed": 137860,
+  "qualityScore": 75,
   "globalGrades": {
     "Aplus": 0,
     "A": 18,
     "B": 35,
-    "C": 37,
+    "C": 36,
     "D": 8,
     "E": 2,
     "F": 1
@@ -15,7 +15,7 @@
   "criteriaGrades": {
     "Titre": {
       "Aplus": 19,
-      "A": 13,
+      "A": 14,
       "B": 18,
       "C": 28,
       "D": 13,
@@ -24,7 +24,7 @@
     },
     "Image": {
       "Aplus": 97,
-      "A": 1,
+      "A": 2,
       "B": 0,
       "C": 0,
       "D": 0,
@@ -41,7 +41,7 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 40,
+      "Aplus": 41,
       "A": 10,
       "B": 9,
       "C": 13,

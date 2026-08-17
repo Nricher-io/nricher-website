@@ -34,48 +34,48 @@
         "name": "Zalando"
       },
       {
-        "slug": "",
-        "name": ""
+        "slug": "sports-partners",
+        "name": "Sports Partners"
       },
       {
         "slug": "irun",
         "name": "Irun"
       },
       {
-        "slug": "hardloop",
-        "name": "Hardloop"
-      },
-      {
-        "slug": "sports-partners",
-        "name": "Sports Partners"
-      },
-      {
-        "slug": "alltricks",
-        "name": "Alltricks"
-      },
-      {
-        "slug": "runnerinn",
-        "name": "Runnerinn"
-      },
-      {
-        "slug": "trekkinn",
-        "name": "Trekkinn"
-      },
-      {
-        "slug": "snowleader",
-        "name": "Snowleader"
+        "slug": "",
+        "name": ""
       },
       {
         "slug": "barrabes",
         "name": "Barrabes"
       },
       {
+        "slug": "alltricks",
+        "name": "Alltricks"
+      },
+      {
+        "slug": "snowleader",
+        "name": "Snowleader"
+      },
+      {
         "slug": "ekosport",
         "name": "Ekosport"
       },
       {
+        "slug": "hardloop",
+        "name": "Hardloop"
+      },
+      {
+        "slug": "runnerinn",
+        "name": "Runnerinn"
+      },
+      {
         "slug": "snowinn",
         "name": "Snowinn"
+      },
+      {
+        "slug": "trekkinn",
+        "name": "Trekkinn"
       },
       {
         "slug": "glisshop",
@@ -104,6 +104,10 @@
         "name": "Ekosport"
       },
       {
+        "slug": "trekkinn",
+        "name": "Trekkinn"
+      },
+      {
         "slug": "snowleader",
         "name": "Snowleader"
       },
@@ -114,10 +118,6 @@
       {
         "slug": "irun",
         "name": "Irun"
-      },
-      {
-        "slug": "trekkinn",
-        "name": "Trekkinn"
       }
     ],
     "packs": [
@@ -149,24 +149,28 @@
         "name": "Junmingshop"
       },
       {
-        "slug": "zenkaa",
-        "name": "Zenkaa"
-      },
-      {
         "slug": "kiatoo",
         "name": "Kiatoo"
       },
       {
-        "slug": "multishop",
-        "name": "Multishop"
+        "slug": "la-boutique-du-net",
+        "name": "La Boutique Du Net"
       },
       {
         "slug": "super10count",
         "name": "Super10count"
       },
       {
-        "slug": "auchan",
-        "name": "Auchan"
+        "slug": "easylounge",
+        "name": "Easylounge"
+      },
+      {
+        "slug": "topbiz",
+        "name": "Topbiz"
+      },
+      {
+        "slug": "sono-energie",
+        "name": "Sono Energie"
       },
       {
         "slug": "sedatech",
@@ -177,32 +181,36 @@
         "name": "Icoza"
       },
       {
-        "slug": "zoomici",
-        "name": "Zoomici"
+        "slug": "as-discount",
+        "name": "As Discount"
       },
       {
-        "slug": "la-boutique-du-net",
-        "name": "La Boutique Du Net"
-      },
-      {
-        "slug": "topbiz",
-        "name": "Topbiz"
-      },
-      {
-        "slug": "house-partners",
-        "name": "House Partners"
-      },
-      {
-        "slug": "darty",
-        "name": "Darty"
+        "slug": "auchan",
+        "name": "Auchan"
       },
       {
         "slug": "2kings",
         "name": "2kings"
       },
       {
-        "slug": "carrefour",
-        "name": "Carrefour"
+        "slug": "procomponentes",
+        "name": "Procomponentes"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "yonis-shop",
+        "name": "Yonis Shop"
       },
       {
         "slug": "villatech",
@@ -213,24 +221,8 @@
         "name": "Warenwelt 24"
       },
       {
-        "slug": "boulanger",
-        "name": "Boulanger"
-      },
-      {
         "slug": "gpasplus",
         "name": "Gpasplus"
-      },
-      {
-        "slug": "",
-        "name": ""
-      },
-      {
-        "slug": "digital-bay",
-        "name": "Digital Bay"
-      },
-      {
-        "slug": "yonis-shop",
-        "name": "Yonis Shop"
       },
       {
         "slug": "rue-du-commerce",
@@ -241,16 +233,12 @@
         "name": "Cdiscount"
       },
       {
-        "slug": "amazon",
-        "name": "Amazon"
+        "slug": "multishop",
+        "name": "Multishop"
       },
       {
-        "slug": "ecofone",
-        "name": "Ecofone"
-      },
-      {
-        "slug": "rps-technologies",
-        "name": "Rps Technologies"
+        "slug": "carrefour",
+        "name": "Carrefour"
       },
       {
         "slug": "cheng-tech",
@@ -261,18 +249,26 @@
         "name": "Alloccaz"
       },
       {
-        "slug": "as-discount",
-        "name": "As Discount"
+        "slug": "ecofone",
+        "name": "Ecofone"
+      },
+      {
+        "slug": "house-partners",
+        "name": "House Partners"
+      },
+      {
+        "slug": "",
+        "name": ""
+      },
+      {
+        "slug": "rps-technologies",
+        "name": "Rps Technologies"
       }
     ],
     "qualityCompanies": [
       {
         "slug": "cdiscount",
         "name": "CDiscount"
-      },
-      {
-        "slug": "amazon",
-        "name": "Amazon"
       },
       {
         "slug": "but",
@@ -299,12 +295,16 @@
         "name": "Rue du Commerce"
       },
       {
-        "slug": "fnac",
-        "name": "Fnac"
+        "slug": "amazon",
+        "name": "Amazon"
       },
       {
         "slug": "boulanger",
         "name": "Boulanger"
+      },
+      {
+        "slug": "fnac",
+        "name": "Fnac"
       },
       {
         "slug": "darty",

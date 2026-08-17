@@ -1,8 +1,8 @@
 {
   "slug": "alpiniste",
   "name": "Alpiniste",
-  "articlesAnalysed": 469072,
-  "qualityScore": 66,
+  "articlesAnalysed": 472326,
+  "qualityScore": 67,
   "globalGrades": {
     "Aplus": 2,
     "A": 18,
@@ -23,7 +23,7 @@
       "F": 0
     },
     "Image": {
-      "Aplus": 32,
+      "Aplus": 33,
       "A": 8,
       "B": 7,
       "C": 6,
@@ -47,7 +47,7 @@
       "C": 3,
       "D": 1,
       "E": 0,
-      "F": 56
+      "F": 55
     }
   }
 }

@@ -1,59 +1,59 @@
 {
   "packName": "Télévision",
-  "totalArticles": 3683,
-  "topSellersCount": 1374,
+  "totalArticles": 3631,
+  "topSellersCount": 1323,
   "topPct": 25,
   "midPct": 31,
   "lowPct": 44,
   "ranking": [
     {
       "name": "Fnac",
-      "topSellerArticles": 2105,
-      "potentialPct": 43
+      "topSellerArticles": 1992,
+      "potentialPct": 45
     },
     {
       "name": "Cdiscount",
-      "topSellerArticles": 1219,
-      "potentialPct": 67
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 1131,
+      "topSellerArticles": 1111,
       "potentialPct": 69
     },
     {
+      "name": "Carrefour",
+      "topSellerArticles": 1095,
+      "potentialPct": 70
+    },
+    {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 822,
-      "potentialPct": 78
+      "topSellerArticles": 775,
+      "potentialPct": 79
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 736,
+      "topSellerArticles": 740,
       "potentialPct": 80
     },
     {
       "name": "Darty",
-      "topSellerArticles": 581,
-      "potentialPct": 84
+      "topSellerArticles": 657,
+      "potentialPct": 82
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 576,
+      "topSellerArticles": 572,
       "potentialPct": 84
     },
     {
       "name": "But",
-      "topSellerArticles": 473,
+      "topSellerArticles": 479,
       "potentialPct": 87
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 280,
-      "potentialPct": 92
+      "topSellerArticles": 170,
+      "potentialPct": 95
     },
     {
       "name": "Underdog",
-      "topSellerArticles": 24,
+      "topSellerArticles": 22,
       "potentialPct": 99
     }
   ]

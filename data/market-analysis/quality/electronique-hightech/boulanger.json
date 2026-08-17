@@ -1,35 +1,35 @@
 {
   "slug": "boulanger",
   "name": "Boulanger",
-  "articlesAnalysed": 246434,
-  "qualityScore": 55,
+  "articlesAnalysed": 236931,
+  "qualityScore": 54,
   "globalGrades": {
     "Aplus": 0,
     "A": 3,
-    "B": 10,
-    "C": 25,
-    "D": 16,
-    "E": 26,
+    "B": 9,
+    "C": 24,
+    "D": 17,
+    "E": 27,
     "F": 20
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 3,
-      "A": 13,
+      "A": 14,
       "B": 18,
       "C": 40,
-      "D": 11,
+      "D": 10,
       "E": 9,
       "F": 7
     },
     "Image": {
-      "Aplus": 29,
+      "Aplus": 28,
       "A": 4,
       "B": 9,
-      "C": 15,
+      "C": 16,
       "D": 0,
       "E": 11,
-      "F": 31
+      "F": 32
     },
     "Vidéo": {
       "Aplus": 1,
@@ -43,11 +43,11 @@
     "Description": {
       "Aplus": 20,
       "A": 5,
-      "B": 6,
-      "C": 9,
-      "D": 5,
+      "B": 5,
+      "C": 8,
+      "D": 6,
       "E": 4,
-      "F": 51
+      "F": 53
     }
   }
 }
