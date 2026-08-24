@@ -1,13 +1,13 @@
 {
   "slug": "alpiniste",
   "name": "Alpiniste",
-  "articlesAnalysed": 472326,
-  "qualityScore": 67,
+  "articlesAnalysed": 470331,
+  "qualityScore": 66,
   "globalGrades": {
     "Aplus": 2,
     "A": 18,
     "B": 14,
-    "C": 25,
+    "C": 26,
     "D": 24,
     "E": 13,
     "F": 4
@@ -28,8 +28,8 @@
       "B": 7,
       "C": 6,
       "D": 0,
-      "E": 41,
-      "F": 5
+      "E": 40,
+      "F": 6
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 96
     },
     "Description": {
-      "Aplus": 32,
+      "Aplus": 31,
       "A": 4,
       "B": 3,
       "C": 3,
       "D": 1,
       "E": 0,
-      "F": 55
+      "F": 57
     }
   }
 }

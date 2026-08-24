@@ -1,20 +1,20 @@
 {
   "slug": "amazon",
   "name": "Amazon",
-  "articlesAnalysed": 35019,
+  "articlesAnalysed": 34555,
   "qualityScore": 57,
   "globalGrades": {
     "Aplus": 0,
     "A": 22,
     "B": 12,
-    "C": 20,
+    "C": 19,
     "D": 7,
-    "E": 23,
+    "E": 22,
     "F": 17
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 74,
+      "Aplus": 73,
       "A": 3,
       "B": 3,
       "C": 4,

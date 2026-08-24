@@ -1,124 +1,135 @@
 {
   "slug": "",
   "name": "",
-  "priceIndex": 98,
+  "priceIndex": 104,
   "weeks": [
-    "2026-07-07",
     "2026-07-14",
     "2026-07-21",
     "2026-07-28",
     "2026-08-04",
-    "2026-08-11"
+    "2026-08-11",
+    "2026-08-19"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        115,
         111,
         112,
         114,
         103,
-        103
+        103,
+        107
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        121,
         120,
         117,
         116,
         114,
-        107
+        107,
+        114
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        121,
         119,
         117,
         123,
         109,
-        112
+        112,
+        115
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
         109,
-        109,
         111,
         110,
         108,
-        103
+        103,
+        112
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        113,
         109,
         109,
         113,
         108,
-        107
+        107,
+        109
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        99,
         91,
         108,
         105,
         107,
-        108
+        108,
+        112
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        116,
         120,
         119,
         119,
         113,
-        109
+        109,
+        111
       ]
     },
     {
       "name": "Trekkinn",
       "piHistory": [
-        111,
         106,
         109,
         108,
         105,
-        105
+        105,
+        108
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        108,
         102,
         101,
         103,
         99,
-        98
+        98,
+        99
       ]
     },
     {
       "name": "Zalando",
       "piHistory": [
-        119,
         110,
         104,
         99,
         89,
-        89
+        89,
+        90
+      ]
+    },
+    {
+      "name": "Barrabes",
+      "piHistory": [
+        null,
+        null,
+        null,
+        null,
+        106,
+        101
       ]
     }
   ],
@@ -127,25 +138,25 @@
     {
       "pack": "Chaussures de trail",
       "matched": 2,
-      "priceIndex": 97,
+      "priceIndex": 132,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 100
+    },
+    {
+      "pack": "Chaussures de randonnée",
+      "matched": 2,
+      "priceIndex": 94,
       "lowerPct": 50,
       "equalPct": 50,
       "higherPct": 0
     },
     {
-      "pack": "Chaussures de randonnée",
+      "pack": "Sac à dos",
       "matched": 0,
       "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 0
-    },
-    {
-      "pack": "Sac à dos",
-      "matched": 1,
-      "priceIndex": 100,
-      "lowerPct": 0,
-      "equalPct": 100,
       "higherPct": 0
     },
     {
@@ -182,9 +193,9 @@
     },
     {
       "pack": "Short",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
+      "matched": 1,
+      "priceIndex": 70,
+      "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     }

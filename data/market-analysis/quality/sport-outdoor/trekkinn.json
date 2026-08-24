@@ -1,53 +1,53 @@
 {
   "slug": "trekkinn",
   "name": "Trekkinn",
-  "articlesAnalysed": 131912,
-  "qualityScore": 57,
+  "articlesAnalysed": 194766,
+  "qualityScore": 47,
   "globalGrades": {
     "Aplus": 1,
-    "A": 9,
-    "B": 18,
-    "C": 35,
-    "D": 13,
-    "E": 5,
-    "F": 19
+    "A": 7,
+    "B": 16,
+    "C": 27,
+    "D": 10,
+    "E": 4,
+    "F": 35
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 22,
-      "A": 10,
-      "B": 12,
-      "C": 21,
-      "D": 11,
-      "E": 5,
-      "F": 19
+      "Aplus": 19,
+      "A": 8,
+      "B": 10,
+      "C": 17,
+      "D": 8,
+      "E": 4,
+      "F": 35
     },
     "Image": {
-      "Aplus": 38,
-      "A": 8,
-      "B": 11,
-      "C": 7,
+      "Aplus": 32,
+      "A": 6,
+      "B": 9,
+      "C": 6,
       "D": 0,
-      "E": 8,
-      "F": 27
+      "E": 6,
+      "F": 42
     },
     "Vidéo": {
       "Aplus": 0,
-      "A": 8,
+      "A": 7,
       "B": 0,
       "C": 0,
       "D": 0,
       "E": 0,
-      "F": 92
+      "F": 93
     },
     "Description": {
-      "Aplus": 19,
+      "Aplus": 15,
       "A": 3,
-      "B": 5,
-      "C": 23,
-      "D": 23,
-      "E": 5,
-      "F": 21
+      "B": 4,
+      "C": 18,
+      "D": 19,
+      "E": 4,
+      "F": 37
     }
   }
 }
