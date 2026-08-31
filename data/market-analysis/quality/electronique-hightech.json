@@ -2,67 +2,67 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 1068750,
-    "qualityScore": 76
+    "articlesAnalysed": 1235448,
+    "qualityScore": 71
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 468447,
+    "articlesAnalysed": 479986,
     "qualityScore": 70
   },
   {
     "slug": "carrefour",
     "name": "Carrefour",
-    "articlesAnalysed": 556823,
-    "qualityScore": 66
-  },
-  {
-    "slug": "conforama",
-    "name": "Conforama",
-    "articlesAnalysed": 519887,
-    "qualityScore": 62
+    "articlesAnalysed": 528635,
+    "qualityScore": 69
   },
   {
     "slug": "underdog",
     "name": "Underdog",
-    "articlesAnalysed": 301,
-    "qualityScore": 61
-  },
-  {
-    "slug": "auchan",
-    "name": "Auchan",
-    "articlesAnalysed": 611,
-    "qualityScore": 60
+    "articlesAnalysed": 432,
+    "qualityScore": 65
   },
   {
     "slug": "rue-du-commerce",
     "name": "Rue du Commerce",
-    "articlesAnalysed": 732360,
-    "qualityScore": 57
+    "articlesAnalysed": 636138,
+    "qualityScore": 60
   },
   {
-    "slug": "amazon",
-    "name": "Amazon",
-    "articlesAnalysed": 34555,
-    "qualityScore": 57
-  },
-  {
-    "slug": "boulanger",
-    "name": "Boulanger",
-    "articlesAnalysed": 249217,
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 169011,
     "qualityScore": 55
-  },
-  {
-    "slug": "fnac",
-    "name": "Fnac",
-    "articlesAnalysed": 722779,
-    "qualityScore": 52
   },
   {
     "slug": "darty",
     "name": "Darty",
-    "articlesAnalysed": 716045,
+    "articlesAnalysed": 694382,
+    "qualityScore": 54
+  },
+  {
+    "slug": "boulanger",
+    "name": "Boulanger",
+    "articlesAnalysed": 244241,
     "qualityScore": 52
+  },
+  {
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 759163,
+    "qualityScore": 51
+  },
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 307741,
+    "qualityScore": 51
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "articlesAnalysed": 44970,
+    "qualityScore": 50
   }
 ]

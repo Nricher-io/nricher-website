@@ -1,53 +1,53 @@
 {
   "slug": "cdiscount",
   "name": "CDiscount",
-  "articlesAnalysed": 1068750,
-  "qualityScore": 76,
+  "articlesAnalysed": 1235448,
+  "qualityScore": 71,
   "globalGrades": {
-    "Aplus": 13,
-    "A": 19,
-    "B": 26,
-    "C": 24,
-    "D": 11,
-    "E": 5,
-    "F": 2
+    "Aplus": 7,
+    "A": 16,
+    "B": 22,
+    "C": 31,
+    "D": 14,
+    "E": 8,
+    "F": 3
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 76,
+      "Aplus": 78,
       "A": 5,
       "B": 4,
-      "C": 7,
+      "C": 6,
       "D": 3,
       "E": 2,
       "F": 2
     },
     "Image": {
-      "Aplus": 36,
-      "A": 8,
-      "B": 23,
-      "C": 6,
+      "Aplus": 21,
+      "A": 5,
+      "B": 18,
+      "C": 5,
       "D": 0,
-      "E": 7,
-      "F": 20
+      "E": 6,
+      "F": 45
     },
     "Vidéo": {
-      "Aplus": 41,
-      "A": 7,
+      "Aplus": 21,
+      "A": 5,
       "B": 0,
       "C": 0,
       "D": 0,
       "E": 0,
-      "F": 52
+      "F": 74
     },
     "Description": {
-      "Aplus": 39,
+      "Aplus": 38,
       "A": 7,
       "B": 7,
       "C": 11,
       "D": 8,
       "E": 10,
-      "F": 16
+      "F": 19
     }
   }
 }

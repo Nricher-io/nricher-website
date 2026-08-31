@@ -1,40 +1,40 @@
 {
   "packName": "Tablette",
-  "totalArticles": 5212,
-  "topSellersCount": 2097,
+  "totalArticles": 5235,
+  "topSellersCount": 2037,
   "topPct": 29,
-  "midPct": 31,
-  "lowPct": 40,
+  "midPct": 32,
+  "lowPct": 39,
   "ranking": [
     {
       "name": "Cdiscount",
-      "topSellerArticles": 2564,
+      "topSellerArticles": 2558,
       "potentialPct": 51
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 1610,
+      "topSellerArticles": 1606,
       "potentialPct": 69
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 1594,
-      "potentialPct": 69
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 1548,
+      "topSellerArticles": 1588,
       "potentialPct": 70
     },
     {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 1518,
+      "potentialPct": 71
+    },
+    {
       "name": "Boulanger",
-      "topSellerArticles": 654,
-      "potentialPct": 87
+      "topSellerArticles": 638,
+      "potentialPct": 88
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 423,
-      "potentialPct": 92
+      "topSellerArticles": 361,
+      "potentialPct": 93
     },
     {
       "name": "Darty",
@@ -42,8 +42,13 @@
       "potentialPct": 95
     },
     {
+      "name": "Auchan",
+      "topSellerArticles": 238,
+      "potentialPct": 95
+    },
+    {
       "name": "But",
-      "topSellerArticles": 155,
+      "topSellerArticles": 172,
       "potentialPct": 97
     }
   ]

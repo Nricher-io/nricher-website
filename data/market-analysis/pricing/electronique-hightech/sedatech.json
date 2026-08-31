@@ -3,76 +3,87 @@
   "name": "Sedatech",
   "priceIndex": 101,
   "weeks": [
-    "2026-07-14",
     "2026-07-21",
     "2026-07-28",
     "2026-08-04",
     "2026-08-11",
-    "2026-08-19"
+    "2026-08-19",
+    "2026-08-25"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        136,
         129,
         122,
         142,
         138,
-        131
+        131,
+        136
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        125,
         131,
         127,
         135,
         128,
-        130
+        130,
+        127
+      ]
+    },
+    {
+      "name": "Andlight",
+      "piHistory": [
+        128,
+        126,
+        125,
+        119,
+        124,
+        123
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
         121,
-        121,
         114,
         116,
         129,
-        137
+        137,
+        127
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        111,
         112,
         111,
         110,
         110,
-        110
+        110,
+        136
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        128,
         134,
         135,
         130,
         128,
-        130
+        130,
+        127
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        143,
         142,
         138,
         144,
+        139,
         139,
         139
       ]
@@ -80,155 +91,144 @@
     {
       "name": "BUT",
       "piHistory": [
-        114,
         108,
         117,
         110,
         109,
-        110
+        110,
+        107
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        146,
         152,
         154,
         158,
         155,
-        158
+        158,
+        151
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        109,
         115,
         116,
         111,
         109,
-        111
+        111,
+        106
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        128,
         136,
         131,
         130,
         127,
-        130
+        130,
+        128
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        107,
         108,
         111,
         110,
         110,
-        110
+        110,
+        109
       ]
     },
     {
       "name": "Bruneau",
       "piHistory": [
-        140,
         149,
         122,
         137,
         131,
-        129
+        129,
+        119
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        113,
         109,
         110,
         112,
         114,
-        111
+        111,
+        114
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
-        105,
         106,
         107,
         111,
         110,
-        110
+        110,
+        109
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        113,
         107,
         117,
         113,
         113,
-        115
+        115,
+        110
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        109,
         116,
         110,
         114,
         108,
-        109
+        109,
+        106
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
-        102,
         103,
         103,
         102,
         102,
+        103,
         103
       ]
     },
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        114,
         118,
         115,
         112,
         113,
-        113
+        113,
+        111
       ]
     },
     {
       "name": "Fnac",
       "piHistory": [
-        107,
         109,
         101,
         111,
         109,
+        108,
         108
-      ]
-    },
-    {
-      "name": "Jardindeco",
-      "piHistory": [
-        177,
-        182,
-        174,
-        144,
-        145,
-        143
       ]
     }
   ],
@@ -247,8 +247,8 @@
       "matched": 16,
       "priceIndex": 101,
       "lowerPct": 0,
-      "equalPct": 32,
-      "higherPct": 68
+      "equalPct": 33,
+      "higherPct": 67
     },
     {
       "pack": "Télévision",
@@ -276,11 +276,11 @@
     },
     {
       "pack": "Ordinateur de bureau",
-      "matched": 532,
+      "matched": 534,
       "priceIndex": 101,
-      "lowerPct": 0,
-      "equalPct": 32,
-      "higherPct": 68
+      "lowerPct": 3,
+      "equalPct": 24,
+      "higherPct": 73
     },
     {
       "pack": "Enceinte audio",
