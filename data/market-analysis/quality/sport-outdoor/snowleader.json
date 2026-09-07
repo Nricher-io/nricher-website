@@ -1,7 +1,7 @@
 {
   "slug": "snowleader",
   "name": "Snowleader",
-  "articlesAnalysed": 73622,
+  "articlesAnalysed": 76948,
   "qualityScore": 42,
   "globalGrades": {
     "Aplus": 0,
@@ -10,7 +10,7 @@
     "C": 3,
     "D": 15,
     "E": 43,
-    "F": 38
+    "F": 39
   },
   "criteriaGrades": {
     "Titre": {
@@ -29,7 +29,7 @@
       "C": 1,
       "D": 0,
       "E": 1,
-      "F": 96
+      "F": 97
     },
     "Vidéo": {
       "Aplus": 0,

@@ -2,13 +2,13 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 1235448,
+    "articlesAnalysed": 1274798,
     "qualityScore": 71
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 479986,
+    "articlesAnalysed": 486683,
     "qualityScore": 70
   },
   {
@@ -20,7 +20,7 @@
   {
     "slug": "underdog",
     "name": "Underdog",
-    "articlesAnalysed": 432,
+    "articlesAnalysed": 518,
     "qualityScore": 65
   },
   {
@@ -30,39 +30,39 @@
     "qualityScore": 60
   },
   {
-    "slug": "conforama",
-    "name": "Conforama",
-    "articlesAnalysed": 169011,
-    "qualityScore": 55
-  },
-  {
     "slug": "darty",
     "name": "Darty",
     "articlesAnalysed": 694382,
     "qualityScore": 54
   },
   {
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 257253,
+    "qualityScore": 54
+  },
+  {
     "slug": "boulanger",
     "name": "Boulanger",
-    "articlesAnalysed": 244241,
+    "articlesAnalysed": 245029,
     "qualityScore": 52
   },
   {
     "slug": "fnac",
     "name": "Fnac",
-    "articlesAnalysed": 759163,
+    "articlesAnalysed": 777768,
     "qualityScore": 51
   },
   {
     "slug": "auchan",
     "name": "Auchan",
-    "articlesAnalysed": 307741,
+    "articlesAnalysed": 313114,
     "qualityScore": 51
   },
   {
     "slug": "amazon",
     "name": "Amazon",
-    "articlesAnalysed": 44970,
-    "qualityScore": 50
+    "articlesAnalysed": 300320,
+    "qualityScore": 49
   }
 ]

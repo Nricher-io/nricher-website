@@ -34,6 +34,10 @@
         "name": "Sports Partners"
       },
       {
+        "slug": "",
+        "name": ""
+      },
+      {
         "slug": "zalando",
         "name": "Zalando"
       },
@@ -46,12 +50,12 @@
         "name": "Alltricks"
       },
       {
-        "slug": "ekosport",
-        "name": "Ekosport"
-      },
-      {
         "slug": "snowleader",
         "name": "Snowleader"
+      },
+      {
+        "slug": "ekosport",
+        "name": "Ekosport"
       },
       {
         "slug": "barrabes",
@@ -68,10 +72,6 @@
       {
         "slug": "snowinn",
         "name": "Snowinn"
-      },
-      {
-        "slug": "",
-        "name": ""
       },
       {
         "slug": "trekkinn",
@@ -145,48 +145,60 @@
     "name": "Électronique & High-Tech",
     "companies": [
       {
-        "slug": "multishop",
-        "name": "Multishop"
-      },
-      {
-        "slug": "as-discount",
-        "name": "As Discount"
+        "slug": "monsieurplus",
+        "name": "Monsieurplus"
       },
       {
         "slug": "kiatoo",
         "name": "Kiatoo"
       },
       {
-        "slug": "auchan",
-        "name": "Auchan"
+        "slug": "zenkaa",
+        "name": "Zenkaa"
       },
       {
-        "slug": "zoomici",
-        "name": "Zoomici"
+        "slug": "as-discount",
+        "name": "As Discount"
       },
       {
         "slug": "la-boutique-du-net",
         "name": "La Boutique Du Net"
       },
       {
+        "slug": "multishop",
+        "name": "Multishop"
+      },
+      {
+        "slug": "super10count",
+        "name": "Super10count"
+      },
+      {
+        "slug": "auchan",
+        "name": "Auchan"
+      },
+      {
+        "slug": "icoza",
+        "name": "Icoza"
+      },
+      {
         "slug": "topbiz",
         "name": "Topbiz"
       },
       {
-        "slug": "sono-energie",
-        "name": "Sono Energie"
-      },
-      {
-        "slug": "easylounge",
-        "name": "Easylounge"
+        "slug": "digital-bay",
+        "name": "Digital Bay"
       },
       {
         "slug": "sedatech",
         "name": "Sedatech"
       },
       {
-        "slug": "digital-bay",
-        "name": "Digital Bay"
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "carrefour",
+        "name": "Carrefour"
       },
       {
         "slug": "house-partners",
@@ -197,52 +209,36 @@
         "name": "Darty"
       },
       {
-        "slug": "procomponentes",
-        "name": "Procomponentes"
-      },
-      {
-        "slug": "warenwelt-24",
-        "name": "Warenwelt 24"
-      },
-      {
-        "slug": "zenkaa",
-        "name": "Zenkaa"
-      },
-      {
-        "slug": "carrefour",
-        "name": "Carrefour"
-      },
-      {
         "slug": "villatech",
         "name": "Villatech"
-      },
-      {
-        "slug": "boulanger",
-        "name": "Boulanger"
-      },
-      {
-        "slug": "2kings",
-        "name": "2kings"
-      },
-      {
-        "slug": "yonis-shop",
-        "name": "Yonis Shop"
       },
       {
         "slug": "gpasplus",
         "name": "Gpasplus"
       },
       {
-        "slug": "icoza",
-        "name": "Icoza"
-      },
-      {
         "slug": "",
         "name": ""
       },
       {
-        "slug": "ecofone",
-        "name": "Ecofone"
+        "slug": "2kings",
+        "name": "2kings"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "rue-du-commerce",
+        "name": "Rue Du Commerce"
+      },
+      {
+        "slug": "yonis-shop",
+        "name": "Yonis Shop"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
       },
       {
         "slug": "cdiscount",
@@ -253,16 +249,20 @@
         "name": "Rps Technologies"
       },
       {
-        "slug": "rue-du-commerce",
-        "name": "Rue Du Commerce"
+        "slug": "ecofone",
+        "name": "Ecofone"
       },
       {
         "slug": "alloccaz",
         "name": "Alloccaz"
       },
       {
-        "slug": "super10count",
-        "name": "Super10count"
+        "slug": "procomponentes",
+        "name": "Procomponentes"
+      },
+      {
+        "slug": "easylounge",
+        "name": "Easylounge"
       }
     ],
     "qualityCompanies": [
@@ -287,12 +287,12 @@
         "name": "Rue du Commerce"
       },
       {
-        "slug": "conforama",
-        "name": "Conforama"
-      },
-      {
         "slug": "darty",
         "name": "Darty"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
       },
       {
         "slug": "boulanger",

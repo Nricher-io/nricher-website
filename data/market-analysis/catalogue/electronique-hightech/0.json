@@ -1,55 +1,55 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 20057,
-  "topSellersCount": 6372,
-  "topPct": 25,
-  "midPct": 32,
-  "lowPct": 43,
+  "totalArticles": 20401,
+  "topSellersCount": 5997,
+  "topPct": 23,
+  "midPct": 31,
+  "lowPct": 46,
   "ranking": [
     {
       "name": "Cdiscount",
-      "topSellerArticles": 10351,
-      "potentialPct": 48
+      "topSellerArticles": 10344,
+      "potentialPct": 49
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 5859,
-      "potentialPct": 71
+      "topSellerArticles": 6377,
+      "potentialPct": 69
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 5354,
+      "topSellerArticles": 5555,
       "potentialPct": 73
     },
     {
       "name": "Darty",
-      "topSellerArticles": 4591,
+      "topSellerArticles": 4615,
       "potentialPct": 77
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 3679,
+      "topSellerArticles": 3681,
       "potentialPct": 82
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 1926,
-      "potentialPct": 90
+      "topSellerArticles": 1916,
+      "potentialPct": 91
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 1346,
-      "potentialPct": 93
+      "topSellerArticles": 1606,
+      "potentialPct": 92
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 839,
-      "potentialPct": 96
+      "topSellerArticles": 991,
+      "potentialPct": 95
     },
     {
       "name": "But",
-      "topSellerArticles": 506,
-      "potentialPct": 97
+      "topSellerArticles": 508,
+      "potentialPct": 98
     }
   ]
 }
