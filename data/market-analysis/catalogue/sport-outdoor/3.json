@@ -1,49 +1,49 @@
 {
   "packName": "Veste",
-  "totalArticles": 4725,
-  "topSellersCount": 1436,
-  "topPct": 25,
-  "midPct": 26,
-  "lowPct": 49,
+  "totalArticles": 4683,
+  "topSellersCount": 1344,
+  "topPct": 24,
+  "midPct": 33,
+  "lowPct": 43,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 2418,
-      "potentialPct": 49
+      "topSellerArticles": 2339,
+      "potentialPct": 50
     },
     {
       "name": "Alpiniste",
-      "topSellerArticles": 1437,
-      "potentialPct": 70
+      "topSellerArticles": 1359,
+      "potentialPct": 71
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 1104,
-      "potentialPct": 77
+      "topSellerArticles": 1168,
+      "potentialPct": 75
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 811,
+      "topSellerArticles": 805,
       "potentialPct": 83
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 680,
-      "potentialPct": 86
+      "topSellerArticles": 695,
+      "potentialPct": 85
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 484,
+      "topSellerArticles": 452,
       "potentialPct": 90
     },
     {
       "name": "Irun",
-      "topSellerArticles": 219,
+      "topSellerArticles": 214,
       "potentialPct": 95
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 164,
+      "topSellerArticles": 160,
       "potentialPct": 97
     }
   ]

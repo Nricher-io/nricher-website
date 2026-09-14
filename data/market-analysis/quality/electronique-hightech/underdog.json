@@ -1,22 +1,22 @@
 {
   "slug": "underdog",
   "name": "Underdog",
-  "articlesAnalysed": 518,
-  "qualityScore": 65,
+  "articlesAnalysed": 493,
+  "qualityScore": 66,
   "globalGrades": {
     "Aplus": 0,
     "A": 0,
     "B": 0,
     "C": 96,
-    "D": 4,
-    "E": 0,
+    "D": 3,
+    "E": 1,
     "F": 0
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 75,
-      "A": 22,
-      "B": 3,
+      "Aplus": 78,
+      "A": 20,
+      "B": 2,
       "C": 0,
       "D": 0,
       "E": 0,
@@ -41,11 +41,11 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 91,
-      "A": 4,
-      "B": 2,
+      "Aplus": 93,
+      "A": 3,
+      "B": 1,
       "C": 1,
-      "D": 1,
+      "D": 0,
       "E": 0,
       "F": 1
     }

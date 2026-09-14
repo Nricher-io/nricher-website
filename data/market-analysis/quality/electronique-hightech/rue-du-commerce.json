@@ -1,30 +1,30 @@
 {
   "slug": "rue-du-commerce",
   "name": "Rue du Commerce",
-  "articlesAnalysed": 636138,
+  "articlesAnalysed": 640071,
   "qualityScore": 60,
   "globalGrades": {
     "Aplus": 0,
-    "A": 5,
+    "A": 4,
     "B": 12,
     "C": 37,
     "D": 23,
-    "E": 13,
-    "F": 10
+    "E": 14,
+    "F": 11
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 14,
-      "A": 6,
+      "A": 5,
       "B": 8,
-      "C": 21,
+      "C": 20,
       "D": 16,
       "E": 16,
       "F": 19
     },
     "Image": {
-      "Aplus": 31,
-      "A": 24,
+      "Aplus": 29,
+      "A": 25,
       "B": 8,
       "C": 15,
       "D": 0,
@@ -41,7 +41,7 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 32,
+      "Aplus": 33,
       "A": 6,
       "B": 5,
       "C": 10,

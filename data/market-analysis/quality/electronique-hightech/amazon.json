@@ -1,35 +1,35 @@
 {
   "slug": "amazon",
   "name": "Amazon",
-  "articlesAnalysed": 300320,
-  "qualityScore": 49,
+  "articlesAnalysed": 406633,
+  "qualityScore": 68,
   "globalGrades": {
     "Aplus": 0,
-    "A": 2,
-    "B": 1,
-    "C": 27,
-    "D": 12,
-    "E": 38,
-    "F": 20
+    "A": 25,
+    "B": 12,
+    "C": 37,
+    "D": 10,
+    "E": 8,
+    "F": 8
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 68,
-      "A": 8,
-      "B": 7,
-      "C": 8,
+      "Aplus": 71,
+      "A": 7,
+      "B": 6,
+      "C": 7,
       "D": 3,
       "E": 2,
       "F": 4
     },
     "Image": {
-      "Aplus": 3,
-      "A": 0,
-      "B": 0,
-      "C": 0,
+      "Aplus": 58,
+      "A": 8,
+      "B": 6,
+      "C": 5,
       "D": 0,
-      "E": 0,
-      "F": 97
+      "E": 5,
+      "F": 18
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 25,
+      "Aplus": 27,
       "A": 4,
-      "B": 3,
-      "C": 5,
-      "D": 3,
+      "B": 4,
+      "C": 6,
+      "D": 4,
       "E": 4,
-      "F": 55
+      "F": 52
     }
   }
 }

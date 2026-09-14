@@ -30,14 +30,6 @@
     "name": "Sport & Outdoor",
     "companies": [
       {
-        "slug": "sports-partners",
-        "name": "Sports Partners"
-      },
-      {
-        "slug": "",
-        "name": ""
-      },
-      {
         "slug": "zalando",
         "name": "Zalando"
       },
@@ -46,12 +38,20 @@
         "name": "Irun"
       },
       {
-        "slug": "alltricks",
-        "name": "Alltricks"
+        "slug": "sports-partners",
+        "name": "Sports Partners"
+      },
+      {
+        "slug": "",
+        "name": ""
       },
       {
         "slug": "snowleader",
         "name": "Snowleader"
+      },
+      {
+        "slug": "alltricks",
+        "name": "Alltricks"
       },
       {
         "slug": "ekosport",
@@ -70,16 +70,16 @@
         "name": "Runnerinn"
       },
       {
-        "slug": "snowinn",
-        "name": "Snowinn"
-      },
-      {
         "slug": "trekkinn",
         "name": "Trekkinn"
       },
       {
         "slug": "glisshop",
         "name": "Glisshop"
+      },
+      {
+        "slug": "snowinn",
+        "name": "Snowinn"
       }
     ],
     "qualityCompanies": [
@@ -92,12 +92,12 @@
         "name": "Alltricks"
       },
       {
-        "slug": "glisshop",
-        "name": "Glisshop"
-      },
-      {
         "slug": "alpiniste",
         "name": "Alpiniste"
+      },
+      {
+        "slug": "glisshop",
+        "name": "Glisshop"
       },
       {
         "slug": "ekosport",
@@ -145,84 +145,96 @@
     "name": "Électronique & High-Tech",
     "companies": [
       {
-        "slug": "monsieurplus",
-        "name": "Monsieurplus"
-      },
-      {
-        "slug": "kiatoo",
-        "name": "Kiatoo"
-      },
-      {
         "slug": "zenkaa",
         "name": "Zenkaa"
       },
       {
-        "slug": "as-discount",
-        "name": "As Discount"
-      },
-      {
-        "slug": "la-boutique-du-net",
-        "name": "La Boutique Du Net"
+        "slug": "leasi",
+        "name": "Leasi"
       },
       {
         "slug": "multishop",
         "name": "Multishop"
       },
       {
+        "slug": "la-boutique-du-net",
+        "name": "La Boutique Du Net"
+      },
+      {
+        "slug": "kiatoo",
+        "name": "Kiatoo"
+      },
+      {
+        "slug": "as-discount",
+        "name": "As Discount"
+      },
+      {
         "slug": "super10count",
         "name": "Super10count"
       },
       {
-        "slug": "auchan",
-        "name": "Auchan"
-      },
-      {
-        "slug": "icoza",
-        "name": "Icoza"
-      },
-      {
-        "slug": "topbiz",
-        "name": "Topbiz"
+        "slug": "easylounge",
+        "name": "Easylounge"
       },
       {
         "slug": "digital-bay",
         "name": "Digital Bay"
       },
       {
-        "slug": "sedatech",
-        "name": "Sedatech"
+        "slug": "icoza",
+        "name": "Icoza"
       },
       {
-        "slug": "zoomici",
-        "name": "Zoomici"
+        "slug": "auchan",
+        "name": "Auchan"
       },
       {
-        "slug": "carrefour",
-        "name": "Carrefour"
+        "slug": "topbiz",
+        "name": "Topbiz"
+      },
+      {
+        "slug": "warenwelt-24",
+        "name": "Warenwelt 24"
       },
       {
         "slug": "house-partners",
         "name": "House Partners"
       },
       {
-        "slug": "darty",
-        "name": "Darty"
+        "slug": "sedatech",
+        "name": "Sedatech"
       },
       {
-        "slug": "villatech",
-        "name": "Villatech"
+        "slug": "monsieurplus",
+        "name": "Monsieurplus"
       },
       {
-        "slug": "gpasplus",
-        "name": "Gpasplus"
+        "slug": "carrefour",
+        "name": "Carrefour"
+      },
+      {
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "2kings",
+        "name": "2kings"
       },
       {
         "slug": "",
         "name": ""
       },
       {
-        "slug": "2kings",
-        "name": "2kings"
+        "slug": "gpasplus",
+        "name": "Gpasplus"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "yonis-shop",
+        "name": "Yonis Shop"
       },
       {
         "slug": "boulanger",
@@ -233,36 +245,24 @@
         "name": "Rue Du Commerce"
       },
       {
-        "slug": "yonis-shop",
-        "name": "Yonis Shop"
-      },
-      {
-        "slug": "amazon",
-        "name": "Amazon"
+        "slug": "ecofone",
+        "name": "Ecofone"
       },
       {
         "slug": "cdiscount",
         "name": "Cdiscount"
       },
       {
-        "slug": "rps-technologies",
-        "name": "Rps Technologies"
-      },
-      {
-        "slug": "ecofone",
-        "name": "Ecofone"
-      },
-      {
         "slug": "alloccaz",
         "name": "Alloccaz"
       },
       {
-        "slug": "procomponentes",
-        "name": "Procomponentes"
+        "slug": "rps-technologies",
+        "name": "Rps Technologies"
       },
       {
-        "slug": "easylounge",
-        "name": "Easylounge"
+        "slug": "amazon",
+        "name": "Amazon"
       }
     ],
     "qualityCompanies": [
@@ -275,40 +275,40 @@
         "name": "BUT"
       },
       {
+        "slug": "conforama",
+        "name": "Conforama"
+      },
+      {
         "slug": "carrefour",
         "name": "Carrefour"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
       },
       {
         "slug": "underdog",
         "name": "Underdog"
       },
       {
+        "slug": "auchan",
+        "name": "Auchan"
+      },
+      {
         "slug": "rue-du-commerce",
         "name": "Rue du Commerce"
-      },
-      {
-        "slug": "darty",
-        "name": "Darty"
-      },
-      {
-        "slug": "conforama",
-        "name": "Conforama"
       },
       {
         "slug": "boulanger",
         "name": "Boulanger"
       },
       {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
         "slug": "fnac",
         "name": "Fnac"
-      },
-      {
-        "slug": "auchan",
-        "name": "Auchan"
-      },
-      {
-        "slug": "amazon",
-        "name": "Amazon"
       }
     ],
     "packs": [

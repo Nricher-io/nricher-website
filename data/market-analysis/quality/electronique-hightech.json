@@ -2,67 +2,67 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 1274798,
-    "qualityScore": 71
+    "articlesAnalysed": 1120259,
+    "qualityScore": 78
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 486683,
-    "qualityScore": 70
-  },
-  {
-    "slug": "carrefour",
-    "name": "Carrefour",
-    "articlesAnalysed": 528635,
-    "qualityScore": 69
-  },
-  {
-    "slug": "underdog",
-    "name": "Underdog",
-    "articlesAnalysed": 518,
-    "qualityScore": 65
-  },
-  {
-    "slug": "rue-du-commerce",
-    "name": "Rue du Commerce",
-    "articlesAnalysed": 636138,
-    "qualityScore": 60
-  },
-  {
-    "slug": "darty",
-    "name": "Darty",
-    "articlesAnalysed": 694382,
-    "qualityScore": 54
+    "articlesAnalysed": 478618,
+    "qualityScore": 78
   },
   {
     "slug": "conforama",
     "name": "Conforama",
-    "articlesAnalysed": 257253,
-    "qualityScore": 54
+    "articlesAnalysed": 694895,
+    "qualityScore": 74
   },
   {
-    "slug": "boulanger",
-    "name": "Boulanger",
-    "articlesAnalysed": 245029,
-    "qualityScore": 52
-  },
-  {
-    "slug": "fnac",
-    "name": "Fnac",
-    "articlesAnalysed": 777768,
-    "qualityScore": 51
-  },
-  {
-    "slug": "auchan",
-    "name": "Auchan",
-    "articlesAnalysed": 313114,
-    "qualityScore": 51
+    "slug": "carrefour",
+    "name": "Carrefour",
+    "articlesAnalysed": 442348,
+    "qualityScore": 71
   },
   {
     "slug": "amazon",
     "name": "Amazon",
-    "articlesAnalysed": 300320,
-    "qualityScore": 49
+    "articlesAnalysed": 406633,
+    "qualityScore": 68
+  },
+  {
+    "slug": "underdog",
+    "name": "Underdog",
+    "articlesAnalysed": 493,
+    "qualityScore": 66
+  },
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 308040,
+    "qualityScore": 62
+  },
+  {
+    "slug": "rue-du-commerce",
+    "name": "Rue du Commerce",
+    "articlesAnalysed": 640071,
+    "qualityScore": 60
+  },
+  {
+    "slug": "boulanger",
+    "name": "Boulanger",
+    "articlesAnalysed": 243903,
+    "qualityScore": 56
+  },
+  {
+    "slug": "darty",
+    "name": "Darty",
+    "articlesAnalysed": 703462,
+    "qualityScore": 54
+  },
+  {
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 745847,
+    "qualityScore": 53
   }
 ]

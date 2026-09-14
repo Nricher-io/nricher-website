@@ -1,35 +1,35 @@
 {
   "slug": "glisshop",
   "name": "Glisshop",
-  "articlesAnalysed": 26476,
-  "qualityScore": 51,
+  "articlesAnalysed": 27043,
+  "qualityScore": 66,
   "globalGrades": {
     "Aplus": 0,
-    "A": 4,
-    "B": 8,
-    "C": 13,
-    "D": 17,
-    "E": 32,
-    "F": 27
+    "A": 6,
+    "B": 18,
+    "C": 47,
+    "D": 20,
+    "E": 8,
+    "F": 2
   },
   "criteriaGrades": {
     "Titre": {
       "Aplus": 8,
       "A": 5,
       "B": 7,
-      "C": 19,
+      "C": 20,
       "D": 18,
       "E": 17,
-      "F": 25
+      "F": 24
     },
     "Image": {
-      "Aplus": 8,
-      "A": 3,
-      "B": 4,
-      "C": 5,
+      "Aplus": 44,
+      "A": 14,
+      "B": 12,
+      "C": 12,
       "D": 0,
-      "E": 6,
-      "F": 74
+      "E": 14,
+      "F": 3
     },
     "Vidéo": {
       "Aplus": 0,

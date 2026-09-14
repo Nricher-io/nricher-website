@@ -1,166 +1,166 @@
 {
   "slug": "digital-bay",
   "name": "Digital Bay",
-  "priceIndex": 100,
+  "priceIndex": 99,
   "weeks": [
-    "2026-07-28",
     "2026-08-04",
     "2026-08-11",
     "2026-08-19",
     "2026-08-25",
-    "2026-09-01"
+    "2026-09-01",
+    "2026-09-08"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        122,
         142,
         138,
         131,
         136,
-        136
+        136,
+        137
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        127,
         135,
         128,
         130,
         127,
-        127
-      ]
-    },
-    {
-      "name": "Andlight",
-      "piHistory": [
-        126,
-        125,
-        119,
-        124,
-        123,
-        131
-      ]
-    },
-    {
-      "name": "Aubert",
-      "piHistory": [
-        114,
-        116,
-        129,
-        137,
-        127,
-        130
-      ]
-    },
-    {
-      "name": "Auchan",
-      "piHistory": [
-        111,
-        110,
-        110,
-        110,
-        136,
-        109
-      ]
-    },
-    {
-      "name": "Autourdebebe",
-      "piHistory": [
-        135,
-        130,
-        128,
-        130,
         127,
         126
       ]
     },
     {
+      "name": "Andlight",
+      "piHistory": [
+        125,
+        119,
+        124,
+        123,
+        131,
+        125
+      ]
+    },
+    {
+      "name": "Aubert",
+      "piHistory": [
+        116,
+        129,
+        137,
+        127,
+        130,
+        129
+      ]
+    },
+    {
+      "name": "Auchan",
+      "piHistory": [
+        110,
+        110,
+        110,
+        136,
+        109,
+        106
+      ]
+    },
+    {
+      "name": "Autourdebebe",
+      "piHistory": [
+        130,
+        128,
+        130,
+        127,
+        126,
+        124
+      ]
+    },
+    {
       "name": "Avenuedesjeux",
       "piHistory": [
-        138,
         144,
         139,
         139,
         139,
+        138,
         138
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        117,
         110,
         109,
         110,
         107,
-        107
+        107,
+        108
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        154,
         158,
         155,
         158,
         151,
-        148
+        148,
+        154
       ]
     },
     {
       "name": "Bebe9",
       "piHistory": [
-        116,
         111,
         109,
         111,
         106,
-        110
+        110,
+        109
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
-        131,
         130,
         127,
         130,
         128,
-        128
+        128,
+        129
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        111,
         110,
         110,
         110,
         109,
-        109
+        109,
+        112
       ]
     },
     {
       "name": "Bruneau",
       "piHistory": [
-        122,
         137,
         131,
         129,
         119,
-        111
+        111,
+        109
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        110,
         112,
         114,
         111,
+        114,
         114,
         114
       ]
@@ -168,21 +168,21 @@
     {
       "name": "Carrefour",
       "piHistory": [
-        107,
         111,
         110,
         110,
         109,
-        109
+        109,
+        110
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
-        117,
         113,
         113,
         115,
+        110,
         110,
         110
       ]
@@ -190,20 +190,20 @@
     {
       "name": "Conforama",
       "piHistory": [
-        110,
         114,
         108,
         109,
         106,
-        106
+        106,
+        107
       ]
     },
     {
       "name": "Darty",
       "piHistory": [
+        102,
+        102,
         103,
-        102,
-        102,
         103,
         103,
         103
@@ -212,23 +212,23 @@
     {
       "name": "Electromenager_compare",
       "piHistory": [
-        115,
         112,
         113,
         113,
         111,
-        112
+        112,
+        110
       ]
     },
     {
       "name": "Fnac",
       "piHistory": [
-        101,
         111,
         109,
         108,
         108,
-        108
+        108,
+        107
       ]
     }
   ],
@@ -236,59 +236,59 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 229,
+      "matched": 217,
       "priceIndex": 100,
-      "lowerPct": 56,
-      "equalPct": 20,
-      "higherPct": 24
+      "lowerPct": 57,
+      "equalPct": 15,
+      "higherPct": 27
     },
     {
       "pack": "Ordinateur portable",
       "matched": 5,
-      "priceIndex": 109,
-      "lowerPct": 0,
+      "priceIndex": 103,
+      "lowerPct": 20,
       "equalPct": 20,
-      "higherPct": 80
+      "higherPct": 60
     },
     {
       "pack": "Télévision",
-      "matched": 6,
-      "priceIndex": 99,
-      "lowerPct": 57,
-      "equalPct": 14,
-      "higherPct": 29
+      "matched": 3,
+      "priceIndex": 100,
+      "lowerPct": 33,
+      "equalPct": 67,
+      "higherPct": 0
     },
     {
       "pack": "Casque audio",
-      "matched": 35,
-      "priceIndex": 100,
-      "lowerPct": 44,
-      "equalPct": 10,
-      "higherPct": 46
+      "matched": 31,
+      "priceIndex": 95,
+      "lowerPct": 49,
+      "equalPct": 15,
+      "higherPct": 36
     },
     {
       "pack": "Tablette",
-      "matched": 20,
-      "priceIndex": 94,
-      "lowerPct": 84,
-      "equalPct": 3,
-      "higherPct": 13
+      "matched": 19,
+      "priceIndex": 98,
+      "lowerPct": 71,
+      "equalPct": 13,
+      "higherPct": 16
     },
     {
       "pack": "Ordinateur de bureau",
-      "matched": 1,
-      "priceIndex": 100,
-      "lowerPct": 0,
-      "equalPct": 100,
+      "matched": 2,
+      "priceIndex": 87,
+      "lowerPct": 100,
+      "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Enceinte audio",
-      "matched": 14,
-      "priceIndex": 95,
-      "lowerPct": 42,
-      "equalPct": 21,
-      "higherPct": 37
+      "matched": 11,
+      "priceIndex": 91,
+      "lowerPct": 46,
+      "equalPct": 23,
+      "higherPct": 31
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
   "slug": "snowleader",
   "name": "Snowleader",
-  "articlesAnalysed": 76948,
-  "qualityScore": 42,
+  "articlesAnalysed": 78797,
+  "qualityScore": 63,
   "globalGrades": {
     "Aplus": 0,
-    "A": 0,
-    "B": 0,
-    "C": 3,
-    "D": 15,
-    "E": 43,
-    "F": 39
+    "A": 1,
+    "B": 11,
+    "C": 52,
+    "D": 22,
+    "E": 9,
+    "F": 5
   },
   "criteriaGrades": {
     "Titre": {
@@ -23,13 +23,13 @@
       "F": 28
     },
     "Image": {
-      "Aplus": 1,
-      "A": 1,
-      "B": 1,
-      "C": 1,
+      "Aplus": 54,
+      "A": 13,
+      "B": 11,
+      "C": 9,
       "D": 0,
-      "E": 1,
-      "F": 97
+      "E": 7,
+      "F": 5
     },
     "Vidéo": {
       "Aplus": 0,
