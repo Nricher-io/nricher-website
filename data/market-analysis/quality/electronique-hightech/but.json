@@ -1,35 +1,35 @@
 {
   "slug": "but",
   "name": "BUT",
-  "articlesAnalysed": 478618,
-  "qualityScore": 78,
+  "articlesAnalysed": 35673,
+  "qualityScore": 76,
   "globalGrades": {
     "Aplus": 0,
-    "A": 36,
+    "A": 32,
     "B": 30,
-    "C": 23,
-    "D": 7,
-    "E": 3,
-    "F": 1
+    "C": 24,
+    "D": 8,
+    "E": 4,
+    "F": 2
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 51,
-      "A": 12,
-      "B": 12,
-      "C": 15,
-      "D": 6,
+      "Aplus": 36,
+      "A": 13,
+      "B": 17,
+      "C": 21,
+      "D": 8,
       "E": 3,
       "F": 2
     },
     "Image": {
-      "Aplus": 71,
-      "A": 9,
+      "Aplus": 64,
+      "A": 10,
       "B": 7,
-      "C": 4,
+      "C": 5,
       "D": 0,
-      "E": 3,
-      "F": 5
+      "E": 5,
+      "F": 9
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 45,
-      "A": 9,
-      "B": 9,
-      "C": 11,
+      "Aplus": 49,
+      "A": 10,
+      "B": 10,
+      "C": 10,
       "D": 6,
-      "E": 7,
-      "F": 13
+      "E": 5,
+      "F": 10
     }
   }
 }

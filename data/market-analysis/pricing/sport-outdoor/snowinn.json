@@ -1,101 +1,101 @@
 {
   "slug": "snowinn",
   "name": "Snowinn",
-  "priceIndex": 118,
+  "priceIndex": 120,
   "weeks": [
-    "2026-08-04",
     "2026-08-11",
     "2026-08-19",
     "2026-08-25",
     "2026-09-01",
-    "2026-09-08"
+    "2026-09-08",
+    "2026-09-15"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
         103,
-        103,
         107,
         108,
         103,
+        105,
         105
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        114,
         107,
         114,
         107,
         128,
-        107
+        107,
+        113
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        109,
         112,
         115,
         117,
         115,
-        115
+        115,
+        116
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
-        108,
         103,
         112,
         110,
         108,
-        110
+        110,
+        113
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        99,
         98,
         99,
         102,
         97,
-        99
+        99,
+        100
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        108,
         107,
         109,
         112,
         112,
-        112
+        112,
+        115
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        107,
         108,
         112,
         116,
         118,
-        121
+        121,
+        124
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        113,
         109,
         111,
         111,
         109,
+        107,
         107
       ]
     },
@@ -103,10 +103,10 @@
       "name": "Trekkinn",
       "piHistory": [
         105,
-        105,
         108,
         112,
         112,
+        113,
         113
       ]
     },
@@ -114,32 +114,26 @@
       "name": "Zalando",
       "piHistory": [
         89,
-        89,
         90,
         93,
         94,
-        95
+        95,
+        94
       ]
     },
     {
       "name": "Barrabes",
       "piHistory": [
-        null,
         106,
         101,
         102,
         103,
-        103
+        103,
+        104
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-08-04",
-      "cheaperPct": 46,
-      "equalPct": 3,
-      "higherPct": 51
-    },
     {
       "week": "2026-08-11",
       "cheaperPct": 40,
@@ -169,6 +163,12 @@
       "cheaperPct": 23,
       "equalPct": 3,
       "higherPct": 74
+    },
+    {
+      "week": "2026-09-15",
+      "cheaperPct": 20,
+      "equalPct": 4,
+      "higherPct": 77
     }
   ],
   "pairwise": [
@@ -191,47 +191,47 @@
     {
       "pack": "Sac à dos",
       "matched": 20,
-      "priceIndex": 123,
+      "priceIndex": 126,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
       "pack": "Veste",
-      "matched": 107,
-      "priceIndex": 117,
+      "matched": 108,
+      "priceIndex": 119,
       "lowerPct": 13,
-      "equalPct": 20,
-      "higherPct": 67
+      "equalPct": 13,
+      "higherPct": 74
     },
     {
       "pack": "T-shirt",
-      "matched": 61,
-      "priceIndex": 112,
-      "lowerPct": 33,
-      "equalPct": 0,
-      "higherPct": 67
+      "matched": 59,
+      "priceIndex": 116,
+      "lowerPct": 31,
+      "equalPct": 5,
+      "higherPct": 64
     },
     {
       "pack": "Pantalon",
-      "matched": 50,
-      "priceIndex": 126,
-      "lowerPct": 20,
-      "equalPct": 0,
-      "higherPct": 80
+      "matched": 47,
+      "priceIndex": 127,
+      "lowerPct": 19,
+      "equalPct": 4,
+      "higherPct": 77
     },
     {
       "pack": "Doudoune",
-      "matched": 22,
+      "matched": 23,
       "priceIndex": 126,
       "lowerPct": 0,
-      "equalPct": 36,
-      "higherPct": 64
+      "equalPct": 35,
+      "higherPct": 65
     },
     {
       "pack": "Short",
       "matched": 4,
-      "priceIndex": 93,
+      "priceIndex": 87,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
