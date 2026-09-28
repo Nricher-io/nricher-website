@@ -1,7 +1,7 @@
 {
   "slug": "boulanger",
   "name": "Boulanger",
-  "articlesAnalysed": 19449,
+  "articlesAnalysed": 19121,
   "qualityScore": 62,
   "globalGrades": {
     "Aplus": 0,
@@ -33,12 +33,12 @@
     },
     "Vidéo": {
       "Aplus": 2,
-      "A": 7,
+      "A": 8,
       "B": 0,
       "C": 0,
       "D": 0,
       "E": 0,
-      "F": 91
+      "F": 90
     },
     "Description": {
       "Aplus": 34,
@@ -47,7 +47,7 @@
       "C": 8,
       "D": 5,
       "E": 3,
-      "F": 40
+      "F": 39
     }
   }
 }

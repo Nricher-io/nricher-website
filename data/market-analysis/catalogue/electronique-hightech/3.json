@@ -1,55 +1,55 @@
 {
   "packName": "Casque audio",
-  "totalArticles": 11964,
-  "topSellersCount": 2982,
-  "topPct": 21,
-  "midPct": 28,
+  "totalArticles": 12305,
+  "topSellersCount": 2331,
+  "topPct": 19,
+  "midPct": 30,
   "lowPct": 51,
   "ranking": [
     {
-      "name": "Darty",
-      "topSellerArticles": 4433,
-      "potentialPct": 63
+      "name": "Cdiscount",
+      "topSellerArticles": 4639,
+      "potentialPct": 62
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 4197,
-      "potentialPct": 65
+      "name": "Darty",
+      "topSellerArticles": 4159,
+      "potentialPct": 66
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 4179,
-      "potentialPct": 65
+      "topSellerArticles": 4122,
+      "potentialPct": 67
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 2777,
-      "potentialPct": 77
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 2469,
+      "topSellerArticles": 2622,
       "potentialPct": 79
     },
     {
-      "name": "Boulanger",
-      "topSellerArticles": 1326,
-      "potentialPct": 89
+      "name": "Carrefour",
+      "topSellerArticles": 2435,
+      "potentialPct": 80
     },
     {
-      "name": "Conforama",
-      "topSellerArticles": 605,
+      "name": "Boulanger",
+      "topSellerArticles": 1258,
+      "potentialPct": 90
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 585,
       "potentialPct": 95
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 594,
+      "topSellerArticles": 577,
       "potentialPct": 95
     },
     {
-      "name": "But",
-      "topSellerArticles": 586,
-      "potentialPct": 95
+      "name": "Conforama",
+      "topSellerArticles": 268,
+      "potentialPct": 98
     }
   ]
 }

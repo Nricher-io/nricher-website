@@ -1,145 +1,139 @@
 {
   "slug": "zalando",
   "name": "Zalando",
-  "priceIndex": 95,
+  "priceIndex": 94,
   "weeks": [
-    "2026-08-11",
     "2026-08-19",
     "2026-08-25",
     "2026-09-01",
     "2026-09-08",
-    "2026-09-15"
+    "2026-09-15",
+    "2026-09-22"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        103,
         107,
         108,
         103,
         105,
-        105
+        105,
+        107
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        107,
         114,
         107,
         128,
         107,
-        113
+        113,
+        99
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        112,
         115,
         117,
         115,
         115,
-        116
+        116,
+        118
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
-        103,
         112,
         110,
         108,
         110,
-        113
+        113,
+        101
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        98,
         99,
         102,
         97,
         99,
+        100,
         100
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        107,
         109,
         112,
         112,
         112,
+        115,
         115
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        108,
         112,
         116,
         118,
         121,
-        124
+        124,
+        122
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        109,
         111,
         111,
         109,
         107,
-        107
+        107,
+        108
       ]
     },
     {
       "name": "Trekkinn",
       "piHistory": [
-        105,
         108,
         112,
         112,
         113,
-        113
+        113,
+        115
       ]
     },
     {
       "name": "Zalando",
       "piHistory": [
-        89,
         90,
         93,
         94,
         95,
-        94
+        94,
+        93
       ]
     },
     {
       "name": "Barrabes",
       "piHistory": [
-        106,
         101,
         102,
         103,
         103,
-        104
+        104,
+        105
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-08-11",
-      "cheaperPct": 67,
-      "equalPct": 26,
-      "higherPct": 8
-    },
     {
       "week": "2026-08-19",
       "cheaperPct": 64,
@@ -169,72 +163,78 @@
       "cheaperPct": 55,
       "equalPct": 23,
       "higherPct": 22
+    },
+    {
+      "week": "2026-09-22",
+      "cheaperPct": 54,
+      "equalPct": 32,
+      "higherPct": 14
     }
   ],
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "matched": 645,
-      "priceIndex": 96,
-      "lowerPct": 53,
-      "equalPct": 35,
-      "higherPct": 13
+      "matched": 508,
+      "priceIndex": 94,
+      "lowerPct": 68,
+      "equalPct": 25,
+      "higherPct": 7
     },
     {
       "pack": "Chaussures de randonnée",
-      "matched": 942,
-      "priceIndex": 95,
-      "lowerPct": 54,
-      "equalPct": 35,
+      "matched": 828,
+      "priceIndex": 94,
+      "lowerPct": 66,
+      "equalPct": 23,
       "higherPct": 11
     },
     {
       "pack": "Sac à dos",
-      "matched": 219,
-      "priceIndex": 102,
-      "lowerPct": 17,
-      "equalPct": 58,
-      "higherPct": 25
+      "matched": 175,
+      "priceIndex": 99,
+      "lowerPct": 29,
+      "equalPct": 53,
+      "higherPct": 18
     },
     {
       "pack": "Veste",
-      "matched": 226,
-      "priceIndex": 97,
-      "lowerPct": 35,
-      "equalPct": 53,
-      "higherPct": 12
+      "matched": 177,
+      "priceIndex": 98,
+      "lowerPct": 34,
+      "equalPct": 50,
+      "higherPct": 16
     },
     {
       "pack": "T-shirt",
-      "matched": 278,
+      "matched": 175,
       "priceIndex": 94,
-      "lowerPct": 49,
+      "lowerPct": 47,
       "equalPct": 27,
-      "higherPct": 24
+      "higherPct": 26
     },
     {
       "pack": "Pantalon",
-      "matched": 159,
-      "priceIndex": 85,
-      "lowerPct": 57,
-      "equalPct": 36,
-      "higherPct": 7
+      "matched": 110,
+      "priceIndex": 79,
+      "lowerPct": 72,
+      "equalPct": 25,
+      "higherPct": 3
     },
     {
       "pack": "Doudoune",
-      "matched": 83,
-      "priceIndex": 102,
-      "lowerPct": 12,
-      "equalPct": 63,
-      "higherPct": 25
+      "matched": 60,
+      "priceIndex": 95,
+      "lowerPct": 53,
+      "equalPct": 33,
+      "higherPct": 13
     },
     {
       "pack": "Short",
-      "matched": 94,
-      "priceIndex": 86,
-      "lowerPct": 54,
-      "equalPct": 39,
-      "higherPct": 6
+      "matched": 52,
+      "priceIndex": 87,
+      "lowerPct": 50,
+      "equalPct": 23,
+      "higherPct": 27
     }
   ]
 }

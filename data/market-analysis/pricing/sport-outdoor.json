@@ -1,79 +1,86 @@
 [
   {
+    "slug": "sports-partners",
+    "name": "Sports Partners",
+    "articlesAnalysed": 13638,
+    "articlesMatched": 2,
+    "priceIndex": 77
+  },
+  {
     "slug": "zalando",
     "name": "Zalando",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 2646,
-    "priceIndex": 95
+    "articlesAnalysed": 13638,
+    "articlesMatched": 2085,
+    "priceIndex": 94
   },
   {
     "slug": "ekosport",
     "name": "Ekosport",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 3809,
-    "priceIndex": 98
+    "articlesAnalysed": 13638,
+    "articlesMatched": 4044,
+    "priceIndex": 97
   },
   {
     "slug": "irun",
     "name": "Irun",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 2009,
-    "priceIndex": 98
+    "articlesAnalysed": 13638,
+    "articlesMatched": 2330,
+    "priceIndex": 99
   },
   {
     "slug": "snowleader",
     "name": "Snowleader",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 7295,
-    "priceIndex": 106
+    "articlesAnalysed": 13638,
+    "articlesMatched": 7442,
+    "priceIndex": 105
   },
   {
     "slug": "alltricks",
     "name": "Alltricks",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 2202,
+    "articlesAnalysed": 13638,
+    "articlesMatched": 1441,
     "priceIndex": 106
-  },
-  {
-    "slug": "barrabes",
-    "name": "Barrabes",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 4714,
-    "priceIndex": 111
   },
   {
     "slug": "hardloop",
     "name": "Hardloop",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 2375,
-    "priceIndex": 112
+    "articlesAnalysed": 13638,
+    "articlesMatched": 3589,
+    "priceIndex": 108
+  },
+  {
+    "slug": "barrabes",
+    "name": "Barrabes",
+    "articlesAnalysed": 13638,
+    "articlesMatched": 4625,
+    "priceIndex": 111
   },
   {
     "slug": "runnerinn",
     "name": "Runnerinn",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 1132,
+    "articlesAnalysed": 13638,
+    "articlesMatched": 1118,
     "priceIndex": 113
   },
   {
     "slug": "trekkinn",
     "name": "Trekkinn",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 5134,
-    "priceIndex": 118
+    "articlesAnalysed": 13638,
+    "articlesMatched": 4890,
+    "priceIndex": 117
   },
   {
     "slug": "glisshop",
     "name": "Glisshop",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 1118,
+    "articlesAnalysed": 13638,
+    "articlesMatched": 1154,
     "priceIndex": 119
   },
   {
     "slug": "snowinn",
     "name": "Snowinn",
-    "articlesAnalysed": 13834,
-    "articlesMatched": 261,
-    "priceIndex": 120
+    "articlesAnalysed": 13638,
+    "articlesMatched": 279,
+    "priceIndex": 121
   }
 ]
