@@ -1,50 +1,45 @@
 {
   "packName": "T-shirt",
-  "totalArticles": 5720,
-  "topSellersCount": 1579,
-  "topPct": 21,
-  "midPct": 30,
-  "lowPct": 49,
+  "totalArticles": 4825,
+  "topSellersCount": 1041,
+  "topPct": 18,
+  "midPct": 34,
+  "lowPct": 48,
   "ranking": [
     {
-      "name": "Alpiniste",
-      "topSellerArticles": 2596,
-      "potentialPct": 55
-    },
-    {
       "name": "Snowleader",
-      "topSellerArticles": 2547,
-      "potentialPct": 55
+      "topSellerArticles": 2427,
+      "potentialPct": 50
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 1272,
-      "potentialPct": 78
+      "topSellerArticles": 1252,
+      "potentialPct": 74
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 1172,
-      "potentialPct": 80
+      "topSellerArticles": 1243,
+      "potentialPct": 74
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 822,
-      "potentialPct": 86
+      "topSellerArticles": 876,
+      "potentialPct": 82
     },
     {
       "name": "Irun",
-      "topSellerArticles": 475,
-      "potentialPct": 92
+      "topSellerArticles": 465,
+      "potentialPct": 90
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 287,
-      "potentialPct": 95
+      "topSellerArticles": 171,
+      "potentialPct": 96
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 125,
-      "potentialPct": 98
+      "topSellerArticles": 145,
+      "potentialPct": 97
     }
   ]
 }

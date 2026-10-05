@@ -1,7 +1,7 @@
 {
-  "slug": "amazon",
-  "name": "Amazon",
-  "priceIndex": 120,
+  "slug": "m25",
+  "name": "M25",
+  "priceIndex": 85,
   "weeks": [
     "2026-08-25",
     "2026-09-01",
@@ -232,82 +232,45 @@
       ]
     }
   ],
-  "attractiveness": [
-    {
-      "week": "2026-08-25",
-      "cheaperPct": 2,
-      "equalPct": 16,
-      "higherPct": 82
-    },
-    {
-      "week": "2026-09-01",
-      "cheaperPct": 3,
-      "equalPct": 12,
-      "higherPct": 85
-    },
-    {
-      "week": "2026-09-08",
-      "cheaperPct": 4,
-      "equalPct": 26,
-      "higherPct": 70
-    },
-    {
-      "week": "2026-09-15",
-      "cheaperPct": 5,
-      "equalPct": 19,
-      "higherPct": 76
-    },
-    {
-      "week": "2026-09-22",
-      "cheaperPct": 4,
-      "equalPct": 26,
-      "higherPct": 70
-    },
-    {
-      "week": "2026-09-29",
-      "cheaperPct": 5,
-      "equalPct": 8,
-      "higherPct": 88
-    }
-  ],
+  "attractiveness": [],
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 8,
-      "priceIndex": 115,
-      "lowerPct": 13,
-      "equalPct": 13,
-      "higherPct": 75
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
+      "equalPct": 0,
+      "higherPct": 0
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 1,
-      "priceIndex": 126,
+      "matched": 0,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 100
+      "higherPct": 0
     },
     {
       "pack": "Télévision",
-      "matched": 3,
-      "priceIndex": 140,
+      "matched": 0,
+      "priceIndex": null,
       "lowerPct": 0,
       "equalPct": 0,
-      "higherPct": 100
+      "higherPct": 0
     },
     {
       "pack": "Casque audio",
-      "matched": 32,
-      "priceIndex": 123,
-      "lowerPct": 0,
-      "equalPct": 19,
-      "higherPct": 81
+      "matched": 16,
+      "priceIndex": 85,
+      "lowerPct": 100,
+      "equalPct": 0,
+      "higherPct": 0
     },
     {
       "pack": "Tablette",
-      "matched": 1,
-      "priceIndex": 2,
-      "lowerPct": 100,
+      "matched": 0,
+      "priceIndex": null,
+      "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 0
     },

@@ -28,72 +28,23 @@
   {
     "id": "sport-outdoor",
     "name": "Sport & Outdoor",
-    "companies": [
-      {
-        "slug": "sports-partners",
-        "name": "Sports Partners"
-      },
-      {
-        "slug": "zalando",
-        "name": "Zalando"
-      },
-      {
-        "slug": "ekosport",
-        "name": "Ekosport"
-      },
-      {
-        "slug": "irun",
-        "name": "Irun"
-      },
-      {
-        "slug": "snowleader",
-        "name": "Snowleader"
-      },
-      {
-        "slug": "alltricks",
-        "name": "Alltricks"
-      },
+    "companies": [],
+    "qualityCompanies": [
       {
         "slug": "hardloop",
         "name": "Hardloop"
-      },
-      {
-        "slug": "barrabes",
-        "name": "Barrabes"
-      },
-      {
-        "slug": "runnerinn",
-        "name": "Runnerinn"
       },
       {
         "slug": "trekkinn",
         "name": "Trekkinn"
       },
       {
-        "slug": "glisshop",
-        "name": "Glisshop"
+        "slug": "alltricks",
+        "name": "Alltricks"
       },
-      {
-        "slug": "snowinn",
-        "name": "Snowinn"
-      }
-    ],
-    "qualityCompanies": [
       {
         "slug": "alpiniste",
         "name": "Alpiniste"
-      },
-      {
-        "slug": "hardloop",
-        "name": "Hardloop"
-      },
-      {
-        "slug": "trekkinn",
-        "name": "Trekkinn"
-      },
-      {
-        "slug": "alltricks",
-        "name": "Alltricks"
       },
       {
         "slug": "glisshop",
@@ -141,72 +92,64 @@
     "name": "Électronique & High-Tech",
     "companies": [
       {
-        "slug": "zenkaa",
-        "name": "Zenkaa"
+        "slug": "m25",
+        "name": "M25"
       },
       {
-        "slug": "auchan",
-        "name": "Auchan"
-      },
-      {
-        "slug": "monsieurplus",
-        "name": "Monsieurplus"
-      },
-      {
-        "slug": "kiatoo",
-        "name": "Kiatoo"
-      },
-      {
-        "slug": "la-boutique-du-net",
-        "name": "La Boutique Du Net"
+        "slug": "boutique16",
+        "name": "Boutique16"
       },
       {
         "slug": "as-discount",
         "name": "As Discount"
       },
       {
-        "slug": "super10count",
-        "name": "Super10count"
+        "slug": "enexo",
+        "name": "Enexo"
       },
       {
-        "slug": "multishop",
-        "name": "Multishop"
+        "slug": "zenkaa",
+        "name": "Zenkaa"
       },
       {
-        "slug": "zoomici",
-        "name": "Zoomici"
-      },
-      {
-        "slug": "easylounge",
-        "name": "Easylounge"
-      },
-      {
-        "slug": "digital-bay",
-        "name": "Digital Bay"
-      },
-      {
-        "slug": "junmingshop",
-        "name": "Junmingshop"
-      },
-      {
-        "slug": "leasi",
-        "name": "Leasi"
-      },
-      {
-        "slug": "sedatech",
-        "name": "Sedatech"
-      },
-      {
-        "slug": "icoza",
-        "name": "Icoza"
+        "slug": "warenwelt-24",
+        "name": "Warenwelt 24"
       },
       {
         "slug": "carrefour",
         "name": "Carrefour"
       },
       {
-        "slug": "topbiz",
-        "name": "Topbiz"
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "multishop",
+        "name": "Multishop"
+      },
+      {
+        "slug": "1001jouets",
+        "name": "1001jouets"
+      },
+      {
+        "slug": "maxoutil",
+        "name": "Maxoutil"
+      },
+      {
+        "slug": "maisonic",
+        "name": "Maisonic"
+      },
+      {
+        "slug": "komelec",
+        "name": "Komelec"
+      },
+      {
+        "slug": "centrale-brico",
+        "name": "Centrale Brico"
+      },
+      {
+        "slug": "house-partners",
+        "name": "House Partners"
       },
       {
         "slug": "darty",
@@ -217,48 +160,56 @@
         "name": "Villatech"
       },
       {
-        "slug": "gpasplus",
-        "name": "Gpasplus"
+        "slug": "digital-bay",
+        "name": "Digital Bay"
       },
       {
-        "slug": "house-partners",
-        "name": "House Partners"
+        "slug": "better-price",
+        "name": "Better Price"
       },
       {
-        "slug": "2kings",
-        "name": "2kings"
+        "slug": "conrad",
+        "name": "Conrad"
       },
       {
-        "slug": "amazon",
-        "name": "Amazon"
+        "slug": "auchan",
+        "name": "Auchan"
       },
       {
-        "slug": "yonis-shop",
-        "name": "Yonis Shop"
-      },
-      {
-        "slug": "boulanger",
-        "name": "Boulanger"
+        "slug": "castorama",
+        "name": "Castorama"
       },
       {
         "slug": "rue-du-commerce",
         "name": "Rue Du Commerce"
       },
       {
-        "slug": "ecofone",
-        "name": "Ecofone"
+        "slug": "supergamer",
+        "name": "Supergamer"
+      },
+      {
+        "slug": "2kings",
+        "name": "2kings"
+      },
+      {
+        "slug": "gpasplus",
+        "name": "Gpasplus"
+      },
+      {
+        "slug": "sobrico",
+        "name": "Sobrico"
+      },
+      {
+        "slug": "boulanger",
+        "name": "Boulanger"
+      },
+      {
+        "slug": "amazon",
+        "name": "Amazon"
       },
       {
         "slug": "cdiscount",
         "name": "Cdiscount"
-      },
-      {
-        "slug": "rps-technologies",
-        "name": "Rps Technologies"
-      },
-      {
-        "slug": "alloccaz",
-        "name": "Alloccaz"
       }
     ],
     "qualityCompanies": [
@@ -297,10 +248,6 @@
       {
         "slug": "auchan",
         "name": "Auchan"
-      },
-      {
-        "slug": "darty",
-        "name": "Darty"
       }
     ],
     "packs": [

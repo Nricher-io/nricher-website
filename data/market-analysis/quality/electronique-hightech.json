@@ -2,61 +2,55 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 142247,
+    "articlesAnalysed": 140681,
     "qualityScore": 79
   },
   {
     "slug": "conforama",
     "name": "Conforama",
-    "articlesAnalysed": 809154,
-    "qualityScore": 77
+    "articlesAnalysed": 240908,
+    "qualityScore": 78
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 32506,
+    "articlesAnalysed": 32509,
     "qualityScore": 76
   },
   {
     "slug": "carrefour",
     "name": "Carrefour",
-    "articlesAnalysed": 21427,
+    "articlesAnalysed": 27945,
     "qualityScore": 70
   },
   {
     "slug": "amazon",
     "name": "Amazon",
-    "articlesAnalysed": 8856,
+    "articlesAnalysed": 8223,
     "qualityScore": 68
   },
   {
     "slug": "underdog",
     "name": "Underdog",
-    "articlesAnalysed": 415,
+    "articlesAnalysed": 367,
     "qualityScore": 65
   },
   {
     "slug": "boulanger",
     "name": "Boulanger",
-    "articlesAnalysed": 19121,
+    "articlesAnalysed": 18529,
     "qualityScore": 62
   },
   {
     "slug": "rue-du-commerce",
     "name": "Rue du Commerce",
-    "articlesAnalysed": 53121,
-    "qualityScore": 60
+    "articlesAnalysed": 63418,
+    "qualityScore": 59
   },
   {
     "slug": "auchan",
     "name": "Auchan",
-    "articlesAnalysed": 11949,
+    "articlesAnalysed": 11531,
     "qualityScore": 58
-  },
-  {
-    "slug": "darty",
-    "name": "Darty",
-    "articlesAnalysed": 95883,
-    "qualityScore": 54
   }
 ]

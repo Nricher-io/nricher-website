@@ -1,13 +1,13 @@
 {
   "slug": "amazon",
   "name": "Amazon",
-  "articlesAnalysed": 8856,
+  "articlesAnalysed": 8223,
   "qualityScore": 68,
   "globalGrades": {
     "Aplus": 0,
-    "A": 18,
+    "A": 17,
     "B": 17,
-    "C": 32,
+    "C": 33,
     "D": 23,
     "E": 7,
     "F": 3
@@ -25,7 +25,7 @@
     "Image": {
       "Aplus": 33,
       "A": 2,
-      "B": 3,
+      "B": 2,
       "C": 2,
       "D": 0,
       "E": 5,
@@ -41,7 +41,7 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 33,
+      "Aplus": 32,
       "A": 10,
       "B": 11,
       "C": 17,

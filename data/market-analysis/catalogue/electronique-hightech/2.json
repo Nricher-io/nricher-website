@@ -1,55 +1,60 @@
 {
   "packName": "Télévision",
-  "totalArticles": 3657,
-  "topSellersCount": 748,
-  "topPct": 26,
-  "midPct": 31,
-  "lowPct": 43,
+  "totalArticles": 2709,
+  "topSellersCount": 883,
+  "topPct": 25,
+  "midPct": 30,
+  "lowPct": 45,
   "ranking": [
     {
-      "name": "Fnac",
-      "topSellerArticles": 1910,
-      "potentialPct": 48
-    },
-    {
       "name": "Cdiscount",
-      "topSellerArticles": 1073,
-      "potentialPct": 71
+      "topSellerArticles": 1117,
+      "potentialPct": 59
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 915,
-      "potentialPct": 75
+      "topSellerArticles": 959,
+      "potentialPct": 65
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 693,
-      "potentialPct": 81
+      "topSellerArticles": 717,
+      "potentialPct": 74
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 631,
-      "potentialPct": 83
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 492,
-      "potentialPct": 87
-    },
-    {
-      "name": "Conforama",
-      "topSellerArticles": 434,
-      "potentialPct": 88
+      "topSellerArticles": 679,
+      "potentialPct": 75
     },
     {
       "name": "But",
-      "topSellerArticles": 403,
-      "potentialPct": 89
+      "topSellerArticles": 422,
+      "potentialPct": 84
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 407,
+      "potentialPct": 85
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 358,
-      "potentialPct": 90
+      "topSellerArticles": 351,
+      "potentialPct": 87
+    },
+    {
+      "name": "Fnac",
+      "topSellerArticles": 69,
+      "potentialPct": 97
+    },
+    {
+      "name": "Underdog",
+      "topSellerArticles": 6,
+      "potentialPct": 100
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 2,
+      "potentialPct": 100
     }
   ]
 }

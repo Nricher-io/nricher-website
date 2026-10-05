@@ -1,212 +1,212 @@
 [
   {
-    "slug": "zenkaa",
-    "name": "Zenkaa",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 338,
-    "priceIndex": 94
+    "slug": "m25",
+    "name": "M25",
+    "articlesAnalysed": 970,
+    "articlesMatched": 16,
+    "priceIndex": 85
   },
   {
-    "slug": "auchan",
-    "name": "Auchan",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 437,
-    "priceIndex": 96
-  },
-  {
-    "slug": "monsieurplus",
-    "name": "Monsieurplus",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 322,
-    "priceIndex": 96
-  },
-  {
-    "slug": "kiatoo",
-    "name": "Kiatoo",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 544,
-    "priceIndex": 97
-  },
-  {
-    "slug": "la-boutique-du-net",
-    "name": "La Boutique Du Net",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 400,
-    "priceIndex": 97
+    "slug": "boutique16",
+    "name": "Boutique16",
+    "articlesAnalysed": 970,
+    "articlesMatched": 25,
+    "priceIndex": 86
   },
   {
     "slug": "as-discount",
     "name": "As Discount",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 423,
-    "priceIndex": 97
+    "articlesAnalysed": 970,
+    "articlesMatched": 83,
+    "priceIndex": 91
   },
   {
-    "slug": "super10count",
-    "name": "Super10count",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 234,
-    "priceIndex": 97
+    "slug": "enexo",
+    "name": "Enexo",
+    "articlesAnalysed": 970,
+    "articlesMatched": 8,
+    "priceIndex": 91
   },
   {
-    "slug": "multishop",
-    "name": "Multishop",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 849,
-    "priceIndex": 98
+    "slug": "zenkaa",
+    "name": "Zenkaa",
+    "articlesAnalysed": 970,
+    "articlesMatched": 24,
+    "priceIndex": 93
   },
   {
-    "slug": "zoomici",
-    "name": "Zoomici",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 620,
-    "priceIndex": 99
-  },
-  {
-    "slug": "easylounge",
-    "name": "Easylounge",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 234,
-    "priceIndex": 99
-  },
-  {
-    "slug": "digital-bay",
-    "name": "Digital Bay",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 260,
-    "priceIndex": 99
-  },
-  {
-    "slug": "junmingshop",
-    "name": "Junmingshop",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 263,
-    "priceIndex": 99
-  },
-  {
-    "slug": "leasi",
-    "name": "Leasi",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 226,
-    "priceIndex": 99
-  },
-  {
-    "slug": "sedatech",
-    "name": "Sedatech",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 471,
-    "priceIndex": 100
-  },
-  {
-    "slug": "icoza",
-    "name": "Icoza",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 438,
-    "priceIndex": 100
+    "slug": "warenwelt-24",
+    "name": "Warenwelt 24",
+    "articlesAnalysed": 970,
+    "articlesMatched": 26,
+    "priceIndex": 95
   },
   {
     "slug": "carrefour",
     "name": "Carrefour",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 541,
+    "articlesAnalysed": 970,
+    "articlesMatched": 15,
+    "priceIndex": 95
+  },
+  {
+    "slug": "zoomici",
+    "name": "Zoomici",
+    "articlesAnalysed": 970,
+    "articlesMatched": 39,
+    "priceIndex": 96
+  },
+  {
+    "slug": "multishop",
+    "name": "Multishop",
+    "articlesAnalysed": 970,
+    "articlesMatched": 68,
+    "priceIndex": 98
+  },
+  {
+    "slug": "1001jouets",
+    "name": "1001jouets",
+    "articlesAnalysed": 970,
+    "articlesMatched": 52,
+    "priceIndex": 98
+  },
+  {
+    "slug": "maxoutil",
+    "name": "Maxoutil",
+    "articlesAnalysed": 970,
+    "articlesMatched": 30,
+    "priceIndex": 99
+  },
+  {
+    "slug": "maisonic",
+    "name": "Maisonic",
+    "articlesAnalysed": 970,
+    "articlesMatched": 13,
+    "priceIndex": 99
+  },
+  {
+    "slug": "komelec",
+    "name": "Komelec",
+    "articlesAnalysed": 970,
+    "articlesMatched": 7,
+    "priceIndex": 99
+  },
+  {
+    "slug": "centrale-brico",
+    "name": "Centrale Brico",
+    "articlesAnalysed": 970,
+    "articlesMatched": 6,
     "priceIndex": 100
   },
   {
-    "slug": "topbiz",
-    "name": "Topbiz",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 339,
-    "priceIndex": 100
+    "slug": "house-partners",
+    "name": "House Partners",
+    "articlesAnalysed": 970,
+    "articlesMatched": 115,
+    "priceIndex": 102
   },
   {
     "slug": "darty",
     "name": "Darty",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 2190,
+    "articlesAnalysed": 970,
+    "articlesMatched": 112,
     "priceIndex": 102
   },
   {
     "slug": "villatech",
     "name": "Villatech",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 185,
-    "priceIndex": 102
+    "articlesAnalysed": 970,
+    "articlesMatched": 9,
+    "priceIndex": 103
   },
   {
-    "slug": "gpasplus",
-    "name": "Gpasplus",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 604,
+    "slug": "digital-bay",
+    "name": "Digital Bay",
+    "articlesAnalysed": 970,
+    "articlesMatched": 11,
+    "priceIndex": 103
+  },
+  {
+    "slug": "better-price",
+    "name": "Better Price",
+    "articlesAnalysed": 970,
+    "articlesMatched": 7,
     "priceIndex": 104
   },
   {
-    "slug": "house-partners",
-    "name": "House Partners",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 1942,
+    "slug": "conrad",
+    "name": "Conrad",
+    "articlesAnalysed": 970,
+    "articlesMatched": 15,
     "priceIndex": 105
   },
   {
-    "slug": "2kings",
-    "name": "2kings",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 666,
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 970,
+    "articlesMatched": 12,
     "priceIndex": 106
   },
   {
-    "slug": "amazon",
-    "name": "Amazon",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 251,
-    "priceIndex": 106
-  },
-  {
-    "slug": "yonis-shop",
-    "name": "Yonis Shop",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 204,
-    "priceIndex": 108
-  },
-  {
-    "slug": "boulanger",
-    "name": "Boulanger",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 1298,
+    "slug": "castorama",
+    "name": "Castorama",
+    "articlesAnalysed": 970,
+    "articlesMatched": 17,
     "priceIndex": 109
   },
   {
     "slug": "rue-du-commerce",
     "name": "Rue Du Commerce",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 454,
+    "articlesAnalysed": 970,
+    "articlesMatched": 17,
+    "priceIndex": 109
+  },
+  {
+    "slug": "supergamer",
+    "name": "Supergamer",
+    "articlesAnalysed": 970,
+    "articlesMatched": 10,
     "priceIndex": 110
   },
   {
-    "slug": "ecofone",
-    "name": "Ecofone",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 441,
+    "slug": "2kings",
+    "name": "2kings",
+    "articlesAnalysed": 970,
+    "articlesMatched": 64,
     "priceIndex": 111
+  },
+  {
+    "slug": "gpasplus",
+    "name": "Gpasplus",
+    "articlesAnalysed": 970,
+    "articlesMatched": 39,
+    "priceIndex": 113
+  },
+  {
+    "slug": "sobrico",
+    "name": "Sobrico",
+    "articlesAnalysed": 970,
+    "articlesMatched": 16,
+    "priceIndex": 115
+  },
+  {
+    "slug": "boulanger",
+    "name": "Boulanger",
+    "articlesAnalysed": 970,
+    "articlesMatched": 66,
+    "priceIndex": 116
+  },
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "articlesAnalysed": 970,
+    "articlesMatched": 45,
+    "priceIndex": 120
   },
   {
     "slug": "cdiscount",
     "name": "Cdiscount",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 551,
-    "priceIndex": 114
-  },
-  {
-    "slug": "rps-technologies",
-    "name": "Rps Technologies",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 462,
-    "priceIndex": 119
-  },
-  {
-    "slug": "alloccaz",
-    "name": "Alloccaz",
-    "articlesAnalysed": 19882,
-    "articlesMatched": 402,
-    "priceIndex": 127
+    "articlesAnalysed": 970,
+    "articlesMatched": 41,
+    "priceIndex": 125
   }
 ]
