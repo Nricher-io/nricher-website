@@ -1,7 +1,7 @@
 {
   "slug": "carrefour",
   "name": "Carrefour",
-  "priceIndex": 95,
+  "priceIndex": 104,
   "weeks": [
     "2026-08-25",
     "2026-09-01",
@@ -97,6 +97,17 @@
         140,
         136,
         138
+      ]
+    },
+    {
+      "name": "BCDjeux",
+      "piHistory": [
+        127,
+        127,
+        129,
+        127,
+        126,
+        127
       ]
     },
     {
@@ -219,17 +230,6 @@
         108,
         110
       ]
-    },
-    {
-      "name": "Jardindeco",
-      "piHistory": [
-        140,
-        148,
-        156,
-        144,
-        159,
-        148
-      ]
     }
   ],
   "attractiveness": [
@@ -273,59 +273,59 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 4,
-      "priceIndex": 94,
-      "lowerPct": 50,
-      "equalPct": 25,
-      "higherPct": 25
+      "matched": 352,
+      "priceIndex": 101,
+      "lowerPct": 37,
+      "equalPct": 23,
+      "higherPct": 40
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 14,
+      "priceIndex": 125,
+      "lowerPct": 29,
+      "equalPct": 7,
+      "higherPct": 64
     },
     {
       "pack": "Télévision",
+      "matched": 67,
+      "priceIndex": 115,
+      "lowerPct": 21,
+      "equalPct": 7,
+      "higherPct": 72
+    },
+    {
+      "pack": "Casque audio",
+      "matched": 71,
+      "priceIndex": 98,
+      "lowerPct": 41,
+      "equalPct": 28,
+      "higherPct": 31
+    },
+    {
+      "pack": "Tablette",
+      "matched": 51,
+      "priceIndex": 110,
+      "lowerPct": 33,
+      "equalPct": 12,
+      "higherPct": 55
+    },
+    {
+      "pack": "Ordinateur de bureau",
       "matched": 1,
-      "priceIndex": 117,
+      "priceIndex": 142,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
-      "pack": "Casque audio",
-      "matched": 10,
-      "priceIndex": 93,
-      "lowerPct": 50,
-      "equalPct": 20,
-      "higherPct": 30
-    },
-    {
-      "pack": "Tablette",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
-    },
-    {
-      "pack": "Ordinateur de bureau",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
-    },
-    {
       "pack": "Enceinte audio",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 32,
+      "priceIndex": 115,
+      "lowerPct": 16,
+      "equalPct": 19,
+      "higherPct": 66
     }
   ]
 }

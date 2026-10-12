@@ -1,55 +1,60 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 17285,
-  "topSellersCount": 4583,
-  "topPct": 23,
+  "totalArticles": 20568,
+  "topSellersCount": 6235,
+  "topPct": 24,
   "midPct": 31,
-  "lowPct": 46,
+  "lowPct": 45,
   "ranking": [
     {
       "name": "Cdiscount",
-      "topSellerArticles": 9548,
-      "potentialPct": 45
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 5676,
-      "potentialPct": 67
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 3735,
-      "potentialPct": 78
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 3430,
-      "potentialPct": 80
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 2092,
-      "potentialPct": 88
-    },
-    {
-      "name": "Auchan",
-      "topSellerArticles": 1279,
-      "potentialPct": 93
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 488,
-      "potentialPct": 97
+      "topSellerArticles": 10279,
+      "potentialPct": 50
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 272,
-      "potentialPct": 98
+      "topSellerArticles": 6437,
+      "potentialPct": 69
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 6235,
+      "potentialPct": 70
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 6192,
+      "potentialPct": 70
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 3676,
+      "potentialPct": 82
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 2135,
+      "potentialPct": 90
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 1252,
+      "potentialPct": 94
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 8,
-      "potentialPct": 100
+      "topSellerArticles": 871,
+      "potentialPct": 96
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 497,
+      "potentialPct": 98
+    },
+    {
+      "name": "Amazon",
+      "topSellerArticles": 314,
+      "potentialPct": 98
     }
   ]
 }

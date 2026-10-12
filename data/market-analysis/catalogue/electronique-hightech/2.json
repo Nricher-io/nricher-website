@@ -1,60 +1,65 @@
 {
   "packName": "Télévision",
-  "totalArticles": 2709,
-  "topSellersCount": 883,
-  "topPct": 25,
-  "midPct": 30,
-  "lowPct": 45,
+  "totalArticles": 4124,
+  "topSellersCount": 1298,
+  "topPct": 23,
+  "midPct": 31,
+  "lowPct": 46,
   "ranking": [
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 1117,
-      "potentialPct": 59
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 959,
-      "potentialPct": 65
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 717,
-      "potentialPct": 74
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 679,
-      "potentialPct": 75
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 422,
-      "potentialPct": 84
+      "name": "Fnac",
+      "topSellerArticles": 1987,
+      "potentialPct": 52
     },
     {
       "name": "Darty",
-      "topSellerArticles": 407,
-      "potentialPct": 85
+      "topSellerArticles": 1389,
+      "potentialPct": 66
     },
     {
-      "name": "Auchan",
-      "topSellerArticles": 351,
-      "potentialPct": 87
+      "name": "Carrefour",
+      "topSellerArticles": 1205,
+      "potentialPct": 71
     },
     {
-      "name": "Fnac",
-      "topSellerArticles": 69,
-      "potentialPct": 97
+      "name": "Cdiscount",
+      "topSellerArticles": 1155,
+      "potentialPct": 72
     },
     {
-      "name": "Underdog",
-      "topSellerArticles": 6,
-      "potentialPct": 100
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 913,
+      "potentialPct": 78
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 724,
+      "potentialPct": 82
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 2,
-      "potentialPct": 100
+      "topSellerArticles": 679,
+      "potentialPct": 84
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 438,
+      "potentialPct": 89
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 357,
+      "potentialPct": 91
+    },
+    {
+      "name": "Amazon",
+      "topSellerArticles": 57,
+      "potentialPct": 99
+    },
+    {
+      "name": "Underdog",
+      "topSellerArticles": 24,
+      "potentialPct": 99
     }
   ]
 }

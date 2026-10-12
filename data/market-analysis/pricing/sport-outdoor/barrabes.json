@@ -3,149 +3,137 @@
   "name": "Barrabes",
   "priceIndex": 111,
   "weeks": [
-    "2026-08-19",
-    "2026-08-25",
     "2026-09-01",
     "2026-09-08",
     "2026-09-15",
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-29",
+    "2026-10-06"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        107,
-        108,
         103,
         105,
         105,
-        107
-      ]
-    },
-    {
-      "name": "Ekosport",
-      "piHistory": [
-        114,
         107,
-        128,
-        107,
-        113,
-        99
+        116,
+        86
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
         115,
-        117,
-        115,
         115,
         116,
-        118
-      ]
-    },
-    {
-      "name": "Hardloop",
-      "piHistory": [
-        112,
-        110,
-        108,
-        110,
-        113,
-        101
+        118,
+        118,
+        93
       ]
     },
     {
       "name": "Irun",
       "piHistory": [
-        99,
-        102,
         97,
         99,
         100,
-        100
+        100,
+        102,
+        86
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
-        109,
-        112,
         112,
         112,
         115,
-        115
+        115,
+        114,
+        89
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        112,
-        116,
         118,
         121,
         124,
-        122
+        122,
+        122,
+        193
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        111,
-        111,
         109,
         107,
         107,
-        108
+        108,
+        106,
+        93
       ]
     },
     {
       "name": "Trekkinn",
       "piHistory": [
-        108,
-        112,
         112,
         113,
         113,
-        115
+        115,
+        115,
+        172
       ]
     },
     {
       "name": "Zalando",
       "piHistory": [
-        90,
-        93,
         94,
         95,
         94,
-        93
+        93,
+        96,
+        83
+      ]
+    },
+    {
+      "name": "Ekosport",
+      "piHistory": [
+        128,
+        107,
+        113,
+        99,
+        98,
+        null
+      ]
+    },
+    {
+      "name": "Hardloop",
+      "piHistory": [
+        108,
+        110,
+        113,
+        101,
+        104,
+        null
       ]
     },
     {
       "name": "Barrabes",
       "piHistory": [
-        101,
-        102,
         103,
         103,
         104,
-        105
+        105,
+        105,
+        106
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-08-19",
-      "cheaperPct": 40,
-      "equalPct": 15,
-      "higherPct": 45
-    },
-    {
-      "week": "2026-08-25",
-      "cheaperPct": 38,
-      "equalPct": 17,
-      "higherPct": 46
-    },
     {
       "week": "2026-09-01",
       "cheaperPct": 35,
@@ -169,6 +157,18 @@
       "cheaperPct": 32,
       "equalPct": 19,
       "higherPct": 49
+    },
+    {
+      "week": "2026-09-29",
+      "cheaperPct": 34,
+      "equalPct": 17,
+      "higherPct": 50
+    },
+    {
+      "week": "2026-10-06",
+      "cheaperPct": 50,
+      "equalPct": 0,
+      "higherPct": 50
     }
   ],
   "pairwise": [

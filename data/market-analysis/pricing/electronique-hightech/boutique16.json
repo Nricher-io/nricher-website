@@ -100,6 +100,17 @@
       ]
     },
     {
+      "name": "BCDjeux",
+      "piHistory": [
+        127,
+        127,
+        129,
+        127,
+        126,
+        127
+      ]
+    },
+    {
       "name": "BUT",
       "piHistory": [
         107,
@@ -219,76 +230,65 @@
         108,
         110
       ]
-    },
-    {
-      "name": "Jardindeco",
-      "piHistory": [
-        140,
-        148,
-        156,
-        144,
-        159,
-        148
-      ]
     }
   ],
   "attractiveness": [],
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 9,
-      "priceIndex": 54,
-      "lowerPct": 89,
+      "matched": 169,
+      "priceIndex": 80,
+      "lowerPct": 70,
       "equalPct": 11,
-      "higherPct": 0
+      "higherPct": 19
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
+      "matched": 14,
+      "priceIndex": 73,
+      "lowerPct": 87,
       "equalPct": 0,
-      "higherPct": 0
+      "higherPct": 13
     },
     {
       "pack": "Télévision",
-      "matched": 1,
-      "priceIndex": 48,
-      "lowerPct": 100,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 34,
+      "priceIndex": 79,
+      "lowerPct": 82,
+      "equalPct": 3,
+      "higherPct": 16
     },
     {
       "pack": "Casque audio",
-      "matched": 15,
-      "priceIndex": 108,
-      "lowerPct": 47,
+      "matched": 173,
+      "priceIndex": 95,
+      "lowerPct": 50,
       "equalPct": 27,
-      "higherPct": 27
+      "higherPct": 23
     },
     {
       "pack": "Tablette",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 18,
+      "priceIndex": 74,
+      "lowerPct": 75,
+      "equalPct": 15,
+      "higherPct": 10
     },
     {
       "pack": "Ordinateur de bureau",
-      "matched": 0,
-      "priceIndex": null,
+      "matched": 1,
+      "priceIndex": 100,
       "lowerPct": 0,
-      "equalPct": 0,
+      "equalPct": 100,
       "higherPct": 0
     },
     {
       "pack": "Enceinte audio",
-      "matched": 0,
-      "priceIndex": null,
-      "lowerPct": 0,
-      "equalPct": 0,
-      "higherPct": 0
+      "matched": 86,
+      "priceIndex": 84,
+      "lowerPct": 69,
+      "equalPct": 17,
+      "higherPct": 14
     }
   ]
 }

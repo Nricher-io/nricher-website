@@ -28,23 +28,72 @@
   {
     "id": "sport-outdoor",
     "name": "Sport & Outdoor",
-    "companies": [],
-    "qualityCompanies": [
+    "companies": [
+      {
+        "slug": "zalando",
+        "name": "Zalando"
+      },
+      {
+        "slug": "irun",
+        "name": "Irun"
+      },
+      {
+        "slug": "sports-partners",
+        "name": "Sports Partners"
+      },
+      {
+        "slug": "ekosport",
+        "name": "Ekosport"
+      },
+      {
+        "slug": "snowleader",
+        "name": "Snowleader"
+      },
       {
         "slug": "hardloop",
         "name": "Hardloop"
-      },
-      {
-        "slug": "trekkinn",
-        "name": "Trekkinn"
       },
       {
         "slug": "alltricks",
         "name": "Alltricks"
       },
       {
+        "slug": "barrabes",
+        "name": "Barrabes"
+      },
+      {
+        "slug": "runnerinn",
+        "name": "Runnerinn"
+      },
+      {
+        "slug": "trekkinn",
+        "name": "Trekkinn"
+      },
+      {
+        "slug": "glisshop",
+        "name": "Glisshop"
+      },
+      {
+        "slug": "snowinn",
+        "name": "Snowinn"
+      }
+    ],
+    "qualityCompanies": [
+      {
         "slug": "alpiniste",
         "name": "Alpiniste"
+      },
+      {
+        "slug": "hardloop",
+        "name": "Hardloop"
+      },
+      {
+        "slug": "alltricks",
+        "name": "Alltricks"
+      },
+      {
+        "slug": "trekkinn",
+        "name": "Trekkinn"
       },
       {
         "slug": "glisshop",
@@ -92,100 +141,52 @@
     "name": "Électronique & High-Tech",
     "companies": [
       {
-        "slug": "m25",
-        "name": "M25"
-      },
-      {
         "slug": "boutique16",
         "name": "Boutique16"
+      },
+      {
+        "slug": "leasi",
+        "name": "Leasi"
       },
       {
         "slug": "as-discount",
         "name": "As Discount"
       },
       {
-        "slug": "enexo",
-        "name": "Enexo"
-      },
-      {
-        "slug": "zenkaa",
-        "name": "Zenkaa"
-      },
-      {
-        "slug": "warenwelt-24",
-        "name": "Warenwelt 24"
-      },
-      {
-        "slug": "carrefour",
-        "name": "Carrefour"
-      },
-      {
-        "slug": "zoomici",
-        "name": "Zoomici"
-      },
-      {
         "slug": "multishop",
         "name": "Multishop"
       },
       {
-        "slug": "1001jouets",
-        "name": "1001jouets"
+        "slug": "la-boutique-du-net",
+        "name": "La Boutique Du Net"
       },
       {
-        "slug": "maxoutil",
-        "name": "Maxoutil"
-      },
-      {
-        "slug": "maisonic",
-        "name": "Maisonic"
-      },
-      {
-        "slug": "komelec",
-        "name": "Komelec"
-      },
-      {
-        "slug": "centrale-brico",
-        "name": "Centrale Brico"
-      },
-      {
-        "slug": "house-partners",
-        "name": "House Partners"
-      },
-      {
-        "slug": "darty",
-        "name": "Darty"
-      },
-      {
-        "slug": "villatech",
-        "name": "Villatech"
-      },
-      {
-        "slug": "digital-bay",
-        "name": "Digital Bay"
-      },
-      {
-        "slug": "better-price",
-        "name": "Better Price"
-      },
-      {
-        "slug": "conrad",
-        "name": "Conrad"
+        "slug": "kiatoo",
+        "name": "Kiatoo"
       },
       {
         "slug": "auchan",
         "name": "Auchan"
       },
       {
-        "slug": "castorama",
-        "name": "Castorama"
+        "slug": "super10count",
+        "name": "Super10count"
       },
       {
-        "slug": "rue-du-commerce",
-        "name": "Rue Du Commerce"
+        "slug": "easylounge",
+        "name": "Easylounge"
       },
       {
-        "slug": "supergamer",
-        "name": "Supergamer"
+        "slug": "sedatech",
+        "name": "Sedatech"
+      },
+      {
+        "slug": "digital-bay",
+        "name": "Digital Bay"
+      },
+      {
+        "slug": "house-partners",
+        "name": "House Partners"
       },
       {
         "slug": "2kings",
@@ -196,30 +197,74 @@
         "name": "Gpasplus"
       },
       {
-        "slug": "sobrico",
-        "name": "Sobrico"
+        "slug": "carrefour",
+        "name": "Carrefour"
       },
       {
         "slug": "boulanger",
         "name": "Boulanger"
       },
       {
-        "slug": "amazon",
-        "name": "Amazon"
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "yonis-shop",
+        "name": "Yonis Shop"
+      },
+      {
+        "slug": "rue-du-commerce",
+        "name": "Rue Du Commerce"
+      },
+      {
+        "slug": "nest-green",
+        "name": "Nest Green"
+      },
+      {
+        "slug": "ringy",
+        "name": "Ringy"
+      },
+      {
+        "slug": "ecofone",
+        "name": "Ecofone"
       },
       {
         "slug": "cdiscount",
         "name": "Cdiscount"
+      },
+      {
+        "slug": "icoza",
+        "name": "Icoza"
+      },
+      {
+        "slug": "rps-technologies",
+        "name": "Rps Technologies"
+      },
+      {
+        "slug": "alloccaz",
+        "name": "Alloccaz"
+      },
+      {
+        "slug": "foxway",
+        "name": "Foxway"
+      },
+      {
+        "slug": "topbiz",
+        "name": "Topbiz"
+      },
+      {
+        "slug": "zoomici",
+        "name": "Zoomici"
+      },
+      {
+        "slug": "zenkaa",
+        "name": "Zenkaa"
       }
     ],
     "qualityCompanies": [
       {
         "slug": "cdiscount",
         "name": "CDiscount"
-      },
-      {
-        "slug": "conforama",
-        "name": "Conforama"
       },
       {
         "slug": "but",
@@ -238,6 +283,10 @@
         "name": "Underdog"
       },
       {
+        "slug": "fnac",
+        "name": "Fnac"
+      },
+      {
         "slug": "boulanger",
         "name": "Boulanger"
       },
@@ -248,6 +297,14 @@
       {
         "slug": "auchan",
         "name": "Auchan"
+      },
+      {
+        "slug": "darty",
+        "name": "Darty"
+      },
+      {
+        "slug": "conforama",
+        "name": "Conforama"
       }
     ],
     "packs": [

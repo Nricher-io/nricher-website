@@ -1,55 +1,60 @@
 {
   "packName": "Tablette",
-  "totalArticles": 4097,
-  "topSellersCount": 1568,
-  "topPct": 30,
-  "midPct": 31,
-  "lowPct": 39,
+  "totalArticles": 5002,
+  "topSellersCount": 1653,
+  "topPct": 25,
+  "midPct": 35,
+  "lowPct": 40,
   "ranking": [
     {
       "name": "Cdiscount",
-      "topSellerArticles": 2218,
-      "potentialPct": 46
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 1431,
-      "potentialPct": 65
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 1422,
-      "potentialPct": 65
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 677,
-      "potentialPct": 83
-    },
-    {
-      "name": "Auchan",
-      "topSellerArticles": 323,
-      "potentialPct": 92
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 213,
-      "potentialPct": 95
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 176,
-      "potentialPct": 96
+      "topSellerArticles": 2303,
+      "potentialPct": 54
     },
     {
       "name": "Fnac",
-      "topSellerArticles": 58,
-      "potentialPct": 99
+      "topSellerArticles": 1621,
+      "potentialPct": 68
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 1566,
+      "potentialPct": 69
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 1458,
+      "potentialPct": 71
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 707,
+      "potentialPct": 86
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 344,
+      "potentialPct": 93
+    },
+    {
+      "name": "Auchan",
+      "topSellerArticles": 319,
+      "potentialPct": 94
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 172,
+      "potentialPct": 97
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 8,
-      "potentialPct": 100
+      "topSellerArticles": 162,
+      "potentialPct": 97
+    },
+    {
+      "name": "Amazon",
+      "topSellerArticles": 56,
+      "potentialPct": 99
     }
   ]
 }
