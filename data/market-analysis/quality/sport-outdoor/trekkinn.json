@@ -1,11 +1,11 @@
 {
   "slug": "trekkinn",
   "name": "Trekkinn",
-  "articlesAnalysed": 21495,
+  "articlesAnalysed": 21543,
   "qualityScore": 77,
   "globalGrades": {
     "Aplus": 3,
-    "A": 17,
+    "A": 16,
     "B": 42,
     "C": 32,
     "D": 5,
@@ -14,10 +14,10 @@
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 52,
+      "Aplus": 51,
       "A": 17,
       "B": 14,
-      "C": 16,
+      "C": 17,
       "D": 1,
       "E": 0,
       "F": 0
@@ -41,7 +41,7 @@
       "F": 89
     },
     "Description": {
-      "Aplus": 19,
+      "Aplus": 18,
       "A": 2,
       "B": 3,
       "C": 23,

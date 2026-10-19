@@ -1,69 +1,69 @@
 {
   "slug": "zenkaa",
   "name": "Zenkaa",
-  "priceIndex": 293,
+  "priceIndex": 364,
   "weeks": [
-    "2026-08-25",
     "2026-09-01",
     "2026-09-08",
     "2026-09-15",
     "2026-09-22",
-    "2026-09-29"
+    "2026-09-29",
+    "2026-10-13"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
         136,
-        136,
         137,
         121,
         139,
-        142
+        142,
+        135
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
         127,
-        127,
         126,
         127,
         125,
-        125
+        125,
+        127
       ]
     },
     {
       "name": "Andlight",
       "piHistory": [
-        123,
         131,
         125,
         135,
         134,
-        135
+        135,
+        121
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        127,
         130,
         129,
         136,
         131,
-        127
+        127,
+        125
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
-        136,
         109,
         106,
         106,
         106,
-        106
+        106,
+        103
       ]
     },
     {
@@ -71,98 +71,120 @@
       "piHistory": [
         149,
         149,
-        149,
         147,
         147,
-        143
+        143,
+        141
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        127,
         126,
         124,
         134,
         135,
-        130
+        130,
+        122
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        139,
         138,
         138,
         140,
         136,
-        138
+        138,
+        136
       ]
     },
     {
       "name": "BCDjeux",
       "piHistory": [
         127,
-        127,
         129,
         127,
         126,
-        127
+        127,
+        126
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
         107,
-        107,
         108,
         107,
         107,
-        108
+        108,
+        105
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        151,
         148,
         154,
         154,
         158,
-        156
+        156,
+        148
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
         128,
-        128,
         129,
         126,
         128,
-        128
+        128,
+        127
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
         109,
-        109,
         112,
         113,
+        112,
         112,
         112
       ]
     },
     {
+      "name": "Boulanger - Reconditionné",
+      "piHistory": [
+        null,
+        null,
+        100,
+        107,
+        107,
+        110
+      ]
+    },
+    {
       "name": "Bruneau",
       "piHistory": [
-        119,
         111,
         109,
         119,
         134,
-        113
+        113,
+        116
+      ]
+    },
+    {
+      "name": "Bureau_Vallee",
+      "piHistory": [
+        128,
+        127,
+        131,
+        127,
+        126,
+        125
       ]
     },
     {
@@ -170,21 +192,21 @@
       "piHistory": [
         114,
         114,
+        113,
+        113,
         114,
-        113,
-        113,
-        114
+        111
       ]
     },
     {
       "name": "Carrefour",
       "piHistory": [
         109,
-        109,
         110,
         109,
         109,
-        108
+        108,
+        109
       ]
     },
     {
@@ -192,43 +214,21 @@
       "piHistory": [
         110,
         110,
-        110,
         112,
         110,
-        112
+        112,
+        108
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
         106,
-        106,
         107,
         110,
         107,
-        107
-      ]
-    },
-    {
-      "name": "Darty",
-      "piHistory": [
-        103,
-        103,
-        103,
-        102,
-        102,
-        102
-      ]
-    },
-    {
-      "name": "Electromenager_compare",
-      "piHistory": [
-        111,
-        112,
-        110,
-        113,
-        108,
-        110
+        107,
+        106
       ]
     }
   ],
@@ -236,59 +236,59 @@
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 180,
-      "priceIndex": 502,
-      "lowerPct": 47,
-      "equalPct": 27,
-      "higherPct": 26
+      "matched": 181,
+      "priceIndex": 602,
+      "lowerPct": 38,
+      "equalPct": 44,
+      "higherPct": 18
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 8,
-      "priceIndex": 94,
-      "lowerPct": 44,
-      "equalPct": 22,
-      "higherPct": 33
+      "matched": 11,
+      "priceIndex": 101,
+      "lowerPct": 46,
+      "equalPct": 15,
+      "higherPct": 38
     },
     {
       "pack": "Télévision",
-      "matched": 16,
-      "priceIndex": 90,
-      "lowerPct": 68,
-      "equalPct": 5,
-      "higherPct": 26
+      "matched": 13,
+      "priceIndex": 92,
+      "lowerPct": 75,
+      "equalPct": 6,
+      "higherPct": 19
     },
     {
       "pack": "Casque audio",
-      "matched": 91,
-      "priceIndex": 95,
-      "lowerPct": 47,
-      "equalPct": 25,
-      "higherPct": 27
+      "matched": 80,
+      "priceIndex": 96,
+      "lowerPct": 35,
+      "equalPct": 44,
+      "higherPct": 21
     },
     {
       "pack": "Tablette",
-      "matched": 21,
-      "priceIndex": 90,
-      "lowerPct": 68,
-      "equalPct": 8,
-      "higherPct": 24
+      "matched": 23,
+      "priceIndex": 87,
+      "lowerPct": 72,
+      "equalPct": 12,
+      "higherPct": 16
     },
     {
       "pack": "Ordinateur de bureau",
       "matched": 5,
-      "priceIndex": 96,
-      "lowerPct": 60,
-      "equalPct": 20,
-      "higherPct": 20
+      "priceIndex": 90,
+      "lowerPct": 83,
+      "equalPct": 17,
+      "higherPct": 0
     },
     {
       "pack": "Enceinte audio",
-      "matched": 64,
-      "priceIndex": 92,
-      "lowerPct": 49,
-      "equalPct": 30,
-      "higherPct": 21
+      "matched": 40,
+      "priceIndex": 99,
+      "lowerPct": 26,
+      "equalPct": 49,
+      "higherPct": 25
     }
   ]
 }

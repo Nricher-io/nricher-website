@@ -1,60 +1,60 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 15462,
-  "topSellersCount": 3162,
-  "topPct": 23,
+  "totalArticles": 3899,
+  "topSellersCount": 1643,
+  "topPct": 25,
   "midPct": 32,
-  "lowPct": 45,
+  "lowPct": 43,
   "ranking": [
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 7155,
-      "potentialPct": 54
-    },
-    {
-      "name": "Darty",
-      "topSellerArticles": 3915,
-      "potentialPct": 75
-    },
-    {
       "name": "Fnac",
-      "topSellerArticles": 3486,
-      "potentialPct": 77
+      "topSellerArticles": 2185,
+      "potentialPct": 44
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 2503,
-      "potentialPct": 84
+      "topSellerArticles": 1780,
+      "potentialPct": 54
+    },
+    {
+      "name": "Cdiscount",
+      "topSellerArticles": 1416,
+      "potentialPct": 64
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 2177,
-      "potentialPct": 86
+      "topSellerArticles": 1313,
+      "potentialPct": 66
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 1599,
-      "potentialPct": 90
+      "topSellerArticles": 1247,
+      "potentialPct": 68
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 974,
+      "potentialPct": 75
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 695,
-      "potentialPct": 96
+      "topSellerArticles": 438,
+      "potentialPct": 89
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 203,
-      "potentialPct": 99
+      "topSellerArticles": 187,
+      "potentialPct": 95
     },
     {
       "name": "But",
-      "topSellerArticles": 90,
-      "potentialPct": 99
+      "topSellerArticles": 96,
+      "potentialPct": 98
     },
     {
       "name": "Amazon",
-      "topSellerArticles": 24,
-      "potentialPct": 100
+      "topSellerArticles": 23,
+      "potentialPct": 99
     }
   ]
 }

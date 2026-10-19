@@ -1,50 +1,50 @@
 {
   "packName": "Sac à dos",
-  "totalArticles": 2419,
-  "topSellersCount": 1154,
-  "topPct": 28,
-  "midPct": 33,
-  "lowPct": 39,
+  "totalArticles": 2330,
+  "topSellersCount": 1006,
+  "topPct": 27,
+  "midPct": 36,
+  "lowPct": 37,
   "ranking": [
     {
       "name": "Alpiniste",
-      "topSellerArticles": 1639,
-      "potentialPct": 32
+      "topSellerArticles": 1616,
+      "potentialPct": 31
     },
     {
       "name": "Snowleader",
-      "topSellerArticles": 1471,
-      "potentialPct": 39
+      "topSellerArticles": 1019,
+      "potentialPct": 56
     },
     {
       "name": "Trekkinn",
-      "topSellerArticles": 676,
-      "potentialPct": 72
+      "topSellerArticles": 682,
+      "potentialPct": 71
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 659,
-      "potentialPct": 73
+      "topSellerArticles": 671,
+      "potentialPct": 71
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 570,
+      "topSellerArticles": 558,
       "potentialPct": 76
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 342,
+      "topSellerArticles": 334,
       "potentialPct": 86
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 280,
-      "potentialPct": 88
+      "topSellerArticles": 264,
+      "potentialPct": 89
     },
     {
       "name": "Irun",
       "topSellerArticles": 180,
-      "potentialPct": 93
+      "potentialPct": 92
     }
   ]
 }
