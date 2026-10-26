@@ -1,7 +1,7 @@
 {
   "slug": "irun",
   "name": "Irun",
-  "articlesAnalysed": 75197,
+  "articlesAnalysed": 3931,
   "qualityScore": 32,
   "globalGrades": {
     "Aplus": 0,
@@ -17,10 +17,10 @@
       "Aplus": 0,
       "A": 0,
       "B": 0,
-      "C": 0,
+      "C": 1,
       "D": 3,
-      "E": 13,
-      "F": 84
+      "E": 19,
+      "F": 78
     },
     "Image": {
       "Aplus": 0,
@@ -41,12 +41,12 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 27,
-      "A": 12,
-      "B": 15,
-      "C": 33,
-      "D": 11,
-      "E": 2,
+      "Aplus": 16,
+      "A": 8,
+      "B": 18,
+      "C": 42,
+      "D": 16,
+      "E": 0,
       "F": 0
     }
   }

@@ -1,50 +1,50 @@
 {
   "packName": "Sac à dos",
-  "totalArticles": 2330,
-  "topSellersCount": 1006,
-  "topPct": 27,
-  "midPct": 36,
-  "lowPct": 37,
+  "totalArticles": 2433,
+  "topSellersCount": 1173,
+  "topPct": 28,
+  "midPct": 33,
+  "lowPct": 39,
   "ranking": [
     {
       "name": "Alpiniste",
-      "topSellerArticles": 1616,
-      "potentialPct": 31
+      "topSellerArticles": 1650,
+      "potentialPct": 32
     },
     {
       "name": "Snowleader",
-      "topSellerArticles": 1019,
-      "potentialPct": 56
-    },
-    {
-      "name": "Trekkinn",
-      "topSellerArticles": 682,
-      "potentialPct": 71
+      "topSellerArticles": 1491,
+      "potentialPct": 39
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 671,
+      "topSellerArticles": 711,
+      "potentialPct": 71
+    },
+    {
+      "name": "Trekkinn",
+      "topSellerArticles": 696,
       "potentialPct": 71
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 558,
-      "potentialPct": 76
+      "topSellerArticles": 604,
+      "potentialPct": 75
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 334,
-      "potentialPct": 86
+      "topSellerArticles": 410,
+      "potentialPct": 83
     },
     {
       "name": "Hardloop",
-      "topSellerArticles": 264,
-      "potentialPct": 89
+      "topSellerArticles": 291,
+      "potentialPct": 88
     },
     {
       "name": "Irun",
-      "topSellerArticles": 180,
-      "potentialPct": 92
+      "topSellerArticles": 181,
+      "potentialPct": 93
     }
   ]
 }

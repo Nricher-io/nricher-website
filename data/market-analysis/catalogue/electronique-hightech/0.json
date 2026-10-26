@@ -1,60 +1,60 @@
 {
   "packName": "Smartphone",
-  "totalArticles": 9029,
-  "topSellersCount": 4400,
-  "topPct": 27,
-  "midPct": 33,
-  "lowPct": 40,
+  "totalArticles": 20511,
+  "topSellersCount": 6678,
+  "topPct": 25,
+  "midPct": 32,
+  "lowPct": 43,
   "ranking": [
     {
-      "name": "Darty",
-      "topSellerArticles": 5221,
-      "potentialPct": 42
-    },
-    {
-      "name": "Fnac",
-      "topSellerArticles": 5149,
-      "potentialPct": 43
+      "name": "Cdiscount",
+      "topSellerArticles": 10171,
+      "potentialPct": 50
     },
     {
       "name": "Rue Du Commerce",
-      "topSellerArticles": 4930,
-      "potentialPct": 45
+      "topSellerArticles": 6313,
+      "potentialPct": 69
     },
     {
-      "name": "Cdiscount",
-      "topSellerArticles": 3760,
-      "potentialPct": 58
+      "name": "Fnac",
+      "topSellerArticles": 5994,
+      "potentialPct": 71
+    },
+    {
+      "name": "Darty",
+      "topSellerArticles": 5920,
+      "potentialPct": 71
     },
     {
       "name": "Carrefour",
-      "topSellerArticles": 3269,
-      "potentialPct": 64
+      "topSellerArticles": 3928,
+      "potentialPct": 81
     },
     {
       "name": "Boulanger",
-      "topSellerArticles": 2046,
-      "potentialPct": 77
+      "topSellerArticles": 2210,
+      "potentialPct": 89
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 864,
-      "potentialPct": 90
-    },
-    {
-      "name": "But",
-      "topSellerArticles": 466,
-      "potentialPct": 95
-    },
-    {
-      "name": "Amazon",
-      "topSellerArticles": 246,
-      "potentialPct": 97
+      "topSellerArticles": 1228,
+      "potentialPct": 94
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 8,
-      "potentialPct": 100
+      "topSellerArticles": 841,
+      "potentialPct": 96
+    },
+    {
+      "name": "But",
+      "topSellerArticles": 462,
+      "potentialPct": 98
+    },
+    {
+      "name": "Amazon",
+      "topSellerArticles": 373,
+      "potentialPct": 98
     }
   ]
 }

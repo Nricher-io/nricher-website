@@ -1,60 +1,60 @@
 {
   "packName": "Ordinateur portable",
-  "totalArticles": 3899,
-  "topSellersCount": 1643,
-  "topPct": 25,
-  "midPct": 32,
-  "lowPct": 43,
+  "totalArticles": 15530,
+  "topSellersCount": 3980,
+  "topPct": 22,
+  "midPct": 33,
+  "lowPct": 45,
   "ranking": [
     {
-      "name": "Fnac",
-      "topSellerArticles": 2185,
-      "potentialPct": 44
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 1780,
-      "potentialPct": 54
-    },
-    {
       "name": "Cdiscount",
-      "topSellerArticles": 1416,
-      "potentialPct": 64
-    },
-    {
-      "name": "Boulanger",
-      "topSellerArticles": 1313,
-      "potentialPct": 66
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 1247,
-      "potentialPct": 68
+      "topSellerArticles": 6801,
+      "potentialPct": 56
     },
     {
       "name": "Darty",
-      "topSellerArticles": 974,
-      "potentialPct": 75
+      "topSellerArticles": 4034,
+      "potentialPct": 74
+    },
+    {
+      "name": "Fnac",
+      "topSellerArticles": 3582,
+      "potentialPct": 77
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 2846,
+      "potentialPct": 82
+    },
+    {
+      "name": "Boulanger",
+      "topSellerArticles": 2477,
+      "potentialPct": 84
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 1416,
+      "potentialPct": 91
     },
     {
       "name": "Conforama",
-      "topSellerArticles": 438,
-      "potentialPct": 89
+      "topSellerArticles": 694,
+      "potentialPct": 96
     },
     {
       "name": "Auchan",
-      "topSellerArticles": 187,
-      "potentialPct": 95
+      "topSellerArticles": 224,
+      "potentialPct": 99
     },
     {
       "name": "But",
-      "topSellerArticles": 96,
-      "potentialPct": 98
+      "topSellerArticles": 91,
+      "potentialPct": 99
     },
     {
       "name": "Amazon",
-      "topSellerArticles": 23,
-      "potentialPct": 99
+      "topSellerArticles": 36,
+      "potentialPct": 100
     }
   ]
 }

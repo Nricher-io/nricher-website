@@ -1,59 +1,59 @@
 {
   "packName": "Casque audio",
-  "totalArticles": 5692,
-  "topSellersCount": 2377,
-  "topPct": 24,
+  "totalArticles": 12420,
+  "topSellersCount": 3719,
+  "topPct": 23,
   "midPct": 32,
-  "lowPct": 44,
+  "lowPct": 45,
   "ranking": [
     {
       "name": "Darty",
-      "topSellerArticles": 3259,
-      "potentialPct": 43
-    },
-    {
-      "name": "Rue Du Commerce",
-      "topSellerArticles": 2862,
-      "potentialPct": 50
-    },
-    {
-      "name": "Carrefour",
-      "topSellerArticles": 2542,
-      "potentialPct": 55
-    },
-    {
-      "name": "Fnac",
-      "topSellerArticles": 2338,
-      "potentialPct": 59
-    },
-    {
-      "name": "Cdiscount",
-      "topSellerArticles": 2297,
+      "topSellerArticles": 4985,
       "potentialPct": 60
     },
     {
+      "name": "Cdiscount",
+      "topSellerArticles": 4557,
+      "potentialPct": 63
+    },
+    {
+      "name": "Rue Du Commerce",
+      "topSellerArticles": 4421,
+      "potentialPct": 64
+    },
+    {
+      "name": "Fnac",
+      "topSellerArticles": 2824,
+      "potentialPct": 77
+    },
+    {
+      "name": "Carrefour",
+      "topSellerArticles": 2445,
+      "potentialPct": 80
+    },
+    {
       "name": "Boulanger",
-      "topSellerArticles": 1240,
-      "potentialPct": 78
+      "topSellerArticles": 1326,
+      "potentialPct": 89
     },
     {
       "name": "But",
-      "topSellerArticles": 573,
-      "potentialPct": 90
-    },
-    {
-      "name": "Auchan",
-      "topSellerArticles": 489,
-      "potentialPct": 91
-    },
-    {
-      "name": "Conforama",
-      "topSellerArticles": 259,
+      "topSellerArticles": 589,
       "potentialPct": 95
     },
     {
+      "name": "Auchan",
+      "topSellerArticles": 524,
+      "potentialPct": 96
+    },
+    {
+      "name": "Conforama",
+      "topSellerArticles": 329,
+      "potentialPct": 97
+    },
+    {
       "name": "Amazon",
-      "topSellerArticles": 131,
+      "topSellerArticles": 248,
       "potentialPct": 98
     }
   ]
