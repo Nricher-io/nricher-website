@@ -2,55 +2,49 @@
   {
     "slug": "alpiniste",
     "name": "Alpiniste",
-    "articlesAnalysed": 48531,
-    "qualityScore": 85
-  },
-  {
-    "slug": "hardloop",
-    "name": "Hardloop",
-    "articlesAnalysed": 9587,
-    "qualityScore": 83
-  },
-  {
-    "slug": "alltricks",
-    "name": "Alltricks",
-    "articlesAnalysed": 3491,
-    "qualityScore": 80
+    "articlesAnalysed": 44192,
+    "qualityScore": 86
   },
   {
     "slug": "trekkinn",
     "name": "Trekkinn",
-    "articlesAnalysed": 24527,
+    "articlesAnalysed": 21863,
+    "qualityScore": 77
+  },
+  {
+    "slug": "alltricks",
+    "name": "Alltricks",
+    "articlesAnalysed": 117,
     "qualityScore": 76
   },
   {
     "slug": "glisshop",
     "name": "Glisshop",
-    "articlesAnalysed": 1147,
-    "qualityScore": 71
+    "articlesAnalysed": 31551,
+    "qualityScore": 65
   },
   {
     "slug": "ekosport",
     "name": "Ekosport",
-    "articlesAnalysed": 5898,
-    "qualityScore": 69
+    "articlesAnalysed": 125658,
+    "qualityScore": 64
   },
   {
     "slug": "snowleader",
     "name": "Snowleader",
-    "articlesAnalysed": 10736,
-    "qualityScore": 65
+    "articlesAnalysed": 91889,
+    "qualityScore": 63
   },
   {
     "slug": "snowleader-ch",
     "name": "Snowleader CH",
-    "articlesAnalysed": 88160,
-    "qualityScore": 57
+    "articlesAnalysed": 87968,
+    "qualityScore": 58
   },
   {
     "slug": "irun",
     "name": "Irun",
-    "articlesAnalysed": 3931,
+    "articlesAnalysed": 72575,
     "qualityScore": 32
   }
 ]

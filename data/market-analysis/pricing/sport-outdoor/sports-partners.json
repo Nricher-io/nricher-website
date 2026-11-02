@@ -3,44 +3,44 @@
   "name": "Sports Partners",
   "priceIndex": 95,
   "weeks": [
-    "2026-09-15",
     "2026-09-22",
     "2026-09-29",
     "2026-10-06",
     "2026-10-13",
-    "2026-10-20"
+    "2026-10-20",
+    "2026-10-27"
   ],
   "competitorTrends": [
     {
       "name": "AllTricks",
       "piHistory": [
-        105,
         107,
         116,
         86,
         109,
-        108
+        108,
+        109
       ]
     },
     {
       "name": "Barrabes",
       "piHistory": [
-        104,
         105,
         105,
         106,
         106,
-        105
+        105,
+        106
       ]
     },
     {
       "name": "Glisshop",
       "piHistory": [
-        116,
         118,
         118,
         93,
         116,
+        114,
         114
       ]
     },
@@ -48,88 +48,88 @@
       "name": "Irun",
       "piHistory": [
         100,
-        100,
         102,
         86,
         102,
-        100
+        100,
+        107
       ]
     },
     {
       "name": "Runnerinn",
       "piHistory": [
         115,
-        115,
         114,
         89,
         115,
-        114
+        114,
+        118
       ]
     },
     {
       "name": "Snowinn",
       "piHistory": [
-        124,
         122,
         122,
         193,
         124,
-        123
+        123,
+        124
       ]
     },
     {
       "name": "Snowleader",
       "piHistory": [
-        107,
         108,
         106,
         93,
         108,
-        107
+        107,
+        105
       ]
     },
     {
       "name": "Trekkinn",
       "piHistory": [
-        113,
         115,
         115,
         172,
         115,
-        114
+        114,
+        116
       ]
     },
     {
       "name": "Zalando",
       "piHistory": [
-        94,
         93,
         96,
         83,
         97,
-        92
+        92,
+        94
       ]
     },
     {
       "name": "Ekosport",
       "piHistory": [
-        113,
         99,
         98,
         null,
         108,
-        107
+        107,
+        110
       ]
     },
     {
       "name": "Hardloop",
       "piHistory": [
-        113,
         101,
         104,
         null,
         109,
-        108
+        108,
+        107
       ]
     }
   ],
@@ -137,64 +137,64 @@
   "pairwise": [
     {
       "pack": "Chaussures de trail",
-      "matched": 32,
-      "priceIndex": 90,
+      "matched": 21,
+      "priceIndex": 91,
       "lowerPct": 95,
       "equalPct": 0,
       "higherPct": 5
     },
     {
       "pack": "Chaussures de randonnée",
-      "matched": 18,
-      "priceIndex": 103,
-      "lowerPct": 39,
+      "matched": 22,
+      "priceIndex": 102,
+      "lowerPct": 18,
       "equalPct": 0,
-      "higherPct": 61
+      "higherPct": 82
     },
     {
       "pack": "Sac à dos",
-      "matched": 6,
-      "priceIndex": 93,
-      "lowerPct": 83,
+      "matched": 8,
+      "priceIndex": 95,
+      "lowerPct": 75,
       "equalPct": 0,
-      "higherPct": 17
+      "higherPct": 25
     },
     {
       "pack": "Veste",
-      "matched": 3,
-      "priceIndex": 110,
-      "lowerPct": 0,
+      "matched": 7,
+      "priceIndex": 98,
+      "lowerPct": 29,
       "equalPct": 0,
-      "higherPct": 100
+      "higherPct": 71
     },
     {
       "pack": "T-shirt",
-      "matched": 11,
+      "matched": 14,
       "priceIndex": 95,
-      "lowerPct": 91,
+      "lowerPct": 93,
       "equalPct": 0,
-      "higherPct": 9
+      "higherPct": 7
     },
     {
       "pack": "Pantalon",
-      "matched": 4,
-      "priceIndex": 63,
+      "matched": 7,
+      "priceIndex": 70,
       "lowerPct": 100,
       "equalPct": 0,
       "higherPct": 0
     },
     {
       "pack": "Doudoune",
-      "matched": 4,
-      "priceIndex": 123,
+      "matched": 2,
+      "priceIndex": 131,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100
     },
     {
       "pack": "Short",
-      "matched": 2,
-      "priceIndex": 126,
+      "matched": 1,
+      "priceIndex": 143,
       "lowerPct": 0,
       "equalPct": 0,
       "higherPct": 100

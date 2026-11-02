@@ -2,67 +2,67 @@
   {
     "slug": "cdiscount",
     "name": "CDiscount",
-    "articlesAnalysed": 255252,
-    "qualityScore": 78
+    "articlesAnalysed": 146305,
+    "qualityScore": 79
   },
   {
     "slug": "but",
     "name": "BUT",
-    "articlesAnalysed": 93785,
+    "articlesAnalysed": 35587,
     "qualityScore": 76
   },
   {
-    "slug": "conforama",
-    "name": "Conforama",
-    "articlesAnalysed": 64810,
+    "slug": "carrefour",
+    "name": "Carrefour",
+    "articlesAnalysed": 82150,
     "qualityScore": 72
   },
   {
     "slug": "amazon",
     "name": "Amazon",
-    "articlesAnalysed": 40835,
-    "qualityScore": 71
-  },
-  {
-    "slug": "carrefour",
-    "name": "Carrefour",
-    "articlesAnalysed": 219791,
-    "qualityScore": 70
-  },
-  {
-    "slug": "fnac",
-    "name": "Fnac",
-    "articlesAnalysed": 88691,
+    "articlesAnalysed": 59,
     "qualityScore": 67
   },
   {
     "slug": "underdog",
     "name": "Underdog",
-    "articlesAnalysed": 301,
+    "articlesAnalysed": 512,
     "qualityScore": 65
   },
   {
-    "slug": "rue-du-commerce",
-    "name": "Rue du Commerce",
-    "articlesAnalysed": 200974,
-    "qualityScore": 62
-  },
-  {
-    "slug": "auchan",
-    "name": "Auchan",
-    "articlesAnalysed": 37266,
-    "qualityScore": 61
+    "slug": "fnac",
+    "name": "Fnac",
+    "articlesAnalysed": 33144,
+    "qualityScore": 63
   },
   {
     "slug": "boulanger",
     "name": "Boulanger",
-    "articlesAnalysed": 91734,
+    "articlesAnalysed": 19559,
+    "qualityScore": 61
+  },
+  {
+    "slug": "auchan",
+    "name": "Auchan",
+    "articlesAnalysed": 11399,
     "qualityScore": 60
+  },
+  {
+    "slug": "rue-du-commerce",
+    "name": "Rue du Commerce",
+    "articlesAnalysed": 61604,
+    "qualityScore": 59
+  },
+  {
+    "slug": "conforama",
+    "name": "Conforama",
+    "articlesAnalysed": 235,
+    "qualityScore": 56
   },
   {
     "slug": "darty",
     "name": "Darty",
-    "articlesAnalysed": 189218,
-    "qualityScore": 55
+    "articlesAnalysed": 92933,
+    "qualityScore": 53
   }
 ]

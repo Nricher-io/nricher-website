@@ -1,35 +1,35 @@
 {
   "slug": "conforama",
   "name": "Conforama",
-  "articlesAnalysed": 64810,
-  "qualityScore": 72,
+  "articlesAnalysed": 235,
+  "qualityScore": 56,
   "globalGrades": {
     "Aplus": 0,
-    "A": 21,
-    "B": 21,
-    "C": 36,
-    "D": 14,
-    "E": 6,
-    "F": 4
+    "A": 6,
+    "B": 8,
+    "C": 16,
+    "D": 38,
+    "E": 14,
+    "F": 17
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 28,
-      "A": 5,
-      "B": 7,
-      "C": 21,
-      "D": 23,
-      "E": 7,
-      "F": 10
+      "Aplus": 11,
+      "A": 3,
+      "B": 4,
+      "C": 11,
+      "D": 4,
+      "E": 1,
+      "F": 66
     },
     "Image": {
-      "Aplus": 69,
-      "A": 9,
-      "B": 2,
-      "C": 2,
+      "Aplus": 51,
+      "A": 24,
+      "B": 6,
+      "C": 3,
       "D": 0,
-      "E": 7,
-      "F": 10
+      "E": 6,
+      "F": 11
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 99
     },
     "Description": {
-      "Aplus": 57,
+      "Aplus": 43,
       "A": 11,
-      "B": 9,
-      "C": 9,
-      "D": 3,
-      "E": 2,
-      "F": 10
+      "B": 10,
+      "C": 12,
+      "D": 4,
+      "E": 5,
+      "F": 15
     }
   }
 }
