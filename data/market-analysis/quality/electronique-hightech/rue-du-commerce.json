@@ -1,13 +1,13 @@
 {
   "slug": "rue-du-commerce",
   "name": "Rue du Commerce",
-  "articlesAnalysed": 61604,
+  "articlesAnalysed": 60247,
   "qualityScore": 59,
   "globalGrades": {
     "Aplus": 0,
     "A": 5,
     "B": 11,
-    "C": 35,
+    "C": 34,
     "D": 21,
     "E": 17,
     "F": 12
@@ -45,7 +45,7 @@
       "A": 6,
       "B": 6,
       "C": 10,
-      "D": 7,
+      "D": 8,
       "E": 13,
       "F": 30
     }

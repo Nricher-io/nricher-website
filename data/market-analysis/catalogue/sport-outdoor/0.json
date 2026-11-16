@@ -1,45 +1,50 @@
 {
   "packName": "Chaussures de trail",
-  "totalArticles": 3506,
-  "topSellersCount": 1933,
-  "topPct": 30,
+  "totalArticles": 3565,
+  "topSellersCount": 1952,
+  "topPct": 28,
   "midPct": 29,
-  "lowPct": 41,
+  "lowPct": 43,
   "ranking": [
     {
       "name": "Snowleader",
-      "topSellerArticles": 2123,
-      "potentialPct": 39
-    },
-    {
-      "name": "Alpiniste",
-      "topSellerArticles": 1769,
-      "potentialPct": 50
+      "topSellerArticles": 2078,
+      "potentialPct": 42
     },
     {
       "name": "Ekosport",
-      "topSellerArticles": 1748,
-      "potentialPct": 50
+      "topSellerArticles": 1763,
+      "potentialPct": 51
     },
     {
-      "name": "Irun",
-      "topSellerArticles": 1298,
+      "name": "Alpiniste",
+      "topSellerArticles": 1702,
+      "potentialPct": 52
+    },
+    {
+      "name": "Hardloop",
+      "topSellerArticles": 1332,
       "potentialPct": 63
     },
     {
-      "name": "Trekkinn",
-      "topSellerArticles": 1097,
-      "potentialPct": 69
+      "name": "Irun",
+      "topSellerArticles": 1186,
+      "potentialPct": 67
     },
     {
       "name": "Alltricks",
-      "topSellerArticles": 773,
-      "potentialPct": 78
+      "topSellerArticles": 1161,
+      "potentialPct": 67
+    },
+    {
+      "name": "Trekkinn",
+      "topSellerArticles": 1098,
+      "potentialPct": 69
     },
     {
       "name": "Glisshop",
-      "topSellerArticles": 365,
-      "potentialPct": 90
+      "topSellerArticles": 323,
+      "potentialPct": 91
     }
   ]
 }

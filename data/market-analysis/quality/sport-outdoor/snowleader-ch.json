@@ -1,7 +1,7 @@
 {
   "slug": "snowleader-ch",
   "name": "Snowleader CH",
-  "articlesAnalysed": 87968,
+  "articlesAnalysed": 89764,
   "qualityScore": 58,
   "globalGrades": {
     "Aplus": 0,
@@ -18,9 +18,9 @@
       "A": 1,
       "B": 2,
       "C": 10,
-      "D": 18,
+      "D": 17,
       "E": 25,
-      "F": 43
+      "F": 44
     },
     "Image": {
       "Aplus": 34,
@@ -28,7 +28,7 @@
       "B": 16,
       "C": 12,
       "D": 0,
-      "E": 10,
+      "E": 9,
       "F": 12
     },
     "Vidéo": {
@@ -41,7 +41,7 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 45,
+      "Aplus": 46,
       "A": 13,
       "B": 13,
       "C": 15,

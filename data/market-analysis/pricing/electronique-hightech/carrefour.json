@@ -1,102 +1,102 @@
 {
   "slug": "carrefour",
   "name": "Carrefour",
-  "priceIndex": 105,
+  "priceIndex": 104,
   "weeks": [
-    "2026-09-15",
-    "2026-09-22",
     "2026-09-29",
     "2026-10-13",
     "2026-10-20",
-    "2026-10-27"
+    "2026-10-27",
+    "2026-11-03",
+    "2026-11-10"
   ],
   "competitorTrends": [
     {
       "name": "Allobebe",
       "piHistory": [
-        121,
-        139,
         142,
         135,
         136,
+        135,
+        135,
         135
       ]
     },
     {
       "name": "Amazon",
       "piHistory": [
-        127,
-        125,
         125,
         127,
         130,
-        126
+        126,
+        127,
+        131
       ]
     },
     {
       "name": "Andlight",
       "piHistory": [
         135,
-        134,
-        135,
         121,
         124,
-        121
+        121,
+        124,
+        113
       ]
     },
     {
       "name": "Aubert",
       "piHistory": [
-        136,
-        131,
         127,
         125,
         114,
-        123
+        123,
+        135,
+        130
       ]
     },
     {
       "name": "Auchan",
       "piHistory": [
         106,
-        106,
-        106,
         103,
         104,
-        105
+        105,
+        106,
+        106
       ]
     },
     {
       "name": "Aurlane",
       "piHistory": [
-        147,
-        147,
         143,
         141,
         152,
-        151
+        151,
+        150,
+        null
       ]
     },
     {
       "name": "Autourdebebe",
       "piHistory": [
-        134,
-        135,
         130,
         122,
         127,
-        121
+        121,
+        122,
+        127
       ]
     },
     {
       "name": "Avenuedesjeux",
       "piHistory": [
-        140,
-        136,
         138,
         136,
         139,
-        136
+        136,
+        137,
+        155
       ]
     },
     {
@@ -104,96 +104,96 @@
       "piHistory": [
         127,
         126,
-        127,
-        126,
         125,
-        124
+        124,
+        124,
+        127
       ]
     },
     {
       "name": "BUT",
       "piHistory": [
-        107,
-        107,
         108,
         105,
         113,
-        106
+        106,
+        106,
+        111
       ]
     },
     {
       "name": "Bambinou",
       "piHistory": [
-        154,
-        158,
         156,
         148,
         147,
-        150
+        150,
+        147,
+        166
       ]
     },
     {
       "name": "Berceaumagique",
       "piHistory": [
+        128,
+        127,
+        127,
         126,
-        128,
-        128,
         127,
-        127,
-        126
+        128
       ]
     },
     {
       "name": "Boulanger",
       "piHistory": [
-        113,
-        112,
         112,
         112,
         114,
-        113
+        113,
+        114,
+        110
       ]
     },
     {
       "name": "Boulanger - Reconditionné",
       "piHistory": [
-        100,
-        107,
         107,
         110,
         null,
-        116
+        116,
+        null,
+        94
       ]
     },
     {
       "name": "Bruneau",
       "piHistory": [
-        119,
-        134,
         113,
         116,
         111,
+        102,
+        104,
         102
       ]
     },
     {
       "name": "Bureau_Vallee",
       "piHistory": [
-        131,
-        127,
         126,
         125,
         130,
-        130
+        130,
+        129,
+        126
       ]
     },
     {
       "name": "CDiscount",
       "piHistory": [
-        113,
-        113,
         114,
         111,
+        113,
+        113,
         113,
         113
       ]
@@ -201,50 +201,38 @@
     {
       "name": "Carrefour",
       "piHistory": [
-        109,
-        109,
         108,
         109,
         108,
-        106
+        106,
+        106,
+        105
       ]
     },
     {
       "name": "Castorama",
       "piHistory": [
         112,
-        110,
-        112,
         108,
         111,
-        110
+        110,
+        110,
+        111
       ]
     },
     {
       "name": "Conforama",
       "piHistory": [
-        110,
-        107,
         107,
         106,
         111,
-        108
+        108,
+        109,
+        113
       ]
     }
   ],
   "attractiveness": [
-    {
-      "week": "2026-09-15",
-      "cheaperPct": 15,
-      "equalPct": 28,
-      "higherPct": 57
-    },
-    {
-      "week": "2026-09-22",
-      "cheaperPct": 14,
-      "equalPct": 28,
-      "higherPct": 58
-    },
     {
       "week": "2026-09-29",
       "cheaperPct": 18,
@@ -268,48 +256,60 @@
       "cheaperPct": 19,
       "equalPct": 34,
       "higherPct": 47
+    },
+    {
+      "week": "2026-11-03",
+      "cheaperPct": 19,
+      "equalPct": 33,
+      "higherPct": 48
+    },
+    {
+      "week": "2026-11-10",
+      "cheaperPct": 24,
+      "equalPct": 26,
+      "higherPct": 50
     }
   ],
   "pairwise": [
     {
       "pack": "Smartphone",
-      "matched": 351,
-      "priceIndex": 98,
-      "lowerPct": 36,
+      "matched": 331,
+      "priceIndex": 101,
+      "lowerPct": 39,
       "equalPct": 22,
-      "higherPct": 42
+      "higherPct": 39
     },
     {
       "pack": "Ordinateur portable",
-      "matched": 33,
-      "priceIndex": 110,
-      "lowerPct": 15,
-      "equalPct": 36,
-      "higherPct": 48
-    },
-    {
-      "pack": "Télévision",
-      "matched": 58,
-      "priceIndex": 112,
-      "lowerPct": 29,
-      "equalPct": 17,
-      "higherPct": 53
-    },
-    {
-      "pack": "Casque audio",
-      "matched": 86,
-      "priceIndex": 119,
-      "lowerPct": 24,
-      "equalPct": 35,
+      "matched": 34,
+      "priceIndex": 105,
+      "lowerPct": 26,
+      "equalPct": 32,
       "higherPct": 41
     },
     {
+      "pack": "Télévision",
+      "matched": 55,
+      "priceIndex": 109,
+      "lowerPct": 40,
+      "equalPct": 11,
+      "higherPct": 49
+    },
+    {
+      "pack": "Casque audio",
+      "matched": 85,
+      "priceIndex": 100,
+      "lowerPct": 42,
+      "equalPct": 29,
+      "higherPct": 28
+    },
+    {
       "pack": "Tablette",
-      "matched": 51,
-      "priceIndex": 108,
-      "lowerPct": 35,
-      "equalPct": 18,
-      "higherPct": 47
+      "matched": 50,
+      "priceIndex": 112,
+      "lowerPct": 28,
+      "equalPct": 32,
+      "higherPct": 40
     },
     {
       "pack": "Ordinateur de bureau",
@@ -321,11 +321,11 @@
     },
     {
       "pack": "Enceinte audio",
-      "matched": 38,
-      "priceIndex": 112,
-      "lowerPct": 29,
-      "equalPct": 8,
-      "higherPct": 63
+      "matched": 37,
+      "priceIndex": 118,
+      "lowerPct": 14,
+      "equalPct": 19,
+      "higherPct": 68
     }
   ]
 }

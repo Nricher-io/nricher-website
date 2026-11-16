@@ -1,35 +1,35 @@
 {
   "slug": "hardloop",
   "name": "Hardloop",
-  "articlesAnalysed": 9587,
+  "articlesAnalysed": 2542,
   "qualityScore": 83,
   "globalGrades": {
     "Aplus": 0,
-    "A": 51,
-    "B": 34,
-    "C": 12,
-    "D": 2,
+    "A": 45,
+    "B": 40,
+    "C": 10,
+    "D": 4,
     "E": 0,
     "F": 0
   },
   "criteriaGrades": {
     "Titre": {
-      "Aplus": 47,
+      "Aplus": 34,
       "A": 28,
-      "B": 19,
-      "C": 6,
+      "B": 30,
+      "C": 8,
       "D": 0,
       "E": 0,
       "F": 0
     },
     "Image": {
-      "Aplus": 49,
-      "A": 17,
-      "B": 13,
-      "C": 10,
+      "Aplus": 43,
+      "A": 26,
+      "B": 16,
+      "C": 6,
       "D": 0,
-      "E": 8,
-      "F": 4
+      "E": 4,
+      "F": 5
     },
     "Vidéo": {
       "Aplus": 0,
@@ -41,13 +41,13 @@
       "F": 100
     },
     "Description": {
-      "Aplus": 84,
-      "A": 7,
-      "B": 4,
-      "C": 2,
+      "Aplus": 87,
+      "A": 6,
+      "B": 3,
+      "C": 0,
       "D": 0,
       "E": 0,
-      "F": 2
+      "F": 3
     }
   }
 }

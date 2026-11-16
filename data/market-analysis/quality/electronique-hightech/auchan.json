@@ -1,7 +1,7 @@
 {
   "slug": "auchan",
   "name": "Auchan",
-  "articlesAnalysed": 11399,
+  "articlesAnalysed": 11157,
   "qualityScore": 60,
   "globalGrades": {
     "Aplus": 0,
@@ -23,7 +23,7 @@
       "F": 7
     },
     "Image": {
-      "Aplus": 22,
+      "Aplus": 21,
       "A": 14,
       "B": 9,
       "C": 21,
@@ -42,10 +42,10 @@
     },
     "Description": {
       "Aplus": 32,
-      "A": 8,
+      "A": 9,
       "B": 6,
       "C": 8,
-      "D": 13,
+      "D": 12,
       "E": 19,
       "F": 14
     }
